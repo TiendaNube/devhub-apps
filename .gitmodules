@@ -1,3 +1,0 @@
-[submodule "templates/standalone-apps"]
-	path = templates/standalone-apps
-	url = https://github.com/TiendaNube/standalone-apps.git
