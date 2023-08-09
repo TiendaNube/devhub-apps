@@ -1,1 +1,1 @@
-export { default as userRepository } from './jsonServerRepository';
+export { default as userRepository } from './UserRepository';
