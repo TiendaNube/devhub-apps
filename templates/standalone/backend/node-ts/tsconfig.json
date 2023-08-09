@@ -14,9 +14,11 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["./src/utils/*"],
+      "@utils": ["./src/utils"],
       "@features/*": ["./src/features/*"],
-      "@config/*": ["./src/config/*"]
+      "@config": ["./src/config"],
+      "@middlewares": ["./src/middlewares"],
+      "@repository": ["./src/repository"]
     }
   },
   "include": ["src/**/*"],

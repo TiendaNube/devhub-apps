@@ -1,4 +1,4 @@
-export interface ICredentials {
+export interface TiendanubeAuthInterface {
   access_token?: string;
   token_type?: string;
   scope?: string;

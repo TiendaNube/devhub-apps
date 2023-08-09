@@ -1,19 +1,26 @@
 import express from "express";
-import dotenv from "dotenv";
 import cors from "cors";
-import routes from "@config/routes";
-import errorMiddleware from "@utils/errorMiddleware.function";
-
+import morgan from "morgan";
+// @ts-ignore
+import dotenv from "dotenv";
+import path from "path";
 dotenv.config({
-  path: "./.env",
+  path: path.resolve('.env')
 });
+
+import { AppRoutes } from "@config";
+import { beforeCheckClientMiddleware, errorHandlingMiddleware} from "@middlewares";
+
+
 
 const port = process.env.PORT || 7200;
 const app = express();
 
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 app.use(cors());
-app.use(errorMiddleware);
-app.use(routes);
+app.use(beforeCheckClientMiddleware);
+app.use(AppRoutes);
+app.use(errorHandlingMiddleware)
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });

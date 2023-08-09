@@ -1,4 +1,4 @@
 export { default as ProductController } from "./product.controller";
-
-export * from "./product.utils";
+export { default as ProductService } from "./product.service";
+export * from "./__mock__/product.mock";
 export type * from "./product.interface";
