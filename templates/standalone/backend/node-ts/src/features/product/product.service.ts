@@ -1,41 +1,40 @@
-
 import { generateProductMock } from "@features/product/__mock__/product.mock";
-import { buildPath, tiendanubeApiClient} from "@config";
-import { IProductRequest, IProductResponse} from "@features/product";
+import { tiendanubeApiClient } from "@config";
+import { IProductRequest, IProductResponse } from "@features/product";
 
 class ProductService {
+  async create(user_id: number): Promise<IProductResponse> {
+    const randomProduct: IProductRequest = generateProductMock();
+    const data: IProductResponse = await tiendanubeApiClient.post(
+      `${user_id}/products`,
+      randomProduct
+    );
 
-    private path = '/products';
-     async create(): Promise<IProductResponse> {
-        const randomProduct: IProductRequest = generateProductMock();
-        const data: IProductResponse  = await tiendanubeApiClient.post(buildPath(this.path), randomProduct)
+    return {
+      id: data.id,
+      ...randomProduct,
+    } as IProductResponse;
+  }
 
-         return {
-            id: data.id,
-            ...randomProduct
-         } as IProductResponse
-    }
+  async delete(user_id: number, productId: string): Promise<any> {
+    return await tiendanubeApiClient.delete(`${user_id}/products/${productId}`);
+  }
 
-    async delete(productId: string): Promise<any> {
-        const data: any = await tiendanubeApiClient.delete(buildPath(this.path, productId))
-        return data;
-    }
+  async findAll(user_id: number): Promise<IProductResponse[]> {
+    return this.findAllFromApi(user_id);
+  }
 
-     async findAll(): Promise<IProductResponse[]> {
-        return this.findAllFromApi()
-    }
+  async findAllCount(user_id: number): Promise<{ total: number }> {
+    return {
+      total: (await this.findAllFromApi(user_id)).length,
+    };
+  }
 
-    async findAllCount(): Promise<{ total: number }> {
-        return {
-            total: (await this.findAllFromApi()).length
-        }
-    }
-
-    private async findAllFromApi(): Promise<IProductResponse[]> {
-         return await tiendanubeApiClient.get(buildPath(this.path)) as IProductResponse[];
-    }
+  private async findAllFromApi(user_id: number): Promise<IProductResponse[]> {
+    return (await tiendanubeApiClient.get(
+      `${user_id}/products`
+    )) as IProductResponse[];
+  }
 }
 
 export default new ProductService();
-
-

@@ -7,6 +7,6 @@ export interface IProductRequest {
   name: { en: string; pt: string; es: string };
 }
 
-export interface IProductResponse  extends IProductRequest{
-  id: string
+export interface IProductResponse extends IProductRequest {
+  id: string;
 }

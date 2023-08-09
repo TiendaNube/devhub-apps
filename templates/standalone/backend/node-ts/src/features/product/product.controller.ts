@@ -1,39 +1,56 @@
-import {NextFunction, Request, Response} from "express";
+import { NextFunction, Request, Response } from "express";
 import { StatusCode } from "@utils";
 import { ProductService } from "@features/product";
 
 class ProductController {
-  async create(_req: Request, res: Response, next: NextFunction): Promise<Response|void> {
-        try {
-          const data = await ProductService.create();
-          return res.status(StatusCode.CREATED).json(data);
-        } catch (e) {
-          next(e);
-        }
+  async create(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
+    try {
+      const data = await ProductService.create(+req.params.user_id);
+      return res.status(StatusCode.CREATED).json(data);
+    } catch (e) {
+      next(e);
+    }
   }
 
-  async getTotal(_req: Request, res: Response, next: NextFunction): Promise<Response|void> {
+  async getTotal(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
     try {
-      const data= await ProductService.findAllCount();
+      const data = await ProductService.findAllCount(+req.params.user_id);
       return res.status(StatusCode.OK).json(data);
     } catch (e) {
       next(e);
     }
   }
 
-  async getAll(_req: Request, res: Response, next: NextFunction): Promise<Response|void> {
+  async getAll(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
     try {
-      const data = await ProductService.findAll();
+      const data = await ProductService.findAll(+req.params.user_id);
       return res.status(StatusCode.OK).json(data);
     } catch (e) {
       next(e);
     }
   }
 
-  async delete(req: Request, res: Response, next: NextFunction): Promise<Response|void> {
+  async delete(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
     try {
-      const  data  = await ProductService.delete(
-          req.params.id as string
+      const data = await ProductService.delete(
+        +req.params.user_id,
+        req.params.id as string
       );
       return res.status(StatusCode.OK).json(data);
     } catch (e) {

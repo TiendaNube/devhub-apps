@@ -54,7 +54,8 @@ To start the application, follow the steps below:
 
 ## Project Structure
 
-The backend project is divided into two main folders: "authentication" and "product". Each folder contains a "controllers" and a "services" subfolder.
+This project includes a feature folder that provides an example of creating a CRUD (Create, Read, Update, Delete) functionality for products. 
+It also encompasses installation instructions, as well as the client-side code that communicates with the Public API.
 
 - **authentication**
   - **controllers**
@@ -66,11 +67,8 @@ The backend project is divided into two main folders: "authentication" and "prod
   - **controllers**
     - productController.ts
   - **services**
-    - deleteProductsService.ts
-    - getTotalProductsService.ts
-    - insertFiveProductsService.ts
-    - listAllProductsService.ts
-
+    - productService.ts
+  
 The `controllers` folder contains files responsible for handling the incoming requests to the API. For example, the "authenticationController.ts" file within the `authentication/controllers` folder handles authentication-related requests.
 
 The `services` folder contains files that implement the business logic of the API. These files, such as `authenticationService.ts` and `*ProductService.ts`, contain functions and methods that perform the necessary operations, such as user authentication or product data manipulation.
@@ -81,6 +79,8 @@ Finally, the `index.ts` file serves as the main entry point of the application. 
 
 This folder structure helps maintain a clear separation of responsibilities and keeps the source code organized, making it easier to understand and work with different parts of the API.
 
+The `tiendanube-api.client.ts` is responsible for abstracting the logic of communicating with the public api
+The `tiendanube-auth.client.ts` is responsible for abstracting the logic of install app
 
 ## Endpoints
 
@@ -88,7 +88,7 @@ The API provides the following endpoints:
 
 ### Authentication Endpoint
 
-- **GET /auth**
+- **POST /auth/login**
   - Description: Retrieves app access credentials.
   - Parameters:
     - None
@@ -101,6 +101,23 @@ The API provides the following endpoints:
       "user_id": 00001123
     }
     ```
+
+### App Install Endpoint
+
+- **GET /auth/install?code=bf4917c1d7f9d1fc380a37b106194dd32d12b6fc**
+  - Description: Install app for store, more info access https://tiendanube.github.io/api-documentation/authentication
+  - Parameters:
+    - code: string
+  - Example Response:
+    ```json
+    {
+      "access_token": "db70f8b523274bdd9b0df15d998fb4978ca74750AEDOH",
+      "token_type": "bearer",
+      "scope": "write_products",
+      "user_id": 00001123
+    }
+    ```
+
 ### Product Endpoints
 
 - **GET /products**
@@ -137,19 +154,29 @@ The API provides the following endpoints:
     - None
 
   - Example body:
-    - The request body is created by the file (src/product/utils/generateProduct.function.ts) that randomly generates the product
+    - The request body is created by the file (src/product/__mock__/product.mock.ts) that randomly generates the product
     ```json
 
   - Example Response:
-    - An array with the created product IDs
+    - An object with the created product
     ```json
-    [
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
+      {
+          "id": 169311292,
+          "name": {
+              "es": "Intelligent Steel Chair"
+          },
+          "images": [
+              {
+                  "id": 475446544,
+                  "product_id": 169311292,
+                  "src": "https://d2r9epyceweg5n.cloudfront.net/stores/003/031/781/products/abstractlock99937-c2aaff2c5b271d86a416841576099461-1024-1024.",
+                  "position": 1,
+                  "alt": [],
+                  "created_at": "2023-05-15T13:33:33+0000",
+                  "updated_at": "2023-05-15T13:33:33+0000"
+              }
+          ]
+      }
     ```
 
 - **DELETE /products/{id}**
