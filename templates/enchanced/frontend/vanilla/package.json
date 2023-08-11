@@ -1,0 +1,19 @@
+{
+  "name": "admin-app-sample-vanilla",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tiendanube/nexo": "^0.1.8",
+    "axios": "^1.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

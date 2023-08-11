@@ -1,0 +1,36 @@
+@import url("@nimbus-ds/tokens/dist/css/variables.css");
+
+:root {
+  --background: var(--color-sys-light-neutral-surface);
+}
+
+/* The admin currently doesn't support dark mode. When it does, uncomment the following lines to provide dark mode support. */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-sys-dark-neutral-surface);
+  }
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: initial;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  background-color: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
