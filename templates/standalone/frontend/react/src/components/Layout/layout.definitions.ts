@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { HomeIcon, PictureIcon, TagIcon, IconProps } from "@nimbus-ds/icons";
+import { HomeIcon, TagIcon, IconProps } from "@nimbus-ds/icons";
 import { IPage } from "./layout.types";
 
 export const routes: IPage[] = [
@@ -9,12 +9,7 @@ export const routes: IPage[] = [
     slug: "/",
     icon: HomeIcon as FC<IconProps>,
   },
-  {
-    title: "examples-gallery",
-    name: "examples-gallery",
-    slug: "/examples",
-    icon: PictureIcon as FC<IconProps>,
-  },
+
   {
     title: "store-products",
     name: "store-products",

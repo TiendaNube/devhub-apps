@@ -27,7 +27,7 @@ export default {
         description:
           "Os produtos de exemplo são criados com o nome e preço aleatórios, como exemplo. Podendo modificá-los e eliminá-los há qualquer momento.",
         "total-product": "Total de produtos",
-        "create-products": "Criar 5 produtos",
+        "create-products": "Criar produto",
       },
     },
     tutorial: {
@@ -42,6 +42,16 @@ export default {
         "Clique no botão <0>Aceitar e começar a usar</0> para instalar o aplicativo",
       fifth:
         "Após o redirecionamento para Template de aplicativo, a requisição será executada e o processo de autenticação estará concluído",
+    },
+    products: {
+      title: "Produtos da Loja",
+      name: "Nome",
+      remove: "Excluir",
+      "no-content": "Não há produtos para serem exibidos",
+      selected: {
+        single: "Selecionado",
+        many: "Selecionados",
+      },
     },
   },
 };

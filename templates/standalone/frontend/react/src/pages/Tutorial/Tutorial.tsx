@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Box, Title, Text, Button } from "@nimbus-ds/components";
 import { CogIcon } from "@nimbus-ds/icons";
+import { useAuthentication } from "@/hooks";
 import IMG from "./empty-manager-tablet.png";
 
 const Tutorial: React.FC = () => {
+  useAuthentication();
   return (
     <Box
       width="100%"
@@ -36,7 +39,7 @@ const Tutorial: React.FC = () => {
             Precisamos completar algumas informações para começar o
             desenvolvimento, fique tranquilo vamos te guiar pelos passos.
           </Text>
-          <Button appearance="primary">
+          <Button as={Link} to="/configuration" appearance="primary">
             <CogIcon />
             Configurar
           </Button>

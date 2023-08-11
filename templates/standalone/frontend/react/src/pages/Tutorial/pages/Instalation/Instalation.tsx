@@ -6,13 +6,7 @@ const Instalation: React.FC = () => {
   const { t } = useTranslation("translations");
 
   return (
-    <Box
-      width="100%"
-      display="flex"
-      flexDirection="column"
-      gap="8"
-    >
-      <Title fontSize="8">Instalação do aplicativo</Title>
+    <Box width="100%">
       <Card padding="none">
         <Accordion selectedDefault="step-1">
           <Accordion.Item index="step-1">

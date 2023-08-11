@@ -1,14 +1,30 @@
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Layout, Page } from "@nimbus-ds/patterns";
-import { Card, Text, Link, Icon, Box, Button } from "@nimbus-ds/components";
+import {
+  Card,
+  Text,
+  Link,
+  Icon,
+  Box,
+  Button,
+  Title,
+} from "@nimbus-ds/components";
 import { ExternalLinkIcon, PlusCircleIcon } from "@nimbus-ds/icons";
+import HomeDataProvider from "./HomeDataProvider";
 
 const Home: React.FC = () => {
   const { t } = useTranslation("translations");
 
   return (
-    <Page maxWidth="800px">
+    <Page
+      maxWidth="800px"
+      minHeight={{
+        xs: "calc(100vh - 65px)",
+        md: "calc(100vh - 66px)",
+        lg: "calc(100vh - 66px)",
+      }}
+    >
       <Page.Header title={process.env.APP_NAME || "App Template"} />
       <Page.Body>
         <Layout columns="1">
@@ -51,33 +67,39 @@ const Home: React.FC = () => {
                 </Link>
               </Card.Footer>
             </Card>
-            <Card>
-              <Card.Header title={t("home.second-card.title")} />
-              <Card.Body>
-                <Box display="flex" flexDirection="column" gap="4" mb="2">
-                  <Text>{t("home.second-card.description")}</Text>
-                  <Box display="flex" flexDirection="column" gap="2">
-                    <Text color="neutral-textDisabled">
-                      {t("home.second-card.total-product")}
-                    </Text>
-                    {/* {renderTotal} */}
-                  </Box>
-                </Box>
-              </Card.Body>
-              <Card.Footer>
-                <Button
-                  appearance="primary"
-                  // onClick={() => onSubmit.mutate()}
-                  // disabled={onSubmit.isLoading}
-                >
-                  <Icon color="currentColor" source={<PlusCircleIcon />} />
-                  {t("home.second-card.create-products")}
-                  {/* {onSubmit.isLoading && (
+            <HomeDataProvider>
+              {({ totalProducts, onCreateProduct }) => (
+                <Card>
+                  <Card.Header title={t("home.second-card.title")} />
+                  <Card.Body>
+                    <Box display="flex" flexDirection="column" gap="4" mb="2">
+                      <Text>{t("home.second-card.description")}</Text>
+                      <Box display="flex" gap="2">
+                        <Text color="neutral-textDisabled">
+                          {t("home.second-card.total-product")}:
+                        </Text>
+                        <Title as="h6" fontSize="h1">
+                          {totalProducts}
+                        </Title>
+                      </Box>
+                    </Box>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Button
+                      appearance="primary"
+                      onClick={onCreateProduct}
+                      // disabled={onSubmit.isLoading}
+                    >
+                      <Icon color="currentColor" source={<PlusCircleIcon />} />
+                      {t("home.second-card.create-products")}
+                      {/* {onSubmit.isLoading && (
                       <Spinner color="currentColor" size="small" />
                     )} */}
-                </Button>
-              </Card.Footer>
-            </Card>
+                    </Button>
+                  </Card.Footer>
+                </Card>
+              )}
+            </HomeDataProvider>
           </Layout.Section>
         </Layout>
       </Page.Body>
