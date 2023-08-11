@@ -84,7 +84,15 @@ const Menu: React.FC<{ routes?: IPage[] }> = ({ routes }) => {
           )}
         </MenuNimbus.Section>
       </MenuNimbus.Body>
-      <MenuNimbus.Footer label="Configuração" startIcon={CogIcon} />
+      <MenuNimbus.Footer
+        label="Configuração"
+        startIcon={CogIcon}
+        onClick={() => {
+          localStorage.removeItem("config");
+          localStorage.removeItem("auth");
+          window.location.reload();
+        }}
+      />
     </MenuNimbus>
   );
 };

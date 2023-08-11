@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link as RouterLink, Outlet, useLocation } from "react-router-dom";
-import { Box, Button, Icon, IconButton, Sidebar } from "@nimbus-ds/components";
+import {
+  Box,
+  Button,
+  Icon,
+  IconButton,
+  Link,
+  Sidebar,
+} from "@nimbus-ds/components";
 import { AppShell, NavTabs } from "@nimbus-ds/patterns";
 import {
   ChevronLeftIcon,
@@ -8,11 +15,12 @@ import {
   MoonIcon,
   QuestionCircleIcon,
   SunIcon,
+  CodeIcon,
 } from "@nimbus-ds/icons";
 import { useDarkMode } from "@/hooks";
 import { handleActive, isExample, routes } from "./layout.definitions";
 import { Translator } from "@/app/I18n";
-import { Menu, Responsive } from "..";
+import { Languages, Menu, Responsive } from "..";
 
 const Layout: React.FC = () => {
   const { pathname } = useLocation();
@@ -81,20 +89,22 @@ const Layout: React.FC = () => {
                 )
               }
               rightSlot={
-                <>
-                  <Button appearance="transparent">
-                    <Icon
-                      color="currentColor"
-                      source={<QuestionCircleIcon />}
-                    />
-                    <Translator path="base-layout.help" />
-                  </Button>
+                <Box display="flex" gap="2-5" alignItems="center">
+                  <Link
+                    textDecoration="none"
+                    as="a"
+                    href="https://github.com/TiendaNube/app-templates-hub"
+                  >
+                    <CodeIcon />
+                    Github
+                  </Link>
+                  <Languages />
                   <IconButton
                     source={currentThemeIcon}
                     onClick={toggleDarkMode}
                     size="2rem"
                   />
-                </>
+                </Box>
               }
             />
             <Outlet />

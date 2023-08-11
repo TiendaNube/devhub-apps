@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Title,
@@ -8,12 +8,19 @@ import {
   Box,
   useToast,
 } from "@nimbus-ds/components";
-import { useConfig } from "@/hooks";
+import { useAuth, useConfig } from "@/hooks";
 
 const Success: React.FC = () => {
+  const { auth } = useAuth();
   const { config } = useConfig();
   const { addToast } = useToast();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (auth) {
+      window.location.href = "/";
+    }
+  }, []);
 
   const onRedirect = () => {
     if (config?.apiURL && config?.clientId) {
