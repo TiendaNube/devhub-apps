@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import { Tutorial } from "@/pages";
 import { Configuration, Instalation, Success } from "@/pages/Tutorial/pages";
@@ -13,6 +13,7 @@ const PublicRoures: React.FC = () => (
       <Route path="/instalation" element={<Instalation />} />
       <Route path="/success" element={<Success />} />
     </Route>
+    <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
 );
 
