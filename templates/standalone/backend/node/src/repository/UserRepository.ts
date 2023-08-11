@@ -30,15 +30,22 @@ class UserRepository {
   }
 
   findOne(user_id: number) {
-    const credentials = database
-      .get("credentials")
-      .value();
+    const credentials = database.get("credentials").value();
+    const store = this.findValueFromProperty<TiendanubeAuthInterface, number>(
+      "user_id",
+      credentials,
+      user_id
+    );
 
-    return this.findValueFromProperty<TiendanubeAuthInterface, number>("user_id", credentials, user_id);
+    if (!store) {
+      throw new HttpErrorException(`${user_id} not found`).setStatusCode(404);
+    }
+
+    return store;
   }
 
   findFirst(): TiendanubeAuthInterface {
-    return database.get("credentials").value()[0];
+    return database.get("credentials").value()?.[0];
   }
 
   private createOrUpdate(data: TiendanubeAuthInterface) {
@@ -60,10 +67,15 @@ class UserRepository {
     database.set("credentials", credentials).write();
   }
 
-  private findValueFromProperty<T, K = any>(property: string, list: T[], value: K): T {
-    const findValue = list.find((values) => (values as any)[property] === value);
-    if (!findValue)
-      throw new HttpErrorException(`${property} not found`).setStatusCode(404);
+  private findValueFromProperty<T, K = any>(
+    property: string,
+    list: T[],
+    value: K
+  ): T | undefined {
+    const findValue = list?.find(
+      (values) => (values as any)[property] === value
+    );
+
     return findValue;
   }
 }
