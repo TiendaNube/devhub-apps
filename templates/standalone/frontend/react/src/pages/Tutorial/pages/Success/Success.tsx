@@ -1,27 +1,51 @@
 import React from "react";
-import { Title, Text, Card, Button, Box } from "@nimbus-ds/components";
+import { useNavigate } from "react-router-dom";
+import {
+  Title,
+  Text,
+  Card,
+  Button,
+  Box,
+  useToast,
+} from "@nimbus-ds/components";
+import { useConfig } from "@/hooks";
 
-const success: React.FC = () => (
-  <Card>
-    <Card.Header>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Title as="h3">Tudo Pronto</Title>
-      </Box>
-    </Card.Header>
-    <Card.Body>
-      <Text>Seu aplicativo foi configurado com sucesso</Text>
-    </Card.Body>
-    <Card.Footer>
-      <Button
-        onClick={() => {
-          window.location.href = "/";
-        }}
-        appearance="primary"
-      >
-        Abri template
-      </Button>
-    </Card.Footer>
-  </Card>
-);
+const Success: React.FC = () => {
+  const { config } = useConfig();
+  const { addToast } = useToast();
+  const navigate = useNavigate();
 
-export default success;
+  const onRedirect = () => {
+    if (config?.apiURL && config?.clientId) {
+      window.location.href = "/";
+    } else {
+      addToast({
+        type: "danger",
+        text: "Please fill in your app settings",
+        duration: 4000,
+        id: "error-config",
+      });
+      navigate("/configuration");
+    }
+  };
+
+  return (
+    <Card>
+      <Card.Header>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Title as="h3">Tudo Pronto</Title>
+        </Box>
+      </Card.Header>
+      <Card.Body>
+        <Text>Seu aplicativo foi configurado com sucesso</Text>
+      </Card.Body>
+      <Card.Footer>
+        <Button onClick={onRedirect} appearance="primary">
+          Abri template
+        </Button>
+      </Card.Footer>
+    </Card>
+  );
+};
+
+export default Success;

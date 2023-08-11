@@ -5,12 +5,14 @@ import { Box, Thumbnail, Text } from "@nimbus-ds/components";
 import { CogIcon } from "@nimbus-ds/icons";
 import { Menu as MenuNimbus } from "@nimbus-ds/patterns";
 
+import { useConfig } from "@/hooks";
 import { IPage } from "./menu.types";
 import { handleActive, isExample } from "./menu.definitions";
 
 const Menu: React.FC<{ routes?: IPage[] }> = ({ routes }) => {
   const router = useLocation();
   const { t } = useTranslation("translations");
+  const { config } = useConfig();
 
   return (
     <MenuNimbus>
@@ -18,7 +20,7 @@ const Menu: React.FC<{ routes?: IPage[] }> = ({ routes }) => {
         <Box display="flex" gap="2" alignItems="center">
           <Thumbnail width="40px" alt="App logo" />
           <Box display="flex" flexDirection="column">
-            <Text>{`${process.env.APP_NAME || "App Template"}`}</Text>
+            <Text>{config?.appName ?? "App Template"}</Text>
           </Box>
         </Box>
       </MenuNimbus.Header>

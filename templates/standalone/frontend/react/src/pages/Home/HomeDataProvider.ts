@@ -23,7 +23,7 @@ const HomeDataProvider: React.FC<IHomeDataProvider> = ({ children }) => {
         setTotalProduts("-");
         addToast({
           type: "danger",
-          text: error.message,
+          text: error.message.description ?? error.message,
           duration: 4000,
           id: "error-total-products",
         });
@@ -48,7 +48,7 @@ const HomeDataProvider: React.FC<IHomeDataProvider> = ({ children }) => {
         setTotalProduts("-");
         addToast({
           type: "danger",
-          text: error.message,
+          text: error.message.description ?? error.message,
           duration: 4000,
           id: "error-create-product",
         });

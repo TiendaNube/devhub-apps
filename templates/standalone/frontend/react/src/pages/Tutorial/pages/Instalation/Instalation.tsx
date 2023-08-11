@@ -1,9 +1,11 @@
 import React from "react";
 import { useTranslation, Trans } from "react-i18next";
-import { Box, Title, Accordion, Text, Card, Link } from "@nimbus-ds/components";
+import { Box, Accordion, Text, Card, Link } from "@nimbus-ds/components";
+import { useConfig } from "@/hooks";
 
 const Instalation: React.FC = () => {
   const { t } = useTranslation("translations");
+  const { config } = useConfig();
 
   return (
     <Box width="100%">
@@ -47,7 +49,7 @@ const Instalation: React.FC = () => {
               <Text fontSize="highlight" lineHeight="highlight">
                 <Trans
                   i18nKey={t("tutorial.third", {
-                    clientId: process.env.CLIENT_ID,
+                    clientId: config?.clientId,
                   })}
                   components={[
                     <Text as="span" fontWeight="bold" children="" />,

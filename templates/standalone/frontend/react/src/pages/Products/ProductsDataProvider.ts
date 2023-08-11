@@ -24,7 +24,7 @@ const ProductsDataProvider: React.FC<IProductsDataProvider> = ({
       .catch((error) => {
         addToast({
           type: "danger",
-          text: error.message,
+          text: error.message.description ?? error.message,
           duration: 4000,
           id: "error-products",
         });
@@ -48,7 +48,7 @@ const ProductsDataProvider: React.FC<IProductsDataProvider> = ({
       .catch((error) => {
         addToast({
           type: "danger",
-          text: error.message,
+          text: error.message.description ?? error.message,
           duration: 4000,
           id: "error-delete-product",
         });
