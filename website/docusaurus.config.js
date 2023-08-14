@@ -10,16 +10,16 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
+  deploymentBranch: "gh-pages",
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://tiendanube.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'TiendaNube', // Usually your GitHub org/user name.
+  projectName: 'app-templates-hub', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
