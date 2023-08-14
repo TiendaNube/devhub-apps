@@ -6,9 +6,12 @@ on:
       - master
 
 jobs:
-  test-deploy:
+  test-documentation-deploy:
     name: Test deployment
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./website
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -18,7 +21,5 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        working-directory: website
       - name: Test build website
         run: yarn build
-        working-directory: website
