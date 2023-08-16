@@ -9,7 +9,6 @@ const config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
-
   deploymentBranch: "gh-pages",
   // Set the production url of your site here
   url: "https://tiendanube.github.io",
@@ -42,14 +41,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/TiendaNube/app-templates-hub/tree/master/website/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -57,7 +49,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -77,7 +68,7 @@ const config = {
             label: "Docs",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/TiendaNube/app-templates-hub/tree/master/website",
             label: "GitHub",
             position: "right",
           },
@@ -91,7 +82,7 @@ const config = {
             items: [
               {
                 label: "Getting started",
-                to: "/docs/getting-started/overview",
+                to: "/docs/getting-started",
               },
             ],
           },
