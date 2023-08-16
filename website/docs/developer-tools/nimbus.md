@@ -81,4 +81,4 @@ No Nimbus, oferecemos uma gama diversificada de templates pré-construídos que 
 ## Próximos passos
 
 - Saiba mais sobre a [Nimbus](https://nimbus.nuvemshop.com.br)
-- Saiba mais sobre o [Nexo](./developer-tools/nexo)
+- Saiba mais sobre o [Nexo](./nexo)
