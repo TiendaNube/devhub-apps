@@ -77,6 +77,13 @@ const config = {
         ],
       },
       footer: {
+        logo: {
+          alt: "DevHub Nuvemshop",
+          src: "img/logo.svg",
+          srcDark: "img/logo-dark.svg",
+          height: 24,
+          width: 140,
+        },
         links: [
           {
             title: "Documentation",
@@ -114,7 +121,6 @@ const config = {
             ],
           },
         ],
-        copyright: `© Nuvemshop ${new Date().getFullYear()}.`,
       },
       prism: {
         theme: lightCodeTheme,

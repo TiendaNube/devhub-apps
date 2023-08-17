@@ -31,6 +31,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-menu-color-active: #006bc8;
   --ifm-footer-background-color: #fafafa;
   --ifm-navbar-background-color: #fafafa;
   --ifm-color-primary: #2e8555;
@@ -48,6 +49,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
+  --ifm-menu-color-active: #0f7ddc;
   --ifm-footer-background-color: #000407;
   --ifm-navbar-background-color: #000407;
   --ifm-color-primary: #25c2a0;

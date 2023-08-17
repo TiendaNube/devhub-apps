@@ -4,11 +4,12 @@ import { ThemeProvider } from "@nimbus-ds/styles";
 import { Title, Card, Text, Button, Alert, Box } from "@nimbus-ds/components";
 
 const NimbusExample: React.FC = () => {
-  const { isDarkTheme } = useColorMode();
+  const { colorMode } = useColorMode();
+  const isDarkMode = colorMode === "dark";
   return (
-    <ThemeProvider theme={isDarkTheme ? "dark" : "base"}>
+    <ThemeProvider theme={isDarkMode ? "dark" : "base"}>
       <Box
-        backgroundColor={isDarkTheme ? "neutral-background" : "neutral-surface"}
+        backgroundColor={isDarkMode ? "neutral-background" : "neutral-surface"}
         padding="4"
         borderRadius="2"
       >

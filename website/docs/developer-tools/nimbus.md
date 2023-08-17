@@ -15,6 +15,8 @@ O admin da Nuvemshop é o centro de operações onde os usuários gerenciam seus
 
 Dentro do contexto do aplicativo, incentivamos o uso do [Nimbus](https://nimbus.nuvemshop.com.br) para desenvolver experiências de usuário coesas e reconhecíveis. É importante que seu aplicativo incorpore e faça uso das [bibliotecas do Nimbus](https://nimbus.nuvemshop.com.br/documentation/overview/getting-started), seguindo tanto as Diretrizes de Design de Aplicativos quanto as Diretrizes mais abrangentes do Nimbus. Isso garantirá a criação de experiências de usuário que sejam ao mesmo tempo familiares e consistentes.
 
+---
+
 ## Principais pacotes do Nimbus
 
 A seguir, apresentamos uma lista dos principais pacotes do Nimbus que podem ajudar a acelerar a sua criação de aplicativos:
@@ -24,6 +26,8 @@ A seguir, apresentamos uma lista dos principais pacotes do Nimbus que podem ajud
 - [**@nimbus-ds/patterns**](https://www.npmjs.com/package/@nimbus-ds/patterns): o conjunto central de padrões pré-construídos que oferece combinações inteligentes de componentes atômicos e compostos no Nimbus. Essas soluções pré-definidas, testadas e validadas pela equipe, resolvem desafios de design e interação com eficácia, promovendo uma abordagem coesa e consistente para implementar soluções de design.
 - [**@nimbus-ds/tokens**](https://www.npmjs.com/package/@nimbus-ds/tokens): os design tokens representam as variáveis fundamentais usadas para manter a coerência em um sistema de design. No contexto do Nimbus, eles abrangem elementos como cores, tipografias e espaçamentos essenciais. Esses tokens são a base para garantir uma aparência e sensação uniformes em todos os componentes e aplicações.
 - [**@nimbus-ds/icons**](https://www.npmjs.com/package/@nimbus-ds/icons): um conjunto de ícones open-source exclusivamente criados para o Nimbus, moldados a partir da morfologia do nosso logotipo de marca. Projetados para agilizar o design e desenvolvimento, esses ícones oferecem flexibilidade, localização e gratuidade, enriquecendo as soluções de quem deseja impulsionar histórias na América Latina.
+
+---
 
 ## Configurando o Nimbus
 
@@ -66,6 +70,8 @@ export default App;
 
 <Example />
 
+---
+
 ## Templates
 
 No Nimbus, oferecemos uma gama diversificada de templates pré-construídos que utilizam nossos componentes, como telas de login, tabelas e formulários. Esses modelos prontos para uso permitem criar com facilidade, aproveitando a eficiência e a consistência do design do Nimbus.
@@ -77,6 +83,8 @@ No Nimbus, oferecemos uma gama diversificada de templates pré-construídos que 
 5. [**Tela de Login**](https://tiendanube.github.io/nimbus-patterns/index.html?path=/story/templates-login--basic): Modelo para autenticação em aplicativos externos.
 6. [**Página de Lista Simples**](https://tiendanube.github.io/nimbus-patterns/index.html?path=/story/templates-simplelist--basic): Exibe uma lista de dados com texto e ações.
 7. [**Página de Lista de Produtos**](https://tiendanube.github.io/nimbus-patterns/index.html?path=/story/templates-productlist--basic): Simula a lista de produtos do administrador Nuvemshop.
+
+---
 
 ## Próximos passos
 
