@@ -18,9 +18,12 @@ import { developerTools, links } from "./_home.definitions";
 
 const Home: React.FC = () => {
   const { colorMode } = useColorMode();
+  const isDarkMode = colorMode === "dark";
+  console.log("colorMode", colorMode);
+  console.log("isDark", isDarkMode);
   return (
-    <div className={colorMode === "dark" ? styles.homeDark : styles.homeLight}>
-      <ThemeProvider theme={colorMode === "dark" ? "dark" : "base"}>
+    <div className={isDarkMode ? styles.homeDark : styles.homeLight}>
+      <ThemeProvider theme={isDarkMode ? "dark" : "base"} id="theme-provider">
         <div className="container">
           <Box
             display="flex"
