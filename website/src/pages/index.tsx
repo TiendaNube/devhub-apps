@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Home from "./Home";
+import { Home } from "../components";
 
 const Index: React.FC = () => {
   const { siteConfig } = useDocusaurusContext();

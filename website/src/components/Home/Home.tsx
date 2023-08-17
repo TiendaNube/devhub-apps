@@ -14,7 +14,7 @@ import { ThemeProvider } from "@nimbus-ds/styles";
 import { useColorMode } from "@docusaurus/theme-common";
 
 import styles from "./home.module.css";
-import { developerTools, links } from "./home.definitions";
+import { developerTools, links } from "./_home.definitions";
 
 const Home: React.FC = () => {
   const { colorMode } = useColorMode();
