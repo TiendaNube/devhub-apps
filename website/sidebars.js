@@ -29,7 +29,7 @@ const sidebars = {
         "developer-tools/templates",
         "developer-tools/nimbus",
         "developer-tools/nexo",
-        "developer-tools/apis",
+        "developer-tools/api",
       ],
     },
     {
