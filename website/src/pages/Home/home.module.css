@@ -1,0 +1,19 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.homeLight {
+  background: linear-gradient(
+    0deg,
+    #7abcf7 38.36%,
+    #deeffe 73.35%,
+    #ffffff 100%
+  );
+  flex-grow: 1;
+}
+
+.homeDark {
+  background: linear-gradient(0deg, #003e74 30%, #001c34 100%);
+  flex-grow: 1;
+}

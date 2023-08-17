@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "DevHub Nuvemshop",
+  tagline: "DevHub Nuvemshop",
   favicon: "img/favicon.ico",
   deploymentBranch: "gh-pages",
   // Set the production url of your site here
@@ -55,10 +55,12 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
         logo: {
-          alt: "My Site Logo",
+          alt: "DevHub Nuvemshop",
           src: "img/logo.svg",
+          srcDark: "img/logo-dark.svg",
+          height: 24,
+          width: 140,
         },
         items: [
           {
@@ -75,7 +77,6 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
         links: [
           {
             title: "Documentation",
@@ -113,7 +114,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `© Nuvemshop ${new Date().getFullYear()}.`,
       },
       prism: {
         theme: lightCodeTheme,

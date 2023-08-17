@@ -3,6 +3,21 @@
  * and scoped locally.
  */
 
+.homeLight {
+  background: linear-gradient(
+    0deg,
+    #ffffff 38.36%,
+    #deeffe 73.35%,
+    #7abcf7 100%
+  );
+  flex-grow: 1;
+}
+
+.homeDark {
+  background: linear-gradient(0deg, #003e74 30%, #001c34 100%);
+  flex-grow: 1;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;

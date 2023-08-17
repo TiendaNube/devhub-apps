@@ -19,6 +19,7 @@
     "@docusaurus/preset-classic": "2.4.1",
     "@mdx-js/react": "^1.6.22",
     "@nimbus-ds/components": "^5.2.0",
+    "@nimbus-ds/icons": "^1.2.0",
     "@nimbus-ds/styles": "^9.2.0",
     "clsx": "^1.2.1",
     "prism-react-renderer": "^1.3.5",

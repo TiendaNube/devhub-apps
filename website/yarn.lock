@@ -10900,6 +10900,7 @@ __metadata:
     "@docusaurus/preset-classic": 2.4.1
     "@mdx-js/react": ^1.6.22
     "@nimbus-ds/components": ^5.2.0
+    "@nimbus-ds/icons": ^1.2.0
     "@nimbus-ds/styles": ^9.2.0
     "@tsconfig/docusaurus": ^1.0.5
     clsx: ^1.2.1
