@@ -96,3 +96,4 @@ No Nimbus, oferecemos uma gama diversificada de templates pré-construídos que 
 
 - Saiba mais sobre a [Nimbus](https://nimbus.nuvemshop.com.br)
 - Saiba mais sobre o [Nexo](./nexo)
+- Saiba mais sobre nossa [API](./nuvemshop-api)

@@ -28,4 +28,4 @@ Para aprofundar seu conhecimento sobre a criação e implantação de aplicativo
 
 - Saiba mais sobre o [Nimbus](./nimbus)
 - Saiba mais sobre o [Nexo](./nexo)
-- Saiba mais sobre nossa [API](./api)
+- Saiba mais sobre nossa [API](./nuvemshop-api)

@@ -607,4 +607,4 @@ navigateHeaderRemove(nexo);
 
 ## Próximos passos
 
-- Saiba mais sobre nossa [API](./api)
+- Saiba mais sobre nossa [API](./nuvemshop-api)

@@ -23,4 +23,4 @@ Como parte do compromisso contínuo da Nuvemshop com a excelência e a eficiênc
 - Saiba mais sobre os [Templates](./templates)
 - Saiba mais sobre o [Nimbus](./nimbus)
 - Saiba mais sobre o [Nexo](./nexo)
-- Saiba mais sobre nossa [API](./api)
+- Saiba mais sobre nossa [API](./nuvemshop-api)
