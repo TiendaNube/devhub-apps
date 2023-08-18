@@ -604,3 +604,7 @@ Removes the action of Header Top, available only in Web mode (non-mobile devices
 ```typescript
 navigateHeaderRemove(nexo);
 ```
+
+## Próximos passos
+
+- Saiba mais sobre nossa [API](./api)
