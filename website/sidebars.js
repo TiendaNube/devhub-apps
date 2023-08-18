@@ -52,9 +52,10 @@ const sidebars = {
       items: ["homologation/overview", "homologation/checklist"],
     },
     {
-      type: "category",
+      type: "doc",
+      id: "authentication",
       label: "Authentication",
-      items: ["authentication/overview"],
+      // items: ["authentication/overview"],
     },
   ],
 };

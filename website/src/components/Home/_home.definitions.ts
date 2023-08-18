@@ -53,6 +53,6 @@ export const links = [
   },
   {
     title: "Manual authentication",
-    link: "/docs/getting-started",
+    link: "/docs/authentication",
   },
 ];
