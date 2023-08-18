@@ -37,6 +37,12 @@ A seguir, apresentamos uma lista dos principais pacotes do Nimbus que podem ajud
 yarn add @nimbus-ds/styles @nimbus-ds/components
 ```
 
+or
+
+```bash
+npm add @nimbus-ds/styles @nimbus-ds/components
+```
+
 2. Importamos todos os componentes necessários do Nimbus e o arquivo de estilos css para o nosso projeto, permitindo assim a utilização de qualquer componente Nimbus no projeto.
 
 ```jsx

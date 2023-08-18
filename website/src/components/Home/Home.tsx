@@ -24,10 +24,13 @@ const Home: React.FC = () => {
   console.log("isDark", isDarkMode);
   return (
     <>
-      <div
-        className={classnames(isDarkMode ? styles.homeDark : styles.homeLight)}
-      >
-        <div className={styles.homeBackground} />
+      <div className={isDarkMode ? styles.homeDark : styles.homeLight}>
+        <div
+          className={classnames(
+            styles.homeBackground,
+            isDarkMode ? styles.homeBackgroundDark : styles.homeBackgroundLight
+          )}
+        />
         <ThemeProvider theme={isDarkMode ? "dark" : "base"} id="theme-provider">
           <div className={classnames("container", styles.homeContainer)}>
             <Box

@@ -15,7 +15,13 @@
 }
 
 .homeDark {
-  background: linear-gradient(0deg, #003e74 20%, #001c34 100%);
+  background: linear-gradient(
+    0deg,
+    #000e1a 13.73%,
+    #001425 31.2%,
+    #001425 65.83%,
+    #002648 97.16%
+  );
   flex-grow: 1;
   position: relative;
   z-index: 1;
@@ -27,8 +33,16 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background-image: url("/static/img/home-back.png");
   background-repeat: no-repeat;
   background-position: top;
   z-index: -1;
 }
+
+.homeBackgroundLight {
+  background-image: url("/static/img/home-background.png");
+}
+
+.homeBackgroundDark {
+  background-image: url("/static/img/home-background-dark-mode.png");
+}
+

@@ -1,16 +1,7 @@
 import React from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { ThemeProvider } from "@nimbus-ds/styles";
-import {
-  Title,
-  Card,
-  Text,
-  Button,
-  Alert,
-  Box,
-  Link,
-  Icon,
-} from "@nimbus-ds/components";
+import { Title, Card, Text, Box, Link, Icon } from "@nimbus-ds/components";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import { tools } from "./developerTools.definitions";
 
