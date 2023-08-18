@@ -52,7 +52,7 @@ const Home: React.FC = () => {
                 potencialize seus ganhos
               </Box>
               <Button as={Link} to="/docs/getting-started">
-                Começar
+                Getting started
               </Button>
             </Box>
             <Box display="flex" flexDirection="column" my="20" gap="4">
