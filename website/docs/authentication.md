@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 import { Alert } from '@nimbus-ds/components';
+import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 # Overview
 
@@ -10,7 +11,7 @@ Este guia apresenta métodos de autenticação de aplicativos com a plataforma N
 
 ## Autenticação da API
 
-A autenticação e autorização de usuário são fornecidas por meio de uma implementação restrita do OAuth 2. Atualmente, oferecemos suporte apenas ao fluxo "[Código de Autorização](https://oauth.net/2/grant-types/authorization-code/)" para a concessão de acesso. Ao seguir este fluxo, você obtém [tokens de acesso](https://oauth.net/2/access-tokens/) que não expiram, permanecendo válidos até que sejam renovados.
+A autenticação e autorização de usuário são fornecidas por meio de uma implementação restrita do OAuth 2. Atualmente, oferecemos suporte apenas ao fluxo ["Código de Autorização"](https://oauth.net/2/grant-types/authorization-code/) para a concessão de acesso. Ao seguir este fluxo, você obtém [tokens de acesso](https://oauth.net/2/access-tokens/) que não expiram, permanecendo válidos até que sejam renovados.
 
 ## Tokens de Acesso e Identificação
 
@@ -29,13 +30,15 @@ Nossos modelos de criação de apps já incluem um sistema de autenticação int
 
 ## Obtendo o token de acesso
 
-<Alert appearance="warning" title="Atenção">
-    Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
-</Alert>
+<NimbusThemeProvider>
+    <Alert appearance="warning" title="Atenção">
+        Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
+    </Alert>
+</NimbusThemeProvider>
 
 ### Alterando a URL de redirecionamento
 
-Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de `Dados Básicos`.
+Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.
 
 Esta etapa é crucial para garantir que o redirecionamento funcione corretamente e que você possa acessar a página de código cURL sem problemas. Certifique-se de atualizar a URL de redirecionamento conforme necessário.
 
@@ -100,9 +103,11 @@ Seguindo essas etapas, você poderá obter um novo código cURL válido e retoma
 
 Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
 
-<Alert appearance="primary" title="💡 Dica">
-    Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
-</Alert>
+<NimbusThemeProvider>
+    <Alert appearance="primary" title="💡 Dica">
+        Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
+    </Alert>
+</NimbusThemeProvider>
 
 1. Acessar o painel administrador Nuvemshop.
 
@@ -127,3 +132,9 @@ Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel admi
    ![App uninstall](./assets/uninstall-app.gif "App uninstall")
 
 O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
+
+---
+
+## Próximos passos
+
+- Saiba mais sobre a [Aplicativos](./applications/overview)

@@ -1,13 +1,13 @@
 import React from "react";
 import { useColorMode } from "@docusaurus/theme-common";
-import { ThemeProvider } from "@nimbus-ds/styles";
 import { Title, Card, Text, Button, Alert, Box } from "@nimbus-ds/components";
+import NimbusProvider from "../NimbusThemeProvider";
 
 const NimbusExample: React.FC = () => {
   const { colorMode } = useColorMode();
   const isDarkMode = colorMode === "dark";
   return (
-    <ThemeProvider theme={isDarkMode ? "dark" : "base"}>
+    <NimbusProvider>
       <Box
         backgroundColor={isDarkMode ? "neutral-background" : "neutral-surface"}
         padding="4"
@@ -28,7 +28,7 @@ const NimbusExample: React.FC = () => {
           </Card>
         </Box>
       </Box>
-    </ThemeProvider>
+    </NimbusProvider>
   );
 };
 
