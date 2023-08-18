@@ -80,7 +80,7 @@ const Home: React.FC = () => {
                       </Card.Body>
                       <Card.Footer>
                         <NimbusLink appearance="primary">
-                          Ler a documentação
+                          {developerTool.linkText}
                           <NimbusIcon
                             color="primary-interactive"
                             source={<ExternalLinkIcon />}
@@ -104,33 +104,63 @@ const Home: React.FC = () => {
               <Box
                 as="h2"
                 color="neutral-background"
-                fontWeight="bold"
+                fontWeight="regular"
                 fontSize="8"
               >
                 Descubra os diferentes tipos de aplicativos disponíveis
               </Box>
-              <Box display="flex" flexDirection="column" gap="4">
+              <Box
+                display="flex"
+                flexDirection="column"
+                gap="4"
+                maxWidth={{ xs: "100%", md: "100%", lg: "40%", xl: "24%" }}
+              >
+                <Box
+                  fontSize="h4"
+                  lineHeight="h4"
+                  fontWeight="bold"
+                  color="neutral-background"
+                  mt="none"
+                >
+                  Native app
+                </Box>
                 <Text color="neutral-background">
-                  Native app Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nam nec tortor vitae massa fringilla.
+                  Construa aplicativos integrados a no administrador de lojas de
+                  forma nativa, para experiência aprimorada e recursos de fácil
+                  acesso.
                 </Text>
-                <NimbusLink appearance="neutral-background">
+                <NimbusLink appearance="primary">
                   Ler a documentação
                   <NimbusIcon
-                    color="neutral-background"
+                    color="primary-interactive"
                     source={<ExternalLinkIcon />}
                   />
                 </NimbusLink>
               </Box>
-              <Box display="flex" flexDirection="column" gap="4">
+              <Box
+                display="flex"
+                flexDirection="column"
+                gap="4"
+                maxWidth={{ xs: "100%", md: "100%", lg: "40%", xl: "24%" }}
+              >
+                <Box
+                  fontSize="h4"
+                  lineHeight="h4"
+                  fontWeight="bold"
+                  color="neutral-background"
+                  mt="none"
+                >
+                  Standalone app
+                </Box>
                 <Text color="neutral-background">
-                  Native app Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Nam nec tortor vitae massa fringilla.
+                  Construa aplicativos de forma independente, para uma
+                  experiência mais personalizada e recursos integrados ao seu
+                  produto.
                 </Text>
-                <NimbusLink appearance="neutral-background">
+                <NimbusLink appearance="primary">
                   Ler a documentação
                   <NimbusIcon
-                    color="neutral-background"
+                    color="primary-interactive"
                     source={<ExternalLinkIcon />}
                   />
                 </NimbusLink>
@@ -150,10 +180,7 @@ const Home: React.FC = () => {
                   return (
                     <Card key={index}>
                       <Card.Body>
-                        <Box display="flex" flexDirection="column" gap="1">
-                          <Title as="h4">{link.title}</Title>
-                          <Text>{link.text}</Text>
-                        </Box>
+                        <Title as="h4">{link.title}</Title>
                       </Card.Body>
                       <Card.Footer>
                         <NimbusLink appearance="primary">

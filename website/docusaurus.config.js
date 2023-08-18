@@ -54,6 +54,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      colorMode: {
+        defaultMode: "light",
+      },
       navbar: {
         logo: {
           alt: "DevHub Nuvemshop",
@@ -70,9 +73,27 @@ const config = {
             label: "Docs",
           },
           {
-            href: "https://github.com/TiendaNube/app-templates-hub/tree/master/website",
-            label: "GitHub",
+            type: "dropdown",
+            label: "Dev tools",
             position: "right",
+            items: [
+              {
+                to: "docs/developer-tools/templates",
+                label: "App Templates",
+              },
+              {
+                to: "docs/developer-tools/nimbus",
+                label: "Nimbus",
+              },
+              {
+                to: "docs/developer-tools/nexo",
+                label: "Nexo",
+              },
+              {
+                to: "docs/developer-tools/nuvemshop-api",
+                label: "Nuvemshop API",
+              },
+            ],
           },
         ],
       },
