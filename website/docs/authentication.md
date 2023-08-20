@@ -89,7 +89,7 @@ Lembrando que você pode executar esse comando em um terminal ou em uma ferramen
 
 ### Como obeter um novo código cURL
 
-Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./authentication#desinstalando-um-aplicativo) e [reinstalando](./authentication#instalação-do-aplicativo-na-loja-de-demo) o seu aplicativo na loja novamente.
+Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./applications/overview#desinstalando-um-aplicativo) e [reinstalando](./authentication#instalação-do-aplicativo-na-loja-de-demo) o seu aplicativo na loja novamente.
 
 Para isso siga estes passos:
 
@@ -98,40 +98,6 @@ Para isso siga estes passos:
 3. No administrador da sua loja demo, na sessão **Meus aplicativos**, verifique se o aplicativo está instalado e clique em **Desinstalar**.
 
 Seguindo essas etapas, você poderá obter um novo código cURL válido e retomar o processo de [autenticação](./authentication#obtendo-o-token-de-acesso) com sucesso. Certifique-se de acompanhar as instruções com atenção para evitar problemas futuros.
-
-### Desinstalando um aplicativo
-
-Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
-
-<NimbusThemeProvider>
-    <Alert appearance="primary" title="💡 Dica">
-        Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
-    </Alert>
-</NimbusThemeProvider>
-
-1. Acessar o painel administrador Nuvemshop.
-
-2. No menu lateral, localizar na seção Potencializar e clicar em **"Meus aplicativos"**.
-
-   ![Access my apps](./assets/access-my-apps.jpeg "Access my apps")
-
-3. Ao carregar a página, você deve procurar pela ferramenta que deseja desativar e, ao lado direito, clicar em **"Desinstalar"**.
-
-   ![Uninstall app](./assets/uninstall-app.jpeg "Uninstall app")
-
-4. Logo em seguida, abrirá **um pop-up perguntando se deseja prosseguir** com a desinstalação do aplicativo, basta clicar em **"OK"**.
-
-   ![Confirm app uninstall](./assets/confirm-app-uninstall.jpeg "Confirm app uninstall")
-
-5. Ao ser desinstalado, aparecerá uma mensagem de confirmação no topo da página.
-
-   ![App uninstalled](./assets/app-uninstalled.jpg "App uninstalled")
-
-   Confira um exemplo no GIF abaixo:
-
-   ![App uninstall](./assets/uninstall-app.gif "App uninstall")
-
-O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
 
 ---
 

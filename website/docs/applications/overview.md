@@ -5,6 +5,7 @@ sidebar_position: 1
 import { Alert } from '@nimbus-ds/components';
 import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 import ImageCreateApp from '@site/docs/assets/create-app.png';
+import AppTypes from '@site/src/components/AppTypes';
 
 # Overview
 
@@ -81,3 +82,49 @@ Essas chaves proporcionam a autorização necessária para que seu aplicativo se
 ---
 
 ## Escolhendo o tipo do seu aplicativo
+
+Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fundamental compreender os dois tipos de aplicativos que podem ser desenvolvidos em nossa plataforma: Nativo e Standalone. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants. Vamos explorar esses tipos em detalhes para que você possa tomar a melhor decisão para seu aplicativo.
+
+<AppTypes />
+
+## Editando as permissões do seu aplicativo
+
+Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter acesso a outras permissões para o seu app. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar, adicionar ou modificar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (caso você tenha alguma dúvida, acesse o nosso [tutorial](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
+
+---
+
+## Desinstalando um aplicativo
+
+Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
+
+<NimbusThemeProvider>
+    <Alert appearance="primary" title="💡 Dica">
+        Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
+    </Alert>
+</NimbusThemeProvider>
+
+1. Acessar o painel administrador Nuvemshop.
+
+2. No menu lateral, localizar na seção Potencializar e clicar em **"Meus aplicativos"**.
+
+   ![Access my apps](../assets/access-my-apps.jpeg "Access my apps")
+
+3. Ao carregar a página, você deve procurar pela ferramenta que deseja desativar e, ao lado direito, clicar em **"Desinstalar"**.
+
+   ![Uninstall app](../assets/uninstall-app.jpeg "Uninstall app")
+
+4. Logo em seguida, abrirá **um pop-up perguntando se deseja prosseguir** com a desinstalação do aplicativo, basta clicar em **"OK"**.
+
+   ![Confirm app uninstall](../assets/confirm-app-uninstall.jpeg "Confirm app uninstall")
+
+5. Ao ser desinstalado, aparecerá uma mensagem de confirmação no topo da página.
+
+   ![App uninstalled](../assets/app-uninstalled.jpg "App uninstalled")
+
+   Confira um exemplo no GIF abaixo:
+
+   ![App uninstall](../assets/uninstall-app.gif "App uninstall")
+
+O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
+
+---
