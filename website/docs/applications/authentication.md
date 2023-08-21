@@ -79,7 +79,7 @@ Lembrando que você pode executar esse comando em um terminal ou em uma ferramen
 
 ### Como obeter um novo código cURL
 
-Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./applications/overview#desinstalando-um-aplicativo) e [reinstalando](./authentication#instalação-do-aplicativo-na-loja-de-demo) o seu aplicativo na loja novamente.
+Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./overview#desinstalando-um-aplicativo) e [reinstalando](./overview.md#instalando-seu-aplicativo) o seu aplicativo na loja novamente.
 
 Para isso siga estes passos:
 
@@ -93,4 +93,4 @@ Seguindo essas etapas, você poderá obter um novo código cURL válido e retoma
 
 ## Próximos passos
 
-- Saiba mais sobre a [Aplicativos](./applications/overview)
+- Saiba mais sobre [Aplicativos](./overview.md)
