@@ -9,27 +9,25 @@ import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 ## Checklist de Homologação de Design
 
-**STATUS DO DOCUMENTO**: <Tag appearance="warning">WIP *(Work in Progress)*</Tag>
-
 O objetivo desse documento é tornar os requisitos de construção e homologação de design mais transparentes. Esses requisitos foram categorizados por urgência e obrigatoriedade.
 
 ### Categorização de Urgência
 
-<Tag appearance="danger">**Prioridade Alta**</Tag>
+<Tag appearance="danger">Prioridade Alta</Tag>
 Itens marcados com essa tag são temas de importância primária, que devem ter a atenção desde o primeiro momento. Se os itens não estiverem de acordo, a homologação pode ser recusada.
 
-<Tag appearance="warning">**Prioridade Média**</Tag>
+<Tag appearance="warning">Prioridade Média</Tag>
 Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que os itens sejam contemplados.
 
-<Tag appearance="success">**Prioridade Baixa**</Tag>
+<Tag appearance="success">Prioridade Baixa</Tag>
 Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que ajustes sejam feitos.
 
 ### Categorização de Obrigatoriedade
 
-<Tag appearance="primary">**Obrigatório**</Tag>
+<Tag appearance="primary">Obrigatório</Tag>
 Todos os itens marcados com essa tag devem ser verificados e contemplados, não importa qual seja a solução apresentada.
 
-<Tag appearance="neutral">**Recomendado**</Tag>
+<Tag appearance="neutral">Recomendado</Tag>
 Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo a necessidade e contexto em que o aplicativo está inserido. Ou seja, deve ser contemplado se o aplicativo apresentar caso de uso ou elemento similar.
 
 ---
@@ -38,8 +36,8 @@ Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo 
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-- [ ] 1.1 Página de Estado Vazio - Ver Guidelines - <Tag appearance="danger">Obrigatorio</Tag>
-- [ ] 1.2 Página de Erro - Ver Guidelines - <Tag appearance="danger">Obrigatorio</Tag>
+- [ ] 1.1 Página de Estado Vazio - Ver Guidelines - Obrigatorio
+- [ ] 1.2 Página de Erro - Ver Guidelines - Obrigatorio
 - [ ] 1.3 Página de Formulários - Ver Guidelines - Recomendado
 - [ ] 1.4 Página de Ajustes - Ver Guidelines - Recomendado
 - [ ] 1.5 Modal de Confirmação - Ver Guidelines - Recomendado
@@ -74,4 +72,3 @@ Nesse item devemos nos atentar aos comportamentos e disposição de elementos, v
 - [ ] 4.2 Fundamentos de UX Writing - Ver Guidelines - Obrigatório
 - [ ] 4.3 Tom de Voz Nuvemshop - Ver Guidelines - Obrigatório
 - [ ] 4.4 Padrões de Texto - Ver Guidelines - Obrigatório
-
