@@ -6,7 +6,7 @@ title: Uso de templates
 import { Tag } from '@nimbus-ds/components';
 import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
-# Uso de templates de design - [Ver checklist](./homologation/checklist)
+# Uso de templates de design - [Ver checklist](../homologation/checklist.md)
 
 <Tag appearance="danger">Prioridade alta</Tag>
 
