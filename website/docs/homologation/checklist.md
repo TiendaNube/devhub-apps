@@ -9,27 +9,27 @@ import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 ## Checklist de Homologação de Design
 
-**STATUS DO DOCUMENTO**: WIP *(Work in Progress)*
+**STATUS DO DOCUMENTO**: <Tag appearance="warning">WIP *(Work in Progress)*</Tag>
 
 O objetivo desse documento é tornar os requisitos de construção e homologação de design mais transparentes. Esses requisitos foram categorizados por urgência e obrigatoriedade.
 
 ### Categorização de Urgência
 
-**Prioridade Alta**  
+<Tag appearance="danger">**Prioridade Alta**</Tag>
 Itens marcados com essa tag são temas de importância primária, que devem ter a atenção desde o primeiro momento. Se os itens não estiverem de acordo, a homologação pode ser recusada.
 
-**Prioridade Média**  
+<Tag appearance="warning">**Prioridade Média**</Tag>
 Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que os itens sejam contemplados.
 
-**Prioridade Baixa**  
+<Tag appearance="success">**Prioridade Baixa**</Tag>
 Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que ajustes sejam feitos.
 
 ### Categorização de Obrigatoriedade
 
-**Obrigatório**  
+<Tag appearance="primary">**Obrigatório**</Tag>
 Todos os itens marcados com essa tag devem ser verificados e contemplados, não importa qual seja a solução apresentada.
 
-**Recomendado**  
+<Tag appearance="neutral">**Recomendado**</Tag>
 Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo a necessidade e contexto em que o aplicativo está inserido. Ou seja, deve ser contemplado se o aplicativo apresentar caso de uso ou elemento similar.
 
 ---
