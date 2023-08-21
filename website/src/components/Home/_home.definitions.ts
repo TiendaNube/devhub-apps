@@ -41,18 +41,18 @@ export const developerTools = [
 export const links = [
   {
     title: "Homologation",
-    link: "/docs/getting-started",
+    link: "/docs/homologation/overview",
   },
   {
     title: "Design checklist",
-    link: "/docs/getting-started",
+    link: "/docs/homologation/checklist",
   },
   {
     title: "Design guidelines",
-    link: "/docs/getting-started",
+    link: "/design-guidelines/overview",
   },
   {
     title: "Manual authentication",
-    link: "/docs/authentication",
+    link: "/docs/applications/authentication",
   },
 ];

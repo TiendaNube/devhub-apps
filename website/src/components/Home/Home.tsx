@@ -79,7 +79,11 @@ const Home: React.FC = () => {
                         </Box>
                       </Card.Body>
                       <Card.Footer>
-                        <NimbusLink appearance="primary">
+                        <NimbusLink
+                          as={Link}
+                          to={developerTool.link}
+                          appearance="primary"
+                        >
                           {developerTool.linkText}
                           <NimbusIcon
                             color="primary-interactive"
@@ -129,7 +133,11 @@ const Home: React.FC = () => {
                   forma nativa, para experiência aprimorada e recursos de fácil
                   acesso.
                 </Text>
-                <NimbusLink appearance="primary">
+                <NimbusLink
+                  as={Link}
+                  to="/docs/applications/native"
+                  appearance="primary"
+                >
                   Ler a documentação
                   <NimbusIcon
                     color="primary-interactive"
@@ -157,7 +165,11 @@ const Home: React.FC = () => {
                   experiência mais personalizada e recursos integrados ao seu
                   produto.
                 </Text>
-                <NimbusLink appearance="primary">
+                <NimbusLink
+                  as={Link}
+                  to="/docs/applications/standalone"
+                  appearance="primary"
+                >
                   Ler a documentação
                   <NimbusIcon
                     color="primary-interactive"
@@ -183,7 +195,7 @@ const Home: React.FC = () => {
                         <Title as="h4">{link.title}</Title>
                       </Card.Body>
                       <Card.Footer>
-                        <NimbusLink appearance="primary">
+                        <NimbusLink  as={Link} appearance="primary">
                           Ler a documentação
                           <NimbusIcon
                             color="primary-interactive"
