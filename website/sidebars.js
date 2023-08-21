@@ -48,7 +48,7 @@ const sidebars = {
       items: [
         "design-guidelines/overview",
         "design-guidelines/template-usage",
-        "design-guidelines/concept-usage"
+        "design-guidelines/concept-usage",
       ],
     },
     {
@@ -56,7 +56,7 @@ const sidebars = {
       label: "Homologation",
       items: [
         "homologation/overview", 
-        "homologation/checklist"
+        "homologation/checklist",
       ],
     },
   ],
