@@ -54,7 +54,10 @@ const sidebars = {
     {
       type: "category",
       label: "Homologation",
-      items: ["homologation/overview", "homologation/checklist"],
+      items: [
+        "homologation/overview", 
+        "homologation/checklist"
+      ],
     },
   ],
 };
