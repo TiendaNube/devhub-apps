@@ -28,7 +28,7 @@ $ yarn add @tiendanube/nexo
 
 ## Getting Started
 
-### Create a Nexo instance.
+### Create a Nexo instance
 
 | Config   | Type                      | Description                                                        |
 | -------- | ------------------------- | ------------------------------------------------------------------ |
