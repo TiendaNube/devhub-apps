@@ -25,3 +25,4 @@ Para escolher os templates adequados, é importante considerar a atribuição da
 - Tela de Login
 - Página de Lista Simples
 - Página de Lista de Produtos
+
