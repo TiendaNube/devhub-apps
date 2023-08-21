@@ -3,7 +3,9 @@ sidebar_position: 4
 title: Uso de conceitos de UX/UI
 ---
 
-# Uso de Conceitos de UX/UI - Prioridade Média
+# Uso de Conceitos de UX/UI
+
+Prioridade Média
 
 ## Priorização e Organização de Ações e Conteúdos - Ver Checklist
 
