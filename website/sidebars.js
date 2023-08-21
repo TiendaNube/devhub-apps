@@ -45,7 +45,10 @@ const sidebars = {
     {
       type: "category",
       label: "Design guidelines",
-      items: ["design-guidelines/overview"],
+      items: [
+        "design-guidelines/overview",
+        "design-guidelines/templates-usage"
+      ],
     },
     {
       type: "category",
