@@ -81,19 +81,19 @@ Essas chaves proporcionam a autorização necessária para que seu aplicativo se
 
 ---
 
-## Escolhendo o tipo do seu aplicativo
+### Instalando seu aplicativo
 
-Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fundamental compreender os dois tipos de aplicativos que podem ser desenvolvidos em nossa plataforma: Nativo e Standalone. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants. Vamos explorar esses tipos em detalhes para que você possa tomar a melhor decisão para seu aplicativo.
+Caso você tenha uma loja demo, clique no botão **Instalar aplicativo**. Você será redirecionado para o login da sua loja demo. Utilize as mesmas credenciais que você usou para entrar no Portal de Parceiros.
 
-<AppTypes />
+Se você não tiver uma loja demo, [clique aqui](https://partners.nuvemshop.com.br/stores/create?type=demo) para criar uma nova.
 
-## Editando as permissões do seu aplicativo
+Para instalar o seu app em outra loja, adicione `/admin/apps/:app-id/authorize` no final da URL. Lembre-se de substituir o `:app-id` pelo ID do seu aplicativo.
 
-Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter acesso a outras permissões para o seu app. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar, adicionar ou modificar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
+Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a instalação, clicando em **Aceitar e começar a usar**.
 
 ---
 
-## Desinstalando um aplicativo
+### Desinstalando um aplicativo
 
 Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
 
@@ -126,5 +126,19 @@ Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel admi
    ![App uninstall](../assets/uninstall-app.gif "App uninstall")
 
 O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
+
+---
+
+## Autenticando seu aplicativo
+
+## Escolhendo o tipo do seu aplicativo
+
+Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fundamental compreender os dois tipos de aplicativos que podem ser desenvolvidos em nossa plataforma: Nativo e Standalone. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants. Vamos explorar esses tipos em detalhes para que você possa tomar a melhor decisão para seu aplicativo.
+
+<AppTypes />
+
+## Editando as permissões do seu aplicativo
+
+Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter acesso a outras permissões para o seu app. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
 
 ---

@@ -37,6 +37,7 @@ const sidebars = {
       label: "Applications",
       items: [
         "applications/overview",
+        "applications/authentication",
         "applications/native",
         "applications/standalone",
       ],
@@ -50,12 +51,6 @@ const sidebars = {
       type: "category",
       label: "Homologation",
       items: ["homologation/overview", "homologation/checklist"],
-    },
-    {
-      type: "doc",
-      id: "authentication",
-      label: "Authentication",
-      // items: ["authentication/overview"],
     },
   ],
 };

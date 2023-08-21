@@ -5,7 +5,7 @@ sidebar_position: 1
 import { Alert } from '@nimbus-ds/components';
 import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
-# Overview
+# Autenticação
 
 Este guia apresenta métodos de autenticação de aplicativos com a plataforma Nuvemshop. Descubra como garantir segurança e acesso autorizado para integrações perfeitas entre seus apps e nossa plataforma.
 
@@ -41,16 +41,6 @@ Nossos modelos de criação de apps já incluem um sistema de autenticação int
 Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.
 
 Esta etapa é crucial para garantir que o redirecionamento funcione corretamente e que você possa acessar a página de código cURL sem problemas. Certifique-se de atualizar a URL de redirecionamento conforme necessário.
-
-### Instalação do aplicativo na loja de demo
-
-Caso você tenha uma loja demo, clique no botão **Instalar aplicativo**. Você será redirecionado para o login da sua loja demo. Utilize as mesmas credenciais que você usou para entrar no Portal de Parceiros.
-
-Se você não tiver uma loja demo, [clique aqui](https://partners.nuvemshop.com.br/stores/create?type=demo) para criar uma nova.
-
-Para instalar o seu app em outra loja, adicione `/admin/apps/:app-id/authorize` no final da URL. Lembre-se de substituir o `:app-id` pelo ID do seu aplicativo.
-
-Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a instalação, clicando em **Aceitar e começar a usar**.
 
 ### Fazendo a Requisição com o Código cURL
 
