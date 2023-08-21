@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import { Tag } from '@nimbus-ds/components';
+import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
+
 # Design Checklist
 
 ## Checklist de Homologação de Design
@@ -35,8 +38,8 @@ Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo 
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-- [ ] 1.1 Página de Estado Vazio - Ver Guidelines - Obrigatório
-- [ ] 1.2 Página de Erro - Ver Guidelines - Obrigatório
+- [ ] 1.1 Página de Estado Vazio - Ver Guidelines - <Tag appearance="danger">Obrigatorio</Tag>
+- [ ] 1.2 Página de Erro - Ver Guidelines - <Tag appearance="danger">Obrigatorio</Tag>
 - [ ] 1.3 Página de Formulários - Ver Guidelines - Recomendado
 - [ ] 1.4 Página de Ajustes - Ver Guidelines - Recomendado
 - [ ] 1.5 Modal de Confirmação - Ver Guidelines - Recomendado
