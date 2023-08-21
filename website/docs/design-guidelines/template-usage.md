@@ -8,7 +8,7 @@ import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 # Uso de templates de design - [Ver checklist](./checklist)
 
-<Tag appearance="danger">Prioridade alta</tag>
+<Tag appearance="danger">Prioridade alta</Tag>
 
 Os templates Nimbus são ferramentas valiosas para garantir consistência visual e uma experiência sólida nos produtos da Nuvemshop. Ao utilizar esses templates, nosso objetivo é assegurar uma experiência uniforme alinhada com a interface do painel administrativo das lojas da Nuvemshop.
 
