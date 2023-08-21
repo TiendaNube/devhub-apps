@@ -36,18 +36,6 @@ Seja bem-vindo a esta jornada emocionante, onde seu talento se une ao nosso ecos
 
 Além de entender o panorama geral dos aplicativos Nuvemshop, é fundamental conhecer os dois tipos de aplicativos que podem ser desenvolvidos para a nossa plataforma: Standalone e Enhanced. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants.
 
-**Aplicativos Standalone: Expandindo Horizontes**
-
-Os aplicativos Standalone são soluções independentes, desenvolvidas externamente à Nuvemshop, que podem ser instaladas e utilizadas nas lojas dos nossos merchants. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados às lojas dos merchants.
-
-**Aplicativos Enhanced: Integração Perfeita para uma Experiência Contínua**
-
-Os aplicativos Enhanced, por outro lado, oferecem uma integração mais profunda com a plataforma Nuvemshop. Eles são desenvolvidos para se integrar diretamente ao painel de administração dos merchants, proporcionando uma experiência contínua e fluida. Ao utilizar ferramentas como o nosso design system Nimbus, garantimos que a experiência visual e de usabilidade permaneça consistente, mesmo quando o merchant está interagindo com um aplicativo de parceiro externo. Isso permite que o merchant desfrute de recursos adicionais sem deixar o ambiente familiar do painel de administração da Nuvemshop.
-
-A opção Enhanced oferece uma sinergia aprimorada, permitindo que os merchants usufruam de aplicativos poderosos enquanto mantêm a sensação de continuidade com a Nuvemshop. Através do uso inteligente do design e da integração cuidadosa, essa abordagem proporciona uma experiência excepcional para os merchants e seus clientes.
-
-Ao escolher entre esses dois tipos de aplicativos, você pode definir a melhor estratégia para atender às necessidades do seu aplicativo e oferecer uma experiência excepcional aos merchants da Nuvemshop.
-
 ## Próximos Passos
 
 Agora que você tem uma visão geral sólida do papel dos aplicativos na Nuvemshop, vamos mergulhar mais fundo nas etapas práticas para criar, integrar e aprimorar seu aplicativo. Continue a leitura para obter insights valiosos sobre o processo de desenvolvimento e as ferramentas à sua disposição.
