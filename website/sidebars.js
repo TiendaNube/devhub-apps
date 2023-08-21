@@ -47,7 +47,7 @@ const sidebars = {
       label: "Design guidelines",
       items: [
         "design-guidelines/overview",
-        "design-guidelines/templates-usage"
+        "design-guidelines/template-usage"
       ],
     },
     {
