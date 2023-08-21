@@ -93,6 +93,12 @@ Aqui está o fluxo de iniciação de um **Native app** a partir do momento em qu
 3. Após o carregamento do **Native app**, ele notifica o **Admin** por meio do **Nexo** sobre a conexão e aguarda a confirmação de que o **Admin** também está conectado.
 4. Finalmente, quando o **Native app** estiver pronto para exibir o conteúdo, ele notifica por meio do **Nexo** que está pronto. Isso permite que o **Admin** substitua a mensagem de carregamento pelo próprio **Native app**.
 
+## Escolhendo meu template
+
+Nossas ferramentas de desenvolvimento na Nuvemshop incluem templates prontos para a criação de aplicativos, que abrangem toda a lógica de [autenticação](../applications/overview#autenticando-seu-aplicativo) e construção. No caso de aplicativos nativos, a parte relacionada ao **Nexo** já vem pré-configurada. Recomendamos enfaticamente a utilização desses templates.
+
+Após selecionar o template desejado, sugerimos revisar o arquivo **"README.md"** no repositório correspondente. Lá, você encontrará orientações detalhadas e passos práticos para aproveitar ao máximo as capacidades oferecidas pelos nossos modelos de desenvolvimento.
+
 ## Modo de desenvolvedor
 
 Para testar e desenvolver seu aplicativo nativo, é essencial fazê-lo dentro do contexto do Admin. No entanto, é necessário ter a opção de Modo Desenvolvedor ativada. Essa funcionalidade está atualmente disponível somente para lojas que foram habilitadas anteriormente. Para obter acesso a essa funcionalidade, entre em contato com a equipe da Nuvemshop.
@@ -100,9 +106,6 @@ Para testar e desenvolver seu aplicativo nativo, é essencial fazê-lo dentro do
 Ao ativar o Modo Desenvolvedor, uma nova opção será adicionada ao menu com o nome "Aplicativo de Teste" ou "Aplicación de Prueba", dependendo do idioma. Ao selecionar essa opção, você pode inserir a URL do aplicativo, que será carregado dentro do painel do Admin para testes e desenvolvimento.
 
 ![Dev mode](../assets/dev-mode.png "Dev mode")
-
-
-## Template
 
 ## Perguntas frequentes
 
