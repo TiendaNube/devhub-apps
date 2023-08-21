@@ -195,7 +195,11 @@ const Home: React.FC = () => {
                         <Title as="h4">{link.title}</Title>
                       </Card.Body>
                       <Card.Footer>
-                        <NimbusLink  as={Link} appearance="primary">
+                        <NimbusLink
+                          as={Link}
+                          to={link.link}
+                          appearance="primary"
+                        >
                           Ler a documentação
                           <NimbusIcon
                             color="primary-interactive"

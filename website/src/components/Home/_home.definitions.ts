@@ -49,7 +49,7 @@ export const links = [
   },
   {
     title: "Design guidelines",
-    link: "/design-guidelines/overview",
+    link: "/docs/design-guidelines/overview",
   },
   {
     title: "Manual authentication",
