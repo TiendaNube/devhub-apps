@@ -95,7 +95,7 @@ Aqui está o fluxo de iniciação de um **Native app** a partir do momento em qu
 
 ## Escolhendo meu template
 
-Nossas ferramentas de desenvolvimento na Nuvemshop incluem templates prontos para a criação de aplicativos, que abrangem toda a lógica de [autenticação](../applications/overview#autenticando-seu-aplicativo) e construção. No caso de aplicativos nativos, a parte relacionada ao **Nexo** já vem pré-configurada. Recomendamos enfaticamente a utilização desses templates.
+Nossas ferramentas de desenvolvimento na Nuvemshop incluem [templates prontos para a criação de aplicativos](../developer-tools/templates#tipos-de-template), que abrangem toda a lógica de [autenticação](../applications/overview#autenticando-seu-aplicativo) e construção. No caso de aplicativos nativos, a parte relacionada ao **Nexo** já vem pré-configurada. Recomendamos enfaticamente a utilização desses templates.
 
 Após selecionar o template desejado, sugerimos revisar o arquivo **"README.md"** no repositório correspondente. Lá, você encontrará orientações detalhadas e passos práticos para aproveitar ao máximo as capacidades oferecidas pelos nossos modelos de desenvolvimento.
 
