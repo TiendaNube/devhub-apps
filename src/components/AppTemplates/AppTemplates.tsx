@@ -28,7 +28,7 @@ const TemplateCard: React.FC<ITemplateCard> = ({
     >
       <Title as="h3">{title}</Title>
       <Text fontSize="base">{description}</Text>
-      <Link as="a" href={link} appearance="primary">
+      <Link as="a" href={link} appearance="primary" target="_blank">
         Ver mais
         <Icon color="primary-interactive" source={<ExternalLinkIcon />} />
       </Link>
