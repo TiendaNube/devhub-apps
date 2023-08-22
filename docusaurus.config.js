@@ -19,7 +19,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "TiendaNube", // Usually your GitHub org/user name.
   projectName: "devhub-apps", // Usually your repo name.
-
+  // themes: ["@docusaurus/theme-search-algolia"],
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -30,7 +30,6 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
@@ -56,6 +55,34 @@ const config = {
       colorMode: {
         defaultMode: "light",
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "R2LDQTPRGI",
+        // Public API key: it is safe to commit it
+        apiKey: "f20086395a1896e3fc077f6cc2859e7d",
+        indexName: "devhub-nuvemshop",
+        position: "left",
+
+        // // Optional: see doc section below
+        // contextualSearch: true,
+
+        // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: "external\\.com|domain\\.com",
+
+        // // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        // replaceSearchResultPathname: {
+        //   from: "/docs/", // or as RegExp: /\/docs\//
+        //   to: "/",
+        // },
+
+        // // Optional: Algolia search parameters
+        // searchParameters: {},
+
+        // // Optional: path for search page that enabled by default (`false` to disable it)
+        // searchPagePath: "search",
+
+        // //... other Algolia params
+      },
       navbar: {
         logo: {
           alt: "DevHub Nuvemshop",
@@ -65,6 +92,10 @@ const config = {
           width: 140,
         },
         items: [
+          {
+            type: 'search',
+            position: 'right',
+          },
           {
             type: "docSidebar",
             sidebarId: "sidebar",
