@@ -56,47 +56,47 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-| Descrição                              | Link                 | Prioridade                                  |
-| -------------------------------------- | -------------------- | ------------------------------------------- |
-| Página de Estado Vazio                 | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Página de Erro                         | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Página de Formulários                  | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de Ajustes                      | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Modal de Confirmação                   | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de Tabela Simples               | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de Tabela de Produtos           | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Limites de Personalização de Templates | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Descrição                              | Link                                              | Prioridade                                  |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
+| Página de Estado Vazio                 | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de Erro                         | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de Formulários                  | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Ajustes                      | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Modal de Confirmação                   | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Tabela Simples               | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Tabela de Produtos           | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de Personalização de Templates | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 
 ### Uso de Componentes e Patterns - Prioridade Alta
 
 Nesse item devemos nos atentar à atribuição dos componentes e padrões segundo suas respectivas documentações.
 
-| Descrição                                 | Link                 | Prioridade                                  |
-| ----------------------------------------- | -------------------- | ------------------------------------------- |
-| Componentes Atômicos e Compostos          | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Padrões de Composição                     | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Componentes de Formulários                | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Limites de Personalização e Flexibilidade | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Descrição                                 | Link                                              | Prioridade                                  |
+| ----------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
+| Componentes Atômicos e Compostos          | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Padrões de Composição                     | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Componentes de Formulários                | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de Personalização e Flexibilidade | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 
 ### Uso de Conceitos de UX/UI - Prioridade Média
 
 Nesse item devemos nos atentar aos comportamentos e disposição de elementos, visando atingir uma maior consistência com os produtos Nuvemshop.
 
-| Descrição                                         | Link                 | Prioridade                                  |
-| ------------------------------------------------- | -------------------- | ------------------------------------------- |
-| Priorização e Organização de Ações e Conteúdos    | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Sinalização de Status e Padronização de Elementos | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Mensagens de Feedback e Confirmações              | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Processamento e Carregamento de Informação        | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Organização de Dados em Tabelas                   | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
-| Responsividade e Alinhamento dos Elementos        | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Organização e Sinalização em Formulários          | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Descrição                                         | Link                                              | Prioridade                                  |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
+| Priorização e Organização de Ações e Conteúdos    | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Sinalização de Status e Padronização de Elementos | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Mensagens de Feedback e Confirmações              | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Processamento e Carregamento de Informação        | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Organização de Dados em Tabelas                   | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
+| Responsividade e Alinhamento dos Elementos        | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Organização e Sinalização em Formulários          | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
 
 ### Uso de Conceitos de UX Writing - Prioridade Baixa
 
-| Descrição                    | Link                 | Prioridade                                  |
-| ---------------------------- | -------------------- | ------------------------------------------- |
-| Nomenclatura de Apps e Telas | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Fundamentos de UX Writing    | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Tom de Voz Nuvemshop         | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
-| Padrões de Texto             | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Descrição                    | Link                                              | Prioridade                                  |
+| ---------------------------- | ------------------------------------------------- | ------------------------------------------- |
+| Nomenclatura de Apps e Telas | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Fundamentos de UX Writing    | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Tom de Voz Nuvemshop         | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
+| Padrões de Texto             | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
