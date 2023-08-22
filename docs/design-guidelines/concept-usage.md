@@ -13,7 +13,7 @@ Prioridade Média
 
 #### Ação Primária
 
-A ação primária é a principal tarefa da página. Deve existir apenas uma por instância. Para dar o devido destaque, ela deve ser representada por um componente `Button` na variante `primary`.
+A ação primária é a principal tarefa da página. Deve existir apenas uma por instância. Para dar o devido destaque, ela deve ser representada por um componente [`Button`](https://nimbus.nuvemshop.com.br/documentation/atomic-components/button) na variante `primary`.
 
 #### Ações Secundárias
 
