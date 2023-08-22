@@ -115,3 +115,14 @@ Ao ativar o Modo Desenvolvedor, uma nova opção será adicionada ao menu com o 
 - [Como configurar o interceptador axios para obter token de sessão para cada solicitação?](../developer-tools/nexo#get-session-token)
 - [Quais ações estão disponíveis?](../developer-tools/nexo#actions)
 - [Quais são as ferramentas disponíveis para a gestão das ações?](../developer-tools/nexo#helpers)
+
+## Recomendações
+
+- Recomendamos seguir os conceitos UX/UI definidos pelo nosso time de design. [Acesse aqui o guia completo](../design-guidelines/overview.md).
+- Para aplicativos publicados em nossa loja de aplicatvos recomendamos revisar o nosso [checklist de homologação](../homologation/overview.md).
+
+---
+
+## Próximos passos
+
+- Saiba mais sobre [Homologação](../homologation/overview.md)

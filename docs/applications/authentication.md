@@ -39,11 +39,15 @@ Nossos modelos de criação de apps já incluem um sistema de autenticação int
 
 Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.
 
+![Basic data](../assets/card-basic-data.png "Basic data")
+
 Esta etapa é crucial para garantir que o redirecionamento funcione corretamente e que você possa acessar a página de código cURL sem problemas. Certifique-se de atualizar a URL de redirecionamento conforme necessário.
 
 ### Fazendo a Requisição com o Código cURL
 
-Após concluir a instalação, você será redirecionado para uma nova página contendo o código cURL necessário para gerar o seu access_token. Basta copiar esse código e realizar a requisição utilizando a ferramenta de sua preferência.
+Após concluir a instalação, você será redirecionado para uma nova página contendo o código cURL necessário para gerar o seu `access_token`. Basta copiar esse código e realizar a requisição utilizando a ferramenta de sua preferência.
+
+![Authentication curl](../assets/authentication-curl.png "Authentication curl")
 
 A estrutura do cURL gerado consiste em:
 
@@ -54,6 +58,8 @@ A estrutura do cURL gerado consiste em:
 Essa etapa é fundamental para obter com sucesso o access_token e garantir o acesso autorizado à nossa plataforma.
 
 Se a requisição for bem-sucedida, você receberá uma resposta no formato semelhante a este exemplo:
+
+![Authentication curl success](../assets/authentication-curl-success.png "Authentication curl success")
 
 ```javascript
 {
@@ -76,15 +82,17 @@ curl -X POST "https://www.tiendanube.com/apps/authorize/token" \
 Certifique-se de substituir `client_id`, `client_secret` e `code` pelos valores corretos do seu aplicativo.
 Lembrando que você pode executar esse comando em um terminal ou em uma ferramenta que suporte cURL para testar a requisição e obter o access_token.
 
-### Como obeter um novo código cURL
-
-Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./overview#desinstalando-um-aplicativo) e [reinstalando](./overview.md#instalando-seu-aplicativo) o seu aplicativo na loja novamente.
+### Como obter um novo código cURL
 
 Para isso siga estes passos:
 
 1. Ao receber o alerta informando que a requisição não foi confirmada, clique no botão **Tente outra vez**.
 2. Você será redirecionado para a sessão **Meus aplicativos** no administrador da sua Loja de demo.
-3. No administrador da sua loja demo, na sessão **Meus aplicativos**, verifique se o aplicativo está instalado e clique em **Desinstalar**.
+3. No administrador da sua loja demo, na sessão **Meus aplicativos**, verifique se o aplicativo está instalado. Caso esteja faça a [desinstalação](./overview.md#desinstalando-um-aplicativo).
+
+Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./overview#desinstalando-um-aplicativo) e [reinstalando](./overview.md#instalando-seu-aplicativo) o seu aplicativo na loja novamente.
+
+![Authentication curl fail](../assets/authentication-curl-fail.png "Authentication curl fail")
 
 Seguindo essas etapas, você poderá obter um novo código cURL válido e retomar o processo de [autenticação](./authentication#obtendo-o-token-de-acesso) com sucesso. Certifique-se de acompanhar as instruções com atenção para evitar problemas futuros.
 

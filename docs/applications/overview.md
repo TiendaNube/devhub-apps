@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import { Alert } from '@nimbus-ds/components';
+import { Alert, Text, Box } from '@nimbus-ds/components';
 import ImageCreateApp from '@site/docs/assets/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
@@ -80,15 +80,21 @@ Caso você tenha uma loja demo, clique no botão **Instalar aplicativo**. Você 
 
 Se você não tiver uma loja demo, [clique aqui](https://partners.nuvemshop.com.br/stores/create?type=demo) para criar uma nova.
 
-Para instalar o seu app em outra loja, adicione `/admin/apps/:app-id/authorize` no final da URL. Lembre-se de substituir o `:app-id` pelo ID do seu aplicativo.
+<Alert  title="💡 Dica">
+   <Text>Caso queira instalar o seu aplicativo em outra loja, adicione <Text as="span" fontWeight="bold">/admin/apps/:app-id/authorize</Text> no final da URL. Lembre-se de substituir o <Text as="span" fontWeight="bold">:app-id</Text> pelo ID do seu aplicativo.</Text>
+</Alert>
+
+<br />
 
 Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a instalação, clicando em **Aceitar e começar a usar**.
+
+![Basic data](../assets/app-install.png "Basic data")
 
 ### Desinstalando um aplicativo
 
 Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
 
-<Alert appearance="primary" title="💡 Dica">
+<Alert title="💡 Dica">
    Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
 </Alert>
 
@@ -130,7 +136,7 @@ Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fu
 
 ## Editando as permissões do seu aplicativo
 
-Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter acesso a outras permissões para o seu app. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
+Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter [acesso a outras permissões](../developer-tools/nuvemshop-api.md#permissões-e-escopos) para o seu aplicativo. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
 
 ---
 

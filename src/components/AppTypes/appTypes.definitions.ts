@@ -13,7 +13,7 @@ export const appTypes = [
     icon: AppsListIcon as FC<IconProps>,
     title: "Standalone",
     description:
-      "Os aplicativos standalone são soluções independentes, desenvolvidas externamente à Nuvemshop, que podem ser instaladas e utilizadas nas lojas dos nossos merchants. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados às lojas dos merchants.",
+      "Os aplicativos standalone são soluções independentes, desenvolvidas externamente à Nuvemshop. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados às lojas dos merchants.",
     link: "/docs/applications/standalone",
   },
 ];
