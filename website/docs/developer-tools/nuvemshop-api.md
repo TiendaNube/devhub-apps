@@ -54,4 +54,4 @@ Lembre-se de que este é apenas um guia rápido de uso da nossa API. Para obter 
 
 - Saiba mais sobre a [Nuvemshop API](https://tiendanube.github.io/api-documentation/intro)
 - Saiba mais sobre os [Aplicativos](../applications/overview)
-- Saiba mais sobre a [Autenticação dos aplicativos](../applications/authentication  )
+- Saiba mais sobre a [Autenticação dos aplicativos](../applications/authentication)

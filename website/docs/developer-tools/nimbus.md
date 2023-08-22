@@ -15,23 +15,17 @@ O painel de administração da Nuvemshop é o centro de operações onde os usu�
 
 Dentro do contexto do aplicativo, incentivamos o uso do [Nimbus](https://nimbus.nuvemshop.com.br) para desenvolver experiências de usuário coesas e reconhecíveis. É importante que seu aplicativo incorpore e faça uso das [bibliotecas do Nimbus](./nimbus.md#principais-pacotes-do-nimbus), seguindo tanto as diretrizes de design de aplicativos quanto as diretrizes mais abrangentes do **Nimbus**. Isso garantirá a criação de experiências de usuário que sejam ao mesmo tempo familiares e consistentes.
 
----
-
 ## Principais pacotes do Nimbus
 
 A seguir, apresentamos uma lista dos principais pacotes do Nimbus que podem ajudar a acelerar a sua criação de aplicativos:
 
 <NimbusPackages />
 
----
-
 ## Templates
 
 No Nimbus, oferecemos uma gama diversificada de templates pré-construídos que utilizam nossos componentes, como telas de login, tabelas e formulários. Esses modelos prontos para uso permitem criar com facilidade, aproveitando a eficiência e a consistência do design do Nimbus.
 
 <NimbusTemplates />
-
----
 
 ## Configurando o Nimbus
 

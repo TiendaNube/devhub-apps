@@ -8,8 +8,6 @@ O Nexo disponibiliza recursos para facilitar a comunicação entre um aplicativo
 
 Essas mensagens, denominadas "Actions", são cuidadosamente definidas e associadas a "Helpers". Essas Helpers habilitam o uso das Actions como promessas, proporcionando uma abordagem eficaz e confiável para trocar informações e sincronizar operações entre as partes envolvidas.
 
----
-
 ## Instalation
 
 ### npm
@@ -23,8 +21,6 @@ $ npm install @tiendanube/nexo
 ```bash
 $ yarn add @tiendanube/nexo
 ```
-
----
 
 ## Getting Started
 
@@ -140,8 +136,6 @@ axiosIntance.interceptors.request.use(async (request) => {
 
 export default axiosIntance;
 ```
-
----
 
 ## Actions
 
@@ -333,8 +327,6 @@ To requests information about if mobile device.
   isMobileDevice: boolean;
 }
 ```
-
----
 
 ## Helpers
 
@@ -604,6 +596,8 @@ Removes the action of Header Top, available only in Web mode (non-mobile devices
 ```typescript
 navigateHeaderRemove(nexo);
 ```
+
+---
 
 ## Próximos passos
 

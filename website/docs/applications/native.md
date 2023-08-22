@@ -2,7 +2,7 @@
 title: Nativo
 ---
 
-# Overview
+# Aplicativos Nativos
 
 Um aplicativo nativo na Nuvemshop é aquele que opera no contexto do painel de administração, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas.
 

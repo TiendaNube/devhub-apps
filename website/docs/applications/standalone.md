@@ -1,3 +1,5 @@
-# Standalone
+---
+title: Standalone
+---
 
-# requirements
+# Aplicativos Standalone

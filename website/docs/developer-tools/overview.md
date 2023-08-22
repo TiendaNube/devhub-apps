@@ -10,8 +10,6 @@ Bem-vindo à página de Developer Tools de aplicativos da Nuvemshop, onde a inov
 
 Como parte do compromisso contínuo da Nuvemshop com a excelência e a eficiência, nossas Developer Tools capacitam você, como desenvolvedor, a criar soluções poderosas e personalizadas que elevam a experiência do usuário e ampliam o alcance do comércio eletrônico na América Latina.
 
----
-
 ## Ferramentas de desenvolvimento
 
 <DeveloperTools />

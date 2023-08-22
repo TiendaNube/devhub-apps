@@ -18,8 +18,6 @@ processo de criação desse aplicativo, garantindo que você esteja pronto para 
 
 Os aplicativos somente podem ser criados por Parceiros Nuvemshop. Saiba como criar o seu cadastro no 📝 Guia: [detalhes do programa de Parceiros Tecnológicos da Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
 
----
-
 ## Criando um aplicativo na Nuvemshop
 
 Através da nossas ferramentas, você consegue criar um aplicativo para ser disponibilizado na 📱 [Loja de Aplicativos Nuvemshop](https://www.nuvemshop.com.br/loja-aplicativos-nuvem).
@@ -56,8 +54,6 @@ Dessa forma, os lojistas possuem visibilidade da ferramenta e podem instalá-la 
 
 Agora que você criou o seu aplicativo, é hora de avançarmos para a etapa de desenvolvimento e testes. Chegou a hora de colocar a mão na massa de vez! Vamos explorar o processo de desenvolvimento e garantir que você esteja preparado para criar o seu aplicativo para a Nuvemshop.
 
----
-
 ## Desenvolvendo e Testando seu Aplicativo
 
 Nesta seção, forneceremos todas as informações essenciais para autenticar o seu aplicativo com a API da Nuvemshop, aproveitar os nossos serviços, realizar ajustes e testar a funcionalidade do aplicativo em uma loja demo antes de torná-lo disponível. Prepare-se para mergulhar no desenvolvimento e assegurar um aplicativo de qualidade para nossos lojistas.
@@ -79,8 +75,6 @@ Essa loja demo permitirá que você faça testes de funcionamento do aplicativo 
 As chaves de acesso são essenciais para iniciar o processo de autenticação do seu aplicativo com nossa API.
 Essas chaves proporcionam a autorização necessária para que seu aplicativo se comunique com nossos serviços e obtenha os dados e recursos essenciais para seu funcionamento adequado.
 
----
-
 ### Instalando seu aplicativo
 
 Caso você tenha uma loja demo, clique no botão **Instalar aplicativo**. Você será redirecionado para o login da sua loja demo. Utilize as mesmas credenciais que você usou para entrar no Portal de Parceiros.
@@ -90,8 +84,6 @@ Se você não tiver uma loja demo, [clique aqui](https://partners.nuvemshop.com.
 Para instalar o seu app em outra loja, adicione `/admin/apps/:app-id/authorize` no final da URL. Lembre-se de substituir o `:app-id` pelo ID do seu aplicativo.
 
 Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a instalação, clicando em **Aceitar e começar a usar**.
-
----
 
 ### Desinstalando um aplicativo
 
@@ -127,9 +119,11 @@ Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel admi
 
 O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
 
----
-
 ## Autenticando seu aplicativo
+
+Um passo fundamental é autenticar seu aplicativo para acessar a [Nuvemshop API](../developer-tools/nuvemshop-api.md). Se você estiver utilizando um dos nossos [templates](../developer-tools/templates.md), o processo de autenticação estará pronto para uso, incluindo a conexão com a API de produtos da Nuvemshop. Isso automatiza significativamente o processo; siga o guia de configuração no repositório do template escolhido e você estará a caminho do desenvolvimento.
+
+Por outro lado, se você optar por não usar nossos templates, você pode acessar este [guia](./authentication.md) para uma integração manual. Nossa meta é facilitar o desenvolvimento do seu aplicativo, independentemente do caminho que você escolher.
 
 ## Escolhendo o tipo do seu aplicativo
 
@@ -142,3 +136,8 @@ Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fu
 Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter acesso a outras permissões para o seu app. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemhop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
 
 ---
+
+## Próximos passos
+
+- Saiba mais sobre [Aplicativos Nativos](./native.md)
+- Saiba mais sobre [Aplicativos Standalone](./standalone.md)
