@@ -56,39 +56,47 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-- Página de Estado Vazio - Ver Guidelines - Obrigatorio
-- Página de Erro - Ver Guidelines - Obrigatorio
-- Página de Formulários - Ver Guidelines - Recomendado
-- Página de Ajustes - Ver Guidelines - Recomendado
-- Modal de Confirmação - Ver Guidelines - Recomendado
-- Página de Tabela Simples - Ver Guidelines - Recomendado
-- Página de Tabela de Produtos - Ver Guidelines - Recomendado
-- Limites de Personalização de Templates - Ver Guidelines - Obrigatório
+| Descrição                              | Link                 | Prioridade                                  |
+| -------------------------------------- | -------------------- | ------------------------------------------- |
+| Página de Estado Vazio                 | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de Erro                         | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de Formulários                  | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Ajustes                      | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Modal de Confirmação                   | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Tabela Simples               | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de Tabela de Produtos           | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de Personalização de Templates | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
 
-### 2.0 Uso de Componentes e Patterns - Prioridade Alta
+### Uso de Componentes e Patterns - Prioridade Alta
 
 Nesse item devemos nos atentar à atribuição dos componentes e padrões segundo suas respectivas documentações.
 
-- [ ] 2.1 Componentes Atômicos e Compostos - Ver Guidelines - Obrigatório
-- [ ] 2.2 Padrões de Composição - Ver Guidelines - Recomendado
-- [ ] 2.3 Componentes de Formulários - Ver Guidelines - Recomendado
-- [ ] 2.4 Limites de Personalização e Flexibilidade - Ver Guidelines - Obrigatório
+| Descrição                                 | Link                 | Prioridade                                  |
+| ----------------------------------------- | -------------------- | ------------------------------------------- |
+| Componentes Atômicos e Compostos          | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Padrões de Composição                     | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Componentes de Formulários                | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de Personalização e Flexibilidade | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
 
-### 3.0 Uso de Conceitos de UX/UI - Prioridade Média
+### Uso de Conceitos de UX/UI - Prioridade Média
 
 Nesse item devemos nos atentar aos comportamentos e disposição de elementos, visando atingir uma maior consistência com os produtos Nuvemshop.
 
-- [ ] 3.1 Priorização e Organização de Ações e Conteúdos - Ver Guidelines - Obrigatório
-- [ ] 3.2 Sinalização de Status e Padronização de Elementos - Ver Guidelines - Recomendado
-- [ ] 3.3 Mensagens de Feedback e Confirmações - Ver Guidelines - Recomendado
-- [ ] 3.4 Processamento e Carregamento de Informação - Ver Guidelines - Recomendado
-- [ ] 3.5 Organização de Dados em Tabelas - Ver Guidelines - Recomendado
-- [ ] 3.6 Responsividade e Alinhamento dos Elementos - Ver Guidelines - Obrigatório
-- [ ] 3.7 Organização e Sinalização em Formulários - Ver Guidelines - Recomendado
+| Descrição                                         | Link                 | Prioridade                                  |
+| ------------------------------------------------- | -------------------- | ------------------------------------------- |
+| Priorização e Organização de Ações e Conteúdos    | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Sinalização de Status e Padronização de Elementos | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Mensagens de Feedback e Confirmações              | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Processamento e Carregamento de Informação        | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Organização de Dados em Tabelas                   | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
+| Responsividade e Alinhamento dos Elementos        | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Organização e Sinalização em Formulários          | [Ver Guideline](../) | <Tag appearance="neutral">Recomendado</Tag> |
 
-### 4.0 Uso de Conceitos de UX Writing - Prioridade Baixa
+### Uso de Conceitos de UX Writing - Prioridade Baixa
 
-- [ ] 4.1 Nomenclatura de Apps e Telas - Ver Guidelines - Obrigatório
-- [ ] 4.2 Fundamentos de UX Writing - Ver Guidelines - Obrigatório
-- [ ] 4.3 Tom de Voz Nuvemshop - Ver Guidelines - Obrigatório
-- [ ] 4.4 Padrões de Texto - Ver Guidelines - Obrigatório
+| Descrição                    | Link                 | Prioridade                                  |
+| ---------------------------- | -------------------- | ------------------------------------------- |
+| Nomenclatura de Apps e Telas | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Fundamentos de UX Writing    | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Tom de Voz Nuvemshop         | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
+| Padrões de Texto             | [Ver Guideline](../) | <Tag appearance="primary">Obrigatório</Tag> |
