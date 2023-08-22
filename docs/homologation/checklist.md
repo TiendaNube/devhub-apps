@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-import { Tag } from '@nimbus-ds/components';
+import { Tag, Card, Box, list } from '@nimbus-ds/components';
 
 # Design Checklist
 
@@ -12,37 +12,58 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
 
 ### Categorização de Urgência
 
-<Tag appearance="danger">Prioridade Alta</Tag>
-Itens marcados com essa tag são temas de importância primária, que devem ter a atenção desde o primeiro momento. Se os itens não estiverem de acordo, a homologação pode ser recusada.
-
-<Tag appearance="warning">Prioridade Média</Tag>
-Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que os itens sejam contemplados.
-
-<Tag appearance="success">Prioridade Baixa</Tag>
-Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que ajustes sejam feitos.
+<Box display="flex" flexDirection="column" gap="4">
+  <Card>
+    <Card.Header><Tag appearance="danger">Prioridade Alta</Tag></Card.Header>
+    <Card.Body>
+        Itens marcados com essa tag são temas de importância primária, que devem ter a atenção desde o primeiro momento. Se os itens não estiverem de acordo, a homologação pode ser recusada.
+    </Card.Body>
+  </Card>
+  <Card>
+    <Card.Header><Tag appearance="warning">Prioridade Média</Tag></Card.Header>
+    <Card.Body>
+      Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que os itens sejam contemplados.
+  </Card.Body>
+  </Card>
+  <Card>
+    <Card.Header><Tag appearance="success">Prioridade Baixa</Tag></Card.Header>
+    <Card.Body>
+      Itens marcados com essa tag são temas de prioridade secundária, que devem ter a atenção ao longo do desenvolvimento. Se os itens não estiverem de acordo, a homologação pode ser pausada até que ajustes sejam feitos.
+    </Card.Body>
+  </Card>
+</Box>
 
 ### Categorização de Obrigatoriedade
 
-<Tag appearance="primary">Obrigatório</Tag>
-Todos os itens marcados com essa tag devem ser verificados e contemplados, não importa qual seja a solução apresentada.
-
-<Tag appearance="neutral">Recomendado</Tag>
-Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo a necessidade e contexto em que o aplicativo está inserido. Ou seja, deve ser contemplado se o aplicativo apresentar caso de uso ou elemento similar.
+<Box display="flex" flexDirection="column" gap="4">
+  <Card>
+    <Card.Header><Tag appearance="primary">Obrigatório</Tag></Card.Header>
+    <Card.Body>
+      Todos os itens marcados com essa tag devem ser verificados e contemplados, não importa qual seja a solução apresentada.
+    </Card.Body>
+  </Card>
+  <Card>
+    <Card.Header><Tag appearance="neutral">Recomendado</Tag></Card.Header>
+    <Card.Body>
+      Todos os itens marcados com essa tag devem ser verificados e avaliados, segundo a necessidade e contexto em que o aplicativo está inserido. Ou seja, deve ser contemplado se o aplicativo apresentar caso de uso ou elemento similar.
+    </Card.Body>
+  </Card>
+</Box>
 
 ---
 
-### 1.0 Uso de Templates Nimbus - Prioridade Alta
+### Uso de Templates Nimbus - Prioridade Alta
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-- [ ] 1.1 Página de Estado Vazio - Ver Guidelines - Obrigatorio
-- [ ] 1.2 Página de Erro - Ver Guidelines - Obrigatorio
-- [ ] 1.3 Página de Formulários - Ver Guidelines - Recomendado
-- [ ] 1.4 Página de Ajustes - Ver Guidelines - Recomendado
-- [ ] 1.5 Modal de Confirmação - Ver Guidelines - Recomendado
-- [ ] 1.6 Página de Tabela Simples - Ver Guidelines - Recomendado
-- [ ] 1.7 Página de Tabela de Produtos - Ver Guidelines - Recomendado
-- [ ] 1.8 Limites de Personalização de Templates - Ver Guidelines - Obrigatório
+- Página de Estado Vazio - Ver Guidelines - Obrigatorio
+- Página de Erro - Ver Guidelines - Obrigatorio
+- Página de Formulários - Ver Guidelines - Recomendado
+- Página de Ajustes - Ver Guidelines - Recomendado
+- Modal de Confirmação - Ver Guidelines - Recomendado
+- Página de Tabela Simples - Ver Guidelines - Recomendado
+- Página de Tabela de Produtos - Ver Guidelines - Recomendado
+- Limites de Personalização de Templates - Ver Guidelines - Obrigatório
 
 ### 2.0 Uso de Componentes e Patterns - Prioridade Alta
 
