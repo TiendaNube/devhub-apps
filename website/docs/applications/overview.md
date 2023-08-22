@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 import { Alert } from '@nimbus-ds/components';
-import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 import ImageCreateApp from '@site/docs/assets/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
@@ -64,11 +63,9 @@ Para prosseguir com a instalação do seu aplicativo e realizar o processo de au
 
 Essa loja demo permitirá que você faça testes de funcionamento do aplicativo em um ambiente controlado antes de disponibilizá-lo para os clientes.
 
-<NimbusThemeProvider>
-    <Alert appearance="primary" title="📌 Observação">
-        Lembrando que essa loja é apenas para teste e possui algumas limitações.
-    </Alert>
-</NimbusThemeProvider>
+<Alert appearance="primary" title="📌 Observação">
+   Lembrando que essa loja é apenas para teste e possui algumas limitações.
+</Alert>
 
 ### Chaves de acesso do seu aplicativo
 
@@ -89,11 +86,9 @@ Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a inst
 
 Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel administrador Nuvemshop.
 
-<NimbusThemeProvider>
-    <Alert appearance="primary" title="💡 Dica">
-        Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
-    </Alert>
-</NimbusThemeProvider>
+<Alert appearance="primary" title="💡 Dica">
+   Neste tutorial, usamos o Melhor Envio como exemplo. Porém, você pode fazer o mesmo procedimento em qualquer aplicativo que aparece nessa página, seja de frete, pagamentos, marketing, canais de venda, dropshipping, gestão etc.
+</Alert>
 
 1. Acessar o painel administrador Nuvemshop.
 

@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 import { Alert } from '@nimbus-ds/components';
-import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 # Autenticação
 
@@ -30,11 +29,9 @@ Nossos modelos de criação de apps já incluem um sistema de autenticação int
 
 ## Obtendo o token de acesso
 
-<NimbusThemeProvider>
-    <Alert appearance="warning" title="Atenção">
-        Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
-    </Alert>
-</NimbusThemeProvider>
+<Alert appearance="warning" title="Atenção">
+    Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
+</Alert>
 
 ### Alterando a URL de redirecionamento
 

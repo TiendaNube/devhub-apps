@@ -1,6 +1,4 @@
 import React from "react";
-import { useColorMode } from "@docusaurus/theme-common";
-import { ThemeProvider } from "@nimbus-ds/styles";
 import {
   Title,
   Card,
@@ -45,15 +43,12 @@ const TemplateCard: React.FC<ITemplateCard> = ({
 );
 
 const AppTypes: React.FC = () => {
-  const { colorMode } = useColorMode();
   return (
-    <ThemeProvider theme={colorMode === "dark" ? "dark" : "base"}>
-      <Box display="flex" gap="4" flexDirection="column">
-        {appTypes.map((template, index) => (
-          <TemplateCard key={index} {...template} />
-        ))}
-      </Box>
-    </ThemeProvider>
+    <Box display="flex" gap="4" flexDirection="column">
+      {appTypes.map((template, index) => (
+        <TemplateCard key={index} {...template} />
+      ))}
+    </Box>
   );
 };
 

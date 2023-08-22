@@ -3,7 +3,6 @@ sidebar_position: 2
 ---
 
 import { Tag } from '@nimbus-ds/components';
-import NimbusThemeProvider from '@site/src/components/NimbusThemeProvider';
 
 # Design Checklist
 

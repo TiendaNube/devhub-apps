@@ -1,6 +1,4 @@
 import React from "react";
-import { useColorMode } from "@docusaurus/theme-common";
-import { ThemeProvider } from "@nimbus-ds/styles";
 import { Title, Card, Text, Box, Link, Icon, Tag } from "@nimbus-ds/components";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 
@@ -39,22 +37,19 @@ const TemplateCard: React.FC<ITemplateCard> = ({
 );
 
 const AppTemplates: React.FC = () => {
-  const { colorMode } = useColorMode();
   return (
-    <ThemeProvider theme={colorMode === "dark" ? "dark" : "base"}>
-      <Box
-        display="grid"
-        gridGap="5"
-        gridTemplateColumns={{
-          xs: "repeat(1,minmax(0,1fr))",
-          lg: "repeat(2,minmax(0,1fr))",
-        }}
-      >
-        {appTemplates.map((template, index) => (
-          <TemplateCard key={index} {...template} />
-        ))}
-      </Box>
-    </ThemeProvider>
+    <Box
+      display="grid"
+      gridGap="5"
+      gridTemplateColumns={{
+        xs: "repeat(1,minmax(0,1fr))",
+        lg: "repeat(2,minmax(0,1fr))",
+      }}
+    >
+      {appTemplates.map((template, index) => (
+        <TemplateCard key={index} {...template} />
+      ))}
+    </Box>
   );
 };
 
