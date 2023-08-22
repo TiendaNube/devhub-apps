@@ -1,11 +1,6 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-} from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 import { ThemeProvider } from "@nimbus-ds/styles";
+import { Box } from "@nimbus-ds/components";
 
 interface IDarkModeContext {
   darkMode: boolean;
@@ -26,7 +21,10 @@ const Root: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <DarkModeContext.Provider value={contextValue}>
-      <ThemeProvider theme={darkMode ? "dark" : "base"}>
+      <ThemeProvider
+        theme={darkMode ? "dark" : "base"}
+        id="nimbus-theme-provider"
+      >
         {children}
       </ThemeProvider>
     </DarkModeContext.Provider>

@@ -94,3 +94,9 @@ html[data-theme="dark"] {
 .pagination-nav {
   display: none;
 }
+
+#nimbus-theme-provider {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

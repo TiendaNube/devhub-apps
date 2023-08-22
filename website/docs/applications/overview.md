@@ -67,6 +67,8 @@ Essa loja demo permitirá que você faça testes de funcionamento do aplicativo 
    Lembrando que essa loja é apenas para teste e possui algumas limitações.
 </Alert>
 
+<br />
+
 ### Chaves de acesso do seu aplicativo
 
 As chaves de acesso são essenciais para iniciar o processo de autenticação do seu aplicativo com nossa API.

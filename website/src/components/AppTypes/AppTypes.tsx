@@ -44,7 +44,7 @@ const TemplateCard: React.FC<ITemplateCard> = ({
 
 const AppTypes: React.FC = () => {
   return (
-    <Box display="flex" gap="4" flexDirection="column">
+    <Box display="flex" gap="4" flexDirection="column" mb="6">
       {appTypes.map((template, index) => (
         <TemplateCard key={index} {...template} />
       ))}

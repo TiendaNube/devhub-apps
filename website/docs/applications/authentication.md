@@ -33,6 +33,8 @@ Nossos modelos de criação de apps já incluem um sistema de autenticação int
     Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
 </Alert>
 
+<br />
+
 ### Alterando a URL de redirecionamento
 
 Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.

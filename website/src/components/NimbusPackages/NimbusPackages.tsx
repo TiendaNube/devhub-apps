@@ -5,7 +5,7 @@ import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import { packages } from "./nimbusPackages.definitions";
 
 const NimbusPackages: React.FC = () => (
-  <Box display="flex" flexDirection="column" gap="4">
+  <Box display="flex" flexDirection="column" gap="4" mb="6">
     {packages.map((packageNimbus) => (
       <Card key={packageNimbus.name}>
         <Card.Header title={packageNimbus.title} />

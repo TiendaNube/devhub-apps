@@ -9,6 +9,7 @@ const NimbusTemplates: React.FC = () => (
     display="grid"
     gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }}
     gap="4"
+    mb="6"
   >
     {templates.map((packageNimbus) => (
       <Card key={packageNimbus.title}>

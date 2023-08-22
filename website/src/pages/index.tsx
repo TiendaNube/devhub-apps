@@ -8,7 +8,7 @@ const Index: React.FC = () => {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="Desenvolva aplicativos para o ecosistema Nuvemshop e potencialize seus ganhos"
     >
       <Home />
     </Layout>
