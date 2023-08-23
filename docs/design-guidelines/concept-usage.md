@@ -5,7 +5,11 @@ title: Uso de conceitos de UX/UI
 
 # Uso de Conceitos de UX/UI
 
-Prioridade Média
+Os componentes Nimbus são elementos para criar interfaces personalizadas conforme necessário, quando não há um padrão disponível. Esses componentes mantêm a consistência com os produtos da Nuvemshop e suas interfaces existentes. É importante usar os componentes corretamente para garantir uma experiência de navegação mais fácil para os usuários da Nuvemshop.
+
+[Consultar checklist de homologação](../homologation/checklist.md)
+
+---
 
 ## Priorização e Organização de Ações e Conteúdos - Ver Checklist
 
@@ -39,9 +43,9 @@ Os conteúdos devem ser organizados sempre por ordem de importância para o usu�
 
 Sempre que possível, agrupamos temas relacionados em cards. Dessa forma, ajudamos o usuário a compreender as divisões de temas e elementos na tela.
 
-## Sinalização de Status e Padronização de Elementos
+---
 
-### Quando Sinalizar Status de Elementos?
+## Sinalização de Status e padronização de Elementos
 
 Sempre que um elemento pode mudar de status ou quantidade por ação do usuário, devemos mostrar o status atual de forma clara e simples, usando poucas palavras e cores adequadas.
 
@@ -67,9 +71,9 @@ Quando o status se referir a uma tela como um todo, devemos utilizar o posiciona
 
 Quando o status se referir a um elemento específico, devemos levar em consideração a organização do componente no qual o status está inserido. No caso de `Cards`, podemos utilizar a variante Default.
 
-## Mensagens de Feedback e Confirmações
+---
 
-### Mensagens de Feedback
+## Mensagens de Feedback e Confirmações
 
 Sempre que processamos alguma informação, devemos mostrar um feedback sobre a tarefa que acabou de ser executada.
 
@@ -96,3 +100,17 @@ Quando um usuário está excluindo qualquer tipo de informação, devemos alert�
 #### Informações não Salvas
 
 Quando um usuário está saindo de uma tela de formulário onde informações não foram salvas, devemos alertá-lo de que ao realizar essa ação os dados do formulário serão perdidos.
+
+---
+
+## Personalização e flexibilidade
+
+### Overrides proibidos
+
+A personalização dos componentes deve estar restrita às propriedades disponíveis no storybook e Ui kit, sendo vedada a prática de overrides. Se caso houver necessidade de modificação ou inclusão de propriedades, é necessário abrir uma discussão no repositório do Github.
+
+### Construção de padrões
+É permitido construir novas composições de componentes contanto que não exista nenhuma outro padrão que possa solucionar o desafio imposto. Para se certificar recomendamos a abertura de uma discussão no repositório do Github.
+
+### Construção de componentes locais
+Se caso os componentes não solucionarem as necessidades do produto, é possível desenhar um componente local, porém esse recurso deve ser usado com parcimônia. Para se certificar recomendamos a abertura de uma discussão no repositório do Github.

@@ -48,6 +48,7 @@ const sidebars = {
       items: [
         "design-guidelines/overview",
         "design-guidelines/template-usage",
+        "design-guidelines/component-usage",
         "design-guidelines/concept-usage",
       ],
     },
