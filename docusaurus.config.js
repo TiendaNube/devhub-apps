@@ -1,11 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-require('dotenv').config();
+require("dotenv").config();
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
-console.log(process.env);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -119,7 +117,7 @@ const config = {
         },
         links: [
           {
-            title: "Documentation",
+            title: "Documentação",
             items: [
               {
                 label: "Getting started",
@@ -129,7 +127,7 @@ const config = {
           },
 
           {
-            title: "More",
+            title: "Outros",
             items: [
               {
                 label: "GitHub",

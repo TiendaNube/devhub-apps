@@ -22,7 +22,7 @@ const Hero: React.FC = () => (
       ganhos
     </Box>
     <Button as={Link} to="/docs/getting-started">
-      Getting started
+      Começar agora
     </Button>
   </Box>
 );

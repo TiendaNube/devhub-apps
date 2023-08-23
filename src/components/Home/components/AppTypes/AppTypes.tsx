@@ -34,7 +34,7 @@ const AppTypes: React.FC = () => (
         color="neutral-background"
         mt="none"
       >
-        Native app
+        Aplicativo nativo
       </Box>
       <Text color="neutral-background">
         Construa aplicativos integrados a no administrador de lojas de forma
@@ -58,7 +58,7 @@ const AppTypes: React.FC = () => (
         color="neutral-background"
         mt="none"
       >
-        Standalone app
+        Aplicativo standalone
       </Box>
       <Text color="neutral-background">
         Construa aplicativos de forma independente, para uma experiência mais

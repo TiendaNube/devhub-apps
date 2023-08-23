@@ -1,18 +1,18 @@
 export const links = [
   {
-    title: "Homologation",
+    title: "Homologação",
     link: "/docs/homologation/overview",
   },
   {
-    title: "Design checklist",
+    title: "Checklist de design",
     link: "/docs/homologation/checklist",
   },
   {
-    title: "Design guidelines",
+    title: "Checklist de design",
     link: "/docs/design-guidelines/overview",
   },
   {
-    title: "Manual authentication",
+    title: "Autenticação manual",
     link: "/docs/applications/authentication",
   },
 ];

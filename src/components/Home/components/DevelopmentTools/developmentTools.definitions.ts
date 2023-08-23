@@ -10,16 +10,16 @@ import {
 export const developerTools = [
   {
     icon: CogIcon as FC<IconProps>,
-    title: "Nuvemshop API",
+    title: "API Nuvemshop",
     text: "Desenvolva aplicativos, integrando seus serviços com nossa API Nuvemshop.",
     linkText: "Conheça nossa API",
     link: "/docs/developer-tools/nuvemshop-api",
   },
   {
     icon: CodeIcon as FC<IconProps>,
-    title: "App templates",
+    title: "Templates de aplicativo",
     text: "Agilize o desenvolvimento de aplicativos partindo de um template de código.",
-    linkText: "Conheça os app templates",
+    linkText: "Conheça os templates de aplicativo",
     link: "/docs/developer-tools/templates",
   },
   {
@@ -32,7 +32,7 @@ export const developerTools = [
   {
     icon: TiendanubeIcon as FC<IconProps>,
     title: "Nimbus design system",
-    text: "Boost app development using Nimbus our design system.",
+    text: "Crie interfaces e experiências usando nosso design system e agilize o desenvolvimento do seu aplicativo.",
     linkText: "Conheça o Nimbus",
     link: "/docs/developer-tools/nimbus",
   },
