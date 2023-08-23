@@ -50,6 +50,7 @@ const sidebars = {
         "design-guidelines/template-usage",
         "design-guidelines/component-usage",
         "design-guidelines/concept-usage",
+        "design-guidelines/ux-writing-usage",
       ],
     },
     {

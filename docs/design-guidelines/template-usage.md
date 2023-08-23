@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Uso de templates
+title: Templates de design
 ---
 
 # Uso de templates de design
@@ -9,7 +9,9 @@ Os templates Nimbus são ferramentas valiosas para garantir consistência visual
 
 A priorização na adoção desses modelos é fundamental para manter a identidade da marca e facilitar um processo de homologação mais eficiente, promovendo uma interface mais consistente e intuitiva.
 
-[Consultar checklist de homologação](../homologation/checklist.md)
+[Consultar checklist de homologação](../homologation/checklist#10-uso-de-templates-nimbus---prioridade-alta)
+
+---
 
 ## Escolha de Templates
 
