@@ -4,17 +4,18 @@ title: Nativo
 
 # Aplicativos Nativos
 
-Um aplicativo nativo na Nuvemshop é aquele que opera no contexto do painel de administração, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas.
+Um aplicativo nativo na Nuvemshop é aquele que opera no contexto do Administrador de lojistas, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas.
 
 ## Requisitos para aplicativos nativos
 
-Para desenvolver um aplicativo nativo, é crucial compreender os requisitos técnicos e funcionais. A integração ocorre por meio do [Nexo](../developer-tools//nexo.md), nossa ferramenta de comunicação entre aplicativos nativos e o painel de administração. O design é garantido pelo nosso design system [Nimbus](../developer-tools/nimbus.md), que assegura a coesão visual com o Admin e agiliza o desenvolvimento. É essencial utilizar a stack [React](https://react.dev) no frontend, já que o **Nimbus** é otimizado para essa plataforma.
+Para desenvolver um aplicativo nativo, é crucial compreender os requisitos técnicos e funcionais. A integração ocorre por meio do [Nexo](../developer-tools//nexo.md), nossa ferramenta de comunicação entre aplicativos nativos e o Administrador de lojistas. O design é garantido pelo nosso design system [Nimbus](../developer-tools/nimbus.md), que assegura a padronização de interface e experiência, agilizando o desenvolvimento. É essencial utilizar a stack [React](https://react.dev) no frontend, já que o **Nimbus** é otimizado para essa plataforma.
 
 ## Início do Desenvolvimento
 
 Antes de iniciarmos, faremos uma visão geral para compreender os principais atores e seus papéis no fluxo de iniciação.
 
-Identificamos três atores que interagem entre si: o aplicativo desenvolvido pelo parceiro (doravante **"Native app"**), o painel de administração da Nuvemshop (doravante **"Admin"**) e o SDK que possibilita a conexão entre o Admin e o aplicativo nativo (doravante **"Nexo"**). Vamos explorar as responsabilidades de cada um desses atores.
+Identificamos três atores que interagem entre si: o aplicativo desenvolvido pelo parceiro (doravante **"Native app"**), o Administrador de lojistas (doravante **"Admin"**) e o SDK que possibilita a conexão entre o Administrador de lojistas
+e o aplicativo nativo (doravante **"Nexo"**). Vamos explorar as responsabilidades de cada um desses atores.
 
 ### Native app
 
@@ -77,7 +78,7 @@ O **Nexo** é o SDK que possibilita a comunicação entre o **Admin** e o **Nati
 
 O ator **Admin** desempenha um papel fundamental no gerenciamento do lojista Nuvemshop atualmente logado, incluindo:
 
-- O Admin oferece um espaço de desenvolvimento específico que possibilita a criação e teste do seu aplicativo sem a necessidade de aprovação na Appstore. Abordaremos a seguir como isso pode ser realizado.
+- O Admin oferece um espaço de desenvolvimento específico que possibilita a criação e teste do seu aplicativo sem a necessidade de aprovação na Loja de aplicativos. Abordaremos a seguir como isso pode ser realizado.
 - Definir o acesso do aplicativo (rotas): A Nuvemshop fornecerá uma rota (URL) na qual seu aplicativo será convocado.
 - Estabelecer onde a aplicação deve ser carregada através de um iframe.
 - Inicializar o **Nexo** para receber e enviar mensagens conforme necessário para o aplicativo.
@@ -101,7 +102,7 @@ Após selecionar o template desejado, sugerimos revisar o arquivo **"README.md"*
 
 ## Modo de desenvolvedor
 
-Para testar e desenvolver seu aplicativo nativo, é essencial fazê-lo dentro do contexto do Admin. No entanto, é necessário ter a opção de Modo Desenvolvedor ativada. Essa funcionalidade está atualmente disponível somente para lojas que foram habilitadas anteriormente. Para obter acesso a essa funcionalidade, entre em contato com a equipe da Nuvemshop.
+Para testar e desenvolver seu aplicativo nativo, é essencial fazê-lo dentro do contexto do Administrador de lojistas. No entanto, é necessário ter a opção de Modo Desenvolvedor ativada. Essa funcionalidade está atualmente disponível somente para lojas que foram habilitadas anteriormente. Para obter acesso a essa funcionalidade, entre em contato com a equipe da Nuvemshop.
 
 Ao ativar o Modo Desenvolvedor, uma nova opção será adicionada ao menu com o nome "Aplicativo de Teste" ou "Aplicación de Prueba", dependendo do idioma. Ao selecionar essa opção, você pode inserir a URL do aplicativo, que será carregado dentro do painel do Admin para testes e desenvolvimento.
 
