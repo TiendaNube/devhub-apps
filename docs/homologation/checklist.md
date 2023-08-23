@@ -50,7 +50,6 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
   </Card>
 </Box>
 
----
 
 ### Uso de Templates Nimbus - Prioridade Alta
 

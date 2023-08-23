@@ -3,15 +3,13 @@ sidebar_position: 4
 title: Uso de conceitos de UX writing
 ---
 
-# Uso de conceitos de UX writing 
+# Uso de conceitos de UX writing
 
 Levar em consideração as guidelines de UX Writing é fundamental na construção de uma experiência eficaz e consistente com o restante do administrador da Nuvemshop.
 
 A redação de experiência do usuário, é mais do que apenas escolher palavras; é um meio de comunicar efetivamente a mensagem da marca, orientar os usuários e construir uma conexão significativa.
 
-[Consultar checklist de homologação](../homologation/checklist.md#40-uso-de-conceitos-de-ux-writing---prioridade-baixa)
-
----
+[Consultar checklist de homologação](../homologation/checklist.md#uso-de-conceitos-de-ux-writing---prioridade-baixa)
 
 ## Nomenclatura de apps e telas
 
@@ -39,28 +37,23 @@ Idealmente, deveríamos usar um verbo (imperativo ou infinitivo) para resumir a 
 - É importante que seja auto-explicativo (que funcione sozinho).
 - Preferencialmente usar apenas uma frase.
 - Não usamos ponto final para encerrar a frase.
-- Podemos usar exclamação ou interrogação dependendo do caso. 
+- Podemos usar exclamação ou interrogação dependendo do caso.
 
 [Conheça os padrões de título](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/521fa2)
 
----
-
 ## Fundamentos de UX Writing
 
-Seguir os fundamentos de UX Writing de uma marca desempenha um papel vital na criação de uma experiência do usuário consistente com o restante do administrador da Nuvemshop. 
+Seguir os fundamentos de UX Writing de uma marca desempenha um papel vital na criação de uma experiência do usuário consistente com o restante do administrador da Nuvemshop.
 
 A redação de experiência do usuário, é mais do que apenas escolher palavras; é um meio de comunicar efetivamente a mensagem da marca, orientar os usuários e construir uma conexão significativa.
 
 [Leia mais sobre](https://zeroheight.com/910040352/p/82a0dc-principios-e-fundamentos)
 
----
-
 ## Tom de voz Nuvemshop
+
 Nossa voz é constante e reflete nossa identidade como marca. Ela permanece inalterada, transmitindo nossa personalidade distintiva. Por outro lado, o tom que adotamos pode variar conforme a situação. Essa distinção entre voz e tom nos permite manter uma consistência essencial enquanto ajustamos nossa mensagem para se adequar ao contexto específico.
 
 [Leia mais sobre](https://zeroheight.com/910040352/p/19a983-voz--tom)
-
----
 
 ## Padrões de texto
 
@@ -87,4 +80,3 @@ Selecionamos abaixo algumas recomendações valiosas sobre como criar conteúdo 
 - [Onboarding](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/86dbf1)
 
 - [Mensagens celebrativas](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/936fc4)
-
