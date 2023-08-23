@@ -15,7 +15,12 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-
+      - name: Make .env
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          envkey_ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          file_name: .env
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Test build website

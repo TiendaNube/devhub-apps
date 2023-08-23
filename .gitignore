@@ -3,6 +3,7 @@
 
 # Production
 /build
+.env
 
 # Generated files
 .docusaurus
@@ -26,3 +27,4 @@ yarn-error.log*
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+

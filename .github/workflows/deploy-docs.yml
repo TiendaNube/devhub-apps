@@ -16,7 +16,12 @@ jobs:
           node-version: 18
           cache: yarn
           cache-dependency-path: "./yarn.lock"
-
+      - name: Make .envf
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          envkey_ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          file_name: .env
       - name: Install dependencies
         run: yarn install
       - name: Build website
