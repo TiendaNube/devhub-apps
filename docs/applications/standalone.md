@@ -4,7 +4,7 @@ title: Standalone
 
 # Aplicativos Standalone
 
-Os aplicativos standalone diferente dos [aplicativos nativos](./native.md) que aparecem no administrador de lojistas, são soluções independentes. Eles são desenvolvidos externamente à Nuvemshop. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados às lojas dos merchants.
+Os aplicativos standalone diferente dos [aplicativos nativos](./native.md) que aparecem no Administrador de lojistas, são soluções independentes. Eles são desenvolvidos externamente à Nuvemshop. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados para os lojistas.
 
 ## Início do Desenvolvimento
 
@@ -20,7 +20,7 @@ Por outro lado, se você optar por não usar nossos templates, você pode acessa
 
 ## Recomendações
 
-- Recomendamos utilizar o nosso [Design System Nimbus](../developer-tools/nimbus.md) para agilizar a construção da interface do seu aplicativo. Ele com um kit de componentes prontos para uso. É possivel criar o seu proprio [tema](https://nimbus.nuvemshop.com.br/documentation/resources/themes) e assim criar a identidade visual da sua marca.
+- Recomendamos utilizar o nosso [Design System Nimbus](../developer-tools/nimbus.md) para agilizar a construção da interface do seu aplicativo. Ele com um kit de componentes prontos para uso. É possivel criar o seu próprio [tema](https://nimbus.nuvemshop.com.br/documentation/resources/themes) e assim criar a identidade visual da sua marca.
 - Recomendamos seguir os conceitos UX/UI definidos pelo nosso time de design. [Acesse aqui o guia completo](../design-guidelines/overview.md).
 - Para aplicativos publicados em nossa loja de aplicatvos recomendamos revisar o nosso [checklist de homologação](../homologation/overview.md).
 
