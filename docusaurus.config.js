@@ -57,9 +57,9 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: "R2LDQTPRGI",
+        appId: "RS4WPUZSQB",
         // Public API key: it is safe to commit it
-        apiKey: "f20086395a1896e3fc077f6cc2859e7d",
+        apiKey: "da3e2ced20244f0b94df4a572b7fc123",
         indexName: "devhub-nuvemshop",
       },
       navbar: {
