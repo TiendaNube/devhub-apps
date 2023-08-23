@@ -6,7 +6,7 @@ import { Alert } from '@nimbus-ds/components';
 
 # Autenticação
 
-Este guia apresenta métodos de autenticação de aplicativos com a plataforma Nuvemshop. Descubra como garantir segurança e acesso autorizado para integrações perfeitas entre seus apps e nossa plataforma.
+Este guia apresenta métodos de autenticação de aplicativos com a plataforma Nuvemshop. Descubra como garantir segurança e acesso autorizado para integrações perfeitas entre seus aplicativos e nossa plataforma.
 
 ## Autenticação da API
 
@@ -25,7 +25,7 @@ A escolha do método de autenticação depende do tipo de aplicativo que você e
 - Se você está criando aplicativos standalone, com ou sem nosso template, é necessário utilizar OAuth 2.
 - Para aplicativos nativos que se integram ao admin da Nuvemshop usando o Nexo, são utilizados tokens de acesso gerados no admin da Nuvemshop.
 
-Nossos modelos de criação de apps já incluem um sistema de autenticação integrado à nossa API. Isso reduz significativamente o tempo de desenvolvimento para nossos parceiros que optam por utilizar esses templates. No entanto, caso o parceiro escolha não usar um dos nossos modelos, é possível realizar a autenticação manualmente. A seguir, apresentaremos como isso pode ser feito de maneira eficaz.
+Nossos modelos de criação de aplicativos já incluem um sistema de autenticação integrado à nossa API. Isso reduz significativamente o tempo de desenvolvimento para nossos parceiros que optam por utilizar esses templates. No entanto, caso o parceiro escolha não usar um dos nossos modelos, é possível realizar a autenticação manualmente. A seguir, apresentaremos como isso pode ser feito de maneira eficaz.
 
 ## Obtendo o token de acesso
 
@@ -79,7 +79,7 @@ curl -X POST "https://www.tiendanube.com/apps/authorize/token" \
 -d "code=code"
 ```
 
-Certifique-se de substituir `client_id`, `client_secret` e `code` pelos valores corretos do seu aplicativo.
+Certifique-se de substituir `client_id`, `client_secret` e `code` pelos valores corretos do seu aplicativo criado no Portal de parceiros.
 Lembrando que você pode executar esse comando em um terminal ou em uma ferramenta que suporte cURL para testar a requisição e obter o access_token.
 
 ### Como obter um novo código cURL
