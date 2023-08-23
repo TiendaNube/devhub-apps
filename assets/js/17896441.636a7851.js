@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[918],{4692:(e,n,s)=>{s.d(n,{Z:()=>h});var t=s(6245),c=s(6687),l=s(882),r=s(7520);const a="devhub__link_sKSq",h=e=>{const{children:n,href:s}=e,h=s.includes("https://");return c.createElement(r.Z,(0,t.Z)({},e,{href:s,className:a}),n," ",h&&c.createElement(l.ExternalLinkIcon,null))}}}]);
