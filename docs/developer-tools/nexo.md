@@ -8,7 +8,7 @@ O Nexo disponibiliza recursos para facilitar a comunicação entre um aplicativo
 
 Essas mensagens, denominadas "Actions", são cuidadosamente definidas e associadas a "Helpers". Essas Helpers habilitam o uso das Actions como promessas, proporcionando uma abordagem eficaz e confiável para trocar informações e sincronizar operações entre as partes envolvidas.
 
-## Instalation
+## Instalação
 
 ### npm
 
