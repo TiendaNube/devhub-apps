@@ -2,9 +2,9 @@
 title: Standalone
 ---
 
-# Aplicativos Standalone
+# Aplicativos Externos
 
-Os aplicativos standalone diferente dos [aplicativos nativos](./native.md) que aparecem no Administrador de lojistas, são soluções independentes. Eles são desenvolvidos externamente à Nuvemshop. Esses aplicativos operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque. Eles proporcionam uma experiência única e podem ser uma ótima maneira de adicionar recursos especializados para os lojistas.
+Os aplicativos externos, diferente dos [aplicativos nativos](./native.md) que aparecem no Administrador de lojistas, são soluções independentes e carregam fora do administrador de lojistas. Eles operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque.
 
 ## Início do Desenvolvimento
 
