@@ -47,36 +47,32 @@ Seguir os fundamentos de UX Writing de uma marca desempenha um papel vital na cr
 
 A redação de experiência do usuário, é mais do que apenas escolher palavras; é um meio de comunicar efetivamente a mensagem da marca, orientar os usuários e construir uma conexão significativa.
 
-[Leia mais sobre](https://zeroheight.com/910040352/p/82a0dc-principios-e-fundamentos)
+[Conheça os fundamentos de UX Writing](https://zeroheight.com/910040352/p/82a0dc-principios-e-fundamentos)
 
 ## Tom de voz Nuvemshop
 
 Nossa voz é constante e reflete nossa identidade como marca. Ela permanece inalterada, transmitindo nossa personalidade distintiva. Por outro lado, o tom que adotamos pode variar conforme a situação. Essa distinção entre voz e tom nos permite manter uma consistência essencial enquanto ajustamos nossa mensagem para se adequar ao contexto específico.
 
-[Leia mais sobre](https://zeroheight.com/910040352/p/19a983-voz--tom)
+[Conehça o tom de voz](https://zeroheight.com/910040352/p/19a983-voz--tom)
 
 ## Padrões de texto
 
-Selecionamos abaixo algumas recomendações valiosas sobre como criar conteúdo para cada componente do Nimbus, dessa forma é possível reaproveitar padrões já estabelecidos dentro do administrador.
+Selecionamos abaixo algumas recomendações valiosas sobre como criar conteúdo para cada componente do Nimbus, dessa forma é possível reaproveitar padrões já estabelecidos e manter consistência com o administrador de lojas.
 
-- [Títulos](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/521fa2)
-
+- [Títulos](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/521fa2),
 - [Subtítulos](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/968d08)
-
 - [Call to actions](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/934e1a)
-
 - [Mensagens de confirmação](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/118208)
-
 - [Mensagens de erro](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/64a717)
-
 - [Links](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/822ab0)
-
 - [Empty state](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/2461ee)
-
 - [Tooltips](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/968547)
-
 - [Placeholders](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/3364d0)
-
 - [Onboarding](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/86dbf1)
-
 - [Mensagens celebrativas](https://zeroheight.com/910040352/p/14ac6a-padroes-de-texto/b/936fc4)
+
+---
+
+## Próximos passos
+
+- Conheça os [processo de homologação](/docs/homologation/overview.md)

@@ -103,3 +103,9 @@ A ordenação das informações das informações deve ser mantida como no templ
 ### Construção de novas composições
 
 Se caso não houver um caso similar no template a construção de novas composições é livre, contanto que sejam respeitadas as atribuições dos componentes e padrões utilizados.
+
+---
+
+## Próximos passos
+
+- Conheça os [componentes e patterns](./component-usage.md)

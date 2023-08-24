@@ -1,16 +1,15 @@
 ---
 sidebar_position: 2
+title: Checklist de design
 ---
 
 import { Tag, Card, Box, list } from '@nimbus-ds/components';
 
-# Design Checklist
-
-## Checklist de Homologação de Design
+# Checklist de Homologação de Design
 
 O objetivo desse documento é tornar os requisitos de construção e homologação de design mais transparentes. Esses requisitos foram categorizados por urgência e obrigatoriedade.
 
-### Categorização de Urgência
+## Categorização de Urgência
 
 <Box display="flex" flexDirection="column" gap="4">
   <Card>
@@ -33,7 +32,7 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
   </Card>
 </Box>
 
-### Categorização de Obrigatoriedade
+## Categorização de Obrigatoriedade
 
 <Box display="flex" flexDirection="column" gap="4">
   <Card>
@@ -51,11 +50,11 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
 </Box>
 
 
-### Uso de Templates Nimbus - Prioridade Alta
+## Uso de Templates Nimbus <Tag appearance="danger">Prioridade alta</Tag>
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.
 
-| Descrição                              | Link                                              | Prioridade                                  |
+| Descrição                              | Link                                              | Obrigatoriedade                             |
 | -------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
 | Página de Estado Vazio                 | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 | Página de Erro                         | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
@@ -66,22 +65,22 @@ Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma m
 | Página de Tabela de Produtos           | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
 | Limites de Personalização de Templates | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 
-### Uso de Componentes e Patterns - Prioridade Alta
+## Uso de Componentes e Patterns <Tag appearance="danger">Prioridade alta</Tag>
 
 Nesse item devemos nos atentar à atribuição dos componentes e padrões segundo suas respectivas documentações.
 
-| Descrição                                 | Link                                              | Prioridade                                  |
+| Descrição                                 | Link                                              | Obrigatoriedade                             |
 | ----------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
 | Componentes Atômicos e Compostos          | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 | Padrões de Composição                     | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
 | Componentes de Formulários                | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
 | Limites de Personalização e Flexibilidade | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 
-### Uso de Conceitos de UX/UI - Prioridade Média
+## Uso de Conceitos de UX/UI <Tag appearance="warning">Prioridade média</Tag>
 
 Nesse item devemos nos atentar aos comportamentos e disposição de elementos, visando atingir uma maior consistência com os produtos Nuvemshop.
 
-| Descrição                                         | Link                                              | Prioridade                                  |
+| Descrição                                         | Link                                              | Obrigatoriedade                             |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
 | Priorização e Organização de Ações e Conteúdos    | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 | Sinalização de Status e Padronização de Elementos | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
@@ -91,9 +90,11 @@ Nesse item devemos nos atentar aos comportamentos e disposição de elementos, v
 | Responsividade e Alinhamento dos Elementos        | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 | Organização e Sinalização em Formulários          | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="neutral">Recomendado</Tag> |
 
-### Uso de Conceitos de UX Writing - Prioridade Baixa
+## Uso de Conceitos de UX Writing <Tag appearance="success">Prioridade baixa</Tag>
 
-| Descrição                    | Link                                              | Prioridade                                  |
+Nesse item devemos nos atentar aos textos das interfaces e seus respectivos elementos, visando atingir uma melhor experiência e compreensão do usuário.
+
+| Descrição                    | Link                                              | Obrigatoriedade                             |
 | ---------------------------- | ------------------------------------------------- | ------------------------------------------- |
 | Nomenclatura de Apps e Telas | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |
 | Fundamentos de UX Writing    | [Ver Guideline](../design-guidelines/overview.md) | <Tag appearance="primary">Obrigatório</Tag> |

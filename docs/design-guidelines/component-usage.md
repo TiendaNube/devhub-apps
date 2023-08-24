@@ -89,3 +89,9 @@ A personalização dos componentes deve estar restrita às propriedades disponí
 ### Construção de componentes locais
 
 Se caso os componentes não solucionarem as necessidades do produto, é possível desenhar um componente local, porém esse recurso deve ser usado com parcimônia. Para se certificar recomendamos a abertura de uma discussão no repositório do Github.
+
+---
+
+## Próximos passos
+
+- Conheça os [conceitos de uso](./concept-usage.md)
