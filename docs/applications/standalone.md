@@ -1,5 +1,5 @@
 ---
-title: Standalone
+title: Externos
 ---
 
 # Aplicativos Externos
