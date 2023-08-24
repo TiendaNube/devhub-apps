@@ -8,14 +8,7 @@ import AppTypes from '@site/src/components/AppTypes';
 
 # Overview
 
-Nesta seção, forneceremos um guia passo a passo para que você, nosso valioso parceiro, possa criar um aplicativo na plataforma Nuvemshop. A criação de aplicativos é uma oportunidade emocionante para ampliar a experiência dos lojistas e oferecer soluções personalizadas.
-
-Vamos explorar juntos o processo de desenvolvimento, desde a concepção até a integração com nossa plataforma, garantindo que você esteja preparado para oferecer valor aos lojistas da Nuvemshop.
-
-Antes de iniciar o desenvolvimento do seu aplicativo, é necessário criar o mesmo dentro do Portal de Parceiros da Nuvemshop. Vamos agora explorar o
-processo de criação desse aplicativo, garantindo que você esteja pronto para avançar no desenvolvimento e integração com a nossa plataforma.
-
-Os aplicativos somente podem ser criados por Parceiros Nuvemshop. Saiba como criar o seu cadastro no 📝 Guia: [detalhes do programa de Parceiros Tecnológicos da Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
+Nesta seção, forneceremos um guia passo a passo para que você possa criar um aplicativo e integrar ele na plataforma Nuvemshop. Antes de iniciar o desenvolvimento do seu aplicativo, é necessário criar uma conta no Portal de Parceiros da Nuvemshop. Saiba como criar o seu cadastro no 📝 Guia: [detalhes do programa de Parceiros Tecnológicos da Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
 
 ## Criando um aplicativo na Nuvemshop
 
