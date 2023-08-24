@@ -15,21 +15,22 @@ A atenção às atribuições dos componentes é crucial para preservar a consis
 
 ### Categorização de componentes
 
-Componentes atômicos: são elementos essenciais do design system e indivisíveis.
-Componentes compostos: são composições de componentes atômicos.
+- **Componentes atômicos:** são elementos essenciais do design system e indivisíveis.
+- **Componentes compostos:** são composições de componentes atômicos.
 
 ### Atribuição dos componentes
 
 Cada componente se enquadra em uma categoria de atribuição, para que se mantenha uma consistência de experiência entre diferentes aplicativos e produtos é necessário seguir os usos descritos abaixo.
 
-| Atribuição               | Componentes                                                                                                                                                                                                                                                                                                                            |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Navegação/Ação           | [Button](https://nimbus.tiendanube.com/documentation/atomic-components/button), [Icon Button](https://nimbus.tiendanube.com/documentation/atomic-components/icon-button), [Link](https://nimbus.tiendanube.com/documentation/atomic-components/link) e [Toggle](https://nimbus.tiendanube.com/documentation/atomic-components/toggle). |
-| Formulários              | [Input](https://nimbus.tiendanube.com/documentation/atomic-components/input), Textarea, Checkbox, Radio, Select e File Uploader.                                                                                                                                                                                                       |
-| Organização              | Box, Chip, List, Popover, Table, Accordion, Sidebar, Card, Modal, Pagination e Tabs.                                                                                                                                                                                                                                                   |
-| Informativos/Decorativos | Title, Text, Label, Badge, Tag, Toast, Alert, Icon, Thumbnail, Tooltip, Spinner e Skeleton.                                                                                                                                                                                                                                            |
+| Atribuição                  | Componentes                                                         |
+|-----------------------------|---------------------------------------------------------------------|
+| Navegação/Ação              | [Button](https://nimbus.tiendanube.com/documentation/atomic-components/button), [Icon button](https://nimbus.tiendanube.com/documentation/atomic-components/icon-button), [Link](https://nimbus.tiendanube.com/documentation/atomic-components/link) e [Toggle](https://nimbus.tiendanube.com/documentation/atomic-components/toggle).|
+| Formulários                 | [Input](https://nimbus.tiendanube.com/documentation/atomic-components/input), [Textarea](https://nimbus.tiendanube.com/documentation/atomic-components/textarea), [Checkbox](https://nimbus.tiendanube.com/documentation/atomic-components/checkbox), [Radio](https://nimbus.tiendanube.com/documentation/atomic-components/radio), [Select](https://nimbus.tiendanube.com/documentation/atomic-components/select) e [File Uploader](https://nimbus.tiendanube.com/documentation/atomic-components/file-uploader).           |
+| Organização                 | [Box](https://nimbus.tiendanube.com/documentation/atomic-components/box), [Chip](https://nimbus.tiendanube.com/documentation/atomic-components/chip), [List](https://nimbus.tiendanube.com/documentation/atomic-components/list), [Popover](https://nimbus.tiendanube.com/documentation/atomic-components/popover), [Table](https://nimbus.tiendanube.com/documentation/composite-components/table), [Accordion](https://nimbus.tiendanube.com/documentation/composite-components/accordion), [Sidebar](https://nimbus.tiendanube.com/documentation/composite-components/sidebar), [Card](https://nimbus.tiendanube.com/documentation/composite-components/card), [Modal](https://nimbus.tiendanube.com/documentation/composite-components/modal), [Pagination](https://nimbus.tiendanube.com/documentation/composite-components/pagination) e [Tabs](https://nimbus.tiendanube.com/documentation/composite-components/tabs). |
+| Informativos/Decorativos    | [Title](https://nimbus.tiendanube.com/documentation/atomic-components/title), [Text](https://nimbus.tiendanube.com/documentation/atomic-components/text), [Label](https://nimbus.tiendanube.com/documentation/atomic-components/label), [Badge](https://nimbus.tiendanube.com/documentation/atomic-components/badge), [Tag](https://nimbus.tiendanube.com/documentation/atomic-components/tag), [Toast](https://nimbus.tiendanube.com/documentation/atomic-components/toast), [Alert](https://nimbus.tiendanube.com/documentation/composite-components/alert), [Icon](https://nimbus.tiendanube.com/documentation/atomic-components/icon), [Thumbnail](https://nimbus.tiendanube.com/documentation/atomic-components/thumbnail), [Tooltip](https://nimbus.tiendanube.com/documentation/atomic-components/tooltip), [Spinner](https://nimbus.tiendanube.com/documentation/atomic-components/spinner) e [Skeleton](https://nimbus.tiendanube.com/documentation/atomic-components/skeleton). |
 
-## patterns de composição
+
+## Patterns de composição
 
 ### O que são os patterns do Nimbus?
 
@@ -43,9 +44,9 @@ Abaixo categorizamos os patterns por funcionalidades, para conhecer mais sobre s
 
 | Funcionalidades          | Componentes                                                                                     |
 | ------------------------ | ----------------------------------------------------------------------------------------------- |
-| Organização de elementos | Data List, Data Table, Product Updates, Interactive List, Side Modal, Layout, App Shell e Page. |
-| Interativos              | Callout Card, Menu, Menu Button, Nav Tabs, Thumbnail with action e Form Field.                  |
-| Orientativos             | Empty Message e Help Link.                                                                      |
+| Organização de elementos | [Data List](https://nimbus.tiendanube.com/documentation/patterns/data-list), [Data Table](https://nimbus.tiendanube.com/documentation/patterns/data-table), [Product Updates](https://nimbus.tiendanube.com/documentation/patterns/product-updates), [Interactive List](https://nimbus.tiendanube.com/documentation/patterns/interactive-list), [Side Modal](https://nimbus.tiendanube.com/documentation/patterns/side-modal), [Layout](https://nimbus.tiendanube.com/documentation/patterns/layout), [App Shell](https://nimbus.tiendanube.com/documentation/patterns/app-shell) e [Page](https://nimbus.tiendanube.com/documentation/patterns/page). |
+| Interativos              | [Callout Card](https://nimbus.tiendanube.com/documentation/patterns/callout-card), [Menu](https://nimbus.tiendanube.com/documentation/patterns/menu), [Menu Button](https://nimbus.tiendanube.com/documentation/patterns/menu-button), [Nav Tabs](https://nimbus.tiendanube.com/documentation/patterns/nav-tabs), [Thumbnail with action](https://nimbus.tiendanube.com/documentation/patterns/thumbnail-with-action) e [Form Field](https://nimbus.tiendanube.com/documentation/patterns/formfield).                  |
+| Orientativos             | [Empty Message](https://nimbus.tiendanube.com/documentation/patterns/empty-message) e [Help Link](https://nimbus.tiendanube.com/documentation/patterns/help-link).                                                                      |
 
 Limites de personalização de patterns
 Com objetivo de manter a consistência que é o foco principal desse recurso, devemos nos ater às limitações de personalização de propriedades, não incluindo ou re-ordenando elementos de forma arbitrária por meio de overrides, ou seja devemos sempre prezar pela consistência com o restante dos produtos e aplicativos.
@@ -54,13 +55,14 @@ Com objetivo de manter a consistência que é o foco principal desse recurso, de
 
 Para receber ou enviar dados devemos, respeitando as recomendações de uso de acordo com o tipo de informação. Abaixo separamos os componentes de formulário e os respectivos tipos de informação que eles podem enviar/receber.
 
-| Componente     | Tipo de informação          |
-| -------------- | --------------------------- |
-| Input          | Texto curto                 |
-| Textarea       | Texto longo                 |
-| Checkbox       | Seleção de múltipla escolha |
-| Radio e Select | Seleção de opção única      |
-| File Uploader  | Imagem e/ou arquivos        |
+| Tipo de informação          | Componente     |
+| --------------------------- | -------------- |
+| Texto curto                 | [Input](https://nimbus.tiendanube.com/documentation/atomic-components/input)                                                                                  |
+| Texto longo                 | [Textarea](https://nimbus.tiendanube.com/documentation/atomic-components/textarea)                                                                            |
+| Seleção de múltipla escolha | [Checkbox](https://nimbus.tiendanube.com/documentation/atomic-components/checkbox)                                                                            |
+| Seleção de opção única      | [Radio](https://nimbus.tiendanube.com/documentation/atomic-components/radio) e [Select](https://nimbus.tiendanube.com/documentation/atomic-components/select) |
+| Imagem e/ou arquivos        | [File Uploader](https://nimbus.tiendanube.com/documentation/atomic-components/file-uploader)  |
+
 
 ### Padrão form field
 

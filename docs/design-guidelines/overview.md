@@ -1,31 +1,28 @@
 ---
 sidebar_position: 1
+title: Overview
 ---
 
 # Overview
 
-Para tornar a experiência de desenvolvimento de aplicativos nativos mais assertiva, elaboramos uma documentação de design abrangente, destinada a auxiliar os desenvolvedores no processo de construção de interfaces mais consistentes e uniformes.
+Para tornar a experiência de desenvolvimento de aplicativos nativos mais assertiva, elaboramos uma documentação de design abrangente, destinada a auxiliar os desenvolvedores no processo de construção de interfaces mais consistentes e uniformes. As diretrizes contemplam diversos conceitos fundamentais, com o objetivo de orientar os desenvolvedores a alcançar os melhores padrões experiência.
 
-As diretrizes contemplam diversos conceitos fundamentais, com o objetivo de orientar os desenvolvedores na criação de aplicativos excepcionais.
+### Utilização de templates de design
+Os templates de design atuam como o ponto de partida essencial para a construção de interfaces consistentes, proporcionando uma base sólida para o desenvolvimento de aplicativos e acelerando o processo de construção.
 
-### Utilização de Templates de Design
-Os templates de design atuam como o ponto de partida essencial para a construção de interfaces consistentes, proporcionando uma base sólida para o desenvolvimento de aplicativos e impulsionando o processo criativo.
+[Conheça os templates de design](./template-usage.md)
 
-[Conheça os templates](./template-usage.md)
-
-### Componentes e padrões de Design
-Outro recurso crucial são os componentes e padrões de design, que desempenham um papel significativo na construção de fluxos personalizados. Ao oferecer uma variedade de componentes e elementos, essa abordagem promove a flexibilidade na criação de aplicativos, permitindo soluções sob medida prezando pela consistência.
+### Componentes e padrões de design
+Outro recurso crucial são os componentes e padrões de design, que desempenham um papel significativo na construção de fluxos personalizados. Ao oferecer uma variedade de componentes e elementos, que promovem a flexibilidade na criação de aplicativos, permitindo soluções sob medida promovendo a consistência.
 
 [Conheça os componentes e padrões](./component-usage.md)
 
-### Exploração de Conceitos de UX/UI
-Nossas diretrizes incorporam conceitos avançados de design que atualmente são empregados no painel administrativo das lojas. Esses princípios também devem ser aplicados de forma consistente no desenvolvimento de aplicativos, garantindo uma experiência unificada.
+### Exploração de conceitos de UX/UI
+Nossas diretrizes incorporam conceitos de design que atualmente são empregados no painel administrativo das lojas. Esses princípios também devem ser aplicados de forma consistente no desenvolvimento de aplicativos, garantindo uma experiência unificada.
 
 [Conheça os conceitos de UX/UI](./concept-usage.md)
 
-### Princípios de UX Writing
+### Conceitos de UX Writing
 Além disso, abordamos regras essenciais para o processo de nomeação de aplicativos e páginas, bem como para a criação de conteúdo claro e conciso destinado aos nossos usuários. Isso contribui para uma comunicação eficaz e compreensível, elevando a experiência geral.
-
-Com essa abordagem integral, visamos não apenas aprimorar a qualidade visual dos aplicativos, mas também otimizar a experiência do usuário em todos os aspectos, desde a usabilidade até a comunicação.
 
 [Conheça os conceitos de UX Writing](./ux-writing-usage.md)

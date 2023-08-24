@@ -7,27 +7,18 @@ title: Templates de design
 
 Os templates Nimbus são ferramentas valiosas para garantir consistência visual e uma experiência sólida nos produtos da Nuvemshop. Ao utilizar esses templates, nosso objetivo é assegurar uma experiência uniforme alinhada com a interface do painel administrativo das lojas da Nuvemshop.
 
-A priorização na adoção desses modelos é fundamental para manter a identidade da marca e facilitar um processo de homologação mais eficiente, promovendo uma interface mais consistente e intuitiva.
+A priorização na adoção desses modelos é fundamental para manter a identidade da marca e facilitar o processo de homologação.
 
 [Consultar checklist de homologação](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
 
-## Escolha de Templates
-
-Para escolher os templates adequados, é importante considerar a atribuição da tela em construção. Oferecemos sete modelos baseados no administrador de lojas, prontos para serem aplicados em aplicativos:
-
-- [Página de estado vazio](../design-guidelines/template-usage.md#página-de-estado-vazio-e-inicial)
-- [Página de erro](../design-guidelines/template-usage#página-de-erro)
-- [Página de formulário](../design-guidelines/template-usage#página-de-formulário)
-- [Modal de confirmação](../design-guidelines/template-usage#modal-de-confirmação)
-- [Página de ajustes](../design-guidelines/template-usage#página-de-ajustes)
-- [Página de tabela simples](../design-guidelines/template-usage#página-de-tabela-de-simples)
-- [Página de tabela de produtos](../design-guidelines/template-usage#página-de-tabela-de-produtos)
-
-## Página de Estado Vazio e Inicial
+## Página de estado vazio e inicial
 
 Os estados vazios e iniciais representam um padrão projetado para orientar os usuários em telas onde não há informações disponíveis no momento. Existem duas variantes desse padrão, cada uma apropriada para diferentes situações em que a ausência de informações é motivada por diferentes razões.
 
-TABELA |
+| Tipo de empty         | Variante
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Empty state** - recomendado Utilizado quando uma pesquisa ou o carregamento de informações não retorna resultados, seja por uma falha ou por conta dos critérios selecionados em filtros. | With Icon |
+| *Initial state* - recomendado Seu uso é recomendado quando uma tela ainda não tem informações a serem mostradas por conta da ausência de alguma configuração ou de interações de outros usuários. | With Illustration |
 
 ### Uso de ilustrações
 
@@ -43,15 +34,23 @@ Uma página de erro é a interface exibida quando ocorre um problema ou erro dur
 
 Essas páginas são essenciais para manter uma experiência consistente e minimizar a frustração do usuário diante de falhas técnicas, delimitando a responsabilidade do erro.
 
-TABELA
-
 ## Página de formulário
 
 Um [template de página de formulário](https://tiendanube.github.io/nimbus-patterns/index.html?path=/story/templates-form--basic) é uma estrutura pré definida que demonstra como os diferentes tipos de informações em um formulário devem ser organizadas e exibidas aos usuários. Esse template tem como objetivo proporcionar uma experiência consistente e intuitiva ao preencher informações.
 
 O template de formulário inclui exemplos para receber os seguintes tipos de informações:
 
-TABELA
+| Tipos de informações | Recomendação   
+|----------------------|-------------------------------------------------------------------------
+| Texto curto/longo    | Usado para receber e validar texto curto ou longo    
+| Arquivos             | Usado para receber e validar arquivos                
+| Links                | Usado para receber e validar links                   
+| Preços               | Usado para receber e validar informações de preço    
+| Estoque              | Usado para receber e validar informações de estoque  
+| Peso e dimensões     | Usado para receber e validar dimensões e peso dos produtos
+| Opções múltiplas     | Usado para receber opções de listas pré-estabelecidas 
+| Categorias           | Usado para receber informações personalizadas         
+
 
 ## Modal de confirmação
 
@@ -63,15 +62,21 @@ Abandono de formulário - Sempre que houver um formulário com informações nã
 
 Ações destrutivas - Sempre que houver uma ação destrutiva devemos prevenir o usuário por meio de um modal de confirmação, perguntando se o usuário deseja realmente prosseguir com sua ação.
 
-TABELA
-
 ## Página de ajustes
 
 Um [template de página de ajustes](https://tiendanube.github.io/nimbus-patterns/index.html?path=/docs/templates-settingspage--docs) é uma estrutura projetada para permitir que os usuários personalizem e configurem diferentes aspectos de um aplicativo de acordo com suas preferências. Esse modelo oferece uma interface onde os usuários podem explorar e modificar configurações, opções e características do sistema de maneira consistente com produtos Nuvemshop.
 
 A página de ajuste inclui exemplos para configurar os seguintes tipos de informações:
 
-TABELA
+| Tipo de configuração  | Recomendação                                      
+|-----------------------|---------------------------------------------------------------------------
+| Checkbox              | Usado para selecionar várias opções
+| Radio                 | Usado para selecionar uma única opção
+| Card com toggle       | Usado para ativar ajustes instantâneos
+| Card colapsável       | Usado para ocultar informação de preenchimento opcional
+| Ajustes adicionais    | Usado para levar o usuário a outras configurações
+| Card com ação         | Usado para levar o usuário a outras páginas
+
 
 ## Página de tabela de simples
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Uso de conceitos de UX writing
+title: Conceitos de UX writing
 ---
 
 # Uso de conceitos de UX writing
