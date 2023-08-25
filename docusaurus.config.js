@@ -80,11 +80,11 @@ const config = {
             type: "docSidebar",
             sidebarId: "sidebar",
             position: "right",
-            label: "Docs",
+            label: "Documentação",
           },
           {
             type: "dropdown",
-            label: "Dev tools",
+            label: "Ferramentas",
             position: "right",
             items: [
               {

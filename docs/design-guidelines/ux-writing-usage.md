@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Conceitos de UX writing
 ---
 
@@ -27,7 +27,7 @@ A definição do nome de um aplicativo é crucial para sua identidade e visibili
 
 **Legalidade e Disponibilidade:** Verifique se o nome não infringe direitos autorais, marcas registradas existentes e se está disponível como domínio e em redes sociais.
 
-### Nomeando páginas
+### Nomeando telas
 
 A definição do nome da página deve considerar a informação contextual, os títulos servem para resumir e contextualizar sobre o que o usuário vai encontrar na interface e não ter relação com o nome do aplicativo.
 

@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+title: Primeiros passos
 ---
 
-# Overview
+# Primeiros passos
 
 Bem-vindo! Nesta documentação você irá encontrar todos os recursos e conteúdos para criar aplicativos e oferecer para toda a base de lojistas quem fazem parte da Nuvemshop. Se você é um desenvolvedor, parceiro ou está iniciando a sua jornada na tecnologia, você encontrará aqui como criar, integrar e aprimorar aplicativos para a Nuvemshop.
 

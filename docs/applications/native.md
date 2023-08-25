@@ -1,5 +1,5 @@
 ---
-title: Nativo
+title: Nativos
 ---
 
 # Aplicativos Nativos

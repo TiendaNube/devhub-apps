@@ -1,12 +1,13 @@
 ---
 sidebar_position: 1
+title: Visão geral
 ---
 
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import ImageCreateApp from '@site/docs/assets/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
-# Overview
+# Visão geral
 
 Nesta seção, forneceremos um guia passo a passo para que você possa criar um aplicativo e integrar ele na plataforma Nuvemshop. Antes de iniciar o desenvolvimento do seu aplicativo, é necessário criar uma conta no Portal de Parceiros da Nuvemshop. Saiba como criar o seu cadastro no 📝 Guia: [detalhes do programa de Parceiros Tecnológicos da Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
 

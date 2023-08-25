@@ -4,7 +4,7 @@ sidebar_position: 1
 
 import DeveloperTools from '@site/src/components/DeveloperTools';
 
-# Overview
+# Visão geral
 
 <DeveloperTools />
 

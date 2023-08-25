@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: Overview
+title: Visão geral
 ---
 
-# Overview
+# Visão geral
 
 Para tornar a experiência de desenvolvimento de aplicativos **nativos** mais assertiva, elaboramos uma documentação de design abrangente, destinada a auxiliar os desenvolvedores no processo de construção de interfaces mais consistentes e uniformes. As diretrizes contemplam diversos conceitos fundamentais, com o objetivo de orientar os desenvolvedores a alcançar os melhores padrões experiência.
 

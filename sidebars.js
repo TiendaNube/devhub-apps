@@ -18,12 +18,12 @@ const sidebars = {
   sidebar: [
     {
       type: "doc",
-      label: "Getting started",
+      label: "Primmeiros passos",
       id: "getting-started",
     },
     {
       type: "category",
-      label: "Developer tools",
+      label: "Ferramentas",
       items: [
         "developer-tools/overview",
         "developer-tools/templates",
@@ -34,7 +34,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Applications",
+      label: "Aplicativos",
       items: [
         "applications/overview",
         "applications/authentication",
@@ -55,7 +55,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Homologation",
+      label: "Homologação",
       items: ["homologation/overview", "homologation/checklist"],
     },
   ],
