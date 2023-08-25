@@ -44,7 +44,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Design guidelines",
+      label: "Diretrizes de design",
       items: [
         "design-guidelines/overview",
         "design-guidelines/template-usage",

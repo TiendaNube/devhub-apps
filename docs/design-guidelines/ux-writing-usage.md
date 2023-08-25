@@ -5,7 +5,7 @@ title: Conceitos de UX writing
 
 # Uso de conceitos de UX writing
 
-Levar em consideração as guidelines de UX Writing é fundamental na construção de uma experiência eficaz e consistente com o restante do administrador da Nuvemshop.
+Levar em consideração as diretriz de UX Writing é fundamental na construção de uma experiência eficaz e consistente com o restante do administrador da Nuvemshop.
 
 A redação de experiência do usuário, é mais do que apenas escolher palavras; é um meio de comunicar efetivamente a mensagem da marca, orientar os usuários e construir uma conexão significativa.
 

@@ -8,7 +8,7 @@ export const links = [
     link: "/docs/homologation/checklist",
   },
   {
-    title: "Checklist de design",
+    title: "Diretrizes de design",
     link: "/docs/design-guidelines/overview",
   },
   {

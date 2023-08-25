@@ -95,19 +95,70 @@ Quando um usuário está excluindo qualquer tipo de informação, devemos alert�
 
 Quando um usuário está saindo de uma tela de formulário onde informações não foram salvas, devemos alertá-lo de que ao realizar essa ação os dados do formulário serão perdidos.
 
-## Personalização e flexibilidade
+## Organização de dados em tabelas
 
-### Overrides proibidos
+### Quando usar tabelas?
 
-A personalização dos componentes deve estar restrita às propriedades disponíveis no storybook e Ui kit, sendo vedada a prática de overrides. Se caso houver necessidade de modificação ou inclusão de propriedades, é necessário abrir uma discussão no repositório do Github.
+Utilizamos o padrão [Data Table](https://nimbus.tiendanube.com/documentation/patterns/data-table) quando for necessário organizar uma grande quantidade de dados tabulares, utilizando linhas para organizar as entradas e colunas para categorizar os tipos de dados.
 
-### Construção de padrões
+### Como priorizar dados em uma tabela?
+Organizamos as colunas de acordo com ordem de importância das informações, ou seja, colunas com informações mais essenciais (Data, Nome, Número da ordem) posicionamos nas colunas da esquerda, já informações complementares (Produtos, Status, Ações) posicionamos nas colunas da direita.
 
-É permitido construir novas composições utilizando [componentes Nimbus](https://nimbus.tiendanube.com/documentation/atomic-components) contanto que não exista nenhuma outro padrão que possa solucionar o desafio imposto. Para se certificar recomendamos a abertura de uma discussão no repositório do Github.
+### Agrupamento de ações
+Sempre que houver mais de duas ações por linha da tabela é recomendado agrupar as ações usando um icon button com ícone ellipsis.
 
-### Construção de componentes locais
+### Uso de ações massivas
+Sempre que possível tecnicamente disponibilizamos ações massivas para mudança de status, exclusão ou qualquer outro tipo de tarefa que possa ser feita em todos os itens da tabela.
 
-Se caso os componentes não solucionarem as necessidades do produto, é possível desenhar um componente local, porém esse recurso deve ser usado com parcimônia. Para se certificar recomendamos a abertura de uma discussão no repositório do Github.
+## Responsividade e alinhamento dos elementos
+
+Para que seja possível utilizar o produto de diferentes tipos de resolução, devemos nos certificar que as telas desenhadas tenham uma experiência adequada, em diferentes tamanhos de tela.
+
+## Resoluções comuns
+O [padrão page](https://nimbus.tiendanube.com/documentation/patterns/page) possui por padrão largura de 100%, porém podemos configurar essa largura de acordo com o tipo de conteúdo. Para formulários utilizamos 800px de largura para compactar melhor as informações e a leitura do usuário, já para tabelas ou conteúdos de múltiplas colunas utilizamos 1200px. Essa resolução pode ser ajustada por meio de um string.
+
+### Responsabilidade de componentes
+
+### Padrão page
+Esse padrão no contexto mobile tem alguns comportamentos diferentes para abrir mais espaço para elementos essenciais, colapsando ações e ocultando alguns links.
+
+### Componente Table e padrão Data Table
+Nesses dois casos por possuírem dados tabulares a sua utilização em contextos mobile não é recomendada, eles podem ser substituídos utilizando o componente [data list](https://nimbus.tiendanube.com/documentation/patterns/data-list) mantendo a mesma priorização de informações e as separando em linhas.
+
+### Sidebar
+Esse [componente](https://nimbus.tiendanube.com/documentation/composite-components/sidebar) tem comportamento diferenciado no contexto mobile, ocupando toda a extensão da tela.
+
+### Grids e alinhamentos
+É possível alinhar os elementos em diferentes tipos de composição e proporção usando o padrão [grid](https://nimbus.tiendanube.com/documentation/patterns/layout), em contextos mobile por default independente da largura das colunas os elementos devem se empilhar.
+
+Por padrão todos os títulos, textos devem estar alinhados à esquerda, da mesma forma que botões são alinhados à direita, dentro de cards sempre alinhamos a esquerda.
+
+## Organização e sinalização em formulários
+
+### Como organizar campos?
+
+#### Alinhando campos
+Os campos sempre devem ser alinhados à esquerda, preferencialmente devem ter uma largura total ou combinada igual em todas as outras linhas.
+
+#### Agrupando campos
+Quando um formulário é muito longo, agrupamos os campos em diferentes cards para facilitar a visualização dos grupos de informação.
+
+Quando temos campos com informações relacionadas é permitido agrupá-los na mesma linha de um formulário, recomendamos que no máximo 2 campos sejam agrupados para não existir uma sobrecarga de informações.
+
+#### Dimensionando campos
+Formulários devem utilizar o padrão Page com largura de 800px, dessa forma é possível compactar melhor os campos facilitando sua leitura.
+
+Os campos devem ter tamanhos condizentes com o tamanho das informações que são solicitadas, por exemplo, se solicitamos o CEP de um residência devemos dimensioná-los com uma largura compatível com o número de caracteres de um CEP.
+
+## Como sinalizar campos em um formulário
+
+### Campos opcionais 
+Sempre que houver campos opcionais eles devem ser sinalizados através da inclusão de um texto junto ao label "(Opcional)", se houver um grupo de campos opcionais podemos agrupá-los dentro de um card colapsável também sinalizado em seu título com "(Opcional)" e mantendo o fechado para atrair a atenção aos campos obrigatórios.
+
+### Validação de campos
+**Sucesso** - Sempre que houver uma validação de campo em tempo real devemos sinalizar usando o padrão Form Field em sua variante success.
+
+**Erro** - Sempre que houver uma indicação de erro em tempo real ou após o envio de informações devemos sinalizar usando o padrão Form Field em sua variante Danger junto a um texto curto explicativo sobre o que causou essa condição.
 
 ---
 
