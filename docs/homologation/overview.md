@@ -5,44 +5,42 @@ title: Visão geral
 
 # Visão geral
 
-Para tornar um aplicativo público e assim poder comercializa-lo na loja de aplicativos nuvemshop é necessário submete-lo a um processo de homologação.
+Para disponibilizar um aplicativo na loja de aplicativos Nuvemshop, é essencial submetê-lo a um processo de homologação. Esse procedimento considera tanto o tipo de aplicativo quanto a categoria à qual ele pertence, o que resulta em requisitos que podem variar. Antes de dar início ao processo de submissão, é fundamental prestar atenção aos artefatos e requisitos necessários. Certifique-se de estar alinhado com essas diretrizes antes de enviar sua solicitação.
 
+## Requisitos para homologar aplicativos externos
 
-É hora de começar a preparar o restante dos artefatos necessários para aprovar a sua solicitação e publicar o aplicativo na loja.
+- Enviar o diagrama de sequência
+- Enviar um vídeo demo do aplicativo
+- Reunião de integração (Somente para apps de pagamentos, envios e ERPs)
 
-Estamos aguardando os seguintes artefatos:
+## Requisitos para homologar aplicativos nativos
 
-## Artefatos necessários para homologação
+- Enviar o diagrama de sequência
+- Enviar um vídeo demo do aplicativo
+- O aplicativo deve ser construído utilizando o nosso [design system Nimbus](https://nimbus.tiendanube.com/)
+- O aplicativo deve atender os [requisitos de design](../homologation/checklist.md)
+- Reunião de integração (Somente para apps de pagamentos, envios e ERPs)
 
-- Diagrama de sequência
-- Vídeo de demonstração
-- Checagem de design (Somente para Native apps)
+### Como construir um diagrama de sequência?
+O diagrama de sequência, avalia como as permissões que foram selecionadas na criação do aplicativo estão sendo utilizadas. Para saber mais sobre como criar um diagrama de sequência nós disponibilizamos um documento de apoio nesse [link](https://docs.google.com/document/d/1MFpRkSTDF2hPrvITL5H0Vw9NyT9c_Pm1cq7Gsf73LmM/edit).
 
-Caso seu aplicativo seja das categorias de Pagamentos, Envios e ERPs (management), será necessário realizar uma reunião para concluir a integração. Nosso time entrará em contato para agendar.
+### Como construir um vídeo demo?
+O vídeo de demonstração explica para o nosso time técnico como a sua solução funciona, ele também ajuda a agilizar o processo de aprovação. Abaixo listamos todos os itens que o vídeo deve contemplar:
 
+#### Fluxo de instalação:
+- Fluxo de instalação do aplicativo a partir da Nuvemshop e aplicativo (se houver)
+- Cenário onde o lojista que NÃO possui conta (Ex.: Como criar uma conta)
+- Cenário onde o lojista que possui conta (Ex.: Fazer o login/Recuperar a senha)
+- Cenário de reinstalação (Desinstalar e instalar o aplicativo novamente)
 
-### O que é um diagrama de sequência?
-O diagrama de sequência, avalia como as permissões que foram selecionadas na criação do aplicativo estão sendo utilizadas. Para saber mais sobre como criar um diagrama de sequência nós disponibilizamos um documento de apoio nesse link.
+#### Cenários de utilização:
+- Simulação de todos os cenários descritos nos diagramas de sequência 
+- Fluxo de utilização do app
+- Pontos que sejam relevantes para que possamos avaliar
+- Veja como criar o Guia de instalação completo
 
-### O que é um vídeo demo?
-O vídeo de demonstração explica para o nosso time técnico como a sua solução funciona. Ele também ajuda a agilizar o processo de aprovação. Este video precisa ter: 
+---
 
-- Itens obrigatórios no vídeo demo
+## Próximos passos
 
-Instalação do aplicativo a partir a Nuvemshop e a partir do aplicativo (se houver)
-
-Fluxo de instalação:
-Lojista que NÃO possui conta (Ex.: Como criar uma conta) 
-Lojista que possui conta (Ex.: Fazer o login/Recuperar a senha)
-Reinstalação (Desinstalar e instalar o aplicativo novamente)
-
-Por último, será necessário criar um guia de utilização do aplicativo contendo os seguintes materiais:
-
-Simulação de todos os cenários descritos nos diagramas de sequência 
-Fluxo de utilização do app
-Pontos que sejam relevantes para que possamos avaliar
-Veja como criar o Guia de instalação completo
-
-Para enviar estes artefatos ou tirar dúvidas, envie uma mensagem para publicacao@nuvemshop.com.br
-
-Falta pouco! Aguardamos o seu retorno!
+- Enviar os artefatos ou tirar dúvidas envie e-mail para publicacao@nuvemshop.com.br
