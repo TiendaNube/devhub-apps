@@ -56,14 +56,14 @@ Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma m
 
 | Descrição                              | Link                                              | Obrigatoriedade                             |
 | -------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
-| Página de estado vazio e inicial       | [Ver Guideline](../design-guidelines/template-usage#página-de-estado-vazio-e-inicial) | <Tag appearance="primary">Obrigatório</Tag> |
-| Página de erro                         | [Ver Guideline](../design-guidelines/template-usage#página-de-erro) | <Tag appearance="primary">Obrigatório</Tag> |
-| Página de formulários                  | [Ver Guideline](../design-guidelines/template-usage#página-de-formulário) | <Tag appearance="neutral">Recomendado</Tag> |
-| Modal de confirmação                   | [Ver Guideline](../design-guidelines/template-usage#modal-de-confirmação) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de ajustes                      | [Ver Guideline](../design-guidelines/template-usage#página-de-ajustes) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de tabela simples               | [Ver Guideline](../design-guidelines/template-usage#página-de-tabela-de-simples) | <Tag appearance="neutral">Recomendado</Tag> |
-| Página de tabela de produtos           | [Ver Guideline](../design-guidelines/template-usage#página-de-tabela-de-produtos) | <Tag appearance="neutral">Recomendado</Tag> |
-| Limites de personalização de templates | [Ver Guideline](../design-guidelines/template-usage#limites-de-personalização-de-templates) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de estado vazio e inicial       | [Ver diretriz](../design-guidelines/template-usage#página-de-estado-vazio-e-inicial) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de erro                         | [Ver diretriz](../design-guidelines/template-usage#página-de-erro) | <Tag appearance="primary">Obrigatório</Tag> |
+| Página de formulários                  | [Ver diretriz](../design-guidelines/template-usage#página-de-formulário) | <Tag appearance="neutral">Recomendado</Tag> |
+| Modal de confirmação                   | [Ver diretriz](../design-guidelines/template-usage#modal-de-confirmação) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de ajustes                      | [Ver diretriz](../design-guidelines/template-usage#página-de-ajustes) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de tabela simples               | [Ver diretriz](../design-guidelines/template-usage#página-de-tabela-de-simples) | <Tag appearance="neutral">Recomendado</Tag> |
+| Página de tabela de produtos           | [Ver diretriz](../design-guidelines/template-usage#página-de-tabela-de-produtos) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de personalização de templates | [Ver diretriz](../design-guidelines/template-usage#limites-de-personalização-de-templates) | <Tag appearance="primary">Obrigatório</Tag> |
 
 ## Uso de Componentes e Patterns <Tag appearance="danger">Prioridade alta</Tag>
 
@@ -71,10 +71,10 @@ Nesse item devemos nos atentar à atribuição dos componentes e padrões segund
 
 | Descrição                                 | Link                                              | Obrigatoriedade                             |
 | ----------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
-| Componentes atômicos e compostos          | [Ver Guideline](../design-guidelines/component-usage#componentes-atômicos-e-compostos) | <Tag appearance="primary">Obrigatório</Tag> |
-| Patterns de composição                     | [Ver Guideline](../design-guidelines/component-usage#patterns-de-composição) | <Tag appearance="neutral">Recomendado</Tag> |
-| Componentes de formulários                | [Ver Guideline](../design-guidelines/component-usage#componentes-de-formulários) | <Tag appearance="neutral">Recomendado</Tag> |
-| Limites de personalização e flexibilidade | [Ver Guideline](../design-guidelines/component-usage#personalização-e-flexibilidade) | <Tag appearance="primary">Obrigatório</Tag> |
+| Componentes atômicos e compostos          | [Ver diretriz](../design-guidelines/component-usage#componentes-atômicos-e-compostos) | <Tag appearance="primary">Obrigatório</Tag> |
+| Patterns de composição                     | [Ver diretriz](../design-guidelines/component-usage#patterns-de-composição) | <Tag appearance="neutral">Recomendado</Tag> |
+| Componentes de formulários                | [Ver diretriz](../design-guidelines/component-usage#componentes-de-formulários) | <Tag appearance="neutral">Recomendado</Tag> |
+| Limites de personalização e flexibilidade | [Ver diretriz](../design-guidelines/component-usage#personalização-e-flexibilidade) | <Tag appearance="primary">Obrigatório</Tag> |
 
 ## Uso de Conceitos de UX/UI <Tag appearance="warning">Prioridade média</Tag>
 
@@ -82,13 +82,13 @@ Nesse item devemos nos atentar aos comportamentos e disposição de elementos, v
 
 | Descrição                                         | Link                                              | Obrigatoriedade                             |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------- |
-| Priorização e organização de ações e conteúdos    | [Ver Guideline](../design-guidelines/concept-usage#priorização-e-organização-de-ações-e-conteúdos) | <Tag appearance="primary">Obrigatório</Tag> |
-| Sinalização de status e padronização de elementos | [Ver Guideline](../design-guidelines/concept-usage#sinalização-de-status-e-padronização-de-elementos) | <Tag appearance="neutral">Recomendado</Tag> |
-| Mensagens de feedback e confirmações              | [Ver Guideline](../design-guidelines/concept-usage#mensagens-de-feedback-e-confirmações) | <Tag appearance="neutral">Recomendado</Tag> |
-| Processamento e carregamento de informação        | [Ver Guideline](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
-| Organização de dados em tabelas                   | [Ver Guideline](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
-| Responsividade e alinhamento dos elementos        | [Ver Guideline](../design-guidelines/concept-usage#overview) | <Tag appearance="primary">Obrigatório</Tag> |
-| Organização e sinalização em formulários          | [Ver Guideline](../design-guidelines/concept-usage#personalização-e-flexibilidade) | <Tag appearance="neutral">Recomendado</Tag> |
+| Priorização e organização de ações e conteúdos    | [Ver diretriz](../design-guidelines/concept-usage#priorização-e-organização-de-ações-e-conteúdos) | <Tag appearance="primary">Obrigatório</Tag> |
+| Sinalização de status e padronização de elementos | [Ver diretriz](../design-guidelines/concept-usage#sinalização-de-status-e-padronização-de-elementos) | <Tag appearance="neutral">Recomendado</Tag> |
+| Mensagens de feedback e confirmações              | [Ver diretriz](../design-guidelines/concept-usage#mensagens-de-feedback-e-confirmações) | <Tag appearance="neutral">Recomendado</Tag> |
+| Processamento e carregamento de informação        | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
+| Organização de dados em tabelas                   | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
+| Responsividade e alinhamento dos elementos        | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="primary">Obrigatório</Tag> |
+| Organização e sinalização em formulários          | [Ver diretriz](../design-guidelines/concept-usage#personalização-e-flexibilidade) | <Tag appearance="neutral">Recomendado</Tag> |
 
 ## Uso de Conceitos de UX Writing <Tag appearance="success">Prioridade baixa</Tag>
 
@@ -96,7 +96,7 @@ Nesse item devemos nos atentar aos textos das interfaces e seus respectivos elem
 
 | Descrição                    | Link                                              | Obrigatoriedade                             |
 | ---------------------------- | ------------------------------------------------- | ------------------------------------------- |
-| Nomenclatura de apps e telas | [Ver Guideline](../design-guidelines/ux-writing-usage#nomenclatura-de-apps-e-telas) | <Tag appearance="primary">Obrigatório</Tag> |
-| Fundamentos de UX Writing    | [Ver Guideline](../design-guidelines/ux-writing-usage#fundamentos-de-ux-writing) | <Tag appearance="primary">Obrigatório</Tag> |
-| Tom de voz nuvemshop         | [Ver Guideline](../design-guidelines/ux-writing-usage#tom-de-voz-nuvemshop) | <Tag appearance="primary">Obrigatório</Tag> |
-| Padrões de texto             | [Ver Guideline](../design-guidelines/ux-writing-usage#padrões-de-texto) | <Tag appearance="primary">Obrigatório</Tag> |
+| Nomenclatura de apps e telas | [Ver diretriz](../design-guidelines/ux-writing-usage#nomenclatura-de-apps-e-telas) | <Tag appearance="primary">Obrigatório</Tag> |
+| Fundamentos de UX Writing    | [Ver diretriz](../design-guidelines/ux-writing-usage#fundamentos-de-ux-writing) | <Tag appearance="primary">Obrigatório</Tag> |
+| Tom de voz nuvemshop         | [Ver diretriz](../design-guidelines/ux-writing-usage#tom-de-voz-nuvemshop) | <Tag appearance="primary">Obrigatório</Tag> |
+| Padrões de texto             | [Ver diretriz](../design-guidelines/ux-writing-usage#padrões-de-texto) | <Tag appearance="primary">Obrigatório</Tag> |
