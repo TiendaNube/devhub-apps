@@ -95,6 +95,18 @@ Quando um usuário está excluindo qualquer tipo de informação, devemos alert�
 
 Quando um usuário está saindo de uma tela de formulário onde informações não foram salvas, devemos alertá-lo de que ao realizar essa ação os dados do formulário serão perdidos.
 
+## Processamento e carregamento de informação
+Sempre que uma informação estiver sendo carregada ela deve ser representada de forma clara ao usuário, cada tipo de carregamento é representado de uma forma diferente.
+
+### Carregamento de páginas
+Sempre que as informações de uma página estão sendo carregadas utilizamos o [Skeleton](https://nimbus.tiendanube.com/documentation/atomic-components/skeleton) dos componentes para representá-las, dessa forma o usuário já pode ir se familiarizando com a estrutura de elementos que vamos mostrar, além de diminuir a sensação de tempo de carregamento.
+
+### Carregamento contextual
+Sempre que um processamento estiver vinculado a um elemento específico, onde não existe mudança de página, demonstramos usando um [Spinner](https://nimbus.tiendanube.com/documentation/atomic-components/spinner).
+
+### Processamento de tarefas ou upload de arquivos
+Sempre que uma tarefa ou upload de arquivos for o resultado de uma ação primária, ou seja existe mudança de página, demonstramos essa ação utilizando um [Toast Progress](https://nimbus.tiendanube.com/documentation/atomic-components/toast).
+
 ## Organização de dados em tabelas
 
 ### Quando usar tabelas?
@@ -114,28 +126,26 @@ Sempre que possível tecnicamente disponibilizamos ações massivas para mudanç
 
 Para que seja possível utilizar o produto de diferentes tipos de resolução, devemos nos certificar que as telas desenhadas tenham uma experiência adequada, em diferentes tamanhos de tela.
 
-## Resoluções comuns
+### Resoluções comuns
 O [padrão page](https://nimbus.tiendanube.com/documentation/patterns/page) possui por padrão largura de 100%, porém podemos configurar essa largura de acordo com o tipo de conteúdo. Para formulários utilizamos 800px de largura para compactar melhor as informações e a leitura do usuário, já para tabelas ou conteúdos de múltiplas colunas utilizamos 1200px. Essa resolução pode ser ajustada por meio de um string.
 
 ### Responsabilidade de componentes
 
-### Padrão page
+#### Padrão page
 Esse padrão no contexto mobile tem alguns comportamentos diferentes para abrir mais espaço para elementos essenciais, colapsando ações e ocultando alguns links.
 
-### Componente Table e padrão Data Table
+#### Componente Table e padrão Data Table
 Nesses dois casos por possuírem dados tabulares a sua utilização em contextos mobile não é recomendada, eles podem ser substituídos utilizando o componente [data list](https://nimbus.tiendanube.com/documentation/patterns/data-list) mantendo a mesma priorização de informações e as separando em linhas.
 
-### Sidebar
+#### Sidebar
 Esse [componente](https://nimbus.tiendanube.com/documentation/composite-components/sidebar) tem comportamento diferenciado no contexto mobile, ocupando toda a extensão da tela.
 
-### Grids e alinhamentos
+#### Grids e alinhamentos
 É possível alinhar os elementos em diferentes tipos de composição e proporção usando o padrão [grid](https://nimbus.tiendanube.com/documentation/patterns/layout), em contextos mobile por default independente da largura das colunas os elementos devem se empilhar.
 
 Por padrão todos os títulos, textos devem estar alinhados à esquerda, da mesma forma que botões são alinhados à direita, dentro de cards sempre alinhamos a esquerda.
 
 ## Organização e sinalização em formulários
-
-### Como organizar campos?
 
 #### Alinhando campos
 Os campos sempre devem ser alinhados à esquerda, preferencialmente devem ter uma largura total ou combinada igual em todas as outras linhas.
@@ -146,19 +156,19 @@ Quando um formulário é muito longo, agrupamos os campos em diferentes cards pa
 Quando temos campos com informações relacionadas é permitido agrupá-los na mesma linha de um formulário, recomendamos que no máximo 2 campos sejam agrupados para não existir uma sobrecarga de informações.
 
 #### Dimensionando campos
-Formulários devem utilizar o padrão Page com largura de 800px, dessa forma é possível compactar melhor os campos facilitando sua leitura.
+Formulários devem utilizar o padrão [Page](https://nimbus.tiendanube.com/documentation/patterns/page) com largura de 800px, dessa forma é possível compactar melhor os campos facilitando sua leitura.
 
 Os campos devem ter tamanhos condizentes com o tamanho das informações que são solicitadas, por exemplo, se solicitamos o CEP de um residência devemos dimensioná-los com uma largura compatível com o número de caracteres de um CEP.
 
-## Como sinalizar campos em um formulário
+### Como sinalizar campos em um formulário
 
-### Campos opcionais 
+#### Campos opcionais 
 Sempre que houver campos opcionais eles devem ser sinalizados através da inclusão de um texto junto ao label "(Opcional)", se houver um grupo de campos opcionais podemos agrupá-los dentro de um card colapsável também sinalizado em seu título com "(Opcional)" e mantendo o fechado para atrair a atenção aos campos obrigatórios.
 
-### Validação de campos
-**Sucesso** - Sempre que houver uma validação de campo em tempo real devemos sinalizar usando o padrão Form Field em sua variante success.
+#### Validação de campos
+**Sucesso** - Sempre que houver uma validação de campo em tempo real devemos sinalizar usando o padrão [Form Field](https://nimbus.tiendanube.com/documentation/patterns/form-field) em sua variante success.
 
-**Erro** - Sempre que houver uma indicação de erro em tempo real ou após o envio de informações devemos sinalizar usando o padrão Form Field em sua variante Danger junto a um texto curto explicativo sobre o que causou essa condição.
+**Erro** - Sempre que houver uma indicação de erro em tempo real ou após o envio de informações devemos sinalizar usando o padrão [Form Field](https://nimbus.tiendanube.com/documentation/patterns/form-field) em sua variante Danger junto a um texto curto explicativo sobre o que causou essa condição.
 
 ---
 

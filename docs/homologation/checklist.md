@@ -85,10 +85,10 @@ Nesse item devemos nos atentar aos comportamentos e disposição de elementos, v
 | Priorização e organização de ações e conteúdos    | [Ver diretriz](../design-guidelines/concept-usage#priorização-e-organização-de-ações-e-conteúdos) | <Tag appearance="primary">Obrigatório</Tag> |
 | Sinalização de status e padronização de elementos | [Ver diretriz](../design-guidelines/concept-usage#sinalização-de-status-e-padronização-de-elementos) | <Tag appearance="neutral">Recomendado</Tag> |
 | Mensagens de feedback e confirmações              | [Ver diretriz](../design-guidelines/concept-usage#mensagens-de-feedback-e-confirmações) | <Tag appearance="neutral">Recomendado</Tag> |
-| Processamento e carregamento de informação        | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
-| Organização de dados em tabelas                   | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="neutral">Recomendado</Tag> |
-| Responsividade e alinhamento dos elementos        | [Ver diretriz](../design-guidelines/concept-usage#overview) | <Tag appearance="primary">Obrigatório</Tag> |
-| Organização e sinalização em formulários          | [Ver diretriz](../design-guidelines/concept-usage#personalização-e-flexibilidade) | <Tag appearance="neutral">Recomendado</Tag> |
+| Processamento e carregamento de informação        | [Ver diretriz](../design-guidelines/concept-usage#processamento-e-carregamento-de-informação) | <Tag appearance="neutral">Recomendado</Tag> |
+| Organização de dados em tabelas                   | [Ver diretriz](../design-guidelines/concept-usage#organização-de-dados-em-tabelas) | <Tag appearance="neutral">Recomendado</Tag> |
+| Responsividade e alinhamento dos elementos        | [Ver diretriz](../design-guidelines/concept-usage#responsividade-e-alinhamento-dos-elementos) | <Tag appearance="primary">Obrigatório</Tag> |
+| Organização e sinalização em formulários          | [Ver diretriz](../design-guidelines/concept-usage#organização-e-sinalização-em-formulários) | <Tag appearance="neutral">Recomendado</Tag> |
 
 ## Uso de Conceitos de UX Writing <Tag appearance="success">Prioridade baixa</Tag>
 

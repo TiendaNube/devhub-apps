@@ -17,8 +17,8 @@ Os estados vazios e iniciais representam um padrão projetado para orientar os u
 
 | Tipo de empty         | Variante
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Empty state** - recomendado Utilizado quando uma pesquisa ou o carregamento de informações não retorna resultados, seja por uma falha ou por conta dos critérios selecionados em filtros. | With Icon |
-| *Initial state* - recomendado Seu uso é recomendado quando uma tela ainda não tem informações a serem mostradas por conta da ausência de alguma configuração ou de interações de outros usuários. | With Illustration |
+| **Empty state** - recomendado Utilizado quando uma pesquisa ou o carregamento de informações não retorna resultados, seja por uma falha ou por conta dos critérios selecionados em filtros. | [With Icon](https://nimbus.tiendanube.com/documentation/patterns/empty-message) |
+| **Initial state** - recomendado Seu uso é recomendado quando uma tela ainda não tem informações a serem mostradas por conta da ausência de alguma configuração ou de interações de outros usuários. | [With Illustration](https://nimbus.tiendanube.com/documentation/patterns/empty-message) |
 
 ### Uso de ilustrações
 
@@ -40,16 +40,16 @@ Um [template de página de formulário](https://tiendanube.github.io/nimbus-patt
 
 O template de formulário inclui exemplos para receber os seguintes tipos de informações:
 
-| Tipos de informações | Recomendação   
-|----------------------|-------------------------------------------------------------------------
-| Texto curto/longo    | Usado para receber e validar texto curto ou longo    
-| Arquivos             | Usado para receber e validar arquivos                
-| Links                | Usado para receber e validar links                   
-| Preços               | Usado para receber e validar informações de preço    
-| Estoque              | Usado para receber e validar informações de estoque  
-| Peso e dimensões     | Usado para receber e validar dimensões e peso dos produtos
-| Opções múltiplas     | Usado para receber opções de listas pré-estabelecidas 
-| Categorias           | Usado para receber informações personalizadas         
+| Nome do card                   | Recomendação   
+|--------------------------------|-------------------------------------------------------------------------
+| Inputs de texto                | Usado para receber e validar texto curto ou longo    
+| Inputs para carga de archivos  | Usado para receber e validar arquivos                
+| Input de URL                   | Usado para receber e validar links                   
+| Inputs de precio               | Usado para receber e validar informações de preço    
+| Inputs de stock                | Usado para receber e validar informações de estoque  
+| Inputs de peso y dimensiones   | Usado para receber e validar dimensões e peso dos produtos
+| Opciones múltiples             | Usado para receber opções de listas pré-estabelecidas 
+| Categorías                     | Usado para receber informações personalizadas         
 
 
 ## Modal de confirmação
@@ -58,9 +58,9 @@ Um [template de modal de confirmação](https://tiendanube.github.io/nimbus-patt
 
 ### Recomendação de uso
 
-Abandono de formulário - Sempre que houver um formulário com informações não salvas devemos mostrar um modal para confirmar o abandono de página e prevenir a perda acidental de informações.
+**Abandono de formulário** - Sempre que houver um formulário com informações não salvas devemos mostrar um modal para confirmar o abandono de página e prevenir a perda acidental de informações.
 
-Ações destrutivas - Sempre que houver uma ação destrutiva devemos prevenir o usuário por meio de um modal de confirmação, perguntando se o usuário deseja realmente prosseguir com sua ação.
+**Ações destrutivas** - Sempre que houver uma ação destrutiva devemos prevenir o usuário por meio de um modal de confirmação, perguntando se o usuário deseja realmente prosseguir com sua ação.
 
 ## Página de ajustes
 
