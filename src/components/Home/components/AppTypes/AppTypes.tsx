@@ -40,9 +40,9 @@ const AppTypes: React.FC = () => (
         Construa aplicativos integrados ao administrador de lojas de forma
         nativa, para experiência aprimorada e recursos de fácil acesso.
       </Text>
-      <NimbusLink as={Link} to="/docs/applications/native" appearance="primary">
+      <NimbusLink as={Link} to="/docs/applications/native" appearance="neutral-background">
         Ler a documentação
-        <NimbusIcon color="primary-interactive" source={<ExternalLinkIcon />} />
+        <NimbusIcon color="neutral-background" source={<ExternalLinkIcon />} />
       </NimbusLink>
     </Box>
     <Box
@@ -67,10 +67,10 @@ const AppTypes: React.FC = () => (
       <NimbusLink
         as={Link}
         to="/docs/applications/standalone"
-        appearance="primary"
+        appearance="neutral-background"
       >
         Ler a documentação
-        <NimbusIcon color="primary-interactive" source={<ExternalLinkIcon />} />
+        <NimbusIcon color="neutral-background" source={<ExternalLinkIcon />} />
       </NimbusLink>
     </Box>
   </Box>
