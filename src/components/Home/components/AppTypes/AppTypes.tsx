@@ -37,7 +37,7 @@ const AppTypes: React.FC = () => (
         Aplicativo nativo
       </Box>
       <Text color="neutral-background">
-        Construa aplicativos integrados a no administrador de lojas de forma
+        Construa aplicativos integrados ao administrador de lojas de forma
         nativa, para experiência aprimorada e recursos de fácil acesso.
       </Text>
       <NimbusLink as={Link} to="/docs/applications/native" appearance="primary">

@@ -120,8 +120,24 @@ const config = {
             title: "Documentação",
             items: [
               {
-                label: "Getting started",
+                label: "Primeiros passos",
                 to: "/docs/getting-started",
+              },
+              {
+                label: "Ferramentas",
+                to: "/docs/developer-tools/overview",
+              },
+              {
+                label: "Aplicativos",
+                to: "/docs/applications/overview",
+              },
+              {
+                label: "Diretrizes de design",
+                to: "/docs/design-guidelines/overview",
+              },
+              {
+                label: "Homologação",
+                to: "/docs/homologation/overview",
               },
             ],
           },
@@ -132,6 +148,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/TiendaNube/devhub-apps",
+              },
+              {
+                label: "Nimbus",
+                href: "https://nimbus.tiendanube.com/",
               },
             ],
           },
