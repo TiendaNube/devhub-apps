@@ -13,7 +13,7 @@ To make an application available in the Nuvemshop app store, it's essential to s
 - Send a demo video of the application.
 - Integration meeting (Only for payment, shipping, and ERP apps).
 
-## Requirements for Approving Native Apps
+## Requirements for Approving Integrated applications
 
 - Submit the sequence diagram.
 - Send a demo video of the application.

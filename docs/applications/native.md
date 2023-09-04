@@ -1,8 +1,8 @@
 ---
-title: Aplicativos incorporados ao administrador
+title: Incorporados 
 ---
 
-# Aplicativos Incorporados ao Administrador
+# Aplicativos Incorporados
 
 Um aplicativo incorporado ao administrador é aquele que opera no contexto do lojistas, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas.
 

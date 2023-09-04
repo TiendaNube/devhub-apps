@@ -11,7 +11,7 @@ import NimbusTemplates from '@site/src/components/NimbusTemplates';
 
 O [Nimbus](https://nimbus.nuvemshop.com.br) é o design system open-source da Nuvemshop. Com componentes validados em produtos Nuvemshop, padrões e templates otimizados, documentação com exemplos e sincronização entre o UI kit no Figma e o código, o Nimbus viabiliza desenvolvedores e designers a criarem interfaces consistentes, acessíveis e de alto desempenho. Você poderá usar ele para criar seus aplicativos dentro do ecossistema da Nuvemshop ou também para seu projeto próprio considerando a licença vigente.
 
-Dentro do contexto do aplicativo, incentivamos o uso do [Nimbus](https://nimbus.nuvemshop.com.br) para desenvolver experiências de usuário coesas e reconhecíveis. É importante que seu aplicativo incorpore e faça uso das [bibliotecas do Nimbus](./nimbus.md#principais-pacotes-do-nimbus), seguindo tanto as diretrizes de design de aplicativos quanto as diretrizes mais abrangentes do **Nimbus**. Para aplicativos nativos, o uso do Nimbus é pré-requisito para mantermos a consistência e qualidade das interfaces integradas ao administrador dos lojistas.
+Dentro do contexto do aplicativo, incentivamos o uso do [Nimbus](https://nimbus.nuvemshop.com.br) para desenvolver experiências de usuário coesas e reconhecíveis. É importante que seu aplicativo incorpore e faça uso das [bibliotecas do Nimbus](./nimbus.md#principais-pacotes-do-nimbus), seguindo tanto as diretrizes de design de aplicativos quanto as diretrizes mais abrangentes do **Nimbus**. Para aplicativos incorporados ao administrador, o uso do Nimbus é pré-requisito para mantermos a consistência e qualidade das interfaces integradas ao administrador dos lojistas.
 
 ## Principais pacotes do Nimbus
 

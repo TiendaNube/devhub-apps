@@ -33,7 +33,7 @@ Each component falls into a category of assignment, in order to maintain consist
 
 ### What Are Nimbus Patterns?
 
-Nimbus has a variety of patterns that essentially bring together atomic and composite components combined with Nuvemshop's business rules. These resources promote greater consistency and optimize the construction of native and partner products.
+Nimbus has a variety of patterns that essentially bring together atomic and composite components combined with Nuvemshop's business rules. These resources promote greater consistency and optimize the construction of native applications and partner products.
 
 ### How to Choose the Right Patterns?
 

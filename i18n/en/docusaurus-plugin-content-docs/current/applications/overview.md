@@ -124,7 +124,7 @@ On the other hand, if you choose not to use our templates, you can access this [
 
 ## Choosing Your Application Type
 
-After creating your application and being ready to start development, it's essential to understand the two types of applications that can be developed on our platform: Native and Standalone. These options offer flexibility and unique advantages to meet the specific needs of merchants. Let's explore these types in detail so you can make the best decision for your application.
+After creating your application and being ready to start development, it's essential to understand the two types of applications that can be developed on our platform: Integrated and Standalone. These options offer flexibility and unique advantages to meet the specific needs of merchants. Let's explore these types in detail so you can make the best decision for your application.
 
 <AppTypes />
 
@@ -136,5 +136,5 @@ When creating your application, the **"Products"** permission will be chosen by 
 
 ## Next Steps
 
-- Learn more about [Native Applications](./native.md)
-- Learn more about [Standalone Applications](./standalone.md)
+- Learn more about [Integrated Applications](./native.md)
+- Learn more about [External Applications](./standalone.md)

@@ -4,7 +4,7 @@ title: Externos
 
 # External Applications
 
-External applications, unlike [native applications](./native.md) that appear in the Merchant's Admin, are independent solutions that load outside of the Merchant's Admin. They operate autonomously and can cover a wide range of functionalities, from marketing to inventory management.
+External applications, unlike [integrated applications](./native.md) that appear in the Merchant's Admin, are independent solutions that load outside of the Merchant's Admin. They operate autonomously and can cover a wide range of functionalities, from marketing to inventory management.
 
 ## Getting Started with Development
 
