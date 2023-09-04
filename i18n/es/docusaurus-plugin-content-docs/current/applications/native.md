@@ -16,7 +16,7 @@ Antes de comenzar, haremos una visión general para comprender los actores princ
 
 Identificamos tres actores que interactúan entre sí: la aplicación desarrollada por el socio (**"Aplicación Incorporada"**), el Administrador de tiendas (en adelante, **"Admin"**) y el SDK que permite la conexión entre el Administrador de tiendas y la aplicación incorporada (en adelante, **"Nexo"**). Exploraremos las responsabilidades de cada uno de estos actores.
 
-### Aplicación integrada
+### Aplicación incorporada
 
 Esta es la aplicación que desarrollarás. La aplicación final estará públicamente accesible a través de una URL. Se cargará en el Admin mediante un iframe, lo que requiere una URL pública para la aplicación. La URL pública se proporciona durante la creación de la aplicación en el [Portal de socios](https://partners.nuvemshop.com.br).
 
