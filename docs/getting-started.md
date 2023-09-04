@@ -9,15 +9,15 @@ Bem-vindo! Nesta documentação você irá encontrar todos os recursos e conteú
 ## Tipos de aplicativos
 Antes de começar a desenvolver aplicativos, é fundamental conhecer que tipo de aplicativo disponíveis e entender o que mais se encaixa dentro das necessidades e limitações do seu projeto.
 
-### Aplicativos nativos
-Um [aplicativo nativo](./applications/native.md) na Nuvemshop é aquele que opera no contexto do Administrador de lojistas, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas e oferecendo uma experiiencia mais integraga para o lojista.
+### Aplicativos incorporados ao administrador
+Um [aplicativo incorporado ao administador](./applications/native.md) é aquele que opera no contexto do lojistas, utilizando um iframe para garantir integração e fluidez. Essa abordagem busca oferecer experiências mais naturais e integradas para a gestão das lojas, aprimorando a interação com funcionalidades externas e oferecendo uma experiiencia mais integraga para o lojista.
 
-#### Requisitos para desenvolver aplicativos nativos:
+#### Requisitos para desenvolver aplicativos incorporados:
 * Usar o [design system Nimbus](./developer-tools/nimbus.md)
 * Atender aos [requisitos de design](./homologation/checklist.md)
 
 ### Aplicativos externos
-Os [aplicativos externos](./applications/standalone.md), diferente dos aplicativos nativos que aparecem no Administrador de lojistas, são soluções independentes e carregam fora do administrador de lojistas. Eles operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque.
+Os [aplicativos externos](./applications/standalone.md), diferente dos aplicativos incorporados que aparecem no Administrador de lojistas, são soluções independentes e carregam fora do administrador de lojistas. Eles operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque.
 
 ## Ferramentas para desenvolvimento
 
@@ -25,13 +25,13 @@ Os [aplicativos externos](./applications/standalone.md), diferente dos aplicativ
 A [API Nuvemshop](./developer-tools/nuvemshop-api.md), é uma ferramenta para interagir com nossa plataforma e expandir as funcionalidades do seu aplicativo. Antes de começar a utilizar nossa API, é crucial autenticar seu aplicativo. Após isso, você terá acesso a um access_token único de autenticação, permitindo que explore e utilize nossos recursos da API.
 
 ### Templates de aplicativos
-Disponibilizamos [templates de aplicativos](./developer-tools/templates.md) que servem como base para iniciar e acelerar o processo de desenvolvimento. Esses templates são divididos em duas categorias principais: aplicativos nativos e externos. Cada categoria possui seus próprios modelos específicos, criados para atender a diferentes necessidades e cenários.
+Disponibilizamos [templates de aplicativos](./developer-tools/templates.md) que servem como base para iniciar e acelerar o processo de desenvolvimento. Esses templates são divididos em duas categorias principais: aplicativos incorporados ao administrador e aplicativos externos. Cada categoria possui seus próprios modelos específicos, criados para atender a diferentes necessidades e cenários.
 
 **Autenticação pré-configurada** - Se você estiver utilizando um dos nossos templates, o processo de autenticação estará pronto para uso, incluindo a conexão com a API de produtos da Nuvemshop. Isso automatiza significativamente o processo; siga o guia de configuração no repositório do template escolhido e você estará a caminho do desenvolvimento.
 
 ### Nexo
 O [Nexo](./developer-tools/nimbus.md) disponibiliza recursos para facilitar a comunicação entre um aplicativo externo e o administrador da Nuvemshop. Essa interação entre o Admin e o App é estabelecida através de mensagens, seguindo o padrão do observador, permitindo inscrição e desinscrição de eventos.
 
-### Nimbus (Requisito para aplicativo nativo)
+### Nimbus (Requisito para aplicativo incorporado)
 O [Nimbus é o design system](./developer-tools/nimbus.md) open-source da Nuvemshop. Com componentes validados em produtos Nuvemshop, padrões e templates otimizados, documentação com exemplos e sincronização entre o UI kit no Figma e o código, o Nimbus viabiliza desenvolvedores e designers a criarem interfaces consistentes, acessíveis e de alto desempenho. Você poderá usar ele para criar seus aplicativos dentro do ecossistema da Nuvemshop ou também para seu projeto próprio considerando a licença vigente.
 
