@@ -2,7 +2,7 @@ export const tools = [
   {
     title: "Nimbus Design System",
     description:
-      "Utilize o Nimbus Design System para criar apps nativos no admin Nuvemshop. Com biblioteca de componentes, padrões e tokens, garanta uma experiência coesa e eficiente de desenvolvimento.",
+      "Utilize o Nimbus Design System para criar aplicativos incorporados ao administrador de lojistas. Com biblioteca de componentes, padrões e tokens, garanta uma experiência coesa e eficiente de desenvolvimento.",
     link: "https://nimbus.nuvemshop.com.br",
   },
   {
@@ -14,7 +14,7 @@ export const tools = [
   {
     title: "Nexo",
     description:
-      "Nosso pacote npm essencial para a comunicação perfeita entre apps nativos e o Admin Nuvemshop. Com mensagens baseadas no padrão observador, o Nexo possibilita uma troca eficiente de informações, proporcionando uma experiência de desenvolvimento integrada e ágil.",
+      "Nosso pacote npm essencial para a comunicação perfeita entre aplicativos incorporados e o Administrador Nuvemshop. Com mensagens baseadas no padrão observador, o Nexo possibilita uma troca eficiente de informações, proporcionando uma experiência de desenvolvimento integrada e ágil.",
     link: "https://github.com/TiendaNube/admin-nexo",
   },
   {
