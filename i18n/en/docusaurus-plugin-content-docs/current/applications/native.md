@@ -1,30 +1,30 @@
 ---
-title: Natives
+title: Integrated apps
 ---
 
-# Native Apps
+# Integrated apps
 
-A native app in Nuvemshop is one that operates within the context of the Merchant's Admin, using an iframe to ensure integration and smoothness. This approach aims to provide more natural and integrated experiences for store management, enhancing interaction with external functionalities.
+An integrated application is one that operates within the context of the Merchant's Admin, using an iframe to ensure integration and smoothness. This approach aims to provide more natural and integrated experiences for store management, enhancing interaction with external functionalities.
 
-## Requirements for Native Apps
+## Requirements for integrated applications
 
-To develop a native app, it is crucial to understand the technical and functional requirements. Integration is done through [Nexo](../developer-tools//nexo.md), our communication tool between native apps and the Merchant's Admin. Design is guaranteed by our design system [Nimbus](../developer-tools/nimbus.md), which ensures interface and experience standardization, streamlining development. It is essential to use the [React](https://react.dev) technology stack on the frontend since **Nimbus** is optimized for this platform.
+To develop an integrated application, it is crucial to understand the technical and functional requirements. Integration is done through [Nexo](../developer-tools//nexo.md), our communication tool between integrated apps and the Merchant's Admin. Design is guaranteed by our design system [Nimbus](../developer-tools/nimbus.md), which ensures interface and experience standardization, streamlining development. It is essential to use the [React](https://react.dev) technology stack on the frontend since **Nimbus** is optimized for this platform.
 
 ## Development Start
 
 Before we begin, we will provide an overview to understand the main actors and their roles in the initiation flow.
 
-We identify three actors who interact with each other: the app developed by the partner (hereinafter **"Native app"**), the Merchant's Admin (hereinafter **"Admin"**), and the SDK that enables the connection between the Merchant's Admin and the native app (hereinafter **"Nexo"**). We will explore the responsibilities of each of these actors.
+We identify three actors who interact with each other: the app developed by the partner (called **"Integrated app"**), the Merchant's Admin (called **"Admin"**), and the SDK that enables the connection between the Merchant's Admin and the integrated app (called **"Nexo"**). We will explore the responsibilities of each of these actors.
 
-### Native app
+### Integrated app
 
 This is the app you will develop. The final app will be publicly accessible through a URL. It will be loaded into the Admin through an iframe, which requires a public URL for the app. The public URL is provided during the app's creation in the [Partner Portal](https://partners.nuvemshop.com.br).
 
-To ensure compatibility of the **"Native app"** with the **Admin**, it is essential to have the **Nexo** installed and configured. [In this documentation](../developer-tools/nexo.md), you will find detailed information on how Nexo works.
+To ensure compatibility of the **"Integrated app"** with the **Admin**, it is essential to have the **Nexo** installed and configured. [In this documentation](../developer-tools/nexo.md), you will find detailed information on how Nexo works.
 
 At this moment, we will only address the fundamental steps:
 
-1. To initiate communication between the **"Native app"** and the **Admin**, you must use **Nexo**. Below is a code snippet demonstrating how this is done:
+1. To initiate communication between the **"Integrated app"** and the **Admin**, you must use **Nexo**. Below is a code snippet demonstrating how this is done:
 
    ```jsx
    // nexoClient.ts
@@ -38,7 +38,7 @@ At this moment, we will only address the fundamental steps:
    export default instance;
    ```
 
-2. After establishing communication, the **"Native app"** must explicitly notify the **Admin** that it is ready to be displayed. This is done at the starting point of the React application, as shown in the code snippet below:
+2. After establishing communication, the **"Integrated app"** must explicitly notify the **Admin** that it is ready to be displayed. This is done at the starting point of the React application, as shown in the code snippet below:
 
    ```jsx
    import { useEffect, useState } from "react";
@@ -63,13 +63,13 @@ At this moment, we will only address the fundamental steps:
    export default App;
    ```
 
-3. Finally, you will implement the business model logic of the **"Native app"** using the various actions we provide in Nexo. Check the list of available actions [here](../developer-tools/nexo.md#actions).
+3. Finally, you will implement the business model logic of the **"Integrated app"** using the various actions we provide in Nexo. Check the list of available actions [here](../developer-tools/nexo.md#actions).
 
 ### Nexo
 
-Nexo is the SDK that enables communication between **Admin** and the **Native app**. Developed by Nuvemshop, it is TypeScript compatible and can be accessed through NPM.
+Nexo is the SDK that enables communication between **Admin** and the **Integrated app**. Developed by Nuvemshop, it is TypeScript compatible and can be accessed through NPM.
 
-- Acts as the communication bridge between **Admin** and the **Native app**.
+- Acts as the communication bridge between **Admin** and the **Integrated app**.
 - Defines and manages available actions, which are exchanged through messages. See the list of available actions [here](../developer-tools/nexo.md#actions).
 - Provides tools to facilitate action implementation in the app. Learn more about Helpers [here](../developer-tools/nexo.md#helpers).
 
@@ -86,22 +86,22 @@ The actor **Admin** plays a fundamental role in managing the currently logged-in
 
 ## App Initialization Flow
 
-Here is the initialization flow of a **Native app** from the moment the user decides to view the app:
+Here is the initialization flow of a **Integrated app** from the moment the user decides to view the app:
 
 1. The user chooses to open the app, which can be triggered through a saved favorite URL or a menu option.
 2. **Admin** obtains app information and loads the app into the dashboard in an iframe while displaying a loading message.
-3. After loading the **Native app**, it notifies **Admin** through **Nexo** about the connection and waits for confirmation that **Admin** is also connected.
-4. Finally, when the **Native app** is ready to display content, it notifies through **Nexo** that it is ready. This allows **Admin** to replace the loading message with the **Native app** itself.
+3. After loading the **Integrated app**, it notifies **Admin** through **Nexo** about the connection and waits for confirmation that **Admin** is also connected.
+4. Finally, when the **Integrated app** is ready to display content, it notifies through **Nexo** that it is ready. This allows **Admin** to replace the loading message with the **Integrated app** itself.
 
 ## Choosing My Template
 
-Our development tools at Nuvemshop include [ready-made templates for app creation](../developer-tools/templates#tipos-de-template), covering all aspects of [authentication](../applications/overview#autenticando-seu-aplicativo) and construction. In the case of native apps, the part related to **Nexo** is already pre-configured. We strongly recommend using these templates.
+Our development tools at Nuvemshop include [ready-made templates for app creation](../developer-tools/templates#tipos-de-template), covering all aspects of [authentication](../applications/overview#autenticando-seu-aplicativo) and construction. In the case of Integrated apps, the part related to **Nexo** is already pre-configured. We strongly recommend using these templates.
 
 After selecting your desired template, we suggest reviewing the **"README.md"** file in the corresponding repository. There, you will find detailed guidance and practical steps to make the most of the capabilities offered by our development models.
 
 ## Developer Mode
 
-To test and develop your native app, it is essential to do so within the context of the Merchant's Admin. However, you need to have the Developer Mode option enabled. This feature is currently only available for stores that have been previously enabled. To gain access to this feature, please contact the Nuvemshop team.
+To test and develop your Integrated app, it is essential to do so within the context of the Merchant's Admin. However, you need to have the Developer Mode option enabled. This feature is currently only available for stores that have been previously enabled. To gain access to this feature, please contact the Nuvemshop team.
 
 When Developer Mode is activated, a new option is added to the menu with the name "Test App" or "Aplicación de Prueba," depending on the language. By selecting this option, you can enter the app's URL, which will be loaded into the Admin panel for testing and development.
 
