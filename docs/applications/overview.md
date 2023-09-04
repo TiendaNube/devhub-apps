@@ -124,7 +124,7 @@ Por outro lado, se você optar por não usar nossos templates, você pode acessa
 
 ## Escolhendo o tipo do seu aplicativo
 
-Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fundamental compreender os dois tipos de aplicativos que podem ser desenvolvidos em nossa plataforma: Nativo e Standalone. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants. Vamos explorar esses tipos em detalhes para que você possa tomar a melhor decisão para seu aplicativo.
+Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fundamental compreender os dois tipos de aplicativos que podem ser desenvolvidos em nossa plataforma: Incorporado ao administrador e Externo. Essas opções oferecem flexibilidade e vantagens únicas para atender às necessidades específicas dos merchants. Vamos explorar esses tipos em detalhes para que você possa tomar a melhor decisão para seu aplicativo.
 
 <AppTypes />
 
@@ -136,5 +136,5 @@ Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padr
 
 ## Próximos passos
 
-- Saiba mais sobre [Aplicativos Nativos](./native.md)
+- Saiba mais sobre [Aplicativos Integrados ao Administrador](./native.md)
 - Saiba mais sobre [Aplicativos Standalone](./standalone.md)
