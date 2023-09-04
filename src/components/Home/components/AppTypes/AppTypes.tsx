@@ -38,13 +38,12 @@ const AppTypes: React.FC = () => (
         mt="none"
       >
         <Translate id="home.appTypes.card.1.title">
-          Aplicativo nativo
+          Aplicativo incorporado ao administrador
         </Translate>
       </Box>
       <Text color="neutral-background">
         <Translate id="home.appTypes.card.1.text">
-          Construa aplicativos integrados ao administrador de lojas de forma
-          nativa, para experiência aprimorada e recursos de fácil acesso.
+          Construa aplicativos incorporados ao administrador dos lojistas para oferecer uma experiência aprimorada e recursos de fácil acesso.
         </Translate>
       </Text>
       <NimbusLink
@@ -72,7 +71,7 @@ const AppTypes: React.FC = () => (
         mt="none"
       >
         <Translate id="home.appTypes.card.2.title">
-          Aplicativo standalone
+          Aplicativo externos
         </Translate>
       </Box>
       <Text color="neutral-background">
