@@ -22,8 +22,8 @@ A autenticação é um passo fundamental para acessar nossos serviços via API. 
 
 A escolha do método de autenticação depende do tipo de aplicativo que você está desenvolvendo:
 
-- Se você está criando aplicativos standalone, com ou sem nosso template, é necessário utilizar OAuth 2.
-- Para aplicativos nativos que se integram ao admin da Nuvemshop usando o Nexo, são utilizados tokens de acesso gerados no admin da Nuvemshop.
+- Se você está criando aplicativos externos, com ou sem nosso template, é necessário utilizar OAuth 2.
+- Para aplicativos incorporados ao administrador usando o Nexo, são utilizados tokens de acesso gerados no admin da Nuvemshop.
 
 Nossos modelos de criação de aplicativos já incluem um sistema de autenticação integrado à nossa API. Isso reduz significativamente o tempo de desenvolvimento para nossos parceiros que optam por utilizar esses templates. No entanto, caso o parceiro escolha não usar um dos nossos modelos, é possível realizar a autenticação manualmente. A seguir, apresentaremos como isso pode ser feito de maneira eficaz.
 
