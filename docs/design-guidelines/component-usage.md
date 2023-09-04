@@ -34,7 +34,7 @@ Cada componente se enquadra em uma categoria de atribuição, para que se manten
 
 ### O que são os patterns do Nimbus?
 
-O Nimbus possui uma variedade de patterns, que basicamente reúnem componentes atômicos e compostos combinados com as regras de negócio da Nuvemshop, esses recursos promovem uma maior consistência e otimizam a construção de produtos nativos e de parceiros.
+O Nimbus possui uma variedade de patterns, que basicamente reúnem componentes atômicos e compostos combinados com as regras de negócio da Nuvemshop, esses recursos promovem uma maior consistência e otimizam a construção de aplicações nativas e de parceiros.
 
 ### Como escolher os patterns adequados?
 
