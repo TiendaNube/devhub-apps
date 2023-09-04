@@ -6,10 +6,10 @@
     "message": "Discover the different types of available applications"
   },
   "home.appTypes.card.1.title": {
-    "message": "Native App"
+    "message": "Integrated App"
   },
   "home.appTypes.card.1.text": {
-    "message": "Build apps integrated with the store admin natively, for an enhanced experience and easy access to features."
+    "message": "Build apps integrated with the store admin, for an enhanced experience and easy access to features."
   },
   "home.appTypes.card.1.linkText": {
     "message": "Read the documentation"
