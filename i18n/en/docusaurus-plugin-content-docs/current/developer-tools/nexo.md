@@ -4,11 +4,11 @@ sidebar_position: 4
 
 # Nexo
 
-O Nexo disponibiliza recursos para facilitar a comunicação entre um aplicativo externo e o administrador da Nuvemshop. Essa interação entre o Admin e o App é estabelecida através de mensagens, seguindo o padrão do observador, permitindo inscrição e desinscrição de eventos.
+Nexo provides resources to facilitate communication between an external application and the Nuvemshop administrator. This interaction between the admin and the app is established through messages, following the observer pattern, allowing for event subscription and unsubscription.
 
-Essas mensagens, denominadas "Actions", são cuidadosamente definidas e associadas a "Helpers". Essas Helpers habilitam o uso das Actions como promessas, proporcionando uma abordagem eficaz e confiável para trocar informações e sincronizar operações entre as partes envolvidas.
+These messages, called "Actions," are carefully defined and associated with "Helpers." These Helpers enable the use of Actions as promises, providing an effective and reliable approach to exchange information and synchronize operations between the involved parties.
 
-## Instalação
+## Installation
 
 ### npm
 
@@ -157,7 +157,7 @@ To navigate to the route from which the application was accessed.
 
 ### `ACTION_NAVIGATE_SYNC`
 
-To update his current location to propagate the internal navegation.
+To update his current location to propagate the internal navigation.
 
 **Internal name**:
 
@@ -415,7 +415,7 @@ const token = await getSessionToken(nexo);
 
 ### `syncPathname`
 
-To update his current location to propagate the internal navegation.
+To update his current location to propagate the internal navigation.
 
 **Action**: `app/navigate/sync`;
 
@@ -599,6 +599,6 @@ navigateHeaderRemove(nexo);
 
 ---
 
-## Próximos passos
+## Next steps
 
-- Saiba mais sobre nossa [API](./nuvemshop-api)
+- Learn more about our [API](./nuvemshop-api)

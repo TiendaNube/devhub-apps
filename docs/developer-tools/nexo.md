@@ -22,14 +22,14 @@ $ npm install @tiendanube/nexo
 $ yarn add @tiendanube/nexo
 ```
 
-## Getting Started
+## Começando
 
-### Create a Nexo instance
+### Criar uma instância do Nexo
 
-| Config   | Type                      | Description                                                        |
-| -------- | ------------------------- | ------------------------------------------------------------------ |
-| clientId | `string` required         | This value is provided by Nuvemshop                                |
-| log      | `boolean` default `false` | Allows to show the message transfers between the App and the Admin |
+| Config   | Tipo                     | Descrição                                                       |
+| -------- | ------------------------ | --------------------------------------------------------------- |
+| clientId | `string` obrigatório     | Este valor é fornecido pela Nuvemshop                           |
+| log      | `boolean` padrão `false` | Permite mostrar as mensagens transferidas entre o App e o Admin |
 
 <br />
 
@@ -44,11 +44,11 @@ const instance = nexo.create({
 export default instance;
 ```
 
-### Check if the app is connected
+### Verificar se o aplicativo está conectado
 
-Through the `connect` util you can check if the Admin allows you to exchange messages and at the same time with `iAmReady` notify that your application is ready to show.
+Através do utilitário `connect`, você pode verificar se o Administrador permite a troca de mensagens e, ao mesmo tempo, com `iAmReady`, notificar que sua aplicação está pronta para ser exibida.
 
-To react application
+Para a aplicação React
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -71,11 +71,11 @@ function App() {
 }
 ```
 
-### Enable route synchronization
+### Ativar a sincronização de rotas
 
-This functionality will allow you to record the app navigation of your app in the browser URL via fragment (#myroute)
+Essa funcionalidade permitirá que você registre a navegação do aplicativo na URL do navegador por meio de fragmentos (#myroute).
 
-This example is made with [React Router](https://reactrouter.com/en/main).
+Este exemplo é feito com o [React Router](https://reactrouter.com/en/main).
 
 ```jsx
 import React, { useEffect } from "react";
@@ -114,9 +114,9 @@ const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
 export default NexoSyncRoute;
 ```
 
-### Get Session Token
+### Obter o Token de Sessão
 
-Through the `getSessionToken` util we can obtain a session token (JWT) that will be used to verify the authenticity of the request to your Backend. The JWT is signed with the Application's Client Secret
+Por meio do utilitário `getSessionToken`, podemos obter um token de sessão (JWT) que será usado para verificar a autenticidade da solicitação ao seu Backend. O JWT é assinado com o Segredo do Cliente da Aplicação.
 
 ```ts
 import axios from "axios";
@@ -141,7 +141,7 @@ export default axiosIntance;
 
 ### `ACTION_NAVEGATE_EXIT`
 
-To navigate to the route from which the application was accessed.
+Para navegar até a rota a partir da qual o aplicativo foi acessado.
 
 **Internal name**:
 
@@ -157,7 +157,7 @@ To navigate to the route from which the application was accessed.
 
 ### `ACTION_NAVIGATE_SYNC`
 
-To update his current location to propagate the internal navegation.
+Para atualizar sua localização atual para propagar a navegação interna.
 
 **Internal name**:
 
@@ -177,7 +177,7 @@ To update his current location to propagate the internal navegation.
 
 ### `ACTION_NAVIGATE_GOTO`
 
-To navigate to a specific route in Admin.
+Para navegar para uma rota específica no Admin.
 
 **Internal name**:
 
@@ -202,7 +202,7 @@ To navigate to a specific route in Admin.
 
 ### `ACTION_NAVIGATE_PATHNAME`
 
-To current subPathname, which represents the path of the embedded app.
+Para o subPathname atual, que representa o caminho do aplicativo incorporado.
 
 **Internal name**:
 
@@ -222,7 +222,7 @@ To current subPathname, which represents the path of the embedded app.
 
 ### `ACTION_AUTH_SESSION_TOKEN`
 
-To requests the session token (JWT).
+Para solicitar o token de sessão (JWT).
 
 **Internal name**:
 
@@ -242,7 +242,7 @@ To requests the session token (JWT).
 
 ### `ACTION_STORE_INFO`
 
-To request information about current Store logged.
+Para solicitar informações sobre a loja atual registrada.
 
 **Internal name**:
 
@@ -267,7 +267,7 @@ To request information about current Store logged.
 
 ### `ACTION_NAVIGATE_GOTO_OLD_ADMIN`
 
-To navigate to a specific route located in the old admin (admin/...).
+Para navegar para uma rota específica localizada no antigo admin (admin/...).
 
 **Internal name**:
 
@@ -287,7 +287,7 @@ To navigate to a specific route located in the old admin (admin/...).
 
 ### `ACTION_NAVIGATE_HEADER`
 
-To show the navigation action in the Header Top.
+Para mostrar a ação de navegação no topo do cabeçalho.
 
 **Internal name**:
 
@@ -310,7 +310,7 @@ To show the navigation action in the Header Top.
 
 ### `ACTION_DEVICE`
 
-To requests information about if mobile device.
+Para solicitar informações sobre o dispositivo móvel.
 
 **Internal name**:
 
@@ -332,7 +332,7 @@ To requests information about if mobile device.
 
 ### `connect`
 
-To wait if the application is ready to render.
+Aguardar se o aplicativo estiver pronto para renderizar.
 
 **Arguments**:
 
@@ -357,7 +357,7 @@ connect(nexo)
 
 ### `iAmReady`
 
-To notify that the app is rendering.
+Para notificar que o aplicativo está sendo renderizado.
 
 **Arguments**:
 
@@ -375,7 +375,7 @@ iAmReady(nexo);
 
 ### `navigateExit`
 
-To navigate to the route from which the application was accessed.
+Para navegar até a rota a partir da qual o aplicativo foi acessado.
 
 **Action**: `app/navigate/exit`;
 
@@ -395,7 +395,7 @@ navigateExit(nexo);
 
 ### `getSessionToken`
 
-To requests the session token (JWT).
+Para solicitar o token de sessão (JWT).
 
 **Action**: `app/auth/sessionToken`;
 
@@ -415,7 +415,7 @@ const token = await getSessionToken(nexo);
 
 ### `syncPathname`
 
-To update his current location to propagate the internal navegation.
+Para atualizar sua localização atual para propagar a navegação interna.
 
 **Action**: `app/navigate/sync`;
 
@@ -435,7 +435,7 @@ syncPathname(nexo, pathname);
 
 ### `getStoreInfo`
 
-To request information about current Store.
+Para solicitar informações sobre a Loja atual.
 
 **Action**: `app/store/info`;
 
@@ -466,7 +466,7 @@ const storeInfo = await getStoreInfo(nexo);
 
 ### `getIsMobileDevice`
 
-To check if the app is being loaded from the Mobile Device.
+Para verificar se o aplicativo está sendo carregado do dispositivo móvel.
 
 **Action**: `app/device`;
 
@@ -486,7 +486,7 @@ const isMobileDevice = await getIsMobileDevice(nexo);
 
 ### `goTo`
 
-To navigate to a specific route in Admin.
+Para navegar para uma rota específica no Admin.
 
 **Action**: `app/navigate/goTo`;
 
@@ -507,7 +507,7 @@ goTo(nexo, "/products");
 
 ### `goToOldAdmin`
 
-To navigate to a specific route in Old Admin, only available Web mode (non mobile device).
+Para navegar para uma rota específica no Old Admin, apenas está disponível o modo Web (dispositivo não móvel).
 
 **Action**: `app/navigate/goToOldAdmin`;
 
@@ -528,7 +528,7 @@ goToOldAdmin(nexo, "/products");
 
 ### `copyToClipboard`
 
-To copy the sent text to the device's clipboard.
+Para copiar o texto enviado para a área de transferência do dispositivo.
 
 **Action**: `app/utils/copyToClipboard`;
 
@@ -549,7 +549,7 @@ copyToClipboard(nexo, "text to copy");
 
 ### `navigateHeader`
 
-To show the navigation action in the Header Top, only available Web mode (non mobile device).
+Para mostrar a ação de navegação no cabeçalho superior, apenas está disponível o modo Web (dispositivo não móvel).
 
 **Action**: `app/utils/copyToClipboard`;
 
@@ -579,7 +579,7 @@ navigateHeader(nexo, { goTo: "back", text: "Back" });
 
 ### `navigateHeaderRemove`
 
-Removes the action of Header Top, available only in Web mode (non-mobile devices).
+Remove a ação do Header Top, disponível apenas no modo Web (dispositivos não móveis).
 
 **Action**: `app/utils/copyToClipboard`;
 

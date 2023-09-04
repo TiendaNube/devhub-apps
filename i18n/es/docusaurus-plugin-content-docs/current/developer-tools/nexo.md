@@ -4,11 +4,11 @@ sidebar_position: 4
 
 # Nexo
 
-O Nexo disponibiliza recursos para facilitar a comunicação entre um aplicativo externo e o administrador da Nuvemshop. Essa interação entre o Admin e o App é estabelecida através de mensagens, seguindo o padrão do observador, permitindo inscrição e desinscrição de eventos.
+Nexo proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Nuvemshop. Esta interacción entre el administrador y la aplicación se establece mediante mensajes, siguiendo el patrón de observador, lo que permite la suscripción y cancelación de eventos.
 
-Essas mensagens, denominadas "Actions", são cuidadosamente definidas e associadas a "Helpers". Essas Helpers habilitam o uso das Actions como promessas, proporcionando uma abordagem eficaz e confiável para trocar informações e sincronizar operações entre as partes envolvidas.
+Estos mensajes, llamados "Actions", están cuidadosamente definidos y asociados con "Helpers". Estos Helpers permiten que las Actions se utilicen como promesas, lo que proporciona un enfoque eficaz y confiable para intercambiar información y sincronizar operaciones entre las partes involucradas.
 
-## Instalação
+## Instalación
 
 ### npm
 
@@ -22,14 +22,14 @@ $ npm install @tiendanube/nexo
 $ yarn add @tiendanube/nexo
 ```
 
-## Getting Started
+## Empezando
 
-### Create a Nexo instance
+### Crear una instancia de Nexo
 
-| Config   | Type                      | Description                                                        |
-| -------- | ------------------------- | ------------------------------------------------------------------ |
-| clientId | `string` required         | This value is provided by Nuvemshop                                |
-| log      | `boolean` default `false` | Allows to show the message transfers between the App and the Admin |
+| Config   | Tipo                          | Descripción                                                                           |
+| -------- | ----------------------------- | ------------------------------------------------------------------------------------- |
+| clientId | `string` requerido            | Este valor es proporcionado por Nuvemshop                                             |
+| log      | `boolean` por defecto `false` | Permite mostrar las transferencias de mensajes entre la Aplicación y el Administrador |
 
 <br />
 
@@ -44,11 +44,11 @@ const instance = nexo.create({
 export default instance;
 ```
 
-### Check if the app is connected
+### Comprobar si la aplicación está conectada
 
-Through the `connect` util you can check if the Admin allows you to exchange messages and at the same time with `iAmReady` notify that your application is ready to show.
+A través del utilitario `connect` puedes verificar si el Administrador permite el intercambio de mensajes y al mismo tiempo, con `iAmReady`, notificar que tu aplicación está lista para mostrarse.
 
-To react application
+Para la aplicación React
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -71,11 +71,11 @@ function App() {
 }
 ```
 
-### Enable route synchronization
+### Habilitar la sincronización de rutas
 
-This functionality will allow you to record the app navigation of your app in the browser URL via fragment (#myroute)
+Esta funcionalidad te permitirá registrar la navegación de la aplicación en la URL del navegador a través de fragmentos (#myroute).
 
-This example is made with [React Router](https://reactrouter.com/en/main).
+Este ejemplo está hecho con [React Router](https://reactrouter.com/en/main).
 
 ```jsx
 import React, { useEffect } from "react";
@@ -114,9 +114,9 @@ const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
 export default NexoSyncRoute;
 ```
 
-### Get Session Token
+### Obtener el Token de Sesión
 
-Through the `getSessionToken` util we can obtain a session token (JWT) that will be used to verify the authenticity of the request to your Backend. The JWT is signed with the Application's Client Secret
+A través del utilitario `getSessionToken`, podemos obtener un token de sesión (JWT) que se utilizará para verificar la autenticidad de la solicitud a tu Backend. El JWT está firmado con el Cliente Secreto de la Aplicación.
 
 ```ts
 import axios from "axios";
@@ -141,7 +141,7 @@ export default axiosIntance;
 
 ### `ACTION_NAVEGATE_EXIT`
 
-To navigate to the route from which the application was accessed.
+Navegar hasta la ruta desde la que se accedió a la aplicación.
 
 **Internal name**:
 
@@ -157,7 +157,7 @@ To navigate to the route from which the application was accessed.
 
 ### `ACTION_NAVIGATE_SYNC`
 
-To update his current location to propagate the internal navegation.
+Actualizar su ubicación actual para propagar la navegación interna.
 
 **Internal name**:
 
@@ -177,7 +177,7 @@ To update his current location to propagate the internal navegation.
 
 ### `ACTION_NAVIGATE_GOTO`
 
-To navigate to a specific route in Admin.
+Para navegar a una ruta específica en Admin.
 
 **Internal name**:
 
@@ -202,7 +202,7 @@ To navigate to a specific route in Admin.
 
 ### `ACTION_NAVIGATE_PATHNAME`
 
-To current subPathname, which represents the path of the embedded app.
+Al subPathname actual, que representa la ruta de la aplicación integrada.
 
 **Internal name**:
 
@@ -222,7 +222,7 @@ To current subPathname, which represents the path of the embedded app.
 
 ### `ACTION_AUTH_SESSION_TOKEN`
 
-To requests the session token (JWT).
+Para solicitar el token de sesión (JWT).
 
 **Internal name**:
 
@@ -242,7 +242,7 @@ To requests the session token (JWT).
 
 ### `ACTION_STORE_INFO`
 
-To request information about current Store logged.
+Para solicitar información sobre la tienda actual registrada.
 
 **Internal name**:
 
@@ -267,7 +267,7 @@ To request information about current Store logged.
 
 ### `ACTION_NAVIGATE_GOTO_OLD_ADMIN`
 
-To navigate to a specific route located in the old admin (admin/...).
+Para navegar a una ruta específica ubicada en el antiguo administrador (admin/...).
 
 **Internal name**:
 
@@ -287,7 +287,7 @@ To navigate to a specific route located in the old admin (admin/...).
 
 ### `ACTION_NAVIGATE_HEADER`
 
-To show the navigation action in the Header Top.
+Para mostrar la acción de navegación en el encabezado superior.
 
 **Internal name**:
 
@@ -310,7 +310,7 @@ To show the navigation action in the Header Top.
 
 ### `ACTION_DEVICE`
 
-To requests information about if mobile device.
+Para solicitar información sobre si dispositivo móvil.
 
 **Internal name**:
 
@@ -332,7 +332,7 @@ To requests information about if mobile device.
 
 ### `connect`
 
-To wait if the application is ready to render.
+Esperar si la aplicación está lista para procesarse.
 
 **Arguments**:
 
@@ -357,7 +357,7 @@ connect(nexo)
 
 ### `iAmReady`
 
-To notify that the app is rendering.
+Para notificar que la aplicación se está procesando.
 
 **Arguments**:
 
@@ -375,7 +375,7 @@ iAmReady(nexo);
 
 ### `navigateExit`
 
-To navigate to the route from which the application was accessed.
+Navegar hasta la ruta desde la que se accedió a la aplicación.
 
 **Action**: `app/navigate/exit`;
 
@@ -395,7 +395,7 @@ navigateExit(nexo);
 
 ### `getSessionToken`
 
-To requests the session token (JWT).
+Para solicitar el token de sesión (JWT).
 
 **Action**: `app/auth/sessionToken`;
 
@@ -415,7 +415,7 @@ const token = await getSessionToken(nexo);
 
 ### `syncPathname`
 
-To update his current location to propagate the internal navegation.
+Actualizar su ubicación actual para propagar la navegación interna.
 
 **Action**: `app/navigate/sync`;
 
@@ -435,7 +435,7 @@ syncPathname(nexo, pathname);
 
 ### `getStoreInfo`
 
-To request information about current Store.
+Para solicitar información sobre la Tienda actual.
 
 **Action**: `app/store/info`;
 
@@ -466,7 +466,7 @@ const storeInfo = await getStoreInfo(nexo);
 
 ### `getIsMobileDevice`
 
-To check if the app is being loaded from the Mobile Device.
+Para verificar si la aplicación se está cargando desde el dispositivo móvil.
 
 **Action**: `app/device`;
 
@@ -486,7 +486,7 @@ const isMobileDevice = await getIsMobileDevice(nexo);
 
 ### `goTo`
 
-To navigate to a specific route in Admin.
+Para navegar a una ruta específica en Admin.
 
 **Action**: `app/navigate/goTo`;
 
@@ -507,7 +507,7 @@ goTo(nexo, "/products");
 
 ### `goToOldAdmin`
 
-To navigate to a specific route in Old Admin, only available Web mode (non mobile device).
+Para navegar a una ruta específica en Old Admin, solo está disponible el modo web (no para dispositivos móviles).
 
 **Action**: `app/navigate/goToOldAdmin`;
 
@@ -528,7 +528,7 @@ goToOldAdmin(nexo, "/products");
 
 ### `copyToClipboard`
 
-To copy the sent text to the device's clipboard.
+Copiar el texto enviado al portapapeles del dispositivo.
 
 **Action**: `app/utils/copyToClipboard`;
 
@@ -549,7 +549,7 @@ copyToClipboard(nexo, "text to copy");
 
 ### `navigateHeader`
 
-To show the navigation action in the Header Top, only available Web mode (non mobile device).
+Para mostrar la acción de navegación en el encabezado superior, solo está disponible el modo web (no para dispositivos móviles).
 
 **Action**: `app/utils/copyToClipboard`;
 
@@ -579,7 +579,7 @@ navigateHeader(nexo, { goTo: "back", text: "Back" });
 
 ### `navigateHeaderRemove`
 
-Removes the action of Header Top, available only in Web mode (non-mobile devices).
+Elimina la acción de Header Top, disponible solo en modo Web (dispositivos no móviles).
 
 **Action**: `app/utils/copyToClipboard`;
 
@@ -599,6 +599,6 @@ navigateHeaderRemove(nexo);
 
 ---
 
-## Próximos passos
+## Próximos pasos
 
-- Saiba mais sobre nossa [API](./nuvemshop-api)
+- Obtenga más información sobre nuestra [API](./nuvemshop-api)
