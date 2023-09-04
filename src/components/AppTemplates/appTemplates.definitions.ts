@@ -4,17 +4,17 @@ import ExpressLogo from "./expressjs-logo.svg";
 export const appTemplates = [
   {
     icon: ExpressLogo,
-    title: "Express native app template",
+    title: "Express integrated app template",
     description:
-      "Um modelo de aplicativo nativo que usa Express, Node.js e React.",
+      "Um modelo de aplicativo incorporado ao administrador que usa Express, Node.js e React.",
     link: "https://github.com/TiendaNube/tiendanube-app-native-template-node",
     type: "native" as ITemplateType,
   },
   {
     icon: ExpressLogo,
-    title: "Express standalone app template",
+    title: "Express external app template",
     description:
-      "Um modelo de aplicativo standalone que usa Express, Node.js e React.",
+      "Um modelo de aplicativo externo que usa Express, Node.js e React.",
     link: "https://github.com/TiendaNube/tiendanube-app-standalone-template-node",
     type: "standalone" as ITemplateType,
   },
