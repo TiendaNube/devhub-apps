@@ -1,14 +1,14 @@
 ---
-title: Integrated apps
+title: Integrated
 ---
 
-# Integrated apps
+# Integrated applications
 
 An integrated application is one that operates within the context of the Merchant's Admin, using an iframe to ensure integration and smoothness. This approach aims to provide more natural and integrated experiences for store management, enhancing interaction with external functionalities.
 
 ## Requirements for integrated applications
 
-To develop an integrated application, it is crucial to understand the technical and functional requirements. Integration is done through [Nexo](../developer-tools//nexo.md), our communication tool between integrated apps and the Merchant's Admin. Design is guaranteed by our design system [Nimbus](../developer-tools/nimbus.md), which ensures interface and experience standardization, streamlining development. It is essential to use the [React](https://react.dev) technology stack on the frontend since **Nimbus** is optimized for this platform.
+To develop an integrated application, it is crucial to understand the technical and functional requirements. Integration is done through [Nexo](../developer-tools//nexo.md), our communication tool between Integrated applications and the Merchant's Admin. Design is guaranteed by our design system [Nimbus](../developer-tools/nimbus.md), which ensures interface and experience standardization, streamlining development. It is essential to use the [React](https://react.dev) technology stack on the frontend since **Nimbus** is optimized for this platform.
 
 ## Development Start
 
@@ -95,7 +95,7 @@ Here is the initialization flow of a **Integrated app** from the moment the user
 
 ## Choosing My Template
 
-Our development tools at Nuvemshop include [ready-made templates for app creation](../developer-tools/templates#tipos-de-template), covering all aspects of [authentication](../applications/overview#autenticando-seu-aplicativo) and construction. In the case of Integrated apps, the part related to **Nexo** is already pre-configured. We strongly recommend using these templates.
+Our development tools at Nuvemshop include [ready-made templates for app creation](../developer-tools/templates#tipos-de-template), covering all aspects of [authentication](../applications/overview#autenticando-seu-aplicativo) and construction. In the case of Integrated applications, the part related to **Nexo** is already pre-configured. We strongly recommend using these templates.
 
 After selecting your desired template, we suggest reviewing the **"README.md"** file in the corresponding repository. There, you will find detailed guidance and practical steps to make the most of the capabilities offered by our development models.
 
