@@ -4,7 +4,7 @@ title: Externos
 
 # Aplicativos Externos
 
-Os aplicativos externos, diferente dos [aplicativos nativos](./native.md) que aparecem no Administrador de lojistas, são soluções independentes e carregam fora do administrador de lojistas. Eles operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque.
+Os aplicativos externos, diferente dos [aplicativos incorporados](./native.md) que aparecem no Administrador de lojistas, são soluções independentes e carregam fora do administrador de lojistas. Eles operam de forma autônoma e podem abranger uma ampla gama de funcionalidades, desde marketing até gerenciamento de estoque.
 
 ## Início do Desenvolvimento
 
