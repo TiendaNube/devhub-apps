@@ -11,18 +11,18 @@ title: Primeros pasos
 
 Antes de comenzar a desarrollar aplicaciones, es fundamental conocer los tipos de aplicaciones disponibles y comprender cuál se adapta mejor a las necesidades y limitaciones de tu proyecto.
 
-### Aplicaciones nativas
+### Aplicaciones incorporada al administrador
 
-Una [aplicación nativa](./applications/native.md) en Nuvemshop es aquella que opera en el contexto del Panel de control de comerciantes, utilizando un iframe para garantizar la integración y la fluidez. Esta aproximación busca ofrecer experiencias más naturales e integradas para la gestión de las tiendas, mejorando la interacción con funciones externas y brindando una experiencia más integrada para el comerciante.
+Una [aplicación incorporada al administrador](./applications/native.md) es aquella que opera en el contexto de los comerciantes, utilizando un iframe para garantizar la integración y la fluidez. Esta aproximación busca ofrecer experiencias más naturales e integradas para la gestión de las tiendas, mejorando la interacción con funciones externas y brindando una experiencia más integrada para el comerciante.
 
-#### Requisitos para desarrollar aplicaciones nativas:
+#### Requisitos para desarrollar
 
 - Utilizar el [sistema de diseño Nimbus](./developer-tools/nimbus.md)
 - Cumplir con los [requisitos de diseño](./homologation/checklist.md)
 
 ### Aplicaciones externas
 
-Las [aplicaciones externas](./applications/standalone.md), a diferencia de las aplicaciones nativas que aparecen en el Panel de control de comerciantes, son soluciones independientes que se cargan fuera del panel. Operan de forma autónoma y pueden abarcar una amplia gama de funciones, desde marketing hasta gestión de inventario.
+Las [aplicaciones externas](./applications/standalone.md), a diferencia de las aplicaciones incorporadas que aparecen en el Panel de control de comerciantes, son soluciones independientes que se cargan fuera del panel. Operan de forma autónoma y pueden abarcar una amplia gama de funciones, desde marketing hasta gestión de inventario.
 
 ## Herramientas de desarrollo
 
@@ -32,7 +32,7 @@ La [API de Nuvemshop](./developer-tools/nuvemshop-api.md) es una herramienta par
 
 ### Plantillas de aplicaciones
 
-Ofrecemos [plantillas de aplicaciones](./developer-tools/templates.md) que sirven como base para iniciar y acelerar el proceso de desarrollo. Estas plantillas se dividen en dos categorías principales: aplicaciones nativas y externas. Cada categoría tiene sus propios modelos específicos, creados para satisfacer diferentes necesidades y escenarios.
+Ofrecemos [plantillas de aplicaciones](./developer-tools/templates.md) que sirven como base para iniciar y acelerar el proceso de desarrollo. Estas plantillas se dividen en dos categorías principales: aplicaciones incorporadas y aplicaciones externas. Cada categoría tiene sus propios modelos específicos, creados para satisfacer diferentes necesidades y escenarios.
 
 **Autenticación preconfigurada** - Si estás utilizando una de nuestras plantillas, el proceso de autenticación estará listo para usar, incluida la conexión con la API de productos de Nuvemshop. Esto automatiza significativamente el proceso; sigue la guía de configuración en el repositorio de la plantilla elegida y estarás en camino al desarrollo.
 
