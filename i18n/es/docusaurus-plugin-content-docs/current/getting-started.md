@@ -40,6 +40,6 @@ Ofrecemos [plantillas de aplicaciones](./developer-tools/templates.md) que sirve
 
 El [Nexo](./developer-tools/nimbus.md) proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Nuvemshop. Esta interacción entre el Administrador y la aplicación se establece a través de mensajes, siguiendo el patrón del observador, lo que permite la suscripción y cancelación de eventos.
 
-### Nimbus (Requisito para aplicaciones nativas)
+### Nimbus (Requisito para aplicaciones integradas)
 
 El [Nimbus es el sistema de diseño](./developer-tools/nimbus.md) de código abierto de Nuvemshop. Con componentes validados en productos Nuvemshop, patrones y plantillas optimizadas, documentación con ejemplos y sincronización entre el kit de interfaz de usuario en Figma y el código, Nimbus permite a los desarrolladores y diseñadores crear interfaces coherentes, accesibles y de alto rendimiento. Puedes usarlo para crear tus aplicaciones dentro del ecosistema de Nuvemshop o también para tu propio proyecto, considerando la licencia vigente.

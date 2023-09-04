@@ -4,7 +4,7 @@ title: Externos
 
 # Aplicaciones Externas
 
-Las aplicaciones externas, a diferencia de las [aplicaciones nativas](./native.md) que aparecen en el Administrador de tiendas, son soluciones independientes y se cargan fuera del administrador de tiendas. Operan de forma autónoma y pueden abarcar una amplia gama de funciones, desde marketing hasta gestión de inventario.
+Las aplicaciones externas, a diferencia de las [aplicaciones incorporada](./native.md) que aparecen en el Administrador de tiendas, son soluciones independientes y se cargan fuera del administrador de tiendas. Operan de forma autónoma y pueden abarcar una amplia gama de funciones, desde marketing hasta gestión de inventario.
 
 ## Inicio del Desarrollo
 

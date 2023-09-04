@@ -13,7 +13,7 @@ Para disponibilizar um aplicativo na loja de aplicativos Nuvemshop, é essencial
 - Enviar um vídeo demo do aplicativo
 - Reunião de integração (Somente para apps de pagamentos, envios e ERPs)
 
-## Requisitos para homologar aplicativos nativos
+## Requisitos para homologar aplicativos incorporados
 
 - Enviar o diagrama de sequência
 - Enviar um vídeo demo do aplicativo

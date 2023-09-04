@@ -124,7 +124,7 @@ Por otro lado, si opta por no utilizar nuestros templates, puede acceder a esta 
 
 ## Elección del tipo de su aplicación
 
-Después de crear su aplicación y estar listo para comenzar el desarrollo, es fundamental comprender los dos tipos de aplicaciones que se pueden desarrollar en nuestra plataforma: Nativo y Autónomo. Estas opciones ofrecen flexibilidad y ventajas únicas para satisfacer las necesidades específicas de los comerciantes. Exploraremos estos tipos en detalle para que pueda tomar la mejor decisión para su aplicación.
+Después de crear su aplicación y estar listo para comenzar el desarrollo, es fundamental comprender los dos tipos de aplicaciones que se pueden desarrollar en nuestra plataforma: Incorporada y Externa. Estas opciones ofrecen flexibilidad y ventajas únicas para satisfacer las necesidades específicas de los comerciantes. Exploraremos estos tipos en detalle para que pueda tomar la mejor decisión para su aplicación.
 
 <AppTypes />
 
@@ -136,5 +136,5 @@ Al crear su aplicación, se elegirá el permiso **"Productos"** de forma predete
 
 ## Próximos pasos
 
-- Aprenda más sobre [Aplicaciones Nativas](./native.md)
+- Aprenda más sobre [Aplicaciones Incorporadas](./native.md)
 - Aprenda más sobre [Aplicaciones Autónomas](./standalone.md)

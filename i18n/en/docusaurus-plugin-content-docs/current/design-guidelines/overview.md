@@ -5,7 +5,7 @@ title: Overview
 
 # Overview
 
-To make the development experience of **native** applications more accurate, we have created comprehensive design documentation aimed at assisting developers in building more consistent and uniform interfaces. The guidelines encompass various fundamental concepts with the aim of guiding developers to achieve the best experience standards.
+To make the development experience of **integrated** applications more accurate, we have created comprehensive design documentation aimed at assisting developers in building more consistent and uniform interfaces. The guidelines encompass various fundamental concepts with the aim of guiding developers to achieve the best experience standards.
 
 ### Use of Design Templates
 
