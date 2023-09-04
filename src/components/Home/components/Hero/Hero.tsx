@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import { Box, Button } from "@nimbus-ds/components";
 
@@ -18,11 +19,13 @@ const Hero: React.FC = () => (
       fontWeight="regular"
       color="primary-textLow"
     >
-      Desenvolva aplicativos para o ecosistema Nuvemshop e potencialize seus
-      ganhos
+      <Translate id="home.hero.title">
+        Desenvolva aplicativos para o ecosistema Nuvemshop e potencialize seus
+        ganhos
+      </Translate>
     </Box>
     <Button as={Link} to="/docs/getting-started">
-      Começar agora
+      <Translate id="home.hero.button">Começar agora</Translate>
     </Button>
   </Box>
 );

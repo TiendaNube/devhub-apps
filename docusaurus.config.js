@@ -27,9 +27,40 @@ const config = {
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
+  // i18n: {
+  //   defaultLocale: "pt",
+  //   locales: ["pt", "es", " en"],
+  // path: "i18n",
+  // localeConfigs: {
+  //   pt: {
+  //     label: "Português",
+  //     // htmlLang: "pt-BR",
+  //     // path: "pt",
+  //   },
+  //   es: {
+  //     label: "Espanhol",
+  //     // htmlLang: "en-US",
+  //     // path: "en",
+  //   },
+  //   en: {
+  //     label: "English",
+  //     // htmlLang: "en-US",
+  //     // path: "en",
+  //   },
+  // },
+  // },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "pt",
+    locales: ["pt", "en", "es"],
+    // localeConfigs: {
+    //   en: {
+    //     // htmlLang: "en-GB",
+    //   },
+    //   // You can omit a locale (e.g. fr) if you don't need to override the defaults
+    //   fa: {
+    //     // direction: "rtl",
+    //   },
+    // },
   },
   presets: [
     [
@@ -74,6 +105,10 @@ const config = {
         items: [
           {
             type: "search",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
             position: "right",
           },
           {

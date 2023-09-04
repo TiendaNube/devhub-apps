@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Siguiente",
+    "description": "The label for version current"
+  },
+  "sidebar.sidebar.category.Ferramentas": {
+    "message": "Herramientas",
+    "description": "The label for category Ferramentas in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Aplicativos": {
+    "message": "Aplicaciones",
+    "description": "The label for category Aplicativos in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Diretrizes de design": {
+    "message": "Directrices de diseño",
+    "description": "The label for category Diretrizes de design in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Homologação": {
+    "message": "Homologación",
+    "description": "The label for category Homologação in sidebar sidebar"
+  },
+  "sidebar.sidebar.doc.Primeiros passos": {
+    "message": "Primeros pasos",
+    "description": "The label for the doc item Primeiros passos in sidebar sidebar, linking to the doc getting-started"
+  }
+}

@@ -106,7 +106,7 @@ Para testar e desenvolver seu aplicativo nativo, é essencial fazê-lo dentro do
 
 Ao ativar o Modo Desenvolvedor, uma nova opção será adicionada ao menu com o nome "Aplicativo de Teste" ou "Aplicación de Prueba", dependendo do idioma. Ao selecionar essa opção, você pode inserir a URL do aplicativo, que será carregado dentro do painel do Admin para testes e desenvolvimento.
 
-![Dev mode](../assets/dev-mode.png "Dev mode")
+![Dev mode](../../static/img/dev-mode.png "Dev mode")
 
 ## Perguntas frequentes
 

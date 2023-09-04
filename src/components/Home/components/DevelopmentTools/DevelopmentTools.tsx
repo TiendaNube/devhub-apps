@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import Translate from "@docusaurus/Translate";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import {
   Box,
@@ -13,7 +14,11 @@ import { developerTools } from "./developmentTools.definitions";
 
 const DevelopmentTools: React.FC = () => (
   <Box display="flex" flexDirection="column" my="20" gap="4">
-    <Title as="h2">Ferramentas de desenvolvimento</Title>
+    <Title as="h2">
+      <Translate id="home.developerTools.title">
+        Ferramentas de desenvolvimento
+      </Translate>
+    </Title>
     <Box
       display="grid"
       gridGap="5"

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import Translate from "@docusaurus/Translate";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import {
   Box,
@@ -19,7 +20,9 @@ const AppTypes: React.FC = () => (
     gap="8"
   >
     <Box as="h2" color="neutral-background" fontWeight="regular" fontSize="8">
-      Descubra os diferentes tipos de aplicativos disponíveis
+      <Translate id="home.appTypes.title">
+        Descubra os diferentes tipos de aplicativos disponíveis
+      </Translate>
     </Box>
     <Box
       display="flex"
@@ -34,14 +37,24 @@ const AppTypes: React.FC = () => (
         color="neutral-background"
         mt="none"
       >
-        Aplicativo nativo
+        <Translate id="home.appTypes.card.1.title">
+          Aplicativo nativo
+        </Translate>
       </Box>
       <Text color="neutral-background">
-        Construa aplicativos integrados ao administrador de lojas de forma
-        nativa, para experiência aprimorada e recursos de fácil acesso.
+        <Translate id="home.appTypes.card.1.text">
+          Construa aplicativos integrados ao administrador de lojas de forma
+          nativa, para experiência aprimorada e recursos de fácil acesso.
+        </Translate>
       </Text>
-      <NimbusLink as={Link} to="/docs/applications/native" appearance="neutral-background">
-        Ler a documentação
+      <NimbusLink
+        as={Link}
+        to="/docs/applications/native"
+        appearance="neutral-background"
+      >
+        <Translate id="home.appTypes.card.1.linkText">
+          Ler a documentação
+        </Translate>
         <NimbusIcon color="neutral-background" source={<ExternalLinkIcon />} />
       </NimbusLink>
     </Box>
@@ -58,18 +71,24 @@ const AppTypes: React.FC = () => (
         color="neutral-background"
         mt="none"
       >
-        Aplicativo standalone
+        <Translate id="home.appTypes.card.2.title">
+          Aplicativo standalone
+        </Translate>
       </Box>
       <Text color="neutral-background">
-        Construa aplicativos de forma independente, para uma experiência mais
-        personalizada e recursos integrados ao seu produto.
+        <Translate id="home.appTypes.card.2.text">
+          Construa aplicativos de forma independente, para uma experiência mais
+          personalizada e recursos integrados ao seu produto.
+        </Translate>
       </Text>
       <NimbusLink
         as={Link}
         to="/docs/applications/standalone"
         appearance="neutral-background"
       >
-        Ler a documentação
+        <Translate id="home.appTypes.card.2.linkText">
+          Ler a documentação
+        </Translate>
         <NimbusIcon color="neutral-background" source={<ExternalLinkIcon />} />
       </NimbusLink>
     </Box>

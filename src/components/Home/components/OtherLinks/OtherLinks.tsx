@@ -1,5 +1,5 @@
 import React from "react";
-import classnames from "classnames";
+import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import {
@@ -13,7 +13,9 @@ import { links } from "./otherLinks.definitions";
 
 const OtherLinks: React.FC = () => (
   <Box display="flex" flexDirection="column" my="20" gap="4">
-    <Title as="h2">Outros links</Title>
+    <Title as="h2">
+      <Translate id="home.OtherLinks.title">Outros links</Translate>
+    </Title>
     <Box
       display="grid"
       gridGap="5"
@@ -30,7 +32,9 @@ const OtherLinks: React.FC = () => (
             </Card.Body>
             <Card.Footer>
               <NimbusLink as={Link} to={link.link} appearance="primary">
-                Ler a documentação
+                <Translate id="home.otherLinks.cards.linkText">
+                  Ler a documentação
+                </Translate>
                 <NimbusIcon
                   color="primary-interactive"
                   source={<ExternalLinkIcon />}

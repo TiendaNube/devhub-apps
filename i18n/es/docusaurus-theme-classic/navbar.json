@@ -1,0 +1,30 @@
+{
+  "logo.alt": {
+    "message": "DevHub Nuvemshop",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentação": {
+    "message": "Documentación",
+    "description": "Navbar item with label Documentação"
+  },
+  "item.label.Ferramentas": {
+    "message": "Herramientas",
+    "description": "Navbar item with label Ferramentas"
+  },
+  "item.label.App Templates": {
+    "message": "Plantillas de Aplicaciones",
+    "description": "Navbar item with label App Templates"
+  },
+  "item.label.Nimbus": {
+    "message": "Nimbus",
+    "description": "Navbar item with label Nimbus"
+  },
+  "item.label.Nexo": {
+    "message": "Nexo",
+    "description": "Navbar item with label Nexo"
+  },
+  "item.label.Nuvemshop API": {
+    "message": "API de Nuvemshop",
+    "description": "Navbar item with label Nuvemshop API"
+  }
+}
