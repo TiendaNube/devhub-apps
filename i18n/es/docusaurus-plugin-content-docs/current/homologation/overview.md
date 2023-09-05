@@ -13,7 +13,7 @@ Para poner a disposición una aplicación en la tienda de aplicaciones de Nuvems
 - Enviar un video demo de la aplicación.
 - Reunión de integración (Solo para aplicaciones de pagos, envíos y ERPs).
 
-## Requisitos para Homologar Aplicaciones Incorporadas
+## Requisitos para Homologar Aplicaciones Integradas
 
 - Enviar el diagrama de secuencia.
 - Enviar un video demo de la aplicación.

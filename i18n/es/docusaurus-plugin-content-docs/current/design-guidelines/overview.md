@@ -5,7 +5,7 @@ title: Visión general
 
 # Visión general
 
-Para hacer que la experiencia de desarrollo de aplicaciones **incorporadas** sea más precisa, hemos elaborado una documentación de diseño exhaustiva destinada a ayudar a los desarrolladores en el proceso de construcción de interfaces más coherentes y uniformes. Las directrices abarcan diversos conceptos fundamentales con el objetivo de guiar a los desarrolladores para alcanzar los mejores estándares de experiencia.
+Para hacer que la experiencia de desarrollo de aplicaciones **integradas** sea más precisa, hemos elaborado una documentación de diseño exhaustiva destinada a ayudar a los desarrolladores en el proceso de construcción de interfaces más coherentes y uniformes. Las directrices abarcan diversos conceptos fundamentales con el objetivo de guiar a los desarrolladores para alcanzar los mejores estándares de experiencia.
 
 ### Uso de plantillas de diseño
 
