@@ -51,10 +51,10 @@
     "message": "Descubra los diferentes tipos de aplicaciones disponibles"
   },
   "home.appTypes.card.1.title": {
-    "message": "Aplicación Incorporada"
+    "message": "Aplicación Integrada"
   },
   "home.appTypes.card.1.text": {
-    "message": "Construya aplicaciones incorporadas al administrador de tiendas, para una experiencia mejorada y fácil acceso a funciones."
+    "message": "Construya aplicaciones integradas al administrador de tiendas, para una experiencia mejorada y fácil acceso a funciones."
   },
   "home.appTypes.card.1.linkText": {
     "message": "Lea la documentación"
