@@ -4,8 +4,8 @@
   <ShortName>DevHub Nuvemshop</ShortName>
   <Description>Search DevHub Nuvemshop</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://tiendanube.github.io/devhub-apps/en/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://tiendanube.github.io/devhub-apps/en/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://tiendanube.github.io/devhub-apps/en/opensearch.xml" />
-  <moz:SearchForm>https://tiendanube.github.io/devhub-apps/en/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://tiendanube.github.io/en/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://tiendanube.github.io/en/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://tiendanube.github.io/en/opensearch.xml" />
+  <moz:SearchForm>https://tiendanube.github.io/en/</moz:SearchForm>
 </OpenSearchDescription>
