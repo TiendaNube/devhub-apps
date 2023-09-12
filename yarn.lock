@@ -2487,10 +2487,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nimbus-ds/styles@npm:^9.2.0":
-  version: 9.2.0
-  resolution: "@nimbus-ds/styles@npm:9.2.0"
-  checksum: 7239ab27558c56e305e7996619cfb7bdd6324ecd81689082299b25330bb36be20ecedcec2b7dddf778340271c89274d241187ab2b70da8c3667200efdfa6cdde
+"@nimbus-ds/styles@npm:^9.3.0":
+  version: 9.3.0
+  resolution: "@nimbus-ds/styles@npm:9.3.0"
+  checksum: 5eaebf0f5533114bb45acfa6266a30b2b2903ec5a8e456345f7bf1267bd2afb0cee522ee46af07330e22705219e3f668e262e7f3e52b17bcd7ca7def5ba9d236
   languageName: node
   linkType: hard
 
@@ -10916,7 +10916,7 @@ __metadata:
     "@mdx-js/react": ^1.6.22
     "@nimbus-ds/components": ^5.2.0
     "@nimbus-ds/icons": ^1.2.0
-    "@nimbus-ds/styles": ^9.2.0
+    "@nimbus-ds/styles": ^9.3.0
     "@tsconfig/docusaurus": ^1.0.5
     classnames: ^2.3.2
     clsx: ^1.2.1

@@ -24,47 +24,13 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  // i18n: {
-  //   defaultLocale: "pt",
-  //   locales: ["pt", "es", " en"],
-  // path: "i18n",
-  // localeConfigs: {
-  //   pt: {
-  //     label: "Português",
-  //     // htmlLang: "pt-BR",
-  //     // path: "pt",
-  //   },
-  //   es: {
-  //     label: "Espanhol",
-  //     // htmlLang: "en-US",
-  //     // path: "en",
-  //   },
-  //   en: {
-  //     label: "English",
-  //     // htmlLang: "en-US",
-  //     // path: "en",
-  //   },
-  // },
-  // },
   i18n: {
     defaultLocale: "pt",
     locales: ["pt", "en", "es"],
-    // localeConfigs: {
-    //   en: {
-    //     // htmlLang: "en-GB",
-    //   },
-    //   // You can omit a locale (e.g. fr) if you don't need to override the defaults
-    //   fa: {
-    //     // direction: "rtl",
-    //   },
-    // },
   },
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -72,6 +38,10 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/TiendaNube/devhub-apps/tree/master/",
+        },
+        gtag: {
+          trackingID: process.env.GA_TRACKING_ID,
+          anonymizeIP: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
