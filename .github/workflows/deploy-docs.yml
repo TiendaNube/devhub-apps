@@ -22,6 +22,7 @@ jobs:
           envkey_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           envkey_ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
           envkey_GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+          envkey_HOTJAR_ID: ${{ secrets.HOTJAR_ID }}
           file_name: .env
       - name: Install dependencies
         run: yarn install

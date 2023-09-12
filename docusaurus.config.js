@@ -49,6 +49,7 @@ const config = {
       }),
     ],
   ],
+  plugins: ["docusaurus-plugin-hotjar"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -56,6 +57,9 @@ const config = {
       image: "img/social-card.png",
       colorMode: {
         defaultMode: "light",
+      },
+      hotjar: {
+        applicationId: process.env.HOTJAR_ID,
       },
       algolia: {
         // The application ID provided by Algolia

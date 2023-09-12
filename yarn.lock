@@ -4958,6 +4958,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"docusaurus-plugin-hotjar@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "docusaurus-plugin-hotjar@npm:0.0.2"
+  checksum: 9e1ab8ebca9b44426f4f4ad6650cb4908f07450c58458de45c495c0ce9843b1df3ea40a866369236c2f1b9d379af4c1dfe2b072451fbe92d10f124df9db896e3
+  languageName: node
+  linkType: hard
+
 "dom-converter@npm:^0.2.0":
   version: 0.2.0
   resolution: "dom-converter@npm:0.2.0"
@@ -10920,6 +10927,7 @@ __metadata:
     "@tsconfig/docusaurus": ^1.0.5
     classnames: ^2.3.2
     clsx: ^1.2.1
+    docusaurus-plugin-hotjar: ^0.0.2
     dotenv: ^16.3.1
     prism-react-renderer: ^1.3.5
     react: ^17.0.2
