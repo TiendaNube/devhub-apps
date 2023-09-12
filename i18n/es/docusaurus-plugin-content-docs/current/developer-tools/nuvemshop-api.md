@@ -2,9 +2,9 @@
 sidebar_position: 5
 ---
 
-# API Nuvemshop
+# API Tiendanube
 
-La [API Nuvemshop](https://tiendanube.github.io/api-documentation/intro) es una herramienta para interactuar con nuestra plataforma y expandir las funcionalidades de su aplicación. Antes de comenzar a utilizar nuestra API, es crucial [autenticar su aplicación](../applications/overview.md#autenticando-seu-aplicativo). Después de hacerlo, obtendrá un `access_token` único de autenticación que le permitirá explorar y utilizar nuestros recursos de la API.
+La [API Tiendanube](https://tiendanube.github.io/api-documentation/intro) es una herramienta para interactuar con nuestra plataforma y expandir las funcionalidades de su aplicación. Antes de comenzar a utilizar nuestra API, es crucial [autenticar su aplicación](../applications/overview.md#autenticando-seu-aplicativo). Después de hacerlo, obtendrá un `access_token` único de autenticación que le permitirá explorar y utilizar nuestros recursos de la API.
 
 ## Permisos y alcances
 
@@ -52,6 +52,6 @@ Recuerda que esto es solo una guía rápida de uso de nuestra API. Para obtener 
 
 ## Próximos pasos
 
-- Obtén más información sobre la [API Nuvemshop](https://tiendanube.github.io/api-documentation/intro)
+- Obtén más información sobre la [API Tiendanube](https://tiendanube.github.io/api-documentation/intro)
 - Obtén más información sobre las [Aplicaciones](../applications/overview)
 - Obtén más información sobre la [Autenticación de aplicaciones](../applications/authentication)

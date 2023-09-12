@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
-title: Requisitos de Diseño
+title: Requisitos de Homologación
 ---
 
 import { Tag, Card, Box, list } from '@nimbus-ds/components';
 
-# Requisitos de Diseño
+# Requisitos de Homologación
 
 El propósito de este documento es hacer que los requisitos de construcción y homologación de diseño sean más transparentes. Estos requisitos se han categorizado según la urgencia y la obligatoriedad.
 
@@ -54,7 +54,7 @@ El propósito de este documento es hacer que los requisitos de construcción y h
 <Tag appearance="danger">Alta Prioridad</Tag>
 <br />
 
-En este punto, debemos prestar atención al uso de las plantillas Nimbus con el fin de lograr una mayor coherencia visual con los productos de Nuvemshop.
+En este punto, debemos prestar atención al uso de las plantillas Nimbus con el fin de lograr una mayor coherencia visual con los productos de Tiendanube.
 
 | Descripción                              | Enlace                                                                                        | Obligatoriedad                              |
 | ---------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -109,5 +109,5 @@ En este punto, debemos prestar atención a los textos de las interfaces y sus re
 | ---------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------- |
 | Nomenclatura de aplicaciones y pantallas | [Ver directrices](../design-guidelines/ux-writing-usage#nomenclatura-de-apps-e-telas) | <Tag appearance="primary">Obligatorio</Tag> |
 | Fundamentos de UX Writing                | [Ver directrices](../design-guidelines/ux-writing-usage#fundamentos-de-ux-writing)    | <Tag appearance="primary">Obligatorio</Tag> |
-| Tono de voz de Nuvemshop                 | [Ver directrices](../design-guidelines/ux-writing-usage#tom-de-voz-nuvemshop)         | <Tag appearance="primary">Obligatorio</Tag> |
+| Tono de voz de Tiendanube                 | [Ver directrices](../design-guidelines/ux-writing-usage#tom-de-voz-nuvemshop)         | <Tag appearance="primary">Obligatorio</Tag> |
 | Patrones de texto                        | [Ver directrices](../design-guidelines/ux-writing-usage#padrões-de-texto)             | <Tag appearance="primary">Obligatorio</Tag> |

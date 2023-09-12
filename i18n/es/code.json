@@ -1,27 +1,27 @@
 {
   "siteConfig.description": {
-    "message": "Desarrolle aplicaciones para el ecosistema de Nuvemshop y maximice sus ganancias"
+    "message": "Desarrolle aplicaciones para el ecosistema de Tiendanube y maximice sus ganancias"
   },
   "home.developerTools.title": {
     "message": "Herramientas de Desarrollo"
   },
   "home.developerTools.card.1.title": {
-    "message": "API de Nuvemshop"
+    "message": "API de Tiendanube"
   },
   "home.developerTools.card.1.description": {
-    "message": "Desarrolle aplicaciones integrando sus servicios con nuestra API de Nuvemshop."
+    "message": "Desarrolle aplicaciones integrando sus servicios con nuestra API de Tiendanube."
   },
   "home.developerTools.card.1.linkText": {
     "message": "Conozca nuestra API"
   },
   "home.developerTools.card.2.title": {
-    "message": "Plantillas de Aplicaciones"
+    "message": "App Templates"
   },
   "home.developerTools.card.2.description": {
     "message": "Acelere el desarrollo de aplicaciones a partir de una plantilla de código."
   },
   "home.developerTools.card.2.linkText": {
-    "message": "Conozca las plantillas de aplicaciones"
+    "message": "Conozca las app templates"
   },
   "home.developerTools.card.3.title": {
     "message": "Nexo"
@@ -42,7 +42,7 @@
     "message": "Conozca Nimbus"
   },
   "home.hero.title": {
-    "message": "Desarrolle aplicaciones para el ecosistema de Nuvemshop y maximice sus ganancias"
+    "message": "Desarrolle aplicaciones para el ecosistema de Tiendanube y maximice sus ganancias"
   },
   "home.hero.button": {
     "message": "Empezar ahora"
@@ -81,7 +81,7 @@
     "message": "Lista de Verificación de Diseño"
   },
   "home.otherLinks.card.3.title": {
-    "message": "Directrices de Diseño"
+    "message": "Directrices de Design"
   },
   "home.otherLinks.card.4.title": {
     "message": "Autenticación Manual"

@@ -5,9 +5,9 @@ title: Conceptos de UX/UI
 
 # Uso de conceptos de UX/UI
 
-Los componentes Nimbus son elementos para crear interfaces personalizadas según sea necesario, cuando no hay un estándar disponible. Estos componentes mantienen la consistencia con los productos de Nuvemshop y sus interfaces existentes. Es importante usar los componentes correctamente para garantizar una experiencia de navegación más fácil para los usuarios de Nuvemshop.
+Los componentes Nimbus son elementos para crear interfaces personalizadas según sea necesario, cuando no hay un estándar disponible. Estos componentes mantienen la consistencia con los productos de Tiendanube y sus interfaces existentes. Es importante usar los componentes correctamente para garantizar una experiencia de navegación más fácil para los usuarios de Tiendanube.
 
-[Consultar lista de verificación de homologación](../homologation/checklist.md#uso-de-conceptos-de-uxui---prioridad-media)
+[Consultar checklist de homologación](../homologation/checklist.md#uso-de-conceptos-de-uxui---prioridad-media)
 
 ## Priorización y organización de acciones y contenido
 
@@ -15,11 +15,11 @@ Los componentes Nimbus son elementos para crear interfaces personalizadas según
 
 #### Acción principal
 
-La acción principal es la tarea principal de la página. Debe haber solo una por instancia. Para darle el debido énfasis, debe representarse con un componente [Button](https://nimbus.nuvemshop.com.br/documentation/atomic-components/button) en la variante **primary**.
+La acción principal es la tarea principal de la página. Debe haber solo una por instancia. Para darle el debido énfasis, debe representarse con un componente [Button](https://nimbus.tiendanube.com/documentation/atomic-components/button) en la variante **primary**.
 
 #### Acciones secundarias
 
-Las acciones secundarias son complementarias a la acción principal. Para resaltarlas de manera diferente a la acción principal, podemos utilizar el componente [Button](https://nimbus.nuvemshop.com.br/documentation/atomic-components/button) en la variante **default**, un [Icon button](https://nimbus.tiendanube.com/documentation/atomic-components/icon-button) o un [Link](https://nimbus.tiendanube.com/documentation/atomic-components/link).
+Las acciones secundarias son complementarias a la acción principal. Para resaltarlas de manera diferente a la acción principal, podemos utilizar el componente [Button](https://nimbus.tiendanube.com/documentation/atomic-components/button) en la variante **default**, un [Icon button](https://nimbus.tiendanube.com/documentation/atomic-components/icon-button) o un [Link](https://nimbus.tiendanube.com/documentation/atomic-components/link).
 
 ### Posicionamiento de acciones
 

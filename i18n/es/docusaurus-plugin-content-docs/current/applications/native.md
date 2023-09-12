@@ -18,7 +18,7 @@ Identificamos tres actores que interactúan entre sí: la aplicación desarrolla
 
 ### Aplicación integrada
 
-Esta es la aplicación que desarrollarás. La aplicación final estará públicamente accesible a través de una URL. Se cargará en el Admin mediante un iframe, lo que requiere una URL pública para la aplicación. La URL pública se proporciona durante la creación de la aplicación en el [Portal de socios](https://partners.nuvemshop.com.br).
+Esta es la aplicación que desarrollarás. La aplicación final estará públicamente accesible a través de una URL. Se cargará en el Admin mediante un iframe, lo que requiere una URL pública para la aplicación. La URL pública se proporciona durante la creación de la aplicación en el [Portal de socios](https://partners.tiendanube.com).
 
 Para garantizar la compatibilidad de la **"Aplicación Integrada"** con el **Admin**, es esencial tener instalado y configurado el **Nexo**. [En esta documentación](../developer-tools//nexo.md), encontrarás información detallada sobre cómo funciona el Nexo.
 
@@ -67,7 +67,7 @@ En este momento, solo abordaremos los pasos fundamentales:
 
 ### Nexo
 
-Nexo es el SDK que permite la comunicación entre **Admin** y la **Aplicación Integrada**. Desarrollado por Nuvemshop, es compatible con TypeScript y se puede acceder a través de NPM.
+Nexo es el SDK que permite la comunicación entre **Admin** y la **Aplicación Integrada**. Desarrollado por Tiendanube, es compatible con TypeScript y se puede acceder a través de NPM.
 
 - Actúa como el puente de comunicación entre **Admin** y la **Aplicación Integrada**.
 - Define y gestiona las acciones disponibles, que se intercambian a través de mensajes. Consulta la lista de acciones disponibles [aquí](../developer-tools/nexo.md#actions).
@@ -75,10 +75,10 @@ Nexo es el SDK que permite la comunicación entre **Admin** y la **Aplicación I
 
 ### Admin
 
-El actor **Admin** desempeña un papel fundamental en la gestión del comerciante de Nuvemshop que actualmente ha iniciado sesión, incluyendo:
+El actor **Admin** desempeña un papel fundamental en la gestión del comerciante de Tiendanube que actualmente ha iniciado sesión, incluyendo:
 
 - **Admin** proporciona un espacio de desarrollo específico que permite la creación y prueba de tu aplicación sin necesidad de aprobación en la Tienda de aplicaciones. A continuación, explicaremos cómo se puede hacer esto.
-- Define el acceso de la aplicación (rutas): Nuvemshop proporcionará una ruta (URL) en la que se llamará a tu aplicación.
+- Define el acceso de la aplicación (rutas): Tiendanube proporcionará una ruta (URL) en la que se llamará a tu aplicación.
 - Establece dónde debe cargarse la aplicación a través de un iframe.
 - Inicializa Nexo para recibir y enviar mensajes según sea necesario para la aplicación.
 - Comprueba si la aplicación está lista para mostrarse.
@@ -95,13 +95,13 @@ Aquí tienes el flujo de inicio de una **Aplicación Integrada** desde el moment
 
 ## Selección de mi plantilla
 
-Nuestras herramientas de desarrollo en Nuvemshop incluyen [plantillas listas para la creación de aplicaciones](../developer-tools/templates#tipos-de-template), que abarcan toda la lógica de [autenticación](../applications/overview#autenticando-seu-aplicativo) y construcción. En el caso de las aplicaciones Integrada, la parte relacionada con **Nexo** ya está preconfigurada. Recomendamos encarecidamente el uso de estas plantillas.
+Nuestras herramientas de desarrollo en Tiendanube incluyen [plantillas listas para la creación de aplicaciones](../developer-tools/templates#tipos-de-template), que abarcan toda la lógica de [autenticación](../applications/overview#autenticando-seu-aplicativo) y construcción. En el caso de las aplicaciones Integrada, la parte relacionada con **Nexo** ya está preconfigurada. Recomendamos encarecidamente el uso de estas plantillas.
 
 Después de seleccionar la plantilla deseada, sugerimos revisar el archivo **"README.md"** en el repositorio correspondiente. Allí encontrarás orientaciones detalladas y pasos prácticos para aprovechar al máximo las capacidades ofrecidas por nuestros modelos de desarrollo.
 
 ## Modo de desarrollador
 
-Para probar y desarrollar tu Aplicación Integrada, es esencial hacerlo dentro del contexto del Administrador de tiendas. Sin embargo, es necesario tener habilitada la opción de Modo de Desarrollador. Esta función actualmente solo está disponible para tiendas que han sido habilitadas previamente. Para obtener acceso a esta función, ponte en contacto con el equipo de Nuvemshop.
+Para probar y desarrollar tu Aplicación Integrada, es esencial hacerlo dentro del contexto del Administrador de tiendas. Sin embargo, es necesario tener habilitada la opción de Modo de Desarrollador. Esta función actualmente solo está disponible para tiendas que han sido habilitadas previamente. Para obtener acceso a esta función, ponte en contacto con el equipo de Tiendanube.
 
 Cuando se activa el Modo de Desarrollador, se agrega una nueva opción al menú con el nombre "Aplicación de Prueba". Al seleccionar esta opción, puedes ingresar la URL de la aplicación, que se cargará dentro del panel de **Admin** para pruebas y desarrollo.
 
@@ -119,7 +119,7 @@ Cuando se activa el Modo de Desarrollador, se agrega una nueva opción al menú 
 ## Recomendaciones
 
 - Recomendamos seguir los conceptos de UX/UI definidos por nuestro equipo de diseño. [Accede aquí a la guía completa](../design-guidelines/overview.md).
-- Para aplicaciones publicadas en nuestra tienda de aplicaciones, recomendamos revisar nuestra [lista de verificación de homologación](../homologation/overview.md).
+- Para aplicaciones publicadas en nuestra tienda de aplicaciones, recomendamos revisar nuestra [checklist de homologación](../homologation/overview.md).
 
 ---
 

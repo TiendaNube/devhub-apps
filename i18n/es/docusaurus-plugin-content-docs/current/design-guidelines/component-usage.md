@@ -5,11 +5,11 @@ title: Componentes y Patrones
 
 # Uso de Componentes y Patrones
 
-Los componentes de Nimbus son elementos que permiten crear interfaces personalizadas según sea necesario, y deben utilizarse cuando no exista un patrón o modelo que satisfaga el caso de uso. Al aplicar estos modelos, el objetivo es garantizar la cohesión con los productos de Nuvemshop y mantener la consistencia de uso con las interfaces existentes.
+Los componentes de Nimbus son elementos que permiten crear interfaces personalizadas según sea necesario, y deben utilizarse cuando no exista un patrón o modelo que satisfaga el caso de uso. Al aplicar estos modelos, el objetivo es garantizar la cohesión con los productos de Tiendanube y mantener la consistencia de uso con las interfaces existentes.
 
-Prestar atención a las asignaciones de los componentes es crucial para preservar la consistencia de la experiencia, lo que facilita la navegación para los usuarios que ya están familiarizados con Nuvemshop.
+Prestar atención a las asignaciones de los componentes es crucial para preservar la consistencia de la experiencia, lo que facilita la navegación para los usuarios que ya están familiarizados con Tiendanube.
 
-[Consultar la lista de verificación de homologación](../homologation/checklist.md#uso-de-componentes-y-patrones---prioridad-alta)
+[Consultar la checklist de homologación](../homologation/checklist.md#uso-de-componentes-y-patrones---prioridad-alta)
 
 ## Componentes Atómicos y Compuestos
 
@@ -33,7 +33,7 @@ Cada componente se clasifica en una categoría de asignación, para mantener la 
 
 ### ¿Qué son los patrones de Nimbus?
 
-Nimbus tiene una variedad de patrones que básicamente reúnen componentes atómicos y compuestos combinados con las reglas de negocio de Nuvemshop. Estos recursos promueven una mayor consistencia y optimizan la construcción de productos nativos y de socios.
+Nimbus tiene una variedad de patrones que básicamente reúnen componentes atómicos y compuestos combinados con las reglas de negocio de Tiendanube. Estos recursos promueven una mayor consistencia y optimizan la construcción de productos nativos y de socios.
 
 ### ¿Cómo elegir los patrones adecuados?
 

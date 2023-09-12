@@ -5,11 +5,11 @@ title: Conceptos de UX Writing
 
 # Uso de Conceptos de UX Writing
 
-Considerar las directrices de UX Writing es fundamental en la construcción de una experiencia efectiva y coherente con el resto del administrador de Nuvemshop.
+Considerar las directrices de UX Writing es fundamental en la construcción de una experiencia efectiva y coherente con el resto del administrador de Tiendanube.
 
 La redacción de la experiencia del usuario es más que simplemente elegir palabras; es una forma de comunicar eficazmente el mensaje de la marca, guiar a los usuarios y construir una conexión significativa.
 
-[Consultar la lista de verificación de homologación](../homologation/checklist.md#uso-de-conceptos-de-ux-writing---prioridad-baja)
+[Consultar la checklist de homologación](../homologation/checklist.md#uso-de-conceptos-de-ux-writing---prioridad-baja)
 
 ## Nomenclatura de Aplicaciones y Pantallas
 
@@ -43,13 +43,13 @@ Idealmente, deberíamos utilizar un verbo (imperativo o infinitivo) para resumir
 
 ## Fundamentos de UX Writing
 
-Seguir los fundamentos de UX Writing de una marca desempeña un papel vital en la creación de una experiencia del usuario coherente con el resto del administrador de Nuvemshop.
+Seguir los fundamentos de UX Writing de una marca desempeña un papel vital en la creación de una experiencia del usuario coherente con el resto del administrador de Tiendanube.
 
 La redacción de la experiencia del usuario es más que simplemente elegir palabras; es una forma de comunicar eficazmente el mensaje de la marca, guiar a los usuarios y construir una conexión significativa.
 
 [Conoce los fundamentos de UX Writing](https://zeroheight.com/910040352/p/82a0dc-principios-e-fundamentos)
 
-## Tono de Voz de Nuvemshop
+## Tono de Voz de Tiendanube
 
 Nuestra voz es constante y refleja nuestra identidad como marca. Permanece inalterada, transmitiendo nuestra personalidad distintiva. Por otro lado, el tono que adoptamos puede variar según la situación. Esta distinción entre voz y tono nos permite mantener una consistencia esencial mientras ajustamos nuestro mensaje para adaptarlo al contexto específico.
 

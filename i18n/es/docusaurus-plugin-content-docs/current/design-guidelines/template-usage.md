@@ -5,11 +5,11 @@ title: Uso de plantillas de diseño
 
 # Uso de plantillas de diseño
 
-Las plantillas de diseño de Nimbus son herramientas valiosas para garantizar la coherencia visual y una experiencia sólida en los productos de Nuvemshop. Al utilizar estas plantillas, nuestro objetivo es asegurar una experiencia uniforme alineada con la interfaz del panel de administración de las tiendas de Nuvemshop.
+Las plantillas de diseño de Nimbus son herramientas valiosas para garantizar la coherencia visual y una experiencia sólida en los productos de Tiendanube. Al utilizar estas plantillas, nuestro objetivo es asegurar una experiencia uniforme alineada con la interfaz del panel de administración de las tiendas de Tiendanube.
 
 La priorización en la adopción de estos modelos es fundamental para mantener la identidad de la marca y facilitar el proceso de homologación.
 
-[Consulte la lista de verificación de homologación](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
+[Consulte la checklist de homologación](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
 
 ## Página de estado vacío e inicial
 
@@ -63,7 +63,7 @@ Un [template de modal de confirmación](https://tiendanube.github.io/nimbus-patt
 
 ## Página de configuración
 
-Un [template de página de configuración](https://tiendanube.github.io/nimbus-patterns/index.html?path=/docs/templates-settingspage--docs) es una estructura diseñada para permitir que los usuarios personalicen y configuren diferentes aspectos de una aplicación según sus preferencias. Esta plantilla ofrece una interfaz donde los usuarios pueden explorar y modificar configuraciones, opciones y características del sistema de manera consistente con los productos Nuvemshop.
+Un [template de página de configuración](https://tiendanube.github.io/nimbus-patterns/index.html?path=/docs/templates-settingspage--docs) es una estructura diseñada para permitir que los usuarios personalicen y configuren diferentes aspectos de una aplicación según sus preferencias. Esta plantilla ofrece una interfaz donde los usuarios pueden explorar y modificar configuraciones, opciones y características del sistema de manera consistente con los productos Tiendanube.
 
 La página de configuración incluye ejemplos para configurar los siguientes tipos de información:
 
@@ -96,7 +96,7 @@ El orden de la información debe mantenerse como se muestra en la plantilla, pri
 
 ## Límites de personalización de plantillas
 
-Se permite modificar el contenido de las plantillas siempre que se mantenga la lógica y orden de los elementos, considerando los casos de uso ya existentes en los productos Nuvemshop y preservando la priorización de los datos y composiciones ya construidas.
+Se permite modificar el contenido de las plantillas siempre que se mantenga la lógica y orden de los elementos, considerando los casos de uso ya existentes en los productos Tiendanube y preservando la priorización de los datos y composiciones ya construidas.
 
 ### Construcción de nuevas composiciones
 

@@ -9,15 +9,15 @@ import AppTypes from '@site/src/components/AppTypes';
 
 # Visión general
 
-En esta sección, proporcionaremos una guía paso a paso para que pueda crear una aplicación e integrarla en la plataforma Nuvemshop. Antes de comenzar el desarrollo de su aplicación, es necesario crear una cuenta en el Portal de Socios de Nuvemshop. Aprenda cómo crear su cuenta en el 📝 Guía: [detalles del programa de Socios Tecnológicos de Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
+En esta sección, proporcionaremos una guía paso a paso para que pueda crear una aplicación e integrarla en la plataforma Tiendanube. Antes de comenzar el desarrollo de su aplicación, es necesario crear una cuenta en el Portal de Socios de Tiendanube. Aprenda cómo crear su cuenta en el 📝 Guía: [detalles del programa de Socios Tecnológicos de Tiendanube](https://ayuda.tiendanube.com/es_ES/socios-tecnologicos/como-creo-una-aplicacion-para-tiendanube).
 
-## Creación de una aplicación en Nuvemshop
+## Creación de una aplicación en Tiendanube
 
-A través de nuestras herramientas, puede crear una aplicación para ser incluida en la 📱 [Tienda de Aplicaciones de Nuvemshop](https://www.nuvemshop.com.br/loja-aplicativos-nuvem).
+A través de nuestras herramientas, puede crear una aplicación para ser incluida en la 📱 [Tienda de Aplicaciones de Tiendanube](https://www.tiendanube.com/tienda-aplicaciones-nube).
 
 De esta manera, los comerciantes tienen visibilidad de la herramienta y pueden instalarla en sus tiendas en línea, lo que aumenta el reconocimiento de su servicio.
 
-1. Acceda al 👉 [Portal de Socios](https://partners.nuvemshop.com.br) e inicie sesión en su cuenta utilizando sus credenciales de acceso.
+1. Acceda al 👉 [Portal de Socios](https://partners.tiendanube.com) e inicie sesión en su cuenta utilizando sus credenciales de acceso.
 
 2. Después de iniciar sesión, será redirigido al panel de socios.
 
@@ -45,11 +45,11 @@ De esta manera, los comerciantes tienen visibilidad de la herramienta y pueden i
 
    - **Métricas de Seguimiento**: Esta sección está dedicada al seguimiento del rendimiento de su aplicación. Aquí encontrará datos y estadísticas relevantes. Utilice estas métricas para optimizar y mejorar constantemente la experiencia de su aplicación.
 
-Ahora que ha creado su aplicación, es hora de avanzar a la etapa de desarrollo y pruebas. ¡Es hora de poner manos a la obra de verdad! Vamos a explorar el proceso de desarrollo y asegurarnos de que esté listo para crear su aplicación para Nuvemshop.
+Ahora que ha creado su aplicación, es hora de avanzar a la etapa de desarrollo y pruebas. ¡Es hora de poner manos a la obra de verdad! Vamos a explorar el proceso de desarrollo y asegurarnos de que esté listo para crear su aplicación para Tiendanube.
 
 ## Desarrollo y Pruebas de su Aplicación
 
-En esta sección, proporcionaremos toda la información esencial para autenticar su aplicación con la API de Nuvemshop, aprovechar nuestros servicios, realizar ajustes y probar la funcionalidad de la aplicación en una tienda de demostración antes de ponerla a disposición. Prepárese para sumergirse en el desarrollo y garantizar una aplicación de calidad para nuestros comerciantes.
+En esta sección, proporcionaremos toda la información esencial para autenticar su aplicación con la API de Tiendanube, aprovechar nuestros servicios, realizar ajustes y probar la funcionalidad de la aplicación en una tienda de demostración antes de ponerla a disposición. Prepárese para sumergirse en el desarrollo y garantizar una aplicación de calidad para nuestros comerciantes.
 
 ### Tienda de demostración
 
@@ -72,7 +72,7 @@ Estas claves proporcionan la autorización necesaria para que su aplicación se 
 
 Si tiene una tienda de demostración, haga clic en el botón **Instalar aplicación**. Será redirigido al inicio de sesión de su tienda de demostración. Utilice las mismas credenciales que utilizó para iniciar sesión en el Portal de Socios.
 
-Si no tiene una tienda de demostración, [haga clic aquí](https://partners.nuvemshop.com.br/stores/create?type=demo) para crear una nueva.
+Si no tiene una tienda de demostración, [haga clic aquí](https://partners.tiendanube.com/stores/create?type=demo) para crear una nueva.
 
 <Alert title="💡 Consejo">
    <Text>Si desea instalar su aplicación en otra tienda, agregue <Text as="span" fontWeight="bold">/admin/apps/:app-id/authorize</Text> al final de la URL. Asegúrese de reemplazar <Text as="span" fontWeight="bold">:app-id</Text> por el ID de su aplicación.</Text>
@@ -86,13 +86,13 @@ Al acceder al Administrador de su tienda de demostración, deberá confirmar la 
 
 ### Desinstalar una aplicación
 
-En este tutorial, explicamos cómo **desinstalar una aplicación** en su panel administrativo de Nuvemshop.
+En este tutorial, explicamos cómo **desinstalar una aplicación** en su panel administrativo de Tiendanube.
 
 <Alert title="💡 Consejo">
    En este tutorial, usamos Melhor Envio como ejemplo. Sin embargo, puede realizar el mismo procedimiento en cualquier aplicación que aparezca en esta página, ya sea de envío, pagos, marketing, canales de venta, dropshipping, gestión, etc.
 </Alert>
 
-1. Acceda al panel administrativo de Nuvemshop.
+1. Acceda al panel administrativo de Tiendanube.
 
 2. En el menú lateral, ubique la sección Potenciar y haga clic en **"Mis aplicaciones"**.
 
@@ -118,7 +118,7 @@ La aplicación se ha desinstalado correctamente. Si desea **reactivarla en su ti
 
 ## Autenticación de su aplicación
 
-Un paso fundamental es autenticar su aplicación para acceder a la [API de Nuvemshop](../developer-tools/nuvemshop-api.md). Si está utilizando uno de nuestros [templates](../developer-tools/templates.md), el proceso de autenticación estará listo para su uso, incluida la conexión con la API de productos de Nuvemshop. Esto automatiza en gran medida el proceso; siga la guía de configuración en el repositorio del template elegido y estará en camino al desarrollo.
+Un paso fundamental es autenticar su aplicación para acceder a la [API de Tiendanube](../developer-tools/nuvemshop-api.md). Si está utilizando uno de nuestros [templates](../developer-tools/templates.md), el proceso de autenticación estará listo para su uso, incluida la conexión con la API de productos de Tiendanube. Esto automatiza en gran medida el proceso; siga la guía de configuración en el repositorio del template elegido y estará en camino al desarrollo.
 
 Por otro lado, si opta por no utilizar nuestros templates, puede acceder a esta [guía](./authentication.md) para una integración manual. Nuestro objetivo es facilitar el desarrollo de su aplicación, independientemente del camino que elija.
 

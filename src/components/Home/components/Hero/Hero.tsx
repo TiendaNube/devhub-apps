@@ -20,7 +20,7 @@ const Hero: React.FC = () => (
       color="primary-textLow"
     >
       <Translate id="home.hero.title">
-        Desenvolva aplicativos para o ecosistema Nuvemshop e potencialize seus
+        Desenvolva aplicativos para o ecossistema Nuvemshop e potencialize seus
         ganhos
       </Translate>
     </Box>

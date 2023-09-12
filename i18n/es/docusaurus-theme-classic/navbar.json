@@ -1,6 +1,6 @@
 {
   "logo.alt": {
-    "message": "DevHub Nuvemshop",
+    "message": "DevHub Tiendanube",
     "description": "The alt text of navbar logo"
   },
   "item.label.Documentação": {
@@ -12,7 +12,7 @@
     "description": "Navbar item with label Ferramentas"
   },
   "item.label.App Templates": {
-    "message": "Plantillas de Aplicaciones",
+    "message": "App Templates",
     "description": "Navbar item with label App Templates"
   },
   "item.label.Nimbus": {
@@ -24,7 +24,7 @@
     "description": "Navbar item with label Nexo"
   },
   "item.label.Nuvemshop API": {
-    "message": "API de Nuvemshop",
-    "description": "Navbar item with label Nuvemshop API"
+    "message": "API de Tiendanube",
+    "description": "Navbar item with label Tiendanube API"
   }
 }

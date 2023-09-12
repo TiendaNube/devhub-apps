@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Nexo
 
-Nexo proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Nuvemshop. Esta interacción entre el administrador y la aplicación se establece mediante mensajes, siguiendo el patrón de observador, lo que permite la suscripción y cancelación de eventos.
+Nexo proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Tiendanube. Esta interacción entre el administrador y la aplicación se establece mediante mensajes, siguiendo el patrón de observador, lo que permite la suscripción y cancelación de eventos.
 
 Estos mensajes, llamados "Actions", están cuidadosamente definidos y asociados con "Helpers". Estos Helpers permiten que las Actions se utilicen como promesas, lo que proporciona un enfoque eficaz y confiable para intercambiar información y sincronizar operaciones entre las partes involucradas.
 
@@ -28,7 +28,7 @@ $ yarn add @tiendanube/nexo
 
 | Config   | Tipo                          | Descripción                                                                           |
 | -------- | ----------------------------- | ------------------------------------------------------------------------------------- |
-| clientId | `string` requerido            | Este valor es proporcionado por Nuvemshop                                             |
+| clientId | `string` requerido            | Este valor es proporcionado por Tiendanube                                             |
 | log      | `boolean` por defecto `false` | Permite mostrar las transferencias de mensajes entre la Aplicación y el Administrador |
 
 <br />

@@ -4,9 +4,9 @@ sidebar_position: 2
 
 import AppTemplates from '@site/src/components/AppTemplates';
 
-# Plantillas de Aplicaciones
+# App Templates
 
-Ofrecemos plantillas de aplicaciones que sirven como base para iniciar y acelerar el proceso de desarrollo. Estas plantillas se dividen en dos categorías principales: aplicaciones integradas y externas. Cada categoría tiene sus propios modelos específicos, diseñados para satisfacer diferentes necesidades y escenarios.
+Ofrecemos app templates que sirven como base para iniciar y acelerar el proceso de desarrollo. Estas plantillas se dividen en dos categorías principales: aplicaciones integradas y externas. Cada categoría tiene sus propios modelos específicos, diseñados para satisfacer diferentes necesidades y escenarios.
 
 Actualmente, las plantillas tienen una estructura frontend en React y un backend en Node.js para ambas categorías. Es importante destacar que, en el contexto de aplicaciones integradas, la tecnología React es fundamental para el frontend, ya que nuestro sistema de diseño Nimbus es un requisito previo y está optimizado para funcionar exclusivamente con React.
 

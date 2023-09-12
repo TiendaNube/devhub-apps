@@ -9,9 +9,9 @@ import NimbusTemplates from '@site/src/components/NimbusTemplates';
 
 # Sistema de Diseño Nimbus
 
-[Nimbus](https://nimbus.nuvemshop.com.br) es el sistema de diseño de código abierto de Nuvemshop. Con componentes validados en productos Nuvemshop, patrones y plantillas optimizados, documentación con ejemplos y sincronización entre el kit de interfaz de usuario en Figma y el código, Nimbus permite a los desarrolladores y diseñadores crear interfaces consistentes, accesibles y de alto rendimiento. Puede usarlo para desarrollar sus aplicaciones dentro del ecosistema de Nuvemshop o para su propio proyecto, teniendo en cuenta la licencia vigente.
+[Nimbus](https://nimbus.tiendanube.com) es el sistema de diseño de código abierto de Tiendanube. Con componentes validados en productos Tiendanube, patrones y plantillas optimizados, documentación con ejemplos y sincronización entre el kit de interfaz de usuario en Figma y el código, Nimbus permite a los desarrolladores y diseñadores crear interfaces consistentes, accesibles y de alto rendimiento. Puede usarlo para desarrollar sus aplicaciones dentro del ecosistema de Tiendanube o para su propio proyecto, teniendo en cuenta la licencia vigente.
 
-Dentro del contexto de la aplicación, fomentamos el uso de [Nimbus](https://nimbus.nuvemshop.com.br) para desarrollar experiencias de usuario cohesivas y reconocibles. Es importante que su aplicación incorpore y utilice las [bibliotecas de Nimbus](./nimbus.md#principales-pacotes-do-nimbus), siguiendo las directrices de diseño de aplicaciones y las directrices más amplias de **Nimbus**. Para las aplicaciones integradas, el uso de Nimbus es un requisito previo para mantener la consistencia y calidad de las interfaces integradas en el administrador de tiendas.
+Dentro del contexto de la aplicación, fomentamos el uso de [Nimbus](https://nimbus.tiendanube.com) para desarrollar experiencias de usuario cohesivas y reconocibles. Es importante que su aplicación incorpore y utilice las [bibliotecas de Nimbus](./nimbus.md#principales-pacotes-do-nimbus), siguiendo las directrices de design de aplicaciones y las directrices más amplias de **Nimbus**. Para las aplicaciones integradas, el uso de Nimbus es un requisito previo para mantener la consistencia y calidad de las interfaces integradas en el administrador de tiendas.
 
 ## Principales paquetes de Nimbus
 
@@ -72,6 +72,6 @@ export default App;
 
 ## Próximos pasos
 
-- Obtenga más información sobre [Nimbus](https://nimbus.nuvemshop.com.br)
+- Obtenga más información sobre [Nimbus](https://nimbus.tiendanube.com)
 - Obtenga más información sobre [Nexo](./nexo)
 - Obtenga más información sobre nuestra [API](./nuvemshop-api)

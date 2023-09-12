@@ -6,7 +6,7 @@ import { Alert } from '@nimbus-ds/components';
 
 # Autenticación
 
-Este guía presenta métodos de autenticación de aplicaciones con la plataforma Nuvemshop. Descubre cómo garantizar seguridad y acceso autorizado para integraciones perfectas entre tus aplicaciones y nuestra plataforma.
+Este guía presenta métodos de autenticación de aplicaciones con la plataforma Tiendanube. Descubre cómo garantizar seguridad y acceso autorizado para integraciones perfectas entre tus aplicaciones y nuestra plataforma.
 
 ## Autenticación de la API
 
@@ -23,7 +23,7 @@ La autenticación es un paso fundamental para acceder a nuestros servicios a tra
 La elección del método de autenticación depende del tipo de aplicación que estás desarrollando:
 
 - Si estás creando aplicaciones independientes, ya sea con o sin nuestra plantilla, es necesario utilizar OAuth 2.
-- Para aplicaciones que se integran con el administrador de Nuvemshop utilizando Nexo, se utilizan tokens de acceso generados en el administrador de Nuvemshop.
+- Para aplicaciones que se integran con el administrador de Tiendanube utilizando Nexo, se utilizan tokens de acceso generados en el administrador de Tiendanube.
 
 Nuestros modelos de creación de aplicaciones ya incluyen un sistema de autenticación integrado con nuestra API. Esto reduce significativamente el tiempo de desarrollo para nuestros socios que eligen utilizar estas plantillas. Sin embargo, si el socio decide no usar una de nuestras plantillas, es posible realizar la autenticación manualmente. A continuación, te mostraremos cómo se puede hacer de manera efectiva.
 
@@ -37,7 +37,7 @@ Nuestros modelos de creación de aplicaciones ya incluyen un sistema de autentic
 
 ### Cambio de la URL de Redirección
 
-Si has modificado la URL de redirección, por favor, reemplázala y guarda la nueva URL en `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acceder a la página con el código cURL. El campo de URL de redirección se encuentra en el formulario de **Datos Básicos**.
+Si has modificado la URL de redirección, por favor, reemplázala y guarda la nueva URL en `https://partners.tiendanube.com/applications/authentication/:app-id` para acceder a la página con el código cURL. El campo de URL de redirección se encuentra en el formulario de **Datos Básicos**.
 
 ![Datos básicos](../../../../../static/img/card-basic-data.png "Datos básicos")
 
