@@ -60,7 +60,7 @@
     "message": "Lea la documentación"
   },
   "home.appTypes.card.2.title": {
-    "message": "Aplicación Independiente"
+    "message": "Aplicación Externa"
   },
   "home.appTypes.card.2.text": {
     "message": "Construya aplicaciones de forma independiente para una experiencia más personalizada e integrada con su producto."
@@ -487,5 +487,119 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "docs.developerTools.card.1.title": {
+    "message": "Sistema de Diseño Nimbus"
+  },
+  "docs.developerTools.card.1.description": {
+    "message": "Utiliza el Sistema de Diseño Nimbus para crear aplicaciones incorporadas en el administrador de tiendas. Con una biblioteca de componentes, patrones y tokens, garantiza una experiencia de desarrollo cohesiva y eficiente."
+  },
+  "docs.developerTools.card.2.title": {
+    "message": "Extensión de Nimbus para VSCode"
+  },
+  "docs.developerTools.card.2.description": {
+    "message": "¡Aumenta tu productividad con Nimbus Helper! Una extensión mágica para VS Code que proporciona documentación completa de todos los componentes disponibles y sus propiedades en tu sistema de diseño favorito. Escribe un código elegante, acelera el desarrollo y adéntrate en las nubes de la programación con el Sistema de Diseño Nimbus."
+  },
+  "docs.developerTools.card.3.title": {
+    "message": "Nexo"
+  },
+  "docs.developerTools.card.3.description": {
+    "message": "Nuestro paquete npm esencial para una comunicación perfecta entre aplicaciones incorporadas y el Administrador de Tiendanube. Con mensajes basados en el patrón observador, Nexo permite un intercambio eficiente de información, brindando una experiencia de desarrollo integrada y ágil."
+  },
+  "docs.developerTools.card.4.title": {
+    "message": "API Pública de Tiendanube"
+  },
+  "docs.developerTools.card.4.description": {
+    "message": "Ofrecemos una API pública que nuestros socios pueden aprovechar para crear aplicaciones. Con ella, puedes acceder y editar datos de las tiendas, lo que proporciona flexibilidad y funcionalidades adicionales a las aplicaciones desarrolladas."
+  },
+  "docs.appTypes.card.1.title": {
+    "message": "Aplicaciones Integradas"
+  },
+  "docs.appTypes.card.1.description": {
+    "message": "Las aplicaciones integradas al panel de administración, por otro lado, ofrecen una integración más profunda con la plataforma Tiendanube. Están diseñadas para integrarse directamente en el panel de administración de los comerciantes, brindando una experiencia continua y fluida. Al utilizar herramientas como nuestro sistema de diseño Nimbus, garantizamos que la experiencia visual y de usabilidad se mantenga consistente, incluso cuando el comerciante interactúa con una aplicación de un socio externo. Esto permite que el comerciante disfrute de características adicionales sin salir del entorno familiar del panel de administración de Tiendanube."
+  },
+  "docs.appTypes.card.2.title": {
+    "message": "Aplicaciones Externas"
+  },
+  "docs.appTypes.card.2.description": {
+    "message": "Las aplicaciones externas son soluciones independientes desarrolladas fuera de Tiendanube. Estas aplicaciones funcionan de forma autónoma y pueden cubrir una amplia gama de funcionalidades, desde marketing hasta gestión de inventario. Proporcionan una experiencia única y pueden ser una excelente manera de agregar características especializadas a las tiendas de los comerciantes."
+  },
+  "docs.appTemplates.card.1.title": {
+    "message": "Template de aplicación integrada Express"
+  },
+  "docs.appTemplates.card.1.description": {
+    "message": "Uno template de aplicación incorporada al administrador que utiliza Express, Node.js y React."
+  },
+  "docs.appTemplates.card.2.title": {
+    "message": "Template de aplicación externa Express"
+  },
+  "docs.appTemplates.card.2.description": {
+    "message": "Uno template de aplicación externa que utiliza Express, Node.js y React."
+  },
+  "docs.appTemplates.card.linkText": {
+    "message": "Ver más"
+  },
+  "docs.appTypes.card.linkText": {
+    "message": "Ver más"
+  },
+  "docs.developerTools.card.linkText": {
+    "message": "Ver más"
+  },
+  "docs.nimbusPackages.card.1.description": {
+    "message": "El paquete esencial que proporciona las variables y estilos necesarios para el funcionamiento de los componentes."
+  },
+  "docs.nimbusPackages.card.2.description": {
+    "message": "El paquete que reúne una colección de componentes atómicos y compuestos, esenciales para la construcción en Nimbus. Desde botones hasta inputs y checkboxes, estos bloques de construcción forman la base del diseño de la interfaz, permitiendo la creación de componentes más complejos y reutilizables."
+  },
+  "docs.nimbusPackages.card.3.description": {
+    "message": "El conjunto central de patrones predefinidos que ofrece combinaciones inteligentes de componentes atómicos y compuestos en Nimbus. Estas soluciones predefinidas, probadas y validadas por el equipo, resuelven desafíos de diseño e interacción de manera efectiva, promoviendo un enfoque cohesivo y consistente para implementar soluciones de diseño."
+  },
+  "docs.nimbusPackages.card.4.description": {
+    "message": "Los tokens de diseño representan las variables fundamentales utilizadas para mantener la coherencia en un sistema de diseño. En el contexto de Nimbus, abarcan elementos como colores, tipografías y espaciados esenciales. Estos tokens son la base para garantizar una apariencia y sensación uniformes en todos los componentes y aplicaciones."
+  },
+  "docs.nimbusPackages.card.5.description": {
+    "message": "Un conjunto de íconos de código abierto creados exclusivamente para Nimbus, moldeados a partir de la morfología de nuestro logotipo de marca. Diseñados para agilizar el diseño y desarrollo, estos íconos ofrecen flexibilidad, localización y gratuidad, enriqueciendo las soluciones de quienes desean impulsar historias en América Latina."
+  },
+  "docs.nimbusTemplates.card.linkText": {
+    "message": "Ver ejemplo"
+  },
+  "docs.nimbusTemplates.card.1.title": {
+    "message": "Pantalla de Ajustes"
+  },
+  "docs.nimbusTemplates.card.1.description": {
+    "message": "Contiene controles interactivos y componentes que manejan estados agrupados."
+  },
+  "docs.nimbusTemplates.card.2.title": {
+    "message": "Modal de Confirmación"
+  },
+  "docs.nimbusTemplates.card.2.description": {
+    "message": "Incluye un modal de confirmación que se abre para confirmar una acción destructiva."
+  },
+  "docs.nimbusTemplates.card.3.title": {
+    "message": "Página de Formulario"
+  },
+  "docs.nimbusTemplates.card.3.description": {
+    "message": "Incluye varios componentes de entrada de datos que cubren una variedad de opciones."
+  },
+  "docs.nimbusTemplates.card.4.title": {
+    "message": "Plantilla de Página Básica"
+  },
+  "docs.nimbusTemplates.card.4.description": {
+    "message": "Ofrece un caso de ejemplo donde se encuentran todos los posibles elementos de una página."
+  },
+  "docs.nimbusTemplates.card.5.title": {
+    "message": "Pantalla de Inicio de Sesión"
+  },
+  "docs.nimbusTemplates.card.5.description": {
+    "message": "Esta plantilla de inicio de sesión se puede usar para iniciar sesión en una aplicación externa."
+  },
+  "docs.nimbusTemplates.card.6.title": {
+    "message": "Página de Lista Simple"
+  },
+  "docs.nimbusTemplates.card.6.description": {
+    "message": "Contiene una lista simple de datos con cadenas de texto y acciones."
+  },
+  "docs.nimbusTemplates.card.7.title": {
+    "message": "Emula la Lista de Productos del Administrador de Tiendanube"
   }
 }

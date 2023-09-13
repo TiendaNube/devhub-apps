@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "@docusaurus/Translate";' '
 import {
   Title,
   Card,
@@ -35,7 +36,7 @@ const TemplateCard: React.FC<ITemplateCard> = ({
     >
       <Text fontSize="base">{description}</Text>
       <NimbusLink as={Link} to={link} appearance="primary">
-        Ver mais
+        <Translate id="docs.appTypes.card.linkText">Ver mais</Translate>
         <Icon color="primary-interactive" source={<ExternalLinkIcon />} />
       </NimbusLink>
     </Box>

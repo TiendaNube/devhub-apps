@@ -86,7 +86,7 @@ En este punto, debemos prestar atención a la asignación de componentes y patro
 <Tag appearance="warning">Prioridad Media</Tag>
 <br />
 
-En este punto, debemos prestar atención a los comportamientos y la disposición de los elementos con el fin de lograr una mayor coherencia con los productos de Nuvemshop.
+En este punto, debemos prestar atención a los comportamientos y la disposición de los elementos con el fin de lograr una mayor coherencia con los productos de Tiendanube.
 
 | Descripción                                           | Enlace                                                                                                  | Obligatoriedad                              |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------- |

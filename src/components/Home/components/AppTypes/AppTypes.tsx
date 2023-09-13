@@ -38,12 +38,13 @@ const AppTypes: React.FC = () => (
         mt="none"
       >
         <Translate id="home.appTypes.card.1.title">
-          Aplicativo incorporado ao administrador
+          Aplicativo incorporado
         </Translate>
       </Box>
       <Text color="neutral-background">
         <Translate id="home.appTypes.card.1.text">
-          Construa aplicativos incorporados ao administrador dos lojistas para oferecer uma experiência aprimorada e recursos de fácil acesso.
+          Construa aplicativos incorporados ao administrador dos lojistas para
+          oferecer uma experiência aprimorada e recursos de fácil acesso.
         </Translate>
       </Text>
       <NimbusLink
@@ -71,7 +72,7 @@ const AppTypes: React.FC = () => (
         mt="none"
       >
         <Translate id="home.appTypes.card.2.title">
-          Aplicativo externos
+          Aplicativo externo
         </Translate>
       </Box>
       <Text color="neutral-background">

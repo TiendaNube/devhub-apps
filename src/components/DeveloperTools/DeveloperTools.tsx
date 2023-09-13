@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "@docusaurus/Translate";
 import { Title, Card, Text, Box, Link, Icon } from "@nimbus-ds/components";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 import { tools } from "./developerTools.definitions";
@@ -25,7 +26,9 @@ const DeveloperTools: React.FC = () => {
             <Title as="h3">{tool.title}</Title>
             <Text fontSize="base">{tool.description}</Text>
             <Link as="a" href={tool.link} appearance="primary">
-              Ver mais
+              <Translate id="docs.developerTools.card.linkText">
+                Ver mais
+              </Translate>
               <Icon color="primary-interactive" source={<ExternalLinkIcon />} />
             </Link>
           </Box>

@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "@docusaurus/Translate";
 import { Title, Card, Text, Box, Link, Icon, Tag } from "@nimbus-ds/components";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 
@@ -16,7 +17,9 @@ const TemplateCard: React.FC<ITemplateCard> = ({
     <Card.Header>
       <Box display="flex" justifyContent="space-between">
         <Icon color="neutral-textLow" source={<TemplateIcon />} />
-        <Tag appearance={type === "native" ? "primary" : "warning"}>{type}</Tag>
+        <Tag appearance={type === "integrated" ? "primary" : "warning"}>
+          {type}
+        </Tag>
       </Box>
     </Card.Header>
     <Box
@@ -29,7 +32,7 @@ const TemplateCard: React.FC<ITemplateCard> = ({
       <Title as="h3">{title}</Title>
       <Text fontSize="base">{description}</Text>
       <Link as="a" href={link} appearance="primary" target="_blank">
-        Ver mais
+        <Translate id="docs.appTemplates.card.linkText">Ver mais</Translate>
         <Icon color="primary-interactive" source={<ExternalLinkIcon />} />
       </Link>
     </Box>

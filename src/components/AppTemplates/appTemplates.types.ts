@@ -1,14 +1,14 @@
-import { ComponentType, SVGProps } from "react";
+import { ComponentType, SVGProps, JSX } from "react";
 
 export interface ITemplateCard {
-  title: string;
-  description: string;
+  title: JSX.Element;
+  description: JSX.Element;
   link: string;
   type: ITemplateType;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 export enum ITemplateType {
-  NATIVE = "native",
-  STANDALONE = "standalone",
+  INTEGRATED = "integrated",
+  EXTERNAL = "external",
 }

@@ -487,5 +487,119 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "docs.developerTools.card.1.title": {
+    "message": "Nimbus Design System"
+  },
+  "docs.developerTools.card.1.description": {
+    "message": "Use the Nimbus Design System to create embedded store administrator applications. With a library of components, patterns and tokens, ensure a cohesive and efficient development experience."
+  },
+  "docs.developerTools.card.2.title": {
+    "message": "Nimbus for VSCode extension"
+  },
+  "docs.developerTools.card.2.description": {
+    "message": "Boost your productivity with Nimbus Helper! A magical extension to VS Code that brings complete documentation of all available components and their properties all into your favorite design system. Write stylish code, accelerate development, and break into the programming clouds with the Nimbus Design System."
+  },
+  "docs.developerTools.card.3.title": {
+    "message": "Nexo"
+  },
+  "docs.developerTools.card.3.description": {
+    "message": "Our essential npm package for seamless cross-app communication incorporated companies and the Nuvemshop Administrator. With messages based on observer standard, Nexo enables an efficient exchange of information, providing an integrated development experience and agile."
+  },
+  "docs.developerTools.card.4.title": {
+    "message": "Nuvemshop Public API"
+  },
+  "docs.developerTools.card.4.description": {
+    "message": "We offer a public API that our partners can leverage to create applications. With it, you can access and edit store data, providing flexibility and additional functionality to your developed applications."
+  },
+  "docs.appTypes.card.1.title": {
+    "message": "Apps Integrated"
+  },
+  "docs.appTypes.card.1.description": {
+    "message": "Apps integrated into the admin panel, on the other hand, offer deeper integration with the Nuvemshop platform. They are designed to seamlessly integrate into the merchant's admin panel, providing a continuous and smooth experience. By using tools like our Nimbus design system, we ensure that the visual and usability experience remains consistent even when the merchant interacts with an external partner app. This allows the merchant to enjoy additional features without leaving the familiar environment of the Nuvemshop admin panel."
+  },
+  "docs.appTypes.card.2.title": {
+    "message": "Apps External"
+  },
+  "docs.appTypes.card.2.description": {
+    "message": "External apps are independent solutions developed externally to Nuvemshop. These apps operate autonomously and can cover a wide range of functionalities, from marketing to inventory management. They provide a unique experience and can be a great way to add specialized features to merchant's stores."
+  },
+  "docs.appTemplates.card.1.title": {
+    "message": "Integrated Express application template"
+  },
+  "docs.appTemplates.card.1.description": {
+    "message": "A template for an application integrated into the administrator that uses Express, Node.js, and React."
+  },
+  "docs.appTemplates.card.2.title": {
+    "message": "External Express application template"
+  },
+  "docs.appTemplates.card.2.description": {
+    "message": "A template for an external application that uses Express, Node.js, and React."
+  },
+  "docs.appTemplates.card.linkText": {
+    "message": "View more"
+  },
+  "docs.developerTools.card.linkText": {
+    "message": "View more"
+  },
+  "docs.appTypes.card.linkText": {
+    "message": "View more"
+  },
+  "docs.nimbusPackages.card.1.description": {
+    "message": "The essential package that provides the necessary variables and styles for the operation of components."
+  },
+  "docs.nimbusPackages.card.2.description": {
+    "message": "The package that brings together a collection of atomic and compound components, essential for building in Nimbus. From buttons to inputs and checkboxes, these building blocks form the foundation of interface design, allowing the creation of more complex and reusable components."
+  },
+  "docs.nimbusPackages.card.3.description": {
+    "message": "The central set of pre-built patterns that offer intelligent combinations of atomic and compound components in Nimbus. These predefined solutions, tested and validated by the team, effectively solve design and interaction challenges, promoting a cohesive and consistent approach to implementing design solutions."
+  },
+  "docs.nimbusPackages.card.4.description": {
+    "message": "Design tokens represent the fundamental variables used to maintain consistency in a design system. In the context of Nimbus, they encompass elements such as essential colors, typography, and spacing. These tokens are the foundation for ensuring a uniform look and feel across all components and applications."
+  },
+  "docs.nimbusPackages.card.5.description": {
+    "message": "A set of open-source icons exclusively created for Nimbus, shaped from the morphology of our brand logo. Designed to streamline design and development, these icons offer flexibility, localization, and cost-effectiveness, enriching the solutions for those looking to drive stories in Latin America."
+  },
+  "docs.nimbusTemplates.card.linkText": {
+    "message": "View Example"
+  },
+  "docs.nimbusTemplates.card.1.title": {
+    "message": "Settings Screen"
+  },
+  "docs.nimbusTemplates.card.1.description": {
+    "message": "Features interactive controls and components that handle grouped states."
+  },
+  "docs.nimbusTemplates.card.2.title": {
+    "message": "Confirmation Modal"
+  },
+  "docs.nimbusTemplates.card.2.description": {
+    "message": "Includes a confirmation modal that opens to confirm a destructive action."
+  },
+  "docs.nimbusTemplates.card.3.title": {
+    "message": "Form Page"
+  },
+  "docs.nimbusTemplates.card.3.description": {
+    "message": "It includes various data input components that cover a variety of options."
+  },
+  "docs.nimbusTemplates.card.4.title": {
+    "message": "Basic Page Template"
+  },
+  "docs.nimbusTemplates.card.4.description": {
+    "message": "Offers a sample case where all possible elements of a page are found."
+  },
+  "docs.nimbusTemplates.card.5.title": {
+    "message": "Login Screen"
+  },
+  "docs.nimbusTemplates.card.5.description": {
+    "message": "This login template can be used to log in to an external application."
+  },
+  "docs.nimbusTemplates.card.6.title": {
+    "message": "Simple List Page"
+  },
+  "docs.nimbusTemplates.card.6.description": {
+    "message": "Features a simple data list with text strings and actions."
+  },
+  "docs.nimbusTemplates.card.7.title": {
+    "message": "Emulates the Nuvemshop Admin Product List"
   }
 }

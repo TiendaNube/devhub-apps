@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, JSX } from "react";
 import { IconProps } from "@nimbus-ds/icons";
 
 export interface ITemplateCard {
-  title: string;
-  description: string;
+  title: JSX.Element;
+  description: JSX.Element;
   link: string;
   icon: FC<IconProps>;
 }

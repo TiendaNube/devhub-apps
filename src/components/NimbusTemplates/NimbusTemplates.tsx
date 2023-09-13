@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "@docusaurus/Translate";
 import { Card, Text, Box, Link, Icon } from "@nimbus-ds/components";
 import { ExternalLinkIcon } from "@nimbus-ds/icons";
 
@@ -19,7 +20,9 @@ const NimbusTemplates: React.FC = () => (
         </Card.Body>
         <Card.Footer>
           <Link appearance="primary">
-            Ver exemplo
+            <Translate id="docs.nimbusTemplates.card.linkText">
+              Ver exemplo
+            </Translate>
             <Icon color="primary-interactive" source={<ExternalLinkIcon />} />
           </Link>
         </Card.Footer>

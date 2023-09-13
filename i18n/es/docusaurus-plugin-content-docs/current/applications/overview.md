@@ -130,7 +130,7 @@ Después de crear su aplicación y estar listo para comenzar el desarrollo, es f
 
 ## Edición de los permisos de su aplicación
 
-Al crear su aplicación, se elegirá el permiso **"Productos"** de forma predeterminada. Sin embargo, durante el desarrollo, es posible que necesite obtener [acceso a otros permisos](../developer-tools/nuvemshop-api.md#permissões-e-escopos) para su aplicación. Todos los permisos que el socio agregue o edite requerirán que la aplicación sea reinstalada. Para ello, debe seleccionar los permisos en **"Datos Básicos"** en el portal, guardar los cambios, ir a la tienda donde está instalada la aplicación, hacer clic en **"Desinstalar"** (vea cómo desinstalar una [aplicación](./overview.md#desinstalando-um-aplicativo)) y luego en **"Instalar"**. De esta manera, se generará un nuevo token de acceso y se podrá iniciar nuevamente el proceso de integración con la API de Nuvemhop, incluyendo los permisos actualizados.
+Al crear su aplicación, se elegirá el permiso **"Productos"** de forma predeterminada. Sin embargo, durante el desarrollo, es posible que necesite obtener [acceso a otros permisos](../developer-tools/nuvemshop-api.md#permissões-e-escopos) para su aplicación. Todos los permisos que el socio agregue o edite requerirán que la aplicación sea reinstalada. Para ello, debe seleccionar los permisos en **"Datos Básicos"** en el portal, guardar los cambios, ir a la tienda donde está instalada la aplicación, hacer clic en **"Desinstalar"** (vea cómo desinstalar una [aplicación](./overview.md#desinstalando-um-aplicativo)) y luego en **"Instalar"**. De esta manera, se generará un nuevo token de acceso y se podrá iniciar nuevamente el proceso de integración con la API de Tiendanube, incluyendo los permisos actualizados.
 
 ---
 
