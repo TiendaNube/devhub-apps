@@ -13,13 +13,21 @@ const AppTypes: React.FC = () => (
   <Box
     display="flex"
     flexDirection={{ xs: "column", md: "row", lg: "row" }}
-    alignItems="center"
+    alignItems="stretch"
     backgroundColor="primary-textLow"
     borderRadius="4"
     padding="8"
     gap="8"
   >
-    <Box as="h2" color="neutral-background" fontWeight="regular" fontSize="8">
+    <Box
+      as="h2"
+      color="neutral-background"
+      fontWeight="regular"
+      fontSize="8"
+      display="flex"
+      alignItems="center"
+      mb="none"
+    >
       <Translate id="home.appTypes.title">
         Descubra os diferentes tipos de aplicativos disponíveis
       </Translate>
@@ -27,6 +35,7 @@ const AppTypes: React.FC = () => (
     <Box
       display="flex"
       flexDirection="column"
+      justifyContent="space-between"
       gap="4"
       maxWidth={{ xs: "100%", md: "100%", lg: "40%", xl: "24%" }}
     >
@@ -61,10 +70,10 @@ const AppTypes: React.FC = () => (
     <Box
       display="flex"
       flexDirection="column"
+      justifyContent="space-between"
       gap="4"
       maxWidth={{ xs: "100%", md: "100%", lg: "40%", xl: "24%" }}
       height="100%"
-      backgroundColor="danger-interactive"
     >
       <Box
         fontSize="h4"
