@@ -63,6 +63,8 @@ const AppTypes: React.FC = () => (
       flexDirection="column"
       gap="4"
       maxWidth={{ xs: "100%", md: "100%", lg: "40%", xl: "24%" }}
+      height="100%"
+      backgroundColor="danger-interactive"
     >
       <Box
         fontSize="h4"
