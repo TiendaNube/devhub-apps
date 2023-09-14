@@ -15,11 +15,11 @@ const config = {
   url: "https://tiendanube.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/devhub/",
+  baseUrl: "/devhub-apps/",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "TiendaNube", // Usually your GitHub org/user name.
-  projectName: "devhub", // Usually your repo name.
+  projectName: "devhub-apps", // Usually your repo name.
   // themes: ["@docusaurus/theme-search-algolia"],
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
