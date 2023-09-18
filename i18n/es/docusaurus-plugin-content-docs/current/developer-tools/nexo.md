@@ -28,7 +28,7 @@ $ yarn add @tiendanube/nexo
 
 | Config   | Tipo                          | Descripción                                                                           |
 | -------- | ----------------------------- | ------------------------------------------------------------------------------------- |
-| clientId | `string` requerido            | Este valor es proporcionado por Tiendanube                                             |
+| clientId | `string` requerido            | Este valor es proporcionado por Tiendanube                                            |
 | log      | `boolean` por defecto `false` | Permite mostrar las transferencias de mensajes entre la Aplicación y el Administrador |
 
 <br />
@@ -114,7 +114,7 @@ const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
 export default NexoSyncRoute;
 ```
 
-### Obtener el Token de Sesión
+### Obtener el token de sesión
 
 A través del utilitario `getSessionToken`, podemos obtener un token de sesión (JWT) que se utilizará para verificar la autenticidad de la solicitud a tu Backend. El JWT está firmado con el Cliente Secreto de la Aplicación.
 
@@ -136,6 +136,14 @@ axiosIntance.interceptors.request.use(async (request) => {
 
 export default axiosIntance;
 ```
+
+### Manejo de errores
+
+El componente `ErrorBoundary` permite mejorar el manejo de errores entre sus aplicaciones y el panel de administración de los comerciantes, lo que hace que sus aplicaciones sean más confiables y brinden una excelente experiencia a los usuarios.
+
+Simplemente configure el componente `ErrorBoundary` en la parte superior del árbol de componentes de su aplicación. Será responsable de despachar automáticamente la acción [`ACTION_LOG_ERROR`](#action_log_error). Esto activa la visualización de una interfaz de respaldo integrada en el panel de administración de los comerciantes.
+
+Este enfoque asegurará que los errores se manejen de manera efectiva, mejorando la confiabilidad de sus aplicaciones y brindando una experiencia más fluida a los usuarios. Recuerde que el uso de `ErrorBoundary` es obligatorio para publicar su aplicación en nuestra tienda de aplicaciones.
 
 ## Actions
 
@@ -325,6 +333,24 @@ Para solicitar información sobre si dispositivo móvil.
 ```ts
 {
   isMobileDevice: boolean;
+}
+```
+
+### `ACTION_LOG_ERROR`
+
+Permite el registro de errores, capturando información crucial como la URL, el mensaje y la traza de pila (stack trace) con fines de diagnóstico.
+
+**Internal name**:
+
+- `app/log/error`;
+
+**Payload**:
+
+```ts
+{
+  url: string;
+  message: string;
+  stack: string;
 }
 ```
 

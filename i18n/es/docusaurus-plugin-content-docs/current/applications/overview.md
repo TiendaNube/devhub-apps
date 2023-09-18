@@ -132,6 +132,16 @@ Después de crear su aplicación y estar listo para comenzar el desarrollo, es f
 
 Al crear su aplicación, se elegirá el permiso **"Productos"** de forma predeterminada. Sin embargo, durante el desarrollo, es posible que necesite obtener [acceso a otros permisos](../developer-tools/nuvemshop-api.md#permissões-e-escopos) para su aplicación. Todos los permisos que el socio agregue o edite requerirán que la aplicación sea reinstalada. Para ello, debe seleccionar los permisos en **"Datos Básicos"** en el portal, guardar los cambios, ir a la tienda donde está instalada la aplicación, hacer clic en **"Desinstalar"** (vea cómo desinstalar una [aplicación](./overview.md#desinstalando-um-aplicativo)) y luego en **"Instalar"**. De esta manera, se generará un nuevo token de acceso y se podrá iniciar nuevamente el proceso de integración con la API de Tiendanube, incluyendo los permisos actualizados.
 
+## Tratamento de erros no seu aplicativo
+
+El manejo adecuado de errores es fundamental y obligatorio para garantizar que sus aplicaciones sean confiables y brinden una excelente experiencia de usuario. Para facilitar este proceso, el paquete [Nexo](../developer-tools/nexo.md) ofrece un componente llamado `ErrorBoundary`.
+
+ErrorBoundaries son componentes que atrapan errores de JavaScript en cualquier parte de su árbol de componentes, proporcionando una interfaz de usuario alternativa. Esto significa que se muestra una interfaz de ayuda cuando ocurre un error en su árbol de componentes. La interfaz de usuario alternativa está integrada en el panel de administración de los comerciantes y se activa a través de una [acción](../developer-tools/nexo.md#action_log_error) interna de `Nexo`, que es llamada automáticamente por `ErrorBoundary`.
+
+Para configurar `ErrorBoundary` en su aplicación, consulte nuestro tutorial detallado en [enlace](../developer-tools/nexo.md#manejo-de-errores).
+
+Recordando que el uso de `ErrorBoundary` en tu aplicación es obligatorio para publicarla en nuestra tienda de aplicaciones.
+
 ---
 
 ## Próximos pasos

@@ -114,7 +114,7 @@ const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
 export default NexoSyncRoute;
 ```
 
-### Obter o Token de Sessão
+### Obter o token de sessão
 
 Por meio do utilitário `getSessionToken`, podemos obter um token de sessão (JWT) que será usado para verificar a autenticidade da solicitação ao seu Backend. O JWT é assinado com o Segredo do Cliente da Aplicação.
 
@@ -135,6 +135,65 @@ axiosIntance.interceptors.request.use(async (request) => {
 });
 
 export default axiosIntance;
+```
+
+### Tratamento de erros
+
+O componente `ErrorBoundary` permite aprimorar o tratamento de erros entre seus aplicativos e o painel de administração dos lojistas, tornando seus aplicativos mais confiáveis e proporcionando uma excelente experiência aos usuários.
+
+Basta configurar o componente `ErrorBoundary` no topo da árvore de componentes do seu aplicativo. Ele será responsável por despachar automaticamente a ação [`ACTION_LOG_ERROR`](#action_log_error). Isso aciona a exibição de uma interface de fallback integrada ao painel de administração dos lojistas.
+
+Essa abordagem garantirá que os erros sejam tratados de maneira eficaz, melhorando a confiabilidade de seus aplicativos e proporcionando uma experiência mais suave aos usuários. Lembre-se de que o uso do `ErrorBoundary` é obrigatório para publicar seu aplicativo em nossa App Store.
+
+```jsx
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Box, Text } from "@nimbus-ds/components";
+import { ErrorBoundary, connect, iAmReady, create } from "@tiendanube/nexo";
+
+const nexo = create({
+  clientId: "123",
+  log: true,
+});
+
+const App: React.FC = () => {
+  const [isConnect, setIsConnect] = useState(false);
+
+  useEffect(() => {
+    if (!isConnect) {
+      connect(nexo)
+        .then(async () => {
+          setIsConnect(true);
+          iAmReady(nexo);
+        })
+        .catch(() => {
+          setIsConnect(false);
+        });
+    }
+  }, []);
+
+  if (!isConnect)
+    return (
+      <Box
+        height="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text>Conectando...</Text>
+      </Box>
+    );
+
+  return (
+    <ErrorBoundary nexo={nexo}>
+      <BrowserRouter>
+        <Text>Your application</Text>
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
+};
+
+export default App;
 ```
 
 ## Actions
@@ -327,6 +386,28 @@ Para solicitar informações sobre o dispositivo móvel.
   isMobileDevice: boolean;
 }
 ```
+
+### `ACTION_LOG_ERROR`
+
+Permite o registro de erros, capturando informações cruciais como URL, mensagem e rastreamento (stack trace) para fins de diagnóstico.
+
+**Internal name**:
+
+- `app/log/error`;
+
+**Payload**:
+
+```ts
+{
+  url: string;
+  message: string;
+  stack: string;
+}
+```
+
+**Response**:
+
+- `none`;
 
 ## Helpers
 

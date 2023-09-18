@@ -137,6 +137,65 @@ axiosIntance.interceptors.request.use(async (request) => {
 export default axiosIntance;
 ```
 
+### Error handling
+
+The `ErrorBoundary` component allows you to improve error handling between your applications and the merchants' administration panel, making your applications more reliable and providing an excellent user experience.
+
+Simply configure the `ErrorBoundary` component at the top of your application's component tree. It will be responsible for automatically dispatching the action [`ACTION_LOG_ERROR`](#action_log_error). This triggers the display of a fallback interface integrated into the merchants' admin panel.
+
+This approach will ensure that errors are handled effectively, improving the reliability of your applications and providing a smoother experience for your users. Please remember that using `ErrorBoundary` is mandatory to publish your app on our App Store.
+
+```jsx
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Box, Text } from "@nimbus-ds/components";
+import { ErrorBoundary, connect, iAmReady, create } from "@tiendanube/nexo";
+
+const nexo = create({
+  clientId: "123",
+  log: true,
+});
+
+const App: React.FC = () => {
+  const [isConnect, setIsConnect] = useState(false);
+
+  useEffect(() => {
+    if (!isConnect) {
+      connect(nexo)
+        .then(async () => {
+          setIsConnect(true);
+          iAmReady(nexo);
+        })
+        .catch(() => {
+          setIsConnect(false);
+        });
+    }
+  }, []);
+
+  if (!isConnect)
+    return (
+      <Box
+        height="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text>Conectando...</Text>
+      </Box>
+    );
+
+  return (
+    <ErrorBoundary nexo={nexo}>
+      <BrowserRouter>
+        <Text>Your application</Text>
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
+};
+
+export default App;
+```
+
 ## Actions
 
 ### `ACTION_NAVEGATE_EXIT`
@@ -325,6 +384,24 @@ To requests information about if mobile device.
 ```ts
 {
   isMobileDevice: boolean;
+}
+```
+
+### `ACTION_LOG_ERROR`
+
+Allows error logging, capturing crucial information such as URL, message and stack trace for diagnostic purposes.
+
+**Internal name**:
+
+- `app/log/error`;
+
+**Payload**:
+
+```ts
+{
+  url: string;
+  message: string;
+  stack: string;
 }
 ```
 

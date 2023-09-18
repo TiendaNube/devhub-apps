@@ -38,7 +38,7 @@ Ofrecemos [app Templates](./developer-tools/templates.md) que sirven como base p
 
 ### Nexo
 
-El [Nexo](./developer-tools/nimbus.md) proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Tiendanube. Esta interacción entre el Administrador y la aplicación se establece a través de mensajes, siguiendo el patrón del observador, lo que permite la suscripción y cancelación de eventos.
+El [Nexo](./developer-tools/nexo.md) proporciona recursos para facilitar la comunicación entre una aplicación externa y el administrador de Tiendanube. Esta interacción entre el Administrador y la aplicación se establece a través de mensajes, siguiendo el patrón del observador, lo que permite la suscripción y cancelación de eventos.
 
 ### Nimbus (Requisito para aplicaciones integradas)
 

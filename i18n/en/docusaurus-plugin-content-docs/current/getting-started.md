@@ -16,6 +16,7 @@ Before you start developing applications, it's essential to know what types of a
 A [Integrated app](./applications/native.md) in Nuvemshop is one that operates within the context of the Merchant Dashboard, using an iframe to ensure integration and smoothness. This approach aims to offer more natural and integrated experiences for store management, improving interaction with external features and providing a more integrated experience for the merchant.
 
 #### Requirements for Developing Integrated Applications
+
 - Use the [Nimbus design system](./developer-tools/nimbus.md)
 - Meet the [design requirements](./homologation/checklist.md)
 
@@ -37,7 +38,7 @@ We provide [app templates](./developer-tools/templates.md) that serve as a found
 
 ### Nexo
 
-[Nexo](./developer-tools/nimbus.md) provides resources to facilitate communication between an external application and the Nuvemshop administrator. This interaction between the Admin and the App is established through messages, following the observer pattern, allowing event subscription and unsubscription.
+[Nexo](./developer-tools/nexo.md) provides resources to facilitate communication between an external application and the Nuvemshop administrator. This interaction between the Admin and the App is established through messages, following the observer pattern, allowing event subscription and unsubscription.
 
 ### Nimbus (Requirement for Integrated applications)
 

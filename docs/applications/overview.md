@@ -132,6 +132,16 @@ Após criar seu aplicativo e estar pronto para começar o desenvolvimento, é fu
 
 Ao criar o seu aplicativo, a permissão **"Products"** será escolhida como padrão. Entretanto, ao longo do desenvolvimento, pode ser necessário obter [acesso a outras permissões](../developer-tools/nuvemshop-api.md#permissões-e-escopos) para o seu aplicativo. Todas as permissões que o parceiro adicionar ou editar exigirão que o aplicativo seja reinstalado. Para isso, ele deve selecionar as permissões em **"Dados Básicos"** no portal, salvar as mudanças, ir à loja onde o aplicativo está instalado, clicar em **"Desinstalar"** (veja como desistalar um [aplicativo](./overview.md#desinstalando-um-aplicativo)) e, em seguida, em **"Instalar"**. Dessa forma, um novo access token será gerado e o processo de integração a Nuvemshop Api pode ser iniciado novamente, incluindo as permissões atualizadas.
 
+## Tratamento de erros no seu aplicativo
+
+O tratamento adequado de erros é fundamental e obrigatório para garantir que seus aplicativos sejam confiáveis e proporcionem uma excelente experiência aos usuários. Para facilitar esse processo, o pacote [Nexo](../developer-tools/nexo.md) oferece um componente chamado `ErrorBoundary`.
+
+Os ErrorBoundaries são componentes que interceptam erros de JavaScript em qualquer parte da sua árvore de componentes, oferecendo uma UI de fallback. Isso significa que uma interface auxiliar é exibida quando ocorre um erro na sua árvore de componentes. A UI de fallback está integrada ao painel de administração dos lojistas e é ativada por meio de uma [ação](../developer-tools/nexo.md#action_log_error) interna do `Nexo`, que é chamada automaticamente pelo `ErrorBoundary`.
+
+Para configurar o `ErrorBoundary` em seu aplicativo, consulte nosso tutorial detalhado no [link](../developer-tools/nexo.md#tratamento-de-erros).
+
+Lembrando que o uso do `ErrorBoundary` em seu aplicativo é obrigatório para publicá-lo em nossa loja de aplicativos.
+
 ---
 
 ## Próximos passos

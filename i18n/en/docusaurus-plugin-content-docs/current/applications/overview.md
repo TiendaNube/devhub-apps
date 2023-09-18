@@ -132,6 +132,16 @@ After creating your application and being ready to start development, it's essen
 
 When creating your application, the **"Products"** permission will be chosen by default. However, during development, you may need to obtain [access to other permissions](../developer-tools/nuvemshop-api.md#permissões-e-escopos) for your application. All permissions that the partner adds or edits will require the application to be reinstalled. To do this, select the permissions in **"Basic Data"** in the portal, save the changes, go to the store where the application is installed, click **"Uninstall"** (see how to uninstall an [application](./overview.md#desinstalando-um-aplicativo)), and then **"Install"**. This will generate a new access token, and the process of integrating with the Nuvemshop API can be restarted, including the updated permissions.
 
+## Error handling in your application
+
+Proper error handling is critical and mandatory to ensure your applications are reliable and provide an excellent user experience. To facilitate this process, the [Nexo](../developer-tools/nexo.md) package offers a component called `ErrorBoundary`.
+
+ErrorBoundaries are components that trap JavaScript errors anywhere in your component tree, providing a fallback UI. This means that a helper interface is displayed when an error occurs in your component tree. The fallback UI is integrated into the merchants' admin panel and is activated through an internal [action](../developer-tools/nexo.md#action_log_error) of `Nexo`, which is automatically called by `ErrorBoundary` .
+
+To configure `ErrorBoundary` in your application, see our detailed tutorial at [link](../developer-tools/nexo.md#error-handling).
+
+Remembering that the use of `ErrorBoundary` in your application is mandatory to publish it in our application store.
+
 ---
 
 ## Next Steps
