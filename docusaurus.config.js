@@ -10,7 +10,6 @@ const config = {
   title: "DevHub Nuvemshop",
   tagline: "DevHub Nuvemshop",
   favicon: "img/favicon.ico",
-  deploymentBranch: "gh-pages",
   // Set the production url of your site here
   url: "https://dev.nuvemshop.com.br",
   // Set the /<baseUrl>/ pathname under which your site is served
