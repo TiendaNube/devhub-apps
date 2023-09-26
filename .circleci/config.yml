@@ -156,15 +156,11 @@ workflows:
           algolia_api_key: ${PROD_ALGOLIA_API_KEY}
           ga_tracking_id: ${PROD_GA_TRACKING_ID}
           hotjar_id: ${PROD_HOTJAR_ID}
-      - authorize-deployment:
-          type: approval
-          requires:
-            - build
       - send-s3-invalid-cache:
           cloudfront_id: ${CLOUDFRONT_PROD_ID}
           s3_bucket: ${S3_PROD}
           context: microservices
           requires:
-            - authorize-deployment
+            - build
           filters:
             <<: *filter-production
