@@ -22,7 +22,7 @@
     "@mdx-js/react": "^1.6.22",
     "@nimbus-ds/components": "^5.2.0",
     "@nimbus-ds/icons": "^1.2.0",
-    "@nimbus-ds/styles": "^9.3.0",
+    "@nimbus-ds/styles": "^9.5.0",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "docusaurus-plugin-hotjar": "^0.0.2",
