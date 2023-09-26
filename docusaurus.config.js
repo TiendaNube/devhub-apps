@@ -12,7 +12,7 @@ const config = {
   favicon: "img/favicon.ico",
   deploymentBranch: "gh-pages",
   // Set the production url of your site here
-  url: "https://tiendanube.github.io",
+  url: "https://dev.nuvemshop.com.br",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -20,10 +20,8 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "TiendaNube", // Usually your GitHub org/user name.
   projectName: "devhub-apps", // Usually your repo name.
-  // themes: ["@docusaurus/theme-search-algolia"],
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
   i18n: {
     defaultLocale: "pt",
     locales: ["pt", "en", "es"],
