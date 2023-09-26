@@ -19,7 +19,7 @@ fast-checkout: &fast-checkout
 set_version_yarn_v3: &set_version_yarn_v3
   - run:
       name: "Set version yarn v3"
-      command: yarn set version 3.5.1
+      command: yarn set version 3.2.2
 
 install_deps: &install_deps
   - run:
