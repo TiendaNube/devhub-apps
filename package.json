@@ -6,6 +6,8 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "build:pt": "yarn build && rm -rf build-pt && mv build build-pt",
+    "build:es": "yarn build && rm -rf build-es && mv build build-es",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

@@ -22,7 +22,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: "pt",
+    defaultLocale: process.env.DEFAULT_LOCALE,
     locales: ["pt", "en", "es"],
   },
   presets: [
