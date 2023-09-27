@@ -117,6 +117,9 @@ jobs:
     parameters:
       cloudfront_id:
         type: string
+      dir_build:
+        type: string
+        default: "build/"
       s3_bucket:
         type: string
     executor: eks/default
@@ -128,7 +131,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Send files to S3
-          command: aws s3 sync build/ << parameters.s3_bucket >>
+          command: aws s3 sync  << parameters.dir_build >> << parameters.s3_bucket >>
       - run:
           name: invalidating cloudfront cache
           command: aws cloudfront create-invalidation --distribution-id << parameters.cloudfront_id >> --paths "/*"
@@ -157,8 +160,20 @@ workflows:
           ga_tracking_id: ${PROD_GA_TRACKING_ID}
           hotjar_id: ${PROD_HOTJAR_ID}
       - send-s3-invalid-cache:
-          cloudfront_id: ${CLOUDFRONT_PROD_ID}
-          s3_bucket: ${S3_PROD}
+          name: send-s3-invalid-cache-pt
+          cloudfront_id: ${CLOUDFRONT_PROD_ID_PT}
+          s3_bucket: ${S3_PROD_PT}
+          dir_build: ${DIR_BUILD_PT}
+          context: microservices
+          requires:
+            - build
+          filters:
+            <<: *filter-production
+      - send-s3-invalid-cache:
+          name: send-s3-invalid-cache-es
+          cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
+          s3_bucket: ${S3_PROD_ES}
+          dir_build: ${DIR_BUILD_ES}
           context: microservices
           requires:
             - build
