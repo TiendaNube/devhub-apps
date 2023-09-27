@@ -92,6 +92,9 @@ jobs:
       hotjar_id:
         type: string
         default: ""
+      default_locale:
+        type: string
+        default: pt
     executor: default
     steps:
       - <<: *fast-checkout
@@ -103,10 +106,11 @@ jobs:
               ALGOLIA_API_KEY=<< parameters.algolia_api_key >>
               GA_TRACKING_ID=<< parameters.ga_tracking_id >>
               HOTJAR_ID=<< parameters.hotjar_id >>
+              DEFAULT_LOCALE=<< parameters.default_locale >>
             EOF
       - run:
           name: yarn build
-          command: yarn build
+          command: yarn build:<< parameters.default_locale >>
 
       - persist_to_workspace:
           root: /home/circleci
@@ -150,6 +154,7 @@ workflows:
           filters:
             <<: *filter-production
       - build:
+          name: build-pt
           context: microservices
           requires:
             - checkout
@@ -159,6 +164,19 @@ workflows:
           algolia_api_key: ${PROD_ALGOLIA_API_KEY}
           ga_tracking_id: ${PROD_GA_TRACKING_ID}
           hotjar_id: ${PROD_HOTJAR_ID}
+          default_locale: pt
+      - build:
+          name: build-es
+          context: microservices
+          requires:
+            - checkout
+          filters:
+            <<: *filter-production
+          algolia_app_id: ${PROD_ALGOLIA_APP_ID}
+          algolia_api_key: ${PROD_ALGOLIA_API_KEY}
+          ga_tracking_id: ${PROD_GA_TRACKING_ID}
+          hotjar_id: ${PROD_HOTJAR_ID}
+          default_locale: es
       - send-s3-invalid-cache:
           name: send-s3-invalid-cache-pt
           cloudfront_id: ${CLOUDFRONT_PROD_ID_PT}
@@ -166,9 +184,13 @@ workflows:
           dir_build: ${DIR_BUILD_PT}
           context: microservices
           requires:
-            - build
+            - build-pt
           filters:
             <<: *filter-production
+      - authorize-deployment-es:
+          type: approval
+          requires:
+            - build-es
       - send-s3-invalid-cache:
           name: send-s3-invalid-cache-es
           cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
@@ -176,6 +198,6 @@ workflows:
           dir_build: ${DIR_BUILD_ES}
           context: microservices
           requires:
-            - build
+            - authorize-deployment-es
           filters:
             <<: *filter-production
