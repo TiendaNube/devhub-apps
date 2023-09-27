@@ -181,7 +181,7 @@ workflows:
           name: send-s3-invalid-cache-pt
           cloudfront_id: ${CLOUDFRONT_PROD_ID_PT}
           s3_bucket: ${S3_PROD_PT}
-          dir_build: ${DIR_BUILD_PT}
+          dir_build: build-pt/
           context: microservices
           requires:
             - build-pt
@@ -195,7 +195,7 @@ workflows:
           name: send-s3-invalid-cache-es
           cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
           s3_bucket: ${S3_PROD_ES}
-          dir_build: ${DIR_BUILD_ES}
+          dir_build: build-es/
           context: microservices
           requires:
             - authorize-deployment-es
