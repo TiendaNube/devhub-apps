@@ -187,10 +187,6 @@ workflows:
             - build-pt
           filters:
             <<: *filter-production
-      - authorize-deployment-es:
-          type: approval
-          requires:
-            - build-es
       - send-s3-invalid-cache:
           name: send-s3-invalid-cache-es
           cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
@@ -198,6 +194,6 @@ workflows:
           dir_build: build-es/
           context: microservices
           requires:
-            - authorize-deployment-es
+            - build-es
           filters:
             <<: *filter-production
