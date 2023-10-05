@@ -105,7 +105,7 @@ Para probar y desarrollar tu Aplicación Integrada, es esencial hacerlo dentro d
 
 Cuando se activa el Modo de Desarrollador, se agrega una nueva opción al menú con el nombre "Aplicación de Prueba". Al seleccionar esta opción, puedes ingresar la URL de la aplicación, que se cargará dentro del panel de **Admin** para pruebas y desarrollo.
 
-![Modo de desarrollo](../../../../../static/img/dev-mode.png "Modo de desarrollo")
+![Modo de desarrollo](../../../../../static/img/es/dev-mode.png "Modo de desarrollo")
 
 ## Preguntas frecuentes
 

@@ -4,7 +4,6 @@ title: Visión general
 ---
 
 import { Alert, Text, Box } from '@nimbus-ds/components';
-import ImageCreateApp from '@site/static/img/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
 # Visión general
@@ -25,7 +24,7 @@ De esta manera, los comerciantes tienen visibilidad de la herramienta y pueden i
 
 4. Se mostrará una nueva pantalla donde deberá ingresar el nombre de su aplicación y seleccionar cómo desea ponerla a disposición.
 
-   <img src={ImageCreateApp} width="287" alt="Create app" />
+   ![App create](../../../../../static/img/es/create-app.png "App create")
 
    Tenemos dos opciones para la disponibilidad de su aplicación:
 
@@ -35,7 +34,7 @@ De esta manera, los comerciantes tienen visibilidad de la herramienta y pueden i
 
 5. Al hacer clic en **"Crear aplicación"**, lo llevaremos a la página dedicada a su aplicación.
 
-   ![App uninstall](../../../../../static/img/my-new-app.png "App uninstall")
+   ![App uninstall](../../../../../static/img/es/my-new-app.png "App uninstall")
 
    La página de su aplicación se divide en 3 secciones:
 
@@ -82,7 +81,7 @@ Si no tiene una tienda de demostración, [haga clic aquí](https://partners.tien
 
 Al acceder al Administrador de su tienda de demostración, deberá confirmar la instalación haciendo clic en **Aceptar y comenzar a usar**.
 
-![Basic data](../../../../../static/img/app-install.png "Basic data")
+![Basic data](../../../../../static/img/es/app-install.png "Basic data")
 
 ### Desinstalar una aplicación
 
@@ -96,23 +95,19 @@ En este tutorial, explicamos cómo **desinstalar una aplicación** en su panel a
 
 2. En el menú lateral, ubique la sección Potenciar y haga clic en **"Mis aplicaciones"**.
 
-   ![Access my apps](../../../../../static/img/access-my-apps.jpeg "Access my apps")
+   ![Access my apps](../../../../../static/img/es/access-my-apps.jpeg "Access my apps")
 
 3. Cuando la página se cargue, busque la herramienta que desea desactivar y, a la derecha, haga clic en **"Desinstalar"**.
 
-   ![Uninstall app](../../../../../static/img/uninstall-app.jpeg "Uninstall app")
+   ![Uninstall app](../../../../../static/img/es/uninstall-app.jpg "Uninstall app")
 
 4. A continuación, se abrirá **una ventana emergente preguntando si desea continuar** con la desinstalación de la aplicación. Simplemente haga clic en **"Aceptar"**.
 
-   ![Confirm app uninstall](../../../../../static/img/confirm-app-uninstall.jpeg "Confirm app uninstall")
+   ![Confirm app uninstall](../../../../../static/img/es/confirm-app-uninstall.jpeg "Confirm app uninstall")
 
 5. Una vez desinstalada, aparecerá un mensaje de confirmación en la parte superior de la página.
 
-   ![App uninstalled](../../../../../static/img/app-uninstalled.jpg "App uninstalled")
-
-   Vea un ejemplo en el siguiente GIF:
-
-   ![App uninstall](../../../../../static/img/uninstall-app.gif "App uninstall")
+   ![App uninstalled](../../../../../static/img/es/app-uninstalled.jpg "App uninstalled")
 
 La aplicación se ha desinstalado correctamente. Si desea **reactivarla en su tienda**, simplemente busque la aplicación en la misma página y haga clic en **"Instalar"**.
 

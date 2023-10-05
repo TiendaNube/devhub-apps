@@ -105,7 +105,7 @@ Para testar e desenvolver seu aplicativo, é essencial fazê-lo dentro do contex
 
 Ao ativar o Modo Desenvolvedor, uma nova opção será adicionada ao menu com o nome "Aplicativo de Teste" ou "Aplicación de Prueba", dependendo do idioma. Ao selecionar essa opção, você pode inserir a URL do aplicativo, que será carregado dentro do painel do Admin para testes e desenvolvimento.
 
-![Dev mode](../../static/img/dev-mode.png "Dev mode")
+![Dev mode](../../static/img/pt/dev-mode.png "Dev mode")
 
 ## Perguntas frequentes
 

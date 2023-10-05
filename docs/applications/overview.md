@@ -4,7 +4,6 @@ title: Visão geral
 ---
 
 import { Alert, Text, Box } from '@nimbus-ds/components';
-import ImageCreateApp from '@site/static/img/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
 # Visão geral
@@ -25,7 +24,7 @@ Dessa forma, os lojistas possuem visibilidade da ferramenta e podem instalá-la 
 
 4. Uma nova tela será exibida, onde você deve inserir o nome do seu aplicativo e selecionar como deseja disponibilizá-lo.
 
-   <img src={ImageCreateApp} width="287" alt="Create app"  />
+   ![App create](../../static/img/pt/create-app.png "App create")
 
    Temos duas opções de disponibilização para o seu aplicativo:
 
@@ -35,7 +34,7 @@ Dessa forma, os lojistas possuem visibilidade da ferramenta e podem instalá-la 
 
 5. Ao clicar em **"Criar aplicativo"**, direcionaremos você para a página dedicada ao seu aplicativo.
 
-   ![App uninstall](../../static/img/my-new-app.png "App uninstall")
+   ![App uninstall](../../static/img/pt/my-new-app.png "App uninstall")
 
    A página do seu aplicativo é dividida em 3 seções:
 
@@ -82,7 +81,7 @@ Se você não tiver uma loja demo, [clique aqui](https://partners.nuvemshop.com.
 
 Ao entrar no Administrador da sua loja demo, você vai precisar confirmar a instalação, clicando em **Aceitar e começar a usar**.
 
-![Basic data](../../static/img/app-install.png "Basic data")
+![Basic data](../../static/img/pt/app-install.png "Basic data")
 
 ### Desinstalando um aplicativo
 
@@ -96,23 +95,19 @@ Neste tutorial, explicamos como **desinstalar um aplicativo** no seu painel admi
 
 2. No menu lateral, localizar na seção Potencializar e clicar em **"Meus aplicativos"**.
 
-   ![Access my apps](../../static/img/access-my-apps.jpeg "Access my apps")
+   ![Access my apps](../../static/img/pt/access-my-apps.jpeg "Access my apps")
 
 3. Ao carregar a página, você deve procurar pela ferramenta que deseja desativar e, ao lado direito, clicar em **"Desinstalar"**.
 
-   ![Uninstall app](../../static/img/uninstall-app.jpeg "Uninstall app")
+   ![Uninstall app](../../static/img/pt/uninstall-app.jpg "Uninstall app")
 
 4. Logo em seguida, abrirá **um pop-up perguntando se deseja prosseguir** com a desinstalação do aplicativo, basta clicar em **"OK"**.
 
-   ![Confirm app uninstall](../../static/img/confirm-app-uninstall.jpeg "Confirm app uninstall")
+   ![Confirm app uninstall](../../static/img/pt/confirm-app-uninstall.jpeg "Confirm app uninstall")
 
 5. Ao ser desinstalado, aparecerá uma mensagem de confirmação no topo da página.
 
-   ![App uninstalled](../../static/img/app-uninstalled.jpg "App uninstalled")
-
-   Confira um exemplo no GIF abaixo:
-
-   ![App uninstall](../../static/img/uninstall-app.gif "App uninstall")
+   ![App uninstalled](../../static/img/pt/app-uninstalled.jpg "App uninstalled")
 
 O aplicativo foi desinstalado com sucesso. Caso queira **reativá-lo em sua loja**, basta procurá-lo na mesma página e clicar em **"Instalar"**.
 

@@ -39,7 +39,7 @@ Nuestros modelos de creación de aplicaciones ya incluyen un sistema de autentic
 
 Si has modificado la URL de redirección, por favor, reemplázala y guarda la nueva URL en `https://partners.tiendanube.com/applications/authentication/:app-id` para acceder a la página con el código cURL. El campo de URL de redirección se encuentra en el formulario de **Datos Básicos**.
 
-![Datos básicos](../../../../../static/img/card-basic-data.png "Datos básicos")
+![Datos básicos](../../../../../static/img/es/card-basic-data.png "Datos básicos")
 
 Este paso es crucial para asegurar que el redireccionamiento funcione correctamente y que puedas acceder a la página de código cURL sin problemas. Asegúrate de actualizar la URL de redirección según sea necesario.
 
@@ -47,7 +47,7 @@ Este paso es crucial para asegurar que el redireccionamiento funcione correctame
 
 Después de completar la instalación, serás redirigido a una nueva página que contiene el código cURL necesario para generar tu `access_token`. Simplemente copia este código y realiza la solicitud utilizando la herramienta de tu elección.
 
-![cURL de Autenticación](../../../../../static/img/authentication-curl.png "cURL de Autenticación")
+![cURL de Autenticación](../../../../../static/img/es/authentication-curl.png "cURL de Autenticación")
 
 La estructura del cURL generado consta de:
 
@@ -59,7 +59,7 @@ Este paso es fundamental para obtener con éxito el access_token y garantizar el
 
 Si la solicitud tiene éxito, recibirás una respuesta en un formato similar a este ejemplo:
 
-![Éxito de cURL de Autenticación](../../../../../static/img/authentication-curl-success.png "Éxito de cURL de Autenticación")
+![Éxito de cURL de Autenticación](../../../../../static/img/es/authentication-curl-success.png "Éxito de cURL de Autenticación")
 
 ```javascript
 {
@@ -92,7 +92,7 @@ Para hacerlo, sigue estos pasos:
 
 Si la solicitud falló debido a la caducidad del código cURL o algún error, puedes obtener un nuevo código [desinstalando](./overview.md#desinstalando-un-aplicativo) y [reinstalando](./overview.md#instalando-seu-aplicativo) tu aplicación en la tienda nuevamente.
 
-![Authentication curl fail](../../../../../static/img/authentication-curl-fail.png "Authentication curl fail")
+![Authentication curl fail](../../../../../static/img/es/authentication-curl-fail.png "Authentication curl fail")
 
 Siguiendo estos pasos, podrás obtener un nuevo código cURL válido y continuar con éxito el proceso de [autenticación](./authentication#obtendo-o-token-de-acesso). Asegúrate de seguir las instrucciones cuidadosamente para evitar problemas futuros.
 

@@ -39,7 +39,7 @@ Our application creation templates already include an authentication system inte
 
 If you have modified the redirect URL, please replace it and save the new URL at `https://partners.nuvemshop.com.br/applications/authentication/:app-id` to access the page with the cURL code. The redirect URL field can be found in the **Basic Data** form.
 
-![Basic data](../../../../../static/img/card-basic-data.png "Basic data")
+![Basic data](../../../../../static/img/en/card-basic-data.png "Basic data")
 
 This step is crucial to ensure that redirection works correctly and that you can access the cURL code page without any issues. Be sure to update the redirect URL as needed.
 
@@ -47,7 +47,7 @@ This step is crucial to ensure that redirection works correctly and that you can
 
 After completing the installation, you will be redirected to a new page containing the cURL code necessary to generate your `access_token`. Simply copy this code and make the request using the tool of your choice.
 
-![Authentication cURL](../../../../../static/img/authentication-curl.png "Authentication cURL")
+![Authentication cURL](../../../../../static/img/en/authentication-curl.png "Authentication cURL")
 
 The structure of the generated cURL consists of:
 
@@ -59,7 +59,7 @@ This step is essential to successfully obtain the access_token and ensure author
 
 If the request is successful, you will receive a response in a format similar to this example:
 
-![Authentication cURL Success](../../../../../static/img/authentication-curl-success.png "Authentication cURL Success")
+![Authentication cURL Success](../../../../../static/img/en/authentication-curl-success.png "Authentication cURL Success")
 
 ```javascript
 {
@@ -92,7 +92,7 @@ To do this, follow these steps:
 
 If the request failed due to the expiration of the cURL code or some error, you can obtain a new code by [uninstalling](./overview.md#uninstalling-an-app) and [reinstalling](./overview.md#installing-your-app) your app in the store again.
 
-![Authentication curl fail](../../../../../static/img/authentication-curl-fail.png "Authentication curl fail")
+![Authentication curl fail](../../../../../static/img/en/authentication-curl-fail.png "Authentication curl fail")
 
 By following these steps, you'll be able to get a new valid cURL code and successfully resume the [authentication](./authentication#getting-the-access-token) process. Make sure to follow the instructions carefully to avoid future issues.
 

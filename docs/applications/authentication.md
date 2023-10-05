@@ -39,7 +39,7 @@ Nossos modelos de criação de aplicativos já incluem um sistema de autenticaç
 
 Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.
 
-![Basic data](../../static/img/card-basic-data.png "Basic data")
+![Basic data](../../static/img/pt/card-basic-data.png "Basic data")
 
 Esta etapa é crucial para garantir que o redirecionamento funcione corretamente e que você possa acessar a página de código cURL sem problemas. Certifique-se de atualizar a URL de redirecionamento conforme necessário.
 
@@ -47,7 +47,7 @@ Esta etapa é crucial para garantir que o redirecionamento funcione corretamente
 
 Após concluir a instalação, você será redirecionado para uma nova página contendo o código cURL necessário para gerar o seu `access_token`. Basta copiar esse código e realizar a requisição utilizando a ferramenta de sua preferência.
 
-![Authentication curl](../../static/img/authentication-curl.png "Authentication curl")
+![Authentication curl](../../static/img/pt/authentication-curl.png "Authentication curl")
 
 A estrutura do cURL gerado consiste em:
 
@@ -59,7 +59,7 @@ Essa etapa é fundamental para obter com sucesso o access_token e garantir o ace
 
 Se a requisição for bem-sucedida, você receberá uma resposta no formato semelhante a este exemplo:
 
-![Authentication curl success](../../static/img/authentication-curl-success.png "Authentication curl success")
+![Authentication curl success](../../static/img/pt/authentication-curl-success.png "Authentication curl success")
 
 ```javascript
 {
@@ -92,7 +92,7 @@ Para isso siga estes passos:
 
 Caso a requisição tenha falhado devido à expiração do código cURL ou algum erro, você pode obter um novo código [desinstalando](./overview#desinstalando-um-aplicativo) e [reinstalando](./overview.md#instalando-seu-aplicativo) o seu aplicativo na loja novamente.
 
-![Authentication curl fail](../../static/img/authentication-curl-fail.png "Authentication curl fail")
+![Authentication curl fail](../../static/img/pt/authentication-curl-fail.png "Authentication curl fail")
 
 Seguindo essas etapas, você poderá obter um novo código cURL válido e retomar o processo de [autenticação](./authentication#obtendo-o-token-de-acesso) com sucesso. Certifique-se de acompanhar as instruções com atenção para evitar problemas futuros.
 

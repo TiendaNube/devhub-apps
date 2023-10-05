@@ -4,7 +4,6 @@ title: Overview
 ---
 
 import { Alert, Text, Box } from '@nimbus-ds/components';
-import ImageCreateApp from '@site/static/img/create-app.png';
 import AppTypes from '@site/src/components/AppTypes';
 
 # Overview
@@ -25,7 +24,7 @@ This way, merchants have visibility of the tool and can install it in their onli
 
 4. A new screen will appear where you should enter the name of your application and select how you want to make it available.
 
-   <img src={ImageCreateApp} width="287" alt="Create app" />
+   ![App create](../../../../../static/img/en/create-app.png "App create")
 
    We have two options for the availability of your application:
 
@@ -35,7 +34,7 @@ This way, merchants have visibility of the tool and can install it in their onli
 
 5. When you click **"Create application"**, we will take you to the dedicated page for your application.
 
-   ![App uninstall](../../../../../static/img/my-new-app.png "App uninstall")
+   ![App uninstall](../../../../../static/img/en/my-new-app.png "App uninstall")
 
    The page for your application is divided into 3 sections:
 
@@ -82,7 +81,7 @@ If you don't have a demo store, [click here](https://partners.nuvemshop.com.br/s
 
 When you access the Admin of your demo store, you will need to confirm the installation by clicking **"Accept and start using"**.
 
-![Basic data](../../../../../static/img/app-install.png "Basic data")
+![Basic data](../../../../../static/img/en/app-install.png "Basic data")
 
 ### Uninstalling an Application
 
@@ -96,23 +95,19 @@ In this tutorial, we explain how to **uninstall an application** in your Nuvemsh
 
 2. In the side menu, locate the Boost section and click on **"My applications"**.
 
-   ![Access my apps](../../../../../static/img/access-my-apps.jpeg "Access my apps")
+   ![Access my apps](../../../../../static/img/en/access-my-apps.jpeg "Access my apps")
 
 3. When the page loads, look for the tool you want to deactivate and, on the right, click **"Uninstall"**.
 
-   ![Uninstall app](../../../../../static/img/uninstall-app.jpeg "Uninstall app")
+   ![Uninstall app](../../../../../static/img/en/uninstall-app.jpg "Uninstall app")
 
 4. Next, a pop-up window will appear asking if you want to proceed with the uninstallation of the application. Simply click **"OK"**.
 
-   ![Confirm app uninstall](../../../../../static/img/confirm-app-uninstall.jpeg "Confirm app uninstall")
+   ![Confirm app uninstall](../../../../../static/img/en/confirm-app-uninstall.jpeg "Confirm app uninstall")
 
 5. Once uninstalled, a confirmation message will appear at the top of the page.
 
-   ![App uninstalled](../../../../../static/img/app-uninstalled.jpg "App uninstalled")
-
-   Check out an example in the GIF below:
-
-   ![App uninstall](../../../../../static/img/uninstall-app.gif "App uninstall")
+   ![App uninstalled](../../../../../static/img/en/app-uninstalled.jpg "App uninstalled")
 
 The application has been successfully uninstalled. If you want to **reactivate it in your store**, simply look for the application on the same page and click **"Install"**.
 

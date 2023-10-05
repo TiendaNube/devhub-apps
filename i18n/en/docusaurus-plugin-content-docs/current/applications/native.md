@@ -105,7 +105,7 @@ To test and develop your Integrated app, it is essential to do so within the con
 
 When Developer Mode is activated, a new option is added to the menu with the name "Test App" or "Aplicación de Prueba," depending on the language. By selecting this option, you can enter the app's URL, which will be loaded into the Admin panel for testing and development.
 
-![Developer mode](../../../../../static/img/dev-mode.png "Developer mode")
+![Developer mode](../../../../../static/img/en/dev-mode.png "Developer mode")
 
 ## Frequently Asked Questions
 
