@@ -37,7 +37,7 @@ O vídeo de demonstração explica para o nosso time técnico como a sua soluç�
 - Simulação de todos os cenários descritos nos diagramas de sequência 
 - Fluxo de utilização do app
 - Pontos que sejam relevantes para que possamos avaliar
-- Veja como criar o Guia de instalação completo
+- Veja como criar o [Guia de instalação completo](https://docs.google.com/document/d/1eIhxJ6QbQCh3kwmUtSOV_yAPkhEkRYchMQfMR9eM2eg/edit)
 
 ---
 
