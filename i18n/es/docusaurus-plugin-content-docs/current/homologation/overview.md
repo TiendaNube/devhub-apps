@@ -23,7 +23,7 @@ Para poner a disposición una aplicación en la tienda de aplicaciones de Tienda
 
 ### ¿Cómo Construir un Diagrama de Secuencia?
 
-El diagrama de secuencia evalúa cómo se están utilizando las permisiones seleccionadas en la creación de la aplicación. Para obtener más información sobre cómo crear un diagrama de secuencia, hemos proporcionado un documento de apoyo en este [enlace](https://docs.google.com/document/d/1MFpRkSTDF2hPrvITL5H0Vw9NyT9c_Pm1cq7Gsf73LmM/edit).
+El diagrama de secuencia evalúa cómo se están utilizando las permisiones seleccionadas en la creación de la aplicación. Para obtener más información sobre cómo crear un diagrama de secuencia, hemos proporcionado un documento de apoyo en este [enlace](https://docs.google.com/document/d/1y8D9irC1oSweNeNFlLHtquykoUI6G4n9n7BQlNCTdHo/edit).
 
 ### ¿Cómo Construir un Video Demo?
 
@@ -41,7 +41,7 @@ El video de demostración explica a nuestro equipo técnico cómo funciona su so
 - Simulación de todos los escenarios descritos en los diagramas de secuencia.
 - Flujo de uso de la aplicación.
 - Puntos relevantes para que podamos evaluar.
-- Vea cómo crear la Guía de Instalación Completa.
+- Vea cómo crear la [Guía de Instalación Completa](https://docs.google.com/document/d/1wzTAP7lRzuZw68wwhQ9mfzeN6jzX-l-EMnLcz1yhUeM).
 
 ---
 

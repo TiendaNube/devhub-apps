@@ -41,7 +41,7 @@ The demonstration video explains to our technical team how your solution works, 
 - Simulation of all scenarios described in the sequence diagrams.
 - Application usage flow.
 - Points that are relevant for our evaluation.
-- See how to create the Complete Installation Guide.
+- See how to create the [Complete Installation Guide](https://docs.google.com/document/d/1eIhxJ6QbQCh3kwmUtSOV_yAPkhEkRYchMQfMR9eM2eg/edit).
 
 ---
 
