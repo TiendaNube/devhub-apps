@@ -64,6 +64,10 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: "devhub-apps",
+        replaceSearchResultPathname: {
+          from: '/devhub-apps/',
+          to: '/'
+        }
       },
       navbar: {
         logo: {
