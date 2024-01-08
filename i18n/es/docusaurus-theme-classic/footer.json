@@ -35,6 +35,10 @@
     "message": "Nimbus",
     "description": "The label of footer link with label=Nimbus linking to https://nimbus.tiendanube.com/"
   },
+  "link.item.label.Termos e condições": {
+    "message": "Términos y condiciones",
+    "description": "The label of footer link with label=Termos e condições linking to https://www.tiendanube.com/socios/terminos-de-uso"
+  },
   "logo.alt": {
     "message": "DevHub Tiendanube",
     "description": "The alt text of footer logo"
