@@ -163,6 +163,10 @@ const config = {
                 label: "Nimbus",
                 href: "https://nimbus.tiendanube.com/",
               },
+              {
+                label: "Termos e condições",
+                href: "https://www.nuvemshop.com.br/parceiros/termos-de-uso",
+              },
             ],
           },
         ],
