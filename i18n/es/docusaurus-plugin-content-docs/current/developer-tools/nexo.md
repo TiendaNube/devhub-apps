@@ -74,6 +74,7 @@ function App() {
 ### Habilitar la sincronización de rutas
 
 Esta funcionalidad te permitirá registrar la navegación de la aplicación en la URL del navegador a través de fragmentos (#myroute).
+> Importante: La sincronización permite obtener el PATH pero no es posible para los Query Params.
 
 Este ejemplo está hecho con [React Router](https://reactrouter.com/en/main).
 
