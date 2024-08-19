@@ -48,7 +48,7 @@ export default instance;
 
 Através do utilitário `connect`, você pode verificar se o Administrador permite a troca de mensagens e, ao mesmo tempo, com `iAmReady`, notificar que sua aplicação está pronta para ser exibida.
 
-Para a aplicação React
+Para a aplicação React:
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -71,34 +71,34 @@ function App() {
 }
 ```
 
+> **Importante**: É necessário que, após enviar o `iAmReady`, o aplicativo esteja ouvindo a ação `ACTION_NAVIGATE_SYNC`. Isso ocorre porque, quando o novo administrador recebe o sinal de que o aplicativo está READY, o `ACTION_NAVIGATE_SYNC` é enviado com a rota inicial para a qual o aplicativo deve navegar.
+
 ### Ativar a sincronização de rotas
 
 Essa funcionalidade permitirá que você registre a navegação do aplicativo na URL do navegador por meio de fragmentos (#myroute).
-> Importante: A sincronização permite obter o PATH mas não é possível para Query Params.
-
 Este exemplo é feito com o [React Router](https://reactrouter.com/en/main).
 
 ```jsx
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import { syncPathname } from "@tiendanube/nexo/helpers";
-
-import nexo from "./nexoClient";
 import {
   ACTION_NAVIGATE_SYNC,
   NavigateSyncResponse,
 } from "@tiendanube/nexo/actions";
+import { syncPathname } from "@tiendanube/nexo/helpers";
+import nexo from "./nexoClient";
 
 const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const { push: goTo, replace: replaceTo } = useHistory();
 
-  //to send the current path of the app to the browser url
+  // to send the current path of the app to the browser url
   useEffect(() => {
-    syncPathname(nexo, pathname);
+    const path = search ? `${pathname}${search}` : pathname;
+    syncPathname(nexo, path);
   }, [pathname]);
 
-  //to navigate in the app if the browser url changes
+  // to navigate in the app if the browser url changes
   useEffect(() => {
     const unsuscribe = nexo.suscribe(
       ACTION_NAVIGATE_SYNC,
@@ -114,6 +114,8 @@ const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
 
 export default NexoSyncRoute;
 ```
+
+> **Importante**: Conforme mencionado na seção anterior, deve-se garantir que este componente esteja sendo renderizado após o envio do `iAmReady`.
 
 ### Obter o token de sessão
 
