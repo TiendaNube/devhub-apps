@@ -46,6 +46,7 @@ const sidebars = {
           items: [
             "applications/nube-sdk/overview",
             "applications/nube-sdk/first-steps",
+            "applications/nube-sdk/script-structure",
           ],
         },
       ],
