@@ -17,6 +17,21 @@ export function App(nube: NubeSDK) {
 
 This exported function, `App(nube: NubeSDK)` is called by the NubeSDK during initialization, and it's the main entry point for your application's script.
 
+The received `nube: NubeSDK` object contains all the helper functions required to interact with the sdk.
+
+```typescript
+export type NubeSDK = {
+    // Start listening to an event
+	on(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
+    // Stop listening to an event
+	off(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
+    // Dispatch an event
+	send(event: NubeSDKSendableEvent, modifier?: NubeSDKStateModifier): void;
+    // Get current state
+	getState(): Readonly<NubeSDKState>;
+};
+```
+
 The programming model used by NubeSDK is mostly event based, that is, the SDK dispatches events to report changes in the store, and sometimes expects events as response.
 
 ### Listening to events

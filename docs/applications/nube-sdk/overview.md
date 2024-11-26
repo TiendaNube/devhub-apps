@@ -10,6 +10,8 @@ import AppTypes from '@site/src/components/AppTypes';
 
 NubeSDK is the new SDK used to develop applications in a safe and secure environment. These applications are hosted inside [WebWorkers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) in the browser, which guarantees that two applications can't interfere with each other, providing a more secure and stable development experience.
 
+![NubeSDK Diagram](../../../static/img/pt/nube-sdk-diagram.png "NubeSDK Diagram")
+
 ## Next Steps
 
 - Learn more about [First Steps](./first-steps.md)
