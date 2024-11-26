@@ -40,6 +40,14 @@ const sidebars = {
         "applications/authentication",
         "applications/native",
         "applications/standalone",
+        {
+          type: "category",
+          label: "Nube SDK",
+          items: [
+            "applications/nube-sdk/overview",
+            "applications/nube-sdk/first-steps",
+          ],
+        },
       ],
     },
     {
