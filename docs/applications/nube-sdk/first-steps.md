@@ -47,4 +47,4 @@ After performing these steps, you will have the output of the compilation availa
 
 ## Next Steps
 
-- Learn more about [Script Structure](./script-structure.md)
+- Learn more about [Script Structure](./script-structure)
