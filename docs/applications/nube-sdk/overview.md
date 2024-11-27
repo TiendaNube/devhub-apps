@@ -12,6 +12,8 @@ NubeSDK is the new SDK used to develop applications in a safe and secure environ
 
 ![NubeSDK Diagram](../../../static/img/pt/nube-sdk-diagram.png "NubeSDK Diagram")
 
+Communication between the main page and the scripts is handled 100% through events, with events like `cart_updated` being dispatched by the main page to inform that the cart changed, and the scripts dispatching events like `cart:validate` to report if they consider the contents of the cart to be valid or not.
+
 ## Next Steps
 
 - Learn more about [First Steps](./first-steps.md)
