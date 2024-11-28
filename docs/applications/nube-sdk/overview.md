@@ -16,4 +16,4 @@ Communication between the main page and the scripts is handled 100% through even
 
 ## Next Steps
 
-- Learn more about [First Steps](./first-steps.md)
+- Learn more about [First Steps](./first-steps)

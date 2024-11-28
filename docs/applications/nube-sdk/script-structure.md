@@ -106,3 +106,7 @@ export function App(nube: NubeSDK) {
 ```
 
 In this example, the script is telling `NubeSDK` that it wants to validate the content of the cart. 
+
+## Next Steps
+
+- Learn more about [Events](./events)
