@@ -43,25 +43,27 @@ Dispatched by `script` to signal if the content of the cart is valid or not. Req
         },
     }));
 
-    // Reject the cart if it has fewer than 5 items
-    if (cart.items.length < 5) {
-        // Dispatch a failed `cart:validate` event with the reason why it failed to validate
-        nube.send("cart:validate", () => ({
-            cart: {
-                validation: {
-                    status: "fail",
-                    reason: "Cart must have at least 5 items!",
+    nube.on("cart:update", ({ cart }) => {
+        // Reject the cart if it has fewer than 5 items
+        if (cart.items.length < 5) {
+            // Dispatch a failed `cart:validate` event with the reason why it failed to validate
+            nube.send("cart:validate", () => ({
+                cart: {
+                    validation: {
+                        status: "fail",
+                        reason: "Cart must have at least 5 items!",
+                    },
                 },
-            },
-        }));
-    } else {
-        // Dispatch a successful `cart:validate` event
-        nube.send("cart:validate", () => ({
-            cart: {
-                validation: {
-                    status: "success",
+            }));
+        } else {
+            // Dispatch a successful `cart:validate` event
+            nube.send("cart:validate", () => ({
+                cart: {
+                    validation: {
+                        status: "success",
+                    },
                 },
-            },
-        }));
+            }));
+        }
     }
 ```

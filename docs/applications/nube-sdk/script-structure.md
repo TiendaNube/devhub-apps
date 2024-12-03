@@ -56,14 +56,6 @@ Dispatching events is done through the received `nube` instance:
 export function App(nube: NubeSDK) {
     // Listen to cart update event, dispatched every time that the cart is updated
 	nube.on("cart:update", ({ cart }) => {
-
-        // Tell NubeSDK that this script wants to validate the content of the cart
-        nube.send("config:set", () => ({
-            config: {
-                has_cart_validation: true
-            },
-        }));
-
         // Reject the cart if it has fewer than 5 items
         if (cart.items.length < 5) {
             // Dispatch a failed `cart:validate` event with the reason why it failed to validate
