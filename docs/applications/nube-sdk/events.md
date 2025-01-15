@@ -67,3 +67,40 @@ Dispatched by `script` to signal if the content of the cart is valid or not. Req
         }
     }
 ```
+
+## `ui:slot:set`
+
+Dispatched by `script` to setup the content of a ui slot.
+
+```typescript title="Example"
+    import { field } from "@tiendanube/nube-sdk-ui";
+
+    const myField = field({ 
+        name: "Something", 
+        label: "Label", 
+        onChange: (e) => console.log(e) }
+    );
+
+    nube.send("ui:slot:set", () => ({
+		ui: {
+			slots: {
+				after_line_items: myField
+			}
+		}
+	}));
+```
+
+It can also be used to remove the content of a slot, by specifying `undefined` as the content.
+
+```typescript title="Example"
+    nube.send("ui:slot:set", () => ({
+		ui: {
+			slots: {
+				before_line_items: undefined
+			}
+		}
+	}));
+```
+
+- Learn more about [UI Components](./ui-components)
+
