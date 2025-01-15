@@ -10,63 +10,152 @@ The UI components are assigned to slots by sending the [ui:slot:set](./events#ui
 
 ## `box`
 
-Box container, supports multiple size, styling and alignment options.
+Box container, supports multiple sizes, styling and alignment options.
+
+![Box](../../../static/img/pt/nube-sdk-ui-box-1.png "Box")
 
 ```typescript title="Example"
-    import { box } from "@tiendanube/nube-sdk-ui";
-
-    const myBox = box({ 
-        width: 100, 
-        height: 200,
-        margin: 10,
-        justifyContent: "space-around",
-	    children: [],
-    });
+    const myBox = {
+        type: "box",
+        width: 300,
+        height: 100,
+        background: "lightgray",
+        padding: 10,
+        gap: 10,
+        children: [
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 1",
+                background: "gray"
+            },
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 2",
+                background: "gray"
+            },                        
+        ]
+    }
 ```
 
 ## `col`
 
-Column container, supports multiple size, styling and alignment options.
+Column container, layouts children in a column, supports multiple sizes, styling and alignment options.
+
+![Column](../../../static/img/pt/nube-sdk-ui-col-1.png "Column")
 
 ```typescript title="Example"
-    import { col } from "@tiendanube/nube-sdk-ui";
-
-    const myColumn = col({ 
-        width: 100, 
-        height: 200,
-        margin: 10,
-        justifyContent: "space-around",
-	    children: [],
-    });
+    const myColumn = {
+        type: "col",
+        width: 300,
+        height: "100%",
+        background: "lightgray",
+        padding: 10,
+        gap: 10,
+        children: [
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 1",
+                background: "gray"
+            },
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 2",
+                background: "gray"
+            },                        
+        ]
+    }
 ```
 
 ## `row`
 
-Row container, supports multiple size, styling and alignment options.
+Row container, layouts children in a row, supports multiple sizes, styling and alignment options.
+
+![Row](../../../static/img/pt/nube-sdk-ui-row-1.png "Row")
 
 ```typescript title="Example"
-    import { row } from "@tiendanube/nube-sdk-ui";
-
-    const myRow = row({ 
-        width: 100, 
-        height: 200,
-        margin: 10,
-        justifyContent: "space-around",
-	    children: [],
-    });
+    const myRow = {
+        type: "row",
+        width: 300,
+        height: "100%",
+        background: "lightgray",
+        padding: 10,
+        gap: 10,
+        children: [
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 1",
+                background: "gray"
+            },
+            {
+                type: "txt",
+                heading: 1, 
+                children: "Text 2",
+                background: "gray"
+            },                        
+        ]
+    }
 ```
+
+## `txt`
+
+Text component, support multiple styles.
+
+![Text](../../../static/img/pt/nube-sdk-ui-txt-1.png "Text")
+
+```typescript title="Example"
+    const myText = {
+        type: "txt",
+        width: 300,
+        height: "100%",
+        heading: 1,
+        padding: 10,
+        background: "lightgray",
+        children: "Hello World"
+    }
+```
+
 
 ## `field`
 
-Field, supports receiving events
+Text input field, supports multiple styles and change events / focus events.
+
+![Field](../../../static/img/pt/nube-sdk-ui-field-1.png "Field")
 
 ```typescript title="Example"
-    import { field } from "@tiendanube/nube-sdk-ui";
 
-    field({ 
-        id: "myField",
-        name: "field", 
-        label: "User Name", 
-        onChange: (e) => console.log(e.value) 
-    });
+    const myField = {
+        type: "field",
+        id: "name",
+        height: "100%",
+        width: 400,
+        padding: 10,
+        background: "lightgray",
+        label: "Name",
+        onChange: (e) => console.log(e.value),
+        onFocus: (e) => console.log("focus gained"),
+        onBlur: (e) => console.log("focus lost"),
+    }
+
+```
+
+## `img`
+
+Displays an image.
+
+![Field](../../../static/img/pt/nube-sdk-ui-img-1.png "Field")
+
+```typescript title="Example"
+
+    const myImage = {
+        type: "img",
+        src: "https://app-insti-cdn.nuvemshop.com.br/site/dist/images/widgets/closing-cta/image-3.webp",
+        width: 100,
+        height: 100,
+    }
+
 ```

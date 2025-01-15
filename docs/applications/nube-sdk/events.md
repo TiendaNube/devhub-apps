@@ -73,18 +73,20 @@ Dispatched by `script` to signal if the content of the cart is valid or not. Req
 Dispatched by `script` to setup the content of a ui slot.
 
 ```typescript title="Example"
-    import { field } from "@tiendanube/nube-sdk-ui";
 
-    const myField = field({ 
-        name: "Something", 
-        label: "Label", 
-        onChange: (e) => console.log(e) }
-    );
+    const myBox = {
+        type: "box",
+        width: 300,
+        height: 100,
+        background: "lightgray",
+        padding: 10,
+        gap: 10,
+    };
 
     nube.send("ui:slot:set", () => ({
 		ui: {
 			slots: {
-				after_line_items: myField
+				after_line_items: myBox
 			}
 		}
 	}));
