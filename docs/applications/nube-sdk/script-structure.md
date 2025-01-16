@@ -5,6 +5,10 @@ title: Script Structure
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
+:::warning
+This SDK is a Work In Progress! All features are subject to change.
+:::
+
 ## Script structure
 
 The main entry point for the script is located in `src/main.ts`. 

@@ -5,6 +5,10 @@ title: First Steps
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
+:::warning
+This SDK is a Work In Progress! All features are subject to change.
+:::
+
 # First Steps
 
 The NubeSDK contains the typescript definitions of the types required for development.

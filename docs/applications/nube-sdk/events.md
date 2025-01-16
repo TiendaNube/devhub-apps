@@ -2,6 +2,10 @@
 title: Events
 ---
 
+:::warning
+This SDK is a Work In Progress! All features are subject to change.
+:::
+
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
