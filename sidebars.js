@@ -49,6 +49,7 @@ const sidebars = {
             "applications/nube-sdk/script-structure",
             "applications/nube-sdk/events",
             "applications/nube-sdk/ui-components",
+            "applications/nube-sdk/ui-slots",
           ],
         },
       ],

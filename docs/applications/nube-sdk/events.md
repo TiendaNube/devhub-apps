@@ -109,4 +109,4 @@ It can also be used to remove the content of a slot, by specifying `undefined` a
 ```
 
 - Learn more about [UI Components](./ui-components)
-
+- Learn more about [UI Slots](./ui-slots)
