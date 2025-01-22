@@ -40,7 +40,8 @@ const sidebars = {
         "applications/authentication",
         "applications/native",
         "applications/standalone",
-        {
+        // Hide Nube SDK for now, it has its own sidebar!
+        /*{
           type: "category",
           label: "Nube SDK",
           items: [
@@ -51,7 +52,7 @@ const sidebars = {
             "applications/nube-sdk/ui-components",
             "applications/nube-sdk/ui-slots",
           ],
-        },
+        },*/
       ],
     },
     {
@@ -71,6 +72,22 @@ const sidebars = {
       items: ["homologation/overview", "homologation/checklist"],
     },
   ],
+
+  // custom sidebar used until we release the nube sdk to the public
+  nube_sdk_sidebar: [
+    {
+      type: "category",
+      label: "Nube SDK",
+      items: [
+        "applications/nube-sdk/overview",
+        "applications/nube-sdk/first-steps",
+        "applications/nube-sdk/script-structure",
+        "applications/nube-sdk/events",
+        "applications/nube-sdk/ui-components",
+        "applications/nube-sdk/ui-slots",
+      ],
+    }
+  ]
 };
 
 module.exports = sidebars;
