@@ -4,13 +4,13 @@ sidebar_position: 1
 
 import { Alert } from '@nimbus-ds/components';
 
-# Autenticação
+# Introdução
 
 Este guia apresenta métodos de autenticação de aplicativos com a plataforma Nuvemshop. Descubra como garantir segurança e acesso autorizado para integrações perfeitas entre seus aplicativos e nossa plataforma.
 
 ## Autenticação da API
 
-A autenticação e autorização de usuário são fornecidas por meio de uma implementação restrita do OAuth 2. Atualmente, oferecemos suporte apenas ao fluxo ["Código de Autorização"](https://oauth.net/2/grant-types/authorization-code/) para a concessão de acesso. Ao seguir este fluxo, você obtém [tokens de acesso](https://oauth.net/2/access-tokens/) que não expiram, permanecendo válidos até que sejam renovados.
+A autenticação e autorização de usuários são fornecidas por meio de uma implementação restrita do OAuth 2. Atualmente, oferecemos suporte apenas ao fluxo "Código de Autorização" para a concessão de acesso. Ao seguir este fluxo, você obtém tokens de acesso que não expiram, permanecendo válidos até que sejam renovados.
 
 ## Tokens de Acesso e Identificação
 
@@ -29,19 +29,64 @@ Nossos modelos de criação de aplicativos já incluem um sistema de autenticaç
 
 ## Obtendo o token de acesso
 
+### Criação do Aplicativo
+
+Dentro do painel de parceiro acesse:
+
+Aplicativos > Criar Aplicativo
+
+Preencha o nome do aplicativo e selecione a opção de distribuição do app:
+
+- Loja de Aplicativos: Disponível para todos os lojistas.
+
+- Para os seus clientes: Disponível apenas para os lojistas escolhidos por você.
+
+![Criar app](../../static/img/pt/criar-app.jpeg "Criar app")
+
+Após a criação, você verá a mensagem de sucesso contendo o `app_id`.
+
+## Dados Básicos
+- Clique em "Editar dados"
+
+<Alert appearance="warning" title="Atenção"> Em Dados Básicos, o link gerado automaticamente no campo URL de redirecionamento após a instalação serve apenas para apoiar nos testes, mas não deve ser usado em produção.
+</Alert>
+<br/>
+Substitua essa URL pela URL do seu aplicativo que estará pronta para receber o nosso code que será gerado, para que você parceiro faça o POST/Authorization.
+<br/>
+<br/>
+
+![Redirect URL](../../static/img/pt/redirect-url.jpeg "Redirect URL")
+
+- Preencha as informações do aplicativo
+
+- Certifique-se de ativar apenas as permissões necessárias. Escopos desnecessários podem resultar na **reprovação** durante o processo de homologação.
+
+- Para os aplicativos desenvolvidos no Brasil, é imprescindível configurar os webhooks de acordo com os requisitos estabelecidos pela Lei Geral de Proteção de Dados (LGPD) vigente. O preenchimento dessa configuração é **obrigatório** para aprovação na fase de homologação.
+
+- Para garantir a homologação do seu aplicativo, é **obrigatório** que você consulte a documentação sobre webhook disponível em nossa documentação API. Utilize os webhooks sempre que necessário, visando a redução de pulling.
+
+- Não esqueça de salvar todas as informações preenchidas.
+
+<br     />
+
+### De Volta ao Painel do Aplicativo
+
+Encontre o `app_id` e o `client_secret` na parte superior direita, na área <u>Chaves de Acesso</u>.
+
+Selecione sua loja demo para testes durante o desenvolvimento do app.
+
+Instale o aplicativo para se conectar com a API usando a URL: 
+
+`https://www.tiendanube.com/apps/{app_id}/authorize`
+
+<br />
+
+
 <Alert appearance="warning" title="Atenção">
     Ao concluir o processo de obtenção, você receberá um código cURL, essencial para gerar o access_token. É importante ressaltar que esse código possui uma validade de apenas 5 minutos. Certifique-se de utilizá-lo dentro desse período para garantir um acesso bem-sucedido.
 </Alert>
 
 <br />
-
-### Alterando a URL de redirecionamento
-
-Se você tiver modificado a URL de redirecionamento, por favor, substitua-a e salve a nova URL em `https://partners.nuvemshop.com.br/applications/authentication/:app-id` para acessar a página com o código cURL. O campo de URL de redirecionamento pode ser encontrado no formulário de **Dados Básicos**.
-
-![Basic data](../../static/img/pt/card-basic-data.png "Basic data")
-
-Esta etapa é crucial para garantir que o redirecionamento funcione corretamente e que você possa acessar a página de código cURL sem problemas. Certifique-se de atualizar a URL de redirecionamento conforme necessário.
 
 ### Fazendo a Requisição com o Código cURL
 

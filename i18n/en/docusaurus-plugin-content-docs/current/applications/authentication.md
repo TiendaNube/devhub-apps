@@ -29,58 +29,60 @@ Our application creation templates already include an authentication system inte
 
 ## Obtaining the Access Token
 
-<Alert appearance="warning" title="Attention">
-    When you complete the acquisition process, you will receive a cURL code, essential for generating the access_token. It's important to note that this code is valid for only 5 minutes. Make sure to use it within that period to ensure successful access.
-</Alert>
+### Creating the Application
+
+Within the partner panel, go to:
+
+Applications > Create Application
+
+Fill in the application name and select the app distribution option:
+
+App Store: Available to all merchants.
+
+For your clients: Available only to the merchants chosen by you.
+
+![Create Application](../../../../../static/img/en/create-aplication.png "Create Application")
+
+
+After creation, you will see a success message containing the `app_id`.
+
+### Basic Data
+Click on "Edit data"
+
+<Alert appearance="warning" title="Attention"> In Basic Data, the automatically generated link in the Redirect URL field after installation is only for testing support but should not be used in production. </Alert> <br/> Replace this URL with your application URL that will be ready to receive our code that will be generated, so you can partner to do the POST/Authorization. 
+
+<br/> 
+<br/>
+
+![Create Application](../../../../../static/img/en/url-app.jpeg "Redirect URL")
+
+
+- Fill in the application information
+
+- Make sure to activate only the necessary permissions. Unnecessary scopes can result in rejection during the approval process.
+
+- For applications developed in Brazil, it is essential to configure the webhooks according to the requirements established by the General Data Protection Law (LGPD) in force. Filling out this configuration is mandatory for approval in the homologation phase.
+
+- To ensure the approval of your application, it is mandatory that you consult the webhook documentation available in our API documentation. Use webhooks whenever necessary, aiming to reduce pulling.
+
+- Don't forget to save all filled information.
 
 <br />
 
-### Changing the Redirect URL
+### Back to the Application Panel
+Find the `app_id` and `client_secret` at the top right, in the <u>Access Keys</u> area.
 
-If you have modified the redirect URL, please replace it and save the new URL at `https://partners.nuvemshop.com.br/applications/authentication/:app-id` to access the page with the cURL code. The redirect URL field can be found in the **Basic Data** form.
+Select your demo store for testing during app development.
 
-![Basic data](../../../../../static/img/en/card-basic-data.png "Basic data")
+Install the application to connect to the API using the URL:
 
-This step is crucial to ensure that redirection works correctly and that you can access the cURL code page without any issues. Be sure to update the redirect URL as needed.
+`https://www.tiendanube.com/apps/{app_id}/authorize`
 
-### Making the Request with the cURL Code
+<br />
 
-After completing the installation, you will be redirected to a new page containing the cURL code necessary to generate your `access_token`. Simply copy this code and make the request using the tool of your choice.
+<Alert appearance="warning" title="Attention"> Upon completing the obtaining process, you will receive a cURL code, essential for generating the access_token. It is important to note that this code is valid for only 5 minutes. Make sure to use it within this period to ensure successful access. </Alert>
 
-![Authentication cURL](../../../../../static/img/en/authentication-curl.png "Authentication cURL")
-
-The structure of the generated cURL consists of:
-
-- **client_id**: Your application's App ID;
-- **client_secret**: Your client secret;
-- **code**: The code obtained in the URL after installing the application in the demo store.
-
-This step is essential to successfully obtain the access_token and ensure authorized access to our platform.
-
-If the request is successful, you will receive a response in a format similar to this example:
-
-![Authentication cURL Success](../../../../../static/img/en/authentication-curl-success.png "Authentication cURL Success")
-
-```javascript
-{
-    "access_token": "88a2fdd17e10327ed96f4f2dc96b00bca60dfe60",
-    "token_type": "bearer",
-    "scope": "write_products",
-    "user_id": 2093261
-}
-```
-
-You can manually assemble the cURL command based on the provided example. Here's the cURL command to make the POST request using the mentioned information:
-
-```bash
-curl -X POST "https://www.tiendanube.com/apps/authorize/token" \
--d "client_id=client_id" \
--d "client_secret=client_secret" \
--d "code=code"
-```
-
-Make sure to replace `client_id`, `client_secret`, and `code` with the correct values from your app created in the Partner Portal.
-Remember, you can run this command in a terminal or a tool that supports cURL to test the request and obtain the access_token.
+<br />
 
 ### How to Obtain a New cURL Code
 
