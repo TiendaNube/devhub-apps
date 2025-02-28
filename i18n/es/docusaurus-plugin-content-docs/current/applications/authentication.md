@@ -29,19 +29,65 @@ Nuestros modelos de creación de aplicaciones ya incluyen un sistema de autentic
 
 ## Obtención del token de acceso
 
-<Alert appearance="warning" title="Atención">
-    Al finalizar el proceso de obtención, recibirás un código cURL, esencial para generar el access_token. Es importante destacar que este código tiene una validez de solo 5 minutos. Asegúrate de usarlo dentro de ese período para garantizar un acceso exitoso.
-</Alert>
+<br />
+
+### Creación de la Aplicación
 
 <br />
 
-### Cambio de la URL de Redirección
+Dentro del panel de socio acceda a:
 
-Si has modificado la URL de redirección, por favor, reemplázala y guarda la nueva URL en `https://partners.tiendanube.com/applications/authentication/:app-id` para acceder a la página con el código cURL. El campo de URL de redirección se encuentra en el formulario de **Datos Básicos**.
+Aplicaciones > Crear Aplicación
 
-![Datos básicos](../../../../../static/img/es/card-basic-data.png "Datos básicos")
+Complete el nombre de la aplicación y seleccione la opción de distribución de la aplicación:
 
-Este paso es crucial para asegurar que el redireccionamiento funcione correctamente y que puedas acceder a la página de código cURL sin problemas. Asegúrate de actualizar la URL de redirección según sea necesario.
+- Tienda de Aplicaciones: Disponible para todos los comerciantes.
+
+- Para sus clientes: Disponible solo para los comerciantes elegidos por usted.
+
+![Crear APP](../../../../../static/img/es/create-app.png "Crear APP")
+
+Después de la creación, verá el mensaje de éxito que contiene el `app_id`.
+
+## Datos Básicos
+<br />
+
+- Haga clic en "Editar datos"
+
+<Alert appearance="warning" title="Atención"> En Datos Básicos, el enlace generado automáticamente en el campo URL de redireccionamiento después de la instalación sirve solo para apoyar en las pruebas, pero no debe usarse en producción. </Alert> 
+<br/> 
+
+Reemplace esta URL por la URL de su aplicación que estará lista para recibir nuestro código que se generará, para que usted, socio, realice el POST/Authorization. 
+<br/> 
+<br/>
+
+![URLs](../../../../../static/img/es/app-urls.jpeg "URLs")
+<br/>
+
+- Complete la información de la aplicación
+
+- Asegúrese de activar solo los permisos necesarios. Alcances innecesarios pueden resultar en la **reprobación** durante el proceso de homologación.
+
+- Para garantizar la homologación de su aplicación, es **obligatorio** que consulte la documentación sobre webhook disponible en nuestra documentación API. Utilice los webhooks siempre que sea necesario, con el objetivo de reducir el pulling.
+
+- No olvide guardar toda la información completada.
+
+<br />
+
+### De Vuelta al Panel de la Aplicación
+- Encuentre el `app_id` y el `client_secret` en la parte superior derecha, en el área <u>Claves de Acceso</u>.
+
+- Seleccione su tienda demo para pruebas durante el desarrollo de la aplicación.
+
+Instale la aplicación para conectarse con la API usando la URL:
+
+`https://www.tiendanube.com/apps/{app_id}/authorize`
+
+<br />
+
+<Alert appearance="warning" title="Atención"> Al concluir el proceso de obtención, recibirá un código cURL, esencial para generar el access_token. Es importante destacar que este código tiene una validez de solo 5 minutos. Asegúrese de utilizarlo dentro de ese período para garantizar un acceso exitoso. </Alert>
+
+<br />
 
 ### Realizar la Solicitud con el Código cURL
 
