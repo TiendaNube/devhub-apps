@@ -71,6 +71,11 @@ const sidebars = {
       label: "Homologação",
       items: ["homologation/overview", "homologation/checklist"],
     },
+    {
+      type: "doc",
+      label: "Guia de integração de ERPs",
+      id: "erp-guide/overview",
+    }
   ],
 
   // custom sidebar used until we release the nube sdk to the public
