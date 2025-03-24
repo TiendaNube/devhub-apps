@@ -14,8 +14,10 @@ This SDK is a Work In Progress! All features are subject to change.
 The main entry point for the script is located in `src/main.ts`. 
 
 ```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
 export function App(nube: NubeSDK) {
-    // your code goes here
+  // your code goes here
 }
 ```
 
@@ -25,14 +27,14 @@ The received `nube: NubeSDK` object contains all the helper functions required t
 
 ```typescript
 export type NubeSDK = {
-    // Start listening to an event
-	on(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
-    // Stop listening to an event
-	off(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
-    // Dispatch an event
-	send(event: NubeSDKSendableEvent, modifier?: NubeSDKStateModifier): void;
-    // Get current state
-	getState(): Readonly<NubeSDKState>;
+  // Start listening to an event
+  on(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
+  // Stop listening to an event
+  off(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
+  // Dispatch an event
+  send(event: NubeSDKSendableEvent, modifier?: NubeSDKStateModifier): void;
+  // Get current state
+  getState(): Readonly<NubeSDKState>;
 };
 ```
 
@@ -43,12 +45,14 @@ The programming model used by NubeSDK is mostly event based, that is, the SDK di
 Listening to events is done through the received `nube` instance:
 
 ```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
 export function App(nube: NubeSDK) {
-    // Listen to cart update event, dispatched every time that the cart is updated
-	nube.on("cart:update", ({ cart }) => {
-        // Log the total price of the cart to console
-        console.log(cart.prices.total); 
-	});
+// Listen to cart update event, dispatched every time that the cart is updated
+nube.on("cart:update", ({ cart }) => {
+  // Log the total price of the cart to console
+  console.log(cart.prices.total); 
+});
 }
 ```
 
@@ -57,31 +61,33 @@ export function App(nube: NubeSDK) {
 Dispatching events is done through the received `nube` instance:
 
 ```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
 export function App(nube: NubeSDK) {
-    // Listen to cart update event, dispatched every time that the cart is updated
-	nube.on("cart:update", ({ cart }) => {
-        // Reject the cart if it has fewer than 5 items
-        if (cart.items.length < 5) {
-            // Dispatch a failed `cart:validate` event with the reason why it failed to validate
-            nube.send("cart:validate", () => ({
-                cart: {
-                    validation: {
-                        status: "fail",
-                        reason: "Cart must have at least 5 items!",
-                    },
-            	},
-			}));
-		} else {
-            // Dispatch a successful `cart:validate` event
-            nube.send("cart:validate", () => ({
-                cart: {
-                    validation: {
-                        status: "success",
-                    },
-            	},
-			}));
-        }
-	});
+  // Listen to cart update event, dispatched every time that the cart is updated
+  nube.on("cart:update", ({ cart }) => {
+    // Reject the cart if it has fewer than 5 items
+    if (cart.items.length < 5) {
+      // Dispatch a failed `cart:validate` event with the reason why it failed to validate
+      nube.send("cart:validate", () => ({
+        cart: {
+          validation: {
+            status: "fail",
+            reason: "Cart must have at least 5 items!",
+          },
+        },
+      }));
+    } else {
+      // Dispatch a successful `cart:validate` event
+      nube.send("cart:validate", () => ({
+        cart: {
+          validation: {
+            status: "success",
+          },
+        },
+      }));
+    }
+  });
 }
 ```
 
@@ -90,14 +96,15 @@ export function App(nube: NubeSDK) {
 There is a special event that can be dispatched by the script to configure some special parameters related to the behavior of the script:
 
 ```typescript
-export function App(nube: NubeSDK) {
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
-    // Tell NubeSDK that this script wants to validate the content of the cart
-	nube.send("config:set", () => ({
-		config: {
-			has_cart_validation: true
-		},
-	}));
+export function App(nube: NubeSDK) {
+// Tell NubeSDK that this script wants to validate the content of the cart
+nube.send("config:set", () => ({
+  config: {
+    has_cart_validation: true
+  },
+}));
 }
 ```
 
