@@ -43,6 +43,21 @@ Before adding your script, make sure to run the build process using:
 npm run build
 ```
 
+## Enabling development mode
+
+Applications created using the `create-nube-app` CLI tool are already preconfigured for development mode.
+By running the following command:
+
+```sh
+npm run dev
+```
+
+A local development server will start on port `8080`.
+
+To use development mode, you must first enable it and register a valid development URL in the Partner Portal, under your scripts's configuration settings.
+
+![NubeSDK Flag](../../../static/img/pt/nube-sdk-development-mode.png "NubeSDK Flag")
+
 ## Next Steps
 
 - Learn more about [Script Structure](./script-structure)
