@@ -9,6 +9,16 @@ This SDK is a Work In Progress! All features are subject to change.
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
+The communication between the main page and the scripts is handled through events, ensuring a reactive and flexible integration where each component operates independently without direct calls.
+
+- **Events Dispatched by the Main Page:**  
+  When significant changes occur—such as an update to the shopping cart—the main page dispatches events (e.g., `cart_updated`) to notify scripts that a change has occurred.
+
+- **Events Dispatched by the Scripts:**  
+  Conversely, the scripts can emit events (like `cart:validate`) to report on the validity of the cart contents or to signal that additional actions might be required.
+
+This event-driven approach allows the application to respond in real-time to state changes, simplifying maintenance and enhancing scalability.
+
 ## `config:set`
 
 Dispatched by `script` to setup initial script configuration
@@ -86,6 +96,26 @@ nube.on("shipping:update", ({ shipping }) => {
   if (shipping?.selected) {
     console.log(`Shipping method selected has changed to: ${shipping?.selected}`);
   }
+});
+```
+
+## `customer:update`
+
+Dispatched by `checkout` when the customer data changes.
+
+```typescript title="Example"
+nube.on("customer:update", ({ customer }) => {
+  console.log(`Customer name has changed to: ${customer?.contact?.name}`);
+});
+```
+
+## `payment:update`
+
+Dispatched by `checkout` when the payment method changes.
+
+```typescript title="Example"
+nube.on("payment:update", ({ payment }) => {
+  console.log(`payment method has changed to: ${payment?.selected}`);
 });
 ```
 
