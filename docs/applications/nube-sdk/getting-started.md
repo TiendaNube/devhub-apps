@@ -12,6 +12,12 @@ This SDK is a Work In Progress! All features are subject to change.
 
 These commands download and run the `create-nube-app` CLI, which will guide you through the process of setting up your project.
 
+:::info
+Compatibility Note
+
+Nube SDK requires Node.js version 16+. Please upgrade if your package manager warns about it.
+:::
+
 ### With npm
 
 ```bash
@@ -30,6 +36,12 @@ yarn create nube-app
 pnpm create nube-app
 ```
 
+### With Bun
+
+```bash
+bun create nube-app
+```
+
 ## Adding script to your application
 
 Adding the script to your application has the same process that with any other script, the only difference is that you have to enable the `Uses Nube SDK` flag in the script creation screen, otherwise it will loaded as a classic script and it will fail to work as expected.
@@ -41,7 +53,8 @@ The "Use NubeSDK" option is currently supported only on the Checkout page.
 If you select this option for scripts intended for the Store page, the SDK will not work as expected.
 :::
 
-### Important!
+**Important!**
+
 Before adding your script, make sure to run the build process using:
 
 ```sh

@@ -131,6 +131,40 @@ function MyComponent() {
 }
 ```
 
+## `Button`
+
+Button supports multiple styles and click event.
+It should be embedded inside a container to control layout.
+
+![Button](../../../static/img/pt/nube-sdk-ui-button-1.png "Button")
+
+**Button Props**
+
+| Prop      | Type                | Default     | Description                                                      |
+| --------- | ------------------- | ----------- | ---------------------------------------------------------------- |
+| `id`      | `string`            | —           | Unique identifier for the Button.                                |
+| `children`| `string`            | —           | Text displayed on the Button.                                    |
+| `onClick` | `(event) => void`   | —           | Function called when the Button is clicked.                      |
+| `variant` | `string`            | `"primary"` | Defines the style variation of the Button (e.g., primary, secondary). |
+| `disabled`| `boolean`           | `false`     | Disables the Button when `true`.                                 |
+
+```typescript title="Example"
+import { Button } from "@tiendanube/nube-sdk-jsx";
+
+export function Component() {
+  return (
+    <Button
+      onClick={() => {
+        console.log("Button clicked!");
+      }}
+      variant="primary"
+    >
+      Hello World!
+    </Button>
+  );
+}
+```
+
 
 ## `Field`
 
@@ -225,5 +259,39 @@ export function Logo() {
       ]}
     />
   );
+}
+```
+
+## `Dialog`
+
+The `Dialog` component is used to display modal dialogs.
+
+![Field](../../../static/img/pt/nube-sdk-ui-dialog-1.png "Field")
+
+```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Dialog, Txt } from "@tiendanube/nube-sdk-jsx";
+
+export function Component() {
+  return (
+    <Dialog
+      open
+      onClose={() => {
+        // Handle close
+      }}
+    >
+      <Txt>Hello World!</Txt>
+    </Dialog>
+  );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        before_main_content: <Component />,
+      },
+    },
+  }));
 }
 ```
