@@ -261,37 +261,3 @@ export function Logo() {
   );
 }
 ```
-
-## `Dialog`
-
-The `Dialog` component is used to display modal dialogs.
-
-![Field](../../../static/img/pt/nube-sdk-ui-dialog-1.png "Field")
-
-```typescript
-import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { Dialog, Txt } from "@tiendanube/nube-sdk-jsx";
-
-export function Component() {
-  return (
-    <Dialog
-      open
-      onClose={() => {
-        // Handle close
-      }}
-    >
-      <Txt>Hello World!</Txt>
-    </Dialog>
-  );
-}
-
-export function App(nube: NubeSDK) {
-  nube.send("ui:slot:set", () => ({
-    ui: {
-      slots: {
-        before_main_content: <Component />,
-      },
-    },
-  }));
-}
-```
