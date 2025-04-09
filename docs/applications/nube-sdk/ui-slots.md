@@ -21,19 +21,20 @@ When you want to add a UI component, you need to specify their location on the s
 
 These are the slots that are available in checkout:
 
-| Slot                   | Page             |
-|------------------------|------------------|
-| before_main_content    | start, payment   |
-| after_main_content     | start, payment   |
-| before_line_items      | start            |
-| after_line_items       | start, payment   |
-| after_contact_form     | start            |
-| after_address_form     | start            |
-| after_billing_form     | start            |
-| after_payment_options  | payment          |
-| before_address_form    | start            |
-| before_billing_form    | start            |
-| before_contact_form    | start            |
+| Slot                   | Page                         |
+|------------------------|------------------------------|
+| before_main_content    | start, payment               |
+| after_main_content     | start, payment               |
+| before_line_items      | start                        |
+| after_line_items       | start, payment               |
+| after_contact_form     | start                        |
+| after_address_form     | start                        |
+| after_billing_form     | start                        |
+| after_payment_options  | payment                      |
+| before_address_form    | start                        |
+| before_billing_form    | start                        |
+| before_contact_form    | start                        |
+| modal_content          | start, payment, success      |
 
 This is their usual location:
 

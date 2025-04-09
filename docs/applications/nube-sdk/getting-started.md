@@ -3,6 +3,7 @@ title: Getting Started
 ---
 
 import AppTypes from '@site/src/components/AppTypes';
+import PkgTabs from '@site/src/components/PkgTabs';
 
 :::warning
 This SDK is a Work In Progress! All features are subject to change.
@@ -18,29 +19,12 @@ Compatibility Note
 Nube SDK requires Node.js version 16+. Please upgrade if your package manager warns about it.
 :::
 
-### With npm
-
-```bash
-npm create nube-app@latest
-```
-
-### With yarn
-
-```bash
-yarn create nube-app
-```
-
-### With PNPM
-
-```bash
-pnpm create nube-app
-```
-
-### With Bun
-
-```bash
-bun create nube-app
-```
+<PkgTabs>
+  <PkgTabs.Item value="npm" command="npm create nube-app@latest" />
+  <PkgTabs.Item value="Yarn" command="yarn create nube-app" />
+  <PkgTabs.Item value="pnpm" command="pnpm create nube-app" />
+  <PkgTabs.Item value="Bun" command="bun create nube-app" />
+</PkgTabs>
 
 ## Adding script to your application
 
@@ -57,18 +41,24 @@ If you select this option for scripts intended for the Store page, the SDK will 
 
 Before adding your script, make sure to run the build process using:
 
-```sh
-npm run build
-```
+<PkgTabs>
+  <PkgTabs.Item value="npm" command="npm run build" />
+  <PkgTabs.Item value="Yarn" command="yarn build" />
+  <PkgTabs.Item value="pnpm" command="pnpm run build" />
+  <PkgTabs.Item value="Bun" command="bun run build" />
+</PkgTabs>
 
 ## Enabling development mode
 
 Applications created using the `create-nube-app` CLI tool are already preconfigured for development mode.
 By running the following command:
 
-```sh
-npm run dev
-```
+<PkgTabs>
+  <PkgTabs.Item value="npm" command="npm run dev" />
+  <PkgTabs.Item value="Yarn" command="yarn dev" />
+  <PkgTabs.Item value="pnpm" command="pnpm run dev" />
+  <PkgTabs.Item value="Bun" command="bun run dev" />
+</PkgTabs>
 
 A local development server will start on port `8080`.
 
