@@ -126,6 +126,10 @@ export default defineConfig({
 
 Adding the script to your application has the same process that with any other script, the only difference is that you have to enable the `Uses Nube SDK` flag in the script creation screen, otherwise it will loaded as a classic script and it will fail to work as expected.
 
+:::info
+If the scripts will be inserted **into an existing app**, please send the app_id to [api@tiendanube.com](mailto:api@tiendanube.com) / [api@nuvemshop.com.br](mailto:api@nuvemshop.com.br) for enablement. Otherwise, you will need to **create a new app**.
+:::
+
 ![NubeSDK Flag](../../../static/img/pt/nube-sdk-flag.png "NubeSDK Flag")
 
 :::info
