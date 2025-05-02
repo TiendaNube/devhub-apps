@@ -43,4 +43,4 @@ O vídeo de demonstração explica para o nosso time técnico como a sua soluç�
 
 ## Próximos passos
 
-- Enviar os artefatos ou tirar dúvidas envie e-mail para publicacao@nuvemshop.com.br
+- Em seu portal de parceiros, solicita a homologação do aplicativo em questão.  
