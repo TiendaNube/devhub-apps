@@ -31,6 +31,7 @@ These are the slots that are available in checkout:
 | after_address_form     | start                        |
 | after_billing_form     | start                        |
 | after_payment_options  | payment                      |
+| after_line_item_prices | start, payment               |
 | before_address_form    | start                        |
 | before_billing_form    | start                        |
 | before_contact_form    | start                        |

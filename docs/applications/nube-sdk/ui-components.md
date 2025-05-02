@@ -41,18 +41,18 @@ export function App(nube: NubeSDK) {
 }
 ```
 
-## `Check`
+## `Checkbox`
 
-Check allow the user to select one or more items from a set. Checkboxes can be used to turn an option on or off.
+Checkbox allows the user to select one or more items from a set. Checkboxes can be used to turn an option on or off.
 
 ```typescript title="Example"
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { Box, Check } from "@tiendanube/nube-sdk-jsx";
+import { Box, Checkbox } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Box>
-      <Check
+      <Checkbox
         id="my-checkbox"
         label="Checkbox"
         name="checkbox"
@@ -75,21 +75,21 @@ export function App(nube: NubeSDK) {
 }
 ```
 
-## `Col`
+## `Column`
 
 Column container, layouts children in a column, supports multiple sizes, styling and alignment options.
 
 ![Column](../../../static/img/pt/nube-sdk-ui-col-1.png "Column")
 
 ```typescript title="Example"
-import { Col, Txt } from "@tiendanube/nube-sdk-jsx";
+import { Column, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
-    <Col width={100} height={200}>
-      <Txt>Hello 1</Txt>
-      <Txt>Hello 2</Txt>
-    </Col>
+    <Column width={100} height={200}>
+      <Text>Hello 1</Text>
+      <Text>Hello 2</Text>
+    </Column>
   );
 }
 ```
@@ -112,20 +112,19 @@ function MyComponent() {
 }
 ```
 
-## `Txt`
-
-Text component, support multiple styles.
+## `Text`
+Text component supports multiple styles.
 It needs to be embedded inside a box to control anything related to layout.
 
 ![Text](../../../static/img/pt/nube-sdk-ui-txt-1.png "Text")
 
 ```typescript title="Example"
-import { Box, Txt } from "@tiendanube/nube-sdk-jsx";
+import { Box, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Box>
-      <Txt color="red" background="blue">Hello!!</Txt>
+      <Text color="red" background="blue">Hello!!</Text>
     </Box>
   );
 }
@@ -182,6 +181,7 @@ function MyComponent() {
       <Field
         id="myField"
         label="Field"
+        value="value"
         name="field"
         onChange={(e) => {
           console.log(`value: ${e.value}`);
@@ -192,21 +192,21 @@ function MyComponent() {
 }
 ```
 
-## `TxtArea`
+## `Textarea`
 
 Multi-line text input for extended content.
 
 ```typescript title="Example"
-import { Box, TxtArea } from "@tiendanube/nube-sdk-jsx";
+import { Box, Textarea } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Box>
-      <TxtArea
+      <Textarea
         id="my-textarea"
         maxLength={300}
         row={3}
-        label="TxtArea"
+        label="Textarea"
         name="txtarea"
         onChange={(e) => {
           console.log(`value: ${e.value}`);
@@ -217,7 +217,7 @@ function MyComponent() {
 }
 ```
 
-## `Img`
+## `Image`
 
 Displays an image.
 It needs to be embedded inside a box to control anything related to layout.
@@ -225,12 +225,12 @@ It needs to be embedded inside a box to control anything related to layout.
 ![Field](../../../static/img/pt/nube-sdk-ui-img-1.png "Field")
 
 ```typescript title="Example"
-import { Col, Img } from "@tiendanube/nube-sdk-jsx";
+import { Col, Image } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Col width={100} height={200}>
-      <Img
+      <Image
         src="https://app-insti-cdn.nuvemshop.com.br/site/dist/images/widgets/closing-cta/image-3.webp"
         alt="Nuvemshop Logo"
       />
@@ -244,7 +244,7 @@ Optionally, the `Img` component can receive alternative sources loaded by media 
 ```typescript title="Example"
 export function Logo() {
   return (
-    <Img
+    <Image
       src="https://hostname/default.png"
       alt="Hello"
       sources={[
