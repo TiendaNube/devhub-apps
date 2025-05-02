@@ -43,7 +43,7 @@ export function App(nube: NubeSDK) {
 
 ## `Checkbox`
 
-Checkbox allow the user to select one or more items from a set. Checkboxes can be used to turn an option on or off.
+Checkbox allows the user to select one or more items from a set. Checkboxes can be used to turn an option on or off.
 
 ```typescript title="Example"
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
@@ -82,13 +82,13 @@ Column container, layouts children in a column, supports multiple sizes, styling
 ![Column](../../../static/img/pt/nube-sdk-ui-col-1.png "Column")
 
 ```typescript title="Example"
-import { Column, Txt } from "@tiendanube/nube-sdk-jsx";
+import { Column, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Column width={100} height={200}>
-      <Txt>Hello 1</Txt>
-      <Txt>Hello 2</Txt>
+      <Text>Hello 1</Text>
+      <Text>Hello 2</Text>
     </Column>
   );
 }
@@ -113,8 +113,7 @@ function MyComponent() {
 ```
 
 ## `Text`
-
-Text component, support multiple styles.
+Text component supports multiple styles.
 It needs to be embedded inside a box to control anything related to layout.
 
 ![Text](../../../static/img/pt/nube-sdk-ui-txt-1.png "Text")
