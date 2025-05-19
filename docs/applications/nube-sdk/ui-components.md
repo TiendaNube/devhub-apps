@@ -170,6 +170,18 @@ export function Component() {
 Text input field, supports multiple styles and change events / focus events.
 It needs to be embedded inside a box to control anything related to layout.
 
+**Properties**
+
+| Property | Type                           | Required | Description                                                        |
+| -------- | ------------------------------ | -------- | -------------------------------------------------------------------|
+| name     | string                         | Yes      | The name of the field, used to identify it in forms.               |
+| label    | string                         | Yes      | The label text displayed above the field.                          |
+| value    | string                         | No       | The current value of the field input.                              |
+| autoFocus| boolean                        | No       | Whether the field should automatically receive focus when mounted. |
+| onChange | NubeComponentFieldEventHandler | No       | Function called when the field value changes.                      |
+| onBlur   | NubeComponentFieldEventHandler | No       | Function called when the field loses focus.                        |
+| onFocus  | NubeComponentFieldEventHandler | No       | Function called when the field receives focus.                     |
+
 ![Field](../../../static/img/pt/nube-sdk-ui-field-1.png "Field")
 
 ```typescript title="Example"
@@ -195,6 +207,20 @@ function MyComponent() {
 ## `Textarea`
 
 Multi-line text input for extended content.
+
+**Properties**
+
+| Property  | Type                              | Required | Description                                                            |
+| --------- | --------------------------------- | -------- | -----------------------------------------------------------------------|
+| name      | string                            | Yes      | The name of the textarea, used to identify it in forms.                |
+| label     | string                            | Yes      | The label text displayed above the textarea.                           |
+| value     | string                            | No       | The current value of the textarea.                                     |
+| maxLength | number                            | No       | The maximum number of characters allowed in the textarea.              |
+| rows      | number                            | No       | The number of visible text lines in the textarea.                      |
+| autoFocus | boolean                           | No       | Whether the textarea should automatically receive focus when mounted.  |
+| onChange  | NubeComponentTextareaEventHandler | No       | Function called when the textarea value changes.                       |
+| onBlur    | NubeComponentTextareaEventHandler | No       | Function called when the textarea loses focus.                         |
+| onFocus   | NubeComponentTextareaEventHandler | No       | Function called when the textarea receives focus.                      |
 
 ```typescript title="Example"
 import { Box, Textarea } from "@tiendanube/nube-sdk-jsx";

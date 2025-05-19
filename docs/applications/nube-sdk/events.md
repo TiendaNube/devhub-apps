@@ -229,14 +229,38 @@ nube.on("shipping:update", ({ shipping }) => {
 });
 ```
 
+## `shipping:select`
+
+Dispatched by `script` to change checkout shipping option.
+
+```typescript title="Example"
+function App (nube: NubeSDK) {
+  nube.send("shipping:select", () => ({
+    shipping: {
+      selected: "OPTION_ID",
+    }
+  }));
+  
+  nube.on("shipping:select:success", ({ shipping }) => {
+    console.log("selected option", shipping.selected)
+  });
+  
+  nube.on("shipping:select:fail", ({ shipping }) => {
+    console.log("selected option", shipping.selected)
+  });
+}
+```
+
 ## `customer:update`
 
 Dispatched by `checkout` when the customer data changes.
 
 ```typescript title="Example"
-nube.on("customer:update", ({ customer }) => {
-  console.log(`Customer name has changed to: ${customer?.contact?.name}`);
-});
+nube.send("shipping:select", () => ({
+  shipping: {
+    selected: "OPTION_ID",
+  }
+}));
 ```
 
 ## `payment:update`

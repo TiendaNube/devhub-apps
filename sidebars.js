@@ -40,8 +40,7 @@ const sidebars = {
         "applications/authentication",
         "applications/native",
         "applications/standalone",
-        // Hide Nube SDK for now, it has its own sidebar!
-        /*{
+        {
           type: "category",
           label: "Nube SDK",
           items: [
@@ -54,7 +53,7 @@ const sidebars = {
             "applications/nube-sdk/ui-components",
             "applications/nube-sdk/ui-slots",
           ],
-        },*/
+        },
       ],
     },
     {
