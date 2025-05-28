@@ -190,6 +190,17 @@ If development mode is active, an object similar to the following will be return
 
 Ensure that the script attribute of your app contains the URL localhost. This confirms that the environment is properly set up for development.
 
+## NubeSDK Assistant
+
+The NubeSDK Assistant is a specialized ChatGPT-powered tool designed to help developers create and build apps using the NubeSDK. This assistant provides:
+
+- Expert guidance on NubeSDK implementation
+- Code examples and best practices
+- Troubleshooting support
+- Step-by-step assistance in app development
+
+You can access the NubeSDK Assistant at: [NubeSDK Assistant](https://chatgpt.com/g/g-6812298534c88191be0705ba82fea093-nubesdk-assistant)
+
 ## Next Steps
 
 - Learn more about [Script Structure](./script-structure)
