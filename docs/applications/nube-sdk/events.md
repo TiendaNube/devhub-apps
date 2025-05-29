@@ -163,9 +163,11 @@ Dispatched by `app` to add a coupon code to the cart.
 
 ```typescript
 nube.send("coupon:add", () => ({
-  coupon: {
-    code: "SUMMER2024"
-  }
+  cart: {
+    coupon: {
+      code: "SUMMER2024",
+    },
+  },
 }));
 ```
 
