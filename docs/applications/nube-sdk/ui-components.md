@@ -28,7 +28,7 @@ function MyComponent() {
   return (
     <Box width={100} height={200}>
       {/* children */}
-    </Box>;
+    </Box>
   );
 }
 
