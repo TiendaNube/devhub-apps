@@ -332,5 +332,5 @@ nube.send("ui:slot:set", () => ({
 ```
 
 - Learn more about [Browser API's](./browser-apis)
-- Learn more about [UI Components](./ui-components)
+- Learn more about [Components](./components)
 - Learn more about [UI Slots](./ui-slots)
