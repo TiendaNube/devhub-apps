@@ -24,11 +24,11 @@ This event-driven approach allows the application to respond in real-time to sta
 Dispatched by `script` to setup initial script configuration
 
 ```typescript title="Example"
-nube.send("config:set", () => {
+nube.send("config:set", () => ({
   config: {
     has_cart_validation: true
   },
-});
+}));
 ```
 
 ### AppConfig
