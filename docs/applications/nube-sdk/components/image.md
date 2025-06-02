@@ -9,7 +9,7 @@ import AppTypes from '@site/src/components/AppTypes';
 This SDK is a Work In Progress! All features are subject to change.
 :::
 
-We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](./ui-slots) by sending the [ui:slot:set](./events#uislotset) event.
+We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](../ui-slots) by sending the [ui:slot:set](../events#uislotset) event.
 
 Used to display images. It supports properties such as `src`, `alt`, `width`, `height`, and responsive `sources` for different screen sizes.
 
