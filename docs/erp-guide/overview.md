@@ -480,7 +480,7 @@ Os produtos com variação utilizam os conceitos de **attributes** (atributos) e
 
 Use este endpoint para criar um novo produto na loja.
 
-[Requisição de exemplo:]((https://tiendanube.github.io/api-documentation/resources/product))
+[Requisição de exemplo:](https://tiendanube.github.io/api-documentation/resources/product)
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products \

@@ -475,7 +475,7 @@ Products with variation use the concepts of **attributes** and **values**:
 
 Use this endpoint to create a new product in the store.
 
-[Example request:]((https://tiendanube.github.io/api-documentation/resources/product))
+[Example request:](https://tiendanube.github.io/api-documentation/resources/product)
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products \
