@@ -44,7 +44,7 @@ function MyComponent() {
 | value     | string                            | No       | The current value of the textarea.                                     |
 | maxLength | number                            | No       | The maximum number of characters allowed in the textarea.              |
 | rows      | number                            | No       | The number of visible text lines in the textarea.                      |
-| mark     | string                             | No       | Format mask for the field input (e.g., "000.000.000-00" for CPF).      |
+| mask     | string                             | No       | Format mask for the field input (e.g., "000.000.000-00" for CPF).      |
 | style    | StyleSheet                         | No       | Custom styles for the field.                                           |
 | autoFocus | boolean                           | No       | Whether the textarea should automatically receive focus when mounted.  |
 | onChange  | NubeComponentTextareaEventHandler | No       | Function called when the textarea value changes.                       |
