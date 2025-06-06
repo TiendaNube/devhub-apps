@@ -24,6 +24,9 @@ A text input element for forms that supports properties like name, label, and va
 ### [Textarea](/docs/applications/nube-sdk/components/textarea)
 A multi-line text input component with support for various event handlers and styling options.
 
+## [Select](/docs/applications/nube-sdk/components/select)
+A dropdown selection component that allows users to choose from a list of predefined options.
+
 ### [Checkbox](/docs/applications/nube-sdk/components/checkbox)
 A component that allows users to select one or more items from a set, with support for labels and state management.
 
