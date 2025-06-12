@@ -7,7 +7,7 @@ title: Visión general
 
 **¿Qué es una homologación de app?**
 
-La homologación es el proceso de **validación y certificación** de una aplicación dentro del ecosistema Nuvemshop. Add commentMore actions
+La homologación es el proceso de **validación y certificación** de una aplicación dentro del ecosistema Nuvemshop. 
 <br>Este proceso garantiza que la app cumpla con los criterios técnicos y funcionales esperados, asegurando una integración eficiente y segura.</br>
 Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir diferentes caminos, siendo:
 
@@ -24,7 +24,7 @@ Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir
 
 **Homologación asíncrona**
 
-* En homologaciones asíncronas, una vez enviados todos los artefactos, el equipo realizará el análisis de los insumos y las pruebas necesarias. Add commentMore actions
+* En homologaciones asíncronas, una vez enviados todos los artefactos, el equipo realizará el análisis de los insumos y las pruebas necesarias. 
 * Si se cumplen todos los criterios, la app pasará a la etapa de publicación y recibirás más información para seguimiento.
 * Si se identifican pendientes en las pruebas realizadas con base en los artefactos enviados, entregaremos un informe detallando cada punto a ser ajustado.
 * Después de realizar los ajustes, el socio debe responder por el mismo canal con las evidencias para que podamos volver a validar los escenarios.
@@ -39,7 +39,7 @@ Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir
 * Luego de implementar los ajustes, se agendará una nueva reunión para validar los puntos pendientes de la reunión anterior.
 * Este proceso se repetirá hasta que todos los puntos estén completados, permitiendo que la app continúe a su publicación en la App Store.
 
-<Alert appearance="warning" title="Atención"> En estos casos de homologaciones síncronas, se proporcionará un enlace para agendar la reunión. Add commentMore actions
+<Alert appearance="warning" title="Atención"> En estos casos de homologaciones síncronas, se proporcionará un enlace para agendar la reunión. 
 </Alert>
 <br/>
 

@@ -19,7 +19,7 @@ Para garantir um processo eficiente e organizado, siga o fluxo abaixo para a hom
 * A plataforma enviará uma comunicação informando os próximos passos.
 
 1.2. **Envio de Artefatos**
-* Após receber o retorno da nossa equipe, você deverá **enviar os artefatos** conforme os requisitos obrigatórios [hiperlink da sessão de requisitos obrigatórios].
+* Após receber o retorno da nossa equipe, você deverá **enviar os artefatos** conforme os   [requisitos obrigatórios](requirements.md) 
 * Certifique-se de incluir todos os elementos necessários para uma avaliação completa.
 
 1.3. **Validação dos Artefatos**

@@ -6,7 +6,7 @@ title: Homologação Síncrona de Apps
 ##  Homologação Síncrona
 
 Caso o app **seja dos tipos ERP, Payments e Shipping** ou que possuam tratativa de **dados sensíveis**, caberá a necessidade da realização da **homologação síncrona**. <br/>
-Do qual a equipe técnica **analisará os artefatos enviado** juntamente com uma etapa de **validação em conjunto**, com interação direta entre o parceiro e o time de homologação, que passará por todos os itens da checklist.
+Na qual a equipe técnica **analisará os artefatos enviado** juntamente com uma etapa de **validação em conjunto**, com interação direta entre o parceiro e o time de homologação, que passará por todos os itens da checklist.
 
 **1. Solicitação de Homologação**
 

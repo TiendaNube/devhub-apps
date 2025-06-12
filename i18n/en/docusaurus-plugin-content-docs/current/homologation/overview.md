@@ -8,7 +8,7 @@ title: Overview
 **What is an app approval?**
 
 Approval is the process of **validating and certifying** an application within the Nuvemshop ecosystem. 
-<br>This process ensures that the app meets the expected technical and functional criteria, ensuring an efficient and secure integration.</br>
+This process ensures that the app meets the expected technical and functional criteria, ensuring an efficient and secure integration.
 Depending on the type of application developed, the approval process may follow different paths, such as:
 
 * **Asynchronous Approval:** In this process, all artifacts must be submitted for review, and our team will perform validation tests. 
@@ -43,4 +43,4 @@ Depending on the type of application developed, the approval process may follow 
 </Alert>
 <br/>
 
-\* *Checklist = document that contains the required scopes and processes, which will be used as a guide during the approval session.*
+> **Checklist:** document that contains the required scopes and processes, used as a guide during the approval session.
