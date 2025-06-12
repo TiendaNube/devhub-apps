@@ -47,4 +47,4 @@ Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar 
 </Alert>
 <br/>
 
-\* *Checklist = documento contendo os escopos e processos obrigatórios, que serão utilizados como guia no momento da homologação.*
+ *Checklist = documento contendo os escopos e processos obrigatórios, que serão utilizados como guia no momento da homologação.*
