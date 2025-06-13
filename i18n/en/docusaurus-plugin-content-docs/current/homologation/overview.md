@@ -18,8 +18,8 @@ Depending on the type of application developed, the approval process may follow 
 
 ![Flow](../../static/img/en/imagem-fluxo-Ingles.png "Flow") 
 <br/>
-<Alert appearance="warning" title="Important"> If discrepancies, difficulties, or any blockers are encountered during the approval process, our team will contact you through your open request.
-</Alert>
+ If discrepancies, difficulties, or any blockers are encountered during the approval process, our team will contact you through your open request.
+
 <br/>
 
 **Asynchronous approval**
@@ -39,8 +39,8 @@ Depending on the type of application developed, the approval process may follow 
 * After the changes have been implemented, a new session will be scheduled to validate the remaining items from the previous review.
 * This process will repeat until all items are completed, allowing the app to move forward to the App Store.
 
-<Alert appearance="warning" title="Attention"> For synchronous approvals, a link will be provided to schedule the meeting.
-</Alert>
+For synchronous approvals, a link will be provided to schedule the meeting.
+
 <br/>
 
 > **Checklist:** document that contains the required scopes and processes, used as a guide during the approval session.

@@ -18,8 +18,8 @@ Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir
 
 ![Flujo](../../static/img/es/imagem-fluxo.png "Flujo")
 <br/>
-<Alert appearance="warning" title="Importante"> En caso de que se encuentren discrepancias, dificultades o algo que impida que nuestro equipo continúe con la homologación, nos pondremos en contacto dentro de su solicitud.
-</Alert>
+ En caso de que se encuentren discrepancias, dificultades o algo que impida que nuestro equipo continúe con la homologación, nos pondremos en contacto dentro de su solicitud.
+
 <br/>
 
 **Homologación asíncrona**

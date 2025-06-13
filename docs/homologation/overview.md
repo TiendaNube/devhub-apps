@@ -43,8 +43,8 @@ Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar 
 * Após a implementação dos ajustes, uma nova reunião será agendada para validar os pontos pendentes da reunião anterior.
 * Esse processo será repetido até que todos os pontos tenham sido concluídos, permitindo que o app siga para publicação na App Store.
 
-<Alert appearance="warning" title="Atenção"> Nestes casos de homologações síncronas, será disponibilizado um link para que agende a reunião.
-</Alert>
+ Nestes casos de homologações síncronas, será disponibilizado um link para que agende a reunião.
+
 <br/>
 
  *Checklist = documento contendo os escopos e processos obrigatórios, que serão utilizados como guia no momento da homologação.*
