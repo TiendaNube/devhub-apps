@@ -22,8 +22,11 @@ Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar 
 
 ![Fluxo](../../static/img/pt/imagem-fluxo-PT.png "Fluxo")
 <br/>
-<Alert appearance="warning" title="Importante"> Caso sejam encontradas divergências, dificuldades ou algo que impossibilite nossa equipe de prosseguir com a homologação, entraremos em contato dentro de sua solicitação.
-</Alert>
+
+:::warning Importante
+ Caso sejam encontradas divergências, dificuldades ou algo que impossibilite nossa equipe de prosseguir com a homologação, entraremos em contato dentro de sua solicitação.
+:::
+
 <br/>
 
 **Homologação assíncrona**
@@ -43,7 +46,9 @@ Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar 
 * Após a implementação dos ajustes, uma nova reunião será agendada para validar os pontos pendentes da reunião anterior.
 * Esse processo será repetido até que todos os pontos tenham sido concluídos, permitindo que o app siga para publicação na App Store.
 
- Nestes casos de homologações síncronas, será disponibilizado um link para que agende a reunião.
+:::warning Atenção
+Nestes casos de homologações síncronas, será disponibilizado um link para que agende a reunião.
+:::
 
 <br/>
 

@@ -33,7 +33,8 @@ El video de demostración de la aplicación debe incluir los siguientes escenari
 Si la aplicación incluye suscripción a un plan, espera un tiempo para que se libere el registro o cualquier otra etapa que pueda impedir la validación inmediata de la app. <br/>
 **Envía una cuenta demo ya liberada de esas etapas**, permitiendo que el equipo de homologación acceda y valide sin interrupciones en el flujo de homologación.
 
-
-**El envío correcto de estos requisitos garantizará un proceso de homologación ágil y eficiente, permitiendo que tu aplicación avance hacia la fase de publicación sin contratiempos.**
+:::warning Importante
+El envío correcto de estos requisitos garantizará un proceso de homologación ágil y eficiente, permitiendo que tu aplicación avance hacia la fase de publicación sin contratiempos.
+:::
 
 <br/>

@@ -18,7 +18,10 @@ Depending on the type of application developed, the approval process may follow 
 
 ![Flow](../../static/img/en/imagem-fluxo-Ingles.png "Flow") 
 <br/>
- If discrepancies, difficulties, or any blockers are encountered during the approval process, our team will contact you through your open request.
+
+:::warning Important
+If discrepancies, difficulties, or any blockers are encountered during the approval process, our team will contact you through your open request.
+:::
 
 <br/>
 
@@ -40,6 +43,10 @@ Depending on the type of application developed, the approval process may follow 
 * This process will repeat until all items are completed, allowing the app to move forward to the App Store.
 
 For synchronous approvals, a link will be provided to schedule the meeting.
+
+:::warning Important
+For synchronous approvals, a link will be provided to schedule the meeting.
+:::
 
 <br/>
 

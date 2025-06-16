@@ -33,6 +33,8 @@ The demo video must include the following scenarios:
 If your app includes a subscription plan, or if a waiting period is needed for registration approval or any other step that could prevent immediate validation, <br/>
 **provide a demo account that has already bypassed these steps**, allowing the approval team to access and validate without interruptions to the process.
 
-**Submitting these requirements correctly will ensure a faster, more efficient approval process, allowing your app to move forward to the publishing phase without setbacks.**
+:::warning Important
+Submitting these requirements correctly will ensure a faster, more efficient approval process, allowing your app to move forward to the publishing phase without setbacks.
+:::
 
 <br/>
