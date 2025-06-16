@@ -8,7 +8,9 @@ title: Visión general
 ## ¿Qué es una homologación de app?
 
 La homologación es el proceso de **validación y certificación** de una aplicación dentro del ecosistema Nuvemshop.
-<br>Este proceso garantiza que la app cumpla con los criterios técnicos y funcionales esperados, asegurando una integración eficiente y segura.</br>
+
+Este proceso garantiza que la app cumpla con los criterios técnicos y funcionales esperados, asegurando una integración eficiente y segura.
+
 Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir diferentes caminos, siendo:
 
 - **Homologación Asíncrona:** En este proceso, deben enviarse todos los artefactos para análisis y nuestro equipo realizará pruebas para validación.
@@ -18,7 +20,8 @@ Dependiendo del tipo de aplicación desarrollada, la homologación podrá seguir
 
 ## Visibilidad y Próximos Pasos
 
-![Flujo](../../static/img/es/imagem-fluxo.png "Flujo")
+![Flujo](../../../../../static/img/es/imagem-fluxo.png "Flujo")
+
 <br/>
 
 :::warning Importante
