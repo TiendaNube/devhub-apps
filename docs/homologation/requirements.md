@@ -34,6 +34,8 @@ O vídeo de demonstração do aplicativo deve incluir os seguintes cenários:
 Caso o aplicativo inclua assinatura de plano, aguarde algum prazo para liberação do cadastro ou qualquer outra etapa que possa impedir a validação imediata do app. <br/>
 **Envie uma conta demo já liberada dessas etapas**, permitindo que o time de homologação acesse e valide sem interrupções no fluxo de homologação.
 
-<Alert appearance="warning" title="Importante"> O envio correto desses requisitos garantirá um processo de homologação ágil e eficiente, permitindo que seu aplicativo avance para a fase de publicação sem contratempos.
-</Alert>
+:::warning Importante
+O envio correto desses requisitos garantirá um processo de homologação ágil e eficiente, permitindo que seu aplicativo avance para a fase de publicação sem contratempos.
+:::
+
 <br/>
