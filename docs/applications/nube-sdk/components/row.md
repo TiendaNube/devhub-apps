@@ -9,8 +9,6 @@ import AppTypes from '@site/src/components/AppTypes';
 This SDK is a Work In Progress! All features are subject to change.
 :::
 
-## `Row`
-
 A `row` is a flexible horizontal container used to align child components in a row.
 It inherits all the capabilities of the [box component](/docs/applications/nube-sdk/components/box), with the direction property preset to `"row"`.
 
