@@ -19,6 +19,20 @@ The communication between the main page and the scripts is handled through event
 
 This event-driven approach allows the application to respond in real-time to state changes, simplifying maintenance and enhancing scalability.
 
+## `checkout:ready`
+
+Dispatched by `checkout` when the Checkout is loaded and ready.
+
+```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+	nube.on("checkout:ready", () => {
+		// do whatever you want when the checkout is ready
+	});
+}
+```
+
 ## `config:set`
 
 Dispatched by `script` to setup initial script configuration
