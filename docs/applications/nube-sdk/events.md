@@ -17,17 +17,28 @@ This event-driven approach allows the application to respond in real-time to sta
 
 ## `checkout:ready`
 
-Dispatched by `checkout` when the Checkout is loaded and ready.
+Dispatched by  `checkout` every time a new checkout page is loaded and ready to use.
+This includes page transitions such as going from the start to the payment step, or from shipping to the success page.
 
 ```typescript title="Example"
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
-	nube.on("checkout:ready", () => {
-		// do whatever you want when the checkout is ready
-	});
+  nube.on("checkout:ready", ({ location }) => {
+    // Trigger logic every time the user navigates to a new checkout page
+    const { page } = location;
+    // You can inspect the current page using:
+    console.log("Current page:", page);
+
+    // Example: Only run logic on the success page
+    if (page.type === "checkout" && page.data.step === "success") {
+      // Your custom behavior here
+    }
+  });
 }
 ```
+️
+For more details about the `state.location` object, see the [state page](/docs/applications/nube-sdk/state#location-applocation).
 
 ## `config:set`
 
