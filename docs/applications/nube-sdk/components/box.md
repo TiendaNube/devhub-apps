@@ -5,10 +5,6 @@ title: Box
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 Box container, supports multiple sizes, styling and alignment options.
 It's used mostly to embed other components that don't have their own layout options (fields, texts, images, etc..)
 

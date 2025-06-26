@@ -5,10 +5,6 @@ title: Getting Started
 import AppTypes from '@site/src/components/AppTypes';
 import PkgTabs from '@site/src/components/PkgTabs';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 ## Scaffolding Your First Nube App
 
 These commands download and run the `create-nube-app` CLI, which will guide you through the process of setting up your project.

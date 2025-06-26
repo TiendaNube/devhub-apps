@@ -5,10 +5,6 @@ title: Field
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 A `field` represents a text input element in a form.
 It supports properties like `name`, `label`, and event handlers (`onChange`, `onBlur`, `onFocus`).
 

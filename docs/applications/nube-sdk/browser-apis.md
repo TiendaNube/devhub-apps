@@ -2,10 +2,6 @@
 title: Browser API's
 ---
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 By default, the WebWorks runtime in the browser does not provide direct access to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage). These APIs are part of the main thread's window context and are not natively available inside web workers.
 
 To overcome this limitation and enable NubeSDK applications to use these storage APIs transparently, the NubeSDK includes an internal mechanism that exposes both `localStorage` and `sessionStorage` within the worker environment.
