@@ -5,10 +5,6 @@ title: Checkbox
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 ## `Checkbox`
 
 Checkbox allows the user to select one or more items from a set. Checkboxes can be used to turn an option on or off.

@@ -5,11 +5,7 @@ title: Accordion
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
-An `accordion` is a collapsible content component that allows users to expand and collapse sections of content. 
+An `accordion` is a collapsible content component that allows users to expand and collapse sections of content.
 It's commonly used to organize information into manageable sections, improving the user experience by reducing visual clutter.
 
 The accordion is a compound component composed of `Root`, `Item`, `Header`, and `Content` subcomponents.

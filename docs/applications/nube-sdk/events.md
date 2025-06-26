@@ -2,19 +2,15 @@
 title: Events
 ---
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
 The communication between the main page and the scripts is handled through events, ensuring a reactive and flexible integration where each component operates independently without direct calls.
 
-- **Events Dispatched by the Main Page:**  
+- **Events Dispatched by the Main Page:**
   When significant changes occur—such as an update to the shopping cart—the main page dispatches events (e.g., `cart_updated`) to notify scripts that a change has occurred.
 
-- **Events Dispatched by the Scripts:**  
+- **Events Dispatched by the Scripts:**
   Conversely, the scripts can emit events (like `cart:validate`) to report on the validity of the cart contents or to signal that additional actions might be required.
 
 This event-driven approach allows the application to respond in real-time to state changes, simplifying maintenance and enhancing scalability.
@@ -256,11 +252,11 @@ function App (nube: NubeSDK) {
       selected: "OPTION_ID",
     }
   }));
-  
+
   nube.on("shipping:select:success", ({ shipping }) => {
     console.log("selected option", shipping.selected)
   });
-  
+
   nube.on("shipping:select:fail", ({ shipping }) => {
     console.log("selected option", shipping.selected)
   });

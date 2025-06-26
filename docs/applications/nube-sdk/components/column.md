@@ -5,10 +5,6 @@ title: Column
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 A `column` is a flexible vertical container used to align child components in a column.
 It inherits all the capabilities of the [box component](/docs/applications/nube-sdk/components/box), with the direction property preset to `"column"`.
 

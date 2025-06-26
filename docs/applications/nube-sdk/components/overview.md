@@ -3,10 +3,6 @@
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 The NubeSDK provides a rich set of UI components that automatically adapt to the store's theme, ensuring design consistency. These components can be developed using either JSX or declarative functions.
 
 ## Layout Components

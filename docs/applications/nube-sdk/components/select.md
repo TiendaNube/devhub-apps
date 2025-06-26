@@ -5,10 +5,6 @@ title: Select
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 A `select` represents a dropdown input element that allows users to choose from a predefined list of options.
 It supports properties such as `name`, `label`, `options`, and event handlers (`onChange`, `onBlur`, `onFocus`).
 

@@ -5,10 +5,6 @@ title: Text
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 The `text` component is used to render text with optional styling.
 It supports properties such as `color`, `background`, `heading` levels (h1-h6),
 text formatting `modifiers` (bold, italic, etc.), and inline display.

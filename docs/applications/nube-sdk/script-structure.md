@@ -5,13 +5,9 @@ title: Script Structure
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 ## Script structure
 
-The main entry point for the script is located in `src/main.ts`. 
+The main entry point for the script is located in `src/main.ts`.
 
 ```typescript
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
@@ -51,7 +47,7 @@ export function App(nube: NubeSDK) {
 // Listen to cart update event, dispatched every time that the cart is updated
 nube.on("cart:update", ({ cart }) => {
   // Log the total price of the cart to console
-  console.log(cart.prices.total); 
+  console.log(cart.prices.total);
 });
 }
 ```
@@ -108,7 +104,7 @@ nube.send("config:set", () => ({
 }
 ```
 
-In this example, the script is telling `NubeSDK` that it wants to validate the content of the cart. 
+In this example, the script is telling `NubeSDK` that it wants to validate the content of the cart.
 
 ## Next Steps
 

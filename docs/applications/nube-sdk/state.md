@@ -4,10 +4,6 @@ title: State
 
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 The `NubeSDKState` type represents the complete state of a Nuvemshop / Tiendanube application, providing access to all available data and configurations. This state object is passed to various SDK functions and components, allowing developers to access and react to the current application state.
 
 
@@ -25,7 +21,7 @@ import { NubeSDK, NubeSDKState } from '@tiendanube/nube-sdk-types';
 export function App(nube: NubeSDK) {
   // Get current state
   const currentState: Readonly<NubeSDKState> = nube.getState();
-  
+
   // Access state properties
   const cartTotal = currentState.cart.total;
   const storeCurrency = currentState.store.currency;
@@ -69,7 +65,7 @@ export function App(nube: NubeSDK) {
       ui: {
         slots: {
           before_main_content: <Txt>{`Hello ${storeName}!`}</Txt>
-        } 
+        }
       }
     };
   });
@@ -550,7 +546,7 @@ type Payment = {
 };
 
 /** Represents the possible payment statuses. */
-type PaymentStatus = 
+type PaymentStatus =
   | "pending"    // Payment is pending processing
   | "processing" // Payment is being processed
   | "approved"   // Payment was approved

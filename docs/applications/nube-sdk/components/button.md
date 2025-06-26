@@ -5,10 +5,6 @@ title: Button
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 A `button` is a clickable element used to trigger actions.
 It supports properties such as `children`, `variant`, `onClick`, and style configurations.
 

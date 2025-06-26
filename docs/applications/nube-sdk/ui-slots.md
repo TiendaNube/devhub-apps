@@ -10,10 +10,6 @@ import uiSlotsMobile1Url from '../../../static/img/pt/nube-sdk-ui-slots-mobile-1
 import uiSlotsMobile2Url from '../../../static/img/pt/nube-sdk-ui-slots-mobile-2.png';
 import uiSlotsMobile3Url from '../../../static/img/pt/nube-sdk-ui-slots-mobile-3.png';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 UI slots are containers for UI components.
 When you want to add a UI component, you need to specify their location on the screen, and to support the widest range of themes and layouts, we created predefined slots that are available across all templates that can be used to put your UI components inside.
 
