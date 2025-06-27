@@ -46,6 +46,9 @@ A component for displaying images with support for responsive sources, alternati
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)
 A collapsible content component that allows users to expand and collapse sections of content, improving the user experience by reducing visual clutter.
 
+### [Toast](/docs/applications/nube-sdk/components/toast)
+A non-disruptive message component that appears temporarily to provide quick feedback to users, supporting multiple variants and customizable duration.
+
 ## Key Features
 
 - **Theme Integration**: All components automatically adapt to the store's theme
