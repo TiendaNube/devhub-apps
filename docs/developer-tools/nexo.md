@@ -37,8 +37,8 @@ $ yarn add @tiendanube/nexo
 import nexo from "@tiendanube/nexo";
 
 const instance = nexo.create({
-    clientId: "123",
-    log: true,
+  clientId: "123",
+  log: true,
 });
 
 export default instance;
@@ -56,18 +56,18 @@ import { connect, iAmReady } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient"; // Nexo instance
 
 function App() {
-    const [isConnect, setIsConnect] = useState(false);
+  const [isConnect, setIsConnect] = useState(false);
 
-    useEffect(() => {
-        connect(nexo).then(() => {
-            setIsConnect(true);
-            iAmReady(nexo);
-        });
-    }, []);
+  useEffect(() => {
+    connect(nexo).then(() => {
+      setIsConnect(true);
+      iAmReady(nexo);
+    });
+  }, []);
 
-    if (!isConnect) return <MyAppSkeleton />;
+  if (!isConnect) return <MyAppSkeleton />;
 
-    return <MyApp />;
+  return <MyApp />;
 }
 ```
 
@@ -89,27 +89,27 @@ import { syncPathname } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient";
 
 const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
-    const { pathname, search } = useLocation();
-    const { push: goTo, replace: replaceTo } = useHistory();
+  const { pathname, search } = useLocation();
+  const { push: goTo, replace: replaceTo } = useHistory();
 
-    // to send the current path of the app to the browser url
-    useEffect(() => {
-        const path = search ? `${pathname}${search}` : pathname;
-        syncPathname(nexo, path);
-    }, [pathname]);
+  // to send the current path of the app to the browser url
+  useEffect(() => {
+    const path = search ? `${pathname}${search}` : pathname;
+    syncPathname(nexo, path);
+  }, [pathname]);
 
-    // to navigate in the app if the browser url changes
-    useEffect(() => {
-        const unsuscribe = nexo.suscribe(
-            ACTION_NAVIGATE_SYNC,
-            ({ path, replace }: NavigateSyncResponse) => {
-                replace ? goTo(path) : replaceTo(path);
-            }
-        );
-        return unsuscribe;
-    }, [goTo, replaceTo]);
+  // to navigate in the app if the browser url changes
+  useEffect(() => {
+    const unsuscribe = nexo.suscribe(
+      ACTION_NAVIGATE_SYNC,
+      ({ path, replace }: NavigateSyncResponse) => {
+        replace ? goTo(path) : replaceTo(path);
+      }
+    );
+    return unsuscribe;
+  }, [goTo, replaceTo]);
 
-    return children;
+  return children;
 }
 
 export default NexoSyncRoute;
@@ -127,14 +127,14 @@ import { getSessionToken } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient";
 
 const axiosIntance = axios.create({
-    baseURL: "https://my-backend.com",
+  baseURL: "https://my-backend.com",
 });
 
 axiosIntance.interceptors.request.use(async (request) => {
-    const token = await getSessionToken(nexo);
-    const bearerToken = `Bearer ${token}`;
-    request.headers = { ...request.headers, Authorization: bearerToken };
-    return request;
+  const token = await getSessionToken(nexo);
+  const bearerToken = `Bearer ${token}`;
+  request.headers = { ...request.headers, Authorization: bearerToken };
+  return request;
 });
 
 export default axiosIntance;
@@ -155,45 +155,45 @@ import { Box, Text } from "@nimbus-ds/components";
 import { ErrorBoundary, connect, iAmReady, create } from "@tiendanube/nexo";
 
 const nexo = create({
-    clientId: "123",
-    log: true,
+  clientId: "123",
+  log: true,
 });
 
 const App: React.FC = () => {
-    const [isConnect, setIsConnect] = useState(false);
+  const [isConnect, setIsConnect] = useState(false);
 
-    useEffect(() => {
-        if (!isConnect) {
-            connect(nexo)
-                .then(async () => {
-                    setIsConnect(true);
-                    iAmReady(nexo);
-                })
-                .catch(() => {
-                    setIsConnect(false);
-                });
-        }
-    }, []);
+  useEffect(() => {
+    if (!isConnect) {
+      connect(nexo)
+        .then(async () => {
+          setIsConnect(true);
+          iAmReady(nexo);
+        })
+        .catch(() => {
+          setIsConnect(false);
+        });
+    }
+  }, []);
 
-    if (!isConnect)
-        return (
-            <Box
-                height="100vh"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Text>Conectando...</Text>
-            </Box>
-        );
-
+  if (!isConnect)
     return (
-        <ErrorBoundary nexo={nexo}>
-            <BrowserRouter>
-                <Text>Your application</Text>
-            </BrowserRouter>
-        </ErrorBoundary>
+      <Box
+        height="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text>Conectando...</Text>
+      </Box>
     );
+
+  return (
+    <ErrorBoundary nexo={nexo}>
+      <BrowserRouter>
+        <Text>Your application</Text>
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
 };
 
 export default App;
@@ -229,7 +229,7 @@ Para atualizar sua localização atual para propagar a navegação interna.
 
 ```ts
 {
-    pathname: string;
+  pathname: string;
 }
 ```
 
@@ -249,7 +249,7 @@ Para navegar para uma rota específica no Admin.
 
 ```ts
 {
-    pathname: string;
+  pathname: string;
 }
 ```
 
@@ -257,8 +257,8 @@ Para navegar para uma rota específica no Admin.
 
 ```ts
 {
-    path: string;
-    replace?: boolean;
+  path: string;
+  replace?: boolean;
 }
 ```
 
@@ -278,7 +278,7 @@ Para o subPathname atual, que representa o caminho do aplicativo incorporado.
 
 ```ts
 {
-    pathname: string;
+  pathname: string;
 }
 ```
 
@@ -298,7 +298,7 @@ Para solicitar o token de sessão (JWT).
 
 ```ts
 {
-    token: string;
+  token: string;
 }
 ```
 
@@ -318,12 +318,12 @@ Para solicitar informações sobre a loja atual registrada.
 
 ```ts
 {
-    id: string;
-    name: string;
-    url: string;
-    country: string;
-    language: string;
-    currency: string;
+  id: string;
+  name: string;
+  url: string;
+  country: string;
+  language: string;
+  currency: string;
 }
 ```
 
@@ -339,7 +339,7 @@ Para navegar para uma rota específica localizada no antigo admin (admin/...).
 
 ```ts
 {
-    pathToOldAdmin: string;
+  pathToOldAdmin: string;
 }
 ```
 
@@ -386,7 +386,7 @@ Para solicitar informações sobre o dispositivo móvel.
 
 ```ts
 {
-    isMobileDevice: boolean;
+  isMobileDevice: boolean;
 }
 ```
 
@@ -402,9 +402,9 @@ Permite o registro de erros, capturando informações cruciais como URL, mensage
 
 ```ts
 {
-    url: string;
-    message: string;
-    stack: string;
+  url: string;
+  message: string;
+  stack: string;
 }
 ```
 
