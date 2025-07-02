@@ -82,8 +82,8 @@ Este exemplo é feito com o [React Router](https://reactrouter.com/en/main).
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import {
-    ACTION_NAVIGATE_SYNC,
-    NavigateSyncResponse,
+  ACTION_NAVIGATE_SYNC,
+  NavigateSyncResponse,
 } from "@tiendanube/nexo/actions";
 import { syncPathname } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient";
