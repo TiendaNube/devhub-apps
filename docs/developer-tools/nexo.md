@@ -37,8 +37,8 @@ $ yarn add @tiendanube/nexo
 import nexo from "@tiendanube/nexo";
 
 const instance = nexo.create({
-  clientId: "123",
-  log: true,
+    clientId: "123",
+    log: true,
 });
 
 export default instance;
@@ -56,18 +56,18 @@ import { connect, iAmReady } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient"; // Nexo instance
 
 function App() {
-  const [isConnect, setIsConnect] = useState(false);
+    const [isConnect, setIsConnect] = useState(false);
 
-  useEffect(() => {
-    connect(nexo).then(() => {
-      setIsConnect(true);
-      iAmReady(nexo);
-    });
-  }, []);
+    useEffect(() => {
+        connect(nexo).then(() => {
+            setIsConnect(true);
+            iAmReady(nexo);
+        });
+    }, []);
 
-  if (!isConnect) return <MyAppSkeleton />;
+    if (!isConnect) return <MyAppSkeleton />;
 
-  return <MyApp />;
+    return <MyApp />;
 }
 ```
 
@@ -82,34 +82,34 @@ Este exemplo é feito com o [React Router](https://reactrouter.com/en/main).
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import {
-  ACTION_NAVIGATE_SYNC,
-  NavigateSyncResponse,
+    ACTION_NAVIGATE_SYNC,
+    NavigateSyncResponse,
 } from "@tiendanube/nexo/actions";
 import { syncPathname } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient";
 
 const NexoSyncRoute: React.FC<{ children: React.ReactNode }>({ children } ) => {
-  const { pathname, search } = useLocation();
-  const { push: goTo, replace: replaceTo } = useHistory();
+    const { pathname, search } = useLocation();
+    const { push: goTo, replace: replaceTo } = useHistory();
 
-  // to send the current path of the app to the browser url
-  useEffect(() => {
-    const path = search ? `${pathname}${search}` : pathname;
-    syncPathname(nexo, path);
-  }, [pathname]);
+    // to send the current path of the app to the browser url
+    useEffect(() => {
+        const path = search ? `${pathname}${search}` : pathname;
+        syncPathname(nexo, path);
+    }, [pathname]);
 
-  // to navigate in the app if the browser url changes
-  useEffect(() => {
-    const unsuscribe = nexo.suscribe(
-      ACTION_NAVIGATE_SYNC,
-      ({ path, replace }: NavigateSyncResponse) => {
-        replace ? goTo(path) : replaceTo(path);
-      }
-    );
-    return unsuscribe;
-  }, [goTo, replaceTo]);
+    // to navigate in the app if the browser url changes
+    useEffect(() => {
+        const unsuscribe = nexo.suscribe(
+            ACTION_NAVIGATE_SYNC,
+            ({ path, replace }: NavigateSyncResponse) => {
+                replace ? goTo(path) : replaceTo(path);
+            }
+        );
+        return unsuscribe;
+    }, [goTo, replaceTo]);
 
-  return children;
+    return children;
 }
 
 export default NexoSyncRoute;
@@ -127,14 +127,14 @@ import { getSessionToken } from "@tiendanube/nexo/helpers";
 import nexo from "./nexoClient";
 
 const axiosIntance = axios.create({
-  baseURL: "https://my-backend.com",
+    baseURL: "https://my-backend.com",
 });
 
 axiosIntance.interceptors.request.use(async (request) => {
-  const token = await getSessionToken(nexo);
-  const bearerToken = `Bearer ${token}`;
-  request.headers = { ...request.headers, Authorization: bearerToken };
-  return request;
+    const token = await getSessionToken(nexo);
+    const bearerToken = `Bearer ${token}`;
+    request.headers = { ...request.headers, Authorization: bearerToken };
+    return request;
 });
 
 export default axiosIntance;
@@ -155,45 +155,45 @@ import { Box, Text } from "@nimbus-ds/components";
 import { ErrorBoundary, connect, iAmReady, create } from "@tiendanube/nexo";
 
 const nexo = create({
-  clientId: "123",
-  log: true,
+    clientId: "123",
+    log: true,
 });
 
 const App: React.FC = () => {
-  const [isConnect, setIsConnect] = useState(false);
+    const [isConnect, setIsConnect] = useState(false);
 
-  useEffect(() => {
-    if (!isConnect) {
-      connect(nexo)
-        .then(async () => {
-          setIsConnect(true);
-          iAmReady(nexo);
-        })
-        .catch(() => {
-          setIsConnect(false);
-        });
-    }
-  }, []);
+    useEffect(() => {
+        if (!isConnect) {
+            connect(nexo)
+                .then(async () => {
+                    setIsConnect(true);
+                    iAmReady(nexo);
+                })
+                .catch(() => {
+                    setIsConnect(false);
+                });
+        }
+    }, []);
 
-  if (!isConnect)
+    if (!isConnect)
+        return (
+            <Box
+                height="100vh"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Text>Conectando...</Text>
+            </Box>
+        );
+
     return (
-      <Box
-        height="100vh"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Text>Conectando...</Text>
-      </Box>
+        <ErrorBoundary nexo={nexo}>
+            <BrowserRouter>
+                <Text>Your application</Text>
+            </BrowserRouter>
+        </ErrorBoundary>
     );
-
-  return (
-    <ErrorBoundary nexo={nexo}>
-      <BrowserRouter>
-        <Text>Your application</Text>
-      </BrowserRouter>
-    </ErrorBoundary>
-  );
 };
 
 export default App;
@@ -229,7 +229,7 @@ Para atualizar sua localização atual para propagar a navegação interna.
 
 ```ts
 {
-  pathname: string;
+    pathname: string;
 }
 ```
 
@@ -249,7 +249,7 @@ Para navegar para uma rota específica no Admin.
 
 ```ts
 {
-  pathname: string;
+    pathname: string;
 }
 ```
 
@@ -257,8 +257,8 @@ Para navegar para uma rota específica no Admin.
 
 ```ts
 {
-  path: string;
-  replace?: boolean;
+    path: string;
+    replace?: boolean;
 }
 ```
 
@@ -278,7 +278,7 @@ Para o subPathname atual, que representa o caminho do aplicativo incorporado.
 
 ```ts
 {
-  pathname: string;
+    pathname: string;
 }
 ```
 
@@ -298,7 +298,7 @@ Para solicitar o token de sessão (JWT).
 
 ```ts
 {
-  token: string;
+    token: string;
 }
 ```
 
@@ -318,12 +318,12 @@ Para solicitar informações sobre a loja atual registrada.
 
 ```ts
 {
-  id: string;
-  name: string;
-  url: string;
-  country: string;
-  language: string;
-  currency: string;
+    id: string;
+    name: string;
+    url: string;
+    country: string;
+    language: string;
+    currency: string;
 }
 ```
 
@@ -339,7 +339,7 @@ Para navegar para uma rota específica localizada no antigo admin (admin/...).
 
 ```ts
 {
-  pathToOldAdmin: string;
+    pathToOldAdmin: string;
 }
 ```
 
@@ -386,7 +386,7 @@ Para solicitar informações sobre o dispositivo móvel.
 
 ```ts
 {
-  isMobileDevice: boolean;
+    isMobileDevice: boolean;
 }
 ```
 
@@ -402,15 +402,114 @@ Permite o registro de erros, capturando informações cruciais como URL, mensage
 
 ```ts
 {
-  url: string;
-  message: string;
-  stack: string;
+    url: string;
+    message: string;
+    stack: string;
 }
 ```
 
 **Response**:
 
 - `none`;
+
+### `ACTION_STORE_FEATURE`
+
+Retorna o status atual de uma `feature` para uma loja, com base no plano atual.
+Inclui informações adicionais para `features` que são limitadas a `N` ações por mês.
+
+**Internal name**:
+
+- `app/store/feature`
+
+**Payload**:
+
+```ts
+{ 
+  featureKey: string;
+}
+```
+
+**Response**:
+
+```ts
+{
+  isFeatureEnabled: boolean;
+  unlimited: boolean;
+  maxUse: number;
+}
+```
+
+**Payload example**:
+
+```json
+{
+  "featureKey": "a_feature_key"
+}
+```
+**Response example**:
+
+```json
+{
+  "isFeatureEnabled": true,
+  "unlimited": false,
+  "maxUse": 3
+}
+```
+
+### `ACTION_STORE_UPSELL`
+
+Replica o fluxo atual de `upsell` do admin, retornando um dos seguintes valores:
+```ts
+{
+  ACCEPTED = 'accepted',
+  DECLINED = 'declined',
+  PLANS_REDIRECT = 'plans_redirect',
+  SKIPPED = 'skipped',
+  UNAVAILABLE = 'unavailable',
+  ERROR = 'error'
+}
+```
+
+**Internal name**:
+
+- `app/store/upsell`
+
+**Payload**:
+
+```ts
+{
+  featureKey: string;
+  modalTitle: string;
+  trackingSource: string;
+}
+```
+
+**Response**:
+
+```ts
+{ 
+  result: string;
+}
+```
+
+**Payload example**:
+
+```json
+{
+  "featureKey": "a_feature_key",
+  "modalTitle": "To perform this action, you need to upgrade your plan",
+  "trackingSource": "an_embedded_app"
+}
+```
+
+**Response example**:
+
+```json
+{
+  "result": "declined"
+}
+```
+
 
 ## Helpers
 
@@ -679,6 +778,78 @@ Remove a ação do Header Top, disponível apenas no modo Web (dispositivos não
 
 ```typescript
 navigateHeaderRemove(nexo);
+```
+
+### `getFeatureStatus`
+
+Permite que um aplicativo consulte o status atual de uma `feature` para um merchant.
+Isso não acionará o fluxo de `upsell`.
+
+**Action**: `app/store/feature`
+
+**Arguments**:
+
+- `nexo (NexoClient)`: The nexo instance
+- `featureKey (string)`: The feature key to evaluate
+
+**Response**:
+
+- `Promise<StoreFeatureResponse>`: A promise with the feature info.
+```ts
+StoreFeatureResponse {
+  isFeatureEnabled: boolean;
+  unlimited: boolean;
+  maxUse: number;
+};
+```
+
+**Example**:
+
+```ts
+  const featureStatus = await getFeatureStatus(nexo, 'a_feature_key');
+  if (featureStatus.isFeatureEnabled) {
+    navigate('/a-feature-related-url', { replace: true });
+  }
+```
+
+### `runWithUpsell`
+
+Permite que um aplicativo coloque uma ação atrás do fluxo de `upsell`,
+ou seja, a ação será executada apenas se o plano do usuário atual tiver a `feature` disponível;
+caso contrário, o modal de `upsell` será exibido.
+
+**Action**: `app/store/upsell`
+
+**Arguments**:
+
+- `nexo (NexoClient)`: The nexo instance
+- `featureKey (string)`: The feature key to evaluate
+- `modalTitle (string)`: The title to display if the upsell modal is shown
+- `trackingSource (string)`: The tracking source to be included in the related Amplitude events
+- `callback (() => void)`: The action to perform if the feature is enabled, or the user accepts the upsell
+-  `onDeclined? (() => void`): An optional callback to execute if the user declines the upsell
+- `onPlansRedirect? (() => void)`: An optional callback to execute if the user is redirected to the plans page
+- `onUnavailable? (() => void)`: An optional callback to execute if there is no plan available that support the requested feautre
+- `onError? (() => void)`: An optional callback to execute if there is an error in the upsell flow
+
+**Response**:
+
+- `Promise<void>`
+
+**Example**:
+
+```ts
+  const handleButtonClick = async () => {
+    await runWithUpsell({
+      nexo,
+      featureKey: 'a_feature_key',
+      modalTitle: 'To perform this action, you need to upgrade your plan',
+      trackingSource: 'an_embedded_app',
+      callback: () => {
+        navigate('/a-feature-related-url', { replace: true });
+      }
+    });
+  };
 ```
 
 ---
