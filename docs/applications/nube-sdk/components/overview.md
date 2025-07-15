@@ -41,6 +41,9 @@ A component for rendering text with optional styling, supporting properties like
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
 
+### [Icon](/docs/applications/nube-sdk/components/icon)
+A component for displaying icons from the **[Nimbus Icons](https://nimbus.nuvemshop.com.br/documentation/resources/nimbus-icons)** library, supporting customizable size and color properties.
+
 ## Interactive Components
 
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)

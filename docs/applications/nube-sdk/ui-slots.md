@@ -13,6 +13,8 @@ import uiSlotsMobile3Url from '../../../static/img/pt/nube-sdk-ui-slots-mobile-3
 UI slots are containers for UI components.
 When you want to add a UI component, you need to specify their location on the screen, and to support the widest range of themes and layouts, we created predefined slots that are available across all templates that can be used to put your UI components inside.
 
+You can render components into these slots using the `nube.render()` method and clear them using `nube.clearSlot()`. For more information, see [Script Structure](./script-structure#rendering-components).
+
 ## `Checkout Slots`
 
 These are the slots that are available in checkout:

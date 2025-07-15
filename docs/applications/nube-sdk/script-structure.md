@@ -31,6 +31,12 @@ export type NubeSDK = {
   send(event: NubeSDKSendableEvent, modifier?: NubeSDKStateModifier): void;
   // Get current state
   getState(): Readonly<NubeSDKState>;
+  // Get browser APIs
+  getBrowserAPIs(): NubeBrowserAPIs;
+  // Render a component into a UI slot
+  render(slot: UISlot, component: NubeComponent | ((state: Readonly<NubeSDKState>) => NubeComponent)): void;
+  // Clear a component from a UI slot
+  clearSlot(slot: UISlot): void;
 };
 ```
 
@@ -106,6 +112,71 @@ nube.send("config:set", () => ({
 
 In this example, the script is telling `NubeSDK` that it wants to validate the content of the cart.
 
+### Rendering components
+
+The NubeSDK provides methods to render components into UI slots and clear them when needed.
+
+#### Rendering a component
+
+The `render` method allows you to render a component into a specific UI slot. The component can be either a static component or a function that receives the current state and returns a component to render.
+
+For a complete list of available UI slots, see [UI Slots](./ui-slots).
+
+```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Text } from "@tiendanube/nube-sdk";
+
+export function App(nube: NubeSDK) {
+  // Render a static component
+  nube.render("after_address_form", <Text>Hello World</Text>);
+  
+  // Render a dynamic component based on state
+  nube.render("after_contact_form", (state) => {
+    const cartItems = state.cart.items.length;
+    return (
+      <Text>
+        You have {cartItems} items in your cart
+      </Text>
+    );
+  });
+}
+```
+
+#### Clearing a component
+
+The `clearSlot` method removes a component from a specific UI slot.
+
+```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  // Clear the component from the slot
+  nube.clearSlot("after_address_form");
+}
+```
+
+For more information about available UI slots, see [UI Slots](./ui-slots).
+
+### Browser APIs
+
+The `getBrowserAPIs()` method provides access to browser-specific APIs that allow you to interact with the browser environment:
+
+```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  // Get browser APIs
+  const browser = nube.getBrowserAPIs();
+  
+  // Use browser APIs for various operations
+  // Example: Making HTTP requests, accessing localStorage, etc.
+}
+```
+
+For detailed information about available browser APIs, see [Browser APIs](./browser-apis).
+
 ## Next Steps
 
 - Learn more about [Events](./events)
+- Learn more about [Components](./components)
+- Learn more about [Browser APIs](./browser-apis)

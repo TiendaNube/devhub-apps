@@ -316,6 +316,10 @@ nube.send("shipping:update:label", () => ({
 
 Dispatched by `script` to setup the content of a ui slot.
 
+:::note
+For simpler component rendering, you can also use the `nube.render()` and `nube.clearSlot()` methods. See [Script Structure](./script-structure#rendering-components) for more information.
+:::
+
 ```typescript title="Example"
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Row, Txt } from "@tiendanube/nube-sdk-jsx";
