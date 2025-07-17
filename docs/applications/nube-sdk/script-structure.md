@@ -177,6 +177,7 @@ For detailed information about available browser APIs, see [Browser APIs](./brow
 
 ## Next Steps
 
+- Learn more about [Styling Components](./styling)
 - Learn more about [Events](./events)
 - Learn more about [Components](./components)
 - Learn more about [Browser APIs](./browser-apis)
