@@ -247,10 +247,12 @@ Represents UI-related state, including dynamically injected components and their
 ```typescript
 type UI = {
   /**
-   * Contains dynamically injected components into specific UI slots.
-   * Each key represents a slot name and its value is the component to be rendered.
-   */
-  slots: UISlots;
+ * Contains dynamically injected components into specific UI slots.
+ * Each key represents a slot name and its value is the component to be rendered.
+ * 
+ * You can manage these slots using the `nube.render()` and `nube.clearSlot()` methods.
+ */
+slots: UISlots;
 
   /**
    * Stores values associated with specific UI components, typically form inputs.

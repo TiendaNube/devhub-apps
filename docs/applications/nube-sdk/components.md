@@ -41,6 +41,9 @@ A component for rendering text with optional styling, supporting properties like
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
 
+### [Icon](/docs/applications/nube-sdk/components/icon)
+A component for displaying icons from the **[Nimbus Icons](https://nimbus.nuvemshop.com.br/documentation/resources/nimbus-icons)** library, supporting customizable size and color properties.
+
 ## Interactive Components
 
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)
@@ -59,7 +62,17 @@ A non-disruptive message component that appears temporarily to provide quick fee
 
 ## Usage
 
-Components can be used in UI slots throughout the application, with predefined locations for different sections of the checkout process. The components are assigned to slots using the `ui:slot:set` event.
+Components can be used in UI slots throughout the application, with predefined locations for different sections of the checkout process. You can render components into slots using the `nube.render()` method and clear them using `nube.clearSlot()`.
+
+```typescript
+import { Text } from "@tiendanube/nube-sdk";
+
+// Render a component into a slot
+nube.render("after_address_form", <Text>Hello World</Text>);
+
+// Clear a component from a slot
+nube.clearSlot("after_address_form");
+```
 
 For detailed information about each component's properties and usage, please refer to their individual documentation pages.
 
