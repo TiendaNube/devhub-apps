@@ -117,6 +117,7 @@ nube.send("cart:add", () => ({
   cart: {
     items: [{
       variant_id: 123,
+      product_id: 321,
       quantity: 1,
     }]
   },
@@ -152,6 +153,7 @@ nube.send("cart:remove", () => ({
   cart: {
     items: [{
       variant_id: 123,
+      product_id: 321,
       quantity: 1,
     }]
   },
