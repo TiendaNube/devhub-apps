@@ -19,7 +19,7 @@ Para garantizar un proceso eficiente y organizado, siga el siguiente flujo para 
 * La plataforma enviará una comunicación informando los próximos pasos.
 
 1.2. **Envío de Artefactos**
-* Tras recibir la respuesta de nuestro equipo, deberá **enviar los artefactos** conforme a los [requisitos obligatorios](requirements.md)
+* Tras recibir la respuesta de nuestro equipo, deberá **enviar los artefactos** conforme a los **requisitos obligatorios**.
 * Asegúrese de incluir todos los elementos necesarios para una evaluación completa.
 
 1.3. **Validación de los Artefactos**

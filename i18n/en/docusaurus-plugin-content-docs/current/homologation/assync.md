@@ -19,7 +19,7 @@ To ensure an efficient and organized process, follow the steps below for the asy
 * The platform will send a message with the next steps.
 
 1.2. **Artifact Submission**  
-* After receiving feedback from our team, you must **submit the artifacts** according to the [mandatory requirements](requirements.md) 
+* After receiving feedback from our team, you must **submit the artifacts** according to the mandatory requirements [hyperlink to the mandatory requirements section].  
 * Make sure to include all necessary elements for a complete evaluation.
 
 1.3. **Artifact Validation**  

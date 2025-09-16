@@ -22,7 +22,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: process.env.DEFAULT_LOCALE,
+    defaultLocale: "es",
     locales: ["pt", "en", "es"],
   },
   presets: [
@@ -37,7 +37,7 @@ const config = {
           editUrl: "https://github.com/TiendaNube/devhub-apps/tree/master/",
         },
         gtag: {
-          trackingID: process.env.GA_TRACKING_ID,
+          trackingID: "1234",
           anonymizeIP: true,
         },
         theme: {
@@ -56,13 +56,13 @@ const config = {
         defaultMode: "light",
       },
       hotjar: {
-        applicationId: process.env.HOTJAR_ID,
+        applicationId: "1234",
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: process.env.ALGOLIA_APP_ID,
+        appId: "1234",
         // Public API key: it is safe to commit it
-        apiKey: process.env.ALGOLIA_API_KEY,
+        apiKey: "1234",
         indexName: "devhub-apps",
         replaceSearchResultPathname: {
           from: '/devhub-apps/',
