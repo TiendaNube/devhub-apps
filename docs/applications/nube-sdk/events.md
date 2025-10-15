@@ -10,7 +10,7 @@ The communication between the main page and the scripts is handled through event
 - **Events Dispatched by the Main Page:**
   When significant changes occur—such as an update to the shopping cart—the main page dispatches events (e.g., `cart_updated`) to notify scripts that a change has occurred.
 
-- **Events Dispatched by the Scripts:**
+- **Events Dispatched by the Apps:**
   Conversely, the scripts can emit events (like `cart:validate`) to report on the validity of the cart contents or to signal that additional actions might be required.
 
 This event-driven approach allows the application to respond in real-time to state changes, simplifying maintenance and enhancing scalability.
@@ -38,11 +38,11 @@ export function App(nube: NubeSDK) {
 }
 ```
 ️
-For more details about the `state.location` object, see the [state page](/docs/applications/nube-sdk/state#location-applocation).
+For more details about the `state.location` object, see the [state page](./state#location-applocation).
 
 ## `config:set`
 
-Dispatched by `script` to setup initial script configuration
+Dispatched by `app` to setup initial script configuration
 
 ```typescript title="Example"
 nube.send("config:set", () => ({
@@ -61,7 +61,7 @@ nube.send("config:set", () => ({
 
 ## `cart:update`
 
-Dispatched by `checkout` when the cart content changes
+Dispatched by `store` when the cart content changes
 
 ```typescript title="Example"
 nube.on("cart:update", ({ cart }) => {
@@ -73,7 +73,7 @@ nube.on("cart:update", ({ cart }) => {
 
 ## `cart:validate`
 
-Dispatched by `script` to signal if the content of the cart is valid or not. Requires `has_cart_validation: true` in the script configuration to work, otherwise cart validation events are ignored.
+Dispatched by `app` to signal if the content of the cart is valid or not. Requires `has_cart_validation: true` in the script configuration to work, otherwise cart validation events are ignored.
 
 ```typescript title="Example"
 // Tell NubeSDK that this script wants to validate the content of the cart
@@ -278,14 +278,12 @@ function App (nube: NubeSDK) {
 
 ## `customer:update`
 
-Dispatched by `checkout` when the customer data changes.
+Dispatched by `store` when the customer data changes.
 
 ```typescript title="Example"
-nube.send("shipping:select", () => ({
-  shipping: {
-    selected: "OPTION_ID",
-  }
-}));
+nube.on("customer:update", ({ customer }) => {
+  console.log(`Customer data updated: ${customer}`);
+});
 ```
 
 ## `payment:update`
@@ -300,7 +298,7 @@ nube.on("payment:update", ({ payment }) => {
 
 ## `shipping:update:label`
 
-Dispatched by `script` to change checkout shipping method label.
+Dispatched by `app` to change checkout shipping method label.
 
 ```typescript title="Example"
 nube.send("shipping:update:label", () => ({
@@ -316,7 +314,7 @@ nube.send("shipping:update:label", () => ({
 
 ## `ui:slot:set`
 
-Dispatched by `script` to setup the content of a ui slot.
+Dispatched by `app` to setup the content of a ui slot.
 
 :::note
 For simpler component rendering, you can also use the `nube.render()` and `nube.clearSlot()` methods. See [Script Structure](./script-structure#rendering-components) for more information.
@@ -356,6 +354,62 @@ nube.send("ui:slot:set", () => ({
     }
   }
 }));
+```
+
+## `location:updated`
+
+Dispatched by `store` when the page changes (e.g., moving between product, cart, or category pages) or when visible content updates (e.g., products loaded via infinite scroll).
+
+```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  nube.on("location:updated", ({ location }) => {
+    // Trigger logic every time the user navigates to a new page
+    const { page } = location;
+    
+    // Check the current page type
+    if (page?.type === "product") {
+      console.log("User is viewing a home page", page.data);
+    } else if (page?.type === "product") {
+      console.log("User is viewing a product page", page.data);
+    } else if (page?.type === "category") {
+      console.log("User is viewing a category page", page.data);
+    }
+  });
+}
+```
+
+For more details about the `state.location` object, see the [state page](./state#location-applocation).
+
+## `quickbuy:open`
+
+Dispatched by `store` when a quick buy modal is opened for a product.
+
+```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  nube.on("quickbuy:open", ({ eventPayload }) => {
+    const product = eventPayload;
+    console.log(`Quick buy opened for product: ${product.id}`);
+  });
+}
+```
+
+## `quickbuy:close`
+
+Dispatched by `store` when a quick buy modal is closed.
+
+```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  nube.on("quickbuy:close", ({ eventPayload }) => {
+    const product = eventPayload;
+    console.log(`Quick buy closed for product: ${product.id}`);
+  });
+}
 ```
 
 - Learn more about [Browser API's](./browser-apis)
