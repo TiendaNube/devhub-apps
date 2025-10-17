@@ -300,12 +300,36 @@ nube.on("payment:update", ({ payment }) => {
 
 Dispatched by `app` to change checkout shipping method label.
 
-```typescript title="Example"
+The `custom_labels` property accepts a `Record<string, CustomLabel>` where each value can be either:
+- A simple `string` for a basic label
+- An object with optional `title` and `description` properties for more detailed labeling
+
+:::note
+When using the object format, setting `description` to `null` will hide the description information in the Checkout.
+:::
+
+```typescript title="Example with string labels"
 nube.send("shipping:update:label", () => ({
   shipping: {
     selected: null,
     custom_labels: {
       "ne-correios-sedex": "My custom label"
+    },
+    options: []
+  }
+}));
+```
+
+```typescript title="Example with object labels"
+nube.send("shipping:update:label", () => ({
+  shipping: {
+    selected: null,
+    custom_labels: {
+      "ne-correios-sedex": {
+        title: "Express Delivery",
+        description: "Arrives in 2-3 business days"
+      },
+      "ne-correios-pac": "Standard Shipping"
     },
     options: []
   }
