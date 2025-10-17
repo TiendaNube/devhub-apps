@@ -191,6 +191,54 @@ type AppConfig = {
 };
 ```
 
+### `device: Device`
+Information about the device being used to access the application, including screen dimensions and device type.
+
+```typescript
+/**
+ * Represents the device state.
+ */
+export type Device = {
+	/**
+	 * The screen state of the device.
+	 * @example { width: 100, height: 100, orientation: "portrait" }
+	 */
+	screen: DeviceScreen;
+	/**
+	 * The type of device.
+	 * @example "mobile" | "desktop"
+	 */
+	type: DeviceType;
+};
+
+/**
+ * Represents the screen state of the device.
+ */
+export type DeviceScreen = {
+	/** The width of the screen in pixels. */
+	width: number;
+	/** The height of the screen in pixels. */
+	height: number;
+	/**
+	 * The orientation of the screen.
+	 * @example "portrait" | "landscape"
+	 */
+	orientation: DeviceScreenOrientation;
+	/** The pixel ratio of the screen. */
+	pixelRatio: number;
+};
+
+/**
+ * Represents the type of device.
+ */
+type DeviceType = "mobile" | "desktop";
+
+/**
+ * Represents the orientation of the screen.
+ */
+type DeviceScreenOrientation = "portrait" | "landscape";
+```
+
 ### `location: AppLocation`
 The user's current location within the application, including the page type and URL.
 
