@@ -36,8 +36,25 @@ These are the slots that are available in checkout:
 | before_contact_form   | start                  |
 | before_shipping_form  | start                  |
 | after_shipping_form   | start                  |
+| after_shipping_description| start              |
 
 This is their usual location:
+
+### Shipping Options slot
+
+The `after_shipping_description` slot allows you to add custom content after the shipping method description in the checkout page.
+
+```tsx
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Text } from "@tiendanube/nube-sdk-jsx";
+
+export function App(nube: NubeSDK) {
+	nube.render("after_shipping_description", [
+		<Text key="ne-correios-pac">This is a custom shipping description</Text>,
+	]);
+}
+```
+
 
 <img src={uiSlotsDesktopUrl}/>
 
