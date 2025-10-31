@@ -38,6 +38,9 @@ A clickable element used to trigger actions, supporting multiple variants (prima
 ### [Text](/docs/applications/nube-sdk/components/text)
 A component for rendering text with optional styling, supporting properties like color, background, heading levels, and text formatting modifiers.
 
+### [Link](/docs/applications/nube-sdk/components/link)
+A component for rendering clickable hyperlinks that navigate users to different URLs, with support for target options and custom styling.
+
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
 
