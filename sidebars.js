@@ -95,11 +95,12 @@ const sidebars = {
 			label: "Homologação",
 			items: [
 				"homologation/overview",
-				"homologation/checklist",
 				"homologation/assync",
+				"homologation/sync",
 				"homologation/guidelines",
 				"homologation/requirements",
-				"homologation/sync",
+				"homologation/publication",
+				"homologation/checklist",
 			],
 		},
 		{
