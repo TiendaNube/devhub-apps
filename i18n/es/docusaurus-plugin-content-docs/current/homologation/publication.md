@@ -615,4 +615,4 @@ POC financiero: Proporcionar el punto de contacto para asuntos financieros, para
 
 ### Publicación
 
-Al completar los pasos anteriores, tu aplicación está lista para publicarse en la Tienda de aplicaciones. Notifique al equipo de Tiendanube a **publicacion@tiendanube.com** cuando tu solicitud esté lista.Si tienes alguna pregunta, pónte en contacto con nosotros en **publicacion@tiendanube.com** 
+Al completar los pasos anteriores, tu aplicación está lista para publicarse en la Tienda de aplicaciones. Notifique al equipo de Tiendanube a **publicacion@tiendanube.com** cuando tu solicitud esté lista. Si tienes alguna pregunta, pónte en contacto con nosotros en **publicacion@tiendanube.com** 

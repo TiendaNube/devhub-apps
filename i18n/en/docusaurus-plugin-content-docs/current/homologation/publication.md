@@ -24,7 +24,7 @@ Through the “Publication Data” section, you can publish your application to 
 
 ### 1.App banners
 
-* Upload the app's promotional images at “**App screenshots**”, which will only be approved if they are in the correct requested dimension of 1600 x 800px. These images must be images thatwe showthe application screens and publicize its main features, arousing the store owner's interest in installing it.Currently, these banners are shared across all languages, so if your app will be published in all countries, the text must be in both Portuguese and Spanish.
+* Upload the app's promotional images at “**App screenshots**”, which will only be approved if they are in the correct requested dimension of 1600 x 800px. These images must be images that show the application screens and publicize its main features, arousing the store owner's interest in installing it.Currently, these banners are shared across all languages, so if your app will be published in all countries, the text must be in both Portuguese and Spanish.
 
 ![Imagenes Aplicaciones](../../static/img/en/imagenes-aplicacion.jpg "Imagenes Aplicaciones")
 
@@ -406,7 +406,7 @@ Financial POC: Provide the point of contact for financial matters, to consult wi
 **3.1.** Login Area URL
 **3.2.** Are there any prerequisites for installation? If so, what are they?
 **3.3.** What is the application installation and release process like?
-**.4.** Does the application have its own tutorials? If so, please provide the link(s) here.
+**3.4.** Does the application have its own tutorials? If so, please provide the link(s) here.
 **3.5.** Nuvemshop Installation Tutorial (Create it according to the requested directions):
 **3.5.1.** How to install the application?
 **3.5.2.** Detailed step-by-step guide to installing the application on Nuvemshop (Insert screenshots of the steps)

@@ -99,7 +99,7 @@ Veja mais detalhes sobre planos e preços neste link.”
 
 **Como integrar o Aplicativo X com a Nuvemshop?**  
 [Apresente um resumo do passo a passo para instalar o aplicativo.]  
-Exemplo: “Para integrar o Aplicativo X a à sua loja Nuvemshop, é só seguir os passos abaixo:  
+Exemplo: “Para integrar o Aplicativo X à sua loja Nuvemshop, é só seguir os passos abaixo:  
 Clique em “Instalar Aplicativo”;  
 Aceite as permissões do aplicativo;  
 Crie uma conta no Aplicativo X;  
@@ -112,7 +112,7 @@ Se tiver dúvidas, confira o passo a passo de como instalar o Aplicativo X. (Lin
 Exemplo: “Se tiver dúvidas, entre em contato nos seguintes canais de atendimento:  
 - Pelo e-mail suporte@app.com.br — tempo médio de resposta de 24 horas;  
 - Chat online pelo site — de segunda a sexta das 9h às 18h e aos sábados das 9h às 15h;  
-- WhatsApp no número xx-xxxx-xxxx — de segunda a sexta das 9h às 18h e aos sábados das 9h às 15h;;  
+- WhatsApp no número xx-xxxx-xxxx — de segunda a sexta das 9h às 18h e aos sábados das 9h às 15h;  
 - Telefone xx-xxxx-xxxx — atendimento 24 horas.”
 
 ### Boas práticas  
