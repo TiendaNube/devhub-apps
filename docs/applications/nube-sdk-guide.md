@@ -1,124 +1,124 @@
-# Guía para migrar apps al SDK en el contexto de storefronts
+# Guide to Migrating Apps to SDK in the Storefront Context
 
-## Contexto
+## Context
 
-Los nuevos temas de Tiendanube, comenzando con el tema Patagonia, marcan el inicio de una nueva era para el comercio electrónico.
+Tiendanube's new themes, starting with the Patagonia theme, mark the beginning of a new era for e-commerce.
 
-Creado para superar las limitaciones técnicas del pasado, ofrece una base moderna, flexible y de alto rendimiento que permite a las marcas expresar todo su potencial visual, sin necesidad de código ni procesos complejos.
+Created to overcome past technical limitations, it offers a modern, flexible, and high-performance foundation that allows brands to express their full visual potential without code or complex processes.
 
-Con él, cada tienda puede ser única, combinando libertad creativa y velocidad para crecer.
+With it, every store can be unique, combining creative freedom and speed to grow.
 
-El **Nube SDK** es el nuevo entorno de desarrollo que permite a los partners crear aplicaciones compatibles con el checkout y el nuevo editor de tiendas, garantizando estabilidad, performance y coherencia visual dentro de las tiendas. En lugar de que cada app se conecte al storefront de manera independiente —lo que generaba conflictos, afectaba la velocidad y en algunos casos podía romper la experiencia del usuario—, el SDK ofrece un marco seguro y estandarizado para integrar funcionalidades directamente en la interfaz del nuevo editor y tiendas.
+**Nube SDK** is the new development environment that allows partners to create applications compatible with checkout and the new store editor, ensuring stability, performance, and visual consistency within stores. Instead of each app connecting to the storefront independently—which generated conflicts, affected speed, and could sometimes break the user experience—the SDK offers a secure and standardized framework to integrate functionalities directly into the new editor and stores interface.
 
-### ¿Qué cambia con el NubeSDK?
+### What Changes with NubeSDK?
 
-👉🏻 [Documentación](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
+👉🏻 [Documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
 
-El NubeSDK redefine completamente cómo se desarrollan apps en Tiendanube:
+NubeSDK completely redefines how apps are developed on Tiendanube:
 
-- Corre dentro de un **Web Worker** por seguridad y aislamiento
-  > Para usar Nube SDK es necesario migrar los scripts a nuestro CDN.
+- Runs inside a **Web Worker** for security and isolation
+  > To use Nube SDK, scripts must be migrated to our CDN.
 
-- Usa **eventos** para comunicarse con el checkout o storefront
-  > (Disponible solo para Patagonia, el nuevo tema de Tiendanube)
+- Uses **events** to communicate with checkout or storefront
+  > (Available only for Patagonia, Tiendanube's new theme)
 
-- La UI se declara de forma **declarativa o con JSX**, no tenés acceso directo al DOM
+- UI is declared **declaratively or with JSX**, you don't have direct DOM access
 
-- Se renderiza en **slots** predeterminados mediante `nube.render()`
+- Renders in predetermined **slots** using `nube.render()`
 
-- Tiene acceso restringido a APIs compatibles con Web Workers.
+- Has restricted access to APIs compatible with Web Workers.
 
 ---
 
-## 1. Migrá tu app al modelo del SDK
+## 1. Migrate Your App to the SDK Model
 
 ### GPT Assistant
 
-[Usá el especialista en creación y migración de aplicaciones de Nube SDK](https://chatgpt.com/g/g-6812298534c88191be0705ba82fea093-nubesdk-assistant)
+[Use the Nube SDK app creation and migration specialist](https://chatgpt.com/g/g-6812298534c88191be0705ba82fea093-nubesdk-assistant)
 
-Escribe un prompt como el siguiente ejemplo y sigue los pasos del Assistant:
+Write a prompt like the following example and follow the Assistant's steps:
 
-> "Analice el codigo compartido y sugiera los pasos para convertir el script de legacy para el Nube SDK. Este es una aplicación para los Storefronts que será migrado para el tema Patagonia. [Código JS]"
+> "Analyze the shared code and suggest the steps to convert the legacy script to Nube SDK. This is an application for Storefronts that will be migrated to the Patagonia theme. [JS Code]"
 
-### Estructura base de una app
+### Basic App Structure
 
-Asegurate de tener un archivo de entrada principal (por ejemplo `src/main.tsx`) con la siguiente forma:
+Make sure you have a main entry file (for example `src/main.tsx`) with the following form:
 
 ```typescript
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
-  // Acá va tu lógica principal
+  // Your main logic goes here
 }
 ```
 
-Esta función será ejecutada automáticamente por el SDK.
+This function will be executed automatically by the SDK.
 
 ---
 
-## 2. Prepará tu entorno
+## 2. Prepare Your Environment
 
-Usá el comando `npm create nube-app@latest` para preparar todo el entorno de desarrollo necesario para que puedas empezar a trabajar.
+Use the `npm create nube-app@latest` command to set up all the development environment needed to start working.
 
-[Más detalles](https://dev.nuvemshop.com.br/docs/applications/nube-sdk/getting-started)
-
----
-
-## 3. Activá el uso del SDK en el Partner Portal
-
-Al registrar o editar tu app en el Partner Portal, activá la opción **"Usa NubeSDK"** para que se ejecute dentro de un worker seguro.
-
-Recordá que es necesario tener los scripts dentro de nuestro CDN para que se ejecuten.
+[More details](https://dev.nuvemshop.com.br/docs/applications/nube-sdk/getting-started)
 
 ---
 
-## 4. Empezá a escuchar eventos
+## 3. Enable SDK Usage in the Partner Portal
 
-Migrá tus interacciones con el entorno de esta forma:
+When registering or editing your app in the Partner Portal, activate the **"Uses NubeSDK"** option so it runs inside a secure worker.
 
-### Antes (ejemplo clásico):
+Remember that scripts must be hosted on our CDN to execute.
+
+---
+
+## 4. Start Listening to Events
+
+Migrate your environment interactions this way:
+
+### Before (classic example):
 
 ```javascript
 document.querySelector('.buy-button').addEventListener('click', () => {
-  // lógica...
+  // logic...
 });
 ```
 
-### Ahora (NubeSDK):
+### Now (NubeSDK):
 
 ```typescript
 nube.on("location:update", ({ location }) => {
   if (location.page.type === "product") {
-    // lógica en el inicio del checkout
+    // logic at checkout start
   }
 });
 ```
 
-Consulta los eventos disponibles en la [documentación de eventos](https://dev.tiendanube.com/docs/applications/nube-sdk/events).
+Check the available events in the [events documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/events).
 
 ---
 
-## 5. Renderizá UI con nube.render
+## 5. Render UI with nube.render
 
-Migrá cualquier código que manipulaba el DOM directamente usando componentes declarativos:
+Migrate any code that directly manipulated the DOM using declarative components:
 
 ```tsx
 import { Box, Text } from "@tiendanube/nube-sdk-jsx";
 
 nube.render("after_line_items", () => (
   <Box padding="16px">
-    <Text>¡Gracias por tu compra!</Text>
+    <Text>Thank you for your purchase!</Text>
   </Box>
 ));
 ```
 
-**No uses** `document.createElement` ni `innerHTML`.
+**Don't use** `document.createElement` or `innerHTML`.
 
 ---
 
-## 6. Validación y configuración
+## 6. Validation and Configuration
 
-Si tu app necesita bloquear el checkout o modificar comportamiento, podés enviar configuraciones iniciales:
+If your app needs to block checkout or modify behavior, you can send initial configurations:
 
 ```typescript
 nube.send("config:set", () => ({
@@ -128,7 +128,7 @@ nube.send("config:set", () => ({
 }));
 ```
 
-Y luego reaccionar:
+And then react:
 
 ```typescript
 nube.on("cart:update", ({ cart }) => {
@@ -137,7 +137,7 @@ nube.on("cart:update", ({ cart }) => {
       cart: {
         validation: {
           status: "fail",
-          reason: "El carrito no puede estar vacío",
+          reason: "Cart cannot be empty",
         },
       },
     }));
@@ -147,33 +147,33 @@ nube.on("cart:update", ({ cart }) => {
 
 ---
 
-## 7. Usá DevTools para debuggear
+## 7. Use DevTools for Debugging
 
-Instalá **Nube DevTools** para ver:
+Install **Nube DevTools** to see:
 
-- Qué apps están corriendo
-- Qué componentes están en cada slot
-- Qué eventos se están disparando
-- Qué estado tiene la app
-
----
-
-## 8. Checklist de migración
-
-- [ ] Tenés una función `App(nube: NubeSDK)` como punto de entrada
-- [ ] Toda la UI se declara con componentes del SDK (JSX o `@tiendanube/nube-sdk-ui`)
-- [ ] Toda la lógica usa `nube.on`, `nube.send`, `nube.render`
-- [ ] No usás `window`, `document`, ni bibliotecas externas como React
-- [ ] Estás corriendo en dev y el script está apuntando a `localhost:8080/main.min.js`
-- [ ] El script tiene habilitado el **flag NubeSDK** en el Partner Portal
+- Which apps are running
+- Which components are in each slot
+- Which events are being fired
+- What state the app has
 
 ---
 
-## 📘 Recursos útiles
+## 8. Migration Checklist
 
-- **Documentación oficial:** [https://dev.tiendanube.com/docs/applications/nube-sdk/overview](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
-- **Componentes disponibles:** [Documentación de componentes](https://dev.tiendanube.com/docs/applications/nube-sdk/components/overview)
-- **Lista de eventos:** [Documentación de eventos](https://dev.tiendanube.com/docs/applications/nube-sdk/events)
-- **Lista de slots:** [Documentación de slots](https://dev.tiendanube.com/docs/applications/nube-sdk/ui-slots)
-- **¿Qué hacer si te falta un componente, slot o evento?** Envía un email a [api@tiendanube.com](mailto:api@tiendanube.com) con tu solicitud compartiendo el mayor detalle posible, idealmente acompañado de un soporte visual.
-- **Mail de soporte técnico:** [api@tiendanube.com](mailto:api@tiendanube.com)
+- [ ] You have an `App(nube: NubeSDK)` function as entry point
+- [ ] All UI is declared with SDK components (JSX or `@tiendanube/nube-sdk-ui`)
+- [ ] All logic uses `nube.on`, `nube.send`, `nube.render`
+- [ ] You don't use `window`, `document`, or external libraries like React
+- [ ] You're running in dev and the script points to `localhost:8080/main.min.js`
+- [ ] The script has the **NubeSDK flag** enabled in the Partner Portal
+
+---
+
+## 📘 Useful Resources
+
+- **Official documentation:** [https://dev.tiendanube.com/docs/applications/nube-sdk/overview](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
+- **Available components:** [Components documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/components/overview)
+- **Events list:** [Events documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/events)
+- **Slots list:** [Slots documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/ui-slots)
+- **What to do if you're missing a component, slot, or event?** Send an email to [api@tiendanube.com](mailto:api@tiendanube.com) with your request sharing as much detail as possible, ideally accompanied by visual support.
+- **Technical support email:** [api@tiendanube.com](mailto:api@tiendanube.com)
