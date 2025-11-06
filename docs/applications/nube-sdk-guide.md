@@ -1,3 +1,6 @@
+---
+title: Migration Guide
+---
 # Guide to Migrating Apps to SDK in the Storefront Context
 
 ## Context
