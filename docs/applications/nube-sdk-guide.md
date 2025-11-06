@@ -15,7 +15,7 @@ With it, every store can be unique, combining creative freedom and speed to grow
 
 ### What Changes with NubeSDK?
 
-👉🏻 [Documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
+👉🏻 [Documentation](/docs/applications/nube-sdk/overview)
 
 NubeSDK completely redefines how apps are developed on Tiendanube:
 
