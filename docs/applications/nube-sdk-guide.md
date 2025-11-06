@@ -171,9 +171,9 @@ Install **Nube DevTools** to see:
 
 ## 📘 Useful Resources
 
-- **Official documentation:** [https://dev.tiendanube.com/docs/applications/nube-sdk/overview](https://dev.tiendanube.com/docs/applications/nube-sdk/overview)
-- **Available components:** [Components documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/components/overview)
-- **Events list:** [Events documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/events)
-- **Slots list:** [Slots documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/ui-slots)
+- [**Official documentation**](/docs/applications/nube-sdk/overview)
+- [**Available components**](/docs/applications/nube-sdk/components/overview)
+- [**Events list**](/docs/applications/nube-sdk/events)
+- [**Slots list**](/docs/applications/nube-sdk/ui-slots)
 - **What to do if you're missing a component, slot, or event?** Send an email to [api@tiendanube.com](mailto:api@tiendanube.com) with your request sharing as much detail as possible, ideally accompanied by visual support.
 - **Technical support email:** [api@tiendanube.com](mailto:api@tiendanube.com)
