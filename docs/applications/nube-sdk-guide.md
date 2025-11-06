@@ -60,7 +60,7 @@ This function will be executed automatically by the SDK.
 
 Use the `npm create nube-app@latest` command to set up all the development environment needed to start working.
 
-[More details](https://dev.nuvemshop.com.br/docs/applications/nube-sdk/getting-started)
+[More details](/docs/applications/nube-sdk/getting-started)
 
 ---
 
