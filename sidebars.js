@@ -51,7 +51,7 @@ const sidebars = {
 						"applications/nube-sdk/state",
 						"applications/nube-sdk/events",
 						"applications/nube-sdk/browser-apis",
-						"applications/nube-sdk-guide",
+						"applications/nube-sdk/migration-guide",
 						{
 							type: "category",
 							label: "Components",
