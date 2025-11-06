@@ -97,7 +97,7 @@ nube.on("location:update", ({ location }) => {
 });
 ```
 
-Check the available events in the [events documentation](https://dev.tiendanube.com/docs/applications/nube-sdk/events).
+Check the available events in the [events documentation](/docs/applications/nube-sdk/events).
 
 ---
 
