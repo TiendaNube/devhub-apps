@@ -19,7 +19,7 @@ A través de la sección “Datos de Publicación” podrás publicar tu solicit
 
 * Dentro del panel de control, haz clic en “Datos de publicación” y “Editar datos” para continuar.
 
-![Dadts de Publicación](../../static/img/es/datos-publicacion.jpg "Datos de Publicación")
+![Dadts de Publicación](/img/es/datos-publicacion.jpg "Datos de Publicación")
 
 * Asegúrate de que todos los campos **“URL y contacto"** y **"Handle de la aplicación"** estén debidamente completados. 
 
