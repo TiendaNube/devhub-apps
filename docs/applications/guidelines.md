@@ -13,7 +13,7 @@ As informações aqui apresentadas foram compiladas a partir da documentação o
  
 ## 1. Requisitos Gerais para Todos os Apps
 
-As diretrizes nesta seção aplicam-se a todos os apps publloja de aplicativos da Nuvemshop. Dependendo da configuração do app, ele também poderá precisar atender aos requisitos específicos detalhados nas seções seguintes.
+As diretrizes nesta seção aplicam-se a todos os apps publicados na loja de aplicativos da Nuvemshop. Dependendo da configuração do app, ele também poderá precisar atender aos requisitos específicos detalhados nas seções seguintes.
 
 ### 1.1. Configurações de Apps Proibidas e Restritas
 Alguns tipos de apps não são permitidos na loja de aplicativos da Nuvemshop e outros devem ter sua visibilidade limitada.  
@@ -63,25 +63,25 @@ Para que os merchant sejam bem-sucedidos, suas lojas online devem ter velocidade
 O anúncio do seu app é o cartão de visitas para os lojistas. Ele precisa ser **claro, conciso e responder diretamente às perguntas** que um usuário em potencial possa ter. Para garantir que todas as informações essenciais estejam lá, destaque as seguintes seções obrigatórias no perfil do app:  
 
 * **O que é o aplicativo?**
-    - Comece com uma descrição direta e objetiva. Explique o problema que o seu app resolve e para quem ele é destinado. Use uma linguagem simples para que o lojista entenda rapidamente o valor da sua solução.
+  - Comece com uma descrição direta e objetiva. Explique o problema que o seu app resolve e para quem ele é destinado. Use uma linguagem simples para que o lojista entenda rapidamente o valor da sua solução.
 * **Como o aplicativo funciona?**
-    - Descreva o fluxo de uso de forma clara, passo a passo. Você pode usar listas ou pequenos parágrafos para mostrar como o lojista interage com o app, desde a instalação até o uso diário.
+  - Descreva o fluxo de uso de forma clara, passo a passo. Você pode usar listas ou pequenos parágrafos para mostrar como o lojista interage com o app, desde a instalação até o uso diário.
 * **Quais são as funcionalidades do aplicativo?**
-    - Liste as principais funcionalidades do app de forma organizada. Use bullet points ou tópicos para facilitar a leitura. Destaque os recursos que mais se conectam com o problema que o app resolve.
+  - Liste as principais funcionalidades do app de forma organizada. Use bullet points ou tópicos para facilitar a leitura. Destaque os recursos que mais se conectam com o problema que o app resolve.
 * **Vantagens de instalar o aplicativo**
-    - Foque nos benefícios. Em vez de apenas listar recursos, explique o que o lojista ganha ao usar o seu app. Por exemplo: "economize tempo", "aumente suas vendas" ou "melhore a experiência do cliente".
+  - Foque nos benefícios. Em vez de apenas listar recursos, explique o que o lojista ganha ao usar o seu app. Por exemplo: "economize tempo", "aumente suas vendas" ou "melhore a experiência do cliente".
 * **Como integrar o aplicativo**
-    - Forneça instruções simples para a integração. Se o processo for automático, diga isso. Se houver passos manuais, descreva-os de forma clara para que o lojista se sinta seguro e consiga fazer a integração sem dificuldades.
+  - Forneça instruções simples para a integração. Se o processo for automático, diga isso. Se houver passos manuais, descreva-os de forma clara para que o lojista se sinta seguro e consiga fazer a integração sem dificuldades.
 * **Preços e planos para lojistas**
-    - Seja transparente sobre a sua estrutura de preços. Explique os diferentes planos, o que cada um inclui e se há um período de teste gratuito. A clareza aqui evita surpresas e ajuda na decisão do lojista.
+  - Seja transparente sobre a sua estrutura de preços. Explique os diferentes planos, o que cada um inclui e se há um período de teste gratuito. A clareza aqui evita surpresas e ajuda na decisão do lojista.
 * **Suporte ao lojista**
-    - Deixe claro como o lojista pode entrar em contato para tirar dúvidas ou resolver problemas. Inclua canais de suporte como e-mail, chat ou uma central de ajuda (FAQ). Mostrar que há um suporte confiável aumenta a confiança no seu produto.  
+  - Deixe claro como o lojista pode entrar em contato para tirar dúvidas ou resolver problemas. Inclua canais de suporte como e-mail, chat ou uma central de ajuda (FAQ). Mostrar que há um suporte confiável aumenta a confiança no seu produto.  
 
 Essas seções garantem que seu anúncio seja completo e responda a todas as dúvidas que um lojista pode ter antes de instalar o seu aplicativo.
 
 ### 5.1. Informações Básicas do App
 * **Nome do App:** O nome do app não pode incluir marcas registradas da Nuvemshop/tiendanube e deve ter 30 caracteres ou menos. Ele deve começar com um termo ou marca únicos.
-    - Ex: Nube, nuvem..
+  - Ex: Nube, nuvem.
 * **Ícone do App:** O ícone deve ser no formato JPEG ou PNG, com dimensões de 1200x1200px. Não deve conter texto, screenshots ou fotografias. O logo não deve tocar as bordas.  
 
 * **Categorização do App:** Selecione a categoria principal que melhor descreve a funcionalidade do seu app.
@@ -123,7 +123,7 @@ Um app embarcado usa extensões de app e bibliotecas para que os lojistas possam
 ## 9. Instruções para Homologação do App
 Nesta seção, você deve fornecer instruções detalhadas sobre como testar seu app durante a revisão.
 - Forneça credenciais de login se o seu app se integrar com plataformas de terceiros.
-- Inclua um screencast que demonstre o processo de configuração e todas as funcionalidades do app, com instruções passo a passo. O screencast deve ser em português ou incluir legendas em português.
+- Inclua um screencast que demonstre o processo de configuração e todas as funcionalidades do app, com instruções passo a passo. O screencast deve ser em **português ou incluir legendas em português**.
 
 
 ## 10. Política de Homologação e Revisão de Apps

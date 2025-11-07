@@ -79,7 +79,7 @@ These sections ensure that your listing is complete and answers all the question
 
 ### 5.1. Basic App Information
 * **App Name:** The app name cannot include Tiendanube trademarks and must be 30 characters or less. It must begin with a unique term or brand.
-    - Ex: Nube, nuvem..
+  - Ex: Nube, nuvem.
 * **App Icon:** The icon must be in JPEG or PNG format, with dimensions of 1200x1200px. It should not contain text, screenshots, or photographs. The logo must not touch the edges.
 
 * **App Categorization:** Select the main category that best describes your app's functionality.
@@ -121,7 +121,7 @@ An embedded app uses app extensions and libraries so that merchants can access i
 ## 9. Instructions for App Homologation
 In this section, you must provide detailed instructions on how to test your app during the review.
 - Provide login credentials if your app integrates with third-party platforms.
-- Include a screencast that demonstrates the configuration process and all app functionalities, with step-by-step instructions. The screencast must be in Portuguese or include Portuguese subtitles.
+- Include a screencast that demonstrates the configuration process and all app functionalities, with step-by-step instructions. The language appropriate for your target market or include subtitles in that language.
 
 
 ## 10. App Homologation and Review Policy

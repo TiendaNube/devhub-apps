@@ -79,7 +79,7 @@ Estas secciones garantizan que su anuncio sea completo y responda a todas las du
 
 ### 5.1. Información Básica de la App
 * **Nombre de la App:** El nombre de la app no puede incluir marcas registradas de Tiendanube y debe tener 30 caracteres o menos. Debe comenzar con un término o marca únicos.
-    - Ej: Nube, nuvem..
+  - Ej: Nube, nuvem.
 * **Ícono de la App:** El ícono debe ser en formato JPEG o PNG, con dimensiones de 1200x1200px. No debe contener texto, screenshots o fotografías. El logo no debe tocar los bordes.
 
 * **Categorización de la App:** Seleccione la categoría principal que mejor describe la funcionalidad de su app.
@@ -121,7 +121,7 @@ Una app incrustada usa extensiones de app y bibliotecas para que los comerciante
 ## 9. Instrucciones para Homologación de la App
 En esta sección, usted debe proporcionar instrucciones detalladas sobre cómo probar su app durante la revisión.
 - Proporcione credenciales de login si su app se integra con plataformas de terceros.
-- Incluya un screencast que demuestre el proceso de configuración y todas las funcionalidades de la app, con instrucciones paso a paso. El screencast debe estar en portugués o incluir subtítulos en portugués.
+- Incluya un screencast que demuestre el proceso de configuración y todas las funcionalidades de la app, con instrucciones paso a paso. El screencast debe estar en **español o incluir subtítulos en español**.
 
 
 ## 10. Política de Homologación y Revisión de Apps
