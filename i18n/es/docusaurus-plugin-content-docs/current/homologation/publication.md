@@ -19,7 +19,7 @@ A través de la sección “Datos de Publicación” podrás publicar tu solicit
 
 * Dentro del panel de control, haz clic en “Datos de publicación” y “Editar datos” para continuar.
 
-![Dadts de Publicación](/img/es/datos-publicacion.jpg "Datos de Publicación")
+![Datos de Publicación](/img/es/datos-publicacion.jpg "Datos de Publicación")
 
 * Asegúrate de que todos los campos **“URL y contacto"** y **"Handle de la aplicación"** estén debidamente completados. 
 
@@ -29,7 +29,7 @@ A través de la sección “Datos de Publicación” podrás publicar tu solicit
 
 * Debes cargar  las imágenes promocionales de la aplicación en **“Imágenes de la aplicación”**, que solo se aprobarán si tienen la dimensión solicitada de 1600 x 800 px. Estas imágenes deben mostrar las pantallas de la app y dar a  conocer sus principales características, despertando el interés del propietario de la tienda en instalarla. Por el momento, estos banners son compartidos para todos los idiomas, por lo que, si tu app se publicará en todos los países, el texto debe estar tanto en portugués, como en español. 
 
-![Imagenes Aplicacion](../../static/img/es/imagenes-aplicacion.jpg "Imagenes Aplicacion")
+![Imagenes Aplicacion](/img/es/imagenes-aplicacion.jpg "Imagenes Aplicacion")
 
 
 ### Forma de cobro
@@ -40,7 +40,7 @@ A través de la sección “Datos de Publicación” podrás publicar tu solicit
 - Precio único (billing Tiendanube, cobro por única vez)
 - Precio por mes (billing de Tiendanube, valor mensual)
 
-![Cobro Precios](../../static/img/es/cobro-precios.jpg "Cobro Precios")
+![Cobro Precios](/img/es/cobro-precios.jpg "Cobro Precios")
 
 
 ### Descripción del perfil de la aplicación
@@ -140,7 +140,7 @@ Sigue exactamente la estructura de la Guía de descripción de la aplicación an
 
 Carga el icono de la aplicación desde **“Icono”**, que solo se aprobará si tiene la dimensión solicitada de 600 x 600 px. Esta imagen debe ser el logotipo principal de tu aplicación.
 
-![Icono](../../static/img/es/icono.jpg "Icono")
+![Icono](/img/es/icono.jpg "Icono")
 
 ### Preguntas frecuentes
 

@@ -16,7 +16,7 @@ Through the “Publication Data” section, you can publish your application to 
 
 * Within the dashboard, click on "Publishing Data" and "Edit Data" to continue.
 
-![Datos Publicacion](../../static/img/en/datos-publicacion.jpg "Datos Publicacion")
+![Datos Publicacion](/img/en/datos-publicacion.jpg "Datos Publicacion")
 
 * Make sure all fields “**URLs and contact**” and “**Application handle**” are duly completed
 
@@ -26,7 +26,7 @@ Through the “Publication Data” section, you can publish your application to 
 
 * Upload the app's promotional images at “**App screenshots**”, which will only be approved if they are in the correct requested dimension of 1600 x 800px. These images must be images that show the application screens and publicize its main features, arousing the store owner's interest in installing it.Currently, these banners are shared across all languages, so if your app will be published in all countries, the text must be in both Portuguese and Spanish.
 
-![Imagenes Aplicaciones](../../static/img/en/imagenes-aplicacion.jpg "Imagenes Aplicaciones")
+![Imagenes Aplicaciones](/img/en/imagenes-aplicacion.jpg "Imagenes Aplicaciones")
 
 
 ### 2.Payment method
@@ -37,7 +37,7 @@ Through the “Publication Data” section, you can publish your application to 
 - Single price (Tiendanube billing, one-time charge)
 - Price per month (Tiendanube billing, monthly value)
 
-![Cobro Precios](../../static/img/en/cobro-precios.jpg "Cobro Precios")
+![Cobro Precios](/img/en/cobro-precios.jpg "Cobro Precios")
 
 
 ### Application profile description
@@ -138,7 +138,7 @@ Follow the structure of the App Description Guide above exactly. You also have t
 
 Upload the app icon from **“Icon”**, which will only be approved if it is the correct requested dimension of 600 x 600px. This image must be your app's main logo.
 
-![Icon](../../static/img/en/icon.jpg "Icon")
+![Icon](/img/en/icon.jpg "Icon")
 
 
 ### FAQs 

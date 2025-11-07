@@ -52,6 +52,7 @@ const sidebars = {
 						"applications/nube-sdk/state",
 						"applications/nube-sdk/events",
 						"applications/nube-sdk/browser-apis",
+						"applications/nube-sdk/migration-guide",
 						{
 							type: "category",
 							label: "Components",
@@ -70,6 +71,7 @@ const sidebars = {
 								"applications/nube-sdk/components/select",
 								"applications/nube-sdk/components/svg",
 								"applications/nube-sdk/components/text",
+								"applications/nube-sdk/components/link",
 								"applications/nube-sdk/components/textarea",
 								"applications/nube-sdk/components/toast",
 							],
@@ -141,6 +143,7 @@ const sidebars = {
 						"applications/nube-sdk/components/select",
 						"applications/nube-sdk/components/svg",
 						"applications/nube-sdk/components/text",
+						"applications/nube-sdk/components/link",
 						"applications/nube-sdk/components/textarea",
 						"applications/nube-sdk/components/toast",
 					],
