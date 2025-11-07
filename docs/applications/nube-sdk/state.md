@@ -48,7 +48,6 @@ export function App(nube: NubeSDK) {
 
 For more details on how to monitor state updates and subscribe to various state events, please see [Events](./events). This page provides comprehensive examples and explanations on how to listen for updates such as `cart:update`, `shipping:update`, and more, allowing you to build a dynamic, responsive application.
 
-
 ### 3. Modifying State
 When an event is sent, a modified function can be defined as the second parameter, this function receives a snapshot of the state and should return a partial version of the state to be merged into the current state.
 
@@ -177,6 +176,33 @@ type CartValidationSuccess = { status: "success" };
 type CartValidationPending = { status: "pending" };
 type CartValidationFail = { status: "fail"; reason: string };
 ```
+
+### `order?: Order`
+The current order state, containing order status and tracking statuses.
+This property is only available on the checkout `success` page after the order has been completed, and will be `null` on all other pages.
+
+```typescript
+type Order = {
+  /** Status of the order. */
+  status?: Nullable<"open" | "closed" | "cancelled">;
+
+  /** Tracking statuses of the order. */
+  tracking_statuses?: OrderTrackingStatus[];
+};
+
+type OrderTrackingStatus = {
+  /** Type of the tracking status. */
+  type: "shipped" | "packed" | "shipping_failure";
+
+  /** Title of the tracking status. */
+  title: string;
+
+  /** Timestamp of the tracking status. */
+  timestamp: string;
+};
+```
+
+
 
 ### `config: AppConfig`
 Application-wide configuration settings, including cart validation rules.
