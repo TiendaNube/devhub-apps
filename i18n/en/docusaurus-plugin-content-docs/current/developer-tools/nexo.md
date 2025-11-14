@@ -823,7 +823,7 @@ otherwise, the `upsell` modal will be displayed.
 - `modalTitle (string)`: The title to display if the upsell modal is shown
 - `trackingSource (string)`: The tracking source to be included in the related Amplitude events
 - `callback (() => void)`: The action to perform if the feature is enabled, or the user accepts the upsell
-- `onDeclined? (() => void`): An optional callback to execute if the user declines the upsell
+- `onDeclined? (() => void)`: An optional callback to execute if the user declines the upsell
 - `onPlansRedirect? (() => void)`: An optional callback to execute if the user is redirected to the plans page
 - `onUnavailable? (() => void)`: An optional callback to execute if there is no plan available that support the requested feautre
 - `onError? (() => void)`: An optional callback to execute if there is an error in the upsell flow
