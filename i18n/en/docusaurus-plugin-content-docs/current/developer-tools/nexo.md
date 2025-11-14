@@ -408,6 +408,105 @@ Allows error logging, capturing crucial information such as URL, message and sta
 }
 ```
 
+### `ACTION_STORE_FEATURE`
+
+Returns the current status of a `feature` for a store, based on the current plan.
+Includes additional information for `features` that are limited to `N` actions per month.
+
+**Internal name**:
+
+- `app/store/feature`
+
+**Payload**:
+
+```ts
+{ 
+  featureKey: string;
+}
+```
+
+**Response**:
+
+```ts
+{
+  isFeatureEnabled: boolean;
+  unlimited: boolean;
+  maxUse: number;
+}
+```
+
+**Payload example**:
+
+```json
+{
+  "featureKey": "a_feature_key"
+}
+```
+**Response example**:
+
+```json
+{
+  "isFeatureEnabled": true,
+  "unlimited": false,
+  "maxUse": 3
+}
+```
+
+### `ACTION_STORE_UPSELL`
+
+Replicates the current `upsell` flow from the admin, returning one of the following values:
+```ts
+{
+  ACCEPTED = 'accepted',
+  DECLINED = 'declined',
+  PLANS_REDIRECT = 'plans_redirect',
+  SKIPPED = 'skipped',
+  UNAVAILABLE = 'unavailable',
+  ERROR = 'error'
+}
+```
+
+**Internal name**:
+
+- `app/store/upsell`
+
+**Payload**:
+
+```ts
+{
+  featureKey: string;
+  modalTitle: string;
+  trackingSource: string;
+}
+```
+
+**Response**:
+
+```ts
+{ 
+  result: string;
+}
+```
+
+**Payload example**:
+
+```json
+{
+  "featureKey": "a_feature_key",
+  "modalTitle": "To perform this action, you need to upgrade your plan",
+  "trackingSource": "an_embedded_app"
+}
+```
+
+**Response example**:
+
+```json
+{
+  "result": "declined"
+}
+```
+
+
 ## Helpers
 
 ### `connect`
@@ -675,6 +774,78 @@ Removes the action of Header Top, available only in Web mode (non-mobile devices
 
 ```typescript
 navigateHeaderRemove(nexo);
+```
+
+### `getFeatureStatus`
+
+Allows an application to query the current status of a `feature` for a merchant.
+This will not trigger the `upsell` flow.
+
+**Action**: `app/store/feature`
+
+**Arguments**:
+
+- `nexo (NexoClient)`: The nexo instance
+- `featureKey (string)`: The feature key to evaluate
+
+**Response**:
+
+- `Promise<StoreFeatureResponse>`: A promise with the feature info.
+```ts
+StoreFeatureResponse {
+  isFeatureEnabled: boolean;
+  unlimited: boolean;
+  maxUse: number;
+};
+```
+
+**Example**:
+
+```ts
+  const featureStatus = await getFeatureStatus(nexo, 'a_feature_key');
+  if (featureStatus.isFeatureEnabled) {
+    navigate('/a-feature-related-url', { replace: true });
+  }
+```
+
+### `runWithUpsell`
+
+Allows an application to place an action behind the `upsell` flow,
+meaning the action will only be executed if the current user's plan has the `feature` available;
+otherwise, the `upsell` modal will be displayed.
+
+**Action**: `app/store/upsell`
+
+**Arguments**:
+
+- `nexo (NexoClient)`: The nexo instance
+- `featureKey (string)`: The feature key to evaluate
+- `modalTitle (string)`: The title to display if the upsell modal is shown
+- `trackingSource (string)`: The tracking source to be included in the related Amplitude events
+- `callback (() => void)`: The action to perform if the feature is enabled, or the user accepts the upsell
+- `onDeclined? (() => void`): An optional callback to execute if the user declines the upsell
+- `onPlansRedirect? (() => void)`: An optional callback to execute if the user is redirected to the plans page
+- `onUnavailable? (() => void)`: An optional callback to execute if there is no plan available that support the requested feautre
+- `onError? (() => void)`: An optional callback to execute if there is an error in the upsell flow
+
+**Response**:
+
+- `Promise<void>`
+
+**Example**:
+
+```ts
+  const handleButtonClick = async () => {
+    await runWithUpsell({
+      nexo,
+      featureKey: 'a_feature_key',
+      modalTitle: 'To perform this action, you need to upgrade your plan',
+      trackingSource: 'an_embedded_app',
+      callback: () => {
+        navigate('/a-feature-related-url', { replace: true });
+      }
+    });
+  };
 ```
 
 ---
