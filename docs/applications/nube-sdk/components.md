@@ -47,6 +47,9 @@ A component for displaying images with support for responsive sources, alternati
 ### [Icon](/docs/applications/nube-sdk/components/icon)
 A component for displaying icons from the **[Nimbus Icons](https://nimbus.nuvemshop.com.br/documentation/resources/nimbus-icons)** library, supporting customizable size and color properties.
 
+### [Iframe](/docs/applications/nube-sdk/components/iframe)
+A component that allows you to embed external web content directly into your application's UI, creating an inline frame that loads content from a specified URL.
+
 ### [SVG](/docs/applications/nube-sdk/components/svg)
 A component for creating scalable vector graphics within your NubeSDK application, providing comprehensive SVG elements including Root, Circle, Text, and other common SVG shapes.
 
