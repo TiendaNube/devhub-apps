@@ -55,6 +55,9 @@ A component for creating scalable vector graphics within your NubeSDK applicatio
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)
 A collapsible content component that allows users to expand and collapse sections of content, improving the user experience by reducing visual clutter.
 
+### [Progress](/docs/applications/nube-sdk/components/progress)
+A visual indicator component that displays the completion status of a task or operation, supporting configurable value and maximum properties.
+
 ### [Toast](/docs/applications/nube-sdk/components/toast)
 A non-disruptive message component that appears temporarily to provide quick feedback to users, supporting multiple variants and customizable duration.
 
