@@ -78,9 +78,9 @@ Your app listing is the business card for merchants. It needs to be **clear, con
 These sections ensure that your listing is complete and answers all the questions a merchant might have before installing your application.
 
 ### 5.1. Basic App Information
-* **App Name:** The app name cannot include Tiendanube trademarks and must be 30 characters or less. It must begin with a unique term or brand.
+* **App Name:** The app name cannot include Tiendanube trademarks and must be 35 characters or less. It must begin with a unique term or brand.
   - Ex: Nube, nuvem.
-* **App Icon:** The icon must be in JPEG or PNG format, with dimensions of 1200x1200px. It should not contain text, screenshots, or photographs. The logo must not touch the edges.
+* **App Icon:** The icon must be in JPEG or PNG format, with dimensions of 600x600px. It should not contain text, screenshots, or photographs. The logo must not touch the edges.
 
 * **App Categorization:** Select the main category that best describes your app's functionality.
 

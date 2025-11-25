@@ -80,9 +80,9 @@ O anúncio do seu app é o cartão de visitas para os lojistas. Ele precisa ser 
 Essas seções garantem que seu anúncio seja completo e responda a todas as dúvidas que um lojista pode ter antes de instalar o seu aplicativo.
 
 ### 5.1. Informações Básicas do App
-* **Nome do App:** O nome do app não pode incluir marcas registradas da Nuvemshop/tiendanube e deve ter 30 caracteres ou menos. Ele deve começar com um termo ou marca únicos.
+* **Nome do App:** O nome do app não pode incluir marcas registradas da Nuvemshop/tiendanube e deve ter 35 caracteres ou menos. Ele deve começar com um termo ou marca únicos.
   - Ex: Nube, nuvem.
-* **Ícone do App:** O ícone deve ser no formato JPEG ou PNG, com dimensões de 1200x1200px. Não deve conter texto, screenshots ou fotografias. O logo não deve tocar as bordas.  
+* **Ícone do App:** O ícone deve ser no formato JPEG ou PNG, com dimensões de 600x600px. Não deve conter texto, screenshots ou fotografias. O logo não deve tocar as bordas.  
 
 * **Categorização do App:** Selecione a categoria principal que melhor descreve a funcionalidade do seu app.
 

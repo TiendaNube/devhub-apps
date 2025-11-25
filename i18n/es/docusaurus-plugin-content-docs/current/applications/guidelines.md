@@ -78,9 +78,9 @@ El anuncio de su app es la carta de presentación para los comerciantes. Necesit
 Estas secciones garantizan que su anuncio sea completo y responda a todas las dudas que un comerciante pueda tener antes de instalar su aplicación.
 
 ### 5.1. Información Básica de la App
-* **Nombre de la App:** El nombre de la app no puede incluir marcas registradas de Tiendanube y debe tener 30 caracteres o menos. Debe comenzar con un término o marca únicos.
+* **Nombre de la App:** El nombre de la app no puede incluir marcas registradas de Tiendanube y debe tener 35 caracteres o menos. Debe comenzar con un término o marca únicos.
   - Ej: Nube, nuvem.
-* **Ícono de la App:** El ícono debe ser en formato JPEG o PNG, con dimensiones de 1200x1200px. No debe contener texto, screenshots o fotografías. El logo no debe tocar los bordes.
+* **Ícono de la App:** El ícono debe ser en formato JPEG o PNG, con dimensiones de 600x600px. No debe contener texto, screenshots o fotografías. El logo no debe tocar los bordes.
 
 * **Categorización de la App:** Seleccione la categoría principal que mejor describe la funcionalidad de su app.
 
