@@ -103,7 +103,15 @@ const sidebars = {
 				"homologation/sync",
 				"homologation/guidelines",
 				"homologation/requirements",
-				"homologation/publication",
+			],
+		},
+		{
+			type: "category", 
+			label: "Publicação do App",
+			items: [
+				"publication/overview",
+				"publication/requirements",
+				"publication/publications",
 				"homologation/checklist",
 			],
 		},
