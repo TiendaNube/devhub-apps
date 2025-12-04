@@ -31,6 +31,7 @@ These are the slots that are available in the storefront:
 | after_product_detail_add_to_cart     | product                         |
 | after_add_to_cart_pdp                | product                         |
 | after_product_description            | product                         |
+| before_line_items                    | cart                            |
 | after_cart_summary                   | cart                            |
 | after_go_to_checkout                 | cart                            |
 | before_footer                        | home, product, category, search |
@@ -110,6 +111,10 @@ nube.render("product_grid_item_image_bottom_right", ({ location }) => {
 ![After Product Description Slot](/img/pt/nube-sdk-after_product_description.png)
 
 ## Cart Page Slots
+
+- `before_line_items`
+
+![Before Line Items Slot](/img/pt/nube-sdk-before-line-items.jpg)
 
 - `after_cart_summary`
 
