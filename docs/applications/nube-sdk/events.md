@@ -482,4 +482,4 @@ export function App(nube: NubeSDK) {
 
 - Learn more about [Browser API's](./browser-apis)
 - Learn more about [Components](./components)
-- Learn more about [UI Slots](./ui-slots)
+- Learn more about [UI Slots](./slots/overview)

@@ -120,7 +120,7 @@ The NubeSDK provides methods to render components into UI slots and clear them w
 
 The `render` method allows you to render a component into a specific UI slot. The component can be either a static component or a function that receives the current state and returns a component to render.
 
-For a complete list of available UI slots, see [UI Slots](./ui-slots).
+For a complete list of available UI slots, see [UI Slots](./slots/overview).
 
 ```typescript
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
@@ -155,7 +155,7 @@ export function App(nube: NubeSDK) {
 }
 ```
 
-For more information about available UI slots, see [UI Slots](./ui-slots).
+For more information about available UI slots, see [UI Slots](./slots/overview).
 
 ### Browser APIs
 
