@@ -19,6 +19,9 @@ A vertical container that aligns child components in a column. It inherits all c
 ### [Fragment](/docs/applications/nube-sdk/components/fragment)
 A utility component that serves as a logical grouping element, allowing multiple components to be wrapped together without introducing an additional DOM node.
 
+### [SideScroll](/docs/applications/nube-sdk/components/sidescroll)
+A horizontal scrollable container for displaying content in a row. Useful for creating carousels, image galleries, or any horizontal list of items that may overflow the available width.
+
 ## Form Components
 
 ### [Field](/docs/applications/nube-sdk/components/field)
