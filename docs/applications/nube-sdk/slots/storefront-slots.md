@@ -39,15 +39,15 @@ These are the slots that are available in the storefront:
 
 ### Home, Category, and Search Pages
 
-#### before_main_content
+- `before_main_content`
 
 ![Before Main Content Slot](/img/pt/nube-sdk-before_main_content.png)
 
-#### before_start_checkout_button
+- `before_start_checkout_button`
 
 ![Before Start Checkout Button Slot](/img/pt/nube-sdk-before_start_checkout_button.png)
 
-#### before_footer
+- `before_footer`
 
 ![Before Footer Slot](/img/pt/nube-sdk-before_footer.png)
 
@@ -83,35 +83,39 @@ nube.render("product_grid_item_image_bottom_right", ({ location }) => {
 
 ## Product Page Slots
 
+- `after_product_detail_name`
+- `before_product_add_to_cart`
+- `after_product_add_to_cart`
+
 ![Product Page Slots Overview](/img/pt/nube-sdk-product_slots.png)
 
-#### before_price_pdp
+- `before_price_pdp`
 
 ![Before Price PDP Slot](/img/pt/nube-sdk-before_price_pdp.png)
 
-#### after_price_pdp
+- `after_price_pdp`
 
 ![After Price PDP Slot](/img/pt/nube-sdk-after_price_pdp.png)
 
-#### before_add_to_cart_pdp
+- `before_add_to_cart_pdp`
 
 ![Before Add to Cart PDP Slot](/img/pt/nube-sdk-before_add_to_cart_pdp.png)
 
-#### after_add_to_cart_pdp
+- `after_add_to_cart_pdp`
 
 ![After Add to Cart PDP Slot](/img/pt/nube-sdk-after_ad_to_cart_pdp.png)
 
-#### after_product_description
+- `after_product_description`
 
 ![After Product Description Slot](/img/pt/nube-sdk-after_product_description.png)
 
 ## Cart Page Slots
 
-#### after_cart_summary
+- `after_cart_summary`
 
 ![After Cart Summary Slot](/img/pt/nube-sdk-after_cart_summary.png)
 
-#### after_go_to_checkout
+- `after_go_to_checkout`
 
 ![After Go to Checkout Slot](/img/pt/nube-sdk-after_go_to_checkout.png)
 
