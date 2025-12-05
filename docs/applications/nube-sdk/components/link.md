@@ -8,8 +8,10 @@ import AppTypes from '@site/src/components/AppTypes';
 The `Link` component is used to render clickable hyperlinks that navigate users to different URLs.
 It supports properties such as `href`, `children`, `target`, and styling options.
 
-<Alert appearance="warning" title="Important">
-  The Link component can only be used on the success page. It is not available on other pages or UI slots.
+### Availability
+
+<Alert appearance="warning" title="Checkout Limitation">
+  In checkout applications, the Link component can only be rendered on the success page. For storefront applications, it is available on all pages.
 </Alert>
 
 ### Usage

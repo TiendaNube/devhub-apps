@@ -245,6 +245,10 @@ export type DeviceScreen = {
 	width: number;
 	/** The height of the screen in pixels. */
 	height: number;
+	/** The inner width of the viewport in pixels. */
+	innerWidth: number;
+	/** The inner height of the viewport in pixels. */
+	innerHeight: number;
 	/**
 	 * The orientation of the screen.
 	 * @example "portrait" | "landscape"
