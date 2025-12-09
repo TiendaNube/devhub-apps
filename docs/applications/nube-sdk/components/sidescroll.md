@@ -44,4 +44,3 @@ export function App(nube: NubeSDK) {
 | hideScrollbar | boolean               | No       | Whether to hide the scrollbar while keeping scroll functionality.     |
 | step          | number                | No       | Number of pixels to scroll when using navigation controls.            |
 | style         | NubeComponentStyle    | No       | Custom styles for the scroll container.                               |
-
