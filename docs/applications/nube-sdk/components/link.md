@@ -9,7 +9,7 @@ The `Link` component is used to render clickable hyperlinks that navigate users 
 It supports properties such as `href`, `children`, `target`, and styling options.
 
 <Alert appearance="warning" title="Important">
-  The Link component can only be used on the success page. It is not available on other pages or UI slots.
+  The Link component is available in the storefront and the success page in checkout. It is not available on other pages or UI slots.
 </Alert>
 
 ### Usage
