@@ -252,6 +252,10 @@ export type DeviceScreen = {
 	orientation: DeviceScreenOrientation;
 	/** The pixel ratio of the screen. */
 	pixelRatio: number;
+  /** The width of the inner window in pixels. */
+	innerWidth: number;
+	/** The height of the inner window in pixels. */
+	innerHeight: number;
 };
 
 /**
@@ -288,13 +292,15 @@ type AppLocation = {
 /**
  * Represents a page within the application.
  */
-type Page =
-  | HomePage
-  | CheckoutPage
-  | ProductPage
-  | CategoryPage
-  | AllProductsPage
-  | SearchPage;
+export type Page =
+	| HomePage
+	| CheckoutPage
+	| ProductPage
+	| CategoryPage
+	| AllProductsPage
+	| SearchPage
+	| AccountPage
+	| CustomPage;
 
 /** Represents the homepage. */
 type HomePage = { type: "home"; data: Home };
@@ -314,9 +320,16 @@ type AllProductsPage = { type: "products"; data: Category & { id: 0 } & WithProd
 /** Represents the search results page. */
 type SearchPage = { type: "search"; data: Search & WithProductList };
 
-type Checkout = {
-  step: "start" | "payment" | "success";
-};
+/** Represents Account Page */
+export type AccountPage = { type: "account"; data: Account };
+
+/** Represents the data for a custom page. */
+export type CustomPageData = { name: string };
+
+/** Represents a custom page step. */
+export type CustomPage = { type: "custom_page"; data: CustomPageData };
+
+type Checkout = { step: "start" | "payment" | "success" };
 
 type Home = undefined | WithSections<"home">;
 

@@ -5,7 +5,7 @@ title: Image
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](../ui-slots) by sending the [ui:slot:set](../events#uislotset) event.
+We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](../slots/overview) by sending the [ui:slot:set](../events#uislotset) event.
 
 Used to display images. It supports properties such as `src`, `alt`, `width`, `height`, and responsive `sources` for different screen sizes.
 

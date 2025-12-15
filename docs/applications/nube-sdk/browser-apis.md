@@ -54,7 +54,7 @@ await browser.asyncLocalStorage.setItem("my_custom_field", "Hello World!", 60);
 If no `ttl` is provided, the value will persist indefinitely, following the default behavior of `localStorage` and `sessionStorage`.
 
 - Learn more about [Components](./components/overview)
-- Learn more about [Slots](./ui-slots)
+- Learn more about [Slots](./slots/overview)
 
 ## navigate
 
