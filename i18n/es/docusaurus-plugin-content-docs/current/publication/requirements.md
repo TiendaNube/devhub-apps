@@ -15,13 +15,13 @@ Estas imágenes deben mostrar las pantallas de la aplicación y divulgar sus pri
 
 ## 2. Icono de aplicación
 
-Descarga el ícono de la aplicación desde "**Icon**", que solo se aprobará si tiene el tamaño correcto requerido de 600 x 600 px. Esta imagen será el logotipo de tu aplicación. 
+Descarga el ícono de la aplicación desde "**Icono**", que solo se aprobará si tiene el tamaño correcto requerido de 600 x 600 px. Esta imagen será el logotipo de tu aplicación. 
 
 ![icone](../../../../../static/img/es/icone.png "icone")
 
 ## 3. Método de facturación
 
-* En “Idiomas de la tienda de aplicaciones” selecciona el país en el que se publicará la aplicación para rellenar a continuación todos los campos solicitados.
+* En “Idiomas de la tienda de aplicaciones” seleccione el país en el que se publicará la aplicación para rellenar a continuación todos los campos solicitados.
 * Seleccione el tipo de pago que desea utilizar en "**Método de facturación**":
     * Gratuito (billing propia del socio/partner con opción o no de tener “Ventas en la aplicación”).
     * Valor único (billing de Tiendanube, pago único).

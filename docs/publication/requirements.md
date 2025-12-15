@@ -9,7 +9,7 @@ title: Requisitos Obrigatórios
 
 * Faça o download das imagens de divulgação do aplicativo em "**Imagens do aplicativo**", que só serão aprovadas se estiverem na dimensão solicitada correta de **1600 x 800px**.
 
-Essas imagens devem mostrar as telas do aplicativo e divulgar as suas principais funcionalidades despertando o interesse do lojista em instalá-lo. As mesmas imagens são compartilhadas em todos os idiomas, portanto, se o seu aplicativo for publicado em todos os países o texto das imagens deve estar tanto em português como em espanhol.
+Essas imagens devem mostrar as telas do aplicativo e divulgar as suas principais funcionalidades, despertando o interesse do lojista em instalá-lo. As mesmas imagens são compartilhadas em todos os idiomas, portanto, se o seu aplicativo for publicado em todos os países o texto das imagens deve estar tanto em português como em espanhol.
 
 ![Imagens do aplicativo](../../static/img/pt/imagem-app.png)
 
@@ -33,7 +33,7 @@ Faça o download do ícone do aplicativo em "**Ícone**", que só será aprovado
 
 * Em "**Informações**" preencha os campos de descrição do aplicativo. Esta é a parte mais importante! As informações presentes nos **campos de descrição "curta" e "longa"** serão a vitrine do seu aplicativo na Loja de Aplicativos, o que os lojistas verão e os incentivará a instalá-lo.
 
-A Nuvemshop criou um guia para a sua descrição ter o máximo de palavras chaves possível garantindo um bom retorno ao campo de busca da Loja de Aplicativos quando o lojista buscar por alguma funcionalidade ou necessidade que o seu aplicativo resolve. Use exatamente esta estrutura:
+A Nuvemshop criou um guia para a sua descrição ter o máximo de palavras-chave possível, garantindo um bom retorno ao campo de busca da Loja de Aplicativos quando o lojista buscar por alguma funcionalidade ou necessidade que o seu aplicativo resolve. Use exatamente esta estrutura:
 
 **Descrição do perfil do aplicativo**
 
@@ -118,8 +118,8 @@ Se tiver dúvidas, confira o passo a passo de como instalar o Aplicativo X. (Lin
 Informe todos os canais de suporte, assim como SLA de resposta e horário de atendimento. Exemplo: *“Se tiver dúvidas, entre em contato nos seguintes canais de atendimento:”*
 
 * Pelo e-mail **suporte@app.com.br** — tempo médio de resposta de 24 horas;
-* **Chat online** pelo site — de segunda a sexta das 9h às 18h e aos sábados das 9h às 15h;
-* **WhatsApp** no número xx-xxxx-xxxx — de segunda a sexta das 9h às 18h e aos sábados das 9h às 15h;
+* **Chat online** pelo site — de Segunda a Sexta das 9h às 18h e aos Sábados das 9h às 15h;
+* **WhatsApp** no número xx-xxxx-xxxx — de Segunda a Sexta das 9h às 18h e aos Sábados das 9h às 15h;
 * **Telefone** xx-xxxx-xxxx — atendimento 24 horas.
 
 ## ⭐ Boas práticas para estes preenchimentos
