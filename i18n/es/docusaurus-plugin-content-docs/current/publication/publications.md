@@ -13,6 +13,6 @@ La aplicación solo estará disponible en la tienda de aplicaciones de Tiendanub
 - su aplicación ha pasado por el proceso de homologación (o certificación/aprobación) y ha sido aprobada.
 
 :::warning
-Nuestra equipo solo iniciará la homologación después de recibir estos documentos de artefactos y publicación.
+Nuestro equipo solo iniciará la homologación después de recibir estos documentos de artefactos y publicación.
 Es importante seguir todos estos procesos para acelerar la publicación de tu aplicación en la Tienda de Aplicaciones y ponerla a disposición de las tienda.
 :::

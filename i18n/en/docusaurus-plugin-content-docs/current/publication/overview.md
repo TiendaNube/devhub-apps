@@ -5,9 +5,9 @@ title: Overview
 
 # App Publishing Process
 
-Nesta seção, forneceremos um guia passo a passo para que você possa publicar seu aplicativo na [Nuvemshop App Store](https://www.nuvemshop.com.br/loja-aplicativos-nuvem).
+In this section, we will provide a step-by-step guide so that you can publish your application in the [Nuvemshop App Store](https://www.nuvemshop.com.br/loja-aplicativos-nuvem).
 
-Para que a aplicação seja publicada, existem dois passos a serem realizados, de forma **independente e em paralelo**:
+For the application to be published, there are two steps that must be carried out, **independently and in parallel:**
 
 ### Step 1: Sending the artifacts
 
