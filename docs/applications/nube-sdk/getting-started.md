@@ -188,14 +188,14 @@ Ensure that the script attribute of your app contains the URL localhost. This co
 
 ## NubeSDK Assistant
 
-The NubeSDK Assistant is a specialized ChatGPT-powered tool designed to help developers create and build apps using the NubeSDK. This assistant provides:
+The NubeSDK Assistant is a specialized Gemini-powered tool designed to help developers create and build apps using the NubeSDK. This assistant provides:
 
 - Expert guidance on NubeSDK implementation
 - Code examples and best practices
 - Troubleshooting support
 - Step-by-step assistance in app development
 
-You can access the NubeSDK Assistant at: [NubeSDK Assistant](https://chatgpt.com/g/g-6812298534c88191be0705ba82fea093-nubesdk-assistant)
+You can access the NubeSDK Assistant at: [NubeSDK Assistant](https://gemini.google.com/gem/2cdd8c07de85?usp=sharing)
 
 ## Next Steps
 
