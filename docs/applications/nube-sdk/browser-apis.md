@@ -84,3 +84,46 @@ The `navigate` method is particularly useful when you need to:
 :::warning
 The `navigate` method only allows navigation within the current domain and does not support external URLs or cross-origin navigation.
 :::
+
+## postMessageToIframe
+
+The `postMessageToIframe` method allows you to send messages from your app to an embedded iframe component. This enables bidirectional communication between your application and the content loaded within the iframe.
+
+### How to Use
+
+The `postMessageToIframe` method accepts two parameters:
+- The `Iframe` component instance
+- A message object containing the data you want to send
+
+```typescript title="main.ts"
+import { Iframe } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+	const Component = (
+		<Iframe
+			src="https://tiendanube.com/"
+			height={300}
+			onMessage={(event) => {
+				console.log(event.value);
+			}}
+		/>
+	);
+
+	nube.render("before_main_content", Component);
+
+	const browser = nube.getBrowserAPIs();
+	browser.postMessageToIframe(Component, {
+		message: "Hello World",
+	});
+}
+```
+
+The `postMessageToIframe` method is particularly useful when you need to:
+- Send data or commands to the embedded iframe content
+- Synchronize state between your app and the iframe
+- Trigger actions within the iframe from your application
+
+:::info
+To receive messages from the iframe, use the `onMessage` prop on the `Iframe` component. Learn more about [Iframe component](./components/iframe).
+:::
