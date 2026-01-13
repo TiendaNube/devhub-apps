@@ -66,8 +66,6 @@ Product grid slots are special slots that allow you to render components on prod
 
 ### Rendering Components in Product Grids
 
-![Product Grid Slots](/img/pt/nube-sdk-slot-product-grid.png)
-
 To render components in product grids, return an array of components where the root element for each product includes the `key` prop set to that product's ID. This allows your app to render components across multiple items in the grid.
 
 ```tsx
@@ -82,38 +80,7 @@ export function App(nube: NubeSDK) {
 }
 ```
 
-The example below renders a text component on every product card in the grid on the home page:
-
-```tsx
-import { Text } from "@tiendanube/nube-sdk-jsx";
-import type { NubeSDK, ProductDetails } from "@tiendanube/nube-sdk-types";
-import { styled } from "@tiendanube/nube-sdk-ui";
-
-const StyledText = styled(Text)`
-  color: red;
-  font-weight: bold;
-`;
-
-export function App(nube: NubeSDK) {
-  const state = nube.getState();
-
-  if (state.location.page.type === "home") {
-    const sections = state.location.page.data?.sections || [];
-    const allProducts = sections.reduce((acc: ProductDetails[], section) => {
-      if (section?.products && Array.isArray(section.products)) {
-        acc.push(...section.products);
-      }
-      return acc;
-    }, []);
-
-    nube.render("product_grid_item_image_top_left", () => {
-      return allProducts.map((product) => (
-        <StyledText key={product.id}>ID: {product.id.toString()}</StyledText>
-      ));
-    });
-  }
-}
-```
+For a complete example of rendering components dynamically in product grids, see the [Dynamic Product Grid Rendering](#dynamic-product-grid-rendering) section below:
 
 ## Product Page Slots
 
@@ -206,18 +173,36 @@ export function App(nube: NubeSDK) {
 
 ### Dynamic Product Grid Rendering
 
+![Product Grid Slots](/img/pt/nube-sdk-slot-product-grid.png)
+
 ```tsx
-import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { Box, Text } from "@tiendanube/nube-sdk-jsx";
+import { Text } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK, ProductDetails } from "@tiendanube/nube-sdk-types";
+import { styled } from "@tiendanube/nube-sdk-ui";
+
+const StyledText = styled(Text)`
+  color: red;
+  font-weight: bold;
+`;
 
 export function App(nube: NubeSDK) {
-  nube.render("after_product_grid_item_name", ({ location }) => {
-    return location.page.products.map(product => (
-      <Box key={product.id}>
-        <Text>{product.variants.length} variants available</Text>
-      </Box>
-    ));
-  });
+  const state = nube.getState();
+
+  if (state.location.page.type === "home") {
+    const sections = state.location.page.data?.sections || [];
+    const allProducts = sections.reduce((acc: ProductDetails[], section) => {
+      if (section?.products && Array.isArray(section.products)) {
+        acc.push(...section.products);
+      }
+      return acc;
+    }, []);
+
+    nube.render("product_grid_item_image_top_left", () => {
+      return allProducts.map((product) => (
+        <StyledText key={product.id}>ID: {product.id.toString()}</StyledText>
+      ));
+    });
+  }
 }
 ```
 
