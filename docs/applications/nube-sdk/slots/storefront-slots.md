@@ -66,20 +66,53 @@ Product grid slots are special slots that allow you to render components on prod
 
 ### Rendering Components in Product Grids
 
+![Product Grid Slots](/img/pt/nube-sdk-slot-product-grid.png)
+
 To render components in product grids, return an array of components where the root element for each product includes the `key` prop set to that product's ID. This allows your app to render components across multiple items in the grid.
 
-The example below renders a button on every product card in the grid:
+```tsx
+import { Text } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  const productIds = [1, 2, 3];
+  nube.render("product_grid_item_image_top_left", () => {
+    return productIds.map((id) => <Text key={id}>ID: {id.toString()}</Text>);
+  });
+}
+```
+
+The example below renders a text component on every product card in the grid on the home page:
 
 ```tsx
-nube.render("product_grid_item_image_bottom_right", ({ location }) => {
-  return location.page.products.map(product => (
-    <Box key={product.id}>
-      <Button onClick={() => console.log(product)}>
-        Click Me!
-      </Button>
-    </Box>
-  ));
-});
+import { Text } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK, ProductDetails } from "@tiendanube/nube-sdk-types";
+import { styled } from "@tiendanube/nube-sdk-ui";
+
+const StyledText = styled(Text)`
+  color: red;
+  font-weight: bold;
+`;
+
+export function App(nube: NubeSDK) {
+  const state = nube.getState();
+
+  if (state.location.page.type === "home") {
+    const sections = state.location.page.data?.sections || [];
+    const allProducts = sections.reduce((acc: ProductDetails[], section) => {
+      if (section?.products && Array.isArray(section.products)) {
+        acc.push(...section.products);
+      }
+      return acc;
+    }, []);
+
+    nube.render("product_grid_item_image_top_left", () => {
+      return allProducts.map((product) => (
+        <StyledText key={product.id}>ID: {product.id.toString()}</StyledText>
+      ));
+    });
+  }
+}
 ```
 
 ## Product Page Slots
