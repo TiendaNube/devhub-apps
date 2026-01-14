@@ -20,7 +20,7 @@ import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 export function App(nube: NubeSDK) {
   nube.render(
     "before_main_content",
-    <Iframe src="https://www.nuvemshop.com.br" />
+    <Iframe src="https://your-app-domain.com" />
   );
 }
 ```
@@ -35,7 +35,7 @@ export function App(nube: NubeSDK) {
   nube.render(
     "after_line_items",
     <Iframe 
-      src="https://example.com/widget" 
+      src="https://your-app-domain.com" 
       width="100%"
       height="400px"
       style={{
@@ -45,6 +45,87 @@ export function App(nube: NubeSDK) {
     />
   );
 }
+```
+
+### Communication
+
+The `Iframe` component supports bidirectional communication between your app and the embedded content.
+
+#### Receiving messages from iframe
+
+Use the `onMessage` prop to listen for messages sent from the iframe:
+
+```typescript title="Example with onMessage"
+import { Iframe } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  nube.render(
+    "before_main_content",
+    <Iframe
+      src="https://your-app-domain.com"
+      height={300}
+      onMessage={(event) => {
+        console.log(event.value);
+      }}
+    />
+  );
+}
+```
+
+#### Sending messages to iframe
+
+To send messages from your app to the iframe, use the `NubeBrowserAPIs`:
+
+```typescript title="Example sending message to iframe"
+import { Iframe } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  const Component = (
+    <Iframe
+      src="https://your-app-domain.com"
+      height={300}
+      onMessage={(event) => {
+        console.log(event.value);
+      }}
+    />
+  );
+
+  nube.render("before_main_content", Component);
+
+  const browser = nube.getBrowserAPIs();
+  browser.postMessageToIframe(Component, {
+    message: "Hello World",
+  });
+}
+```
+
+#### Implementing iframe content
+
+When implementing the code that runs inside the iframe, use `window.parent.postMessage` to send messages to the parent window:
+
+```javascript title="Example sending message from iframe to parent"
+// Code inside the iframe
+window.parent.postMessage(
+  {
+    type: "custom-event",
+    data: { message: "Hello from iframe" }
+  },
+  "*" // Target origin - use specific origin in production
+);
+```
+
+To listen for messages sent from the parent window to the iframe:
+
+```javascript title="Example listening to messages from parent"
+// Code inside the iframe
+window.addEventListener("message", (event) => {
+  // Verify origin for security
+  if (event.origin !== "https://your-app-domain.com") return;
+  
+  console.log("Message from parent:", event.data);
+});
 ```
 
 ### Security Considerations
@@ -58,10 +139,11 @@ When embedding external content using iframes, consider the following security b
 
 ### Properties
 
-| Property | Type       | Required | Description                                                          |
-| -------- | ---------- | -------- | -------------------------------------------------------------------- |
-| src      | string     | Yes      | The URL of the content to embed. Must use "https://".               |
-| width    | Size       | No       | Width of the iframe (e.g., "100%", "600px", 600).                   |
-| height   | Size       | No       | Height of the iframe (e.g., "400px", "50vh", 400).                  |
-| style    | StyleSheet | No       | Custom styles for the iframe container.                             |
-| id       | string     | No       | Optional unique identifier for the component.                       |
+| Property  | Type                                    | Required | Description                                                          |
+| --------- | --------------------------------------- | -------- | -------------------------------------------------------------------- |
+| src       | string                                  | Yes      | The URL of the content to embed. Must use "https://".               |
+| width     | Size                                    | No       | Width of the iframe (e.g., "100%", "600px", 600).                   |
+| height    | Size                                    | No       | Height of the iframe (e.g., "400px", "50vh", 400).                  |
+| style     | StyleSheet                              | No       | Custom styles for the iframe container.                              |
+| id        | string                                  | No       | Optional unique identifier for the component.                        |
+| onMessage | (event: { value: unknown }) => void     | No       | Callback function called when a message is received from the iframe. |
