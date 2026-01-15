@@ -14,27 +14,27 @@ Storefront slots are containers available in the storefront pages where you can 
 
 These are the slots that are available in the storefront:
 
-| Slot                                 | Page                            |
-| ------------------------------------ | ------------------------------- |
-| before_main_content                  | home, product, category, search |
-| before_quick_buy_add_to_cart         | home, category, search          |
-| after_product_grid_item_name         | home, category, search          |
-| product_grid_item_image_top_left     | home, product, category, search |
-| product_grid_item_image_top_right    | home, product, category, search |
-| product_grid_item_image_bottom_left  | home, product, category, search |
-| product_grid_item_image_bottom_right | home, product, category, search |
-| before_start_checkout_button         | home, product, category, search |
-| after_product_detail_name            | product                         |
-| before_price_pdp                     | product                         |
-| before_product_detail_add_to_cart    | product                         |
-| before_add_to_cart_pdp               | product                         |
-| after_product_detail_add_to_cart     | product                         |
-| after_add_to_cart_pdp                | product                         |
-| after_product_description            | product                         |
-| before_line_items                    | cart                            |
-| after_cart_summary                   | cart                            |
-| after_go_to_checkout                 | cart                            |
-| before_footer                        | home, product, category, search |
+| Slot                                 | Page                                          |
+| ------------------------------------ | --------------------------------------------- |
+| before_main_content                  | home, product, category, search, custom_pages |
+| before_quick_buy_add_to_cart         | home, category, search                        |
+| after_product_grid_item_name         | home, category, search                        |
+| product_grid_item_image_top_left     | home, product, category, search, custom_pages |
+| product_grid_item_image_top_right    | home, product, category, search, custom_pages |
+| product_grid_item_image_bottom_left  | home, product, category, search, custom_pages |
+| product_grid_item_image_bottom_right | home, product, category, search, custom_pages |
+| before_start_checkout_button         | home, product, category, search, custom_pages |
+| after_product_detail_name            | product                                       |
+| before_price_pdp                     | product                                       |
+| before_product_detail_add_to_cart    | product                                       |
+| before_add_to_cart_pdp               | product                                       |
+| after_product_detail_add_to_cart     | product                                       |
+| after_add_to_cart_pdp                | product                                       |
+| after_product_description            | product                                       |
+| before_line_items                    | cart                                          |
+| after_cart_summary                   | cart                                          |
+| after_go_to_checkout                 | cart                                          |
+| before_footer                        | home, product, category, search, custom_pages |
 
 ## Slot Visual Reference
 
@@ -42,7 +42,7 @@ These are the slots that are available in the storefront:
 
 - `before_main_content`
 
-![Before Main Content Slot](/img/pt/nube-sdk-before_main_content.png)
+![Before Main Content Slot](/img/pt/nube-sdk-before_main_content.jpg)
 
 - `before_start_checkout_button`
 

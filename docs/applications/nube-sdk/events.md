@@ -112,7 +112,9 @@ nube.on("cart:update", ({ cart }) => {
 
 Dispatched by `app` to add an item to the cart.
 
-```typescript
+You can specify items using either `variant_id` and `product_id`, or simply using `id`:
+
+```typescript title="Using variant_id and product_id"
 nube.send("cart:add", () => ({
   cart: {
     items: [{
@@ -123,6 +125,21 @@ nube.send("cart:add", () => ({
   },
 }))
 ```
+
+```typescript title="Using id"
+nube.send("cart:add", () => ({
+  cart: {
+    items: [{
+      id: 123,
+      quantity: 1,
+    }]
+  },
+}))
+```
+
+:::note
+Items that were successfully added to the cart will be available in `state.eventPayload` after the operation completes. For more details, see [eventPayload](./state#eventpayload-nullablerecordstring-unknown).
+:::
 
 ## `cart:add:success`
 
@@ -148,7 +165,9 @@ nube.on("cart:add:fail", ({ cart }) => {
 
 Dispatched by `app` to remove an item from the cart.
 
-```typescript
+You can specify items using either `variant_id` and `product_id`, or simply using `id`:
+
+```typescript title="Using variant_id and product_id"
 nube.send("cart:remove", () => ({
   cart: {
     items: [{
@@ -159,6 +178,21 @@ nube.send("cart:remove", () => ({
   },
 }));
 ```
+
+```typescript title="Using id"
+nube.send("cart:remove", () => ({
+  cart: {
+    items: [{
+      id: 123,
+      quantity: 1,
+    }]
+  },
+}));
+```
+
+:::note
+Items that were successfully removed from the cart will be available in `state.eventPayload` after the operation completes. For more details, see [eventPayload](./state#eventpayload-nullablerecordstring-unknown).
+:::
 
 ## `cart:remove:success`
 
