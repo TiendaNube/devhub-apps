@@ -454,6 +454,7 @@ theme.color.text.medium             // Medium contrast text color
 theme.color.text.low                // Low contrast text color
 
 // Typography
+theme.typography.body.font          // Body font family
 theme.typography.body.fontSize      // Body font size
 theme.typography.body.lineHeight    // Body line height
 
@@ -485,9 +486,9 @@ theme.box.border.radius             // Box border radius
 // Component-specific tokens
 theme.button.foreground             // Button text color
 theme.button.background             // Button background color
-theme.button.borderColor            // Button border color
-theme.button.borderRadius           // Button border radius
-theme.button.borderWidth            // Button border width
+theme.button.border.color           // Button border color
+theme.button.border.radius          // Button border radius
+theme.button.border.width           // Button border width
 
 theme.label.foreground              // Label text color
 theme.label.background              // Label background color
