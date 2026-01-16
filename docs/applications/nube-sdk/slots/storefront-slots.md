@@ -85,8 +85,8 @@ For a complete example of rendering components dynamically in product grids, see
 ## Product Page Slots
 
 - `after_product_detail_name`
-- `before_product_add_to_cart`
-- `after_product_add_to_cart`
+- `before_product_detail_add_to_cart`
+- `after_product_detail_add_to_cart`
 
 ![Product Page Slots Overview](/img/pt/nube-sdk-product_slots.png)
 
