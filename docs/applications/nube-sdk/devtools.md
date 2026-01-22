@@ -62,7 +62,7 @@ This section displays a list of all storage events occurring in real-time, captu
 
 ![devtools storage](/img/pt/nube-sdk-devtools-storage.png)
 
-For more information on how to access the browser APIs for `localStorage` and `sessionStorage`, please refer to the [Browser API's](browser-apis) documentation.
+For more information on how to access the browser APIs for `localStorage` and `sessionStorage`, please refer to the [Browser APIs](browser-apis) documentation.
 
 ## SVG Converter
 
