@@ -34,7 +34,7 @@ When you click on an individual app in the Apps section, you will see additional
 - **Regitered:** Indicates whether the app has been successfully registered.
 - **Script:** Displays the script that is running for the app.
 
-For more details on how to run your app locally and explore these features, see the [Run your app locally](getting-started#run-your-app-locally). section.
+For more details on how to run your app locally and explore these features, see the [Run your app locally](getting-started#run-your-app-locally) section.
 
 ## Components
 
