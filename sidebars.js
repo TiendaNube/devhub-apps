@@ -47,6 +47,7 @@ const sidebars = {
 					items: [
 						"applications/nube-sdk/overview",
 						"applications/nube-sdk/getting-started",
+						"applications/nube-sdk/devtools",
 						"applications/nube-sdk/script-structure",
 						"applications/nube-sdk/styling",
 						"applications/nube-sdk/state",
@@ -130,6 +131,7 @@ const sidebars = {
 			items: [
 				"applications/nube-sdk/overview",
 				"applications/nube-sdk/getting-started",
+				"applications/nube-sdk/devtools",
 				"applications/nube-sdk/script-structure",
 				"applications/nube-sdk/styling",
 				"applications/nube-sdk/state",
