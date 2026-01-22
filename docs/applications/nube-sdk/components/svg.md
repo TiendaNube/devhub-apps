@@ -50,7 +50,7 @@ export function App(nube: NubeSDK) {
 
 The NubeSDK Devtools includes an SVG Converter tool that automatically converts SVG code to NubeSDK JSX components. This tool makes it easy to integrate existing SVG graphics into your NubeSDK application.
 
-[Download NubeSDK Devtools](https://github.com/TiendaNube/nube-sdk/releases/tag/nube-devtools-005)
+For more information about using the SVG Converter tool, see the [DevTools documentation](../devtools#svg-converter).
 
 ### Best Practices
 
