@@ -31,7 +31,7 @@ This section displays a detailed list of apps built using NubeSDK. The list also
 When you click on an individual app in the Apps section, you will see additional details about that app:
 
 - **ID:** A unique identifier for the specific app instance.
-- **Regitered:** Indicates whether the app has been successfully registered.
+- **Registered:** Indicates whether the app has been successfully registered.
 - **Script:** Displays the script that is running for the app.
 
 For more details on how to run your app locally and explore these features, see the [Run your app locally](getting-started#run-your-app-locally) section.
