@@ -125,16 +125,11 @@ For a complete example of rendering components dynamically in product grids, see
 
 The `key` prop must be set to the line item's ID for each component.
 
-```tsx
-import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { Text } from "@tiendanube/nube-sdk-jsx";
-
 export function App(nube: NubeSDK) {
-	nube.render("cart_line_item_top", (state) => {
-		return state.cart.items.map((item) => <Text key={item.id}>Content</Text>);
-	});
+  nube.render("cart_line_item_top", (state) => {
+    return state.cart.items.map((item) => <Text key={item.id}>Content</Text>);
+  });
 }
-```
 
 ![Cart Line Item Top Slot](/img/pt/nube-sdk-cart-line-item-top.png)
 
