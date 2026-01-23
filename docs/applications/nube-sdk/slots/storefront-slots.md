@@ -18,12 +18,14 @@ These are the slots that are available in the storefront:
 | ------------------------------------ | ------------------------------- |
 | before_main_content                  | home, product, category, search |
 | before_quick_buy_add_to_cart         | home, category, search          |
+| before_product_grid_item_name        | home, category, search          |
 | after_product_grid_item_name         | home, category, search          |
 | product_grid_item_image_top_left     | home, product, category, search |
 | product_grid_item_image_top_right    | home, product, category, search |
 | product_grid_item_image_bottom_left  | home, product, category, search |
 | product_grid_item_image_bottom_right | home, product, category, search |
 | before_start_checkout_button         | home, product, category, search |
+| before_product_detail_name           | product                         |
 | after_product_detail_name            | product                         |
 | before_price_pdp                     | product                         |
 | before_product_detail_add_to_cart    | product                         |
@@ -32,6 +34,7 @@ These are the slots that are available in the storefront:
 | after_add_to_cart_pdp                | product                         |
 | after_product_description            | product                         |
 | before_line_items                    | cart                            |
+| cart_line_item_top                   | cart                            |
 | after_cart_summary                   | cart                            |
 | after_go_to_checkout                 | cart                            |
 | before_footer                        | home, product, category, search |
@@ -60,6 +63,7 @@ Product grid slots are special slots that allow you to render components on prod
 - `product_grid_item_image_top_right`
 - `product_grid_item_image_bottom_left`
 - `product_grid_item_image_bottom_right`
+- `before_product_grid_item_name`
 - `after_product_grid_item_name`
 
 ![Product Grid Slots](/img/pt/nube-sdk-product_grid_slots.png)
@@ -84,6 +88,7 @@ For a complete example of rendering components dynamically in product grids, see
 
 ## Product Page Slots
 
+- `before_product_detail_name`
 - `after_product_detail_name`
 - `before_product_detail_add_to_cart`
 - `after_product_detail_add_to_cart`
@@ -115,6 +120,18 @@ For a complete example of rendering components dynamically in product grids, see
 - `before_line_items`
 
 ![Before Line Items Slot](/img/pt/nube-sdk-before-line-items.jpg)
+
+- `cart_line_item_top`
+
+The `key` prop must be set to the line item's ID for each component.
+
+export function App(nube: NubeSDK) {
+  nube.render("cart_line_item_top", (state) => {
+    return state.cart.items.map((item) => <Text key={item.id}>Content</Text>);
+  });
+}
+
+![Cart Line Item Top Slot](/img/pt/nube-sdk-cart-line-item-top.png)
 
 - `after_cart_summary`
 
