@@ -56,6 +56,9 @@ A component that allows you to embed external web content directly into your app
 ### [SVG](/docs/applications/nube-sdk/components/svg)
 A component for creating scalable vector graphics within your NubeSDK application, providing comprehensive SVG elements including Root, Circle, Text, and other common SVG shapes.
 
+### [Markdown](/docs/applications/nube-sdk/components/markdown)
+A component for rendering markdown content as formatted HTML, supporting all standard markdown syntax including headings, bold, italic, links, and code blocks.
+
 ## Interactive Components
 
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)
