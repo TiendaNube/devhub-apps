@@ -44,6 +44,9 @@ A component for rendering text with optional styling, supporting properties like
 ### [Link](/docs/applications/nube-sdk/components/link)
 A component for rendering clickable hyperlinks that navigate users to different URLs, with support for target options and custom styling.
 
+### [Markdown](/docs/applications/nube-sdk/components/markdown)
+A component for rendering markdown content safely, with support for basic formatting (headers, bold, italic, links, images, lists, inline code) and links rendered as the Link component.
+
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
 
