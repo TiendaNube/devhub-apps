@@ -72,7 +72,7 @@ import { Select, Box, Text } from "@tiendanube/nube-sdk-jsx";
 function MyComponent(nube: NubeSDK) {
   const handleChange: NubeComponentSelectEventHandler = (event) => {
     // event.type is "change"
-    // event.value is string (selected value)
+    // event.value may be string | undefined — use nullish coalescing to provide a default
     // event.state is the full NubeSDKState
     const selectedValue = event.value ?? "";
 
