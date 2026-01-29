@@ -47,7 +47,7 @@ export function App(nube: NubeSDK) {
 | style          | StyleSheet            | No       | Custom styles for the box.                                                                           |
 | gap            | Size                  | No       | Spacing between child elements (e.g., "1rem").                                                       |
 | borderRadius   | Size                  | No       | Border radius of the box (e.g., "8px").                                                              |
-| reverse        | boolean               | No       | Whether children should wrap to the next line when space runs out.                                   |
+| reverse        | boolean               | No       | Whether to reverse the order of children in the layout direction (applies row-reverse or column-reverse). |
 | background     | string                | No       | Background color (can be CSS variable like "var(--primary-color)").                                  |
 | color          | string                | No       | Content color (can be CSS variable like "var(--primary-color)").                                     |
 | alignItems     | FlexItems             | No       | The CSS property [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)         |
