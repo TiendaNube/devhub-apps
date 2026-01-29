@@ -115,6 +115,12 @@ const config = {
               },
             ],
           },
+          {
+            href: "https://gemini.google.com/gem/2cdd8c07de85",
+            label: "AI Assistant",
+            position: "right",
+            className: "navbar__item--ai-assistant",
+          },
         ],
       },
       footer: {

@@ -115,6 +115,7 @@ const sidebars = {
 			],
 		},
 		{
+<<<<<<< HEAD
 			type: "category", 
 			label: "Publicação do App",
 			items: [
@@ -122,6 +123,15 @@ const sidebars = {
 				"publication/requirements",
 				"publication/publications",
 				"homologation/checklist",
+=======
+			type: "category",
+			label: "Publicação de Apps",
+			items: [
+			  "publication-apps/overview",
+			  "publication-apps/requirements",
+			  "publication-apps/publications",
+			  "publication-apps/checklist",
+>>>>>>> 5007711 (docs: add publication apps documentation)
 			],
 		},
 		{
