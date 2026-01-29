@@ -14,31 +14,39 @@ It supports all standard SVG tags and properties, providing a comprehensive set 
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Svg } from "@tiendanube/nube-sdk-jsx";
 
+function MyComponent() {
+  return (
+    <Svg.Root width="100" height="100" viewBox="0 0 100 100">
+      <Svg.Circle
+        cx="50"
+        cy="50"
+        r="40"
+        fill="#4F46E5"
+        stroke="#312E81"
+        strokeWidth="2"
+      />
+      <Svg.Text
+        x="50"
+        y="55"
+        textAnchor="middle"
+        fill="white"
+        fontSize="12"
+        fontFamily="Arial, sans-serif"
+      >
+        SVG
+      </Svg.Text>
+    </Svg.Root>
+  );
+}
+
 export function App(nube: NubeSDK) {
-	nube.render("before_main_content", () => {
-		return (
-			<Svg.Root width="100" height="100" viewBox="0 0 100 100">
-				<Svg.Circle
-					cx="50"
-					cy="50"
-					r="40"
-					fill="#4F46E5"
-					stroke="#312E81"
-					strokeWidth="2"
-				/>
-				<Svg.Text
-					x="50"
-					y="55"
-					textAnchor="middle"
-					fill="white"
-					fontSize="12"
-					fontFamily="Arial, sans-serif"
-				>
-					SVG
-				</Svg.Text>
-			</Svg.Root>
-		);
-	});
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 

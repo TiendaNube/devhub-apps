@@ -8,9 +8,9 @@ import AppTypes from '@site/src/components/AppTypes';
 Box container, supports multiple sizes, styling and alignment options.
 It's used mostly to embed other components that don't have their own layout options (fields, texts, images, etc..)
 
-### Usage
-
 ![Box](../../../../static/img/pt/nube-sdk-ui-box-1.png "Box")
+
+### Usage
 
 ```typescript title="Example"
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
@@ -53,5 +53,5 @@ export function App(nube: NubeSDK) {
 | alignItems     | FlexItems             | No       | The CSS property [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)         |
 | alignContent   | FlexContent           | No       | The CSS property [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)     |
 | justifyContent | FlexContent           | No       | The CSS property [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) |
-| direction      | "row"<br/>"column"    | No       | Layout direction for children (row for horizontal, column for vertical).                             |
+| direction      | "row"<br/>"col"       | No       | Layout direction for children (row for horizontal, col for vertical).                                |
 | id             | string                | No       | Optional unique identifier for the component.                                                        |

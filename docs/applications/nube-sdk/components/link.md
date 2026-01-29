@@ -12,33 +12,41 @@ It supports properties such as `href`, `children`, `target`, and styling options
   The Link component is available in the storefront and the success page in checkout. It is not available on other pages or UI slots.
 </Alert>
 
+![Link](../../../../static/img/pt/nube-sdk-ui-link-1.png "Link")
+
 ### Usage
 
-![Box](../../../../static/img/pt/nube-sdk-ui-link-1.png "Box")
-
 ```typescript title="Example"
-import { Link } from "@tiendanube/nube-sdk-jsx";
-
-function MyComponent() {
-  return (
-    <Link href="https://www.google.com">Hello World</Link>
-  );
-}
-```
-
-You can also open links in a new tab:
-
-```typescript title="Example with target"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Link, Box } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
-    <Box>
+    <Box direction="col" gap={8}>
+      {/* Basic link */}
+      <Link href="https://www.tiendanube.com">Visit Tiendanube</Link>
+
+      {/* Link that opens in a new tab */}
       <Link href="https://www.tiendanube.com" target="_blank">
-        Visit Tiendanube
+        Open in new tab
+      </Link>
+
+      {/* Link with variant */}
+      <Link href="https://www.tiendanube.com" variant="primary">
+        Primary link
       </Link>
     </Box>
   );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 
@@ -53,12 +61,11 @@ This behavior is automatic and does not require any additional configuration fro
 
 ### Properties
 
-| Property | Type       | Required | Description                                                             |
-| -------- | ---------- | -------- | ----------------------------------------------------------------------- |
-| href     | string     | Yes      | The URL destination of the link. Must use "https://" or "http://".      |
-| children | string     | Yes      | The text content or label of the link.                                  |
-| target   | "_blank"   | No       | Opens the link in a new tab. Only "_blank" is supported.                |
-| color    | string     | No       | The link color (can be CSS variable like "var(--primary-color)").       |
-| style    | StyleSheet | No       | Custom styles for the link.                                             |
-| id       | string     | No       | Optional unique identifier for the component.                           |
-
+| Property | Type                                                   | Required | Description                                                        |
+| -------- | ------------------------------------------------------ | -------- | ------------------------------------------------------------------ |
+| href     | string                                                 | Yes      | The URL destination of the link. Must use "https://" or "http://". |
+| children | string                                                 | Yes      | The text content or label of the link.                             |
+| target   | "\_blank"                                              | No       | Opens the link in a new tab. Only "\_blank" is supported.          |
+| variant  | "primary"<br/>"secondary"<br/>"transparent"<br/>"link" | No       | Link style variant.                                                |
+| style    | StyleSheet                                             | No       | Custom styles for the link.                                        |
+| id       | string                                                 | No       | Optional unique identifier for the component.                      |

@@ -5,47 +5,36 @@ title: Image
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](../slots/overview) by sending the [ui:slot:set](../events#uislotset) event.
-
 Used to display images. It supports properties such as `src`, `alt`, `width`, `height`, and responsive `sources` for different screen sizes.
 
-![Field](../../../../static/img/pt/nube-sdk-ui-img-1.png "Field")
+![Image](../../../../static/img/pt/nube-sdk-ui-img-1.png "Image")
 
 ### Usage
 
 ```typescript title="Example"
-import { Image } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Image, Box } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
-    <Image
+    <Box direction="col" gap={16}>
+      {/* Basic image */}
+      <Image
       src="https://app-insti-cdn.nuvemshop.com.br/site/dist/images/widgets/closing-cta/image-3.webp"
       alt="Nuvemshop Logo"
     />
+    </Box>
   );
 }
-```
 
-Optionally, the `Img` component can receive alternative sources loaded by media query.
-
-```typescript title="Example"
-export function Logo() {
-  return (
-    <Image
-      src="https://hostname/default.png"
-      alt="Hello"
-      sources={[
-        {
-          src: "https://hostname/desktop.png",
-          media: "(min-width: 769px)",
-        },
-        {
-          src: "https://hostname/mobile.png",
-          media: "(max-width: 768px)",
-        },
-      ]}
-    />
-  );
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 
