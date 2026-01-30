@@ -20,6 +20,8 @@ These are the slots that are available in the storefront:
 | before_quick_buy_add_to_cart         | home, category, search          |
 | before_product_grid_item_name        | home, category, search          |
 | after_product_grid_item_name         | home, category, search          |
+| before_product_grid_item_price       | home, category, search          |
+| after_product_grid_item_price        | home, category, search          |
 | product_grid_item_image_top_left     | home, product, category, search |
 | product_grid_item_image_top_right    | home, product, category, search |
 | product_grid_item_image_bottom_left  | home, product, category, search |
@@ -65,6 +67,8 @@ Product grid slots are special slots that allow you to render components on prod
 - `product_grid_item_image_bottom_right`
 - `before_product_grid_item_name`
 - `after_product_grid_item_name`
+- `before_product_grid_item_price`
+- `after_product_grid_item_price`
 
 ![Product Grid Slots](/img/pt/nube-sdk-product_grid_slots.png)
 
