@@ -68,21 +68,36 @@ const defaultTagConfigs: TagConfig[] = [
     emoji: "🌿",
     background: "#2ecc71",
   },
-  { tag: "sale", label: "On Sale!", emoji: "🔥", background: "#e91e63" },
+  {
+    tag: "sale",
+    label: "On Sale!",
+    emoji: "🔥",
+    background: "#e91e63",
+  },
   {
     tag: "limited",
     label: "Limited Edition",
     emoji: "⚡",
     background: "#9b59b6",
   },
-  { tag: "new", label: "New Arrival", emoji: "✨", background: "#3498db" },
+  {
+    tag: "new",
+    label: "New Arrival",
+    emoji: "✨",
+    background: "#3498db",
+  },
   {
     tag: "bestseller",
     label: "Best Seller",
     emoji: "🏆",
     background: "#f39c12",
   },
-  { tag: "eco", label: "Eco-Friendly", emoji: "♻️", background: "#27ae60" },
+  {
+    tag: "eco",
+    label: "Eco-Friendly",
+    emoji: "♻️",
+    background: "#27ae60",
+  },
 ];
 
 // Helper to normalize tags to array
