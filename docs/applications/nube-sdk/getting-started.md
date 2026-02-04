@@ -22,7 +22,6 @@ Nube SDK requires Node.js version 16+. Please upgrade if your package manager wa
   <PkgTabs.Item value="Bun" command="bun create nube-app" />
 </PkgTabs>
 
-
 :::tip
 If you're unable to use the CLI, see [Manual Project Setup](./manual-setup) for advanced configuration instructions.
 :::
@@ -36,11 +35,6 @@ If the scripts will be inserted **into an existing app**, please send the app_id
 :::
 
 ![NubeSDK Flag](../../../static/img/pt/nube-sdk-flag.png "NubeSDK Flag")
-
-:::info
-The "Use NubeSDK" option is currently supported only on the Checkout page.
-If you select this option for scripts intended for the Store page, the SDK will not work as expected.
-:::
 
 **Important!**
 

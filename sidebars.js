@@ -80,22 +80,41 @@ const sidebars = {
 							"applications/nube-sdk/components/toast",
 						],
 					},
-					{
-						type: "category",
-						label: "UI Slots",
-						items: [
-							"applications/nube-sdk/slots/overview",
-							"applications/nube-sdk/slots/checkout-slots",
-							"applications/nube-sdk/slots/storefront-slots",
-						],
-					},
+				{
+					type: "category",
+					label: "UI Slots",
+					items: [
+						"applications/nube-sdk/slots/overview",
+						"applications/nube-sdk/slots/checkout-slots",
+						"applications/nube-sdk/slots/storefront-slots",
 					],
 				},
-			],
-		},
-		{
-			type: "category",
-			label: "Diretrizes de design",
+				{
+					type: "category",
+					label: "Examples",
+					items: [
+						"applications/nube-sdk/examples/overview",
+						{
+							type: "category",
+							label: "Common Patterns",
+							items: [
+								"applications/nube-sdk/examples/carousel",
+								"applications/nube-sdk/examples/banner",
+								"applications/nube-sdk/examples/faq",
+								"applications/nube-sdk/examples/extra-info-tags",
+								"applications/nube-sdk/examples/extra-info-product-list",
+								"applications/nube-sdk/examples/modal-popup",
+							],
+						},
+					],
+				},
+				],
+			},
+		],
+	},
+	{
+		type: "category",
+		label: "Diretrizes de design",
 			items: [
 				"design-guidelines/overview",
 				"design-guidelines/template-usage",
@@ -165,18 +184,37 @@ const sidebars = {
 						"applications/nube-sdk/components/toast",
 					],
 				},
-				{
-					type: "category",
-					label: "UI Slots",
-					items: [
-						"applications/nube-sdk/slots/overview",
-						"applications/nube-sdk/slots/checkout-slots",
-						"applications/nube-sdk/slots/storefront-slots",
-					],
-				},
-			],
-		},
-	],
+			{
+				type: "category",
+				label: "UI Slots",
+				items: [
+					"applications/nube-sdk/slots/overview",
+					"applications/nube-sdk/slots/checkout-slots",
+					"applications/nube-sdk/slots/storefront-slots",
+				],
+			},
+	{
+		type: "category",
+		label: "Examples",
+		items: [
+			"applications/nube-sdk/examples/overview",
+			{
+		type: "category",
+		label: "Common Patterns",
+		items: [
+			"applications/nube-sdk/examples/carousel",
+			"applications/nube-sdk/examples/banner",
+			"applications/nube-sdk/examples/faq",
+			"applications/nube-sdk/examples/extra-info-tags",
+			"applications/nube-sdk/examples/extra-info-product-list",
+			"applications/nube-sdk/examples/modal-popup",
+		],
+	},
+		],
+	},
+],
+},
+],
 };
 
 module.exports = sidebars;
