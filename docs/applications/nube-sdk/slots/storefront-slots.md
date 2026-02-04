@@ -229,6 +229,30 @@ export function App(nube: NubeSDK) {
 }
 ```
 
+This is a **Dynamic Product Grid Rendering** example that displays a styled badge on the top-left corner of each product image in the home page grid.
+
+```tsx
+const sections = state.location.page.data?.sections || [];
+const allProducts = sections.reduce((acc: ProductDetails[], section) => {
+  if (section?.products && Array.isArray(section.products)) {
+    acc.push(...section.products);
+  }
+  return acc;
+}, []);
+```
+
+The previous code flattens all products from all sections into a single array.
+
+```tsx
+nube.render("product_grid_item_image_top_left", () => {
+  return allProducts.map((product) => (
+    <StyledText key={product.id}>ID: {product.id.toString()}</StyledText>
+  ));
+});
+```
+
+Then, to understand the slot rendering, `key={product.id}` is **required**. Links each rendered element to its corresponding product card.
+
 ## Best Practices
 
 - Always use the product's ID as the `key` prop when rendering in product grid slots
@@ -236,4 +260,3 @@ export function App(nube: NubeSDK) {
 - Consider the visual impact of your components on the storefront design
 - Use responsive design principles for components that appear on different screen sizes
 - Clear slots when they're no longer needed using `nube.clearSlot()`
-
