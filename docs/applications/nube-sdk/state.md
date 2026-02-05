@@ -92,6 +92,9 @@ type Cart = {
 
   /** Optional coupon applied to the cart. */
   coupon: DeepPartial<Coupon>;
+
+  /** Indicates if the cart is a subscription. */
+  is_subscription: boolean;
 };
 
 type CartItem = {
