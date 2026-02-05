@@ -17,6 +17,9 @@ These are the slots that are available in the storefront:
 | Slot                                 | Page                            |
 | ------------------------------------ | ------------------------------- |
 | before_main_content                  | home, product, category, search |
+| after_header                         | home, product, category, search, cart |
+| drawer_left                          | home, product, category, search, cart |
+| drawer_right                         | home, product, category, search, cart |
 | before_quick_buy_add_to_cart         | home, category, search          |
 | before_product_grid_item_name        | home, category, search          |
 | after_product_grid_item_name         | home, category, search          |
@@ -48,6 +51,18 @@ These are the slots that are available in the storefront:
 - `before_main_content`
 
 ![Before Main Content Slot](/img/pt/nube-sdk-before_main_content.png)
+
+- `after_header`
+
+![After Header Slot](/img/pt/nube-sdk-after_header.png)
+
+- `drawer_left`
+
+![Drawer Left Slot](/img/pt/nube-sdk-drawer_left.png)
+
+- `drawer_right`
+
+![Drawer Right Slot](/img/pt/nube-sdk-drawer_right.png)
 
 - `before_start_checkout_button`
 
