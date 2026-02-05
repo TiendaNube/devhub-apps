@@ -1,6 +1,8 @@
 version: 2.1
 
 ##### Aliases
+aws-role-arn: &aws-role-arn "arn:aws:iam::201009178507:role/CircleCIRoleForOIDC_Generic"
+
 restore-cache: &restore_cache
   restore_cache:
     keys:
@@ -34,7 +36,7 @@ filter-production: &filter-production
 
 ##### ORBs
 orbs:
-  aws-cli: circleci/aws-cli@2.0.3
+  aws-cli: circleci/aws-cli@4.1.3
   aws-ecr: circleci/aws-ecr@7.0.0
   eks: tiendanube/eks@1.7.2
   precheck: tiendanube/precheck@0.1.0
@@ -130,9 +132,8 @@ jobs:
     steps:
       - <<: *fast-checkout
       - aws-cli/setup:
-          aws-region: AWS_REGION_STAGING
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          role_arn: *aws-role-arn
+          region: AWS_REGION_STAGING
       - run:
           name: Send files to S3
           command: aws s3 sync  << parameters.dir_build >> << parameters.s3_bucket >>
@@ -155,7 +156,7 @@ workflows:
             <<: *filter-production
       - build:
           name: build-pt
-          context: microservices
+          context: lightspeed-context
           requires:
             - checkout
           filters:
@@ -167,7 +168,7 @@ workflows:
           default_locale: pt
       - build:
           name: build-es
-          context: microservices
+          context: lightspeed-context
           requires:
             - checkout
           filters:
@@ -182,7 +183,7 @@ workflows:
           cloudfront_id: ${CLOUDFRONT_PROD_ID_PT}
           s3_bucket: ${S3_PROD_PT}
           dir_build: build-pt/
-          context: microservices
+          context: lightspeed-context
           requires:
             - build-pt
           filters:
@@ -192,7 +193,7 @@ workflows:
           cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
           s3_bucket: ${S3_PROD_ES}
           dir_build: build-es/
-          context: microservices
+          context: lightspeed-context
           requires:
             - build-es
           filters:
