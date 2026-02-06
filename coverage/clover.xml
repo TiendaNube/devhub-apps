@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1770397365325" clover="3.2.0">
+  <project timestamp="1770397365326" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="2" coveredelements="2" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
+    <file name="sidebars.js" path="/home/jailuser/git/sidebars.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="183" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
