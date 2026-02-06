@@ -36,6 +36,39 @@ Los permisos son los niveles de acceso que su app tiene a los datos de una tiend
 - Las apps deben ser instaladas e iniciadas solo en los servicios de Tiendanube. Su app no debe solicitar la entrada manual de una URL de la tienda durante la instalación.
 - Para la seguridad del comerciante, su app no debe usar ventanas pop-up para funcionalidades esenciales, como la ejecución de OAuth.
 
+### 2.3. Directrices posinstalación
+
+El rendimiento posinstalación es crucial para el éxito del merchant. Dado que la App Store atrae a nuevos tenderos que aún no tienen una alianza comercial, la aplicación debe ofrecer una claridad total en los primeros pasos.
+
+El redireccionamiento tras la instalación debe ser fluido, eliminando barreras para los usuarios que están descubriendo la solución por primera vez.
+
+Con esto, compartimos abajo dos sugerencias a seguir para esta usabilidad:
+
+- **Automatizar la autenticación (recomendado)**
+
+En el modelo de integración de Tiendanube, después de que el comerciante hace clic en “aceptar” en la pantalla de permisos, el sistema genera un *authorization code* y lo redirige a la URL de *callback* definida.
+
+El flujo ideal es que este código no se muestre al comerciante, sino que sea consumido automáticamente por el *backend* de la aplicación.
+
+**Pasos técnicos resumidos:**
+
+- El comerciante es redirigido a la URL de *callback* configurada, la cual debe capturar el parámetro `code`.
+- El *backend* realiza una petición `POST` al endpoint de OAuth de Tiendanube, enviando los datos necesarios (`client_id`, `client_secret`, `redirect_uri`, `grant_type=authorization_code` y el código recibido).
+- En respuesta, el sistema devuelve un `access_token` y un `refresh_token`.
+- El *backend* guarda el `access_token` asociado a la tienda que instaló la aplicación, permitiendo realizar llamadas a la API en nombre de dicha tienda.
+- En lugar de mostrar el `code` o mensajes de error, el comerciante ya debe visualizar la pantalla de registro/inicio de sesión de la aplicación, concluyendo el proceso de forma natural y transparente.
+
+Este flujo elimina dudas y pasos manuales, haciendo que la experiencia sea más sencilla y segura para el comerciante.
+
+- **Landing page explicativa (sugerido)**
+
+En caso de que prefieran mantener la etapa de contacto directo con ustedes, es fundamental que el redireccionamiento se dirija a una pantalla que presente una *landing page* clara y objetiva, que contenga:
+
+- El paso a paso completo de lo que el comerciante debe hacer, como el flujo de registro o la generación de credenciales para su uso;
+- Las instrucciones hasta la finalización de la integración de la aplicación con la tienda.
+
+Recomendamos la lectura de nuestra **guía sobre Landing Pages** y su importancia.
+
 ## 3. Funcionalidad y Calidad
 Para que su app tenga éxito, debe ofrecer una experiencia consistente y positiva para los merchants.
 

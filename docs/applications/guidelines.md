@@ -38,6 +38,39 @@ As permissões são os níveis de acesso que seu app tem aos dados de uma loja a
 - Os apps devem ser instalados e iniciados apenas nos serviços da Nuvemshop. Seu app não deve solicitar a entrada manual de um URL da loja durante a instalação.
 - Para a segurança do lojista, seu app não deve usar janelas pop-up para funcionalidades essenciais, como a execução do OAuth.
 
+### 2.3. Direcionamentos pós-instalação
+
+A performance pós-instalação é crucial para o sucesso do merchant. Como a App Store atrai novos lojistas que ainda não possuem parceria comercial, o aplicativo precisa oferecer clareza total nos primeiros passos.
+
+O redirecionamento após a instalação deve ser fluido, eliminando barreiras para usuários que estão descobrindo a solução pela primeira vez.
+
+Com isso, compartilhamos abaixo duas sugestões a serem seguidas para esta usabilidade:
+
+- **Automatizar a autenticação (recomendado)**
+
+No modelo de integração da Nuvemshop, após o lojista clicar em “aceitar” na tela de permissões, o sistema gera um *authorization code* e redireciona para a URL de callback definida.
+
+O fluxo ideal é que esse código não seja exibido ao lojista, mas sim consumido automaticamente pelo *backend* da aplicação.
+
+**Passos técnicos resumidos:**
+
+- O lojista é redirecionado para a URL de *callback* configurada, que deve capturar o parâmetro `code`.
+- O *backend* realiza uma requisição `POST` ao endpoint de OAuth da Nuvemshop, enviando os dados necessários (`client_id`, `client_secret`, `redirect_uri`, `grant_type=authorization_code` e o `code` recebido).
+- Em resposta, o sistema retorna um `access_token` e um `refresh_token`.
+- O *backend* salva o `access_token` associado à loja que instalou o aplicativo, permitindo chamadas à API em nome dessa loja.
+- Em vez de exibir o `code` ou mensagens de erro, o lojista já deve visualizar a tela de registro/login da aplicação, concluindo o processo de forma natural e transparente.
+
+Este fluxo elimina dúvidas e passos manuais, tornando a experiência mais simples e segura para o lojista.
+
+- **Landing page explicativa (sugestivo)**
+
+Caso prefiram manter a etapa de contato direto com vocês, é fundamental que o direcionamento ocorra para uma tela que apresente uma *landing page* clara e objetiva, contendo:
+
+- O passo a passo completo do que o lojista deve fazer, como fluxo de cadastro ou geração de credencial para uso;
+- As instruções até a finalização da integração do aplicativo com a loja.
+
+Recomendamos a leitura do nosso **guia sobre Landing Page** e sua importância.
+
 ## 3. Funcionalidade e Qualidade
 Para que seu app tenha sucesso, ele deve oferecer uma experiência consistente e positiva para os merchant.
 

@@ -36,6 +36,39 @@ Permissions are the levels of access your app has to a store's data through the 
 - Apps must be installed and initiated only within Tiendanube services. Your app must not require manual entry of a store URL during installation.
 - For the merchant's security, your app should not use pop-up windows for essential functionalities, such as OAuth execution.
 
+### 2.3. Post-Installation Guidelines
+
+Post-installation performance is crucial to the merchant's success. Since the App Store attracts new store owners who do not yet have an established commercial partnership, the app must offer total clarity during the initial steps.
+
+The redirection after installation should be seamless, eliminating barriers for users who are discovering the solution for the first time.
+
+With this in mind, we share below two suggestions to be followed regarding this usability:
+
+- **Automate Authentication (Recommended)**
+
+In the Nuvemshop integration model, after the merchant clicks “Accept” on the permissions screen, the system generates an *authorization code* and redirects to the defined callback URL.
+
+The ideal flow is for this `code` not to be displayed to the merchant, but rather consumed automatically by the application's backend.
+
+**Technical Summary:**
+
+- The merchant is redirected to the configured callback URL, which must capture the `code` parameter.
+- The backend performs a POST request to the Nuvemshop OAuth endpoint, sending the necessary data (`client_id`, `client_secret`, `redirect_uri`, `grant_type=authorization_code`, and the `code` received).
+- In response, the system returns an `access_token` and a `refresh_token`.
+- The backend saves the `access_token` associated with the store that installed the app, allowing API calls to be made on behalf of that store.
+- Instead of displaying the `code` or error messages, the merchant should immediately see the application’s registration/login screen, completing the process in a natural and transparent way.
+
+This flow eliminates confusion and manual steps, making the experience simpler and more secure for the merchant.
+
+- **Explanatory Landing Page (suggestive)**
+
+If you prefer to maintain a step for direct contact with your team, it is essential that the redirection leads to a screen featuring a clear and objective **landing page**, containing:
+
+- A complete step-by-step guide on what the merchant needs to do, such as the registration flow or generating credentials for use;
+- Clear instructions leading up to the finalization of the app's integration with the store.
+
+We recommend reading our **guide on Landing Pages** and their importance.
+
 ## 3. Functionality and Quality
 For your app to be successful, it must offer a consistent and positive experience for merchants.
 
