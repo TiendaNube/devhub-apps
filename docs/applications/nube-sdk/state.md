@@ -6,17 +6,18 @@ import AppTypes from '@site/src/components/AppTypes';
 
 The `NubeSDKState` type represents the complete state of a Nuvemshop / Tiendanube application, providing access to all available data and configurations. This state object is passed to various SDK functions and components, allowing developers to access and react to the current application state.
 
+The canonical type is exported from `@tiendanube/nube-sdk-types`.
 
 ## How to read the NubeSDKState
 
-There are 3 ways to get the `NubeSDKState` in your app:
+There are 3 ways to get the `NubeSDKState` in your app.
 
 ### 1. The getState function
 
 This function returns the current state of the SDK, ideal for getting information at app startup.
 
 ```typescript
-import { NubeSDK, NubeSDKState } from '@tiendanube/nube-sdk-types';
+import { NubeSDK, NubeSDKState } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
   // Get current state
@@ -31,7 +32,7 @@ export function App(nube: NubeSDK) {
 
 ### 2. Listening to State Changes
 
-Whenever an event is triggered, the listener function receives a snapshot of the state at the time of the event.
+Whenever an event is triggered, the listener function receives a snapshot of the state at the time of the event. The listener signature is `(state, event) => void`, where `event` is the event name string (e.g. `"cart:update"`).
 
 ```typescript
 import { NubeSDK, NubeSDKState } from '@tiendanube/nube-sdk-types';
@@ -49,23 +50,24 @@ export function App(nube: NubeSDK) {
 For more details on how to monitor state updates and subscribe to various state events, please see [Events](./events). This page provides comprehensive examples and explanations on how to listen for updates such as `cart:update`, `shipping:update`, and more, allowing you to build a dynamic, responsive application.
 
 ### 3. Modifying State
+
 When an event is sent, a modified function can be defined as the second parameter, this function receives a snapshot of the state and should return a partial version of the state to be merged into the current state.
 
 ```tsx
-import { NubeSDK, NubeSDKState } from '@tiendanube/nube-sdk-types';
-import { Txt } from '@tiendanube/nube-sdk-jsx';
+import { NubeSDK, NubeSDKState } from "@tiendanube/nube-sdk-types";
+import { Text } from "@tiendanube/nube-sdk-jsx";
 
 export function App(nube: NubeSDK) {
   // Send events with state modifications
-  nube.send('ui:slot:set', (state: Readonly<NubeSDKState>) => {
+  nube.send("ui:slot:set", (state: Readonly<NubeSDKState>) => {
     // Return a DeepPartial<NubeSDKState>
-    const storeName = state.store.name
+    const storeName = state.store.name;
     return {
       ui: {
         slots: {
-          before_main_content: <Txt>{`Hello ${storeName}!`}</Txt>
-        }
-      }
+          before_main_content: <Text>{`Hello ${storeName}!`}</Text>,
+        },
+      },
     };
   });
 }
@@ -73,706 +75,372 @@ export function App(nube: NubeSDK) {
 
 ## Properties
 
+| Property       | Type                                    | Description                                                                             |
+| -------------- | --------------------------------------- | --------------------------------------------------------------------------------------- |
+| `cart`         | `Cart`                                  | Current cart (items, prices, validation).                                               |
+| `order`        | `Order` &#124; `undefined`              | Order status and tracking. **Available when:** Checkout success page only.              |
+| `config`       | `AppConfig`                             | App-wide configuration (e.g. cart validation).                                          |
+| `device`       | `Device`                                | Device and screen information.                                                          |
+| `location`     | `AppLocation`                           | Current page, URL, and query params.                                                    |
+| `store`        | `Store`                                 | Store id, name, domain, currency, language.                                             |
+| `ui`           | `UI`                                    | Slots and component values. See [UI Slots](./slots/overview) for slot names.            |
+| `shipping`     | `Shipping` &#124; `null`                | Selected shipping option and options. **Available when:** Checkout / context-dependent. |
+| `customer`     | `Customer` &#124; `null`                | Contact and addresses. **Available when:** Checkout / context-dependent.                |
+| `payment`      | `Payment` &#124; `null`                 | Payment status and selected method. **Available when:** Checkout / context-dependent.   |
+| `eventPayload` | `Record<string, unknown>` &#124; `null` | Extra data on certain events (e.g. success events).                                     |
+| `session`      | `Session`                               | Session information (e.g. session id).                                                  |
+
 ### `cart: Cart`
+
 The current cart state, containing products, pricing, and validation status.
 
-```typescript
-type Cart = {
-  /** Unique identifier for the cart session. */
-  id: string;
+| Property          | Type                      | Required | Description                              |
+| ----------------- | ------------------------- | -------- | ---------------------------------------- |
+| `id`              | string                    | Yes      | Unique identifier for the cart session.  |
+| `validation`      | CartValidation            | Yes      | Validation status of the cart.           |
+| `items`           | CartItem[]                | Yes      | List of items currently in the cart.     |
+| `prices`          | Prices                    | Yes      | Breakdown of the cart's pricing details. |
+| `coupon`          | DeepPartial&lt;Coupon&gt; | No       | Optional coupon applied to the cart.     |
+| `is_subscription` | boolean                   | Yes      | Indicates if the cart is a subscription. |
 
-  /** Validation status of the cart. */
-  validation: CartValidation;
+**CartItem** (each element of `cart.items`):
 
-  /** List of items currently in the cart. */
-  items: CartItem[];
+| Property               | Type                                                  | Required | Description                                             |
+| ---------------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------- |
+| `id`                   | number                                                | Yes      | Unique identifier for the product instance in the cart. |
+| `name`                 | string                                                | Yes      | Name of the product.                                    |
+| `price`                | string                                                | Yes      | Price in string format (to match API response).         |
+| `quantity`             | number                                                | Yes      | Quantity of this product in the cart.                   |
+| `free_shipping`        | boolean                                               | Yes      | Whether the product qualifies for free shipping.        |
+| `product_id`           | number                                                | Yes      | Unique identifier for the product (not cart-specific).  |
+| `variant_id`           | number                                                | Yes      | Unique identifier for the selected product variant.     |
+| `thumbnail`            | string                                                | Yes      | URL of the product's thumbnail image.                   |
+| `variant_values`       | string                                                | Yes      | Variant details (e.g. selected attributes).             |
+| `sku`                  | string or null                                        | No       | SKU (Stock Keeping Unit) for the product variant.       |
+| `properties`           | Array&lt;unknown&gt; or Record&lt;string, unknown&gt; | No       | Additional product properties.                          |
+| `url`                  | string                                                | Yes      | URL of the product's page.                              |
+| `is_ahora_12_eligible` | boolean                                               | Yes      | Whether the product is eligible for Ahora 12 financing. |
 
-  /** Breakdown of the cart's pricing details. */
-  prices: Prices;
+**Prices** (`cart.prices`):
 
-  /** Optional coupon applied to the cart. */
-  coupon: DeepPartial<Coupon>;
+| Property             | Type   | Required | Description                                   |
+| -------------------- | ------ | -------- | --------------------------------------------- |
+| `discount_coupon`    | number | Yes      | Discount applied through a coupon.            |
+| `discount_gateway`   | number | Yes      | Discount applied through a payment gateway.   |
+| `discount_promotion` | number | Yes      | Discount applied through a store promotion.   |
+| `shipping`           | number | Yes      | Cost of shipping.                             |
+| `subtotal`           | number | Yes      | Subtotal before discounts and shipping.       |
+| `total`              | number | Yes      | Final total after all discounts and shipping. |
 
-  /** Indicates if the cart is a subscription. */
-  is_subscription: boolean;
-};
+**Coupon** (`cart.coupon`):
 
-type CartItem = {
-  /** Unique identifier for the product instance in the cart. */
-  id: number;
+| Property | Type   | Required | Description                                     |
+| -------- | ------ | -------- | ----------------------------------------------- |
+| `code`   | string | Yes      | The coupon code used.                           |
+| `type`   | string | Yes      | The type of discount (percentage, fixed, etc.). |
+| `value`  | string | Yes      | The discount value (format depends on `type`).  |
 
-  /** Name of the product. */
-  name: string;
+**CartValidation** (`cart.validation`): One of `{ status: "success" }`, `{ status: "pending" }`, or `{ status: "fail"; reason: string }`.
 
-  /** Price of the product in string format (to match API response). */
-  price: string;
-
-  /** Quantity of this product in the cart. */
-  quantity: number;
-
-  /** Indicates whether the product qualifies for free shipping. */
-  free_shipping: boolean;
-
-  /** Unique identifier for the product (not cart-specific). */
-  product_id: number;
-
-  /** Unique identifier for the selected product variant. */
-  variant_id: number;
-
-  /** URL of the product's thumbnail image. */
-  thumbnail: string;
-
-  /** Variant details, usually a combination of selected attributes. */
-  variant_values: string;
-
-  /** Nullable SKU (Stock Keeping Unit) for the product variant. */
-  sku: Nullable<string>;
-
-  /** Additional properties related to the product. */
-  properties: Array<unknown> | Record<string, unknown>;
-
-  /** URL of the product's page. */
-  url: string;
-
-  /** Indicates whether the product is eligible for Ahora 12 financing. */
-  is_ahora_12_eligible: boolean;
-};
-
-type Prices = {
-  /** Discount applied through a coupon. */
-  discount_coupon: number;
-
-  /** Discount applied through a payment gateway. */
-  discount_gateway: number;
-
-  /** Discount applied through a store promotion. */
-  discount_promotion: number;
-
-  /** Cost of shipping. */
-  shipping: number;
-
-  /** Subtotal before discounts and shipping. */
-  subtotal: number;
-
-  /** Final total price after all discounts and shipping. */
-  total: number;
-};
-
-type Coupon = {
-  /** The coupon code used. */
-  code: string;
-
-  /** The type of discount (percentage, fixed, etc.). */
-  type: string;
-
-  /** The discount value (format depends on `type`). */
-  value: string;
-};
-
-/** The card validation state */
-type CartValidation =
-  | CartValidationSuccess
-  | CartValidationPending
-  | CartValidationFail;
-
-type CartValidationSuccess = { status: "success" };
-type CartValidationPending = { status: "pending" };
-type CartValidationFail = { status: "fail"; reason: string };
-```
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Cart`, `CartItem`, `Prices`, `Coupon`, `CartValidation`).
 
 ### `order?: Order`
+
 The current order state, containing order status and tracking statuses.
 This property is only available on the checkout `success` page after the order has been completed, and will be `null` on all other pages.
 
-```typescript
-type Order = {
-  /** Status of the order. */
-  status?: Nullable<"open" | "closed" | "cancelled">;
+| Property            | Type                                      | Required | Description                     |
+| ------------------- | ----------------------------------------- | -------- | ------------------------------- |
+| `status`            | "open" or "closed" or "cancelled" or null | No       | Status of the order.            |
+| `tracking_statuses` | OrderTrackingStatus[]                     | No       | Tracking statuses of the order. |
 
-  /** Tracking statuses of the order. */
-  tracking_statuses?: OrderTrackingStatus[];
-};
+**OrderTrackingStatus** (each element of `order.tracking_statuses`):
 
-type OrderTrackingStatus = {
-  /** Type of the tracking status. */
-  type: "shipped" | "packed" | "shipping_failure";
+| Property    | Type                                        | Required | Description                       |
+| ----------- | ------------------------------------------- | -------- | --------------------------------- |
+| `type`      | "shipped" or "packed" or "shipping_failure" | Yes      | Type of the tracking status.      |
+| `title`     | string                                      | Yes      | Title of the tracking status.     |
+| `timestamp` | string                                      | Yes      | Timestamp of the tracking status. |
 
-  /** Title of the tracking status. */
-  title: string;
-
-  /** Timestamp of the tracking status. */
-  timestamp: string;
-};
-```
-
-
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Order`, `OrderTrackingStatus`).
 
 ### `config: AppConfig`
+
 Application-wide configuration settings, including cart validation rules.
 
-```typescript
-type AppConfig = {
-  /** Determines whether cart validation is enabled. */
-  has_cart_validation: boolean;
+| Property                        | Type    | Required | Description                                               |
+| ------------------------------- | ------- | -------- | --------------------------------------------------------- |
+| `has_cart_validation`           | boolean | Yes      | Determines whether cart validation is enabled.            |
+| `disable_shipping_more_options` | boolean | Yes      | Determines whether the user can select a shipping option. |
 
-  /** Determines whether the user can select a shipping option. */
-  disable_shipping_more_options: boolean;
-};
-```
+For the exact TypeScript definition, use `AppConfig` from `@tiendanube/nube-sdk-types`.
 
 ### `device: Device`
+
 Information about the device being used to access the application, including screen dimensions and device type.
 
-```typescript
-/**
- * Represents the device state.
- */
-export type Device = {
-	/**
-	 * The screen state of the device.
-	 * @example { width: 100, height: 100, orientation: "portrait" }
-	 */
-	screen: DeviceScreen;
-	/**
-	 * The type of device.
-	 * @example "mobile" | "desktop"
-	 */
-	type: DeviceType;
-};
+| Property | Type                  | Required | Description                                  |
+| -------- | --------------------- | -------- | -------------------------------------------- |
+| `screen` | DeviceScreen          | Yes      | Screen dimensions, orientation, pixel ratio. |
+| `type`   | "mobile" or "desktop" | Yes      | The type of device.                          |
 
-/**
- * Represents the screen state of the device.
- */
-export type DeviceScreen = {
-	/** The width of the screen in pixels. */
-	width: number;
-	/** The height of the screen in pixels. */
-	height: number;
-	/**
-	 * The orientation of the screen.
-	 * @example "portrait" | "landscape"
-	 */
-	orientation: DeviceScreenOrientation;
-	/** The pixel ratio of the screen. */
-	pixelRatio: number;
-  /** The width of the inner window in pixels. */
-	innerWidth: number;
-	/** The height of the inner window in pixels. */
-	innerHeight: number;
-};
+**DeviceScreen** (`device.screen`):
 
-/**
- * Represents the type of device.
- */
-type DeviceType = "mobile" | "desktop";
+| Property      | Type                      | Required | Description                           |
+| ------------- | ------------------------- | -------- | ------------------------------------- |
+| `width`       | number                    | Yes      | Width of the screen in pixels.        |
+| `height`      | number                    | Yes      | Height of the screen in pixels.       |
+| `orientation` | "portrait" or "landscape" | Yes      | Orientation of the screen.            |
+| `pixelRatio`  | number                    | Yes      | Pixel ratio of the screen.            |
+| `innerWidth`  | number                    | Yes      | Width of the inner window in pixels.  |
+| `innerHeight` | number                    | Yes      | Height of the inner window in pixels. |
 
-/**
- * Represents the orientation of the screen.
- */
-type DeviceScreenOrientation = "portrait" | "landscape";
-```
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Device`, `DeviceScreen`).
 
 ### `location: AppLocation`
-The user's current location within the application, including the page type and URL.
 
-```typescript
-type AppLocation = {
-  /** The current URL of the application. */
-  url: string;
+The user's current location within the application, including the page type and URL. Each key in `queries` is a query parameter name; each value is that parameter's value.
 
-  /** The current page type and its associated data. */
-  page: Page;
+| Property  | Type                         | Required | Description                                    |
+| --------- | ---------------------------- | -------- | ---------------------------------------------- |
+| `url`     | string                       | Yes      | The current URL of the application.            |
+| `page`    | Page                         | Yes      | The current page type and its associated data. |
+| `queries` | Record&lt;string, string&gt; | Yes      | Query parameters extracted from the URL.       |
 
-  /**
-   * Query parameters extracted from the URL.
-   *
-   * Each key represents the name of a query parameter, and its corresponding
-   * value represents the value of that query parameter.
-   */
-  queries: Record<string, string>;
-};
+**Page** (`location.page`) is a discriminated union: the shape of `page.data` depends on `page.type`. Use `page.type` to narrow the type before reading `page.data`.
 
-/**
- * Represents a page within the application.
- */
-export type Page =
-	| HomePage
-	| CheckoutPage
-	| ProductPage
-	| CategoryPage
-	| AllProductsPage
-	| SearchPage
-	| AccountPage
-	| CustomPage;
+| page.type       | page.data shape                   | Description                           |
+| --------------- | --------------------------------- | ------------------------------------- |
+| `"home"`        | Home                              | Homepage (optional sections).         |
+| `"checkout"`    | Checkout                          | Checkout step and flow.               |
+| `"product"`     | ProductPageData                   | Product detail and optional sections. |
+| `"category"`    | Category and product list         | Category and optional products.       |
+| `"products"`    | Category (id: 0) and product list | All-products page.                    |
+| `"search"`      | Search and product list           | Search query and optional products.   |
+| `"account"`     | Account                           | Account page data.                    |
+| `"custom_page"` | CustomPageData                    | Custom page name.                     |
 
-/** Represents the homepage. */
-type HomePage = { type: "home"; data: Home };
+**Checkout** (`page.data` when `page.type === "checkout"`):
 
-/** Represents a checkout page. */
-type CheckoutPage = { type: "checkout"; data: Checkout };
+| Property | Type   | Required | Description                             |
+| -------- | ------ | -------- | --------------------------------------- |
+| `step`   | string | Yes      | `"start"`, `"payment"`, or `"success"`. |
 
-/** Represents a product page. */
-type ProductPage = { type: "product"; data: ProductPageData };
+**Home** (`page.data` when `page.type === "home"`): `undefined` or an object with optional `sections` (see WithSections).
 
-/** Represents a category page. */
-type CategoryPage = { type: "category"; data: Category & WithProductList };
+**ProductPageData** (`page.data` when `page.type === "product"`):
 
-/** Represents the root category page (all products). */
-type AllProductsPage = { type: "products"; data: Category & { id: 0 } & WithProductList };
+| Property   | Type                       | Required | Description               |
+| ---------- | -------------------------- | -------- | ------------------------- |
+| `product`  | ProductDetails             | Yes      | The product being viewed. |
+| `sections` | Section&lt;"product"&gt;[] | No       | Optional sections.        |
 
-/** Represents the search results page. */
-type SearchPage = { type: "search"; data: Search & WithProductList };
+**Category** (used when `page.type === "category"` or `"products"`):
 
-/** Represents Account Page */
-export type AccountPage = { type: "account"; data: Account };
+| Property | Type   | Required | Description                                    |
+| -------- | ------ | -------- | ---------------------------------------------- |
+| `id`     | number | Yes      | Category id (0 for "products" = all products). |
+| `name`   | string | Yes      | Category name.                                 |
 
-/** Represents the data for a custom page. */
-export type CustomPageData = { name: string };
+**Search** (`page.data` when `page.type === "search"`):
 
-/** Represents a custom page step. */
-export type CustomPage = { type: "custom_page"; data: CustomPageData };
+| Property | Type   | Required | Description          |
+| -------- | ------ | -------- | -------------------- |
+| `q`      | string | Yes      | Search query string. |
 
-type Checkout = { step: "start" | "payment" | "success" };
+**WithProductList** (category and search pages may include): optional `products?: ProductDetails[]`.
 
-type Home = undefined | WithSections<"home">;
+**WithSections&lt;T&gt;** (home and product pages may include): optional `sections?: Section&lt;T&gt;[]`.
 
-type ProductPageData = {
-  product: ProductDetails;
-} & WithSections<"product">;
+**CustomPageData** (`page.data` when `page.type === "custom_page"`):
 
-type Category = {
-  id: number;
-  name: string;
-};
+| Property | Type   | Required | Description       |
+| -------- | ------ | -------- | ----------------- |
+| `name`   | string | Yes      | Custom page name. |
 
-type Search = {
-  q: string;
-};
-
-type WithProductList = {
-  products?: ProductDetails[];
-};
-
-type WithSections<T> = {
-  sections?: Section<T>[];
-};
-```
+For the exact TypeScript definitions (including `Page`, `AppLocation`, `ProductDetails`, `Section`, `Account`, and all page data types), use the types from `@tiendanube/nube-sdk-types`.
 
 ### `store: Store`
+
 Information about the current store, such as its domain, currency, and language.
 
-```typescript
-type Store = {
-  /** Unique identifier for the store. */
-  id: number;
+| Property   | Type                 | Required | Description                            |
+| ---------- | -------------------- | -------- | -------------------------------------- |
+| `id`       | number               | Yes      | Unique identifier for the store.       |
+| `name`     | string               | Yes      | Name of the store.                     |
+| `domain`   | string               | Yes      | Domain name associated with the store. |
+| `currency` | string               | Yes      | Currency code (e.g. "USD", "EUR").     |
+| `language` | "es" or "pt" or "en" | Yes      | Language code of the store.            |
 
-  /** Name of the store. */
-  name: string;
-
-  /** Domain name associated with the store. */
-  domain: string;
-
-  /** Currency code used in the store (e.g., "USD", "EUR"). */
-  currency: string;
-
-  /** Language code of the store (e.g., "en", "es", "pt"). */
-  language: "es" | "pt" | "en";
-};
-```
+For the exact TypeScript definition, use `Store` from `@tiendanube/nube-sdk-types`.
 
 ### `ui: UI`
+
 Represents UI-related state, including dynamically injected components and their values.
 
-```typescript
-type UI = {
-  /**
- * Contains dynamically injected components into specific UI slots.
- * Each key represents a slot name and its value is the component to be rendered.
- * 
- * You can manage these slots using the `nube.render()` and `nube.clearSlot()` methods.
- */
-slots: UISlots;
+| Property | Type                                               | Required | Description                                                                                                                           |
+| -------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `slots`  | Partial&lt;Record&lt;UISlot, NubeComponent&gt;&gt; | Yes      | Map of slot names to components. Manage with `nube.render()` and `nube.clearSlot()`. See [UI Slots](./slots/overview) for slot names. |
+| `values` | Record&lt;string, string&gt;                       | Yes      | Values for UI components (e.g. form inputs). Managed internally by the SDK; modifying directly may cause unexpected behavior.         |
 
-  /**
-   * Stores values associated with specific UI components, typically form inputs.
-   * WARNING: These values are managed internally by the SDK components.
-   * Modifying them directly may cause unexpected behavior.
-   */
-  values: UIValues;
-};
+Slot names (`UISlot`) include common slots (e.g. `before_main_content`, `modal_content`, `corner_*`), checkout slots (e.g. `before_line_items`, `after_contact_form`), and storefront slots (e.g. `product_grid_item_image_top_left`, `before_start_checkout_button`). For the full list, see [UI Slots](./slots/overview).
 
-/**
- * Represents a mapping of UI slots to their respective components.
- */
-type UISlots = Partial<Record<UISlot, NubeComponent>>;
-
-/**
- * Represents a mapping of UI component IDs to their respective values.
- */
-type UIValues = Record<NubeComponentId, UIValue>;
-
-/**
- * Represents a UI slot where components can be dynamically injected.
- * Includes slots for both checkout and storefront contexts.
- */
-type UISlot =
-  // Common UI Slots (available in both checkout and storefront)
-  | "before_main_content" // Before the main content
-  | "after_main_content" // After the main content
-  | "modal_content" // Content of a modal dialog
-  | "corner_top_left" // Top left corner of the page
-  | "corner_top_right" // Top right corner of the page
-  | "corner_bottom_left" // Bottom left corner of the page
-  | "corner_bottom_right" // Bottom right corner of the page
-  
-  // Checkout UI Slots
-  | "before_line_items" // Before the list of items in the cart
-  | "after_line_items" // After the list of items in the cart
-  | "after_line_items_price" // After the line items price in checkout
-  | "after_contact_form" // After the contact form in checkout
-  | "after_address_form" // After the address form in checkout
-  | "after_billing_form" // After the billing form in checkout
-  | "after_payment_options" // After the payment options in checkout
-  | "before_payment_options" // Before the payment options in checkout
-  | "before_address_form" // Before the address form in checkout
-  | "before_billing_form" // Before the billing form in checkout
-  | "before_contact_form" // Before the contact form in checkout
-  | "before_shipping_form" // Before the shipping form in checkout
-  | "after_shipping_form" // After the shipping form in checkout
-  
-  // Storefront UI Slots
-  | "before_quick_buy_add_to_cart" // Before the quick buy add to cart button
-  | "before_product_detail_add_to_cart" // Before the product detail add to cart button
-  | "after_product_detail_add_to_cart" // After the product detail add to cart button
-  | "product_detail_image_top_left" // Top left corner of product detail images
-  | "product_detail_image_top_right" // Top right corner of product detail images
-  | "after_product_detail_name" // After the product name in product detail
-  | "after_product_grid_item_name" // After the product name in grid items
-  | "product_grid_item_image_top_right" // Top right corner of product grid item images
-  | "product_grid_item_image_top_left" // Top left corner of product grid item images
-  | "product_grid_item_image_bottom_right" // Bottom right corner of product grid item images
-  | "product_grid_item_image_bottom_left" // Bottom left corner of product grid item images
-  | "before_start_checkout_button"; // Before the start checkout button
-
-/**
- * Represents the value of a UI component, typically used for form inputs.
- */
-type UIValue = string;
-
-/**
- * Represents a unique identifier for a UI component.
- */
-type NubeComponentId = string;
-```
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `UI`, `UISlots`, `UISlot`).
 
 ### `shipping: Nullable<Shipping>`
+
 Information about shipping, such as available options, selected option and custom labels.
 This property may be null depending on the page it is accessed from.
 
-```typescript
-type Shipping = {
-  /** Selected shipping option ID. */
-  selected: Nullable<string>;
+| Property        | Type                         | Required | Description                                 |
+| --------------- | ---------------------------- | -------- | ------------------------------------------- |
+| `selected`      | string or null               | No       | Selected shipping option ID.                |
+| `options`       | ShippingOption[]             | No       | List of available shipping options.         |
+| `custom_labels` | Record&lt;string, string&gt; | No       | Custom labels assigned to shipping options. |
 
-  /** List of available shipping options. */
-  options?: ShippingOption[];
+**ShippingOption** (each element of `shipping.options`):
 
-  /** Custom labels assigned to shipping options. */
-  custom_labels?: Record<string, string>;
-};
+| Property                 | Type           | Required | Description                                                                   |
+| ------------------------ | -------------- | -------- | ----------------------------------------------------------------------------- |
+| `id`                     | string         | Yes      | Unique identifier for the shipping option.                                    |
+| `original_name`          | string or null | No       | Original name of the shipping option.                                         |
+| `name`                   | string or null | No       | Display name of the shipping option.                                          |
+| `code`                   | string or null | No       | Shipping method code.                                                         |
+| `reference`              | string or null | No       | Reference code for the shipping option.                                       |
+| `type`                   | string or null | No       | Type of shipping method.                                                      |
+| `price`                  | number         | Yes      | Price of the shipping option.                                                 |
+| `price_merchant`         | number         | Yes      | Merchant price of the shipping option.                                        |
+| `currency`               | string         | Yes      | Currency of the shipping cost.                                                |
+| `min_delivery_date`      | string or null | No       | Estimated minimum delivery date.                                              |
+| `max_delivery_date`      | string or null | No       | Estimated maximum delivery date.                                              |
+| `phone_required`         | boolean        | Yes      | Whether a phone number is required for shipping.                              |
+| `id_required`            | boolean        | Yes      | Whether an ID is required for shipping.                                       |
+| `accepts_cod`            | boolean        | Yes      | Whether cash on delivery is accepted.                                         |
+| `free_shipping_eligible` | boolean        | Yes      | Whether the option is eligible for free shipping.                             |
+| `extra`                  | object         | No       | Extra shipping details (e.g. `show_time`, `warning`, `free_shipping` fields). |
+| `method`                 | string or null | No       | Shipping method identifier.                                                   |
+| `app_id`                 | string or null | No       | Application ID associated with the shipping option.                           |
+| `hidden`                 | boolean        | Yes      | Whether the shipping option is hidden.                                        |
+| `priority`               | number or null | No       | Priority of the shipping option.                                              |
+| `shippable`              | boolean        | Yes      | Whether the shipping option is available.                                     |
+| `smart_date`             | object         | No       | Smart date information for delivery estimates.                                |
 
-type ShippingOption = {
-  /** Unique identifier for the shipping option. */
-  id: string;
-
-  /** Original name of the shipping option. */
-  original_name: Nullable<string>;
-
-  /** Display name of the shipping option. */
-  name: Nullable<string>;
-
-  /** Shipping method code. */
-  code: Nullable<string>;
-
-  /** Reference code for the shipping option. */
-  reference: Nullable<string>;
-
-  /** Type of shipping method. */
-  type: Nullable<string>;
-
-  /** Price of the shipping option. */
-  price: number;
-
-  /** Merchant price of the shipping option. */
-  price_merchant: number;
-
-  /** Currency of the shipping cost. */
-  currency: string;
-
-  /** Estimated minimum delivery date. */
-  min_delivery_date: Nullable<string>;
-
-  /** Estimated maximum delivery date. */
-  max_delivery_date: Nullable<string>;
-
-  /** Indicates whether a phone number is required for shipping. */
-  phone_required: boolean;
-
-  /** Indicates whether an ID is required for shipping. */
-  id_required: boolean;
-
-  /** Indicates whether cash on delivery is accepted. */
-  accepts_cod: boolean;
-
-  /** Indicates eligibility for free shipping. */
-  free_shipping_eligible: boolean;
-
-  /** Extra shipping details. */
-  extra: {
-    show_time: boolean;
-    warning: {
-      enable: boolean;
-    };
-    assigned_location_id: Nullable<string>;
-    free_shipping: Nullable<number>;
-    free_shipping_min_value: Nullable<string>;
-    free_shipping_price_merchant: Nullable<number>;
-    free_shipping_methods: Nullable<string[]>;
-    free_shipping_combines_with_other_discounts: boolean;
-  };
-
-  /** Shipping method identifier. */
-  method: Nullable<string>;
-
-  /** Application ID associated with the shipping option. */
-  app_id: Nullable<string>;
-
-  /** Indicates whether the shipping option is hidden. */
-  hidden: boolean;
-
-  /** Priority of the shipping option. */
-  priority: Nullable<number>;
-
-  /** Indicates whether the shipping option is available. */
-  shippable: boolean;
-
-  /** Internal shipping option code. */
-  shipping_internal_option_code: Nullable<string>;
-
-  /** Sign key for the shipping option. */
-  sign_key: Nullable<string>;
-
-  /** Smart date information for delivery estimates. */
-  smart_date: {
-    translate_old_string: Nullable<string>;
-    translate_string: Nullable<string>;
-    total_old_time: Nullable<string>;
-    total_exact_time: Nullable<string>;
-    final_time: Nullable<string>;
-    show_time: boolean;
-    days: Nullable<string>;
-    from_week_day: Nullable<string>;
-    from_date: Nullable<string>;
-    to_week_day: Nullable<string>;
-    to_date: Nullable<string>;
-    from: Nullable<number>;
-    to: Nullable<number>;
-    min_days: Nullable<number>;
-    max_days: Nullable<number>;
-    extra_days: unknown;
-  };
-};
-```
+For the exact TypeScript definitions (including nested `extra` and `smart_date` shapes), use the types from `@tiendanube/nube-sdk-types` (e.g. `Shipping`, `ShippingOption`).
 
 ### `customer: Nullable<Customer>`
+
 Details about the customer, including identification, contact information, and address.
 This property may be null depending on the page it is accessed from.
 
-```typescript
-type Customer = {
-  /** Unique identifier for the customer. */
-  id: Nullable<number>;
+| Property           | Type            | Required | Description                               |
+| ------------------ | --------------- | -------- | ----------------------------------------- |
+| `id`               | number or null  | No       | Unique identifier for the customer.       |
+| `contact`          | object          | Yes      | Customer contact information (see below). |
+| `shipping_address` | ShippingAddress | Yes      | Customer's shipping address.              |
+| `billing_address`  | BillingAddress  | Yes      | Customer's billing address.               |
 
-  /** Customer contact information. */
-  contact: {
-    /** Customer's email address. */
-    email: Nullable<string>;
+**Customer contact** (`customer.contact`):
 
-    /** Customer's full name. */
-    name: Nullable<string>;
+| Property                       | Type            | Required | Description                                                |
+| ------------------------------ | --------------- | -------- | ---------------------------------------------------------- |
+| `email`                        | string or null  | No       | Customer's email address.                                  |
+| `name`                         | string or null  | No       | Customer's full name.                                      |
+| `phone`                        | string or null  | No       | Customer's phone number.                                   |
+| `accepts_marketing`            | boolean or null | No       | Whether the customer accepts marketing communications.     |
+| `accepts_marketing_updated_at` | string or null  | No       | Timestamp of when marketing preferences were last updated. |
 
-    /** Customer's phone number. */
-    phone: Nullable<string>;
+**Address** (base shape for both `customer.shipping_address` and `customer.billing_address`):
 
-    /** Whether the customer accepts marketing communications. */
-    accepts_marketing: Nullable<boolean>;
+| Property     | Type           | Required | Description                               |
+| ------------ | -------------- | -------- | ----------------------------------------- |
+| `zipcode`    | string         | Yes      | Postal code of the address.               |
+| `first_name` | string or null | No       | First name of the address owner.          |
+| `last_name`  | string or null | No       | Last name of the address owner.           |
+| `address`    | string or null | No       | Street address.                           |
+| `number`     | string or null | No       | Street number.                            |
+| `floor`      | string or null | No       | Floor or apartment number.                |
+| `locality`   | string or null | No       | Locality or neighborhood.                 |
+| `city`       | string or null | No       | City name.                                |
+| `state`      | string or null | No       | State or province.                        |
+| `country`    | string or null | No       | Country name.                             |
+| `phone`      | string or null | No       | Phone number associated with the address. |
 
-    /** Timestamp of when marketing preferences were last updated. */
-    accepts_marketing_updated_at: Nullable<string>;
-  };
+**ShippingAddress** extends Address and adds:
 
-  /** Customer's shipping address. */
-  shipping_address: ShippingAddress;
+| Property         | Type           | Required | Description                                         |
+| ---------------- | -------------- | -------- | --------------------------------------------------- |
+| `between_street` | string or null | No       | Additional address information between streets.     |
+| `reference`      | string or null | No       | Reference points or additional address information. |
 
-  /** Customer's billing address. */
-  billing_address: BillingAddress;
-};
+**BillingAddress** extends Address and adds:
 
-type Address = {
-  /** Postal code of the address. */
-  zipcode: string;
+| Property             | Type           | Required | Description                                |
+| -------------------- | -------------- | -------- | ------------------------------------------ |
+| `id_number`          | string or null | No       | Tax identification number.                 |
+| `customer_type`      | string or null | No       | Type of customer (individual or business). |
+| `business_name`      | string or null | No       | Legal business name.                       |
+| `trade_name`         | string or null | No       | Trade name or commercial name.             |
+| `state_registration` | string or null | No       | State registration number.                 |
+| `fiscal_regime`      | string or null | No       | Fiscal regime classification.              |
+| `invoice_use`        | string or null | No       | Invoice usage classification.              |
+| `document_type`      | string or null | No       | Type of identification document.           |
+| `business_activity`  | string or null | No       | Business activity or industry.             |
 
-  /** First name of the address owner. */
-  first_name: Nullable<string>;
-
-  /** Last name of the address owner. */
-  last_name: Nullable<string>;
-
-  /** Street address. */
-  address: Nullable<string>;
-
-  /** Street number. */
-  number: Nullable<string>;
-
-  /** Floor or apartment number. */
-  floor: Nullable<string>;
-
-  /** Locality or neighborhood. */
-  locality: Nullable<string>;
-
-  /** City name. */
-  city: Nullable<string>;
-
-  /** State or province. */
-  state: Nullable<string>;
-
-  /** Country name. */
-  country: Nullable<string>;
-
-  /** Phone number associated with the address. */
-  phone: Nullable<string>;
-};
-
-type ShippingAddress = Address & {
-  /** Additional address information between streets. */
-  between_street: Nullable<string>;
-
-  /** Reference points or additional address information. */
-  reference: Nullable<string>;
-};
-
-type BillingAddress = Address & {
-  /** Tax identification number. */
-  id_number: Nullable<string>;
-
-  /** Type of customer (individual or business). */
-  customer_type: Nullable<string>;
-
-  /** Legal business name. */
-  business_name: Nullable<string>;
-
-  /** Trade name or commercial name. */
-  trade_name: Nullable<string>;
-
-  /** State registration number. */
-  state_registration: Nullable<string>;
-
-  /** Fiscal regime classification. */
-  fiscal_regime: Nullable<string>;
-
-  /** Invoice usage classification. */
-  invoice_use: Nullable<string>;
-
-  /** Type of identification document. */
-  document_type: Nullable<string>;
-
-  /** Business activity or industry. */
-  business_activity: Nullable<string>;
-};
-```
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Customer`, `ShippingAddress`, `BillingAddress`, `Address`).
 
 ### `payment: Nullable<Payment>`
+
 Information about the payment method, including status and selected option.
 This property may be null depending on the page it is accessed from.
 
-```typescript
-type Payment = {
-  /** The current status of the payment. */
-  status: Nullable<PaymentStatus>;
+| Property   | Type                    | Required | Description                      |
+| ---------- | ----------------------- | -------- | -------------------------------- |
+| `status`   | PaymentStatus or null   | No       | Current status of the payment.   |
+| `selected` | SelectedPayment or null | No       | Selected payment method details. |
 
-  /** The selected payment method details. */
-  selected: Nullable<SelectedPayment>;
-};
+**PaymentStatus**: One of `"pending"`, `"paid"`, `"voided"`, `"open"`, `"abandoned"`, `"authorized"`, `"refunded"`, `"recovered"`, `"partially_paid"`.
 
-/** Represents the possible payment statuses. */
-type PaymentStatus =
-  | "pending"         // Payment is pending processing
-  | "paid"            // Payment was completed
-  | "voided"          // Payment was voided
-  | "open"            // Payment is open
-  | "abandoned"       // Payment was abandoned
-  | "authorized"      // Payment was authorized
-  | "refunded"        // Payment was refunded
-  | "recovered"       // Payment was recovered
-  | "partially_paid"; // Payment was partially paid
+**SelectedPayment** (`payment.selected`):
 
-/** Represents the selected payment method in checkout. */
-type SelectedPayment = {
-  /** Unique identifier for the payment method. */
-  id: Nullable<string>;
+| Property              | Type            | Required | Description                                          |
+| --------------------- | --------------- | -------- | ---------------------------------------------------- |
+| `id`                  | string or null  | No       | Unique identifier for the payment method.            |
+| `app_id`              | number or null  | No       | Application ID associated with the payment provider. |
+| `payment_provider_id` | string or null  | No       | Payment provider identifier.                         |
+| `method_name`         | string or null  | No       | Name of the payment method.                          |
+| `type`                | string or null  | No       | Type of payment.                                     |
+| `method_type`         | string or null  | No       | Method type.                                         |
+| `bypass_gateway`      | boolean or null | No       | Whether to bypass the payment gateway.               |
+| `render_gateway_name` | boolean or null | No       | Whether to render the gateway name.                  |
+| `method`              | string or null  | No       | Payment method identifier.                           |
+| `template`            | string or null  | No       | Template for the payment method.                     |
+| `name`                | string or null  | No       | Display name.                                        |
+| `category`            | string or null  | No       | Payment category.                                    |
+| `billing_address`     | boolean or null | No       | Whether billing address is required.                 |
 
-  /** Application ID associated with the payment provider. */
-  app_id: Nullable<number>;
-
-  /** Payment provider identifier. */
-  payment_provider_id: Nullable<string>;
-
-  /** Name of the payment method. */
-  method_name: Nullable<string>;
-
-  /** Type of payment. */
-  type: Nullable<string>;
-
-  /** Method type. */
-  method_type: Nullable<string>;
-
-  /** Whether to bypass the payment gateway. */
-  bypass_gateway: Nullable<boolean>;
-
-  /** Whether to render the gateway name. */
-  render_gateway_name: Nullable<boolean>;
-
-  /** Payment method identifier. */
-  method: Nullable<string>;
-
-  /** Template for the payment method. */
-  template: Nullable<string>;
-
-  /** Display name. */
-  name: Nullable<string>;
-
-  /** Payment category. */
-  category: Nullable<string>;
-
-  /** Whether billing address is required. */
-  billing_address: Nullable<boolean>;
-};
-```
+For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Payment`, `PaymentStatus`, `SelectedPayment`).
 
 ### `eventPayload: Nullable<Record<string, unknown>>`
+
 Optional event payload data that may be available when certain events are triggered.
 
-This property contains additional context about specific events, such as product information 
-when a quick buy modal is opened or closed, or item details when cart operations succeed.
+This property contains additional context about specific events, such as product information when a quick buy modal is opened or closed, or item details when cart operations succeed. Type: `Record<string, unknown> | null`.
 
-```typescript
-type EventPayload = Nullable<Record<string, unknown>>;
-```
+### `session: Session`
+
+Session information, including the session identifier.
+
+| Property | Type           | Required | Description                        |
+| -------- | -------------- | -------- | ---------------------------------- |
+| `id`     | string or null | No       | Unique identifier for the session. |
+
+For the exact TypeScript definition, use `Session` from `@tiendanube/nube-sdk-types`.
 
 ## Notes
 
 - Properties marked as `Nullable<T>` may be `null` depending on the context or page where they are accessed
-- The `UI` property contains dynamically injected components and their values
+- The **Available when** column in the table above indicates context-dependent properties (e.g. `order` only on checkout success page)
+- The `UI` property contains dynamically injected components and their values; for the full list of slot names see [UI Slots](./slots/overview)
 - The `location` property helps determine the current context of the application
 - All monetary values in the `cart` property are in the store's base currency
 - The state is immutable and can only be modified through the `send` method of `NubeSDK`
