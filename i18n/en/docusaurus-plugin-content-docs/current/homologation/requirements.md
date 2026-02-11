@@ -9,7 +9,9 @@ To ensure an effective approval process, it is mandatory for partners to submit 
 
 Once the approval request is submitted, our team will contact you to request the artifacts covering the following requirements:
 
-## 1. Submission of Sequence Diagram**
+
+## 1. Submission of Sequence Diagram
+
 
 The sequence diagram must illustrate how the application interacts with our API and which actions it executes on the back-end. The diagram should show which actions are triggered during an interaction with the Nuvemshop API, what happens during the transaction, and what the resulting output is.
 
@@ -30,7 +32,9 @@ It allows us to validate the authentication flows and the technical interaction 
 
 ![Flowinstall](../../../../../static/img/en/fluxoinstallen.png "Flow install")
 
-## 2. Submission of App Demo Video**
+
+## 2. Submission of App Demo Video
+
 
 The demonstration video is one of the fundamental **pillars for your application's approval**. It serves two critical roles in our review process:
 
@@ -57,7 +61,8 @@ Incomplete videos may result in the approval process being sent back for correct
 * Relevant points for evaluation, such as specific interactions essential for approval.
 * If any technical setup is required to use the app, it’s recommended to clearly specify and guide the merchant on how to perform it.
 
-## 3. Attention to Subscription Steps and Restrictions**
+
+## 3. Attention to Subscription Steps and Restrictions
 
 If your app includes a subscription plan, or if a waiting period is needed for registration approval or any other step that could prevent immediate validation, <br/>
 **provide a demo account that has already bypassed these steps**, allowing the approval team to access and validate without interruptions to the process.

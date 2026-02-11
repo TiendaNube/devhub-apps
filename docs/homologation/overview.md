@@ -14,7 +14,7 @@ Esse processo assegura que o app atende aos critérios técnicos e funcionais es
 Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar de formas diferentes, sendo:
 
 - **Homologação Assíncrona:** Neste processo, deverá ser enviado todos os artefatos para análise e nossa equipe realizará testes para validação.
-- **Homologação Síncrona:** Este cenário se aplica a aplicativos que lidam com dados sensíveis, como ERP, pagamentos e logística, nos quais é necessário realizar a validação de forma conjunta. Nesses casos, nossa equipe agendará uma reunião com o solicitante da homologação para acompanhar e validar o aplicativo com base na checklist definida..
+- **Homologação Síncrona:** Este cenário se aplica a aplicativos que lidam com dados sensíveis, como ERP, pagamentos e logística, nos quais é necessário realizar a validação de forma conjunta. Nesses casos, nossa equipe agendará uma reunião com o solicitante da homologação para acompanhar e validar o aplicativo com base na checklist definida.
 
 **Visibilidade e Próximos Passos**
 

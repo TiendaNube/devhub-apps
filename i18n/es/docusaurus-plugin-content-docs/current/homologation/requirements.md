@@ -32,7 +32,9 @@ Este permite validar los flujos de autenticación y la interacción técnica ent
 
 ![Flujoinstall](../../../../../static/img/es/fluxoinstalles.png "Flujo install")
 
-## 2. Envío de Video Demo de la Aplicación**
+
+## 2. Envío de Video Demo de la Aplicación
+
 
 El video de demostración es uno de los pilares fundamentales para la **homologación** de su aplicación. Cumple dos roles críticos en nuestro proceso de revisión:
 
@@ -58,7 +60,8 @@ Los videos incompletos pueden resultar en la devolución del proceso de homologa
 * Puntos relevantes para la evaluación, como interacciones específicas que sean esenciales para la homologación.
 * Si se requiere alguna configuración técnica para usar la app, se recomienda que esté especificada y orientada al merchant sobre cómo realizar dicha acción.
 
-### 3. Atención a las Etapas de Suscripción y Restricciones**
+
+### 3. Atención a las Etapas de Suscripción y Restricciones
 
 Si la aplicación incluye suscripción a un plan, espera un tiempo para que se libere el registro o cualquier otra etapa que pueda impedir la validación inmediata de la app. <br/>
 **Envía una cuenta demo ya liberada de esas etapas**, permitiendo que el equipo de homologación acceda y valide sin interrupciones en el flujo de homologación.

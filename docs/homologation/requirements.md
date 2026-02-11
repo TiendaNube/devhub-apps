@@ -19,7 +19,11 @@ Ele permite validar os fluxos de autenticação e a interação técnica entre o
 
 1.1. **Garantir que os aplicativos façam um uso eficiente dos recursos**, por exemplo:
 
+
    - Não realizar GETs contínuos de alguma entidade para verificar se houveram alterações, quando o correto seria executar um Webhook.
+
+   - Não realizar GETs contínuos de alguma entidade para verificar se houve alterações, quando o correto seria executar um Webhook.
+
    - Modificar entidades sem necessidade (caso de uso: aplicativo que modifica constantemente o estoque dos produtos para 0 e logo em seguida altera para outro valor).
 
 1.2. **Buscar oportunidades de melhoria no fluxo de trabalho dos parceiros**:
