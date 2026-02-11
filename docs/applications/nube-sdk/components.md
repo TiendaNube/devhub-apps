@@ -38,8 +38,31 @@ A clickable element used to trigger actions, supporting multiple variants (prima
 ### [Text](/docs/applications/nube-sdk/components/text)
 A component for rendering text with optional styling, supporting properties like color, background, heading levels, and text formatting modifiers.
 
+### [Link](/docs/applications/nube-sdk/components/link)
+A component for rendering clickable hyperlinks that navigate users to different URLs, with support for target options and custom styling.
+
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
+
+### [Icon](/docs/applications/nube-sdk/components/icon)
+A component for displaying icons from the **[Nimbus Icons](https://nimbus.nuvemshop.com.br/documentation/resources/nimbus-icons)** library, supporting customizable size and color properties.
+
+### [Iframe](/docs/applications/nube-sdk/components/iframe)
+A component that allows you to embed external web content directly into your application's UI, creating an inline frame that loads content from a specified URL.
+
+### [SVG](/docs/applications/nube-sdk/components/svg)
+A component for creating scalable vector graphics within your NubeSDK application, providing comprehensive SVG elements including Root, Circle, Text, and other common SVG shapes.
+
+## Interactive Components
+
+### [Accordion](/docs/applications/nube-sdk/components/accordion)
+A collapsible content component that allows users to expand and collapse sections of content, improving the user experience by reducing visual clutter.
+
+### [Progress](/docs/applications/nube-sdk/components/progress)
+A visual indicator component that displays the completion status of a task or operation, supporting configurable value and maximum properties.
+
+### [Toast](/docs/applications/nube-sdk/components/toast)
+A non-disruptive message component that appears temporarily to provide quick feedback to users, supporting multiple variants and customizable duration.
 
 ## Key Features
 
@@ -51,7 +74,17 @@ A component for displaying images with support for responsive sources, alternati
 
 ## Usage
 
-Components can be used in UI slots throughout the application, with predefined locations for different sections of the checkout process. The components are assigned to slots using the `ui:slot:set` event.
+Components can be used in UI slots throughout the application, with predefined locations for different sections of the checkout process. You can render components into slots using the `nube.render()` method and clear them using `nube.clearSlot()`.
+
+```typescript
+import { Text } from "@tiendanube/nube-sdk";
+
+// Render a component into a slot
+nube.render("after_address_form", <Text>Hello World</Text>);
+
+// Clear a component from a slot
+nube.clearSlot("after_address_form");
+```
 
 For detailed information about each component's properties and usage, please refer to their individual documentation pages.
 

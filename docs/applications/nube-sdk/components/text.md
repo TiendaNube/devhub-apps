@@ -5,10 +5,6 @@ title: Text
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 The `text` component is used to render text with optional styling.
 It supports properties such as `color`, `background`, `heading` levels (h1-h6),
 text formatting `modifiers` (bold, italic, etc.), and inline display.
@@ -18,14 +14,39 @@ text formatting `modifiers` (bold, italic, etc.), and inline display.
 ### Usage
 
 ```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Box, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
-    <Box>
-      <Text color="red" background="blue">Hello!!</Text>
+    <Box direction="col" gap={8}>
+      {/* Basic text */}
+      <Text>Hello world!</Text>
+
+      {/* Text with color and background */}
+      <Text color="white" background="blue">Highlighted text</Text>
+
+      {/* Heading text */}
+      <Text heading={2}>This is a heading</Text>
+
+      {/* Text with modifiers */}
+      <Text modifiers={["bold", "italic"]}>Bold and italic text</Text>
+
+      {/* Inline text */}
+      <Text inline>Inline</Text>
+      <Text inline>text</Text>
     </Box>
   );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 

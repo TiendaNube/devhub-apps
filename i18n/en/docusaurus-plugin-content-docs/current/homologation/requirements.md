@@ -76,4 +76,6 @@ It is essential that our team experiences the **actual merchant journey** during
 Submitting these requirements correctly will ensure a faster, more efficient approval process, allowing your app to move forward to the publishing phase without setbacks.
 :::
 
+
 <br/>
+

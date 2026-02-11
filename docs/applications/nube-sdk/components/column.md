@@ -5,10 +5,6 @@ title: Column
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 A `column` is a flexible vertical container used to align child components in a column.
 It inherits all the capabilities of the [box component](/docs/applications/nube-sdk/components/box), with the direction property preset to `"column"`.
 
@@ -17,6 +13,7 @@ It inherits all the capabilities of the [box component](/docs/applications/nube-
 ![Column](../../../../static/img/pt/nube-sdk-ui-col-1.png "Column")
 
 ```typescript title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Column, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
@@ -26,6 +23,16 @@ function MyComponent() {
       <Text>Hello 2</Text>
     </Column>
   );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 

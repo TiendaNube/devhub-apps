@@ -9,13 +9,28 @@ without adding unnecessary wrapper elements to the DOM.
 
 ### Usage
 
-```tsx
-import { Fragment } from "@tiendanube/nube-sdk-jsx";
+```tsx title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Fragment, Text } from "@tiendanube/nube-sdk-jsx";
 
-<Fragment>
-  <Text>First element</Text>
-  <Text>Second element</Text>
-</Fragment>;
+function MyComponent() {
+  return (
+    <Fragment>
+      <Text>First element</Text>
+      <Text>Second element</Text>
+    </Fragment>
+  );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
+}
 ```
 
 ### Properties

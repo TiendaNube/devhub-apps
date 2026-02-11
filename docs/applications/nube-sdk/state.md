@@ -4,10 +4,6 @@ title: State
 
 import AppTypes from '@site/src/components/AppTypes';
 
-:::warning
-This SDK is a Work In Progress! All features are subject to change.
-:::
-
 The `NubeSDKState` type represents the complete state of a Nuvemshop / Tiendanube application, providing access to all available data and configurations. This state object is passed to various SDK functions and components, allowing developers to access and react to the current application state.
 
 
@@ -25,11 +21,11 @@ import { NubeSDK, NubeSDKState } from '@tiendanube/nube-sdk-types';
 export function App(nube: NubeSDK) {
   // Get current state
   const currentState: Readonly<NubeSDKState> = nube.getState();
-  
+
   // Access state properties
   const cartTotal = currentState.cart.total;
   const storeCurrency = currentState.store.currency;
-  const currentPage = currentState.location.pageType;
+  const currentPage = currentState.location.page.type;
 }
 ```
 
@@ -52,7 +48,6 @@ export function App(nube: NubeSDK) {
 
 For more details on how to monitor state updates and subscribe to various state events, please see [Events](./events). This page provides comprehensive examples and explanations on how to listen for updates such as `cart:update`, `shipping:update`, and more, allowing you to build a dynamic, responsive application.
 
-
 ### 3. Modifying State
 When an event is sent, a modified function can be defined as the second parameter, this function receives a snapshot of the state and should return a partial version of the state to be merged into the current state.
 
@@ -69,7 +64,7 @@ export function App(nube: NubeSDK) {
       ui: {
         slots: {
           before_main_content: <Txt>{`Hello ${storeName}!`}</Txt>
-        } 
+        }
       }
     };
   });
@@ -89,17 +84,20 @@ type Cart = {
   /** Validation status of the cart. */
   validation: CartValidation;
 
-  /** List of products currently in the cart. */
-  items: Product[];
+  /** List of items currently in the cart. */
+  items: CartItem[];
 
   /** Breakdown of the cart's pricing details. */
   prices: Prices;
 
   /** Optional coupon applied to the cart. */
-  coupon: Nullable<Coupon>;
+  coupon: DeepPartial<Coupon>;
+
+  /** Indicates if the cart is a subscription. */
+  is_subscription: boolean;
 };
 
-type Product = {
+type CartItem = {
   /** Unique identifier for the product instance in the cart. */
   id: number;
 
@@ -130,8 +128,8 @@ type Product = {
   /** Nullable SKU (Stock Keeping Unit) for the product variant. */
   sku: Nullable<string>;
 
-  /** Additional properties related to the product (structure unknown). */
-  properties: Array<unknown>;
+  /** Additional properties related to the product. */
+  properties: Array<unknown> | Record<string, unknown>;
 
   /** URL of the product's page. */
   url: string;
@@ -182,6 +180,33 @@ type CartValidationPending = { status: "pending" };
 type CartValidationFail = { status: "fail"; reason: string };
 ```
 
+### `order?: Order`
+The current order state, containing order status and tracking statuses.
+This property is only available on the checkout `success` page after the order has been completed, and will be `null` on all other pages.
+
+```typescript
+type Order = {
+  /** Status of the order. */
+  status?: Nullable<"open" | "closed" | "cancelled">;
+
+  /** Tracking statuses of the order. */
+  tracking_statuses?: OrderTrackingStatus[];
+};
+
+type OrderTrackingStatus = {
+  /** Type of the tracking status. */
+  type: "shipped" | "packed" | "shipping_failure";
+
+  /** Title of the tracking status. */
+  title: string;
+
+  /** Timestamp of the tracking status. */
+  timestamp: string;
+};
+```
+
+
+
 ### `config: AppConfig`
 Application-wide configuration settings, including cart validation rules.
 
@@ -193,6 +218,58 @@ type AppConfig = {
   /** Determines whether the user can select a shipping option. */
   disable_shipping_more_options: boolean;
 };
+```
+
+### `device: Device`
+Information about the device being used to access the application, including screen dimensions and device type.
+
+```typescript
+/**
+ * Represents the device state.
+ */
+export type Device = {
+	/**
+	 * The screen state of the device.
+	 * @example { width: 100, height: 100, orientation: "portrait" }
+	 */
+	screen: DeviceScreen;
+	/**
+	 * The type of device.
+	 * @example "mobile" | "desktop"
+	 */
+	type: DeviceType;
+};
+
+/**
+ * Represents the screen state of the device.
+ */
+export type DeviceScreen = {
+	/** The width of the screen in pixels. */
+	width: number;
+	/** The height of the screen in pixels. */
+	height: number;
+	/**
+	 * The orientation of the screen.
+	 * @example "portrait" | "landscape"
+	 */
+	orientation: DeviceScreenOrientation;
+	/** The pixel ratio of the screen. */
+	pixelRatio: number;
+  /** The width of the inner window in pixels. */
+	innerWidth: number;
+	/** The height of the inner window in pixels. */
+	innerHeight: number;
+};
+
+/**
+ * Represents the type of device.
+ */
+type DeviceType = "mobile" | "desktop";
+
+/**
+ * Represents the orientation of the screen.
+ */
+type DeviceScreenOrientation = "portrait" | "landscape";
 ```
 
 ### `location: AppLocation`
@@ -215,21 +292,69 @@ type AppLocation = {
   queries: Record<string, string>;
 };
 
-// New variations will be broken with the evolution of the NubeSDK
-type Page = CheckoutPage;
+/**
+ * Represents a page within the application.
+ */
+export type Page =
+	| HomePage
+	| CheckoutPage
+	| ProductPage
+	| CategoryPage
+	| AllProductsPage
+	| SearchPage
+	| AccountPage
+	| CustomPage;
 
-type CheckoutPage = {
-  type: "checkout";
-  data: Checkout;
-};
+/** Represents the homepage. */
+type HomePage = { type: "home"; data: Home };
 
-type Checkout = {
-  step: "start" | "payment" | "success";
-};
+/** Represents a checkout page. */
+type CheckoutPage = { type: "checkout"; data: Checkout };
+
+/** Represents a product page. */
+type ProductPage = { type: "product"; data: ProductPageData };
+
+/** Represents a category page. */
+type CategoryPage = { type: "category"; data: Category & WithProductList };
+
+/** Represents the root category page (all products). */
+type AllProductsPage = { type: "products"; data: Category & { id: 0 } & WithProductList };
+
+/** Represents the search results page. */
+type SearchPage = { type: "search"; data: Search & WithProductList };
+
+/** Represents Account Page */
+export type AccountPage = { type: "account"; data: Account };
+
+/** Represents the data for a custom page. */
+export type CustomPageData = { name: string };
+
+/** Represents a custom page step. */
+export type CustomPage = { type: "custom_page"; data: CustomPageData };
+
+type Checkout = { step: "start" | "payment" | "success" };
+
+type Home = undefined | WithSections<"home">;
+
+type ProductPageData = {
+  product: ProductDetails;
+} & WithSections<"product">;
 
 type Category = {
-  id: string;
+  id: number;
   name: string;
+};
+
+type Search = {
+  q: string;
+};
+
+type WithProductList = {
+  products?: ProductDetails[];
+};
+
+type WithSections<T> = {
+  sections?: Section<T>[];
 };
 ```
 
@@ -238,10 +363,20 @@ Information about the current store, such as its domain, currency, and language.
 
 ```typescript
 type Store = {
+  /** Unique identifier for the store. */
+  id: number;
+
+  /** Name of the store. */
+  name: string;
+
+  /** Domain name associated with the store. */
   domain: string;
+
+  /** Currency code used in the store (e.g., "USD", "EUR"). */
   currency: string;
-  language: string;
-  settings: StoreSettings;
+
+  /** Language code of the store (e.g., "en", "es", "pt"). */
+  language: "es" | "pt" | "en";
 };
 ```
 
@@ -251,10 +386,12 @@ Represents UI-related state, including dynamically injected components and their
 ```typescript
 type UI = {
   /**
-   * Contains dynamically injected components into specific UI slots.
-   * Each key represents a slot name and its value is the component to be rendered.
-   */
-  slots: UISlots;
+ * Contains dynamically injected components into specific UI slots.
+ * Each key represents a slot name and its value is the component to be rendered.
+ * 
+ * You can manage these slots using the `nube.render()` and `nube.clearSlot()` methods.
+ */
+slots: UISlots;
 
   /**
    * Stores values associated with specific UI components, typically form inputs.
@@ -276,13 +413,22 @@ type UIValues = Record<NubeComponentId, UIValue>;
 
 /**
  * Represents a UI slot where components can be dynamically injected.
+ * Includes slots for both checkout and storefront contexts.
  */
 type UISlot =
-  | "before_main_content" // Before the main checkout content
-  | "after_main_content" // After the main checkout content
-  | "after_line_items_price" // After the line items price in checkout
+  // Common UI Slots (available in both checkout and storefront)
+  | "before_main_content" // Before the main content
+  | "after_main_content" // After the main content
+  | "modal_content" // Content of a modal dialog
+  | "corner_top_left" // Top left corner of the page
+  | "corner_top_right" // Top right corner of the page
+  | "corner_bottom_left" // Bottom left corner of the page
+  | "corner_bottom_right" // Bottom right corner of the page
+  
+  // Checkout UI Slots
   | "before_line_items" // Before the list of items in the cart
   | "after_line_items" // After the list of items in the cart
+  | "after_line_items_price" // After the line items price in checkout
   | "after_contact_form" // After the contact form in checkout
   | "after_address_form" // After the address form in checkout
   | "after_billing_form" // After the billing form in checkout
@@ -293,11 +439,20 @@ type UISlot =
   | "before_contact_form" // Before the contact form in checkout
   | "before_shipping_form" // Before the shipping form in checkout
   | "after_shipping_form" // After the shipping form in checkout
-  | "corner_top_left" // Top left corner of the checkout
-  | "corner_top_right" // Top right corner of the checkout
-  | "corner_bottom_left" // Bottom left corner of the checkout
-  | "corner_bottom_right" // Bottom right corner of the checkout
-  | "modal_content"; // Content of a modal dialog in checkout
+  
+  // Storefront UI Slots
+  | "before_quick_buy_add_to_cart" // Before the quick buy add to cart button
+  | "before_product_detail_add_to_cart" // Before the product detail add to cart button
+  | "after_product_detail_add_to_cart" // After the product detail add to cart button
+  | "product_detail_image_top_left" // Top left corner of product detail images
+  | "product_detail_image_top_right" // Top right corner of product detail images
+  | "after_product_detail_name" // After the product name in product detail
+  | "after_product_grid_item_name" // After the product name in grid items
+  | "product_grid_item_image_top_right" // Top right corner of product grid item images
+  | "product_grid_item_image_top_left" // Top left corner of product grid item images
+  | "product_grid_item_image_bottom_right" // Bottom right corner of product grid item images
+  | "product_grid_item_image_bottom_left" // Bottom left corner of product grid item images
+  | "before_start_checkout_button"; // Before the start checkout button
 
 /**
  * Represents the value of a UI component, typically used for form inputs.
@@ -320,10 +475,10 @@ type Shipping = {
   selected: Nullable<string>;
 
   /** List of available shipping options. */
-  options: ShippingOption[];
+  options?: ShippingOption[];
 
   /** Custom labels assigned to shipping options. */
-  custom_labels: Record<string, string>;
+  custom_labels?: Record<string, string>;
 };
 
 type ShippingOption = {
@@ -435,6 +590,9 @@ This property may be null depending on the page it is accessed from.
 
 ```typescript
 type Customer = {
+  /** Unique identifier for the customer. */
+  id: Nullable<number>;
+
   /** Customer contact information. */
   contact: {
     /** Customer's email address. */
@@ -534,93 +692,83 @@ type BillingAddress = Address & {
 ```
 
 ### `payment: Nullable<Payment>`
-Information about the payment method, including type, status, and selected option.
+Information about the payment method, including status and selected option.
 This property may be null depending on the page it is accessed from.
 
 ```typescript
 type Payment = {
-  /** The selected payment method. */
-  method: string;
-
   /** The current status of the payment. */
-  status: PaymentStatus;
+  status: Nullable<PaymentStatus>;
 
-  /** The selected payment option details. */
-  selectedOption: Nullable<PaymentOption>;
+  /** The selected payment method details. */
+  selected: Nullable<SelectedPayment>;
 };
 
 /** Represents the possible payment statuses. */
-type PaymentStatus = 
-  | "pending"    // Payment is pending processing
-  | "processing" // Payment is being processed
-  | "approved"   // Payment was approved
-  | "rejected"   // Payment was rejected
-  | "failed"     // Payment failed
-  | "cancelled"; // Payment was cancelled
+type PaymentStatus =
+  | "pending"         // Payment is pending processing
+  | "paid"            // Payment was completed
+  | "voided"          // Payment was voided
+  | "open"            // Payment is open
+  | "abandoned"       // Payment was abandoned
+  | "authorized"      // Payment was authorized
+  | "refunded"        // Payment was refunded
+  | "recovered"       // Payment was recovered
+  | "partially_paid"; // Payment was partially paid
 
-/** Represents a payment option with its details. */
-type PaymentOption = {
-  /** Unique identifier for the payment option. */
-  id: string;
+/** Represents the selected payment method in checkout. */
+type SelectedPayment = {
+  /** Unique identifier for the payment method. */
+  id: Nullable<string>;
 
-  /** Name of the payment option. */
-  name: string;
+  /** Application ID associated with the payment provider. */
+  app_id: Nullable<number>;
 
-  /** Type of payment option (e.g., credit_card, bank_transfer). */
-  type: string;
+  /** Payment provider identifier. */
+  payment_provider_id: Nullable<string>;
 
-  /** Additional configuration for the payment option. */
-  config: {
-    /** Whether the payment option is enabled. */
-    enabled: boolean;
+  /** Name of the payment method. */
+  method_name: Nullable<string>;
 
-    /** Minimum amount allowed for this payment option. */
-    min_amount: Nullable<number>;
+  /** Type of payment. */
+  type: Nullable<string>;
 
-    /** Maximum amount allowed for this payment option. */
-    max_amount: Nullable<number>;
+  /** Method type. */
+  method_type: Nullable<string>;
 
-    /** List of supported currencies. */
-    currencies: string[];
+  /** Whether to bypass the payment gateway. */
+  bypass_gateway: Nullable<boolean>;
 
-    /** List of supported countries. */
-    countries: string[];
+  /** Whether to render the gateway name. */
+  render_gateway_name: Nullable<boolean>;
 
-    /** Whether the payment option requires a phone number. */
-    requires_phone: boolean;
+  /** Payment method identifier. */
+  method: Nullable<string>;
 
-    /** Whether the payment option requires a document number. */
-    requires_document: boolean;
+  /** Template for the payment method. */
+  template: Nullable<string>;
 
-    /** Whether the payment option requires a billing address. */
-    requires_billing_address: boolean;
-  };
+  /** Display name. */
+  name: Nullable<string>;
 
-  /** Additional payment option details. */
-  details: {
-    /** URL of the payment option's logo. */
-    logo_url: Nullable<string>;
+  /** Payment category. */
+  category: Nullable<string>;
 
-    /** Description of the payment option. */
-    description: Nullable<string>;
-
-    /** Terms and conditions of the payment option. */
-    terms_and_conditions: Nullable<string>;
-
-    /** Whether the payment option supports installments. */
-    supports_installments: boolean;
-
-    /** Maximum number of installments allowed. */
-    max_installments: Nullable<number>;
-
-    /** Minimum installment amount. */
-    min_installment_amount: Nullable<number>;
-
-    /** Interest rates for installments. */
-    installment_rates: Record<string, number>;
-  };
+  /** Whether billing address is required. */
+  billing_address: Nullable<boolean>;
 };
 ```
+
+### `eventPayload: Nullable<Record<string, unknown>>`
+Optional event payload data that may be available when certain events are triggered.
+
+This property contains additional context about specific events, such as product information 
+when a quick buy modal is opened or closed, or item details when cart operations succeed.
+
+```typescript
+type EventPayload = Nullable<Record<string, unknown>>;
+```
+
 ## Notes
 
 - Properties marked as `Nullable<T>` may be `null` depending on the context or page where they are accessed
@@ -628,3 +776,5 @@ type PaymentOption = {
 - The `location` property helps determine the current context of the application
 - All monetary values in the `cart` property are in the store's base currency
 - The state is immutable and can only be modified through the `send` method of `NubeSDK`
+- The `eventPayload` property is available in success events (e.g., `cart:add:success`, `quickbuy:open`)
+- `DeepPartial<T>` means all properties of type T and their nested properties are optional
