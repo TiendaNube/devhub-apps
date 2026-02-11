@@ -16,9 +16,9 @@ For the application to be published, there are two steps that must be carried ou
 * All these files, that is, the complete artifact, must be sent so that the team can begin validating the application.
 
 :::warning
-<br>
+
 **Attention:** the approval and publication phase only begins after all artifacts have been submitted.
-<br>
+
 :::
 
 ### Step 2: Filling in the application data

@@ -45,7 +45,7 @@ A Nuvemshop preparou um guia para otimizar sua descrição com palavras-chave (S
 1.  **Introdução:** Proposta de valor e diferencial.
 2.  **O que é o app:** Explicação direta do impacto no negócio do lojista.
 3.  **Como funciona:** Use bullet points. *Ex: Conecta sua loja a transportadoras nacionais.*
-    * As encomendas devem ter dimensões de até $80\text{ cm} \times 80\text{ cm} \times 80\text{ cm}$ e peso de até $30\text{ kg}$.
+    * As encomendas devem ter dimensões de até 80 cm x 80 cm x 80 cm e peso de até 30 kg.
 4.  **Funcionalidades:** Lista objetiva (Rastreamento, Etiquetas, e-mails automáticos).
 5.  **Vantagens:** Benefícios claros (Economia, Centralização logística).
 6.  **Planos e Preços:** Detalhe os valores e períodos de teste.
