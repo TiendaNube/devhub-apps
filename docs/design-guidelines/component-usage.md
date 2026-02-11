@@ -9,7 +9,7 @@ Os componentes Nimbus são elementos que possibilitam criar interfaces personali
 
 A atenção às atribuições dos componentes é crucial para preservar a consistência da experiência, tornando a navegação mais fácil para usuários já familiarizados com a Nuvemshop.
 
-[Consultar checklist de homologação](../homologation/checklist.md#uso-de-componentes-e-patterns---prioridade-alta)
+[Consultar checklist de homologação](../publication-apps/checklist.md#uso-de-componentes-e-patterns---prioridade-alta)
 
 ## Componentes atômicos e compostos
 

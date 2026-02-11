@@ -9,7 +9,7 @@ Las plantillas de diseño de Nimbus son herramientas valiosas para garantizar la
 
 La priorización en la adopción de estos modelos es fundamental para mantener la identidad de la marca y facilitar el proceso de homologación.
 
-[Consulte la checklist de homologación](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
+[Consulte la checklist de homologación](../publication-apps/checklist#uso-de-templates-nimbus---prioridade-alta)
 
 ## Página de estado vacío e inicial
 

@@ -7,7 +7,7 @@ title: Conceptos de UX/UI
 
 Los componentes Nimbus son elementos para crear interfaces personalizadas según sea necesario, cuando no hay un estándar disponible. Estos componentes mantienen la consistencia con los productos de Tiendanube y sus interfaces existentes. Es importante usar los componentes correctamente para garantizar una experiencia de navegación más fácil para los usuarios de Tiendanube.
 
-[Consultar checklist de homologación](../homologation/checklist.md#uso-de-conceptos-de-uxui---prioridad-media)
+[Consultar checklist de homologación](../publication-apps/checklist.md#uso-de-conceptos-de-uxui---prioridad-media)
 
 ## Priorización y organización de acciones y contenido
 
