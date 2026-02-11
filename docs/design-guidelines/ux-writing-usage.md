@@ -9,7 +9,7 @@ Levar em consideração as diretriz de UX Writing é fundamental na construção
 
 A redação de experiência do usuário, é mais do que apenas escolher palavras; é um meio de comunicar efetivamente a mensagem da marca, orientar os usuários e construir uma conexão significativa.
 
-[Consultar checklist de homologação](../homologation/checklist.md#uso-de-conceitos-de-ux-writing---prioridade-baixa)
+[Consultar checklist de homologação](../publication-apps/checklist.md#uso-de-conceitos-de-ux-writing---prioridade-baixa)
 
 ## Nomenclatura de apps e telas
 

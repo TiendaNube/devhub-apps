@@ -9,7 +9,7 @@ Los componentes de Nimbus son elementos que permiten crear interfaces personaliz
 
 Prestar atención a las asignaciones de los componentes es crucial para preservar la consistencia de la experiencia, lo que facilita la navegación para los usuarios que ya están familiarizados con Tiendanube.
 
-[Consultar la checklist de homologación](../homologation/checklist.md#uso-de-componentes-y-patrones---prioridad-alta)
+[Consultar la checklist de homologación](../publication-apps/checklist.md#uso-de-componentes-y-patrones---prioridad-alta)
 
 ## Componentes Atómicos y Compuestos
 

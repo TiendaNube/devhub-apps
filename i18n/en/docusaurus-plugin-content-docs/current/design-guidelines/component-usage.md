@@ -9,7 +9,7 @@ Nimbus components are elements that enable creating custom interfaces as needed 
 
 Paying attention to component assignments is crucial to preserve consistency of experience, making navigation easier for users already familiar with Nuvemshop.
 
-[Check the homologation checklist](../homologation/checklist.md#component-and-pattern-usage---high-priority)
+[Check the homologation checklist](../publication-apps/checklist.md#component-and-pattern-usage---high-priority)
 
 ## Atomic and Composite Components
 

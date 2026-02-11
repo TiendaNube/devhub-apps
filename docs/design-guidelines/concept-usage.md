@@ -7,7 +7,7 @@ title: Conceitos de UX/UI
 
 Os componentes Nimbus são elementos para criar interfaces personalizadas conforme necessário, quando não há um padrão disponível. Esses componentes mantêm a consistência com os produtos da Nuvemshop e suas interfaces existentes. É importante usar os componentes corretamente para garantir uma experiência de navegação mais fácil para os usuários da Nuvemshop.
 
-[Consultar checklist de homologação](../homologation/checklist.md#uso-de-conceitos-de-uxui---prioridade-média)
+[Consultar checklist de homologação](../publication-apps/checklist.md#uso-de-conceitos-de-uxui---prioridade-média)
 
 ## Priorização e organização de ações e conteúdos
 

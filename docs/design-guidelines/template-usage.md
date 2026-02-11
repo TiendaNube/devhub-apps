@@ -9,7 +9,7 @@ Os templates Nimbus são ferramentas valiosas para garantir consistência visual
 
 A priorização na adoção desses modelos é fundamental para manter a identidade da marca e facilitar o processo de homologação.
 
-[Consultar checklist de homologação](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
+[Consultar checklist de homologação](../publication-apps/checklist#uso-de-templates-nimbus---prioridade-alta)
 
 ## Página de estado vazio e inicial
 
