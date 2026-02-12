@@ -6,8 +6,8 @@ title: UI, Session & Event Payload
 
 Represents UI-related state, including dynamically injected components and their values.
 
-| Property | Type                                               | Required | Description                                                                                                                           |
-| -------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Property | Type                                               | Always present | Description                                                                                                                           |
+| -------------- | -------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `slots`  | Partial&lt;Record&lt;UISlot, NubeComponent&gt;&gt; | Yes      | Map of slot names to components. Manage with `nube.render()` and `nube.clearSlot()`. See [UI Slots](../slots/overview) for slot names. |
 | `values` | Record&lt;string, string&gt;                       | Yes      | Values for UI components (e.g. form inputs). Managed internally by the SDK; modifying directly may cause unexpected behavior.         |
 
@@ -25,8 +25,8 @@ This property contains additional context about specific events, such as product
 
 Session information, including the session identifier.
 
-| Property | Type           | Required | Description                        |
-| -------- | -------------- | -------- | ---------------------------------- |
+| Property | Type           | Always present | Description                        |
+| -------------- | -------------- | -------------- | ---------------------------------- |
 | `id`     | string or null | No       | Unique identifier for the session. |
 
 For the exact TypeScript definition, use `Session` from `@tiendanube/nube-sdk-types`.

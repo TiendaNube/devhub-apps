@@ -6,8 +6,8 @@ title: Location
 
 The user's current location within the application, including the page type and URL. Each key in `queries` is a query parameter name; each value is that parameter's value.
 
-| Property  | Type                         | Required | Description                                    |
-| --------- | ---------------------------- | -------- | ---------------------------------------------- |
+| Property  | Type                         | Always present | Description                                    |
+| --------- | ---------------------------- | -------------- | ---------------------------------------------- |
 | `url`     | string                       | Yes      | The current URL of the application.            |
 | `page`    | Page                         | Yes      | The current page type and its associated data. |
 | `queries` | Record&lt;string, string&gt; | Yes      | Query parameters extracted from the URL.       |
@@ -27,30 +27,30 @@ The user's current location within the application, including the page type and 
 
 **Checkout** (`page.data` when `page.type === "checkout"`):
 
-| Property | Type   | Required | Description                             |
-| -------- | ------ | -------- | --------------------------------------- |
+| Property | Type   | Always present | Description                             |
+| -------------- | ------ | -------------- | --------------------------------------- |
 | `step`   | string | Yes      | `"start"`, `"payment"`, or `"success"`. |
 
 **Home** (`page.data` when `page.type === "home"`): `undefined` or an object with optional `sections` (see WithSections).
 
 **ProductPageData** (`page.data` when `page.type === "product"`):
 
-| Property   | Type                       | Required | Description               |
-| ---------- | -------------------------- | -------- | ------------------------- |
+| Property   | Type                       | Always present | Description               |
+| ---------- | -------------------------- | -------------- | ------------------------- |
 | `product`  | ProductDetails             | Yes      | The product being viewed. |
 | `sections` | Section&lt;"product"&gt;[] | No       | Optional sections.        |
 
 **Category** (used when `page.type === "category"` or `"products"`):
 
-| Property | Type   | Required | Description                                    |
-| -------- | ------ | -------- | ---------------------------------------------- |
+| Property | Type   | Always present | Description                                    |
+| -------------- | ------ | -------------- | ---------------------------------------------- |
 | `id`     | number | Yes      | Category id (0 for "products" = all products). |
 | `name`   | string | Yes      | Category name.                                 |
 
 **Search** (`page.data` when `page.type === "search"`):
 
-| Property | Type   | Required | Description          |
-| -------- | ------ | -------- | -------------------- |
+| Property | Type   | Always present | Description          |
+| -------------- | ------ | -------------- | -------------------- |
 | `q`      | string | Yes      | Search query string. |
 
 **WithProductList** (category and search pages may include): optional `products?: ProductDetails[]`.
@@ -59,8 +59,8 @@ The user's current location within the application, including the page type and 
 
 **CustomPageData** (`page.data` when `page.type === "custom_page"`):
 
-| Property | Type   | Required | Description       |
-| -------- | ------ | -------- | ----------------- |
+| Property | Type   | Always present | Description       |
+| -------------- | ------ | -------------- | ----------------- |
 | `name`   | string | Yes      | Custom page name. |
 
 For the exact TypeScript definitions (including `Page`, `AppLocation`, `ProductDetails`, `Section`, `Account`, and all page data types), use the types from `@tiendanube/nube-sdk-types`.

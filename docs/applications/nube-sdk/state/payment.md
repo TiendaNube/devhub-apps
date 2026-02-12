@@ -7,8 +7,8 @@ title: Payment
 Information about the payment method, including status and selected option.
 This property may be null depending on the page it is accessed from.
 
-| Property   | Type                    | Required | Description                      |
-| ---------- | ----------------------- | -------- | -------------------------------- |
+| Property   | Type                    | Always present | Description                      |
+| ---------- | ----------------------- | -------------- | -------------------------------- |
 | `status`   | PaymentStatus or null   | No       | Current status of the payment.   |
 | `selected` | SelectedPayment or null | No       | Selected payment method details. |
 
@@ -16,8 +16,8 @@ This property may be null depending on the page it is accessed from.
 
 **SelectedPayment** (`payment.selected`):
 
-| Property              | Type            | Required | Description                                          |
-| --------------------- | --------------- | -------- | ---------------------------------------------------- |
+| Property              | Type            | Always present | Description                                          |
+| --------------------- | --------------- | -------------- | ---------------------------------------------------- |
 | `id`                  | string or null  | No       | Unique identifier for the payment method.            |
 | `app_id`              | number or null  | No       | Application ID associated with the payment provider. |
 | `payment_provider_id` | string or null  | No       | Payment provider identifier.                         |

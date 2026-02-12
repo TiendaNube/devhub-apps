@@ -90,6 +90,10 @@ const sidebars = {
 					{
 						type: "category",
 						label: "Components",
+						link: {
+							type: "doc",
+							id: "applications/nube-sdk/components/overview",
+						},
 						items: [
 							"applications/nube-sdk/components/accordion",
 							"applications/nube-sdk/components/box",
@@ -101,7 +105,6 @@ const sidebars = {
 							"applications/nube-sdk/components/image",
 							"applications/nube-sdk/components/icon",
 							"applications/nube-sdk/components/iframe",
-							"applications/nube-sdk/components/overview",
 							"applications/nube-sdk/components/row",
 							"applications/nube-sdk/components/select",
 							"applications/nube-sdk/components/sidescroll",
@@ -116,8 +119,11 @@ const sidebars = {
 				{
 					type: "category",
 					label: "UI Slots",
+					link: {
+						type: "doc",
+						id: "applications/nube-sdk/slots/overview",
+					},
 					items: [
-						"applications/nube-sdk/slots/overview",
 						"applications/nube-sdk/slots/checkout-slots",
 						"applications/nube-sdk/slots/storefront-slots",
 					],
@@ -125,8 +131,11 @@ const sidebars = {
 				{
 					type: "category",
 					label: "Examples",
+					link: {
+						type: "doc",
+						id: "applications/nube-sdk/examples/overview",
+					},
 					items: [
-						"applications/nube-sdk/examples/overview",
 						{
 							type: "category",
 							label: "Common Patterns",
@@ -227,8 +236,11 @@ const sidebars = {
 			{
 				type: "category",
 				label: "Components",
+				link: {
+					type: "doc",
+					id: "applications/nube-sdk/components/overview",
+				},
 				items: [
-					"applications/nube-sdk/components/overview",
 					"applications/nube-sdk/components/accordion",
 						"applications/nube-sdk/components/box",
 						"applications/nube-sdk/components/button",
@@ -251,20 +263,26 @@ const sidebars = {
 						"applications/nube-sdk/components/toast",
 					],
 				},
-			{
-				type: "category",
-				label: "UI Slots",
-				items: [
-					"applications/nube-sdk/slots/overview",
-					"applications/nube-sdk/slots/checkout-slots",
-					"applications/nube-sdk/slots/storefront-slots",
-				],
+		{
+			type: "category",
+			label: "UI Slots",
+			link: {
+				type: "doc",
+				id: "applications/nube-sdk/slots/overview",
 			},
+			items: [
+				"applications/nube-sdk/slots/checkout-slots",
+				"applications/nube-sdk/slots/storefront-slots",
+			],
+		},
 	{
 		type: "category",
 		label: "Examples",
+		link: {
+			type: "doc",
+			id: "applications/nube-sdk/examples/overview",
+		},
 		items: [
-			"applications/nube-sdk/examples/overview",
 			{
 		type: "category",
 		label: "Common Patterns",

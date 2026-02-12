@@ -7,16 +7,16 @@ title: Shipping
 Information about shipping, such as available options, selected option and custom labels.
 This property may be null depending on the page it is accessed from.
 
-| Property        | Type                         | Required | Description                                 |
-| --------------- | ---------------------------- | -------- | ------------------------------------------- |
+| Property        | Type                         | Always present | Description                                 |
+| --------------- | ---------------------------- | -------------- | ------------------------------------------- |
 | `selected`      | string or null               | No       | Selected shipping option ID.                |
 | `options`       | ShippingOption[]             | No       | List of available shipping options.         |
 | `custom_labels` | Record&lt;string, string&gt; | No       | Custom labels assigned to shipping options. |
 
 **ShippingOption** (each element of `shipping.options`):
 
-| Property                 | Type           | Required | Description                                                                   |
-| ------------------------ | -------------- | -------- | ----------------------------------------------------------------------------- |
+| Property                 | Type           | Always present | Description                                                                   |
+| ------------------------ | -------------- | -------------- | ----------------------------------------------------------------------------- |
 | `id`                     | string         | Yes      | Unique identifier for the shipping option.                                    |
 | `original_name`          | string or null | No       | Original name of the shipping option.                                         |
 | `name`                   | string or null | No       | Display name of the shipping option.                                          |
