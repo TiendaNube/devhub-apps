@@ -133,7 +133,7 @@ jobs:
       - <<: *fast-checkout
       - aws-cli/setup:
           role_arn: *aws-role-arn
-          region: AWS_REGION_STAGING
+          region: ${AWS_REGION_STAGING}
       - run:
           name: Send files to S3
           command: aws s3 sync  << parameters.dir_build >> << parameters.s3_bucket >>
@@ -156,7 +156,7 @@ workflows:
             <<: *filter-production
       - build:
           name: build-pt
-          context: lightspeed-context
+          context: extensibility-context
           requires:
             - checkout
           filters:
@@ -168,7 +168,7 @@ workflows:
           default_locale: pt
       - build:
           name: build-es
-          context: lightspeed-context
+          context: extensibility-context
           requires:
             - checkout
           filters:
@@ -183,7 +183,7 @@ workflows:
           cloudfront_id: ${CLOUDFRONT_PROD_ID_PT}
           s3_bucket: ${S3_PROD_PT}
           dir_build: build-pt/
-          context: lightspeed-context
+          context: extensibility-context
           requires:
             - build-pt
           filters:
@@ -193,7 +193,7 @@ workflows:
           cloudfront_id: ${CLOUDFRONT_PROD_ID_ES}
           s3_bucket: ${S3_PROD_ES}
           dir_build: build-es/
-          context: lightspeed-context
+          context: extensibility-context
           requires:
             - build-es
           filters:
