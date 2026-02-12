@@ -2,7 +2,7 @@
 title: Payment
 ---
 
-### `payment: Nullable<Payment>`
+## `payment: Nullable<Payment>`
 
 Information about the payment method, including status and selected option.
 This property may be null depending on the page it is accessed from.

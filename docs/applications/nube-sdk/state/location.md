@@ -2,7 +2,7 @@
 title: Location
 ---
 
-### `location: AppLocation`
+## `location: AppLocation`
 
 The user's current location within the application, including the page type and URL. Each key in `queries` is a query parameter name; each value is that parameter's value.
 

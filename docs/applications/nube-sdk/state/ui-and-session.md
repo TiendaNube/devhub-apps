@@ -2,7 +2,7 @@
 title: UI, Session & Event Payload
 ---
 
-### `ui: UI`
+## `ui: UI`
 
 Represents UI-related state, including dynamically injected components and their values.
 
@@ -15,13 +15,13 @@ Slot names (`UISlot`) include common slots (e.g. `before_main_content`, `modal_c
 
 For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `UI`, `UISlots`, `UISlot`).
 
-### `eventPayload: Nullable<Record<string, unknown>>`
+## `eventPayload: Nullable<Record<string, unknown>>`
 
 Optional event payload data that may be available when certain events are triggered.
 
 This property contains additional context about specific events, such as product information when a quick buy modal is opened or closed, or item details when cart operations succeed. Type: `Record<string, unknown> | null`.
 
-### `session: Session`
+## `session: Session`
 
 Session information, including the session identifier.
 

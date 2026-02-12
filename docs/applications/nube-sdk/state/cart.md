@@ -2,7 +2,7 @@
 title: Cart
 ---
 
-### `cart: Cart`
+## `cart: Cart`
 
 The current cart state, containing products, pricing, and validation status.
 
@@ -13,7 +13,7 @@ The current cart state, containing products, pricing, and validation status.
 | `items`           | CartItem[]                | Yes      | List of items currently in the cart.     |
 | `prices`          | Prices                    | Yes      | Breakdown of the cart's pricing details. |
 | `coupon`          | DeepPartial&lt;Coupon&gt; | No       | Optional coupon applied to the cart.     |
-| `is_subscription` | boolean                   | Yes      | Indicates if the cart is a subscription. |
+| `is_subscription` | boolean                   | Yes      | Indicates if the cart is a subscription. Only available on **checkout**. |
 
 **CartItem** (each element of `cart.items`):
 

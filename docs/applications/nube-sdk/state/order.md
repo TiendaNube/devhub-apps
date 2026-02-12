@@ -2,10 +2,10 @@
 title: Order
 ---
 
-### `order?: Order`
+## `order?: Order`
 
 The current order state, containing order status and tracking statuses.
-This property is only available on the checkout `success` page after the order has been completed, and will be `null` on all other pages.
+This property is only available on the checkout `success` page after the order has been completed, and will be `undefined` on all other pages.
 
 | Property            | Type                                      | Required | Description                     |
 | ------------------- | ----------------------------------------- | -------- | ------------------------------- |

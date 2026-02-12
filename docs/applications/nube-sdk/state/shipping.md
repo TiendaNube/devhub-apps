@@ -2,7 +2,7 @@
 title: Shipping
 ---
 
-### `shipping: Nullable<Shipping>`
+## `shipping: Nullable<Shipping>`
 
 Information about shipping, such as available options, selected option and custom labels.
 This property may be null depending on the page it is accessed from.

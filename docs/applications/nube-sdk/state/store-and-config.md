@@ -2,7 +2,7 @@
 title: Store, Device & Config
 ---
 
-### `store: Store`
+## `store: Store`
 
 Information about the current store, such as its domain, currency, and language.
 
@@ -16,7 +16,7 @@ Information about the current store, such as its domain, currency, and language.
 
 For the exact TypeScript definition, use `Store` from `@tiendanube/nube-sdk-types`.
 
-### `device: Device`
+## `device: Device`
 
 Information about the device being used to access the application, including screen dimensions and device type.
 
@@ -38,7 +38,7 @@ Information about the device being used to access the application, including scr
 
 For the exact TypeScript definitions, use the types from `@tiendanube/nube-sdk-types` (e.g. `Device`, `DeviceScreen`).
 
-### `config: AppConfig`
+## `config: AppConfig`
 
 Application-wide configuration settings, including cart validation rules.
 

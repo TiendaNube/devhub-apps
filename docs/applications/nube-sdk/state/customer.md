@@ -2,7 +2,7 @@
 title: Customer
 ---
 
-### `customer: Nullable<Customer>`
+## `customer: Nullable<Customer>`
 
 Details about the customer, including identification, contact information, and address.
 This property may be null depending on the page it is accessed from.
