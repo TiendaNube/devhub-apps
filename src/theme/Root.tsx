@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
 import { ThemeProvider } from "@nimbus-ds/styles";
-import { Box } from "@nimbus-ds/components";
 
 interface IDarkModeContext {
   darkMode: boolean;

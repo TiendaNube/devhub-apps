@@ -10,21 +10,44 @@ It's commonly used to organize information into manageable sections, improving t
 
 The accordion is a compound component composed of `Root`, `Item`, `Header`, and `Content` subcomponents.
 
+![Accordion Collapsed](../../../../static/img/pt/nube-sdk-ui-accordion-1.png "Accordion Collapsed")
+
+![Accordion Expanded](../../../../static/img/pt/nube-sdk-ui-accordion-2.png "Accordion Expanded")
+
 ### Usage
 
 ```typescript title="Example"
-import { Accordion } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Accordion, Text } from "@tiendanube/nube-sdk-jsx";
 
-<Accordion.Root defaultValue="item-1" style={{ backgroundColor: "red" }}>
-  <Accordion.Item value="item-1">
-    <Accordion.Header showIcon>Accordion Item 1</Accordion.Header>
-    <Accordion.Content>Accordion Content 1</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item value="item-2">
-    <Accordion.Header>Accordion Item 2</Accordion.Header>
-    <Accordion.Content>Accordion Content 2</Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>;
+function MyComponent() {
+  return (
+    <Accordion.Root defaultValue="shipping-info">
+      <Accordion.Item value="shipping-info">
+        <Accordion.Header showIcon>Shipping Information</Accordion.Header>
+        <Accordion.Content>
+          <Text>Free shipping on orders over $50</Text>
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item value="return-policy">
+        <Accordion.Header showIcon>Return Policy</Accordion.Header>
+        <Accordion.Content>
+          <Text>30-day return policy for all items</Text>
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
+  );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
+}
 ```
 
 ## Subcomponents
@@ -33,38 +56,39 @@ import { Accordion } from "@tiendanube/nube-sdk-jsx";
 
 The root container that manages the accordion state.
 
-| Property     | Type                  | Required | Description                                          |
-| ------------ | --------------------- | -------- | ---------------------------------------------------- |
-| children     | NubeChildrenComponent | No       | Accordion items to be rendered.                      |
-| defaultValue | string                | No       | Default expanded item value.                         |
-| style        | StyleSheet            | No       | Custom styles for the accordion root.                |
-| id           | string                | No       | Optional unique identifier for the component.        |
+| Property     | Type                  | Required | Description                                   |
+| ------------ | --------------------- | -------- | --------------------------------------------- |
+| children     | NubeChildrenComponent | No       | Accordion items to be rendered.               |
+| defaultValue | string                | No       | Default expanded item value.                  |
+| style        | StyleSheet            | No       | Custom styles for the accordion root.         |
+| id           | string                | No       | Optional unique identifier for the component. |
 
 ### Accordion.Item
 
 Individual accordion item container.
 
-| Property | Type                  | Required | Description                                          |
-| -------- | --------------------- | -------- | ---------------------------------------------------- |
-| children | NubeChildrenComponent | No       | Header and content components.                       |
-| id       | string                | No       | Optional unique identifier for the component.        |
-| style    | StyleSheet            | No       | Custom styles for the accordion item.                |
+| Property | Type                  | Required | Description                                   |
+| -------- | --------------------- | -------- | --------------------------------------------- |
+| children | NubeChildrenComponent | No       | Header and content components.                |
+| value    | string                | Yes      | Unique value to identify the accordion item.  |
+| id       | string                | No       | Optional unique identifier for the component. |
+| style    | StyleSheet            | No       | Custom styles for the accordion item.         |
 
 ### Accordion.Header
 
 The clickable header that toggles the accordion item.
 
-| Property | Type                  | Required | Description                                          |
-| -------- | --------------------- | -------- | ---------------------------------------------------- |
-| children | string                | No       | Text content of the header.                          |
-| showIcon | boolean               | No       | Whether to show expand/collapse icon.                |
-| style    | StyleSheet            | No       | Custom styles for the header.                        |
+| Property | Type       | Required | Description                            |
+| -------- | ---------- | -------- | -------------------------------------- |
+| children | string     | No       | Text content of the header.            |
+| showIcon | boolean    | No       | Whether to show expand/collapse icon.  |
+| style    | StyleSheet | No       | Custom styles for the header.          |
 
 ### Accordion.Content
 
 The collapsible content area of the accordion item.
 
-| Property | Type                  | Required | Description                                          |
-| -------- | --------------------- | -------- | ---------------------------------------------------- |
-| children | NubeChildrenComponent | No       | Content to be displayed when item is expanded.       |
-| style    | StyleSheet            | No       | Custom styles for the content area.                  |
+| Property | Type                  | Required | Description                                    |
+| -------- | --------------------- | -------- | ---------------------------------------------- |
+| children | NubeChildrenComponent | No       | Content to be displayed when item is expanded. |
+| style    | StyleSheet            | No       | Custom styles for the content area.            |

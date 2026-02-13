@@ -422,33 +422,96 @@ The theme system provides design tokens and CSS variables that automatically ada
 ```typescript
 import { theme } from "@tiendanube/nube-sdk-ui";
 
-// Colors
-theme.color.accent           // Primary accent color
-theme.color.main.foreground  // Main text color
-theme.color.main.background  // Main background color
+// Base Colors
+theme.color.accent                  // Primary accent color
+theme.color.main.foreground         // Main text color
+theme.color.main.background         // Main background color
+
+// Status Colors
+theme.color.success.light           // Success light variant
+theme.color.success.medium          // Success medium variant
+theme.color.success.dark            // Success dark variant
+
+theme.color.warning.light           // Warning light variant
+theme.color.warning.medium          // Warning medium variant
+theme.color.warning.dark            // Warning dark variant
+
+theme.color.danger.light            // Danger light variant
+theme.color.danger.medium           // Danger medium variant
+theme.color.danger.dark             // Danger dark variant
+
+theme.color.info.light              // Info light variant
+theme.color.info.medium             // Info medium variant
+theme.color.info.dark               // Info dark variant
+
+theme.color.neutral.light           // Neutral light variant
+theme.color.neutral.medium          // Neutral medium variant
+theme.color.neutral.dark            // Neutral dark variant
+
+// Text Colors
+theme.color.text.high               // High contrast text color
+theme.color.text.medium             // Medium contrast text color
+theme.color.text.low                // Low contrast text color
+
+// Typography
+theme.typography.body.font          // Body font family
+theme.typography.body.fontSize      // Body font size
+theme.typography.body.lineHeight    // Body line height
+
+theme.typography.xl.fontSize        // Extra large font size
+theme.typography.xl.lineHeight      // Extra large line height
+
+theme.typography.lg.fontSize        // Large font size
+theme.typography.lg.lineHeight      // Large line height
+
+theme.typography.base.fontSize      // Base font size
+theme.typography.base.lineHeight    // Base line height
+
+theme.typography.md.fontSize        // Medium font size
+theme.typography.md.lineHeight      // Medium line height
+
+theme.typography.sm.fontSize        // Small font size
+theme.typography.sm.lineHeight      // Small line height
+
+theme.typography.xs.fontSize        // Extra small font size
+theme.typography.xs.lineHeight      // Extra small line height
 
 // Borders
-theme.border.color           // Default border color
-theme.border.radius          // Default border radius
+theme.border.color                  // Default border color
+theme.border.radius                 // Default border radius
+
+theme.box.border.color              // Box border color
+theme.box.border.radius             // Box border radius
 
 // Component-specific tokens
-theme.button.foreground      // Button text color
-theme.button.background      // Button background color
-theme.button.borderColor     // Button border color
-theme.button.borderRadius    // Button border radius
+theme.button.foreground             // Button text color
+theme.button.background             // Button background color
+theme.button.border.color           // Button border color
+theme.button.border.radius          // Button border radius
+theme.button.border.width           // Button border width
 
-theme.input.border.color     // Input border color
+theme.label.foreground              // Label text color
+theme.label.background              // Label background color
 
-theme.header.foreground      // Header text color
-theme.header.background      // Header background color
-theme.header.logo.maxWidth   // Header logo max width
-theme.header.logo.fontSize   // Header logo font size
+theme.input.border.color            // Input border color
 
-theme.footer.foreground      // Footer text color
-theme.footer.background      // Footer background color
+theme.header.foreground             // Header text color
+theme.header.background             // Header background color
+theme.header.logo.maxWidth          // Header logo max width
+theme.header.logo.maxHeight         // Header logo max height
+theme.header.logo.font              // Header logo font family
+theme.header.logo.fontSize          // Header logo font size
+theme.header.logo.fontWeight        // Header logo font weight
+theme.header.logo.textTransform     // Header logo text transform
+theme.header.logo.letterSpacing     // Header logo letter spacing
 
-theme.heading.font           // Heading font family
-theme.heading.fontWeight     // Heading font weight
+theme.footer.foreground             // Footer text color
+theme.footer.background             // Footer background color
+
+theme.heading.font                  // Heading font family
+theme.heading.fontWeight            // Heading font weight
+theme.heading.textTransform         // Heading text transform
+theme.heading.letterSpacing         // Heading letter spacing
 ```
 
 ### Using Theme Colors
@@ -470,7 +533,7 @@ const styles = StyleSheet.create({
 
 ### Theme Color Opacity
 
-You can create transparent versions of theme colors using predefined opacity values:
+You can create transparent versions of theme base colors using predefined opacity values:
 
 ```typescript
 import { theme } from "@tiendanube/nube-sdk-ui";
@@ -483,7 +546,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.color.main.background.opacity(10), // 10% opacity
   },
   transparent: {
-    backgroundColor: theme.color.accent.opacity(0), // 0% opacity
+    backgroundColor: theme.color.main.foreground.opacity(0), // 0% opacity
   },
 });
 ```

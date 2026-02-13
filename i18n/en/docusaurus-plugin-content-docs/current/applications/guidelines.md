@@ -154,8 +154,7 @@ An embedded app uses app extensions and libraries so that merchants can access i
 ## 9. Instructions for App Homologation
 In this section, you must provide detailed instructions on how to test your app during the review.
 - Provide login credentials if your app integrates with third-party platforms.
-- Include a screencast that demonstrates the configuration process and all app functionalities, with step-by-step instructions. The language appropriate for your target market or include subtitles in that language.
-
+- Include a screencast that demonstrates the configuration process and all app functionalities, with step-by-step instructions, in the language appropriate for your target market or with subtitles in that language.
 
 ## 10. App Homologation and Review Policy
 This section establishes the rules and procedures governing the app analysis and approval process, ensuring the integrity and efficiency of the homologation queue. This includes the specification of the points to be reviewed, detailed in a checklist for ERP, Shipping, and Payments apps, ensuring the integrity and efficiency of the homologation queue.

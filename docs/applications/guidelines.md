@@ -20,7 +20,7 @@ Alguns tipos de apps não são permitidos na loja de aplicativos da Nuvemshop e 
 
 #### Tipos de Apps Proibidos:
 - **Apps que não utilizam as APIs da Nuvemshop:** Apps que não utilizam as APIs públicas da Nuvemshop não são permitidos. Os lojistas não devem ser obrigados a configurar apps customizados como parte da funcionalidade do app.
-- **Apps que falsificam dados:** Apps não devem violar o Termos e Condições Gerais do Programa de Parceiros da Nuvemshop. Seu app deve usar apenas informações verdadeiras em pop-ups e notificações.
+- **Apps que falsificam dados:** Apps não devem violar os Termos e Condições Gerais do Programa de Parceiros da Nuvemshop. Seu app deve usar apenas informações verdadeiras em pop-ups e notificações.
 - **Apps que processam pagamentos fora do checkout da Nuvemshop:** A Nuvemshop não pode garantir a segurança de um pedido processado por um checkout externo. Apps que ignoram o checkout ou processamento de pagamentos são proibidos.
 - **Múltiplos apps com funcionalidades duplicadas:** Um app não pode ser idêntico a outro app que você já publicou.
 - **Apps que principalmente compartilham dados de lojistas:** Apps que compartilham dados de lojistas com terceiros precisam de consentimento prévio por escrito da Nuvemshop e devem cumprir com os Termos da API. É importante que siga a diretriz de privacidade.

@@ -19,6 +19,9 @@ A vertical container that aligns child components in a column. It inherits all c
 ### [Fragment](/docs/applications/nube-sdk/components/fragment)
 A utility component that serves as a logical grouping element, allowing multiple components to be wrapped together without introducing an additional DOM node.
 
+### [SideScroll](/docs/applications/nube-sdk/components/sidescroll)
+A horizontal scrollable container for displaying content in a row. Useful for creating carousels, image galleries, or any horizontal list of items that may overflow the available width.
+
 ## Form Components
 
 ### [Field](/docs/applications/nube-sdk/components/field)
@@ -41,11 +44,17 @@ A component for rendering text with optional styling, supporting properties like
 ### [Link](/docs/applications/nube-sdk/components/link)
 A component for rendering clickable hyperlinks that navigate users to different URLs, with support for target options and custom styling.
 
+### [Markdown](/docs/applications/nube-sdk/components/markdown)
+A component for rendering markdown content safely, with support for basic formatting (headers, bold, italic, links, images, lists, inline code) and links rendered as the Link component.
+
 ### [Image](/docs/applications/nube-sdk/components/image)
 A component for displaying images with support for responsive sources, alternative text, and various sizing options.
 
 ### [Icon](/docs/applications/nube-sdk/components/icon)
 A component for displaying icons from the **[Nimbus Icons](https://nimbus.nuvemshop.com.br/documentation/resources/nimbus-icons)** library, supporting customizable size and color properties.
+
+### [Iframe](/docs/applications/nube-sdk/components/iframe)
+A component that allows you to embed external web content directly into your application's UI, creating an inline frame that loads content from a specified URL.
 
 ### [SVG](/docs/applications/nube-sdk/components/svg)
 A component for creating scalable vector graphics within your NubeSDK application, providing comprehensive SVG elements including Root, Circle, Text, and other common SVG shapes.
@@ -54,6 +63,9 @@ A component for creating scalable vector graphics within your NubeSDK applicatio
 
 ### [Accordion](/docs/applications/nube-sdk/components/accordion)
 A collapsible content component that allows users to expand and collapse sections of content, improving the user experience by reducing visual clutter.
+
+### [Progress](/docs/applications/nube-sdk/components/progress)
+A visual indicator component that displays the completion status of a task or operation, supporting configurable value and maximum properties.
 
 ### [Toast](/docs/applications/nube-sdk/components/toast)
 A non-disruptive message component that appears temporarily to provide quick feedback to users, supporting multiple variants and customizable duration.

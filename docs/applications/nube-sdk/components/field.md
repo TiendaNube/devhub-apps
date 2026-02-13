@@ -12,31 +12,32 @@ It supports properties like `name`, `label`, and event handlers (`onChange`, `on
 
 ### Usage
 
-```tsx [JSX]
+```tsx title="Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Field } from "@tiendanube/nube-sdk-jsx";
 
-<Field
-  name="email"
-  label="Email"
-  onChange={() => {}}
-  onBlur={() => {}}
-  onFocus={() => {}}
-/>;
+function MyComponent() {
+  return (
+    <Field
+      name="email"
+      label="Email"
+      onChange={() => {}}
+      onBlur={() => {}}
+      onFocus={() => {}}
+    />
+  );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
+}
 ```
-
-### Properties
-
-| Property | Type                           | Required | Description                                                        |
-| -------- | ------------------------------ | -------- | -------------------------------------------------------------------|
-| name     | string                         | Yes      | The name of the field, used to identify it in forms.               |
-| label    | string                         | Yes      | The label text displayed above the field.                          |
-| value    | string                         | No       | The current value of the field input.                              |
-| mask     | string                         | No       | Format mask for the field input (e.g., "000.000.000-00" for CPF).  |
-| style    | StyleSheet                     | No       | Custom styles for the field.                                       |
-| autoFocus| boolean                        | No       | Whether the field should automatically receive focus when mounted. |
-| onChange | NubeComponentFieldEventHandler | No       | Function called when the field value changes.                      |
-| onBlur   | NubeComponentFieldEventHandler | No       | Function called when the field loses focus.                        |
-| onFocus  | NubeComponentFieldEventHandler | No       | Function called when the field receives focus.                     |
 
 ### Event Handlers
 
@@ -61,4 +62,62 @@ onFocus: (data: {
   value?: string;       // The current value of the field
 }) => void
 ```
+
+Example usage:
+
+```tsx title="Field with onChange handler"
+import type {
+  NubeSDK,
+  NubeComponentFieldEventHandler,
+} from "@tiendanube/nube-sdk-types";
+import { Field, Box, Text } from "@tiendanube/nube-sdk-jsx";
+
+function MyComponent(nube: NubeSDK) {
+  // Typed event handler for field
+  const handleChange: NubeComponentFieldEventHandler = (event) => {
+    // event.type is "change"
+    // event.value is string (current field value)
+    // event.state is the full NubeSDKState
+    const fieldValue = event.value ?? "";
+
+    console.log("Field value:", fieldValue);
+  };
+
+  return (
+    <Box direction="col" gap={12}>
+      <Text modifiers={["bold"]}>Contact Information</Text>
+
+      <Field
+        name="email"
+        label="Email Address"
+        onChange={handleChange}
+      />
+    </Box>
+  );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: MyComponent(nube),
+      },
+    },
+  }));
+}
+```
+
+### Properties
+
+| Property | Type                           | Required | Description                                                        |
+| -------- | ------------------------------ | -------- | -------------------------------------------------------------------|
+| name     | string                         | Yes      | The name of the field, used to identify it in forms.               |
+| label    | string                         | Yes      | The label text displayed above the field.                          |
+| value    | string                         | No       | The current value of the field input.                              |
+| mask     | string                         | No       | Format mask for the field input (e.g., "000.000.000-00" for CPF).  |
+| style    | StyleSheet                     | No       | Custom styles for the field.                                       |
+| autoFocus| boolean                        | No       | Whether the field should automatically receive focus when mounted. |
+| onChange | NubeComponentFieldEventHandler | No       | Function called when the field value changes.                      |
+| onBlur   | NubeComponentFieldEventHandler | No       | Function called when the field loses focus.                        |
+| onFocus  | NubeComponentFieldEventHandler | No       | Function called when the field receives focus.                     |
 

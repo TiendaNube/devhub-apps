@@ -136,7 +136,7 @@ Después de la sumisión, usted debe ofrecer soporte a los merchants que usan su
 
 - Usted debe tener una dirección de correo electrónico que los comerciantes puedan usar para ponerse en contacto con usted.
 - La información de contacto de soporte debe ser fácil de encontrar e incluir instrucciones claras y específicas sobre cómo su app se integra con Tiendanube.
-- **Soporte Multilingüe:** Es obligatorio (y, consecuentemente, va a aportar calidad de la app para el merchant) que el soporte contemple el idioma del país donde la app será disponibilizada. Por ejemplo: Una app desarrollada en Brasil, pero que será disponibilizada en Argentina, es importante tener soporte en español.
+- **Soporte Multilingüe:** Es obligatorio (y, consecuentemente, va a aportar calidad a la app para el merchant) que el soporte contemple el idioma del país donde la app será disponibilizada. Por ejemplo: Una app desarrollada en Brasil, pero que será disponibilizada en Argentina, es importante tener soporte en español.
 
 
 ## 8. Requisitos Específicos para Ciertas Configuraciones de Apps

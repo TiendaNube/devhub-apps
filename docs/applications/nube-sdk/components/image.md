@@ -5,49 +5,97 @@ title: Image
 import { Alert, Text, Box } from '@nimbus-ds/components';
 import AppTypes from '@site/src/components/AppTypes';
 
-We support multiple UI components built in JSX, some of which support nesting, to enable the creation of rich user interfaces. The UI components are assigned to [slots](../ui-slots) by sending the [ui:slot:set](../events#uislotset) event.
-
 Used to display images. It supports properties such as `src`, `alt`, `width`, `height`, and responsive `sources` for different screen sizes.
 
-![Field](../../../../static/img/pt/nube-sdk-ui-img-1.png "Field")
+![Image](../../../../static/img/pt/nube-sdk-ui-img-1.png "Image")
 
 ### Usage
 
-```typescript title="Example"
-import { Image } from "@tiendanube/nube-sdk-jsx";
+```typescript title="Basic Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Image, Box } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
-    <Image
-      src="https://app-insti-cdn.nuvemshop.com.br/site/dist/images/widgets/closing-cta/image-3.webp"
-      alt="Nuvemshop Logo"
-    />
+    <Box direction="col" gap={16}>
+      {/* Basic image */}
+      <Image
+        src="https://app-insti-cdn.nuvemshop.com.br/site/dist/images/widgets/closing-cta/image-3.webp"
+        alt="Nuvemshop Logo"
+      />
+    </Box>
   );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 
-Optionally, the `Img` component can receive alternative sources loaded by media query.
+### Responsive Images with Multiple Sources
 
-```typescript title="Example"
-export function Logo() {
+The `Image` component supports multiple sources with media queries, allowing you to serve different images based on screen size. This is particularly useful for banners and responsive layouts where you want to optimize the image for different devices.
+
+When you provide the `sources` prop, the component renders a `<picture>` element with multiple `<source>` tags, enabling the browser to select the most appropriate image based on the viewport width.
+
+**Desktop**
+
+![Image Desktop](../../../../static/img/pt/nube-sdk-ui-image-3.png "Image Desktop")
+
+**Tablet**
+
+![Image Tablet](../../../../static/img/pt/nube-sdk-ui-image-1.png "Image Tablet")
+
+**Mobile**
+
+![Image Mobile](../../../../static/img/pt/nube-sdk-ui-image-2.png "Image Mobile")
+
+```typescript title="Responsive Banner Example"
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Image, Box } from "@tiendanube/nube-sdk-jsx";
+
+function ResponsiveBanner() {
   return (
-    <Image
-      src="https://hostname/default.png"
-      alt="Hello"
-      sources={[
-        {
-          src: "https://hostname/desktop.png",
-          media: "(min-width: 769px)",
-        },
-        {
-          src: "https://hostname/mobile.png",
-          media: "(max-width: 768px)",
-        },
-      ]}
-    />
+    <Box direction="col" gap={16}>
+      <Image
+        src="https://placehold.co/400x60/e91e63/white?text=Summer+Sale"
+        alt="Promotional banner"
+        sources={[
+          {
+            src: "https://placehold.co/1200x200/e91e63/white?text=Summer+Sale+-+Up+to+50%25+Off",
+            media: "(min-width: 768px)",
+          },
+          {
+            src: "https://placehold.co/800x150/e91e63/white?text=Summer+Sale+-+50%25+Off",
+            media: "(min-width: 480px)",
+          },
+        ]}
+        style={{ width: "100%", borderRadius: "8px" }}
+      />
+    </Box>
   );
 }
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <ResponsiveBanner />,
+      },
+    },
+  }));
+}
 ```
+
+:::info
+The browser evaluates the media queries in the `sources` array from top to bottom and uses the first matching source. The `src` prop serves as the fallback image when no media query matches or for browsers that don't support the `picture` element.
+:::
 
 ### Properties
 

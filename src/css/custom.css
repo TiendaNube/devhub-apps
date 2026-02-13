@@ -100,3 +100,53 @@ html[data-theme="dark"] {
   flex-direction: column;
   flex-grow: 1;
 }
+
+/* AI Assistant navbar button with "New!" badge */
+.navbar__item--ai-assistant {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(0, 107, 200, 0.3);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem !important;
+  transition: border-color 0.2s ease;
+}
+
+.navbar__item--ai-assistant:hover {
+  border-color: rgba(0, 107, 200, 0.5);
+}
+
+/* Hide external link arrow icon */
+.navbar__item--ai-assistant svg {
+  display: none !important;
+}
+
+/* "New!" badge */
+.navbar__item--ai-assistant::after {
+  content: "New!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5eb6ff;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .navbar__item--ai-assistant {
+  border-color: rgba(61, 158, 255, 0.3);
+}
+
+[data-theme="dark"] .navbar__item--ai-assistant:hover {
+  border-color: rgba(61, 158, 255, 0.5);
+}
+
+[data-theme="dark"] .navbar__item--ai-assistant::after {
+  background-color: #3d9eff;
+}

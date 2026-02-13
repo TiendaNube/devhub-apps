@@ -13,14 +13,26 @@ It inherits all the capabilities of the [box component](/docs/applications/nube-
 ### Usage
 
 ```typescript title="Example"
-import { Row, Txt } from "@tiendanube/nube-sdk-jsx";
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+import { Row, Text } from "@tiendanube/nube-sdk-jsx";
 
 function MyComponent() {
   return (
     <Row width={100} height={200}>
-      <Txt>Hello!!</Txt>
+      <Text>Hello 1</Text>
+      <Text>Hello 2</Text>
     </Row>
   );
+}
+
+export function App(nube: NubeSDK) {
+  nube.send("ui:slot:set", () => ({
+    ui: {
+      slots: {
+        after_line_items: <MyComponent />,
+      },
+    },
+  }));
 }
 ```
 
