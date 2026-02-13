@@ -51,7 +51,7 @@ The dialog opens only when the slot has valid content. It can be closed by the c
 nube.clearSlot("modal_content")
 ```
 
-When the dialog closes by the customer or programmatically the SDK dispatches the `custom:modal:close` event:
+When the dialog closes — either by the customer or programmatically — the SDK dispatches the `custom:modal:close` event. For details on listening to custom events, see [Events — Custom events](../events/ui-and-custom#custom-events).
 
 ```tsx
 nube.on("custom:modal:close", () => {

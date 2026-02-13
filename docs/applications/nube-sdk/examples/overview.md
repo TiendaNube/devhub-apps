@@ -26,4 +26,4 @@ Ready-to-use code examples that demonstrate common UI patterns and features. Eac
 
 - Explore the [Components](../components/overview) to learn about available UI elements
 - Learn about [UI Slots](../slots/overview) to understand where you can render your components
-- Check the [Events](../events) documentation to understand how to interact with the checkout
+- Check the [Events](../events/overview) documentation to understand how to interact with the checkout

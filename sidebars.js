@@ -50,13 +50,50 @@ const sidebars = {
 						"applications/nube-sdk/devtools",
 						"applications/nube-sdk/script-structure",
 						"applications/nube-sdk/styling",
-						"applications/nube-sdk/state",
-						"applications/nube-sdk/events",
+						{
+							type: "category",
+							label: "State",
+							link: {
+								type: "doc",
+								id: "applications/nube-sdk/state/overview",
+							},
+							items: [
+								"applications/nube-sdk/state/cart",
+								"applications/nube-sdk/state/order",
+								"applications/nube-sdk/state/location",
+								"applications/nube-sdk/state/store-and-config",
+								"applications/nube-sdk/state/shipping",
+								"applications/nube-sdk/state/customer",
+								"applications/nube-sdk/state/payment",
+								"applications/nube-sdk/state/ui-and-session",
+							],
+						},
+						{
+							type: "category",
+							label: "Events",
+							link: {
+								type: "doc",
+								id: "applications/nube-sdk/events/overview",
+							},
+							items: [
+								"applications/nube-sdk/events/page-and-lifecycle",
+								"applications/nube-sdk/events/cart",
+								"applications/nube-sdk/events/order",
+								"applications/nube-sdk/events/coupon",
+								"applications/nube-sdk/events/shipping",
+								"applications/nube-sdk/events/customer-and-payment",
+								"applications/nube-sdk/events/ui-and-custom",
+							],
+						},
 						"applications/nube-sdk/browser-apis",
 						"applications/nube-sdk/migration-guide",
 					{
 						type: "category",
 						label: "Components",
+						link: {
+							type: "doc",
+							id: "applications/nube-sdk/components/overview",
+						},
 						items: [
 							"applications/nube-sdk/components/accordion",
 							"applications/nube-sdk/components/box",
@@ -68,7 +105,6 @@ const sidebars = {
 							"applications/nube-sdk/components/image",
 							"applications/nube-sdk/components/icon",
 							"applications/nube-sdk/components/iframe",
-							"applications/nube-sdk/components/overview",
 							"applications/nube-sdk/components/row",
 							"applications/nube-sdk/components/select",
 							"applications/nube-sdk/components/sidescroll",
@@ -83,8 +119,11 @@ const sidebars = {
 				{
 					type: "category",
 					label: "UI Slots",
+					link: {
+						type: "doc",
+						id: "applications/nube-sdk/slots/overview",
+					},
 					items: [
-						"applications/nube-sdk/slots/overview",
 						"applications/nube-sdk/slots/checkout-slots",
 						"applications/nube-sdk/slots/storefront-slots",
 					],
@@ -92,8 +131,11 @@ const sidebars = {
 				{
 					type: "category",
 					label: "Examples",
+					link: {
+						type: "doc",
+						id: "applications/nube-sdk/examples/overview",
+					},
 					items: [
-						"applications/nube-sdk/examples/overview",
 						{
 							type: "category",
 							label: "Common Patterns",
@@ -154,15 +196,52 @@ const sidebars = {
 				"applications/nube-sdk/devtools",
 				"applications/nube-sdk/script-structure",
 				"applications/nube-sdk/styling",
-				"applications/nube-sdk/state",
-				"applications/nube-sdk/events",
-				"applications/nube-sdk/browser-apis",
-				{
-					type: "category",
-					label: "Components",
-					items: [
-						"applications/nube-sdk/components/overview",
-						"applications/nube-sdk/components/accordion",
+			{
+				type: "category",
+				label: "State",
+				link: {
+					type: "doc",
+					id: "applications/nube-sdk/state/overview",
+				},
+				items: [
+					"applications/nube-sdk/state/cart",
+					"applications/nube-sdk/state/order",
+					"applications/nube-sdk/state/location",
+					"applications/nube-sdk/state/store-and-config",
+					"applications/nube-sdk/state/shipping",
+					"applications/nube-sdk/state/customer",
+					"applications/nube-sdk/state/payment",
+					"applications/nube-sdk/state/ui-and-session",
+				],
+			},
+		{
+				type: "category",
+				label: "Events",
+				link: {
+					type: "doc",
+					id: "applications/nube-sdk/events/overview",
+				},
+				items: [
+					"applications/nube-sdk/events/page-and-lifecycle",
+					"applications/nube-sdk/events/cart",
+					"applications/nube-sdk/events/order",
+					"applications/nube-sdk/events/coupon",
+					"applications/nube-sdk/events/shipping",
+					"applications/nube-sdk/events/customer-and-payment",
+					"applications/nube-sdk/events/ui-and-custom",
+				],
+			},
+		"applications/nube-sdk/browser-apis",
+		"applications/nube-sdk/migration-guide",
+			{
+				type: "category",
+				label: "Components",
+				link: {
+					type: "doc",
+					id: "applications/nube-sdk/components/overview",
+				},
+				items: [
+					"applications/nube-sdk/components/accordion",
 						"applications/nube-sdk/components/box",
 						"applications/nube-sdk/components/button",
 						"applications/nube-sdk/components/checkbox",
@@ -184,20 +263,26 @@ const sidebars = {
 						"applications/nube-sdk/components/toast",
 					],
 				},
-			{
-				type: "category",
-				label: "UI Slots",
-				items: [
-					"applications/nube-sdk/slots/overview",
-					"applications/nube-sdk/slots/checkout-slots",
-					"applications/nube-sdk/slots/storefront-slots",
-				],
+		{
+			type: "category",
+			label: "UI Slots",
+			link: {
+				type: "doc",
+				id: "applications/nube-sdk/slots/overview",
 			},
+			items: [
+				"applications/nube-sdk/slots/checkout-slots",
+				"applications/nube-sdk/slots/storefront-slots",
+			],
+		},
 	{
 		type: "category",
 		label: "Examples",
+		link: {
+			type: "doc",
+			id: "applications/nube-sdk/examples/overview",
+		},
 		items: [
-			"applications/nube-sdk/examples/overview",
 			{
 		type: "category",
 		label: "Common Patterns",
