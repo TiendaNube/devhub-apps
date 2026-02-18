@@ -49,7 +49,21 @@ const sidebars = {
 						"applications/nube-sdk/getting-started",
 						"applications/nube-sdk/devtools",
 						"applications/nube-sdk/script-structure",
-						"applications/nube-sdk/styling",
+						{
+							type: "category",
+							label: "Styling",
+							link: {
+								type: "doc",
+								id: "applications/nube-sdk/styling/overview",
+							},
+							items: [
+								"applications/nube-sdk/styling/styled-components",
+								"applications/nube-sdk/styling/stylesheet",
+								"applications/nube-sdk/styling/theme",
+								"applications/nube-sdk/styling/best-practices",
+								"applications/nube-sdk/styling/complete-example",
+							],
+						},
 						{
 							type: "category",
 							label: "State",
@@ -193,12 +207,26 @@ const sidebars = {
 			items: [
 				"applications/nube-sdk/overview",
 				"applications/nube-sdk/getting-started",
-				"applications/nube-sdk/devtools",
-				"applications/nube-sdk/script-structure",
-				"applications/nube-sdk/styling",
+			"applications/nube-sdk/devtools",
+			"applications/nube-sdk/script-structure",
 			{
 				type: "category",
-				label: "State",
+				label: "Styling",
+				link: {
+					type: "doc",
+					id: "applications/nube-sdk/styling/overview",
+				},
+				items: [
+					"applications/nube-sdk/styling/styled-components",
+					"applications/nube-sdk/styling/stylesheet",
+					"applications/nube-sdk/styling/theme",
+					"applications/nube-sdk/styling/best-practices",
+					"applications/nube-sdk/styling/complete-example",
+				],
+			},
+		{
+			type: "category",
+			label: "State",
 				link: {
 					type: "doc",
 					id: "applications/nube-sdk/state/overview",

@@ -23,18 +23,33 @@ The received `nube: NubeSDK` object contains all the helper functions required t
 
 ```typescript
 export type NubeSDK = {
-  // Start listening to an event
-  on(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
-  // Stop listening to an event
-  off(event: NubeSDKListenableEvent, listener: NubeSDKListener): void;
-  // Dispatch an event
-  send(event: NubeSDKSendableEvent, modifier?: NubeSDKStateModifier): void;
-  // Get current state
+  // Register a type-safe event listener
+  on<T extends NubeSDKListenableEvent>(
+    event: T,
+    listener: EventListenerMap[T],
+  ): void;
+  // Remove a registered event listener
+  off<T extends NubeSDKListenableEvent>(
+    event: T,
+    listener: EventListenerMap[T],
+  ): void;
+  // Send an event, optionally modifying state
+  send<T extends NubeSDKSendableEvent>(
+    event: T,
+    modifier?: NubeSDKStateModifierMap[T],
+  ): void;
+  // Get current immutable state
   getState(): Readonly<NubeSDKState>;
-  // Get browser APIs
+  // Get browser APIs (storage, navigation, iframe messaging)
   getBrowserAPIs(): NubeBrowserAPIs;
-  // Render a component into a UI slot
-  render(slot: UISlot, component: NubeComponent | ((state: Readonly<NubeSDKState>) => NubeComponent)): void;
+  // Render a component (or array of components) into a UI slot
+  render(
+    slot: UISlot,
+    component:
+      | NubeComponent
+      | NubeComponent[]
+      | ((state: Readonly<NubeSDKState>) => NubeComponent | NubeComponent[]),
+  ): void;
   // Clear a component from a UI slot
   clearSlot(slot: UISlot): void;
 };
@@ -50,17 +65,42 @@ Listening to events is done through the received `nube` instance:
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
-// Listen to cart update event, dispatched every time that the cart is updated
-nube.on("cart:update", ({ cart }) => {
-  // Log the total price of the cart to console
-  console.log(cart.prices.total);
-});
+  // Listen to cart update event, dispatched every time that the cart is updated
+  nube.on("cart:update", ({ cart }) => {
+    // Log the total price of the cart to console
+    console.log(cart.prices.total);
+  });
+}
+```
+
+For a complete list of available events, see [Events](./events/overview).
+
+#### Removing event listeners
+
+The `off` method removes a previously registered listener. You need to pass the same function reference that was used with `on`:
+
+```typescript
+import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+
+export function App(nube: NubeSDK) {
+  const onCartUpdate = ({ cart }) => {
+    console.log("Cart updated:", cart.prices.total);
+
+    // Stop listening after the first update
+    nube.off("cart:update", onCartUpdate);
+  };
+
+  nube.on("cart:update", onCartUpdate);
 }
 ```
 
 ### Dispatching events
 
 Dispatching events is done through the received `nube` instance:
+
+:::tip Testing this example
+In order to see this example in action, navigate to the checkout in your store.
+:::
 
 ```typescript
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
@@ -93,24 +133,29 @@ export function App(nube: NubeSDK) {
 }
 ```
 
+For more information about sendable events and their modifiers, see [Events](./events/overview).
+
 ### Script configuration
 
-There is a special event that can be dispatched by the script to configure some special parameters related to the behavior of the script:
+There is a special event that can be dispatched by the script to configure the behavior of your application. The available configuration options are:
+
+| Option                          | Type      | Description                                                            |
+| ------------------------------- | --------- | ---------------------------------------------------------------------- |
+| `has_cart_validation`           | `boolean` | Tells NubeSDK that this script wants to validate the cart contents.    |
+| `disable_shipping_more_options` | `boolean` | Disables the ability for users to select alternative shipping options. |
 
 ```typescript
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
-// Tell NubeSDK that this script wants to validate the content of the cart
-nube.send("config:set", () => ({
-  config: {
-    has_cart_validation: true
-  },
-}));
+  // Tell NubeSDK that this script wants to validate the content of the cart
+  nube.send("config:set", () => ({
+    config: {
+      has_cart_validation: true,
+    },
+  }));
 }
 ```
-
-In this example, the script is telling `NubeSDK` that it wants to validate the content of the cart.
 
 ### Rendering components
 
@@ -118,26 +163,22 @@ The NubeSDK provides methods to render components into UI slots and clear them w
 
 #### Rendering a component
 
-The `render` method allows you to render a component into a specific UI slot. The component can be either a static component or a function that receives the current state and returns a component to render.
+The `render` method allows you to render a component into a specific UI slot. The component can be a static component, an array of components, or a function that receives the current state and returns a component to render.
 
 For a complete list of available UI slots, see [UI Slots](./slots/overview).
 
-```typescript
+```tsx
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { Text } from "@tiendanube/nube-sdk";
+import { Text } from "@tiendanube/nube-sdk-jsx";
 
 export function App(nube: NubeSDK) {
   // Render a static component
-  nube.render("after_address_form", <Text>Hello World</Text>);
-  
+  nube.render("before_main_content", <Text>Hello World</Text>);
+
   // Render a dynamic component based on state
-  nube.render("after_contact_form", (state) => {
+  nube.render("after_main_content", (state) => {
     const cartItems = state.cart.items.length;
-    return (
-      <Text>
-        You have {cartItems} items in your cart
-      </Text>
-    );
+    return <Text>You have {cartItems} items in your cart</Text>;
   });
 }
 ```
@@ -151,7 +192,7 @@ import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 
 export function App(nube: NubeSDK) {
   // Clear the component from the slot
-  nube.clearSlot("after_address_form");
+  nube.clearSlot("before_main_content");
 }
 ```
 
@@ -167,7 +208,7 @@ import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 export function App(nube: NubeSDK) {
   // Get browser APIs
   const browser = nube.getBrowserAPIs();
-  
+
   // Use browser APIs for various operations
   // Example: Making HTTP requests, accessing localStorage, etc.
 }
@@ -177,7 +218,7 @@ For detailed information about available browser APIs, see [Browser APIs](./brow
 
 ## Next Steps
 
-- Learn more about [Styling Components](./styling)
+- Learn more about [Styling Components](./styling/overview)
 - Learn more about [Events](./events/overview)
-- Learn more about [Components](./components)
+- Learn more about [Components](./components/overview)
 - Learn more about [Browser APIs](./browser-apis)
