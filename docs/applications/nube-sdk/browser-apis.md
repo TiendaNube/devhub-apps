@@ -1,5 +1,5 @@
 ---
-title: Browser API's
+title: Browser APIs
 ---
 
 # Browser APIs
