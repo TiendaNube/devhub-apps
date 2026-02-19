@@ -19,6 +19,10 @@
     "message": "Homologation",
     "description": "The label for category Homologação in sidebar sidebar"
   },
+  "sidebar.sidebar.doc.Guia de integração de ERPs": {
+    "message": "ERP Integration Guide",
+    "description": "The label for the doc item Guia de integração de ERPs in sidebar sidebar, linking to the doc erp-guide/overview"
+  },
   "sidebar.sidebar.doc.Primeiros passos": {
     "message": "Getting Started",
     "description": "The label for the doc item Primeiros passos in sidebar sidebar, linking to the doc getting-started"
