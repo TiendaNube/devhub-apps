@@ -4,6 +4,6 @@
 # Order is important; the last matching pattern takes the most
 # precedence.
 
-*   @TiendaNube/nimbus-reviewers
+*   @TiendaNube/access-tech-nimbus
 *   @federiconube
 *   @badaro
