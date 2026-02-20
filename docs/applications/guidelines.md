@@ -20,7 +20,7 @@ Alguns tipos de apps não são permitidos na loja de aplicativos da Nuvemshop e 
 
 #### Tipos de Apps Proibidos:
 - **Apps que não utilizam as APIs da Nuvemshop:** Apps que não utilizam as APIs públicas da Nuvemshop não são permitidos. Os lojistas não devem ser obrigados a configurar apps customizados como parte da funcionalidade do app.
-- **Apps que falsificam dados:** Apps não devem violar o Termos e Condições Gerais do Programa de Parceiros da Nuvemshop. Seu app deve usar apenas informações verdadeiras em pop-ups e notificações.
+- **Apps que falsificam dados:** Apps não devem violar os Termos e Condições Gerais do Programa de Parceiros da Nuvemshop. Seu app deve usar apenas informações verdadeiras em pop-ups e notificações.
 - **Apps que processam pagamentos fora do checkout da Nuvemshop:** A Nuvemshop não pode garantir a segurança de um pedido processado por um checkout externo. Apps que ignoram o checkout ou processamento de pagamentos são proibidos.
 - **Múltiplos apps com funcionalidades duplicadas:** Um app não pode ser idêntico a outro app que você já publicou.
 - **Apps que principalmente compartilham dados de lojistas:** Apps que compartilham dados de lojistas com terceiros precisam de consentimento prévio por escrito da Nuvemshop e devem cumprir com os Termos da API. É importante que siga a diretriz de privacidade.
@@ -37,6 +37,39 @@ As permissões são os níveis de acesso que seu app tem aos dados de uma loja a
 ### 2.2. Fluxos de Configuração e Merchant
 - Os apps devem ser instalados e iniciados apenas nos serviços da Nuvemshop. Seu app não deve solicitar a entrada manual de um URL da loja durante a instalação.
 - Para a segurança do lojista, seu app não deve usar janelas pop-up para funcionalidades essenciais, como a execução do OAuth.
+
+### 2.3. Direcionamentos pós-instalação
+
+A performance pós-instalação é crucial para o sucesso do merchant. Como a App Store atrai novos lojistas que ainda não possuem parceria comercial, o aplicativo precisa oferecer clareza total nos primeiros passos.
+
+O redirecionamento após a instalação deve ser fluido, eliminando barreiras para usuários que estão descobrindo a solução pela primeira vez.
+
+Com isso, compartilhamos abaixo duas sugestões a serem seguidas para esta usabilidade:
+
+- **Automatizar a autenticação (recomendado)**
+
+No modelo de integração da Nuvemshop, após o lojista clicar em “aceitar” na tela de permissões, o sistema gera um *authorization code* e redireciona para a URL de callback definida.
+
+O fluxo ideal é que esse código não seja exibido ao lojista, mas sim consumido automaticamente pelo *backend* da aplicação.
+
+**Passos técnicos resumidos:**
+
+- O lojista é redirecionado para a URL de *callback* configurada, que deve capturar o parâmetro `code`.
+- O *backend* realiza uma requisição `POST` ao endpoint de OAuth da Nuvemshop, enviando os dados necessários (`client_id`, `client_secret`, `redirect_uri`, `grant_type=authorization_code` e o `code` recebido).
+- Em resposta, o sistema retorna um `access_token` e um `refresh_token`.
+- O *backend* salva o `access_token` associado à loja que instalou o aplicativo, permitindo chamadas à API em nome dessa loja.
+- Em vez de exibir o `code` ou mensagens de erro, o lojista já deve visualizar a tela de registro/login da aplicação, concluindo o processo de forma natural e transparente.
+
+Este fluxo elimina dúvidas e passos manuais, tornando a experiência mais simples e segura para o lojista.
+
+- **Landing page explicativa (sugestivo)**
+
+Caso prefiram manter a etapa de contato direto com vocês, é fundamental que o direcionamento ocorra para uma tela que apresente uma *landing page* clara e objetiva, contendo:
+
+- O passo a passo completo do que o lojista deve fazer, como fluxo de cadastro ou geração de credencial para uso;
+- As instruções até a finalização da integração do aplicativo com a loja.
+
+Recomendamos a leitura do nosso **guia sobre Landing Page** e sua importância.
 
 ## 3. Funcionalidade e Qualidade
 Para que seu app tenha sucesso, ele deve oferecer uma experiência consistente e positiva para os merchant.
