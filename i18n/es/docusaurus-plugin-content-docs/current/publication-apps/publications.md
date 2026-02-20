@@ -8,7 +8,7 @@ title: Publicación de la App
 La aplicación solo estará disponible en la Tienda de Aplicaciones de Tiendanube una vez que:
 
 - haya enviado todos los artefactos e ítems de publicación;
-- haya descargado las imágenes y el ícono de la aplicación en el Panel del Partner, prestando atención a la dimensión solicitada para cada campo;
+- haya subido las imágenes y el ícono de la aplicación en el Panel del Partner, prestando atención a la dimensión solicitada para cada campo;
 - haya rellenado la descripción (corta y larga) de su aplicación en el Panel del Partner;
 - su aplicación haya pasado por el proceso de homologación (o certificación/aprobación) y haya sido aprobada.
 
