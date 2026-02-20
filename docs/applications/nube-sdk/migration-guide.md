@@ -1,98 +1,86 @@
 ---
 title: Migration Guide
----
-# Guide to Migrating Apps to SDK in the Storefront Context
-
-## Context
-
-Tiendanube's new themes, starting with the Patagonia theme, mark the beginning of a new era for e-commerce.
-
-Created to overcome past technical limitations, it offers a modern, flexible, and high-performance foundation that allows brands to express their full visual potential without code or complex processes.
-
-With it, every store can be unique, combining creative freedom and speed to grow.
-
-**Nube SDK** is the new development environment that allows partners to create applications compatible with checkout and the new store editor, ensuring stability, performance, and visual consistency within stores. Instead of each app connecting to the storefront independently—which generated conflicts, affected speed, and could sometimes break the user experience—the SDK offers a secure and standardized framework to integrate functionalities directly into the new editor and stores interface.
-
-### What Changes with NubeSDK?
-
-👉🏻 [Documentation](/docs/applications/nube-sdk/overview)
-
-NubeSDK completely redefines how apps are developed on Tiendanube:
-
-- Runs inside a **Web Worker** for security and isolation
-  > To use Nube SDK, scripts must be migrated to our CDN.
-
-- Uses **events** to communicate with checkout or storefront
-  > (Available only for Patagonia, Tiendanube's new theme)
-
-- UI is declared **declaratively or with JSX**, you don't have direct DOM access
-
-- Renders in predetermined **slots** using `nube.render()`
-
-- Has restricted access to APIs compatible with Web Workers.
-
+hide_table_of_contents: true
 ---
 
-## 1. Migrate Your App to the SDK Model
+import { Alert, Text, Box } from '@nimbus-ds/components';
+import BeforeAfter from '@site/src/components/BeforeAfter';
+import {
+entryPoint,
+pageChanges,
+userInteractions,
+injectingUI,
+dynamicUI,
+styling,
+cartData,
+cartValidation,
+httpRequests,
+localStorage,
+navigation,
+shippingPayment,
+customerData,
+addToCart,
+orderTracking,
+} from './migration-guide-codes';
 
-### GPT Assistant
+# Migrating Your App to NubeSDK
 
-[Use the Nube SDK app creation and migration specialist](https://chatgpt.com/g/g-6812298534c88191be0705ba82fea093-nubesdk-assistant)
+This guide shows you how to convert a classic Tiendanube/Nuvemshop script — one that uses `document`, `window`, jQuery, or direct DOM manipulation — into a NubeSDK app that runs inside a secure Web Worker.
 
-Write a prompt like the following example and follow the Assistant's steps:
+Each section presents a **before** (legacy) and **after** (NubeSDK) comparison so you can map your existing code to the new model.
 
-> "Analyze the shared code and suggest the steps to convert the legacy script to Nube SDK. This is an application for Storefronts that will be migrated to the Patagonia theme. [JS Code]"
+<Alert appearance="warning" title="Key differences at a glance">
+  <Box display="flex" flexDirection="column" gap="2">
+    <Text>NubeSDK apps run inside a <strong>Web Worker</strong>. There is no access to <code>document</code>, <code>window</code>, or any DOM API.</Text>
+    <Text>UI is rendered <strong>declaratively</strong> into predefined <strong>slots</strong> using JSX or the declarative API.</Text>
+    <Text>Communication with the store/checkout happens through <strong>events</strong>, not DOM listeners.</Text>
+    <Text>Storefront apps require the <strong>Patagonia theme</strong>. Checkout apps work on all themes.</Text>
+  </Box>
+</Alert>
 
-### Basic App Structure
+---
 
-Make sure you have a main entry file (for example `src/main.tsx`) with the following form:
+## 1. Entry point
+
+Every NubeSDK app exports a single `App` function that receives the `nube` instance. This replaces your legacy IIFE, `DOMContentLoaded`, or global script.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={entryPoint.before}
+  after={entryPoint.after}
+/>
+
+:::tip
+Use `npm create nube-app@latest` to scaffold a project that is already configured with the right entry point, build tool, and types. See [Getting Started](./getting-started) for details.
+:::
+
+---
+
+## 2. Reacting to page or route changes
+
+Legacy scripts typically check `window.location` or listen to `popstate`. In NubeSDK you listen to **events** that tell you exactly which page the user is on and what data is available.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  afterLabel="AFTER (STOREFRONT)"
+  before={pageChanges.before}
+  after={pageChanges.after}
+/>
+
+For **checkout** apps, listen to `checkout:ready` instead:
 
 ```typescript
-import type { NubeSDK } from "@tiendanube/nube-sdk-types";
+nube.on("checkout:ready", ({ location }) => {
+  const { page } = location;
 
-export function App(nube: NubeSDK) {
-  // Your main logic goes here
-}
-```
+  if (page.type === "checkout" && page.data.step === "start") {
+    // Checkout start page — contact form, address, shipping
+  }
 
-This function will be executed automatically by the SDK.
-
----
-
-## 2. Prepare Your Environment
-
-Use the `npm create nube-app@latest` command to set up all the development environment needed to start working.
-
-[More details](/docs/applications/nube-sdk/getting-started)
-
----
-
-## 3. Enable SDK Usage in the Partner Portal
-
-When registering or editing your app in the Partner Portal, activate the **"Uses NubeSDK"** option so it runs inside a secure worker.
-
-Remember that scripts must be hosted on our CDN to execute.
-
----
-
-## 4. Start Listening to Events
-
-Migrate your environment interactions this way:
-
-### Before (classic example):
-
-```javascript
-document.querySelector('.buy-button').addEventListener('click', () => {
-  // logic...
-});
-```
-
-### Now (NubeSDK):
-
-```typescript
-nube.on("location:update", ({ location }) => {
-  if (location.page.type === "product") {
-    // logic at checkout start
+  if (page.type === "checkout" && page.data.step === "payment") {
+    // Payment step
   }
 });
 ```
@@ -101,82 +89,244 @@ Check the available events in the [events documentation](/docs/applications/nube
 
 ---
 
-## 5. Render UI with nube.render
+## 3. Listening to user interactions
 
-Migrate any code that directly manipulated the DOM using declarative components:
+In legacy scripts you'd query the DOM for elements and attach event listeners. NubeSDK provides **store events** instead — you react to data changes, not clicks on particular elements.
 
-```tsx
-import { Box, Text } from "@tiendanube/nube-sdk-jsx";
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={userInteractions.before}
+  after={userInteractions.after}
+/>
 
-nube.render("after_line_items", () => (
-  <Box padding="16px">
-    <Text>Thank you for your purchase!</Text>
-  </Box>
-));
-```
-
-**Don't use** `document.createElement` or `innerHTML`.
+:::info
+There is no 1:1 equivalent of DOM click handlers. Instead, map your logic to the **data change** that the click produces. A click on "Buy" produces a `cart:update`; a click on "Select shipping" produces a `shipping:update`, etc.
+:::
 
 ---
 
-## 6. Validation and Configuration
+## 4. Injecting UI into the page
 
-If your app needs to block checkout or modify behavior, you can send initial configurations:
+Instead of creating elements with `document.createElement` or injecting HTML with `innerHTML`, you **render components into slots**.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="tsx"
+  afterLabel="AFTER (JSX)"
+  before={injectingUI.before}
+  after={injectingUI.after}
+/>
+
+You can also use the **declarative API** (no JSX required):
 
 ```typescript
-nube.send("config:set", () => ({
-  config: {
-    has_cart_validation: true,
-  },
-}));
+import { box, txt } from "@tiendanube/nube-sdk-ui";
+
+nube.render("after_line_items", () =>
+  box({
+    padding: "16px",
+    children: [txt({ children: "Thank you for your purchase!" })],
+  }),
+);
 ```
 
-And then react:
+:::tip
+Don't know which slot to use? Check [Checkout Slots](./slots/checkout-slots) and [Storefront Slots](./slots/storefront-slots) for a full visual reference.
+:::
+
+---
+
+## 5. Rendering dynamic UI based on state
+
+In legacy apps you'd read DOM values or make API calls and then update elements. In NubeSDK, `nube.render()` can receive a **function** — the SDK calls it with the current state every time it changes.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="tsx"
+  before={dynamicUI.before}
+  after={dynamicUI.after}
+/>
+
+---
+
+## 6. Styling
+
+Legacy apps often inject `<style>` tags or add inline styles. NubeSDK provides `styled()`, `StyleSheet.create()`, and a **theme** system that adapts to each store.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="tsx"
+  before={styling.before}
+  after={styling.after}
+/>
+
+:::tip
+Use `theme` tokens instead of hard-coded colours — your component will automatically match the store's theme. See [Styling](./styling/overview) for the complete token list.
+:::
+
+---
+
+## 7. Reading and reacting to cart data
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={cartData.before}
+  after={cartData.after}
+/>
+
+Or react to changes over time:
 
 ```typescript
 nube.on("cart:update", ({ cart }) => {
-  if (cart.items.length === 0) {
-    nube.send("cart:validate", () => ({
-      cart: {
-        validation: {
-          status: "fail",
-          reason: "Cart cannot be empty",
-        },
-      },
-    }));
-  }
+  console.log("Cart changed — new total:", cart.prices.total);
 });
 ```
 
 ---
 
-## 7. Use DevTools for Debugging
+## 8. Validating the cart / blocking checkout
 
-Install **Nube DevTools** to see:
+Legacy scripts would prevent form submission or add alerts. NubeSDK uses a formal **config + validate** flow.
 
-- Which apps are running
-- Which components are in each slot
-- Which events are being fired
-- What state the app has
-
----
-
-## 8. Migration Checklist
-
-- [ ] You have an `App(nube: NubeSDK)` function as entry point
-- [ ] All UI is declared with SDK components (JSX or `@tiendanube/nube-sdk-ui`)
-- [ ] All logic uses `nube.on`, `nube.send`, `nube.render`
-- [ ] You don't use `window`, `document`, or external libraries like React
-- [ ] You're running in dev and the script points to `localhost:8080/main.min.js`
-- [ ] The script has the **NubeSDK flag** enabled in the Partner Portal
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={cartValidation.before}
+  after={cartValidation.after}
+/>
 
 ---
 
-## 📘 Useful Resources
+## 9. Making HTTP requests
 
-- [**Official documentation**](/docs/applications/nube-sdk/overview)
-- [**Available components**](/docs/applications/nube-sdk/components/overview)
-- [**Events list**](/docs/applications/nube-sdk/events/overview)
-- [**Slots list**](/docs/applications/nube-sdk/slots/overview)
-- **What to do if you're missing a component, slot, or event?** Send an email to [api@tiendanube.com](mailto:api@tiendanube.com) with your request sharing as much detail as possible, ideally accompanied by visual support.
-- **Technical support email:** [api@tiendanube.com](mailto:api@tiendanube.com)
+Legacy scripts use `XMLHttpRequest` or `fetch` on the main thread. The Worker environment supports `fetch` natively.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="tsx"
+  before={httpRequests.before}
+  after={httpRequests.after}
+/>
+
+---
+
+## 10. Using localStorage / sessionStorage
+
+Web Workers don't have direct access to `localStorage`. NubeSDK provides **async** equivalents.
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={localStorage.before}
+  after={localStorage.after}
+/>
+
+---
+
+## 11. Navigating programmatically
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={navigation.before}
+  after={navigation.after}
+/>
+
+:::warning
+`navigate` only works within the current domain. External URLs are not supported.
+:::
+
+---
+
+## 12. Reacting to shipping and payment changes
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={shippingPayment.before}
+  after={shippingPayment.after}
+/>
+
+---
+
+## 13. Reacting to customer data
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={customerData.before}
+  after={customerData.after}
+/>
+
+---
+
+## 14. Adding items to the cart
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={addToCart.before}
+  after={addToCart.after}
+/>
+
+---
+
+## 15. Order tracking (checkout success page)
+
+<BeforeAfter
+  beforeLanguage="javascript"
+  afterLanguage="typescript"
+  before={orderTracking.before}
+  after={orderTracking.after}
+/>
+
+---
+
+## What you can't do in NubeSDK
+
+Because your code runs in a Web Worker, these APIs are **not available**:
+
+| Legacy API                        | Why it's not available | Alternative                                 |
+| --------------------------------- | ---------------------- | ------------------------------------------- |
+| `document` / `window`             | No DOM in workers      | Use `nube.render()` and events              |
+| `localStorage` / `sessionStorage` | Main-thread API        | `nube.getBrowserAPIs().asyncLocalStorage`   |
+| `window.location.href = ...`      | Main-thread API        | `nube.getBrowserAPIs().navigate(...)`       |
+| `React`, `Vue`, `Angular`         | No DOM rendering       | Use NubeSDK components (JSX or declarative) |
+| `jQuery`                          | No DOM                 | Use events and `nube.render()`              |
+| `XMLHttpRequest`                  | Available but prefer   | `fetch()` (works in workers)                |
+
+---
+
+## Migration checklist
+
+Use this list to track your progress:
+
+- [ ] Created a project with `npm create nube-app@latest`
+- [ ] Main entry file exports `App(nube: NubeSDK)`
+- [ ] All UI is rendered through `nube.render()` — no `document.*` or `innerHTML`
+- [ ] All logic uses `nube.on`, `nube.send`, `nube.getState`
+- [ ] No references to `window`, `document`, jQuery, React, or other DOM libraries
+- [ ] localStorage replaced with `asyncLocalStorage` / `asyncSessionStorage`
+- [ ] Styling uses `styled()`, `StyleSheet.create()`, or theme tokens — no `<style>` injection
+- [ ] Tested in dev mode (`npm run dev`) with the script pointing to `localhost:8080/main.min.js`
+- [ ] **"Uses NubeSDK"** flag enabled in the Partner Portal
+- [ ] App works on **Patagonia theme** (storefront) or any theme (checkout)
+
+---
+
+## Useful resources
+
+- [Script Structure](./script-structure) — How `App(nube)` works
+- [Events](./events/overview) — Full list of events
+- [State](./state/overview) — Complete state reference
+- [Components](./components/overview) — Available UI components
+- [Slots: Checkout](./slots/checkout-slots) — Checkout slot reference
+- [Slots: Storefront](./slots/storefront-slots) — Storefront slot reference
+- [Styling](./styling/overview) — `styled()`, `StyleSheet`, and theme tokens
+- [Browser APIs](./browser-apis) — localStorage, navigate, postMessage
+- [Examples](./examples/overview) — Complete working examples
+- [NubeSDK Assistant](https://gemini.google.com/gem/2cdd8c07de85?usp=sharing) — AI assistant for code conversion
+
+**Need help?** Contact [api@tiendanube.com](mailto:api@tiendanube.com) / [api@nuvemshop.com.br](mailto:api@nuvemshop.com.br). Missing a component, slot, or event? Email with details and visual references.

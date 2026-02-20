@@ -124,6 +124,6 @@ export function App(nube: NubeSDK) {
 
 Use the same pattern for other custom namespaces (e.g. `custom:drawer:close`). The listener always receives `(state, event)` where `event` is the full event name string.
 
-- Learn more about [Browser API's](../browser-apis)
+- Learn more about [Browser APIs](../browser-apis)
 - Learn more about [Components](../components)
 - Learn more about [UI Slots](../slots/overview)
