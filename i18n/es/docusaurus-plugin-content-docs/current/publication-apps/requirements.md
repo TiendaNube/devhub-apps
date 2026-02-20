@@ -156,12 +156,9 @@ Tiendanube ha creado una plantilla para cada categoría que puedes utilizar como
 
 > ▶️ **FAQs ERP**  
 > [Template FAQ ERP](https://docs.google.com/document/d/1n0M6LV1FiArb5IPPYI7CXUVFoVPUF7CHR9wuR-3wp94/edit?tab=t.0#heading=h.u4429oqdb513)
-
 > ▶️ **FAQs Métodos de pago**  
 > [Template FAQ Payments](https://docs.google.com/document/d/1lnmbvwFt5wh6F78e8_ANo2oMEP-rfJaENA8qr-SHlD4/edit?tab=t.0#heading=h.u4429oqdb513)
-
 > ▶️ **FAQs Recursos Logísticos**  
 > [Template FAQ Shipping](https://docs.google.com/document/d/1753SRNZXOO0BilnaJDPdNtIHyiRmNPrLcTjpTMyavPo/)
-
 > ▶️ **FAQs Marketing y otras categorías**  
 > [Template FAQ Marketing e demais categorias](https://docs.google.com/document/d/1cEnV0i0sRN5cblnZ55xHOca_Uf-Ll9er0zyPHoW9ocE/edit?tab=t.0#heading=h.u4429oqdb513)
