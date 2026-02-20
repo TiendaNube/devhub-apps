@@ -7,7 +7,7 @@ title: Mandatory requirements
 
 ## 1. App images
 
-* Download the promotional images for the app from **“App Images”**, which will only be approved if they are the correct required size of **1600 x 800px**.
+* Upload the promotional images for the app from **“App Images”**, which will only be approved if they are the correct required size of **1600 x 800px**.
 
 These images should showcase the app's screens and highlight its main features, sparking the retailer's interest in installing it. The same images are shared across all languages, so if your app is published in all countries, the text in the images must be in both Portuguese and Spanish.
 
@@ -15,7 +15,7 @@ These images should showcase the app's screens and highlight its main features, 
 
 ## 2. Application icon
 
-Download the app icon from **“Icon”**, which will only be approved if it is the correct required size of **600 x 600px**. This image will be your app’s logo.
+Upload the app icon from **“Icon”**, which will only be approved if it is the correct required size of **600 x 600px**. This image will be your app’s logo.
 
 ![icone](../../../../../static/img/en/icone.png "icone")
 
