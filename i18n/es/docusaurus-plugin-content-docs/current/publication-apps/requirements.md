@@ -7,7 +7,7 @@ title: Requisitos Obligatorios
 
 ## 1. Imágenes de la aplicación
 
-- Descarga las imágenes de divulgación de la aplicación en "**Imágenes de la aplicación**", las cuales solo serán aprobadas si tienen la dimensión correcta solicitada de **1600 x 800 px**.
+- Sube las imágenes de divulgación de la aplicación en "**Imágenes de la aplicación**", las cuales solo serán aprobadas si tienen la dimensión correcta solicitada de **1600 x 800 px**.
 
 Estas imágenes deben mostrar las pantallas de la aplicación y divulgar sus principales funcionalidades, despertando el interés del minorista (o dueño de la tienda) en instalarla. Las mismas imágenes se comparten en todos los idiomas; por lo tanto, si tu aplicación se publica en todos los países, el texto de las imágenes debe estar tanto en portugués como en español.
 
@@ -15,7 +15,7 @@ Estas imágenes deben mostrar las pantallas de la aplicación y divulgar sus pri
 
 ## 2. Ícono de la aplicación
 
-Descarga el ícono de la aplicación desde "**Ícono**", que solo se aprobará si tiene el tamaño correcto requerido de **600 x 600 px**. Esta imagen será el logotipo de tu aplicación.
+Sube el ícono de la aplicación desde "**Ícono**", que solo se aprobará si tiene el tamaño correcto requerido de **600 x 600 px**. Esta imagen será el logotipo de tu aplicación.
 
 ![icone](../../../../../static/img/es/icone.png "icone")
 
