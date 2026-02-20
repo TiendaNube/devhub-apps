@@ -97,7 +97,7 @@ nube.on("location:update", ({ location }) => {
 });
 ```
 
-Check the available events in the [events documentation](/docs/applications/nube-sdk/events).
+Check the available events in the [events documentation](/docs/applications/nube-sdk/events/overview).
 
 ---
 
@@ -176,7 +176,7 @@ Install **Nube DevTools** to see:
 
 - [**Official documentation**](/docs/applications/nube-sdk/overview)
 - [**Available components**](/docs/applications/nube-sdk/components/overview)
-- [**Events list**](/docs/applications/nube-sdk/events)
+- [**Events list**](/docs/applications/nube-sdk/events/overview)
 - [**Slots list**](/docs/applications/nube-sdk/slots/overview)
 - **What to do if you're missing a component, slot, or event?** Send an email to [api@tiendanube.com](mailto:api@tiendanube.com) with your request sharing as much detail as possible, ideally accompanied by visual support.
 - **Technical support email:** [api@tiendanube.com](mailto:api@tiendanube.com)

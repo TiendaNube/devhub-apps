@@ -106,4 +106,4 @@ The State section shows the current `NubeSDKState` object, which includes:
 
 This view is particularly useful for debugging, as it allows you to see the exact state at any given moment and understand how different parts of your application interact with the NubeSDK state.
 
-For more information about the state structure and how to access it in your application, see the [State documentation](state).
+For more information about the state structure and how to access it in your application, see the [State documentation](state/overview).
