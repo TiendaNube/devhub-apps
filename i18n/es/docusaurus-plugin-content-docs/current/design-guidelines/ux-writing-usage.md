@@ -9,7 +9,7 @@ Considerar las directrices de UX Writing es fundamental en la construcción de u
 
 La redacción de la experiencia del usuario es más que simplemente elegir palabras; es una forma de comunicar eficazmente el mensaje de la marca, guiar a los usuarios y construir una conexión significativa.
 
-[Consultar la checklist de homologación](../homologation/checklist.md#uso-de-conceptos-de-ux-writing---prioridad-baja)
+[Consultar la checklist de homologación](../publication-apps/checklist.md#uso-de-conceptos-de-ux-writing---prioridad-baja)
 
 ## Nomenclatura de Aplicaciones y Pantallas
 

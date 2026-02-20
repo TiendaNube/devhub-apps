@@ -9,7 +9,7 @@ Nimbus design templates are valuable tools for ensuring visual consistency and a
 
 Prioritizing the adoption of these templates is essential to maintain brand identity and streamline the homologation process.
 
-[Check the homologation checklist](../homologation/checklist#uso-de-templates-nimbus---prioridade-alta)
+[Check the homologation checklist](../publication-apps/checklist#uso-de-templates-nimbus---prioridade-alta)
 
 ## Empty and Initial State Page
 

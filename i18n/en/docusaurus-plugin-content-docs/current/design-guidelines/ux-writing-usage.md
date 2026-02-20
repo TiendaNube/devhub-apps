@@ -9,7 +9,7 @@ Taking into account UX Writing guidelines is fundamental in building an effectiv
 
 User experience writing is more than just choosing words; it's a means of effectively communicating the brand's message, guiding users, and building a meaningful connection.
 
-[Check the homologation checklist](../homologation/checklist.md#using-ux-writing-concepts---low-priority)
+[Check the homologation checklist](../publication-apps/checklist.md#using-ux-writing-concepts---low-priority)
 
 ## Naming Apps and Screens
 

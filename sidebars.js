@@ -215,10 +215,18 @@ const sidebars = {
 				"homologation/sync",
 				"homologation/guidelines",
 				"homologation/requirements",
-				"homologation/publication",
-				"homologation/checklist",
 			],
 		},
+		{
+      type: "category",
+      label: "Publicação de Apps",
+      items: [
+        "publication-apps/overview",
+        "publication-apps/requirements",
+        "publication-apps/publications",
+        "publication-apps/checklist",
+      ],
+    },    
 		{
 			type: "doc",
 			label: "Guia de integração de ERPs",
