@@ -14,35 +14,35 @@ Storefront slots are containers available in the storefront pages where you can 
 
 These are the slots that are available in the storefront:
 
-| Slot                                 | Page                            |
-| ------------------------------------ | ------------------------------- |
-| before_main_content                  | home, product, category, search |
+| Slot                                 | Page                                  |
+| ------------------------------------ | ------------------------------------- |
+| before_main_content                  | home, product, category, search       |
 | after_header                         | home, product, category, search, cart |
 | drawer_left                          | home, product, category, search, cart |
 | drawer_right                         | home, product, category, search, cart |
-| before_quick_buy_add_to_cart         | home, category, search          |
-| before_product_grid_item_name        | home, category, search          |
-| after_product_grid_item_name         | home, category, search          |
-| before_product_grid_item_price       | home, category, search          |
-| after_product_grid_item_price        | home, category, search          |
-| product_grid_item_image_top_left     | home, product, category, search |
-| product_grid_item_image_top_right    | home, product, category, search |
-| product_grid_item_image_bottom_left  | home, product, category, search |
-| product_grid_item_image_bottom_right | home, product, category, search |
-| before_start_checkout_button         | home, product, category, search |
-| before_product_detail_name           | product                         |
-| after_product_detail_name            | product                         |
-| before_price_pdp                     | product                         |
-| before_product_detail_add_to_cart    | product                         |
-| before_add_to_cart_pdp               | product                         |
-| after_product_detail_add_to_cart     | product                         |
-| after_add_to_cart_pdp                | product                         |
-| after_product_description            | product                         |
-| before_line_items                    | cart                            |
-| cart_line_item_top                   | cart                            |
-| after_cart_summary                   | cart                            |
-| after_go_to_checkout                 | cart                            |
-| before_footer                        | home, product, category, search |
+| before_quick_buy_add_to_cart         | home, category, search                |
+| before_product_grid_item_name        | home, category, search                |
+| after_product_grid_item_name         | home, category, search                |
+| before_product_grid_item_price       | home, category, search                |
+| after_product_grid_item_price        | home, category, search                |
+| product_grid_item_image_top_left     | home, product, category, search       |
+| product_grid_item_image_top_right    | home, product, category, search       |
+| product_grid_item_image_bottom_left  | home, product, category, search       |
+| product_grid_item_image_bottom_right | home, product, category, search       |
+| before_start_checkout_button         | home, product, category, search       |
+| before_product_detail_name           | product                               |
+| after_product_detail_name            | product                               |
+| before_price_pdp                     | product                               |
+| before_product_detail_add_to_cart    | product                               |
+| before_add_to_cart_pdp               | product                               |
+| after_product_detail_add_to_cart     | product                               |
+| after_add_to_cart_pdp                | product                               |
+| after_product_description            | product                               |
+| before_line_items                    | cart                                  |
+| cart_line_item_top                   | cart                                  |
+| after_cart_summary                   | cart                                  |
+| after_go_to_checkout                 | cart                                  |
+| before_footer                        | home, product, category, search       |
 
 ## Slot Visual Reference
 
@@ -53,6 +53,12 @@ These are the slots that are available in the storefront:
 ![Before Main Content Slot](/img/pt/nube-sdk-before_main_content.png)
 
 - `after_header`
+
+<Alert appearance="warning" title="Important">
+  <Text>On the Patagonia theme, merchants can enable a transparent header option. When this setting is active, the <code>after_header</code> slot is hidden and will not be rendered.</Text>
+</Alert>
+
+<br />
 
 ![After Header Slot](/img/pt/nube-sdk-after_header.png)
 

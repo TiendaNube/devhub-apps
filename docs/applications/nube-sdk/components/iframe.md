@@ -8,7 +8,7 @@ import AppTypes from '@site/src/components/AppTypes';
 The `Iframe` component allows you to embed external web content directly into your application's UI. It creates an inline frame that loads content from a specified URL within a designated UI slot.
 
 <Alert appearance="warning" title="Important">
-  The Iframe component is only available in storefront. It is not available in checkout.
+  Whenever possible, build your apps using standard components and avoid using iframes.
 </Alert>
 
 ### Usage
@@ -34,8 +34,8 @@ import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 export function App(nube: NubeSDK) {
   nube.render(
     "after_line_items",
-    <Iframe 
-      src="https://your-app-domain.com" 
+    <Iframe
+      src="https://your-app-domain.com"
       width="100%"
       height="400px"
       style={{
@@ -48,6 +48,12 @@ export function App(nube: NubeSDK) {
 ```
 
 ### Communication
+
+<Alert appearance="warning" title="Important">
+  The Iframe component is only available in storefront. It is not available in checkout.
+</Alert>
+
+<br />
 
 The `Iframe` component supports bidirectional communication between your app and the embedded content.
 
@@ -110,9 +116,9 @@ When implementing the code that runs inside the iframe, use `window.parent.postM
 window.parent.postMessage(
   {
     type: "custom-event",
-    data: { message: "Hello from iframe" }
+    data: { message: "Hello from iframe" },
   },
-  "*" // Target origin - use specific origin in production
+  "*", // Target origin - use specific origin in production
 );
 ```
 
@@ -123,7 +129,7 @@ To listen for messages sent from the parent window to the iframe:
 window.addEventListener("message", (event) => {
   // Verify origin for security
   if (event.origin !== "https://your-app-domain.com") return;
-  
+
   console.log("Message from parent:", event.data);
 });
 ```
@@ -139,11 +145,11 @@ When embedding external content using iframes, consider the following security b
 
 ### Properties
 
-| Property  | Type                                    | Required | Description                                                          |
-| --------- | --------------------------------------- | -------- | -------------------------------------------------------------------- |
-| src       | string                                  | Yes      | The URL of the content to embed. Must use "https://".               |
-| width     | Size                                    | No       | Width of the iframe (e.g., "100%", "600px", 600).                   |
-| height    | Size                                    | No       | Height of the iframe (e.g., "400px", "50vh", 400).                  |
-| style     | StyleSheet                              | No       | Custom styles for the iframe container.                              |
-| id        | string                                  | No       | Optional unique identifier for the component.                        |
-| onMessage | (event: { value: unknown }) => void     | No       | Callback function called when a message is received from the iframe. |
+| Property  | Type                                | Required | Description                                                          |
+| --------- | ----------------------------------- | -------- | -------------------------------------------------------------------- |
+| src       | string                              | Yes      | The URL of the content to embed. Must use "https://".                |
+| width     | Size                                | No       | Width of the iframe (e.g., "100%", "600px", 600).                    |
+| height    | Size                                | No       | Height of the iframe (e.g., "400px", "50vh", 400).                   |
+| style     | StyleSheet                          | No       | Custom styles for the iframe container.                              |
+| id        | string                              | No       | Optional unique identifier for the component.                        |
+| onMessage | (event: { value: unknown }) => void | No       | Callback function called when a message is received from the iframe. |
