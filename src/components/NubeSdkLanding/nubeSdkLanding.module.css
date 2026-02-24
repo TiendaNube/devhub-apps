@@ -159,6 +159,150 @@
   margin-bottom: 56px;
 }
 
+/* ── "What is NubeSDK?" intro ──────────────────────────────── */
+
+.introCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-left: 4px solid #006bc8;
+  border-radius: 0 12px 12px 0;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.introTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  margin: 0 0 12px;
+}
+
+.introText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 10px;
+  opacity: 0.9;
+}
+
+.introText:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .introCard {
+  border-left-color: #5eb6ff;
+}
+
+/* ── App Journey timeline ──────────────────────────────────── */
+
+.journeyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .journeyGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.journeyStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 12px;
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.journeyStep:nth-child(1) { animation-delay: 0s; }
+.journeyStep:nth-child(2) { animation-delay: 0.1s; }
+.journeyStep:nth-child(3) { animation-delay: 0.2s; }
+.journeyStep:nth-child(4) { animation-delay: 0.3s; }
+
+.journeyConnector {
+  position: absolute;
+  top: 28px;
+  left: calc(50% + 28px);
+  right: calc(-50% + 28px);
+  height: 2px;
+  background: linear-gradient(90deg, #006bc8, #0094ff);
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .journeyConnector {
+    display: none;
+  }
+}
+
+.journeyStep:last-child .journeyConnector {
+  display: none;
+}
+
+.journeyNumber {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.journeyStep:hover .journeyNumber {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 107, 200, 0.15);
+}
+
+.journeyNum1,
+.journeyNum2,
+.journeyNum3,
+.journeyNum4 {
+  background: linear-gradient(135deg, #e8f3ff 0%, #cce5ff 100%);
+  color: #006bc8;
+}
+
+.journeyStepTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  margin: 0 0 4px;
+}
+
+.journeyStepText {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ifm-font-color-base);
+  opacity: 0.75;
+  margin: 0;
+}
+
+[data-theme="dark"] .journeyNum1,
+[data-theme="dark"] .journeyNum2,
+[data-theme="dark"] .journeyNum3,
+[data-theme="dark"] .journeyNum4 {
+  background: linear-gradient(135deg, #0d2944 0%, #0a3d6b 100%);
+  color: #5eb6ff;
+}
+
+[data-theme="dark"] .journeyConnector {
+  background: linear-gradient(90deg, #5eb6ff, #a78bfa);
+  opacity: 0.2;
+}
+
+[data-theme="dark"] .journeyStep:hover .journeyNumber {
+  box-shadow: 0 6px 20px rgba(94, 182, 255, 0.12);
+}
+
 /* Pillar cards (Why NubeSDK) */
 
 .pillarsGrid {

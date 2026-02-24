@@ -17,7 +17,9 @@ import {
   ToolsIcon,
   StoreIcon,
   BrowserIcon,
+  BrowserSearchIcon,
   GlobeIcon,
+  PlusCircleIcon,
 } from "@nimbus-ds/icons";
 import styles from "./nubeSdkLanding.module.css";
 
@@ -60,6 +62,31 @@ const NubeSdkLanding: React.FC = () => (
         <span className={styles.statNumber}>100%</span>
         <span className={styles.statLabel}>TypeScript</span>
       </div>
+    </div>
+
+    {/* What is NubeSDK? */}
+    <div className={styles.introCard}>
+      <h2 className={styles.introTitle}>What is NubeSDK?</h2>
+      <p className={styles.introText}>
+        NubeSDK is the official toolkit for building third-party applications
+        that run directly inside Nuvemshop storefronts and checkouts. Apps are
+        hosted inside{" "}
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Web Workers
+        </a>{" "}
+        in the browser — an isolated sandbox that guarantees two applications can
+        never interfere with each other or with the store itself.
+      </p>
+      <p className={styles.introText}>
+        Instead of manipulating the DOM, your app communicates with the platform
+        through a structured event system and renders UI into predefined slots.
+        The result is a safer, more stable ecosystem where every app is a
+        first-class citizen.
+      </p>
     </div>
 
     {/* Why NubeSDK */}
@@ -146,6 +173,57 @@ const NubeSdkLanding: React.FC = () => (
               debugging.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* App Journey */}
+    <section className={styles.section}>
+      <p className={styles.sectionLabel}>Your Path</p>
+      <h2 className={styles.sectionTitle}>From idea to the App Store</h2>
+      <p className={styles.sectionSubtitle}>
+        Four steps to go from zero to a published application.
+      </p>
+
+      <div className={styles.journeyGrid}>
+        <div className={styles.journeyStep}>
+          <div className={`${styles.journeyNumber} ${styles.journeyNum1}`}>
+            <PlusCircleIcon size="medium" />
+          </div>
+          <div className={styles.journeyConnector} />
+          <h4 className={styles.journeyStepTitle}>Create</h4>
+          <p className={styles.journeyStepText}>
+            Register your app in the Partner Portal and scaffold the project
+          </p>
+        </div>
+        <div className={styles.journeyStep}>
+          <div className={`${styles.journeyNumber} ${styles.journeyNum2}`}>
+            <CodeIcon size="medium" />
+          </div>
+          <div className={styles.journeyConnector} />
+          <h4 className={styles.journeyStepTitle}>Develop</h4>
+          <p className={styles.journeyStepText}>
+            Build features with events, components, and theme-aware styling
+          </p>
+        </div>
+        <div className={styles.journeyStep}>
+          <div className={`${styles.journeyNumber} ${styles.journeyNum3}`}>
+            <BrowserSearchIcon size="medium" />
+          </div>
+          <div className={styles.journeyConnector} />
+          <h4 className={styles.journeyStepTitle}>Test</h4>
+          <p className={styles.journeyStepText}>
+            Debug with DevTools, run unit tests, and validate on a demo store
+          </p>
+        </div>
+        <div className={styles.journeyStep}>
+          <div className={`${styles.journeyNumber} ${styles.journeyNum4}`}>
+            <StoreIcon size="medium" />
+          </div>
+          <h4 className={styles.journeyStepTitle}>Publish</h4>
+          <p className={styles.journeyStepText}>
+            Submit for homologation and launch on the Nuvemshop App Store
+          </p>
         </div>
       </div>
     </section>
