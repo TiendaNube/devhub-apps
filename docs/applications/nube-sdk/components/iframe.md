@@ -7,8 +7,8 @@ import AppTypes from '@site/src/components/AppTypes';
 
 The `Iframe` component allows you to embed external web content directly into your application's UI. It creates an inline frame that loads content from a specified URL within a designated UI slot.
 
-<Alert appearance="warning" title="Important">
-  The Iframe component is only available in storefront. It is not available in checkout.
+<Alert appearance="warning" title="Attention">
+  Whenever possible, build your apps using standard components and avoid using iframes.
 </Alert>
 
 ### Usage
@@ -48,6 +48,12 @@ export function App(nube: NubeSDK) {
 ```
 
 ### Communication
+
+<Alert appearance="warning" title="Important">
+  The Iframe component is only available in storefront. It is not available in checkout.
+</Alert>
+
+<br />
 
 The `Iframe` component supports bidirectional communication between your app and the embedded content.
 
