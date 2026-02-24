@@ -55,7 +55,7 @@ These are the slots that are available in the storefront:
 - `after_header`
 
 <Alert appearance="warning" title="Important">
-  <Text>On the Lightspeed theme, merchants can enable a transparent header option. When this setting is active, the <code>after_header</code> slot is hidden and will not be rendered.</Text>
+  <Text>On the Patagonia theme, merchants can enable a transparent header option. When this setting is active, the <code>after_header</code> slot is hidden and will not be rendered.</Text>
 </Alert>
 
 <br />
