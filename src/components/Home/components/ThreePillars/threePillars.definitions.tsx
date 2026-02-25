@@ -29,7 +29,7 @@ export const pillars = [
   {
     icon: DesktopIcon as FC<IconProps>,
     title: (
-      <Translate id="home.threePillars.card.2.title">App Admin</Translate>
+      <Translate id="home.threePillars.card.2.title">App Panel</Translate>
     ),
     text: (
       <Translate id="home.threePillars.card.2.description">

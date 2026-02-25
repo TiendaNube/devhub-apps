@@ -24,8 +24,8 @@ const Home: React.FC = () => {
       />
       <div className={classnames("container", styles.homeContainer)}>
         <Hero />
-        <WhyTiendanube />
         <ThreePillars />
+        <WhyTiendanube />
         <GuidedPaths />
         <Resources />
       </div>
