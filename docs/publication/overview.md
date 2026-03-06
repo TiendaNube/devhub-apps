@@ -7,7 +7,7 @@ title: Visão Geral
 
 Nesta seção, forneceremos um guia passo a passo para que você possa publicar o seu aplicativo na [Loja de Aplicativos da Nuvemshop](https://www.nuvemshop.com.br/loja-aplicativos-nuvem).
 
-Para a publicação do aplicativo, existem duas etapas a serem realizadas, de forma independente e paralelas:
+Para a publicação do aplicativo, existem duas etapas a serem realizadas, de forma independentes e paralelas:
 
 ## Etapa 1: Envio dos artefatos
 
