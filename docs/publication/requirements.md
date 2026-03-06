@@ -152,12 +152,9 @@ A Nuvemshop criou um modelo para cada categoria para uso padrão que você dever
 
 > ▶️ **FAQs ERP**
 [Template FAQ ERP](https://docs.google.com/document/d/132lUrxGcUTn0UaUcUnahFOaT8OtsF7vA3kpgdE932JM/edit?tab=t.0)
-
 > ▶️ **FAQs Meios de Pagamento**
 [Template FAQ Payments](https://docs.google.com/document/d/1nuBFVAL9JsH1TaNSGBHm2VJdBBi6A50ACv_wcjc5WGI/edit?tab=t.0)
-
 > ▶️ **FAQs Meios de Logística**
 [Template FAQ Shipping](https://docs.google.com/document/d/1ZWSWyVp0X3mxOMzbuP8d0_JXFeu1stOebWQ63wvE_34/edit?tab=t.0)
-
 > ▶️ **FAQs de Marketing e demais categorias**
 [Template FAQ Marketing e demais categorias](https://docs.google.com/document/d/1RMy2SpqRm2k1QVPBjngeMePFWf3RdObvdcg7wACIrjQ/edit?tab=t.0)
