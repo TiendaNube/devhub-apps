@@ -156,12 +156,9 @@ Nuvemshop has created a template for each category for standard use, which you s
 
 > ▶️ **FAQs ERP**
 [Template FAQ ERP](https://docs.google.com/document/d/132lUrxGcUTn0UaUcUnahFOaT8OtsF7vA3kpgdE932JM/edit?tab=t.0)
-
 > ▶️ **FAQs Payment Methods**
 [Template FAQ Payments](https://docs.google.com/document/d/1nuBFVAL9JsH1TaNSGBHm2VJdBBi6A50ACv_wcjc5WGI/edit?tab=t.0)
-
 > ▶️ **FAQs Logistics Resources**
 [Template FAQ Shipping](https://docs.google.com/document/d/1ZWSWyVp0X3mxOMzbuP8d0_JXFeu1stOebWQ63wvE_34/edit?tab=t.0)
-
 > ▶️ **FAQs Marketing and other categories**
 [Template FAQ Marketing and other categories](https://docs.google.com/document/d/1RMy2SpqRm2k1QVPBjngeMePFWb3RdObvdcg7wACIrjQ/edit?tab=t.0)
