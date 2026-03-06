@@ -12,8 +12,8 @@ Para a publicação do aplicativo, existem duas etapas a serem realizadas, de fo
 ## Etapa 1: Envio dos artefatos
 
 * Assim que feita a solicitação de homologação, você receberá um e-mail com instruções e pedido de envio de arquivos
-* Estes arquivos são denominados artefatos, que contemplará arquivos relacionados ao fluxo de homologação e outros relacionados ao fluxo de publicação
-* Todos estes arquivos, ou seja, o artefato completo, deverá ser enviado para que a equipe possa assim iniciar as validações do aplicativo.
+* Estes arquivos são denominados artefatos, que contemplam arquivos relacionados ao fluxo de homologação e outros relacionados ao fluxo de publicação.
+* Todos estes arquivos, ou seja, o artefato completo, deverão ser enviados para que a equipe possa iniciar as validações do aplicativo.
 
 :::warning
     A etapa de homologação e publicação somente inicia-se após o envio de todos os artefatos.
