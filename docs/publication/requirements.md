@@ -97,7 +97,7 @@ Exemplo: *“Você pode experimentar o Aplicativo X grátis por 30 dias e escolh
 * Controle por R$ 99/mês;
 * Completo por R$ 199/mês.
 
-Veja mais detalhes sobre planos e preços neste link."
+Veja mais detalhes sobre planos e preços neste link.
 
 7. **Como integrar o Aplicativo X com a Nuvemshop?**
 
@@ -111,7 +111,7 @@ Exemplo: *“Para integrar o Aplicativo X à sua loja Nuvemshop, é só seguir o
 * Valide o código no seu painel Nuvemshop;
 * Pronto! Você já pode usar o Aplicativo X para conseguir fretes mais baratos.
 
-Se tiver dúvidas, confira o passo a passo de como instalar o Aplicativo X. (Link)"
+Se tiver dúvidas, confira o passo a passo de como instalar o Aplicativo X. (Link)
 
 8. **Suporte ao lojista**
 
