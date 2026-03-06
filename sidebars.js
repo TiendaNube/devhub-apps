@@ -221,6 +221,15 @@ const sidebars = {
 			],
 		},
 		{
+			type: "category",
+			label: "Publicação de Apps",
+			items: [
+				"publication/overview",
+				"publication/requirements",
+				"publication/publications",
+			],
+		},
+		{
 			type: "doc",
 			label: "Guia de integração de ERPs",
 			id: "erp-guide/overview",
