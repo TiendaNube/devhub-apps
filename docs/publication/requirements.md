@@ -134,7 +134,7 @@ Você também tem a opção de usar o <u>**Agente de Inteligência Artificial da
 
 3. **Especifique as regiões de publicação e particularidades:** informe os países onde o app estará disponível e detalhe eventuais diferenças de recursos por região (por exemplo, módulo fiscal ativo apenas no Chile), para que o agente adapte o conteúdo adequadamente.
 
-4. **Aguarde a geração dos blocos de HTML otimizados para SEO e embed:** o agente entregará, diretamente no chat, um bloco de código HTML para cada país definido, precedido pelo comentário <!-- Descripción [country] -->. Esses blocos estarão prontos para serem incorporados na página de aplicativo já existente, respeitando a hierarquia de títulos e evitando conflitos de elementos, adaptados ao idioma local, como português para Brasil ou Espanhol para Argentina.
+4. **Aguarde a geração dos blocos de HTML otimizados para SEO e embed:** o agente entregará, diretamente no chat, um bloco de código HTML para cada país definido, precedido pelo comentário `<!-- Descripción [country] -->`. Esses blocos estarão prontos para serem incorporados na página de aplicativo já existente, respeitando a hierarquia de títulos e evitando conflitos de elementos, adaptados ao idioma local, como português para Brasil ou Espanhol para Argentina.
 
 5. **Publique no painel de integração da Nuvemshop:** copie cada bloco de HTML retornado e cole-o no campo de descrição correspondente a cada país no editor de integração; em seguida, salve e publique as alterações.
 
