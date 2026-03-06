@@ -14,5 +14,5 @@ La aplicación solo estará disponible en la tienda de aplicaciones de Tiendanub
 
 :::warning
 Nuestro equipo solo iniciará la homologación después de recibir estos documentos de artefactos y publicación.
-Es importante seguir todos estos procesos para acelerar la publicación de tu aplicación en la Tienda de Aplicaciones y ponerla a disposición de las tienda.
+Es importante seguir todos estos procesos para acelerar la publicación de tu aplicación en la Tienda de Aplicaciones y ponerla a disposición de las tiendas.
 :::
