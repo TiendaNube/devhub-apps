@@ -116,7 +116,7 @@ Provide a step-by-step summary of how to install the application.
 * Accept the app permissions;
 * Create an account on App X;
 * Validate the code in your Nuvemshop dashboard;
-* Done! You can now use App X to get cheaper shipping.”*
+* Done! You can now use App X to get cheaper shipping.”
 
 If you have any questions, check out the step-by-step instructions on how to install the X App. (Link)
 
