@@ -74,7 +74,7 @@ Example: “App X connects your online store to carriers throughout the country,
 
 Be direct and use bullet points to make it easier to read and understand.
 
-Example: “App X offers the following features:
+Example: “App X offers the following features:"
 
 * Shipping carrier search based on product and delivery profile;
 * Direct integration with freight rate tables;
@@ -87,23 +87,23 @@ Example: “App X offers the following features:
 
 Be direct and use bullet points to make it easier to read and understand.
 
-Example: “You have the following advantages when you install App X on your Nuvemshop:
+Example: “You have the following advantages when you install App X on your Nuvemshop:"
 
 * Cheaper and more competitive shipping rates;
 * Centralization of all logistics activity in a single app;
 * Tracking of orders at all stages of shipment;
 * Greater coverage in Brazil for logistics operators;
-* Simplified shipping cost calculation in your online store.”*
+* Simplified shipping cost calculation in your online store.
 
 6. **Plans and Pricing for Nuvemshop Merchants**
 
 If possible, please detail the plans and prices, as well as any specific offers for Nuvemshop customers.
 
-Example: “You can try App X for free for 30 days and choose from the following plans:
+Example: “You can try App X for free for 30 days and choose from the following plans:"
 
 * Essential plan for $ 59/month;
 * Control plan for $ 99/month;
-* Complete plan for $ 199/month.*
+* Complete plan for $ 199/month.
 
 See more details about plans and prices at this link.”
 
@@ -139,7 +139,7 @@ You also have the option of using Nuvemshop's Artificial Intelligence Agent, the
 1. Access the ChatGPT agent **[“Tiendanube Appstore Description Generator”](https://chatgpt.com/g/g-684a0c4e5ee8819199c155f69f465e4e-tiendanube-appstore-description-generator)** clicking the link will start the interactive generation of the long description.
 2. **Define the information sources:** insert the URL of your app's official website, links to articles or tutorials from the Help Center, and/or upload a document (PDF or DOCX) with an overview of the features, ensuring coverage of all sections of the guide (purpose, benefits, features, etc.).
 3. **Specify the publication regions and specific details:** indicate the countries where the app will be available and detail any differences in features by region (for example, tax module active only in Chile), so that the agent can adapt the content accordingly.
-4. **Please wait for the generation of SEO-optimized HTML blocks for embedding:** the agent will deliver, directly in the chat, an HTML code block for each defined country, preceded by the comment . These blocks will be ready to be incorporated into the existing application page, respecting the heading hierarchy and avoiding element conflicts, adapted to the local language, such as Portuguese for Brazil or Spanish for Argentina.
+4. **Please wait for the generation of SEO-optimized HTML blocks for embedding:** the agent will deliver, directly in the chat, an HTML code block for each defined country, preceded by the comment `<!-- Descripción [country] -->`. These blocks will be ready to be incorporated into the existing application page, respecting the heading hierarchy and avoiding element conflicts, adapted to the local language, such as Portuguese for Brazil or Spanish for Argentina.
 5. **Publish in the Nuvemshop integration panel:** copy each returned HTML block and paste it into the description field corresponding to each country in the integration editor; then save and publish the changes.
 
 ## 5. FAQs (Frequently Asked Questions)
