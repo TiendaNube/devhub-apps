@@ -1,4 +1,5 @@
-export { default as AppTypes } from "./AppTypes";
-export { default as DevelopmentTools } from "./DevelopmentTools";
 export { default as Hero } from "./Hero";
-export { default as OtherLinks } from "./OtherLinks";
+export { default as WhyTiendanube } from "./WhyTiendanube";
+export { default as ThreePillars } from "./ThreePillars";
+export { default as GuidedPaths } from "./GuidedPaths";
+export { default as Resources } from "./Resources";

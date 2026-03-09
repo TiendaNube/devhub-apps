@@ -1,90 +1,162 @@
 {
   "siteConfig.description": {
-    "message": "Desarrolle aplicaciones para el ecosistema de Tiendanube y maximice sus ganancias"
-  },
-  "home.developerTools.title": {
-    "message": "Herramientas de Desarrollo"
-  },
-  "home.developerTools.card.1.title": {
-    "message": "API de Tiendanube"
-  },
-  "home.developerTools.card.1.description": {
-    "message": "Desarrolle aplicaciones integrando sus servicios con nuestra API de Tiendanube."
-  },
-  "home.developerTools.card.1.linkText": {
-    "message": "Conozca nuestra API"
-  },
-  "home.developerTools.card.2.title": {
-    "message": "App Templates"
-  },
-  "home.developerTools.card.2.description": {
-    "message": "Acelere el desarrollo de aplicaciones a partir de una plantilla de código."
-  },
-  "home.developerTools.card.2.linkText": {
-    "message": "Conozca las app templates"
-  },
-  "home.developerTools.card.3.title": {
-    "message": "Nexo"
-  },
-  "home.developerTools.card.3.description": {
-    "message": "Conéctese con el administrador de tiendas de forma rápida y sencilla."
-  },
-  "home.developerTools.card.3.linkText": {
-    "message": "Conozca Nexo"
-  },
-  "home.developerTools.card.4.title": {
-    "message": "Sistema de Diseño Nimbus"
-  },
-  "home.developerTools.card.4.description": {
-    "message": "Cree interfaces y experiencias utilizando nuestro sistema de diseño y acelere el desarrollo de su aplicación."
-  },
-  "home.developerTools.card.4.linkText": {
-    "message": "Conozca Nimbus"
+    "message": "Crea aplicaciones para el mayor ecosistema de e-commerce de América Latina"
   },
   "home.hero.title": {
-    "message": "Desarrolle aplicaciones para el ecosistema de Tiendanube y maximice sus ganancias"
+    "message": "Crea aplicaciones para el mayor ecosistema de e-commerce de América Latina"
+  },
+  "home.hero.stats": {
+    "message": "+180 mil tiendas activas · 5 países · US$335M en ventas anuales"
   },
   "home.hero.button": {
-    "message": "Empezar ahora"
+    "message": "Empezar a construir"
   },
-  "home.appTypes.title": {
-    "message": "Descubra los diferentes tipos de aplicaciones disponibles"
+  "home.whyTiendanube.title": {
+    "message": "¿Por qué desarrollar para Tiendanube?"
   },
-  "home.appTypes.card.1.title": {
-    "message": "Aplicación Integrada"
+  "home.whyTiendanube.stat.1.label": {
+    "message": "tiendas activas"
   },
-  "home.appTypes.card.1.text": {
-    "message": "Construya aplicaciones integradas al administrador de tiendas, para una experiencia mejorada y fácil acceso a funciones."
+  "home.whyTiendanube.stat.1.description": {
+    "message": "Tu app llega a comerciantes de toda América Latina desde el primer día"
   },
-  "home.appTypes.card.1.linkText": {
-    "message": "Lea la documentación"
+  "home.whyTiendanube.stat.2.label": {
+    "message": "en ventas anuales"
   },
-  "home.appTypes.card.2.title": {
-    "message": "Aplicación Externa"
+  "home.whyTiendanube.stat.2.description": {
+    "message": "Conéctate a un ecosistema comercial con volumen real de transacciones"
   },
-  "home.appTypes.card.2.text": {
-    "message": "Construya aplicaciones de forma independiente para una experiencia más personalizada e integrada con su producto."
+  "home.whyTiendanube.stat.3.label": {
+    "message": "países"
   },
-  "home.appTypes.card.2.linkText": {
-    "message": "Lea la documentación"
+  "home.whyTiendanube.stat.3.description": {
+    "message": "AR, BR, CL, CO y MX — una integración, alcance multinacional"
   },
-  "home.OtherLinks.title": {
-    "message": "Otros enlaces"
+  "home.whyTiendanube.stat.4.label": {
+    "message": "socios activos"
   },
-  "home.otherLinks.cards.linkText": {
-    "message": "Lea la documentación"
+  "home.whyTiendanube.stat.4.description": {
+    "message": "Forma parte de un ecosistema colaborativo con soporte especializado"
   },
-  "home.otherLinks.card.1.title": {
+  "home.whyTiendanube.benefit.1": {
+    "message": "Visibilidad en la App Store — tu app aparece directamente frente a los comerciantes"
+  },
+  "home.whyTiendanube.benefit.2": {
+    "message": "Programa de Partners — niveles Silver, Gold y Platinum con beneficios exclusivos"
+  },
+  "home.whyTiendanube.benefit.3": {
+    "message": "Soporte técnico dedicado durante la integración y homologación"
+  },
+  "home.whyTiendanube.benefit.4": {
+    "message": "Ecosistema completo — pagos, envíos, marketing e IA ya integrados"
+  },
+  "home.whyTiendanube.partnerLink": {
+    "message": "Conoce el Programa de Partners"
+  },
+  "home.threePillars.title": {
+    "message": "Tres formas de extender la plataforma"
+  },
+  "home.threePillars.subtitle": {
+    "message": "Elige dónde construir según lo que tu aplicación necesita"
+  },
+  "home.threePillars.card.1.title": {
+    "message": "Backend API"
+  },
+  "home.threePillars.card.1.description": {
+    "message": "Conéctate a los datos de la tienda. Gestiona productos, pedidos, clientes y más a través de nuestra API REST."
+  },
+  "home.threePillars.card.1.linkText": {
+    "message": "Explorar la API"
+  },
+  "home.threePillars.card.2.title": {
+    "message": "App Admin"
+  },
+  "home.threePillars.card.2.description": {
+    "message": "Construye la interfaz de configuración donde el comerciante gestiona tu aplicación. Integrada o externa."
+  },
+  "home.threePillars.card.2.linkText": {
+    "message": "Construir tu admin"
+  },
+  "home.threePillars.card.3.title": {
+    "message": "Storefront & Checkout"
+  },
+  "home.threePillars.card.3.description": {
+    "message": "Transforma la experiencia de compra. Agrega componentes, personaliza el checkout y mejora la tienda con NubeSDK."
+  },
+  "home.threePillars.card.3.linkText": {
+    "message": "Comenzar con NubeSDK"
+  },
+  "home.guidedPaths.title": {
+    "message": "¿Qué quieres construir?"
+  },
+  "home.guidedPaths.subtitle": {
+    "message": "Elige tu caso de uso y sigue el camino recomendado"
+  },
+  "home.guidedPaths.card.1.useCase": {
+    "message": "Integración ERP / gestión"
+  },
+  "home.guidedPaths.card.1.description": {
+    "message": "Sincroniza productos, pedidos e inventario entre la tienda y tu sistema"
+  },
+  "home.guidedPaths.card.2.useCase": {
+    "message": "Widget en la tienda o checkout"
+  },
+  "home.guidedPaths.card.2.description": {
+    "message": "Agrega banners, información extra o personalizaciones visuales en la tienda"
+  },
+  "home.guidedPaths.card.3.useCase": {
+    "message": "Pagos / envíos / logística"
+  },
+  "home.guidedPaths.card.3.description": {
+    "message": "Integra métodos de pago u opciones de envío a la tienda"
+  },
+  "home.guidedPaths.card.4.useCase": {
+    "message": "Marketing / analytics"
+  },
+  "home.guidedPaths.card.4.description": {
+    "message": "Conecta herramientas de marketing, analytics o CRM a la tienda"
+  },
+  "home.guidedPaths.linkText": {
+    "message": "Ver guía"
+  },
+  "home.resources.title": {
+    "message": "Recursos"
+  },
+  "home.resources.card.1.title": {
+    "message": "Templates de aplicación"
+  },
+  "home.resources.card.1.description": {
+    "message": "Comienza a partir de un template y acelera el desarrollo"
+  },
+  "home.resources.card.1.linkText": {
+    "message": "Ver templates"
+  },
+  "home.resources.card.2.title": {
+    "message": "Programa de Partners"
+  },
+  "home.resources.card.2.description": {
+    "message": "Únete a +600 socios y expande tu negocio"
+  },
+  "home.resources.card.2.linkText": {
+    "message": "Conocer el programa"
+  },
+  "home.resources.card.3.title": {
     "message": "Homologación"
   },
-  "home.otherLinks.card.2.title": {
-    "message": "Lista de Verificación de Diseño"
+  "home.resources.card.3.description": {
+    "message": "¿Listo para publicar? Conoce el proceso de aprobación"
   },
-  "home.otherLinks.card.3.title": {
-    "message": "Directrices de Design"
+  "home.resources.card.3.linkText": {
+    "message": "Ver proceso"
   },
-  "home.otherLinks.card.4.title": {
-    "message": "Autenticación Manual"
+  "home.resources.card.4.title": {
+    "message": "Sistema de Diseño Nimbus"
+  },
+  "home.resources.card.4.description": {
+    "message": "Componentes y patrones para construir interfaces consistentes"
+  },
+  "home.resources.card.4.linkText": {
+    "message": "Explorar Nimbus"
   },
   "theme.ErrorPageContent.title": {
     "message": "Esta página falló.",

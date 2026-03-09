@@ -1,32 +1,47 @@
 import React from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
-import { Box, Button } from "@nimbus-ds/components";
+import { Box, Button, Text } from "@nimbus-ds/components";
 
 const Hero: React.FC = () => (
   <Box
     display="flex"
     flexDirection="column"
-    height="432px"
     justifyContent="center"
-    gap="4"
-    width={{ xs: "100%", md: "100%", lg: "50%" }}
+    gap="6"
+    py="20"
+    width={{ xs: "100%", md: "100%", lg: "70%" }}
   >
     <Box
       as="h1"
-      fontSize="12"
-      lineHeight="14"
+      fontSize="14"
+      lineHeight="16"
       fontWeight="regular"
       color="primary-textLow"
+      mb="none"
     >
       <Translate id="home.hero.title">
-        Desenvolva aplicativos para o ecossistema Nuvemshop e potencialize seus
-        ganhos
+        Crie aplicativos para o maior ecossistema de e-commerce da América
+        Latina
       </Translate>
     </Box>
-    <Button as={Link} to="/docs/getting-started">
-      <Translate id="home.hero.button">Começar agora</Translate>
-    </Button>
+    <Box
+      display="flex"
+      flexDirection={{ xs: "column", md: "row" }}
+      gap="4"
+      alignItems={{ xs: "flex-start", md: "center" }}
+    >
+      <Text fontSize="highlight" color="neutral-textLow">
+        <Translate id="home.hero.stats">
+          +180 mil lojas ativas · 5 países · US$335M em vendas anuais
+        </Translate>
+      </Text>
+    </Box>
+    <Box>
+      <Button as={Link} to="/docs/getting-started" appearance="primary">
+        <Translate id="home.hero.button">Começar a construir</Translate>
+      </Button>
+    </Box>
   </Box>
 );
 
