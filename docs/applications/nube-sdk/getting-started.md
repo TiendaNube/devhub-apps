@@ -187,6 +187,10 @@ On the **Checkout** page, it works with any theme.
 After making changes in the Partner Portal, there might be a **cache delay** before the updates are reflected. Please allow some time for the changes to take effect.
 :::
 
+:::tip Quick alternative with Local Mode
+You can skip the development URL configuration above and instead use the **Local Mode** feature in [NubeSDK DevTools](./devtools#local-mode). Local Mode lets you connect your local dev server to any store directly from the Chrome extension — no Partner Portal development URL setup needed.
+:::
+
 ### 4. Install the app on your test store
 
 Your app won't load on a store until it's installed there. If you don't have a test store yet, create a demo store from the Partner Portal first.
@@ -258,6 +262,7 @@ If you installed the [NubeSDK DevTools](https://chromewebstore.google.com/detail
 - Monitor events flowing between your app and the store
 - Track storage operations (localStorage / sessionStorage)
 - View the full SDK state tree
+- **Connect a local app** using [Local Mode](./devtools#local-mode) — without configuring the development URL in the Partner Portal
 
 For more details, see the [DevTools guide](./devtools).
 
