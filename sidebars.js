@@ -216,7 +216,6 @@ const sidebars = {
 				"homologation/sync",
 				"homologation/guidelines",
 				"homologation/requirements",
-				"homologation/publication",
 				"homologation/checklist",
 			],
 		},
