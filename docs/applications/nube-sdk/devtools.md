@@ -21,6 +21,7 @@ When you open the extension, you'll see some additional sections.
 | [Storage](devtools#storage) | Logs interactions with storage mechanisms `localStorage` and `sessionStorage`, enabling the monitoring of data changes and access events. |
 | [SVG Converter](devtools#svg-converter) | A tool that assists in converting SVG code to the format accepted by NubeSDK, automatically generating JSX components from SVG markup. |
 | [State](devtools#state) | Displays the consolidated and updated state of NubeSDK, providing a comprehensive view of all current application data including cart, customer, location, store, and UI state. |
+| [Local Mode](devtools#local-mode) | Connect a locally running NubeSDK app to any store for debugging — no Partner Portal configuration required. |
 
 ## Apps
 
@@ -107,3 +108,47 @@ The State section shows the current `NubeSDKState` object, which includes:
 This view is particularly useful for debugging, as it allows you to see the exact state at any given moment and understand how different parts of your application interact with the NubeSDK state.
 
 For more information about the state structure and how to access it in your application, see the [State documentation](state/overview).
+
+## Local Mode
+
+Local Mode lets you connect a NubeSDK app running on your local machine directly to any store — without having to configure the development URL in the Partner Portal. This is useful for quickly testing changes, debugging on different stores, or getting started with development before your Partner Portal setup is complete.
+
+You can access Local Mode from two places:
+
+- **DevTools panel** — Open Chrome DevTools on any store page, go to the **NubeSDK** tab, and click **Local Mode** in the sidebar.
+- **Extension popup** — Click the NubeSDK DevTools extension icon in the Chrome toolbar.
+
+<img src="/img/pt/nube-sdk-devtools-local-mode.png" alt="devtools local mode" width="720" />
+
+### Connecting your app
+
+Local Mode offers two options via tabs:
+
+| Tab | Use case |
+|:--- |:--- |
+| **New App** | Creates a new app instance with a random ID. Use this when you want to test your app as a fresh installation. |
+| **Existing App** | Replaces the script of an app already installed on the store. Use this to debug or develop an app that is already registered in the Partner Portal. |
+
+To connect your app:
+
+1. Start your local development server (e.g. `npm run dev`).
+2. Open Local Mode in the DevTools panel or extension popup.
+3. Choose **New App** or **Existing App**. If using Existing App, select the app from the dropdown.
+4. Paste your script URL (e.g. `http://localhost:8080/main.min.js`) in the **Script URL** field.
+5. Click **Start App**.
+
+The extension will store the connection configuration, reload the page, and start polling your script URL. You'll see a status indicator showing whether the script is reachable:
+
+- **Checking** — The extension is verifying if the script URL responds.
+- **Script is available** — Your local server is running and the script was loaded successfully.
+- **Script is not available** — The script URL is not reachable. Make sure your dev server is running.
+
+When connected, the extension badge shows a green indicator, and apps loaded via Local Mode are labeled with a **"Local Mode"** badge in the Apps section.
+
+### Stopping the connection
+
+Click **Stop App** to disconnect. This clears the connection configuration, reloads the page, and restores the store to its original state.
+
+:::tip
+Local Mode persists your last used script URL, so you don't have to re-enter it every time you open the extension.
+:::

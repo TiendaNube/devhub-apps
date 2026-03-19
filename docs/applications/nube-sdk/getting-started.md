@@ -60,11 +60,11 @@ Set up a new NubeSDK project using the CLI:
 
 The CLI will ask for a **project name** and a **template**. Choose the template that best fits your needs:
 
-| Template | Best for | UI approach | Packages included |
-|----------|----------|-------------|-------------------|
-| **Minimal** | Apps that don't render UI (analytics, cart validation, tracking) | No UI — events only | `nube-sdk-types` |
-| **Minimal with UI** | Apps that render UI using function calls | `column()`, `text()`, `button()` | `nube-sdk-types` + `nube-sdk-ui` |
-| **Minimal with UI in JSX** | Apps that render UI using JSX/TSX syntax | `<Column>`, `<Text>`, `<Button>` | `nube-sdk-types` + `nube-sdk-ui` + `nube-sdk-jsx` |
+| Template                   | Best for                                                         | UI approach                      | Packages included                                 |
+| -------------------------- | ---------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
+| **Minimal**                | Apps that don't render UI (analytics, cart validation, tracking) | No UI — events only              | `nube-sdk-types`                                  |
+| **Minimal with UI**        | Apps that render UI using function calls                         | `column()`, `text()`, `button()` | `nube-sdk-types` + `nube-sdk-ui`                  |
+| **Minimal with UI in JSX** | Apps that render UI using JSX/TSX syntax                         | `<Column>`, `<Text>`, `<Button>` | `nube-sdk-types` + `nube-sdk-ui` + `nube-sdk-jsx` |
 
 :::tip Recommended
 If you're building an app with a user interface, we recommend **Minimal with UI in JSX** — it provides the most familiar developer experience with JSX syntax and styled components.
@@ -113,15 +113,15 @@ export function App(nube: NubeSDK) {
 
 The `nube` object is your entire API surface:
 
-| Method | Purpose |
-|--------|---------|
-| `nube.on(event, listener)` | Listen to store events (cart changes, page loads, etc.) |
-| `nube.off(event, listener)` | Stop listening to an event |
-| `nube.send(event, modifier)` | Dispatch events (validate cart, update config, etc.) |
-| `nube.getState()` | Read the current store state (cart, customer, shipping, etc.) |
-| `nube.render(slot, component)` | Render UI into a predefined position on the page |
-| `nube.clearSlot(slot)` | Remove UI from a slot |
-| `nube.getBrowserAPIs()` | Access async localStorage, sessionStorage, navigation |
+| Method                         | Purpose                                                       |
+| ------------------------------ | ------------------------------------------------------------- |
+| `nube.on(event, listener)`     | Listen to store events (cart changes, page loads, etc.)       |
+| `nube.off(event, listener)`    | Stop listening to an event                                    |
+| `nube.send(event, modifier)`   | Dispatch events (validate cart, update config, etc.)          |
+| `nube.getState()`              | Read the current store state (cart, customer, shipping, etc.) |
+| `nube.render(slot, component)` | Render UI into a predefined position on the page              |
+| `nube.clearSlot(slot)`         | Remove UI from a slot                                         |
+| `nube.getBrowserAPIs()`        | Access async localStorage, sessionStorage, navigation         |
 
 ### How NubeSDK apps work
 
@@ -140,15 +140,15 @@ This architecture ensures apps can't interfere with each other or with the store
 
 Your project comes with these commands out of the box:
 
-| Script | Purpose |
-|--------|---------|
-| `dev` | Start a local dev server with hot-reload on port 8080 |
-| `build` | Create a production-ready minified bundle in `dist/` |
-| `test` | Run tests with Vitest |
-| `test:watch` | Run tests in watch mode |
-| `test:coverage` | Run tests with code coverage |
-| `lint` | Check code style with Biome |
-| `format` | Auto-fix code style issues |
+| Script          | Purpose                                               |
+| --------------- | ----------------------------------------------------- |
+| `dev`           | Start a local dev server with hot-reload on port 8080 |
+| `build`         | Create a production-ready minified bundle in `dist/`  |
+| `test`          | Run tests with Vitest                                 |
+| `test:watch`    | Run tests in watch mode                               |
+| `test:coverage` | Run tests with code coverage                          |
+| `lint`          | Check code style with Biome                           |
+| `format`        | Auto-fix code style issues                            |
 
 </ProgressTracker.Step>
 
@@ -159,6 +159,10 @@ title="Set up the Partner Portal"
 checkpoint="Your app is created, installed on your test store, with 'Uses NubeSDK' enabled and development mode active.">
 
 Before you can test your app on a real store, you need to configure it in the Partner Portal. This involves creating your app, adding a script, and enabling development mode.
+
+:::tip Quick alternative with Local Mode
+You can skip the development URL configuration and instead use the **Local Mode** feature in [NubeSDK DevTools](./devtools#local-mode). Local Mode lets you connect your local dev server to any store directly from the Chrome extension — no Partner Portal development URL setup needed.
+:::
 
 ### 1. Create or configure your app
 
@@ -242,6 +246,7 @@ If everything is configured correctly, you'll see your app with a localhost URL:
 
 :::tip Troubleshooting
 **App not showing up?** Double-check that:
+
 - The app is **installed on your test store**
 - Development mode is enabled in the Partner Portal
 - The development URL matches exactly: `http://localhost:8080/main.min.js`
@@ -258,6 +263,7 @@ If you installed the [NubeSDK DevTools](https://chromewebstore.google.com/detail
 - Monitor events flowing between your app and the store
 - Track storage operations (localStorage / sessionStorage)
 - View the full SDK state tree
+- **Connect a local app** using [Local Mode](./devtools#local-mode) — without configuring the development URL in the Partner Portal
 
 For more details, see the [DevTools guide](./devtools).
 
@@ -288,9 +294,7 @@ const Banner = styled(Box)`
 function renderBanner(nube: NubeSDK) {
   nube.render("before_main_content", (state) => (
     <Banner>
-      <Text heading={3}>
-        Welcome to {state.store?.name ?? "our store"}!
-      </Text>
+      <Text heading={3}>Welcome to {state.store?.name ?? "our store"}!</Text>
       <Text color="#666">
         Your cart has {String(state.cart?.items?.length ?? 0)} item(s)
       </Text>
@@ -314,25 +318,25 @@ Save the file — if your dev server is running, the bundle rebuilds automatical
 
 ### What just happened?
 
-| Line | What it does |
-|------|-------------|
-| `styled(Box)` | Creates a styled component with CSS applied via template literals |
-| `renderBanner(nube)` | Extracts the render logic into a reusable function that can be called on init and on updates |
-| `nube.render("before_main_content", fn)` | Renders UI into the `before_main_content` [slot](./slots/overview) — the function receives the current state |
-| `String(state.cart?.items?.length ?? 0)` | Converts the item count to a string for safe rendering inside JSX |
-| `nube.on("cart:update", () => renderBanner(nube))` | Listens to cart changes and re-renders the banner with updated data |
-| `nube.getState()` | Returns a read-only snapshot of the current store state |
+| Line                                               | What it does                                                                                                 |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `styled(Box)`                                      | Creates a styled component with CSS applied via template literals                                            |
+| `renderBanner(nube)`                               | Extracts the render logic into a reusable function that can be called on init and on updates                 |
+| `nube.render("before_main_content", fn)`           | Renders UI into the `before_main_content` [slot](./slots/overview) — the function receives the current state |
+| `String(state.cart?.items?.length ?? 0)`           | Converts the item count to a string for safe rendering inside JSX                                            |
+| `nube.on("cart:update", () => renderBanner(nube))` | Listens to cart changes and re-renders the banner with updated data                                          |
+| `nube.getState()`                                  | Returns a read-only snapshot of the current store state                                                      |
 
 ### Core concepts at a glance
 
-| Concept | What it does | Learn more |
-|---------|-------------|------------|
-| **Slots** | Predefined positions on the page where your UI appears | [UI Slots](./slots/overview) |
-| **Events** | Messages between your app and the store (`cart:update`, `checkout:ready`, etc.) | [Events](./events/overview) |
-| **State** | Read-only snapshot of store data (cart, customer, shipping, etc.) | [State](./state/overview) |
-| **Components** | Declarative UI building blocks (`Box`, `Text`, `Button`, `Field`, etc.) | [Components](./components/overview) |
-| **Styling** | `styled()`, `StyleSheet.create()`, and theme tokens | [Styling](./styling) |
-| **Browser APIs** | Async localStorage, sessionStorage, navigation, iframe messaging | [Browser APIs](./browser-apis) |
+| Concept          | What it does                                                                    | Learn more                          |
+| ---------------- | ------------------------------------------------------------------------------- | ----------------------------------- |
+| **Slots**        | Predefined positions on the page where your UI appears                          | [UI Slots](./slots/overview)        |
+| **Events**       | Messages between your app and the store (`cart:update`, `checkout:ready`, etc.) | [Events](./events/overview)         |
+| **State**        | Read-only snapshot of store data (cart, customer, shipping, etc.)               | [State](./state/overview)           |
+| **Components**   | Declarative UI building blocks (`Box`, `Text`, `Button`, `Field`, etc.)         | [Components](./components/overview) |
+| **Styling**      | `styled()`, `StyleSheet.create()`, and theme tokens                             | [Styling](./styling)                |
+| **Browser APIs** | Async localStorage, sessionStorage, navigation, iframe messaging                | [Browser APIs](./browser-apis)      |
 
 </ProgressTracker.Step>
 

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
 import { ThemeProvider } from "@nimbus-ds/styles";
+import { FloatingFeedback } from "../components/FeedbackWidgets";
 
 interface IDarkModeContext {
   darkMode: boolean;
@@ -25,6 +26,7 @@ const Root: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         id="nimbus-theme-provider"
       >
         {children}
+        <FloatingFeedback />
       </ThemeProvider>
     </DarkModeContext.Provider>
   );
