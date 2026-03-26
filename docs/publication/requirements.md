@@ -7,7 +7,7 @@ title: Requisitos Obrigatórios
 
 ## 1. Imagens do aplicativo
 
-* Faça o download das imagens de divulgação do aplicativo em "**Imagens do aplicativo**", que só serão aprovadas se estiverem na dimensão solicitada correta
+* Faça o download das imagens de divulgação do aplicativo em "**Imagens do aplicativo**", que só serão aprovadas se atenderem aos requisitos de dimensão.
 * Será necessário subir um pacote de imagens específico para cada país de atuação, como Brasil, México e Argentina.
 
 Essas imagens devem mostrar as telas do aplicativo e divulgar as suas principais funcionalidades, despertando o interesse do lojista em instalá-lo.
