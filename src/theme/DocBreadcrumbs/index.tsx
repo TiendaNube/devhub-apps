@@ -36,7 +36,11 @@ function BreadcrumbsItemLink({
       </Link>
     );
   }
-  return <span className={className}>{children}</span>;
+  return (
+    <span className={className} itemProp="name">
+      {children}
+    </span>
+  );
 }
 
 interface BreadcrumbsItemProps {

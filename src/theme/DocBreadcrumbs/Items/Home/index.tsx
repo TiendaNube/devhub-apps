@@ -24,9 +24,8 @@ export default function HomeBreadcrumbItem(): React.JSX.Element {
         href={homeHref}
         itemProp="item"
       >
-        <span itemProp="name">
-          <IconHome className={styles.breadcrumbHomeIcon} />
-        </span>
+        <IconHome className={styles.breadcrumbHomeIcon} />
+        <meta itemProp="name" content="Home" />
       </Link>
       <meta itemProp="position" content="1" />
     </li>
