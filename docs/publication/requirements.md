@@ -5,21 +5,22 @@ title: Requisitos Obrigatórios
 
 # Requisitos Obrigatórios
 
-## 1.  Imagens do aplicativo
+## 1. Imagens do aplicativo
 
-* Faça o download das imagens de divulgação do aplicativo em "**Imagens do aplicativo**", que só serão aprovadas se estiverem na dimensão solicitada correta de **1600 x 800px**.
+* Faça o download das imagens de divulgação do aplicativo em "**Imagens do aplicativo**", que só serão aprovadas se atenderem aos requisitos de dimensão.
+* Será necessário subir um pacote de imagens específico para cada país de atuação, como Brasil, México e Argentina.
 
-Essas imagens devem mostrar as telas do aplicativo e divulgar as suas principais funcionalidades, despertando o interesse do lojista em instalá-lo. As mesmas imagens são compartilhadas em todos os idiomas, portanto, se o seu aplicativo for publicado em todos os países o texto das imagens deve estar tanto em português como em espanhol.
+Essas imagens devem mostrar as telas do aplicativo e divulgar as suas principais funcionalidades, despertando o interesse do lojista em instalá-lo.
 
-![Imagens do aplicativo](../../static/img/pt/imagem-app.png)
+## 2. Ícone do aplicativo
 
-## 2.  Ícone do aplicativo
+Faça o download do ícone do aplicativo em "**Ícone**", que só será aprovado se estiver na dimensão solicitada correta. Essa imagem será o logotipo do seu aplicativo.
 
-Faça o download do ícone do aplicativo em "**Ícone**", que só será aprovado se estiver na dimensão solicitada correta de **600 x 600px**. Essa imagem será o logotipo do seu aplicativo.
+* Formatos permitidos: JPEG e PNG
+* GIFs não são suportados
+* Quantidade: mínimo 3 e máximo 5
 
-![Ícone do aplicativo](../../static/img/pt/icone.png)
-
-## 3.  Forma de cobrança
+## 3. Forma de cobrança
 
 * Em "**Idiomas da loja de aplicativos**" selecione o país em que o aplicativo será publicado para preencher em seguida todos os campos solicitados.
 * Selecione em "**Forma de cobrança**" o tipo de cobrança que será usado:
@@ -29,7 +30,7 @@ Faça o download do ícone do aplicativo em "**Ícone**", que só será aprovado
 
   ![Interface de Seleção da Forma de Cobrança](../../static/img/pt/cobranca.png)
 
-## 4.  Descrição do perfil do aplicativo
+## 4. Descrição do perfil do aplicativo
 
 * Em "**Informações**" preencha os campos de descrição do aplicativo. Esta é a parte mais importante! As informações presentes nos **campos de descrição "curta" e "longa"** serão a vitrine do seu aplicativo na Loja de Aplicativos, o que os lojistas verão e os incentivará a instalá-lo.
 
@@ -41,11 +42,11 @@ Modelo de Descrição Completa de Aplicativo - Nuvemshop
 
 **Nome do app:** Aplicativo "X"
 
-**Campo descrição curta:** [Insira uma descrição que resume a função do seu app com até 64 caracteres (com espaços)]. Exemplo: *Fretes mais baratos com as melhores transportadoras do país.*
+**Campo descrição curta:** [Insira uma descrição que resume a função do seu app]. Exemplo: *Fretes mais baratos com as melhores transportadoras do país.*
 
 **Campo descrição completa**
 
-1.  **Introdução:**
+1. **Introdução:**
 
 Deixe clara a proposta de valor do seu aplicativo e seu diferencial no mercado. Dessa forma, o lojista terá interesse em continuar a leitura.
 
@@ -61,7 +62,7 @@ Exemplo: *“Aplicativo X é um app desenvolvido pela [nome da empresa] para fac
 
 3. **Como funciona o Aplicativo X?**
 
-Seja direto e utilize bullet points para facilitar a leitura e entendimento. Exemplo: *“O Aplicativo X conecta sua loja virtual a transportadoras em todo o território nacional, com cobertura para mais de 3 mil municípios.”*
+Seja direto e utilize bullet points para facilitar a leitura e entendimento. Exemplo: *"O Aplicativo X conecta sua loja virtual a transportadoras em todo o território nacional, com cobertura para mais de 3 mil municípios."*
 
 * Você tem a opção de agendar coletas e também configurar a logística reversa.
 * As encomendas permitidas devem ter dimensão de até 80 cm x 80 cm x 80 cm e peso de até 30 kg. Consulte a área de cobertura neste link.
@@ -126,17 +127,13 @@ Informe todos os canais de suporte, assim como SLA de resposta e horário de ate
 
 Siga exatamente a estrutura do Guia de descrição do aplicativo acima.
 
-Você também tem a opção de usar o <u>**Agente de Inteligência Artificial da Nuvemshop**</u> "**Gerador de Descrição do Aplicativo na Loja de Aplicativos Nuvemshop**" para te ajudar a criar essa descrição completa de uma forma fácil e rápida.
+Você também tem a opção de usar o **Agente de Inteligência Artificial da Nuvemshop** "**Gerador de Descrição do Aplicativo na Loja de Aplicativos Nuvemshop**" para te ajudar a criar essa descrição completa de uma forma fácil e rápida.
 
-1. Acesse o agente ChatGPT "[Tiendanube Appstore Description Generator](https://chatgpt.com/g/g-684a0c4e5ee8819199c155f69f465e4e-tiendanube-appstore-description-generator)" clicando no link para iniciar a geração interativa da descrição longa.  
+1. Acesse o agente ChatGPT "[Nuvemshop Appstore Description Generator](https://chatgpt.com/g/g-684a0c4e5ee8819199c155f69f465e4e-tiendanube-appstore-description-generator)" clicando no link para iniciar a geração interativa da descrição longa.
 
 2. **Defina as fontes de informação:** insira a URL do site oficial do seu app, links de artigos ou tutoriais do Help Center e/ou faça upload de um documento (PDF ou DOCX) com o overview das funcionalidades, garantindo a cobertura de todos os blocos do guia (objetivo, benefícios, funcionalidades etc.).
 
 3. **Especifique as regiões de publicação e particularidades:** informe os países onde o app estará disponível e detalhe eventuais diferenças de recursos por região (por exemplo, módulo fiscal ativo apenas no Chile), para que o agente adapte o conteúdo adequadamente.
-
-4. **Aguarde a geração dos blocos de HTML otimizados para SEO e embed:** o agente entregará, diretamente no chat, um bloco de código HTML para cada país definido, precedido pelo comentário `<!-- Descripción [country] -->`. Esses blocos estarão prontos para serem incorporados na página de aplicativo já existente, respeitando a hierarquia de títulos e evitando conflitos de elementos, adaptados ao idioma local, como português para Brasil ou Espanhol para Argentina.
-
-5. **Publique no painel de integração da Nuvemshop:** copie cada bloco de HTML retornado e cole-o no campo de descrição correspondente a cada país no editor de integração; em seguida, salve e publique as alterações.
 
 ## 5. FAQs (Perguntas Mais Frequentes)
 
@@ -152,9 +149,12 @@ A Nuvemshop criou um modelo para cada categoria para uso padrão que você dever
 
 > ▶️ **FAQs ERP**
 [Template FAQ ERP](https://docs.google.com/document/d/132lUrxGcUTn0UaUcUnahFOaT8OtsF7vA3kpgdE932JM/edit?tab=t.0)
+
 > ▶️ **FAQs Meios de Pagamento**
 [Template FAQ Payments](https://docs.google.com/document/d/1nuBFVAL9JsH1TaNSGBHm2VJdBBi6A50ACv_wcjc5WGI/edit?tab=t.0)
+
 > ▶️ **FAQs Meios de Logística**
 [Template FAQ Shipping](https://docs.google.com/document/d/1ZWSWyVp0X3mxOMzbuP8d0_JXFeu1stOebWQ63wvE_34/edit?tab=t.0)
+
 > ▶️ **FAQs de Marketing e demais categorias**
 [Template FAQ Marketing e demais categorias](https://docs.google.com/document/d/1RMy2SpqRm2k1QVPBjngeMePFWf3RdObvdcg7wACIrjQ/edit?tab=t.0)
