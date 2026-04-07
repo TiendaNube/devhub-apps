@@ -35,7 +35,7 @@ In this model, the merchant installs the app and is immediately confronted with 
 - **The Frustration:** How do they obtain credentials?
   - Is there a registration portal?
   - Where are the support or sales channels?
-- **Consequence:** Without clear instructions, the merchant uninstalls the application for not knowing how to proceed with the partnership, resulting in lost business opportunity.
+- **Consequence:** Without clear instructions, the merchant uninstalls the application for not knowing how to proceed with the partnership, resulting in a lost business opportunity.
 - **The Experience Failure (UX):** In many implementations, the adopted solution is direct redirection to the institutional website. This practice is not considered a good experience because:
   - **Context Break:** The user is abruptly removed from the native application environment to an external browser, causing disorientation.
   - **Conversion Friction:** The effort required to leave the app, fill out forms on another site, and then return to the app drastically increases the abandonment rate.
