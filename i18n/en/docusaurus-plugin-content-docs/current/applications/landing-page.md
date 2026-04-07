@@ -25,7 +25,7 @@ The installation of the application represents only the first step in the partne
 - The Landing Page works as a **temporary hub**, centralizing essential documentation such as **FAQs, tutorial videos, and partnership policies**.
 - This optimizes the connection with the merchant, allowing them to obtain, in a **self-service** way, the initial knowledge needed about processes and next steps.
 
-Without an intermediate guidance step, we risk generating merchant abandonment in the use of the application. Below, we compare two post-installation flow scenarios:
+Without an intermediate guidance step, we risk merchants abandoning the application. Below, we compare two post-installation flow scenarios:
 
 ### Scenario 1: Direct Installation (without landing page)
 
