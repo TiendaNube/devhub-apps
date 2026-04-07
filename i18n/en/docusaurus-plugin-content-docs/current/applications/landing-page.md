@@ -64,4 +64,3 @@ By including a Landing Page right after installation, we provide a clear map for
 - **Increased activation rate:** Well-informed and properly guided partners are more likely to complete onboarding and become active users of the application.
 - **Early qualification:** The Landing Page can include forms that help qualify and segment the partner, allowing a more personalized approach before the first contact.
 - **Professional and trustworthy experience:** A structured flow conveys professionalism and trust, reinforcing the value of the partnership and the application from the beginning.
-```
