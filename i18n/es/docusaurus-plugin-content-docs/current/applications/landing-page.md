@@ -47,10 +47,10 @@ En este modelo, el merchant instala la app y es inmediatamente confrontado con l
 
 Al incluir una Landing Page inmediatamente después de la instalación, ofrecemos un mapa claro para dos perfiles distintos de usuarios:
 
-1. El usuario que ya es socio, la landing page ofrece un camino directo y rápido.
+1. Para el usuario que ya es socio, la landing page ofrece un camino directo y rápido.
    - **Acción:** Botón de "Ya soy socio / Iniciar sesión".
    - **Resultado:** Experiencia fluida y sin fricción para quien ya sabe qué hacer.
-2. El Prospect (nuevo usuario) donde la landing page actúa como una guía de onboarding.
+2. Para el prospecto (nuevo usuario), donde la landing page actúa como una guía de onboarding.
    - **Acción:** Botón de "Quiero ser socio" o "Saber más".
    - **Flujo de Onboarding:**
      - **Visibilidad:** Presentación rápida de los beneficios de la app.
