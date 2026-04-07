@@ -38,7 +38,7 @@ Neste modelo, o merchant instala o app e é imediatamente confrontado com a tela
 - **Consequência:** Sem instruções claras, o merchant desinstala o aplicativo por não saber como prosseguir com a parceria, resultando em perda de oportunidade de negócio.
 - **A Falha de Experiência (UX):** Em muitas implementações, a solução adotada é o redirecionamento direto para o site institucional. Essa prática não é considerada uma boa experiência, pois:
   - **Quebra de Contexto:** O usuário é removido abruptamente do ambiente nativo do aplicativo para um navegador externo, gerando desorientação.
-  - **Fricção de Conversão:** O esforço exigido para sair do app, preencher cadastros em um outro site e depois retornar ao app aumenta drasticamente a taxa de abandono.
+  - **Fricção de Conversão:** O esforço exigido para sair do app, preencher cadastros em outro site e depois retornar ao app aumenta drasticamente a taxa de abandono.
   - **Percepção de Valor:** O app deixa de parecer uma ferramenta de trabalho e passa a ser visto apenas como um "atalho" para um site, diminuindo a relevância da instalação.
 
    ![Nuvem Flow](../../static/img/pt/flow.png "Nuvem Flow")
