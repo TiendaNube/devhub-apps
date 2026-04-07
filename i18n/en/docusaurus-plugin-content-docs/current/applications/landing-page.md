@@ -47,10 +47,10 @@ In this model, the merchant installs the app and is immediately confronted with 
 
 By including a Landing Page right after installation, we provide a clear map for two distinct user profiles:
 
-1. The user who is already a partner, the landing page offers a direct and fast path.
+1. For users who are already partners, the landing page offers a direct and fast path.
    - **Action:** "I am already a partner / Log in" button.
    - **Result:** Smooth and frictionless experience for those who already know what to do.
-2. The Prospect (new user) where the landing page acts as an onboarding guide.
+2. For prospects (new users), where the landing page acts as an onboarding guide.
    - **Action:** "I want to become a partner" or "Learn more" button.
    - **Onboarding Flow:**
      - **Visibility:** Quick presentation of the app's benefits.
