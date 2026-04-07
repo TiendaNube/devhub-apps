@@ -50,7 +50,7 @@ By including a Landing Page right after installation, we provide a clear map for
 1. For users who are already partners, the landing page offers a direct and fast path.
    - **Action:** "I am already a partner / Log in" button.
    - **Result:** Smooth and frictionless experience for those who already know what to do.
-2. For prospects (new users), where the landing page acts as an onboarding guide.
+2. For prospects (new users), the landing page acts as an onboarding guide.
    - **Action:** "I want to become a partner" or "Learn more" button.
    - **Onboarding Flow:**
      - **Visibility:** Quick presentation of the app's benefits.
