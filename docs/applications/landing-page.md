@@ -47,10 +47,10 @@ Neste modelo, o merchant instala o app e é imediatamente confrontado com a tela
 
 Ao incluir uma Landing Page logo após a instalação, oferecemos um mapa claro para dois perfis distintos de usuários:
 
-1. O usuário que já é parceiro, a landing page oferece um caminho direto e rápido.
+1. Para o usuário que já é parceiro, a landing page oferece um caminho direto e rápido.
    - **Ação:** Botão de "Já sou parceiro / Fazer Login".
    - **Resultado:** Experiência fluida e sem fricção para quem já sabe o que fazer.
-2. O Prospect (novo usuário) onde a landing page atua como um guia de onboarding.
+2. Para o Prospect (novo usuário) onde a landing page atua como um guia de onboarding.
    - **Ação:** Botão de "Quero ser parceiro" ou "Saiba mais".
    - **Fluxo de Onboarding:**
      - **Visibilidade:** Apresentação rápida dos benefícios do app.
