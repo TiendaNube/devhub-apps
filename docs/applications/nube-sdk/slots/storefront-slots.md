@@ -29,17 +29,16 @@ These are the slots that are available in the storefront:
 | product_grid_item_image_top_right    | home, product, category, search       |
 | product_grid_item_image_bottom_left  | home, product, category, search       |
 | product_grid_item_image_bottom_right | home, product, category, search       |
-| before_start_checkout_button         | home, product, category, search       |
+| before_go_to_checkout                | home, product, category, search       |
 | before_product_detail_name           | product                               |
 | after_product_detail_name            | product                               |
-| before_price_pdp                     | product                               |
+| before_product_detail_price          | product                               |
+| after_product_detail_price           | product                               |
 | before_product_detail_add_to_cart    | product                               |
-| before_add_to_cart_pdp               | product                               |
 | after_product_detail_add_to_cart     | product                               |
-| after_add_to_cart_pdp                | product                               |
 | after_product_description            | product                               |
 | before_line_items                    | cart                                  |
-| cart_line_item_top                   | cart                                  |
+| before_line_item                     | cart                                  |
 | after_cart_summary                   | cart                                  |
 | after_go_to_checkout                 | cart                                  |
 | before_footer                        | home, product, category, search       |
@@ -70,9 +69,9 @@ These are the slots that are available in the storefront:
 
 ![Drawer Right Slot](/img/pt/nube-sdk-drawer_right.png)
 
-- `before_start_checkout_button`
+- `before_go_to_checkout`
 
-![Before Start Checkout Button Slot](/img/pt/nube-sdk-before_start_checkout_button.png)
+![Before Go to Checkout Slot](/img/pt/nube-sdk-before_start_checkout_button.png)
 
 - `before_footer`
 
@@ -115,26 +114,28 @@ For a complete example of rendering components dynamically in product grids, see
 
 - `before_product_detail_name`
 - `after_product_detail_name`
+- `before_product_detail_price`
+- `after_product_detail_price`
 - `before_product_detail_add_to_cart`
 - `after_product_detail_add_to_cart`
 
 ![Product Page Slots Overview](/img/pt/nube-sdk-product_slots.png)
 
-- `before_price_pdp`
+- `before_product_detail_price`
 
-![Before Price PDP Slot](/img/pt/nube-sdk-before_price_pdp.png)
+![Before Product Detail Price Slot](/img/pt/nube-sdk-before_price_pdp.png)
 
-- `after_price_pdp`
+- `after_product_detail_price`
 
-![After Price PDP Slot](/img/pt/nube-sdk-after_price_pdp.png)
+![After Product Detail Price Slot](/img/pt/nube-sdk-after_price_pdp.png)
 
-- `before_add_to_cart_pdp`
+- `before_product_detail_add_to_cart`
 
-![Before Add to Cart PDP Slot](/img/pt/nube-sdk-before_add_to_cart_pdp.png)
+![Before Product Detail Add to Cart Slot](/img/pt/nube-sdk-before_add_to_cart_pdp.png)
 
-- `after_add_to_cart_pdp`
+- `after_product_detail_add_to_cart`
 
-![After Add to Cart PDP Slot](/img/pt/nube-sdk-after_ad_to_cart_pdp.png)
+![After Product Detail Add to Cart Slot](/img/pt/nube-sdk-after_ad_to_cart_pdp.png)
 
 - `after_product_description`
 
@@ -146,19 +147,19 @@ For a complete example of rendering components dynamically in product grids, see
 
 ![Before Line Items Slot](/img/pt/nube-sdk-before-line-items.jpg)
 
-- `cart_line_item_top`
+- `before_line_item`
 
 The `key` prop must be set to the line item's ID for each component.
 
 ```tsx
 export function App(nube: NubeSDK) {
-  nube.render("cart_line_item_top", (state) => {
+  nube.render("before_line_item", (state) => {
     return state.cart.items.map((item) => <Text key={item.id}>Content</Text>);
   });
 }
 ```
 
-![Cart Line Item Top Slot](/img/pt/nube-sdk-cart-line-item-top.png)
+![Before Line Item Slot](/img/pt/nube-sdk-cart-line-item-top.png)
 
 - `after_cart_summary`
 
@@ -192,7 +193,7 @@ import type { NubeSDK } from "@tiendanube/nube-sdk-types";
 import { Box, Text } from "@tiendanube/nube-sdk-jsx";
 
 export function App(nube: NubeSDK) {
-  nube.render("before_add_to_cart_pdp", [
+  nube.render("before_product_detail_add_to_cart", [
     <Box key="size-guide">
       <Text>View Size Guide</Text>
     </Box>,
@@ -273,6 +274,25 @@ nube.render("product_grid_item_image_top_left", () => {
 ```
 
 Then, to understand the slot rendering, `key={product.id}` is **required**. Links each rendered element to its corresponding product card.
+
+## Deprecated Slot Aliases
+
+Some slot names have been renamed for consistency. The old names still work — the SDK automatically redirects them to the new name at runtime — but they are **deprecated** and may be removed in a future major version.
+
+:::warning
+We recommend updating your code to use the new slot names as soon as possible. The deprecated aliases will continue to work for now, but **they may stop working in a future release**.
+:::
+
+| Deprecated name                  | Use instead                        |
+| -------------------------------- | ---------------------------------- |
+| `before_price_pdp`               | `before_product_detail_price`      |
+| `after_price_pdp`                | `after_product_detail_price`       |
+| `before_add_to_cart_pdp`         | `before_product_detail_add_to_cart`|
+| `after_add_to_cart_pdp`          | `after_product_detail_add_to_cart` |
+| `cart_line_item_top`             | `before_line_item`                 |
+| `before_start_checkout_button`   | `before_go_to_checkout`            |
+
+If your app uses both the deprecated name and the new name for the same slot, the new name takes precedence and the deprecated entry is ignored.
 
 ## Best Practices
 
