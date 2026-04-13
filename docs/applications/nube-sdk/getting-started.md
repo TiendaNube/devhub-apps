@@ -252,6 +252,7 @@ If everything is configured correctly, you'll see your app with a localhost URL:
 - The development URL matches exactly: `http://localhost:8080/main.min.js`
 - Your dev server is running (`npm run dev`)
 - You've waited for the Partner Portal cache to refresh
+- **Chrome allows the store to access local apps** — Chrome may block the store from reaching `localhost`. Click the lock (or tune) icon in the address bar, go to **Site settings**, and make sure **Apps on device** is toggled **on**. Then reload the page.
 :::
 
 ### Debug with DevTools

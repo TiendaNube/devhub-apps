@@ -143,6 +143,10 @@ The extension will store the connection configuration, reload the page, and star
 - **Script is available** — Your local server is running and the script was loaded successfully.
 - **Script is not available** — The script URL is not reachable. Make sure your dev server is running.
 
+:::note Chrome permission for local apps
+If your dev server is running but the script is still not available, Chrome may be blocking the store page from accessing `localhost`. Click the lock (or tune) icon in the address bar, go to **Site settings**, and make sure **Apps on device** is toggled **on**. Then reload the page.
+:::
+
 When connected, the extension badge shows a green indicator, and apps loaded via Local Mode are labeled with a **"Local Mode"** badge in the Apps section.
 
 ### Stopping the connection
