@@ -6,7 +6,7 @@ title: Landing Page
 
 A instalação do aplicativo representa apenas o primeiro passo da jornada do parceiro. Para aqueles que ingressarão em um fluxo de gestão e onboarding acompanhado, a exibição de uma **Landing Page** proporciona maior **clareza, alinhamento e compreensão dos próximos passos** para o merchant.
 
-## Funções Essenciais da Landing Page
+## 🎯 Funções Essenciais da Landing Page
 
 ### 1. Clareza e Direcionamento do Próximo Passo
 
@@ -59,7 +59,7 @@ Ao incluir uma Landing Page logo após a instalação, oferecemos um mapa claro 
 
      ![Onboarding](../../static/img/pt/onboarding.png "Onboarding")
 
-## Benefícios do Fluxo
+## ✨ Benefícios do Fluxo
 
 - **Aumento da taxa de ativação:** Parceiros bem informados e corretamente direcionados apresentam maior probabilidade de concluir o onboarding e se tornarem usuários ativos do aplicativo.
 - **Qualificação antecipada:** A Landing Page pode incluir formulários que auxiliam na qualificação e segmentação do parceiro, permitindo uma abordagem mais personalizada antes do primeiro contato.
