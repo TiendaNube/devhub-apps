@@ -13,9 +13,9 @@ Esse processo assegura que o app atende aos critérios técnicos e funcionais es
 
 Dependendo do tipo de aplicativo desenvolvido, a homologação poderá caminhar de formas diferentes, sendo:
 
-Aplicativos do tipo **ERP**, **Payments** e **Shipping**, dos quais lidam com dados sensíveis e possui uma complexidade maior, passarão por uma validação mais complementar. Nesses casos, nossa equipe enviará um roteiro de guia de funcionalidades e usabilidade que deverão ser demonstradas e assim, validarmos o aplicativo com base na checklist definida.
+Aplicativos dos tipos **ERP**, **Payments** e **Shipping**, que lidam com dados sensíveis e possuem maior complexidade, passarão por uma validação complementar. Nesses casos, nossa equipe enviará um roteiro com funcionalidades e critérios de usabilidade que deverão ser demonstrados para validarmos o aplicativo com base na checklist definida.
 
-Para demais tipos de aplicativos, como de marketing, ferramentas, etcs, possuem uma complexidade menor por não possuirem transações de dados sensíveis. Neste caso, nossa equipe conseguirá instalar o aplicativo em lojas internas e realizar testes e validações diretamente no aplicativo.
+Para os demais tipos de aplicativos, como marketing e ferramentas, a complexidade é menor por não possuírem transações de dados sensíveis. Nesse caso, nossa equipe conseguirá instalar o aplicativo em lojas internas e realizar testes e validações diretamente no app.
 
 ### 💡 Visibilidade e Próximos Passos
 
