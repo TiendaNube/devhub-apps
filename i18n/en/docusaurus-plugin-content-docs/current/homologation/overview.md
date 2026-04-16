@@ -46,6 +46,6 @@ If any discrepancies, difficulties, or anything that prevents our team from proc
 - After implementing the adjustments, a new demonstration must be submitted as evidence so we can validate the pending points.
 - This process will be repeated until all points have been completed, allowing the app to proceed to publication in the App Store.
 
-::: info Checklist
+:::info Checklist
 Document containing the mandatory scopes and processes, which will be used as a guide during the homologation process.
 :::
