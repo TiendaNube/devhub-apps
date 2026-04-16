@@ -15,7 +15,7 @@ Depending on the type of application developed, the homologation may proceed in 
 
 Applications of the **ERP**, **Payments**, and **Shipping** types, which deal with sensitive data and have higher complexity, will undergo a more comprehensive validation. In these cases, our team will send a functional and usability guide script that must be demonstrated, allowing us to validate the application based on the defined checklist.
 
-For other types of applications, such as marketing tools, utilities, etcs, they have lower complexity because they do not handle sensitive data transactions. In this case, our team will be able to install the application in internal stores and perform tests and validations directly within the application.
+For other types of applications, such as marketing tools, utilities, etc, they have lower complexity because they do not handle sensitive data transactions. In this case, our team will be able to install the application in internal stores and perform tests and validations directly within the application.
 
 ### 💡 Visibility and Next Steps
 
