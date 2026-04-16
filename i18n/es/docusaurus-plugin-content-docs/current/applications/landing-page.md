@@ -27,7 +27,8 @@ La instalación de la aplicación representa solo el primer paso del recorrido d
 
 Sin una etapa intermedia de orientación, corremos el riesgo de generar un abandono del merchant en el uso de la aplicación. A continuación, comparamos dos escenarios de flujo post-instalación:
 
-### Escenario 1: Instalación Directa (sin landing page)
+
+### ▶️ Escenario 1: Instalación Directa (sin landing page)
 
 En este modelo, el merchant instala la app y es inmediatamente confrontado con la pantalla de Login/Autenticación.
 
@@ -43,7 +44,7 @@ En este modelo, el merchant instala la app y es inmediatamente confrontado con l
 
    ![Tienda Flow](../../../../../static/img/es/flowwes.png "Tienda Flow")
 
-### Escenario 2: Flujo Optimizado (con landing page)
+### ▶️ Escenario 2: Flujo Optimizado (con landing page)
 
 Al incluir una Landing Page inmediatamente después de la instalación, ofrecemos un mapa claro para dos perfiles distintos de usuarios:
 
