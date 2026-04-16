@@ -31,7 +31,7 @@ Caso sejam encontradas divergências, dificuldades ou algo que impossibilite nos
 
 ### 💡 Processo de homologação
 
-- Assim que enviado todos os artefatos, a equipe realizará a análise dos insumos e os testes necessários.
+- Assim que forem enviados todos os artefatos, a equipe realizará a análise dos insumos e os testes necessários.
 - Caso todos os critérios sejam atendidos, o app seguirá para a etapa de publicação, e você receberá maiores informações para acompanhamento.
 - Caso sejam identificadas pendências nos testes realizados com base no artefato enviado, forneceremos uma devolutiva listando cada ponto a ser ajustado.
 - Após a realização dos ajustes, o parceiro deve retornar pelo mesmo local com as evidências, para que possamos revalidar os cenários.
