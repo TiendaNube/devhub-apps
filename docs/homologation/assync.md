@@ -5,7 +5,7 @@ title: Processo de homologação
 
 # Processo de homologação
 
-APPs que não possuam fluxo com dados sensíveis permite que sejam realizados testes e validações internas (uma vez que não contam com transações de dados reais de merchants), do qual a equipe técnica analisará os artefatos enviados e realizará testes no aplicativo.
+APPs que não possuam fluxo com dados sensíveis permitem testes e validações internas (uma vez que não contam com transações de dados reais de merchants), do qual a equipe técnica analisará os artefatos enviados e realizará testes no aplicativo.
 
 O retorno desta análise, assim como qualquer comunicação que possa vir a ser necessária, se dará diretamente dentro do pedido aberto.
 
@@ -61,7 +61,7 @@ Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sen
 ## 🎯 4. Registro de Ajustes (Se Necessário)
 
 - Caso sejam identificadas pendências na checklist, elas serão registradas na aba "Action Plan" da checklist.
-- Através desta checklist, deverá acompanhar os pontos que precisam ser corrigidos.
+- Por meio desta checklist, o parceiro deverá acompanhar os pontos que precisam ser corrigidos.
 
 ![Action Plan](../../static/img/pt/action-plan.png "Action Plan")
 
