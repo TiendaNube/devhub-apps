@@ -15,7 +15,7 @@ Dependiendo del tipo de aplicación desarrollada, la homologación podrá avanza
 
 Aplicaciones del tipo **ERP**, **Payments** y **Shipping**, las cuales manejan datos sensibles y poseen una mayor complejidad, pasarán por una validación más complementaria. En estos casos, nuestro equipo enviará un guion de guía de funcionalidades y usabilidad que deberá ser demostrado y así podremos validar la aplicación con base en la checklist definida.
 
-Para demás tipos de aplicaciones, como de marketing, herramientas, etcs, poseen una menor complejidad por no manejar transacciones de datos sensibles. En este caso, nuestro equipo podrá instalar la aplicación en tiendas internas y realizar pruebas y validaciones directamente en la aplicación.
+Para demás tipos de aplicaciones, como de marketing, herramientas, etc, poseen una menor complejidad por no manejar transacciones de datos sensibles. En este caso, nuestro equipo podrá instalar la aplicación en tiendas internas y realizar pruebas y validaciones directamente en la aplicación.
 
 ### 💡 Visibilidad y Próximos Pasos
 
