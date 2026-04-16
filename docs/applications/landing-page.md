@@ -27,7 +27,8 @@ A instalação do aplicativo representa apenas o primeiro passo da jornada do pa
 
 Sem uma etapa intermediária de orientação, corremos o risco de gerar uma desistência do merchant no uso da aplicação. Abaixo, comparamos dois cenários de fluxo pós-instalação:
 
-### Cenário 1: Instalação Direta (sem landing page)
+
+### ▶️ Cenário 1: Instalação Direta (sem landing page)
 
 Neste modelo, o merchant instala o app e é imediatamente confrontado com a tela de Login/Autenticação.
 
@@ -43,7 +44,7 @@ Neste modelo, o merchant instala o app e é imediatamente confrontado com a tela
 
    ![Nuvem Flow](../../static/img/pt/flow.png "Nuvem Flow")
 
-### Cenário 2: Fluxo Otimizado (com landing page)
+### ▶️ Cenário 2: Fluxo Otimizado (com landing page)
 
 Ao incluir uma Landing Page logo após a instalação, oferecemos um mapa claro para dois perfis distintos de usuários:
 
