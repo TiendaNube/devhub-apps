@@ -67,7 +67,7 @@ Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sen
 
 ## 🎯 5. Nova validação e Publicação
 
-- Após realizar as correções necessárias, compartilhar novo vídeo demonstrativo das etapas ajustadas para **nova validação** com o time de homologação.
+- Após realizar as correções necessárias, o parceiro deverá compartilhar um novo vídeo demonstrativo das etapas ajustadas para **nova validação** com o time de homologação.
 - O processo será repetido até que todos os ajustes tenham sido concluídos.
 - Quando todos os itens forem validados com sucesso, o app seguirá para **publicação na App Store**.
 
