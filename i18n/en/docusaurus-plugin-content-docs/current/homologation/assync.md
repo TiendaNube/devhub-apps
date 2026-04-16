@@ -82,7 +82,7 @@ The **checklist** will be used as a **guide for the app homologation process** f
  <li><a href="https://docs.google.com/spreadsheets/d/1dgKY2Ze9ZB4bqIXDuGiJzdVCCNEZgtO7BodrunRGowI/edit?usp=sharing" target="_blank">▶️ Shipping</a></li>
 </ul>
 
-We share this checklist in advance so the team is prepared for the stages to be validated and is aware of potential mandatory items that may impact app approval.
+We share this checklist in advance so the team is prepared for the stages to be validated and is aware of potential mandatory items that may impact app homologation.
 
 It is worth emphasizing that this script and checklist validation stage ensures:
 
