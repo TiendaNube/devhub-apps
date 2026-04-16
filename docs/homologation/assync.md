@@ -55,13 +55,13 @@ Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sen
 
 - Será compartilhado pelo time de homologação um roteiro, que seguirá com um guia descritivo de etapas (passo-a-passo) que necessitam ser demonstradas em maior detalhamento.
 - Isso assegurará que sejam exibidos todos os processos, integrações e efetividades dos fluxos.
-- Compartilhado as demonstrações indicadas no roteiro, nossa equipe passará **por cada item da checklist** utilizada para o desenvolvimento do app.
+- Compartilhado as demonstrações indicadas no roteiro, nossa equipe passará **por cada item do checklist** utilizada para o desenvolvimento do app.
 - Garantiremos que todos os pontos foram corretamente implementados e funcionam conforme esperado.
 
 ## 🎯 4. Registro de Ajustes (Se Necessário)
 
-- Caso sejam identificadas pendências na checklist, elas serão registradas na aba "Action Plan" da checklist.
-- Por meio desta checklist, o parceiro deverá acompanhar os pontos que precisam ser corrigidos.
+- Caso sejam identificadas pendências no checklist, elas serão registradas na aba "Action Plan" do checklist.
+- Por meio deste checklist, o parceiro deverá acompanhar os pontos que precisam ser corrigidos.
 
 ![Action Plan](../../static/img/pt/action-plan.png "Action Plan")
 
@@ -73,7 +73,7 @@ Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sen
 
 ### Checklist do Processo de Homologação
 
-A **checklist** será usada como um **guia para o processo de homologação** de apps do tipo:
+O **checklist** será usada como um **guia para o processo de homologação** de apps do tipo:
 
 <ul>
  <li><a href="https://docs.google.com/spreadsheets/d/1Pf-6Bbr8ebQGNoqkMuyK5DylP66n8FLInYbbJVRyb5Y/edit?usp=sharing" target="_blank">▶️  ERP</a></li>
@@ -83,9 +83,9 @@ A **checklist** será usada como um **guia para o processo de homologação** de
  <li><a href="https://docs.google.com/spreadsheets/d/1dgKY2Ze9ZB4bqIXDuGiJzdVCCNEZgtO7BodrunRGowI/edit?usp=sharing" target="_blank">▶️  Shipping</a></li>
 </ul>
 
-Compartilhamos adiantadamente esta checklist para que a equipe esteja preparada para as etapas que serão validadas e tenham assim o conhecimento de possíveis itens obrigatórios que poderão impactar a aprovação do aplicativo.
+Compartilhamos adiantadamente este checklist para que a equipe esteja preparada para as etapas que serão validadas e tenham assim o conhecimento de possíveis itens obrigatórios que poderão impactar a aprovação do aplicativo.
 
-Vale reforçar que esta etapa de roteiro e validação dos itens da checklist garantirão:
+Vale reforçar que esta etapa de roteiro e validação dos itens do checklist garantirão:
 
 - Conformidade com as regras da plataforma;
 - Testes funcionais e de integração via API;
