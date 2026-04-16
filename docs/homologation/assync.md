@@ -55,7 +55,7 @@ Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sen
 
 - Será compartilhado pelo time de homologação um roteiro, que seguirá com um guia descritivo de etapas (passo-a-passo) que necessitam ser demonstradas em maior detalhamento.
 - Isso assegurará que sejam exibidos todos os processos, integrações e efetividades dos fluxos.
-- Compartilhado as demonstrações indicadas no roteiro, nossa equipe passará **por cada item do checklist** utilizada para o desenvolvimento do app.
+- Após o compartilhamento das demonstrações indicadas no roteiro, nossa equipe passará **por cada item do checklist** utilizado para o desenvolvimento do app.
 - Garantiremos que todos os pontos foram corretamente implementados e funcionam conforme esperado.
 
 ## 🎯 4. Registro de Ajustes (Se Necessário)
