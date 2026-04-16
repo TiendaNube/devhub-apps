@@ -85,7 +85,7 @@ O **checklist** será usada como um **guia para o processo de homologação** de
 
 Compartilhamos adiantadamente este checklist para que a equipe esteja preparada para as etapas que serão validadas e tenham assim o conhecimento de possíveis itens obrigatórios que poderão impactar a aprovação do aplicativo.
 
-Vale reforçar que esta etapa de roteiro e validação dos itens do checklist garantirão:
+Vale reforçar que esta etapa de roteiro e validação dos itens do checklist garantirá:
 
 - Conformidade com as regras da plataforma;
 - Testes funcionais e de integração via API;
