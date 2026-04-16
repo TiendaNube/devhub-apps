@@ -27,7 +27,8 @@ The installation of the application represents only the first step in the partne
 
 Without an intermediate guidance step, we risk merchants abandoning the application. Below, we compare two post-installation flow scenarios:
 
-### Scenario 1: Direct Installation (without landing page)
+
+### ▶️ Scenario 1: Direct Installation (without landing page)
 
 In this model, the merchant installs the app and is immediately confronted with the Login/Authentication screen.
 
@@ -43,7 +44,7 @@ In this model, the merchant installs the app and is immediately confronted with 
 
    ![Nuvem Flow](../../../../../static/img/en/flowwen.png "Nuvem Flow")
 
-### Scenario 2: Optimized Flow (with landing page)
+### ▶️ Scenario 2: Optimized Flow (with landing page)
 
 By including a Landing Page right after installation, we provide a clear map for two distinct user profiles:
 
