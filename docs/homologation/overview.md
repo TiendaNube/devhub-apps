@@ -39,11 +39,11 @@ Caso sejam encontradas divergências, dificuldades ou algo que impossibilite nos
 
 ### 💡 Processo de homologação para os tipos ERP, Payments e Shipping
 
-- Através da sua solicitação de homologação, nossa equipe enviará um roteiro de guia para que gravem um vídeo demonstrando as etapas solicitadas.
+- A partir da solicitação de homologação, nossa equipe enviará um roteiro para que o parceiro grave um vídeo demonstrando as etapas solicitadas.
 - Com estas demonstrações em mãos, validaremos todos os pontos da *checklist*, garantindo um processo mais robusto e completo.
 - Se a checklist for validada e não houver ajustes a serem realizados, o app seguirá para a etapa de publicação na App Store.
 - Caso sejam necessários ajustes, eles serão registrados na checklist e poderão ser acessados pelo parceiro na aba ‘Action Plan’.
-- Após a implementação dos ajustes, deverá ser enviado nova demonstração como evidência para validarmos os pontos pendentes.
+- Após a implementação dos ajustes, o parceiro deverá enviar uma nova demonstração como evidência para validarmos os pontos pendentes.
 - Esse processo será repetido até que todos os pontos tenham sido concluídos, permitindo que o app siga para publicação na App Store.
 
 :::info Checklist 
