@@ -43,7 +43,8 @@ Para garantir um processo eficiente e organizado, siga o fluxo abaixo para a hom
 - O parceiro deverá realizar as correções e retornar com as evidências de que os problemas foram resolvidos.
 - Após essa etapa, o app seguirá para a **publicação na App Store**.
 
-Já para aplicativos ERP, Payments e Shipping, dos quais lidam com dados sensíveis e possuem uma complexidade maior, passarão por uma etapa de validação a mais, com demonstrações complementares.
+
+Já para aplicativos **ERP, Payments e Shipping**, dos quais lidam com dados sensíveis e possuem uma complexidade maior, passarão por uma etapa de validação a mais, com demonstrações complementares.
 
 ## 🎯 2. Validação Inicial
 
