@@ -6,7 +6,7 @@ title: Landing Page
 
 La instalación de la aplicación representa solo el primer paso del recorrido del socio. Para aquellos que ingresarán en un flujo de gestión y onboarding acompañado, la visualización de una **Landing Page** proporciona mayor **claridad, alineación y comprensión de los próximos pasos** para el merchant.
 
-## Funciones Esenciales de la Landing Page
+## 🎯 Funciones Esenciales de la Landing Page
 
 ### 1. Claridad y Dirección del Próximo Paso
 
@@ -27,7 +27,8 @@ La instalación de la aplicación representa solo el primer paso del recorrido d
 
 Sin una etapa intermedia de orientación, corremos el riesgo de generar un abandono del merchant en el uso de la aplicación. A continuación, comparamos dos escenarios de flujo post-instalación:
 
-### Escenario 1: Instalación Directa (sin landing page)
+
+### ▶️ Escenario 1: Instalación Directa (sin landing page)
 
 En este modelo, el merchant instala la app y es inmediatamente confrontado con la pantalla de Login/Autenticación.
 
@@ -41,9 +42,9 @@ En este modelo, el merchant instala la app y es inmediatamente confrontado con l
   - **Fricción de Conversión:** El esfuerzo requerido para salir de la app, completar registros en otro sitio y luego volver a la app aumenta drásticamente la tasa de abandono.
   - **Percepción de Valor:** La app deja de parecer una herramienta de trabajo y pasa a ser vista solo como un "atajo" a un sitio, disminuyendo la relevancia de la instalación.
 
-   ![Tienda Flow](../../../../../static/img/es/flow.png "Tienda Flow")
+   ![Tienda Flow](../../../../../static/img/es/flowwes.png "Tienda Flow")
 
-### Escenario 2: Flujo Optimizado (con landing page)
+### ▶️ Escenario 2: Flujo Optimizado (con landing page)
 
 Al incluir una Landing Page inmediatamente después de la instalación, ofrecemos un mapa claro para dos perfiles distintos de usuarios:
 
@@ -57,9 +58,9 @@ Al incluir una Landing Page inmediatamente después de la instalación, ofrecemo
      - **Próximos Pasos:** Instrucciones claras sobre cómo iniciar la asociación comercial.
      - **Conversión:** Dirección a un formulario de contacto, WhatsApp de ventas o página de pre-registro.
 
-     ![Onboarding](../../../../../static/img/es/onboarding.png "Onboarding")
+     ![Onboarding](../../../../../static/img/es/onboardinges.png "Onboarding")
 
-## Beneficios del Flujo
+## ✨ Beneficios del Flujo
 
 - **Aumento de la tasa de activación:** Socios bien informados y correctamente dirigidos presentan mayor probabilidad de completar el onboarding y convertirse en usuarios activos de la aplicación.
 - **Calificación anticipada:** La Landing Page puede incluir formularios que ayudan en la calificación y segmentación del socio, permitiendo un enfoque más personalizado antes del primer contacto.
