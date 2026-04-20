@@ -34,6 +34,18 @@ const sidebars = {
 		},
 		{
 			type: "category",
+			label: "Nube CLI",
+			items: [
+				"nube-cli/overview",
+				"nube-cli/getting-started",
+				"nube-cli/theme-development",
+				"nube-cli/theme-installations",
+				"nube-cli/ftp-workflow",
+				"nube-cli/nubesdk-tools",
+			],
+		},
+		{
+			type: "category",
 			label: "Aplicativos",
 			items: [
 				"applications/overview",
