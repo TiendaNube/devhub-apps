@@ -5,8 +5,8 @@ sidebar_position: 5
 
 # FTP Workflow
 
-:::info Legacy workflow
-The FTP workflow is maintained for backward compatibility. For new projects, we recommend the [Public API workflow](./getting-started), which offers richer installation management and doesn't require FTP credentials.
+:::info
+The [Public API workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow is the way to go.
 :::
 
 Nube CLI supports syncing theme files over FTP. All FTP commands are under the `theme ftp` group:
@@ -100,4 +100,4 @@ Like the Public API watch mode, this monitors your local files and pushes change
 | Fork / Clone / Publish | No | Yes |
 | Preview URLs | No | Yes |
 | Authentication | FTP credentials | OAuth bearer token |
-| Recommended for new projects | No | Yes |
+| Theme support | All themes | Ipanema only |

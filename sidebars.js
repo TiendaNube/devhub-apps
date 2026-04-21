@@ -38,8 +38,18 @@ const sidebars = {
 			items: [
 				"nube-cli/overview",
 				"nube-cli/getting-started",
-				"nube-cli/theme-development",
-				"nube-cli/theme-installations",
+				{
+					type: "category",
+					label: "Public API",
+					link: {
+						type: "doc",
+						id: "nube-cli/api-workflow",
+					},
+					items: [
+						"nube-cli/theme-installations",
+						"nube-cli/theme-development",
+					],
+				},
 				"nube-cli/ftp-workflow",
 				"nube-cli/nubesdk-tools",
 			],
