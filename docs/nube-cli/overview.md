@@ -11,7 +11,7 @@ sidebar_position: 1
 
 | Capability | Description |
 | --- | --- |
-| **Theme sync via Public API** | Pull, push, and watch theme files using the Tiendanube Public API with OAuth-based authentication |
+| **Theme sync via Public API** | Pull, push, and watch theme files using the Tiendanube Public API with bearer-token authentication |
 | **Theme installation management** | Create, clone, fork, publish, and delete theme installations directly from your terminal |
 | **Theme sync via FTP** | Pull, push, and watch theme files over FTP |
 | **NubeSDK slot validation** | Scan `.tpl` template files to verify NubeSDK slot coverage |
