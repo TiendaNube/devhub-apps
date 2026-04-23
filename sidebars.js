@@ -51,7 +51,6 @@ const sidebars = {
 					],
 				},
 				"nube-cli/ftp-workflow",
-				"nube-cli/nubesdk-tools",
 			],
 		},
 		{

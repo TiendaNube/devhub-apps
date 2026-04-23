@@ -14,7 +14,6 @@ sidebar_position: 1
 | **Theme sync via Public API** | Pull, push, and watch theme files using the Tiendanube Public API with bearer-token authentication |
 | **Theme installation management** | Create, clone, fork, publish, and delete theme installations directly from your terminal |
 | **Theme sync via FTP** | Pull, push, and watch theme files over FTP |
-| **NubeSDK slot validation** | Scan `.tpl` template files to verify NubeSDK slot coverage |
 
 ## Two sync modes
 
@@ -49,4 +48,3 @@ Both point to the same CLI entry point, so all commands and options are identica
 - [Public API Workflow](./api-workflow) — Set up API credentials and start syncing
 - [Theme Installations](./theme-installations) — Create, clone, fork, and publish installations
 - [FTP Workflow](./ftp-workflow) — FTP-based theme sync
-- [NubeSDK Tools](./nubesdk-tools) — Validate NubeSDK slots in templates

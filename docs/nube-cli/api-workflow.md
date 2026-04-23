@@ -13,22 +13,32 @@ The Public API workflow currently supports only the **Ipanema** theme. If you're
 
 ## Get an access token
 
-The recommended way to obtain a Public API token is the `theme authorize` command. It opens your default browser so you can sign in and retrieve the credentials for your store:
+The recommended way to obtain a Public API token is the `theme authorize` command. It opens your default browser so you can sign in and install the CLI on your store:
 
 ```bash
 tiendanube theme authorize
 ```
 
-After you sign in, the browser displays:
+### 1. Authorize the CLI in your store admin
 
-- Your **access token**
-- Your **store ID**
-- Your **storefront URL**
+After signing in, your store admin shows an installation screen requesting the permissions Nube CLI needs to manage your theme. Review the permissions and click Accept:
 
-Copy these values — you'll paste them into `theme setup` in the next step.
+![Store admin installation screen for Nube CLI](../../static/img/en/cli-authorize-admin.png)
+
+### 2. Copy the access token
+
+Once you accept, the browser displays your Public API access token. Use the Copy to clipboard button to copy it:
+
+![Public API access token shown after successful authorization](../../static/img/en/cli-authorize-token.png)
+
+:::warning The token is shown only once
+Save the token somewhere safe before closing the page. If you lose it, rerun `tiendanube theme authorize` to generate a new one.
+:::
+
+You'll also need your **store ID** and **storefront URL** to run `theme setup`. These are available from your store admin — they're not displayed on the token page.
 
 :::tip
-`theme authorize` is a browser handoff: the CLI opens the URL and exits. There's no local callback or polling, so you don't need to keep a terminal running.
+`theme authorize` is a browser handoff: the CLI opens the URL and exits, so you don't need to keep a terminal running. Once you have the token (plus your store ID and storefront URL), move on to `theme setup`.
 :::
 
 :::info Already have a token?
@@ -42,8 +52,8 @@ Once you have a token, connect the CLI to your store:
 ```bash
 tiendanube theme setup \
   --token YOUR_ACCESS_TOKEN \
-  --store_id YOUR_STORE_ID \
-  --store_url https://yourstore.mitiendanube.com
+  --store-id YOUR_STORE_ID \
+  --store-url https://yourstore.mitiendanube.com
 ```
 
 This creates a `.nube` configuration file in your working directory and verifies your credentials against the API.
@@ -54,34 +64,34 @@ The `.nube` file contains your access token. Add it to your `.gitignore`.
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `--token <token>` | **Required.** Your Public API access token |
-| `--store_id <id>` | **Required.** Your numeric store ID |
-| `--store_url <url>` | **Required.** Your storefront URL |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option              | Description                                |
+| ------------------- | ------------------------------------------ |
+| `--token <token>`   | **Required.** Your Public API access token |
+| `--store-id <id>`   | **Required.** Your numeric store ID        |
+| `--store-url <url>` | **Required.** Your storefront URL          |
+| `-y`                | Skip confirmation prompts                  |
+| `-v`                | Enable verbose output                      |
 
 ### What you need
 
-| Requirement | Where to get it |
-| --- | --- |
+| Requirement      | Where to get it                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------- |
 | **Access token** | Run `tiendanube theme authorize` — see [Get an access token](#get-an-access-token) |
-| **Store ID** | Shown by `theme authorize`, or your numeric store identifier |
-| **Store URL** | Shown by `theme authorize`, or your storefront URL (e.g. `https://mystore.mitiendanube.com`) |
+| **Store ID**     | Your numeric store identifier — available from your store admin                    |
+| **Store URL**    | Your storefront URL (e.g. `https://mystore.mitiendanube.com`)                      |
 
 ## Configuration file
 
 The `theme setup` command creates a `.nube` file in your working directory. This file stores your API credentials and tracks which installation you're working on:
 
-| Key | Description |
-| --- | --- |
-| `themeManagement` | Set to `"api"` — indicates this directory uses the Public API workflow |
-| `theme-api.publicApiToken` | Your Public API access token |
-| `theme-api.storeId` | Your numeric store ID |
-| `theme-api.storeUrl` | Your storefront URL |
+| Key                        | Description                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------- |
+| `themeManagement`          | Set to `"api"` — indicates this directory uses the Public API workflow           |
+| `theme-api.publicApiToken` | Your Public API access token                                                     |
+| `theme-api.storeId`        | Your numeric store ID                                                            |
+| `theme-api.storeUrl`       | Your storefront URL                                                              |
 | `theme-api.installationId` | The currently checked-out installation ID (set by `theme installation checkout`) |
-| `theme-api.apiBaseUrl` | API base URL (defaults to `https://api.nuvemshop.com.br`) |
+| `theme-api.apiBaseUrl`     | API base URL (defaults to `https://api.nuvemshop.com.br`)                        |
 
 The file contents are base64-encoded and written with restricted permissions (`0600` on macOS/Linux).
 

@@ -5,7 +5,11 @@ sidebar_position: 4
 
 # Theme Installations
 
-A **theme installation** is a store-scoped instance of a theme — a working copy with its own files, settings, and state. A single store can have multiple installations at once: one that is **productive** (live on the storefront) and others that serve as drafts or experiments.
+A **theme installation** is a store-scoped instance of a theme — a working copy with its own files, settings, and state. Your store has one that is **productive** (live on the storefront) and can have a second one that serves as a draft or experiment.
+
+:::warning Two installations at a time
+A store can have a maximum of **two installations** at any given moment. If you've reached the limit and want to start a new one, [delete](#delete) an existing non-productive installation first to free up the slot.
+:::
 
 Nube CLI lets you manage the full lifecycle of installations from your terminal:
 
@@ -49,7 +53,7 @@ tiendanube theme installation list --json
 Create a new installation from a theme code:
 
 ```bash
-tiendanube theme installation create --theme_code THEME_CODE --title "My Theme"
+tiendanube theme installation create --theme-code THEME_CODE --title "My Theme"
 ```
 
 This creates a fresh installation based on the specified theme's default files and settings. The `theme_code` identifies the base theme in the Tiendanube theme catalog.
@@ -58,7 +62,7 @@ This creates a fresh installation based on the specified theme's default files a
 
 | Option | Description |
 | --- | --- |
-| `--theme_code <code>` | **Required.** The theme code to create an installation from |
+| `--theme-code <code>` | **Required.** The theme code to create an installation from |
 | `--title <name>` | **Required.** A human-readable name for the installation |
 | `-v` | Enable verbose output |
 
@@ -67,10 +71,10 @@ This creates a fresh installation based on the specified theme's default files a
 Select an installation as the default target for all subsequent commands:
 
 ```bash
-tiendanube theme installation checkout --installation_id INSTALLATION_ID
+tiendanube theme installation checkout --installation-id INSTALLATION_ID
 ```
 
-This is a **local operation** — it saves the installation ID in your `.nube` config file. After checking out, commands like `theme pull`, `theme push`, and `theme watch` automatically target this installation without needing `--installation_id` each time.
+This is a **local operation** — it saves the installation ID in your `.nube` config file. After checking out, commands like `theme pull`, `theme push`, and `theme watch` automatically target this installation without needing `--installation-id` each time.
 
 Think of it as selecting which installation you're "working on" in this directory.
 
@@ -78,7 +82,7 @@ Think of it as selecting which installation you're "working on" in this director
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | **Required.** The installation ID to set as default |
+| `--installation-id <id>` | **Required.** The installation ID to set as default |
 | `-v` | Enable verbose output |
 
 ## Clone
@@ -95,7 +99,7 @@ Unlike **create** (which starts from the base theme's defaults), **clone** dupli
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | The installation to clone (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to clone (defaults to the checked-out installation) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -161,7 +165,7 @@ This is the safer path — your installation stays compatible with future theme 
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | The installation to fork (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to fork (defaults to the checked-out installation) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -187,7 +191,7 @@ Publishing makes the installation visible to all visitors. The previously produc
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | The installation to publish (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to publish (defaults to the checked-out installation) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -215,7 +219,7 @@ Open it in your browser to see how the installation looks on the storefront. The
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | The installation to preview (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to preview (defaults to the checked-out installation) |
 
 ## Delete
 
@@ -229,7 +233,7 @@ tiendanube theme installation delete
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | The installation to delete (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to delete (defaults to the checked-out installation) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 

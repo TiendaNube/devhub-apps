@@ -54,7 +54,7 @@ This file is **local only** — it's never uploaded when you push or watch. It h
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -82,7 +82,7 @@ The CLI reads each local file, determines its format based on the file extension
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -136,7 +136,7 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 | Option | Description |
 | --- | --- |
-| `--installation_id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
 | `--no-browser` | Don't open or reload a browser window |
 | `-v` | Enable verbose output |
 
@@ -145,7 +145,7 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 A common development cycle looks like this:
 
 1. **Create or clone** an installation to work on: `tiendanube theme installation clone`
-2. **Checkout** the installation: `tiendanube theme installation checkout --installation_id ID`
+2. **Checkout** the installation: `tiendanube theme installation checkout --installation-id ID`
 3. **Fork** if you need to edit theme code: `tiendanube theme installation fork`
 4. **Pull** the current files: `tiendanube theme pull`
 5. **Start watch mode**: `tiendanube theme watch`

@@ -21,10 +21,10 @@ Configure your FTP connection:
 
 ```bash
 tiendanube theme ftp setup \
-  --ftp_server FTP_HOST \
-  --ftp_username FTP_USER \
-  --ftp_password FTP_PASSWORD \
-  --store_url https://yourstore.mitiendanube.com
+  --ftp-server FTP_HOST \
+  --ftp-username FTP_USER \
+  --ftp-password FTP_PASSWORD \
+  --store-url https://yourstore.mitiendanube.com
 ```
 
 The CLI tests the FTP connection and saves the credentials to your `.nube` config file.
@@ -33,10 +33,10 @@ The CLI tests the FTP connection and saves the credentials to your `.nube` confi
 
 | Option | Description |
 | --- | --- |
-| `--ftp_server <host>` | **Required.** FTP server hostname |
-| `--ftp_username <user>` | **Required.** FTP username |
-| `--ftp_password <pass>` | **Required.** FTP password |
-| `--store_url <url>` | **Required.** Your storefront URL |
+| `--ftp-server <host>` | **Required.** FTP server hostname |
+| `--ftp-username <user>` | **Required.** FTP username |
+| `--ftp-password <pass>` | **Required.** FTP password |
+| `--store-url <url>` | **Required.** Your storefront URL |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -91,13 +91,3 @@ Like the Public API watch mode, this monitors your local files and pushes change
 | `--no-browser` | Don't open or reload a browser window |
 | `-v` | Enable verbose output |
 
-## FTP vs Public API
-
-| Feature | FTP | Public API |
-| --- | --- | --- |
-| Pull / Push / Watch | Yes | Yes |
-| Installation management | No | Yes |
-| Fork / Clone / Publish | No | Yes |
-| Preview URLs | No | Yes |
-| Authentication | FTP credentials | OAuth bearer token |
-| Theme support | All themes | Ipanema only |
