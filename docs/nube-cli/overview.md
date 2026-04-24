@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Nube CLI
 
-**Nube CLI** (`@tiendanube/nube-cli`) is the official command-line tool for Tiendanube / Nuvemshop theme development. It provides everything you need to build, sync, and manage storefront themes — from local development to production deployment.
+**Nube CLI** (`@tiendanube/cli`) is the official command-line tool for Tiendanube / Nuvemshop theme development. It provides everything you need to build, sync, and manage storefront themes — from local development to production deployment.
 
 ## What you can do
 

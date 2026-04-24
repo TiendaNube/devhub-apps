@@ -15,7 +15,7 @@ sidebar_position: 2
 ## Install
 
 ```bash
-npm install -g @tiendanube/nube-cli
+npm install -g @tiendanube/cli
 ```
 
 Verify the installation:
