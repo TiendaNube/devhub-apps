@@ -1,14 +1,14 @@
 ---
 title: Theme Development
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Theme Development
 
-Use `theme pull`, `theme push`, and `theme watch` to sync files between your local machine and a theme installation on your store via the Public API.
+Use `theme pull`, `theme push`, and `theme watch` to sync files between your local machine and a theme installation on your store via the Theme workflow.
 
 :::info
-Before using these commands, run `theme setup` to connect the CLI to your store. See [Public API Workflow](./api-workflow) for setup instructions.
+Before using these commands, run `theme authorize` to connect the CLI to your store. See [Theme Workflow](./api-workflow) for setup instructions.
 :::
 
 ## Pull
@@ -52,11 +52,11 @@ This file is **local only** — it's never uploaded when you push or watch. It h
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option                   | Description                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------- |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `-y`                     | Skip confirmation prompts                                                                         |
+| `-v`                     | Enable verbose output                                                                             |
 
 :::warning
 Pulling overwrites local files. If you have uncommitted changes, commit or stash them before pulling.
@@ -72,19 +72,19 @@ tiendanube theme push
 
 The CLI reads each local file, determines its format based on the file extension, and uploads it to the installation:
 
-| Extension | Upload format |
-| --- | --- |
-| `.json` | Parsed and sent as JSON |
-| `.tpl`, `.css`, `.js`, `.svg` | Sent as text |
-| Everything else | Sent as base64-encoded binary |
+| Extension                     | Upload format                 |
+| ----------------------------- | ----------------------------- |
+| `.json`                       | Parsed and sent as JSON       |
+| `.tpl`, `.css`, `.js`, `.svg` | Sent as text                  |
+| Everything else               | Sent as base64-encoded binary |
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option                   | Description                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------- |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `-y`                     | Skip confirmation prompts                                                                         |
+| `-v`                     | Enable verbose output                                                                             |
 
 ### What gets uploaded
 
@@ -92,14 +92,16 @@ The CLI uploads all files in your working directory, with these exclusions:
 
 - **Dot-prefixed paths** — files and directories starting with `.` (like `.nube`, `.git`, `.vscode`) are always skipped
 - **`manifest.json`** — the local manifest is never uploaded
-- **Empty files** — files with zero bytes are skipped
 - **Fork-restricted paths** — if the installation is not forked, only `custom/`, `templates/`, and `config/settings_data.json` can be pushed (see below)
+
+Empty files (zero bytes) are not exclusions — they trigger a per-file upload error, and the overall push reports as failed.
 
 ### Fork rules
 
 Before pushing, the CLI checks whether the target installation is **forked**. This determines which files you're allowed to upload:
 
 **Non-forked installation** — you can only push customization files:
+
 - `custom/**` — custom files
 - `templates/**` — page templates (`.json`)
 - `config/settings_data.json` — merchant settings
@@ -122,11 +124,7 @@ The same upload rules and fork restrictions from `theme push` apply — watch mo
 
 ### Browser reload
 
-If your `.nube` config has a `storeUrl` and you don't pass `--no-browser`, the CLI opens a Puppeteer-driven browser window. It first navigates to the store admin for login, then opens the storefront. After each successful push or delete, the page is automatically reloaded.
-
-:::warning
-The browser opens your **store URL directly** — it does not add the `?theme_installation_id=...` preview parameter. If you're working on a non-productive installation, you need to manually navigate to the preview URL to see your changes. Use `theme installation preview-url` to get the link.
-:::
+By default, the CLI opens a Puppeteer-driven browser window showing the storefront with the `?theme_installation_id=<id>` preview parameter, so you see the installation you're working on (not the productive one). After each successful push or delete, the page is automatically reloaded. Use `--no-browser` to skip this.
 
 :::tip
 The browser feature uses Puppeteer, which may need to download Chromium on first run. Use `--no-browser` to skip this and rely on manual browser testing instead.
@@ -134,21 +132,20 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | Target a specific installation (defaults to the checked-out installation in `.nube`) |
-| `--no-browser` | Don't open or reload a browser window |
-| `-v` | Enable verbose output |
+| Option                   | Description                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------- |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `--no-browser`           | Don't open or reload a browser window                                                             |
+| `-v`                     | Enable verbose output                                                                             |
 
 ## Typical development workflow
 
 A common development cycle looks like this:
 
 1. **Create or clone** an installation to work on: `tiendanube theme installation clone`
-2. **Checkout** the installation: `tiendanube theme installation checkout --installation-id ID`
+2. **Pull** the installation files (links the directory to that installation): `tiendanube theme pull --installation-id ID`
 3. **Fork** if you need to edit theme code: `tiendanube theme installation fork`
-4. **Pull** the current files: `tiendanube theme pull`
-5. **Start watch mode**: `tiendanube theme watch`
-6. **Edit** templates, sections, and settings in your editor — changes sync automatically
-7. **Preview** with the auto-reloading browser, or generate a link: `tiendanube theme installation preview-url`
-8. **Publish** when ready: `tiendanube theme installation publish`
+4. **Start watch mode**: `tiendanube theme watch`
+5. **Edit** templates, sections, and settings in your editor — changes sync automatically
+6. **Preview** with the auto-reloading browser, or generate a link: `tiendanube theme installation preview-url`
+7. **Publish** when ready: `tiendanube theme installation publish`

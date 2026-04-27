@@ -1,15 +1,15 @@
 ---
-title: FTP Workflow
-sidebar_position: 5
+title: FTP Workflow (legacy)
+sidebar_position: 6
 ---
 
-# FTP Workflow
+# FTP Workflow (legacy)
 
 :::info
-The [Public API workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow is the way to go.
+The [Theme workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow (legacy) is the way to go.
 :::
 
-Nube CLI supports syncing theme files over FTP. All FTP commands are under the `theme ftp` group:
+The Tiendanube/Nuvemshop CLI supports syncing theme files over FTP. All FTP commands are under the `theme ftp` group:
 
 ```bash
 tiendanube theme ftp <command>
@@ -82,7 +82,7 @@ Watch local files and sync changes to FTP on save:
 tiendanube theme ftp watch
 ```
 
-Like the Public API watch mode, this monitors your local files and pushes changes automatically. It also handles file deletions. If a `storeUrl` is configured, it can open and reload a browser window to preview your changes.
+Like the Theme watch mode, this monitors your local files and pushes changes automatically. It also handles file deletions. By default, it opens a browser window pointed at your storefront and reloads it after each successful sync. Use `--no-browser` to skip that.
 
 ### Options
 

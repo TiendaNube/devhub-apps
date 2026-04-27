@@ -9,7 +9,7 @@ sidebar_position: 2
 
 | Requirement | Details |
 | --- | --- |
-| **Node.js 18+** | [Download Node.js](https://nodejs.org/) if you don't have it |
+| **Node.js 24.15+** | [Download Node.js](https://nodejs.org/) if you don't have it |
 | **npm** | Comes with Node.js |
 
 ## Install
@@ -30,9 +30,9 @@ You can use either `tiendanube` or `nuvemshop` — both commands are identical.
 
 ## Choose your workflow
 
-Nube CLI supports two ways to sync theme files. Compare the capabilities and pick the one that fits your setup:
+The Tiendanube/Nuvemshop CLI supports two ways to sync theme files. Compare the capabilities and pick the one that fits your setup:
 
-| Feature | FTP | Public API |
+| Feature | FTP (legacy) | Theme |
 | --- | --- | --- |
 | Pull / Push / Watch | Yes | Yes |
 | Installation management | No | Yes |
@@ -43,9 +43,9 @@ Nube CLI supports two ways to sync theme files. Compare the capabilities and pic
 
 | Workflow | Best for | Guide |
 | --- | --- | --- |
-| **Public API** | Ipanema theme — full installation management, bearer-token auth | [Public API Workflow](./api-workflow) |
-| **FTP** | All other themes — simple file sync over FTP | [FTP Workflow](./ftp-workflow) |
+| **Theme** | Ipanema theme — full installation management, bearer-token auth | [Theme Workflow](./api-workflow) |
+| **FTP (legacy)** | All other themes — simple file sync over FTP | [FTP Workflow (legacy)](./ftp-workflow) |
 
 :::warning
-The Public API workflow currently supports only the **Ipanema** theme. For all other themes, use the FTP workflow.
+The Theme workflow currently supports only the **Ipanema** theme. For all other themes, use the FTP workflow (legacy).
 :::

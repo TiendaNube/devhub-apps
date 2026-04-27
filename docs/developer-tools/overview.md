@@ -16,3 +16,4 @@ import DeveloperTools from '@site/src/components/DeveloperTools';
 - Saiba mais sobre o [Nimbus](./nimbus)
 - Saiba mais sobre o [Nexo](./nexo)
 - Saiba mais sobre nossa [API](./nuvemshop-api)
+- Saiba mais sobre a [Tiendanube/Nuvemshop CLI](./cli/overview)

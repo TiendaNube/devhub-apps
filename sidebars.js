@@ -30,27 +30,30 @@ const sidebars = {
 				"developer-tools/nimbus",
 				"developer-tools/nexo",
 				"developer-tools/nuvemshop-api",
-			],
-		},
-		{
-			type: "category",
-			label: "Nube CLI",
-			items: [
-				"nube-cli/overview",
-				"nube-cli/getting-started",
 				{
 					type: "category",
-					label: "Public API",
+					label: "Nuvemshop CLI",
 					link: {
 						type: "doc",
-						id: "nube-cli/api-workflow",
+						id: "developer-tools/cli/overview",
 					},
 					items: [
-						"nube-cli/theme-installations",
-						"nube-cli/theme-development",
+						"developer-tools/cli/getting-started",
+						{
+							type: "category",
+							label: "Theme Workflow",
+							link: {
+								type: "doc",
+								id: "developer-tools/cli/api-workflow",
+							},
+							items: [
+								"developer-tools/cli/theme-installations",
+								"developer-tools/cli/theme-development",
+							],
+						},
+						"developer-tools/cli/ftp-workflow",
 					],
 				},
-				"nube-cli/ftp-workflow",
 			],
 		},
 		{

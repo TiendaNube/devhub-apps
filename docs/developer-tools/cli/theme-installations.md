@@ -11,11 +11,13 @@ A **theme installation** is a store-scoped instance of a theme — a working cop
 A store can have a maximum of **two installations** at any given moment. If you've reached the limit and want to start a new one, [delete](#delete) an existing non-productive installation first to free up the slot.
 :::
 
-Nube CLI lets you manage the full lifecycle of installations from your terminal:
+The Tiendanube/Nuvemshop CLI lets you manage the full lifecycle of installations from your terminal:
 
 ```
-create → checkout → pull/push/watch → fork (optional) → publish → delete
+create → pull → push/watch → fork (optional) → publish → delete
 ```
+
+`theme pull --installation-id <id>` saves the installation ID in `.nube`, so subsequent commands target it without needing `--installation-id` each time.
 
 All installation commands are under the `theme installation` group:
 
@@ -24,7 +26,7 @@ tiendanube theme installation <command>
 ```
 
 :::info
-Before using these commands, run `theme setup` to connect the CLI to your store. See [Public API Workflow](./api-workflow) for setup instructions.
+Before using these commands, run `theme authorize` to connect the CLI to your store. See [Theme Workflow](./api-workflow) for setup instructions.
 :::
 
 ## List
@@ -66,24 +68,21 @@ This creates a fresh installation based on the specified theme's default files a
 | `--title <name>` | **Required.** A human-readable name for the installation |
 | `-v` | Enable verbose output |
 
-## Checkout
+## Selecting the active installation
 
-Select an installation as the default target for all subsequent commands:
+There is no separate `checkout` command. The CLI links a directory to an installation when you run:
 
 ```bash
-tiendanube theme installation checkout --installation-id INSTALLATION_ID
+tiendanube theme pull --installation-id INSTALLATION_ID
 ```
 
-This is a **local operation** — it saves the installation ID in your `.nube` config file. After checking out, commands like `theme pull`, `theme push`, and `theme watch` automatically target this installation without needing `--installation-id` each time.
+After a successful pull, the installation ID is saved in `.nube`. Subsequent commands like `theme push`, `theme watch`, and `theme installation publish/fork/clone/delete/preview-url` automatically target this installation when `--installation-id` is omitted.
 
-Think of it as selecting which installation you're "working on" in this directory.
+To check which installation the current directory is linked to:
 
-### Options
-
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | **Required.** The installation ID to set as default |
-| `-v` | Enable verbose output |
+```bash
+tiendanube theme installation get-current
+```
 
 ## Clone
 
@@ -99,7 +98,7 @@ Unlike **create** (which starts from the base theme's defaults), **clone** dupli
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to clone (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to clone (defaults to the installation linked to this directory) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -165,7 +164,7 @@ This is the safer path — your installation stays compatible with future theme 
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to fork (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to fork (defaults to the installation linked to this directory) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -191,7 +190,7 @@ Publishing makes the installation visible to all visitors. The previously produc
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to publish (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to publish (defaults to the installation linked to this directory) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -219,7 +218,7 @@ Open it in your browser to see how the installation looks on the storefront. The
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to preview (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to preview (defaults to the installation linked to this directory) |
 
 ## Delete
 
@@ -233,7 +232,7 @@ tiendanube theme installation delete
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to delete (defaults to the checked-out installation) |
+| `--installation-id <id>` | The installation to delete (defaults to the installation linked to this directory) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -247,7 +246,7 @@ Deleting an installation is permanent and cannot be undone. You cannot delete th
 | --- | --- |
 | `theme installation list` | List all installations on the store |
 | `theme installation create` | Create a new installation from a theme code |
-| `theme installation checkout` | Set the default installation for this directory |
+| `theme installation get-current` | Show the installation linked to this directory |
 | `theme installation clone` | Duplicate an existing installation |
 | `theme installation fork` | Unlock full file access (one-way) |
 | `theme installation publish` | Make an installation live on the storefront |
