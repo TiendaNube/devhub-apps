@@ -30,6 +30,30 @@ const sidebars = {
 				"developer-tools/nimbus",
 				"developer-tools/nexo",
 				"developer-tools/nuvemshop-api",
+				{
+					type: "category",
+					label: "Nuvemshop CLI",
+					link: {
+						type: "doc",
+						id: "developer-tools/cli/overview",
+					},
+					items: [
+						"developer-tools/cli/getting-started",
+						{
+							type: "category",
+							label: "Fork workflow",
+							link: {
+								type: "doc",
+								id: "developer-tools/cli/api-workflow",
+							},
+							items: [
+								"developer-tools/cli/theme-installations",
+								"developer-tools/cli/theme-development",
+							],
+						},
+						"developer-tools/cli/ftp-workflow",
+					],
+				},
 			],
 		},
 		{
