@@ -26,7 +26,7 @@ tiendanube theme installation <command>
 ```
 
 :::info
-Before using these commands, run `theme authorize` to connect the CLI to your store. See [Theme Workflow](./api-workflow) for setup instructions.
+Before using these commands, run `theme authorize` to connect the CLI to your store. See [Fork workflow](./api-workflow) for setup instructions.
 :::
 
 ## List

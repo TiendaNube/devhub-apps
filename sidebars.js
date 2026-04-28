@@ -41,7 +41,7 @@ const sidebars = {
 						"developer-tools/cli/getting-started",
 						{
 							type: "category",
-							label: "Theme Workflow",
+							label: "Fork workflow",
 							link: {
 								type: "doc",
 								id: "developer-tools/cli/api-workflow",

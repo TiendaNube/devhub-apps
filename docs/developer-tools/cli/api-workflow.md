@@ -1,14 +1,14 @@
 ---
-title: Theme Workflow
+title: Fork workflow
 sidebar_position: 3
 ---
 
-# Theme Workflow
+# Fork workflow
 
-The Theme workflow uses bearer-token authentication and the Tiendanube REST API. You get full file sync (pull, push, watch) plus installation management (create, clone, fork, publish, preview, delete).
+The Fork workflow uses bearer-token authentication and the Tiendanube REST API. You get full file sync (pull, push, watch) plus installation management (create, clone, fork, publish, preview, delete).
 
 :::warning Ipanema theme only
-The Theme workflow currently supports only the **Ipanema** theme. If you're working with a different theme, use the [FTP workflow (legacy)](./ftp-workflow) instead.
+The Fork workflow currently supports only the **Ipanema** theme. If you're working with a different theme, use the [FTP workflow (legacy)](./ftp-workflow) instead.
 :::
 
 ## Authorize

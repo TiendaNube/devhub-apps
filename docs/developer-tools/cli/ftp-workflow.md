@@ -6,7 +6,7 @@ sidebar_position: 6
 # FTP Workflow (legacy)
 
 :::info
-The [Theme workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow (legacy) is the way to go.
+The [Fork workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow (legacy) is the way to go.
 :::
 
 The Tiendanube/Nuvemshop CLI supports syncing theme files over FTP. All FTP commands are under the `theme ftp` group:

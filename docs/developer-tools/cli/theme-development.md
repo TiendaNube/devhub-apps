@@ -5,10 +5,10 @@ sidebar_position: 5
 
 # Theme Development
 
-Use `theme pull`, `theme push`, and `theme watch` to sync files between your local machine and a theme installation on your store via the Theme workflow.
+Use `theme pull`, `theme push`, and `theme watch` to sync files between your local machine and a theme installation on your store via the Fork workflow.
 
 :::info
-Before using these commands, run `theme authorize` to connect the CLI to your store. See [Theme Workflow](./api-workflow) for setup instructions.
+Before using these commands, run `theme authorize` to connect the CLI to your store. See [Fork workflow](./api-workflow) for setup instructions.
 :::
 
 ## Pull
