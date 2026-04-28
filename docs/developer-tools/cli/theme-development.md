@@ -43,7 +43,7 @@ After pulling, the CLI generates a `manifest.json` file in your working director
   "theme": "ipanema",
   "theme_version": "1.0.0",
   "forked": false,
-  "revision_token": "42ad329b75c24eb6df3012c226135a6b",
+  "revision_token": "<REVISION_TOKEN>",
   "installation_id": "4541834"
 }
 ```
