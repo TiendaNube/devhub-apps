@@ -1,51 +1,51 @@
 ---
-title: Getting Started
+title: Primeiros passos
 sidebar_position: 2
 ---
 
-# Getting Started
+# Primeiros passos
 
-## Prerequisites
+## Pré-requisitos
 
-| Requirement | Details |
-| --- | --- |
-| **Node.js 24.15+** | [Download Node.js](https://nodejs.org/) if you don't have it |
-| **npm** | Comes with Node.js |
+| Requisito          | Detalhes                                                       |
+| ------------------ | -------------------------------------------------------------- |
+| **Node.js 24.15+** | [Baixe o Node.js](https://nodejs.org/) se você ainda não tiver |
+| **npm**            | Já vem com o Node.js                                           |
 
-## Install
+## Instalação
 
 ```bash
 npm install -g @tiendanube/cli
 ```
 
-Verify the installation:
+Verifique a instalação:
 
 ```bash
-tiendanube --version
+nuvemshop --version
 ```
 
 :::tip
-You can use either `tiendanube` or `nuvemshop` — both commands are identical.
+Você pode usar tanto `tiendanube` quanto `nuvemshop` — os dois comandos são idênticos.
 :::
 
-## Choose your workflow
+## Escolha seu fluxo de trabalho
 
-The Tiendanube/Nuvemshop CLI supports two ways to sync theme files. Compare the capabilities and pick the one that fits your setup:
+O Nuvemshop CLI suporta duas formas de sincronizar arquivos de tema. Compare as funcionalidades e escolha a que melhor se adapta ao seu projeto:
 
-| Feature | FTP (legacy) | Fork |
-| --- | --- | --- |
-| Pull / Push / Watch | Yes | Yes |
-| Installation management | No | Yes |
-| Fork / Clone / Publish | No | Yes |
-| Preview URLs | No | Yes |
-| Authentication | FTP credentials | Bearer token |
-| Theme support | All themes | Ipanema only |
+| Funcionalidade               | FTP (legado)    | Fork            |
+| ---------------------------- | --------------- | --------------- |
+| Baixar / Enviar / Monitorar  | Sim             | Sim             |
+| Gerenciamento de instalações | Não             | Sim             |
+| Fork / Clone / Publicar      | Não             | Sim             |
+| URLs de pré-visualização     | Não             | Sim             |
+| Autenticação                 | Credenciais FTP | Bearer token    |
+| Suporte de temas             | Todos os temas  | Somente Ipanema |
 
-| Workflow | Best for | Guide |
-| --- | --- | --- |
-| **Fork** | Ipanema theme — full installation management, bearer-token auth | [Fork workflow](./api-workflow) |
-| **FTP (legacy)** | All other themes — simple file sync over FTP | [FTP Workflow (legacy)](./ftp-workflow) |
+| Fluxo de trabalho | Ideal para                                                                          | Guia                                 |
+| ----------------- | ----------------------------------------------------------------------------------- | ------------------------------------ |
+| **Fork**          | Tema Ipanema — gerenciamento completo de instalações, autenticação via bearer token | [Fork workflow](./api-workflow)      |
+| **FTP (legado)**  | Todos os outros temas — sincronização simples de arquivos via FTP                   | [Fluxo FTP (legado)](./ftp-workflow) |
 
 :::warning
-The Fork workflow currently supports only the **Ipanema** theme. For all other themes, use the FTP workflow (legacy).
+O Fork workflow atualmente suporta apenas o tema **Ipanema**. Para todos os outros temas, use o Fluxo FTP (legado).
 :::
