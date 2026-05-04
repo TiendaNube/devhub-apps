@@ -1,254 +1,256 @@
 ---
-title: Theme Installations
+title: Instalações de Tema
 sidebar_position: 4
 ---
 
-# Theme Installations
+# Instalações de Tema
 
-A **theme installation** is a store-scoped instance of a theme — a working copy with its own files, settings, and state. Your store has one that is **productive** (live on the storefront) and can have a second one that serves as a draft or experiment.
+Uma **instalação de tema** é uma instância de tema com escopo de loja — uma cópia de trabalho com seus próprios arquivos, configurações e estado. Sua loja tem uma instalação **produtiva** (ativa na loja) e pode ter uma segunda que serve como rascunho ou experimento.
 
-:::warning Two installations at a time
-A store can have a maximum of **two installations** at any given moment. If you've reached the limit and want to start a new one, [delete](#delete) an existing non-productive installation first to free up the slot.
+:::warning Duas instalações por vez
+Uma loja pode ter no máximo **duas instalações** em qualquer momento. Se você atingiu o limite e quer criar uma nova, [exclua](#excluir) uma instalação não-produtiva existente para liberar o espaço.
 :::
 
-The Tiendanube/Nuvemshop CLI lets you manage the full lifecycle of installations from your terminal:
+O Nuvemshop CLI permite que você gerencie o ciclo de vida completo das instalações pelo terminal:
 
 ```
-create → pull → push/watch → fork (optional) → publish → delete
+criar → baixar → enviar/monitorar → fork (opcional) → publicar → excluir
 ```
 
-`theme pull --installation-id <id>` saves the installation ID in `.nube`, so subsequent commands target it without needing `--installation-id` each time.
+`theme pull --installation-id <id>` salva o ID da instalação em `.nube`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--installation-id` a cada vez.
 
-All installation commands are under the `theme installation` group:
+Todos os comandos de instalação estão no grupo `theme installation`:
 
 ```bash
-tiendanube theme installation <command>
+nuvemshop theme installation <comando>
 ```
 
 :::info
-Before using these commands, run `theme authorize` to connect the CLI to your store. See [Fork workflow](./api-workflow) for setup instructions.
+Antes de usar esses comandos, execute `theme authorize` para conectar o CLI à sua loja. Veja [Fork workflow](./api-workflow) para instruções de configuração.
 :::
 
-## List
+## Listar
 
-List all theme installations on your store:
-
-```bash
-tiendanube theme installation list
-```
-
-The output shows each installation's ID, title, theme version, whether it's productive (live), and whether it's been forked. Use `--json` for machine-readable output:
+Liste todas as instalações de tema na sua loja:
 
 ```bash
-tiendanube theme installation list --json
+nuvemshop theme installation list
 ```
 
-### Options
-
-| Option | Description |
-| --- | --- |
-| `--json` | Output as JSON instead of a table |
-| `-v` | Enable verbose output |
-
-## Create
-
-Create a new installation from a theme code:
+A saída mostra o ID, título, versão do tema, se é produtiva (ativa) e se foi feito fork de cada instalação. Use `--json` para saída legível por máquina:
 
 ```bash
-tiendanube theme installation create --theme-code THEME_CODE --title "My Theme"
+nuvemshop theme installation list --json
 ```
 
-This creates a fresh installation based on the specified theme's default files and settings. The `theme_code` identifies the base theme in the Tiendanube theme catalog.
+### Opções
 
-### Options
+| Opção    | Descrição                              |
+| -------- | -------------------------------------- |
+| `--json` | Exibe a saída em JSON em vez de tabela |
+| `-v`     | Ativa a saída detalhada                |
 
-| Option | Description |
-| --- | --- |
-| `--theme-code <code>` | **Required.** The theme code to create an installation from |
-| `--title <name>` | **Required.** A human-readable name for the installation |
-| `-v` | Enable verbose output |
+## Criar
 
-## Selecting the active installation
-
-There is no separate `checkout` command. The CLI links a directory to an installation when you run:
+Crie uma nova instalação a partir de um código de tema:
 
 ```bash
-tiendanube theme pull --installation-id INSTALLATION_ID
+nuvemshop theme installation create --theme-code CODIGO_DO_TEMA --title "Meu Tema"
 ```
 
-After a successful pull, the installation ID is saved in `.nube`. Subsequent commands like `theme push`, `theme watch`, and `theme installation publish/fork/clone/delete/preview-url` automatically target this installation when `--installation-id` is omitted.
+Isso cria uma instalação nova com base nos arquivos e configurações padrão do tema especificado. O `theme_code` identifica o tema base no catálogo de temas da Nuvemshop.
 
-To check which installation the current directory is linked to:
+### Opções
+
+| Opção                 | Descrição                                                 |
+| --------------------- | --------------------------------------------------------- |
+| `--theme-code <code>` | **Obrigatório.** O código do tema para criar a instalação |
+| `--title <name>`      | **Obrigatório.** Um nome legível para a instalação        |
+| `-v`                  | Ativa a saída detalhada                                   |
+
+## Selecionando a instalação ativa
+
+Não há um comando `checkout` separado. O CLI vincula um diretório a uma instalação quando você executa:
 
 ```bash
-tiendanube theme installation get-current
+nuvemshop theme pull --installation-id ID_DA_INSTALACAO
 ```
 
-## Clone
+Após um pull bem-sucedido, o ID da instalação é salvo em `.nube`. Comandos subsequentes como `theme push`, `theme watch` e `theme installation publish/fork/clone/delete/preview-url` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
 
-Create an identical copy of an existing installation:
+Para verificar qual instalação o diretório atual está vinculado:
 
 ```bash
-tiendanube theme installation clone
+nuvemshop theme installation get-current
 ```
 
-Unlike **create** (which starts from the base theme's defaults), **clone** duplicates an existing installation — including any file modifications, settings changes, and customizations you've made. This is useful when you want to experiment with changes without affecting your current work.
+## Clonar
 
-### Options
+Crie uma cópia idêntica de uma instalação existente:
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | The installation to clone (defaults to the installation linked to this directory) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+```bash
+nuvemshop theme installation clone
+```
+
+Ao contrário do **criar** (que parte dos padrões do tema base), **clonar** duplica uma instalação existente — incluindo qualquer modificação de arquivos, alterações de configurações e personalizações que você fez. Útil quando você quer experimentar mudanças sem afetar o trabalho atual.
+
+### Opções
+
+| Opção                    | Descrição                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `--installation-id <id>` | A instalação a ser clonada (padrão: a instalação vinculada a este diretório) |
+| `-y`                     | Pula os prompts de confirmação                                               |
+| `-v`                     | Ativa a saída detalhada                                                      |
 
 ## Fork
 
-Fork an installation to unlock full file access:
+Faça fork de uma instalação para desbloquear acesso completo aos arquivos:
 
 ```bash
-tiendanube theme installation fork
+nuvemshop theme installation fork
 ```
 
-### Why forking exists
+### Por que o fork existe
 
-An Ipanema theme installation separates **theme code** from **customizations**. The theme code is the core of the theme — the layouts, section templates, blocks, styles, and scripts that define how the storefront looks and behaves. Customizations are the parts that vary per store — which sections appear on each page, their settings, and any custom files.
+Uma instalação do tema Ipanema separa o **código do tema** das **personalizações**. O código do tema é o núcleo — os layouts, templates de seção, blocos, estilos e scripts que definem a aparência e o comportamento da loja. As personalizações são as partes que variam por loja — quais seções aparecem em cada página, suas configurações e quaisquer arquivos customizados.
 
-The file tree of a pulled installation looks like this:
+A árvore de arquivos de uma instalação baixada tem esta estrutura:
 
 ```
-my-theme/
-├── blocks/            ← Theme code: block templates (.tpl)
+meu-tema/
+├── blocks/            ← Código do tema: templates de bloco (.tpl)
 ├── config/
-│   ├── settings_schema.json   ← Theme code: defines available settings
-│   └── settings_data.json     ← Customization: merchant's saved values
-├── layouts/           ← Theme code: main HTML shell
-├── locales/           ← Theme code: translation files
-├── sections/          ← Theme code: section templates (.tpl)
-├── snippets/          ← Theme code: shared partials (.tpl)
-├── static/            ← Theme code: CSS, JS, assets
-├── templates/         ← Customization: page templates (.json)
-└── custom/            ← Customization: developer-added files
+│   ├── settings_schema.json   ← Código do tema: define as configurações disponíveis
+│   └── settings_data.json     ← Personalização: valores salvos pelo lojista
+├── layouts/           ← Código do tema: estrutura HTML principal
+├── locales/           ← Código do tema: arquivos de tradução
+├── sections/          ← Código do tema: templates de seção (.tpl)
+├── snippets/          ← Código do tema: partials compartilhados (.tpl)
+├── static/            ← Código do tema: CSS, JS, assets
+├── templates/         ← Personalização: templates de página (.json)
+└── custom/            ← Personalização: arquivos adicionados pelo desenvolvedor
 ```
 
-By default, a non-forked installation **protects the theme code** and only lets you modify the customization layer:
+Por padrão, uma instalação sem fork **protege o código do tema** e permite apenas modificar a camada de personalização:
 
-| Allowed without fork | What it contains |
-| --- | --- |
-| `templates/` | Page templates (`.json`) — define which sections appear on each page, their order, and their settings |
-| `custom/` | Custom files added by the developer |
-| `config/settings_data.json` | The merchant's saved settings values |
+| Permitido sem fork          | O que contém                                                                                            |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `templates/`                | Templates de página (`.json`) — definem quais seções aparecem em cada página, sua ordem e configurações |
+| `custom/`                   | Arquivos customizados adicionados pelo desenvolvedor                                                    |
+| `config/settings_data.json` | Os valores de configuração salvos pelo lojista                                                          |
 
-This means you can rearrange sections on a page, change settings, or add custom files — but you can't touch the `.tpl` templates, styles, scripts, or any other core file.
+Isso significa que você pode reorganizar seções em uma página, alterar configurações ou adicionar arquivos customizados — mas não pode tocar nos templates `.tpl`, estilos, scripts ou qualquer outro arquivo do núcleo.
 
-**Forking** removes this restriction. Once forked, the CLI allows you to push **any file** in the theme — including layouts, sections, blocks, snippets, static assets, and the settings schema.
+**Fazer fork** remove essa restrição. Uma vez feito o fork, o CLI permite que você envie **qualquer arquivo** do tema — incluindo layouts, seções, blocos, snippets, assets estáticos e o schema de configurações.
 
-### When to fork
+### Quando fazer fork
 
-**Don't fork** if you only need to:
-- Change which sections appear on a page (edit `templates/*.json`)
-- Adjust section settings (edit `templates/*.json` or `config/settings_data.json`)
-- Add custom files (add files under `custom/`)
+**Não faça fork** se você só precisa:
 
-This is the safer path — your installation stays compatible with future theme updates.
+- Mudar quais seções aparecem em uma página (editar `templates/*.json`)
+- Ajustar configurações de seção (editar `templates/*.json` ou `config/settings_data.json`)
+- Adicionar arquivos customizados (adicionar arquivos em `custom/`)
 
-**Fork** when you need to:
-- Edit a section's HTML/Twig logic (`sections/*.tpl`)
-- Modify block templates (`blocks/*.tpl`)
-- Change the layout shell (`layouts/layout.tpl`)
-- Update styles or scripts (`static/`)
-- Add or modify translations (`locales/`)
-- Change the settings schema (`config/settings_schema.json`)
+Esse é o caminho mais seguro — sua instalação permanece compatível com futuras atualizações do tema.
 
-### Options
+**Faça fork** quando precisar:
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | The installation to fork (defaults to the installation linked to this directory) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+- Editar a lógica HTML/Twig de uma seção (`sections/*.tpl`)
+- Modificar templates de bloco (`blocks/*.tpl`)
+- Alterar o layout principal (`layouts/layout.tpl`)
+- Atualizar estilos ou scripts (`static/`)
+- Adicionar ou modificar traduções (`locales/`)
+- Alterar o schema de configurações (`config/settings_schema.json`)
+
+### Opções
+
+| Opção                    | Descrição                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------- |
+| `--installation-id <id>` | A instalação a ser forkada (padrão: a instalação vinculada a este diretório) |
+| `-y`                     | Pula os prompts de confirmação                                               |
+| `-v`                     | Ativa a saída detalhada                                                      |
 
 :::warning
-Forking is a **one-way operation**. Once forked, an installation cannot be un-forked. If you fork an already-forked installation, the CLI treats it as a no-op.
+Fazer fork é uma **operação sem volta**. Uma vez forkada, uma instalação não pode ser des-forkada. Se você fizer fork de uma instalação já forkada, o CLI trata isso como uma operação sem efeito.
 :::
 
 :::info
-Only **sections-based themes** (like Ipanema) can be forked. The API will reject fork requests for non-sectionable themes.
+Apenas **temas baseados em seções** (como o Ipanema) podem ser forkados. A API rejeitará solicitações de fork para temas não seccionáveis.
 :::
 
-## Publish
+## Publicar
 
-Make an installation the **productive** (live) theme on your storefront:
+Torne uma instalação o tema **produtivo** (ativo) na sua loja:
 
 ```bash
-tiendanube theme installation publish
+nuvemshop theme installation publish
 ```
 
-Publishing makes the installation visible to all visitors. The previously productive installation is demoted — it still exists but is no longer live.
+Publicar torna a instalação visível para todos os visitantes. A instalação anteriormente produtiva é rebaixada — ela ainda existe, mas não está mais ativa.
 
-### Options
+### Opções
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | The installation to publish (defaults to the installation linked to this directory) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Opção                    | Descrição                                                                      |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| `--installation-id <id>` | A instalação a ser publicada (padrão: a instalação vinculada a este diretório) |
+| `-y`                     | Pula os prompts de confirmação                                                 |
+| `-v`                     | Ativa a saída detalhada                                                        |
 
 :::warning
-Publishing replaces the currently live theme. Always test your changes with a [preview](#preview-url) before publishing.
+Publicar substitui o tema ativo atual. Sempre teste suas mudanças com uma [pré-visualização](#url-de-pré-visualização) antes de publicar.
 :::
 
-## Preview URL
+## URL de Pré-visualização
 
-Get a preview URL for an installation without making it live:
-
-```bash
-tiendanube theme installation preview-url
-```
-
-This outputs a URL in the format:
-
-```
-https://yourstore.mitiendanube.com?theme_installation_id=INSTALLATION_ID
-```
-
-Open it in your browser to see how the installation looks on the storefront. The preview is only visible to you — it doesn't affect what visitors see.
-
-### Options
-
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | The installation to preview (defaults to the installation linked to this directory) |
-
-## Delete
-
-Delete a theme installation:
+Obtenha uma URL de pré-visualização de uma instalação sem torná-la ativa:
 
 ```bash
-tiendanube theme installation delete
+nuvemshop theme installation preview-url
 ```
 
-### Options
+Isso gera uma URL no formato:
 
-| Option | Description |
-| --- | --- |
-| `--installation-id <id>` | The installation to delete (defaults to the installation linked to this directory) |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+```
+https://sualojanuvemshop.com.br?theme_installation_id=ID_DA_INSTALACAO
+```
+
+Abra no navegador para ver como a instalação fica na loja. A pré-visualização é visível apenas para você — não afeta o que os visitantes veem.
+
+### Opções
+
+| Opção                    | Descrição                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| `--installation-id <id>` | A instalação a ser pré-visualizada (padrão: a instalação vinculada a este diretório) |
+
+## Excluir
+
+Exclua uma instalação de tema:
+
+```bash
+nuvemshop theme installation delete
+```
+
+### Opções
+
+| Opção                    | Descrição                                                                     |
+| ------------------------ | ----------------------------------------------------------------------------- |
+| `--installation-id <id>` | A instalação a ser excluída (padrão: a instalação vinculada a este diretório) |
+| `-y`                     | Pula os prompts de confirmação                                                |
+| `-v`                     | Ativa a saída detalhada                                                       |
 
 :::warning
-Deleting an installation is permanent and cannot be undone. You cannot delete the currently productive installation.
+Excluir uma instalação é permanente e não pode ser desfeito. Você não pode excluir a instalação produtiva atual.
 :::
 
-## Quick reference
+## Referência rápida
 
-| Command | Description |
-| --- | --- |
-| `theme installation list` | List all installations on the store |
-| `theme installation create` | Create a new installation from a theme code |
-| `theme installation get-current` | Show the installation linked to this directory |
-| `theme installation clone` | Duplicate an existing installation |
-| `theme installation fork` | Unlock full file access (one-way) |
-| `theme installation publish` | Make an installation live on the storefront |
-| `theme installation preview-url` | Get a preview link without publishing |
-| `theme installation delete` | Permanently remove an installation |
+| Comando                          | Descrição                                              |
+| -------------------------------- | ------------------------------------------------------ |
+| `theme installation list`        | Lista todas as instalações na loja                     |
+| `theme installation create`      | Cria uma nova instalação a partir de um código de tema |
+| `theme installation get-current` | Mostra a instalação vinculada a este diretório         |
+| `theme installation clone`       | Duplica uma instalação existente                       |
+| `theme installation fork`        | Desbloqueia acesso completo aos arquivos (sem volta)   |
+| `theme installation publish`     | Torna uma instalação ativa na loja                     |
+| `theme installation preview-url` | Gera um link de pré-visualização sem publicar          |
+| `theme installation delete`      | Remove permanentemente uma instalação                  |

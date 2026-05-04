@@ -1,39 +1,39 @@
 ---
-title: Overview
+title: Visão geral
 sidebar_position: 1
 ---
 
-# Tiendanube/Nuvemshop CLI
+# Nuvemshop CLI
 
-**Tiendanube/Nuvemshop CLI** (`@tiendanube/cli`) is the official command-line tool for Tiendanube/Nuvemshop theme development. It provides everything you need to build, sync, and manage storefront themes — from local development to production deployment.
+**Nuvemshop CLI** (`@tiendanube/cli`) é a ferramenta oficial de linha de comando para o desenvolvimento de temas Nuvemshop. Ela oferece tudo o que você precisa para criar, sincronizar e gerenciar temas da loja — desde o desenvolvimento local até a publicação em produção.
 
-## What you can do
+## O que você pode fazer
 
-| Capability                        | Description                                                                                        |
-| --------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Fork workflow**                 | Pull, push, and watch theme files using the Tiendanube Public API with bearer-token authentication |
-| **Theme installation management** | Create, clone, fork, publish, and delete theme installations directly from your terminal           |
-| **Theme sync via FTP**            | Pull, push, and watch theme files over FTP                                                         |
+| Funcionalidade                    | Descrição                                                                                                       |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Fork workflow**                    | Baixar, enviar e monitorar arquivos de tema usando a API Pública da Nuvemshop com autenticação via bearer token |
+| **Gerenciamento de instalações**  | Criar, clonar, fazer fork, publicar e excluir instalações de tema diretamente do terminal                       |
+| **Sincronização via FTP**         | Baixar, enviar e monitorar arquivos de tema via FTP                                                             |
 
-## Two sync modes
+## Dois modos de sincronização
 
-The Tiendanube/Nuvemshop CLI supports two ways to sync theme files with your store:
+O Nuvemshop CLI suporta duas formas de sincronizar arquivos de tema com sua loja:
 
 ### Fork workflow
 
-The Fork workflow uses bearer-token authentication and the Tiendanube REST API. It supports full installation management — you can create, clone, fork, publish, and preview theme installations, as well as pull, push, and watch files.
+O Fork workflow usa autenticação via bearer token e a API REST da Nuvemshop. Ele oferece gerenciamento completo de instalações — você pode criar, clonar, fazer fork, publicar e pré-visualizar instalações de tema, além de baixar, enviar e monitorar arquivos.
 
 :::warning
-The Fork workflow currently supports only the **Ipanema** theme. For other themes, use the [FTP workflow (legacy)](./ftp-workflow).
+O Fork workflow atualmente suporta apenas o tema **Ipanema**. Para outros temas, use o [Fluxo FTP (legado)](./ftp-workflow).
 :::
 
-### FTP workflow (legacy)
+### Fluxo FTP (legado)
 
-The FTP workflow connects directly to the store's FTP server. It supports pulling, pushing, and watching files, but does not offer installation management features. Use this for themes other than Ipanema, or if your workflow depends on FTP access.
+O Fluxo FTP conecta-se diretamente ao servidor FTP da loja. Ele suporta baixar, enviar e monitorar arquivos, mas não oferece funcionalidades de gerenciamento de instalações. Use-o para temas diferentes do Ipanema, ou se o seu fluxo de trabalho depende de acesso FTP.
 
-## Next steps
+## Próximos passos
 
-- [Getting Started](./getting-started) — Install the CLI and choose your workflow
-- [Fork workflow](./api-workflow) — Set up API credentials and start syncing
-- [Theme Installations](./theme-installations) — Create, clone, fork, and publish installations
-- [FTP Workflow (legacy)](./ftp-workflow) — FTP-based theme sync
+- [Primeiros Passos](./getting-started) — Instale o CLI e escolha seu fluxo de trabalho
+- [Fork workflow](./api-workflow) — Configure as credenciais da API e comece a sincronizar
+- [Instalações de Tema](./theme-installations) — Criar, clonar, fazer fork e publicar instalações
+- [Fluxo FTP (legado)](./ftp-workflow) — Sincronização de tema via FTP
