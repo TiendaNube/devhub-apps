@@ -19,19 +19,13 @@ Run `theme authorize` to connect the CLI to your store. It opens your default br
 tiendanube theme authorize
 ```
 
-### 1. Authorize the CLI in your store admin
-
-After signing in, your store admin shows an installation screen requesting the permissions the Tiendanube/Nuvemshop CLI needs to manage your theme. Review the permissions and click Accept:
-
-![Store admin installation screen for the Tiendanube/Nuvemshop CLI](/img/en/cli-authorize-admin.png)
-
-### 2. Copy the access token
+### 1. Copy the access token
 
 Once you accept, the browser displays your Public API access token. Use the Copy to clipboard button to copy it:
 
 ![Public API access token shown after successful authorization](/img/en/cli-authorize-token.png)
 
-### 3. Paste the token back into the terminal
+### 2. Paste the token back into the terminal
 
 Return to the terminal where `theme authorize` is still running and paste the token at the `Paste your token:` prompt. The CLI decodes the token, fetches your storefront URL from the Public API, writes a `.nube` file in your working directory, and verifies the connection.
 

@@ -142,10 +142,10 @@ O recurso de navegador usa o Puppeteer, que pode precisar baixar o Chromium na p
 
 Um ciclo de desenvolvimento comum se parece com isso:
 
-1. **Criar ou clonar** uma instalação para trabalhar: `tiendanube theme installation clone`
-2. **Baixar** os arquivos da instalação (vincula o diretório a essa instalação): `tiendanube theme pull --installation-id ID`
-3. **Fazer fork** se você precisar editar o código do tema: `tiendanube theme installation fork`
-4. **Iniciar o modo watch**: `tiendanube theme watch`
+1. **Criar ou clonar** uma instalação para trabalhar: `nuvemshop theme installation clone`
+2. **Baixar** os arquivos da instalação (vincula o diretório a essa instalação): `nuvemshop theme pull --installation-id ID`
+3. **Fazer fork** se você precisar editar o código do tema: `nuvemshop theme installation fork`
+4. **Iniciar o modo watch**: `nuvemshop theme watch`
 5. **Editar** templates, seções e configurações no seu editor — as alterações sincronizam automaticamente
-6. **Pré-visualizar** com o navegador que recarrega automaticamente, ou gerar um link: `tiendanube theme installation preview-url`
-7. **Publicar** quando estiver pronto: `tiendanube theme installation publish`
+6. **Pré-visualizar** com o navegador que recarrega automaticamente, ou gerar um link: `nuvemshop theme installation preview-url`
+7. **Publicar** quando estiver pronto: `nuvemshop theme installation publish`

@@ -11,7 +11,7 @@ O Fork workflow usa autenticação via bearer token e a API REST da Nuvemshop. V
 O Fork workflow atualmente suporta apenas o tema **Ipanema**. Se você estiver trabalhando com um tema diferente, use o [Fluxo FTP (legado)](./ftp-workflow).
 :::
 
-## Autorizar
+## Autorização
 
 Execute `theme authorize` para conectar o CLI à sua loja. Ele abre o navegador padrão, você faz login, copia o token da página e o cola de volta no terminal:
 
@@ -19,19 +19,13 @@ Execute `theme authorize` para conectar o CLI à sua loja. Ele abre o navegador 
 nuvemshop theme authorize
 ```
 
-### 1. Autorize o CLI no painel da sua loja
-
-Após fazer login, o painel da sua loja exibe uma tela de instalação solicitando as permissões que o Nuvemshop CLI precisa para gerenciar seu tema. Revise as permissões e clique em Aceitar:
-
-![Tela de instalação do Nuvemshop CLI no painel da loja](/img/en/cli-authorize-admin.png)
-
-### 2. Copie o token de acesso
+### 1. Copie o token de acesso
 
 Após aceitar, o navegador exibe seu token de acesso à API Pública. Use o botão Copiar para copiar:
 
 ![Token de acesso à API Pública exibido após a autorização bem-sucedida](/img/pt/cli-authorize-token-pt.png)
 
-### 3. Cole o token de volta no terminal
+### 2. Cole o token de volta no terminal
 
 Volte ao terminal onde `theme authorize` ainda está em execução e cole o token no prompt `Paste your token:`. O CLI decodifica o token, busca a URL da sua loja na API Pública, grava um arquivo `.nube` no seu diretório de trabalho e verifica a conexão.
 
@@ -65,9 +59,9 @@ O token deve ser a **string Base64 completa** exibida na página de autorizaçã
 Cada diretório de trabalho está vinculado a um fluxo de trabalho. Comandos de tema não funcionarão em um diretório configurado para FTP, e vice-versa.
 :::
 
-## Rate limits
+## Limites de requisições
 
-A API Nuvemshop aplica limites de taxa. Se o CLI receber uma resposta `429 Too Many Requests`, ele aguarda automaticamente e tenta novamente. Durante operações em lote como `theme push` (que envia arquivos em paralelo), o CLI limita a concorrência a 2 uploads simultâneos para respeitar os limites da API.
+A API Nuvemshop aplica limites de requisições. Se o CLI receber uma resposta `429 Too Many Requests`, ele aguarda automaticamente e tenta novamente. Durante operações em lote como `theme push` (que envia arquivos em paralelo), o CLI limita a concorrência a 2 uploads simultâneos para respeitar os limites da API.
 
 ## Próximos passos
 

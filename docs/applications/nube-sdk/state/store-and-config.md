@@ -13,6 +13,7 @@ Information about the current store, such as its domain, currency, and language.
 | `domain`   | string               | Yes      | Domain name associated with the store. |
 | `currency` | string               | Yes      | Currency code (e.g. "USD", "EUR").     |
 | `language` | "es" or "pt" or "en" | Yes      | Language code of the store.            |
+| `theme`    | string               | Yes      | Active theme name of the store.        |
 
 For the exact TypeScript definition, use `Store` from `@tiendanube/nube-sdk-types`.
 
