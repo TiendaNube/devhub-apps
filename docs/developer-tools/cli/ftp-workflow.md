@@ -1,93 +1,92 @@
 ---
-title: FTP Workflow (legacy)
+title: Fluxo FTP (legado)
 sidebar_position: 6
 ---
 
-# FTP Workflow (legacy)
+# Fluxo FTP (legado)
 
 :::info
-The [Fork workflow](./api-workflow) offers richer features (installation management, preview URLs, fork/clone/publish) but currently supports only the **Ipanema** theme. For all other themes, the FTP workflow (legacy) is the way to go.
+O [Fork workflow](./api-workflow) oferece recursos mais completos (gerenciamento de instalações, URLs de pré-visualização, fork/clone/publicar), mas atualmente suporta apenas o tema **Ipanema**. Para todos os outros temas, o Fluxo FTP (legado) é a opção indicada.
 :::
 
-The Tiendanube/Nuvemshop CLI supports syncing theme files over FTP. All FTP commands are under the `theme ftp` group:
+O Nuvemshop CLI suporta sincronização de arquivos de tema via FTP. Todos os comandos FTP estão no grupo `theme ftp`:
 
 ```bash
-tiendanube theme ftp <command>
+nuvemshop theme ftp <comando>
 ```
 
-## Setup
+## Configuração
 
-Configure your FTP connection:
+Configure sua conexão FTP:
 
 ```bash
-tiendanube theme ftp setup \
-  --ftp-server FTP_HOST \
-  --ftp-username FTP_USER \
-  --ftp-password FTP_PASSWORD \
-  --store-url https://yourstore.mitiendanube.com
+nuvemshop theme ftp setup \
+  --ftp-server HOST_FTP \
+  --ftp-username USUARIO_FTP \
+  --ftp-password SENHA_FTP \
+  --store-url https://sualojanuvemshop.com.br
 ```
 
-The CLI tests the FTP connection and saves the credentials to your `.nube` config file.
+O CLI testa a conexão FTP e salva as credenciais no arquivo de configuração `.nube`.
 
-### Options
+### Opções
 
-| Option | Description |
-| --- | --- |
-| `--ftp-server <host>` | **Required.** FTP server hostname |
-| `--ftp-username <user>` | **Required.** FTP username |
-| `--ftp-password <pass>` | **Required.** FTP password |
-| `--store-url <url>` | **Required.** Your storefront URL |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Opção                   | Descrição                                 |
+| ----------------------- | ----------------------------------------- |
+| `--ftp-server <host>`   | **Obrigatório.** Hostname do servidor FTP |
+| `--ftp-username <user>` | **Obrigatório.** Usuário FTP              |
+| `--ftp-password <pass>` | **Obrigatório.** Senha FTP                |
+| `--store-url <url>`     | **Obrigatório.** URL da sua loja          |
+| `-y`                    | Pula os prompts de confirmação            |
+| `-v`                    | Ativa a saída detalhada                   |
 
 :::tip
-You can find your FTP credentials in the store admin panel. Look for the "Open FTP" option in the theme settings.
+Você pode encontrar suas credenciais FTP no painel da loja. Procure pela opção "Abrir FTP" nas configurações de tema.
 :::
 
-## Pull
+## Baixar (Pull)
 
-Download theme files from the FTP server:
-
-```bash
-tiendanube theme ftp pull
-```
-
-### Options
-
-| Option | Description |
-| --- | --- |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
-
-## Push
-
-Upload local theme files to the FTP server:
+Baixe os arquivos de tema do servidor FTP:
 
 ```bash
-tiendanube theme ftp push
+nuvemshop theme ftp pull
 ```
 
-### Options
+### Opções
 
-| Option | Description |
-| --- | --- |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Opção | Descrição                      |
+| ----- | ------------------------------ |
+| `-y`  | Pula os prompts de confirmação |
+| `-v`  | Ativa a saída detalhada        |
 
-## Watch
+## Enviar (Push)
 
-Watch local files and sync changes to FTP on save:
+Envie os arquivos de tema locais para o servidor FTP:
 
 ```bash
-tiendanube theme ftp watch
+nuvemshop theme ftp push
 ```
 
-Like the Theme watch mode, this monitors your local files and pushes changes automatically. It also handles file deletions. By default, it opens a browser window pointed at your storefront and reloads it after each successful sync. Use `--no-browser` to skip that.
+### Opções
 
-### Options
+| Opção | Descrição                      |
+| ----- | ------------------------------ |
+| `-y`  | Pula os prompts de confirmação |
+| `-v`  | Ativa a saída detalhada        |
 
-| Option | Description |
-| --- | --- |
-| `--no-browser` | Don't open or reload a browser window |
-| `-v` | Enable verbose output |
+## Monitorar (Watch)
 
+Monitore os arquivos locais e sincronize as alterações para o FTP ao salvar:
+
+```bash
+nuvemshop theme ftp watch
+```
+
+Assim como o modo watch do tema, isso monitora seus arquivos locais e envia as alterações automaticamente. Também lida com exclusões de arquivos. Por padrão, abre uma janela do navegador apontada para a sua loja e a recarrega após cada sincronização bem-sucedida. Use `--no-browser` para pular isso.
+
+### Opções
+
+| Opção          | Descrição                                      |
+| -------------- | ---------------------------------------------- |
+| `--no-browser` | Não abre nem recarrega uma janela de navegador |
+| `-v`           | Ativa a saída detalhada                        |
