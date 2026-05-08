@@ -16,7 +16,7 @@ Exemplo em curl:
 
 
 ```bash
-curl -X POST https://api.nuvemshop.com/v1/categories \
+curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/categories \
 -H "Content-Type: application/json" \
 -H "Authentication: bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
@@ -53,7 +53,7 @@ Você deve especificar o [ID da categoria pai no campo parent](https://tiendanub
 Exemplo em curl:
 
 ```bash
-curl -X POST https://api.nuvemshop.com/v1/categories \
+curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/categories \
 -H "Content-Type: application/json" \
 -H "Authentication: bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
@@ -85,7 +85,7 @@ Exemplo em curl:
 
 
 ```bash
-curl -X PUT https://api.nuvemshop.com/v1/categories/12345 \
+curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/categories/12345 \
 -H "Content-Type: application/json" \
 -H "Authentication: bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
