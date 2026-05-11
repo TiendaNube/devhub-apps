@@ -16,7 +16,7 @@ Cria uma fatura para um pedido específico. As faturas são documentos fiscais a
 [POST /metafields](https://tiendanube.github.io/api-documentation/resources/order#create-an-invoice)
 
 ```bash
-curl -X POST /metafields \
+curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}}/metafields \
 -H 'Authentication: bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
