@@ -68,7 +68,7 @@ curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products \
 }
   ],
   "categories": [12345],
-  "images": [] // Enviar as imagens utilizando a API de enriquecimento
+  "images": []
 }'
 ```
 
