@@ -72,7 +72,7 @@ Remove um campo personalizado de uma variante.
 DELETE /products/{product_id}/variants/{variant_id}/custom_fields/{custom_field_id}
 
 ```bash
-curl -X DELETE https://api.nuvemshop.com/v1/{{store_id}}/products/variants/custom-fields/{custom_field_id}./variants/{{variant_id}}/custom_fields/{{custom_field_id}} \
+curl -X DELETE https://api.nuvemshop.com/v1/{{store_id}}/products/{{product_id}}/variants/{{variant_id}}/custom_fields/{{custom_field_id}} \
 -H 'Authentication: bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
