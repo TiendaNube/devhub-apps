@@ -54,7 +54,7 @@ This file is **local only** — it's never uploaded when you push or watch. It h
 
 | Option                   | Description                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
 | `-y`                     | Skip confirmation prompts                                                                         |
 | `-v`                     | Enable verbose output                                                                             |
 
@@ -78,11 +78,24 @@ The CLI reads each local file, determines its format based on the file extension
 | `.tpl`, `.css`, `.js`, `.svg` | Sent as text                  |
 | Everything else               | Sent as base64-encoded binary |
 
+### Incremental push (smart push)
+
+Before uploading, the CLI compares each local file against its remote version and only uploads the ones that changed. Unchanged files are reported as skipped and no request is made for them — this speeds up pushes and reduces API rate-limit consumption.
+
+The CLI also syncs deletions: files that exist on the remote installation but not in your local directory are removed from the installation during push.
+
+To force every file to be uploaded without remote comparison, use `--force`:
+
+```bash
+tiendanube theme push --force
+```
+
 ### Options
 
 | Option                   | Description                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
+| `--force`                | Upload all files without remote comparison (skips unchanged-file detection)                       |
 | `-y`                     | Skip confirmation prompts                                                                         |
 | `-v`                     | Enable verbose output                                                                             |
 
@@ -90,7 +103,7 @@ The CLI reads each local file, determines its format based on the file extension
 
 The CLI uploads all files in your working directory, with these exclusions:
 
-- **Dot-prefixed paths** — files and directories starting with `.` (like `.nube`, `.git`, `.vscode`) are always skipped
+- **Dot-prefixed paths** — files and directories starting with `.` (like `.nuvem`, `.git`, `.vscode`) are always skipped
 - **`manifest.json`** — the local manifest is never uploaded
 - **Fork-restricted paths** — if the installation is not forked, only `custom/`, `templates/`, and `config/settings_data.json` can be pushed (see below)
 
@@ -134,7 +147,7 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 | Option                   | Description                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nube`) |
+| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
 | `--no-browser`           | Don't open or reload a browser window                                                             |
 | `-v`                     | Enable verbose output                                                                             |
 

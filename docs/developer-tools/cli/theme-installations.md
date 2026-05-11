@@ -17,7 +17,7 @@ O Nuvemshop CLI permite que você gerencie o ciclo de vida completo das instala�
 criar → baixar → enviar/monitorar → fork (opcional) → publicar → excluir
 ```
 
-`theme pull --installation-id <id>` salva o ID da instalação em `.nube`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--installation-id` a cada vez.
+`theme pull --installation-id <id>` salva o ID da instalação em `.nuvem`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--installation-id` a cada vez.
 
 Todos os comandos de instalação estão no grupo `theme installation`:
 
@@ -76,7 +76,7 @@ Não há um comando `checkout` separado. O CLI vincula um diretório a uma insta
 nuvemshop theme pull --installation-id ID_DA_INSTALACAO
 ```
 
-Após um pull bem-sucedido, o ID da instalação é salvo em `.nube`. Comandos subsequentes como `theme push`, `theme watch` e `theme installation publish/fork/clone/delete/preview-url` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
+Após um pull bem-sucedido, o ID da instalação é salvo em `.nuvem`. Comandos subsequentes como `theme push`, `theme watch` e `theme installation publish/fork/clone/delete/preview-url` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
 
 Para verificar qual instalação o diretório atual está vinculado:
 

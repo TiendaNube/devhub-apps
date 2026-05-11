@@ -54,7 +54,7 @@ Esse arquivo é **apenas local** — nunca é enviado quando você faz push ou w
 
 | Opção                    | Descrição                                                                                          |
 | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nube`) |
+| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
 | `-y`                     | Pula os prompts de confirmação                                                                     |
 | `-v`                     | Ativa a saída detalhada                                                                            |
 
@@ -78,11 +78,24 @@ O CLI lê cada arquivo local, determina o formato com base na extensão e o envi
 | `.tpl`, `.css`, `.js`, `.svg` | Enviado como texto                     |
 | Todo o resto                  | Enviado como binário codificado Base64 |
 
+### Envio incremental (smart push)
+
+Antes de enviar, o CLI compara cada arquivo local com a sua versão remota e só envia os que mudaram. Arquivos inalterados são reportados como pulados e nenhuma requisição é feita para eles — isso acelera o envio e reduz o consumo dos limites da API.
+
+O CLI também sincroniza exclusões: arquivos que existem na instalação remota mas não no seu diretório local são removidos da instalação durante o push.
+
+Para forçar o envio de **todos** os arquivos sem comparação com o remoto, use `--force`:
+
+```bash
+nuvemshop theme push --force
+```
+
 ### Opções
 
 | Opção                    | Descrição                                                                                          |
 | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nube`) |
+| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
+| `--force`                | Envia todos os arquivos sem comparar com o remoto (ignora a detecção de arquivos inalterados)     |
 | `-y`                     | Pula os prompts de confirmação                                                                     |
 | `-v`                     | Ativa a saída detalhada                                                                            |
 
@@ -90,7 +103,7 @@ O CLI lê cada arquivo local, determina o formato com base na extensão e o envi
 
 O CLI envia todos os arquivos do seu diretório de trabalho, com as seguintes exclusões:
 
-- **Paths com ponto no início** — arquivos e diretórios que começam com `.` (como `.nube`, `.git`, `.vscode`) são sempre ignorados
+- **Paths com ponto no início** — arquivos e diretórios que começam com `.` (como `.nuvem`, `.git`, `.vscode`) são sempre ignorados
 - **`manifest.json`** — o manifesto local nunca é enviado
 - **Paths restritos por fork** — se a instalação não for forkada, apenas `custom/`, `templates/` e `config/settings_data.json` podem ser enviados (veja abaixo)
 
@@ -134,7 +147,7 @@ O recurso de navegador usa o Puppeteer, que pode precisar baixar o Chromium na p
 
 | Opção                    | Descrição                                                                                          |
 | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nube`) |
+| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
 | `--no-browser`           | Não abre nem recarrega uma janela de navegador                                                     |
 | `-v`                     | Ativa a saída detalhada                                                                            |
 

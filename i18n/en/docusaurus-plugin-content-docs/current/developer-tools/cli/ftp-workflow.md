@@ -27,18 +27,18 @@ tiendanube theme ftp setup \
   --store-url https://yourstore.mitiendanube.com
 ```
 
-The CLI tests the FTP connection and saves the credentials to your `.nube` config file.
+The CLI tests the FTP connection and saves the credentials to your `.nuvem` config file.
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `--ftp-server <host>` | **Required.** FTP server hostname |
-| `--ftp-username <user>` | **Required.** FTP username |
-| `--ftp-password <pass>` | **Required.** FTP password |
-| `--store-url <url>` | **Required.** Your storefront URL |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option                  | Description                       |
+| ----------------------- | --------------------------------- |
+| `--ftp-server <host>`   | **Required.** FTP server hostname |
+| `--ftp-username <user>` | **Required.** FTP username        |
+| `--ftp-password <pass>` | **Required.** FTP password        |
+| `--store-url <url>`     | **Required.** Your storefront URL |
+| `-y`                    | Skip confirmation prompts         |
+| `-v`                    | Enable verbose output             |
 
 :::tip
 You can find your FTP credentials in the store admin panel. Look for the "Open FTP" option in the theme settings.
@@ -54,10 +54,10 @@ tiendanube theme ftp pull
 
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option | Description               |
+| ------ | ------------------------- |
+| `-y`   | Skip confirmation prompts |
+| `-v`   | Enable verbose output     |
 
 ## Push
 
@@ -67,12 +67,25 @@ Upload local theme files to the FTP server:
 tiendanube theme ftp push
 ```
 
+### Incremental push (smart push)
+
+Before uploading, the CLI compares each local file against its version on the FTP server and only uploads the ones that changed. Unchanged files are skipped — this speeds up pushes on large themes, especially over slow connections.
+
+The CLI also syncs deletions: files that exist on the server but not in your local directory are removed from FTP during push.
+
+To force every file to be uploaded without remote comparison, use `--force`:
+
+```bash
+tiendanube theme ftp push --force
+```
+
 ### Options
 
-| Option | Description |
-| --- | --- |
-| `-y` | Skip confirmation prompts |
-| `-v` | Enable verbose output |
+| Option    | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| `--force` | Upload all files without remote comparison (skips unchanged-file detection) |
+| `-y`      | Skip confirmation prompts                                                   |
+| `-v`      | Enable verbose output                                                       |
 
 ## Watch
 
@@ -86,8 +99,7 @@ Like the Theme watch mode, this monitors your local files and pushes changes aut
 
 ### Options
 
-| Option | Description |
-| --- | --- |
+| Option         | Description                           |
+| -------------- | ------------------------------------- |
 | `--no-browser` | Don't open or reload a browser window |
-| `-v` | Enable verbose output |
-
+| `-v`           | Enable verbose output                 |
