@@ -13,22 +13,12 @@ A continuación están las principales acciones relacionadas con la creación y 
 
 Crea una factura para un pedido específico. Las facturas son documentos fiscales asociados a un pedido.
 
+Antes de crear una nueva factura, consulta el metafield existente con `GET /metafields` filtrando por el `owner_id` del pedido.
+Si el metafield con `namespace="nfe"` y `key="list"` ya existe, obtén su contenido, añade la nueva factura al array JSON, y actualiza con `PUT /metafields/{metafield_id}`.
+Si no existe, procede con `POST /metafields` como se muestra a continuación.
+
 [POST /metafields](https://tiendanube.github.io/api-documentation/resources/order#create-an-invoice)
 
-```bash
-curl -X POST /metafields \
--H 'Authentication: bearer {{app_token}}' \
--H 'User-Agent: Your App Name ({{app_id}})' \
--H 'Content-Type: application/json' \
--d '{
-  "namespace": "nfe",
-  "key": "list",
-  "value": "[{\"key\": \"55555555555555555555555555555\", \"link\": \"http://nfe.com.br/nsaasb\", \"fulfillment_order_id\": \"01FHZXHK8PTP9FVK99Z66GXASS\"}]",
-  "description": "Lista de NFes",
-  "owner_resource": "Order",
-  "owner_id": 12345678
-}'
-```
 
 **Notas sobre Facturas**
 
