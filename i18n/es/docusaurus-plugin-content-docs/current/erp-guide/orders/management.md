@@ -67,14 +67,8 @@ curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}} \
 
 Cancela un pedido específico.
 
-[DELETE /orders/{order_id}](https://tiendanube.github.io/api-documentation/resources/order#post-ordersidcancel)
+[POST /orders/{order_id}/cancel](https://tiendanube.github.io/api-documentation/resources/order#post-ordersidcancel)
 
-```bash
-curl --location 'https://api.nuvemshop.com.br/v1/{{store_id}}/orders/{{order_id}}/cancel' \
--H 'Authentication: bearer {{app_token}}' \
--H 'User-Agent: Your App Name ({{app_id}})' \
--H 'Content-Type: application/json'
-```
 
 **Resumen de la Gestión de Pedidos**
 
