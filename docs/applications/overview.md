@@ -8,6 +8,27 @@ import AppTypes from '@site/src/components/AppTypes';
 
 # Visão geral
 
+## Prazo de adoção do NubeSDK
+
+<Alert appearance="warning" title="📅 30 de agosto de 2026 — uso do NubeSDK passa a ser obrigatório para novas instalações">
+   <Text>A partir de <Text as="span" fontWeight="bold">30 de agosto de 2026</Text>, apps que não estejam desenvolvidas usando o <Text as="span" fontWeight="bold">NubeSDK</Text> e não estejam na <Text as="span" fontWeight="bold">whitelist</Text> não poderão receber novas instalações. Lojas que já têm o app instalado <Text as="span" fontWeight="bold">não serão afetadas</Text>. Estamos levando progressivamente todas as lojas para o modelo com SDK.</Text>
+   <br />
+   <Text>👉 <Text as="span" fontWeight="bold">Quer validar seu app antes do prazo?</Text> Entre em contato para que adicionemos a tag na sua loja de teste e você possa validar seu app no novo modelo.</Text>
+   <br />
+   <Text>Se ainda não migrou, comece pelo <a href="./nube-sdk/migration-guide"><Text as="span" fontWeight="bold">Guia de migração para o NubeSDK</Text></a>.</Text>
+</Alert>
+
+<br />
+
+**O que muda e o que não muda:**
+
+- ✅ **30 de agosto de 2026** — novas instalações ficam **bloqueadas** para apps sem SDK que não estejam na whitelist.
+- ✅ **30 de outubro de 2026** — início da **deprecação e desinstalação progressiva**, com recomendação de app alternativo aos lojistas.
+- ✅ Lojas com o app já instalado **continuam funcionando normalmente** após 30/08/2026 (até a etapa de deprecação).
+- ✅ O **processo de homologação em si não muda** — apenas é adicionada a verificação de uso do SDK. Veja a [visão geral da Homologação](../homologation/overview.md) e os [Requisitos de Homologação](../homologation/requirements.md#4-uso-do-nubesdk).
+
+<br />
+
 Nesta seção, forneceremos um guia passo a passo para que você possa criar um aplicativo e integrar ele na plataforma Nuvemshop. Antes de iniciar o desenvolvimento do seu aplicativo, é necessário criar uma conta no Portal de Parceiros da Nuvemshop. Saiba como criar o seu cadastro no 📝 Guia: [detalhes do programa de Parceiros Tecnológicos da Nuvemshop](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
 
 ## Criando um aplicativo na Nuvemshop

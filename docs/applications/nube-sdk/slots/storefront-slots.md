@@ -6,8 +6,8 @@ import { Alert, Text, Box, Button } from '@nimbus-ds/components';
 
 Storefront slots are containers available in the storefront pages where you can render your UI components. These slots allow you to customize the shopping experience across different pages.
 
-<Alert appearance="warning" title="Theme Compatibility">
-  Storefront apps built with NubeSDK are supported only when the store is using the Patagonia theme. For all other themes, you must use the legacy storefront app model.
+<Alert appearance="success" title="Theme Compatibility">
+  Storefront apps built with NubeSDK are supported on all themes.
 </Alert>
 
 ## Available Slots
@@ -297,7 +297,7 @@ If your app uses both the deprecated name and the new name for the same slot, th
 ## Best Practices
 
 - Always use the product's ID as the `key` prop when rendering in product grid slots
-- Test your components with the Patagonia theme to ensure compatibility
+- Test your components on multiple themes to ensure consistent compatibility
 - Consider the visual impact of your components on the storefront design
 - Use responsive design principles for components that appear on different screen sizes
 - Clear slots when they're no longer needed using `nube.clearSlot()`

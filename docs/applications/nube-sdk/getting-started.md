@@ -182,9 +182,8 @@ On your app's dashboard, scroll down to the **Scripts** section and click **Crea
 
 ![NubeSDK Script Settings](../../../static/img/pt/nube-sdk-getting-started-settings-1.png "NubeSDK Script Settings")
 
-:::warning Important
-On the **Storefront**, NubeSDK is currently supported only on stores using the **Patagonia** theme.
-On the **Checkout** page, it works with any theme.
+:::info Theme compatibility
+NubeSDK is supported on **all themes**, both on the **Storefront** and on the **Checkout** page.
 :::
 
 :::info

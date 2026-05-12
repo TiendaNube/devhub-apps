@@ -34,7 +34,7 @@ Each section presents a **before** (legacy) and **after** (NubeSDK) comparison s
     <Text>NubeSDK apps run inside a <strong>Web Worker</strong>. There is no access to <code>document</code>, <code>window</code>, or any DOM API.</Text>
     <Text>UI is rendered <strong>declaratively</strong> into predefined <strong>slots</strong> using JSX or the declarative API.</Text>
     <Text>Communication with the store/checkout happens through <strong>events</strong>, not DOM listeners.</Text>
-    <Text>Storefront apps require the <strong>Patagonia theme</strong>. Checkout apps work on all themes.</Text>
+    <Text>Storefront and checkout apps built with NubeSDK work on <strong>all themes</strong>.</Text>
   </Box>
 </Alert>
 
@@ -312,7 +312,7 @@ Use this list to track your progress:
 - [ ] Styling uses `styled()`, `StyleSheet.create()`, or theme tokens — no `<style>` injection
 - [ ] Tested in dev mode (`npm run dev`) with the script pointing to `localhost:8080/main.min.js`
 - [ ] **"Uses NubeSDK"** flag enabled in the Partner Portal
-- [ ] App works on **Patagonia theme** (storefront) or any theme (checkout)
+- [ ] App works on **all themes** (storefront and checkout)
 
 ---
 

@@ -72,6 +72,16 @@ To ensure a fast-track approval, please inform us in advance about any flows tha
 It is essential that our team experiences the **actual merchant journey** during the entire installation and application configuration process.
 
 
+## 4. NubeSDK Usage
+
+Starting on **August 30, 2026**, the app must be built using the **NubeSDK**. Apps submitted for homologation after that date will not be approved without the SDK.
+
+- **Effective date:** August 30, 2026.
+- **Applies to:** new homologation submissions from that date onward.
+- **How to prepare:** check the [NubeSDK Migration Guide](../applications/nube-sdk/migration-guide.md) if your app still relies on the legacy model (`document`, `window`, jQuery, or direct DOM manipulation).
+
+For more context on the deadline, see the [Applications overview](../applications/overview.md#nubesdk-adoption-deadline) and the [Homologation overview](./overview.md).
+
 :::warning Important
 Submitting these requirements correctly will ensure a faster, more efficient approval process, allowing your app to move forward to the publishing phase without setbacks.
 :::

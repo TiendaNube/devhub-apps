@@ -49,6 +49,32 @@ El propósito de este documento es hacer que los requisitos de construcción y h
   </Card>
 </Box>
 
+## Uso del NubeSDK
+
+<Tag appearance="danger">Alta Prioridad</Tag>
+<br />
+
+:::warning ⏰ Fecha de vigencia: 30 de agosto de 2026
+A partir del **30 de agosto de 2026**, la adopción del **NubeSDK** pasa a ser **obligatoria** para la aprobación en la homologación. Las apps enviadas después de esa fecha no serán aprobadas sin el uso del SDK.
+
+**Para revisores:** a partir del plazo, verifiquen como parte del flujo de aprobación si la app fue desarrollada con el NubeSDK. Las apps en modelo legado (uso de `document`, `window`, jQuery o manipulación directa del DOM) no deben ser aprobadas.
+:::
+
+En este punto, el partner debe garantizar que la aplicación fue desarrollada utilizando el **NubeSDK** — el modelo recomendado para apps que se ejecutan en el storefront y checkout de Tiendanube.
+
+| Descripción                                                | Enlace                                                                        | Obligatoriedad                              |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- |
+| App desarrollada con NubeSDK (a partir del 30/08/2026)     | [Guía de migración](../applications/nube-sdk/migration-guide.md)              | <Tag appearance="primary">Obligatorio</Tag> |
+| No utiliza `document`, `window`, jQuery ni DOM directo     | [Guía de migración](../applications/nube-sdk/migration-guide.md#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Obligatorio</Tag> |
+
+**Antes de enviar, confirma que:**
+
+- La app está implementada con el NubeSDK y se ejecuta dentro de un Web Worker.
+- No hay dependencias de manipulación directa del DOM, `document`, `window` ni bibliotecas como jQuery.
+- La interfaz se construye con los [componentes del NubeSDK](../applications/nube-sdk/components.md) y los [UI Slots](../applications/nube-sdk/slots/overview.md) apropiados.
+
+Para más contexto sobre el plazo, consulta la [visión general de la Homologación](./overview.md) y la [visión general de Aplicaciones](../applications/overview.md#plazo-de-adopcion-del-nubesdk).
+
 ## Uso de Plantillas Nimbus
 
 <Tag appearance="danger">Alta Prioridad</Tag>
