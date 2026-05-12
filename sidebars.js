@@ -252,10 +252,42 @@ const sidebars = {
 			],
 		},
 		{
-			type: "doc",
-			label: "Guia de integração de ERPs",
-			id: "erp-guide/overview",
+	type: "category",
+	label: "Guia de integração de ERPs",
+	items: [
+		"erp-guide/overview",
+		"erp-guide/authentication",
+		"erp-guide/api-usage",
+		"erp-guide/locations",
+		{
+			type: "category",
+			label: "Catálogo",
+			link: {
+				type: "doc",
+				id: "erp-guide/catalog/overview",
+			},
+			items: [
+				"erp-guide/catalog/categories",
+				"erp-guide/catalog/products",
+				"erp-guide/catalog/variant-custom-fields",
+			],
 		},
+		{
+			type: "category",
+			label: "Pedidos",
+			link: {
+				type: "doc",
+				id: "erp-guide/orders/overview",
+			},
+			items: [
+				"erp-guide/orders/management",
+				"erp-guide/orders/invoices",
+				"erp-guide/orders/webhooks",
+			],
+		},
+		"erp-guide/guidelines",
+	]
+},
 	],
 
 	// custom sidebar used until we release the nube sdk to the public
