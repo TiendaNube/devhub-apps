@@ -11,9 +11,9 @@ import AppTypes from '@site/src/components/AppTypes';
 ## NubeSDK adoption deadline
 
 <Alert appearance="warning" title="📅 August 30, 2026 — NubeSDK becomes mandatory for new installations">
-   <Text>Starting on <Text as="span" fontWeight="bold">August 30, 2026</Text>, apps that are not built with the <Text as="span" fontWeight="bold">NubeSDK</Text> and are not on the <Text as="span" fontWeight="bold">whitelist</Text> will no longer be able to receive new installations. Stores that already have the app installed <Text as="span" fontWeight="bold">will not be affected</Text>. We are progressively moving all stores to the SDK-based model.</Text>
+   <Text>Starting on <Text as="span" fontWeight="bold">August 30, 2026</Text>, apps that are not built with the <Text as="span" fontWeight="bold">NubeSDK</Text> will no longer be able to receive new installations. Stores that already have the app installed <Text as="span" fontWeight="bold">will not be affected</Text>. We are progressively moving all stores to the SDK-based model.</Text>
    <br />
-   <Text>👉 <Text as="span" fontWeight="bold">Want to validate your app before the deadline?</Text> Contact us so we can add the tag to your test store and you can validate your app under the new model.</Text>
+   <Text>👉 <Text as="span" fontWeight="bold">Want to validate your app before the deadline?</Text> <a href="https://docs.google.com/forms/d/e/1FAIpQLSesdE1j1psOl0eSZcqFA4Y8FtyHoKzRtbHXgeFNjETqpD-XMA/viewform" target="_blank" rel="noopener noreferrer">Request the SDK tag for your test store through this form</a> and validate your app under the new model — fully self-service, no need to wait for the rollout to reach you.</Text>
    <br />
    <Text>If you have not migrated yet, start with the <a href="./nube-sdk/migration-guide"><Text as="span" fontWeight="bold">NubeSDK Migration Guide</Text></a>.</Text>
 </Alert>
@@ -22,7 +22,7 @@ import AppTypes from '@site/src/components/AppTypes';
 
 **What changes and what doesn't:**
 
-- ✅ **August 30, 2026** — new installations are **blocked** for apps without the SDK that are not on the whitelist.
+- ✅ **August 30, 2026** — new installations are **blocked** for apps without the SDK.
 - ✅ **October 30, 2026** — start of **deprecation and progressive uninstallation**, with merchants being recommended an alternative app.
 - ✅ Stores that already have the app installed **continue working normally** after 08/30/2026 (until the deprecation stage).
 - ✅ The **homologation process itself does not change** — only the SDK usage verification is added. See the [Homologation overview](../homologation/overview.md) and the [Homologation Requirements](../homologation/requirements.md#4-nubesdk-usage).
