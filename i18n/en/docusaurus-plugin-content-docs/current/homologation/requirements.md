@@ -78,7 +78,7 @@ Starting on **August 30, 2026**, the app must be built using the **NubeSDK**. Ap
 
 - **Effective date:** August 30, 2026.
 - **Applies to:** new homologation submissions from that date onward.
-- **How to prepare:** check the [NubeSDK Migration Guide](../applications/nube-sdk/migration-guide.md) if your app still relies on the legacy model (`document`, `window`, jQuery, or direct DOM manipulation).
+- **How to prepare:** check the [NubeSDK Migration Guide](../applications/nube-sdk/migration-guide) if your app still relies on the legacy model (`document`, `window`, jQuery, or direct DOM manipulation).
 
 For more context on the deadline, see the [Applications overview](../applications/overview.md#nubesdk-adoption-deadline) and the [Homologation overview](./overview.md).
 

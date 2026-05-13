@@ -69,7 +69,7 @@ Nesse item, o parceiro deve garantir que o aplicativo foi desenvolvido utilizand
 
 - O app está implementado com o NubeSDK e roda dentro de um Web Worker.
 - Não há dependências de manipulação direta do DOM, `document`, `window` ou bibliotecas como jQuery.
-- A interface é construída com os [componentes do NubeSDK](../applications/nube-sdk/components.md) e os [UI Slots](../applications/nube-sdk/slots/overview.md) apropriados.
+- A interface é construída com os [componentes do NubeSDK](../applications/nube-sdk/components/overview.md) e os [UI Slots](../applications/nube-sdk/slots/overview.md) apropriados.
 
 Para mais contexto sobre o prazo, consulte a [visão geral da Homologação](./overview.md) e a [visão geral de Aplicativos](../applications/overview.md#prazo-de-adoção-do-nubesdk).
 

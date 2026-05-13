@@ -10,7 +10,7 @@ A partir del **30 de agosto de 2026**, el uso del **NubeSDK** será un requisito
 
 **El proceso de homologación en sí no cambia** — la única incorporación es la verificación de que la app fue desarrollada con el NubeSDK. Los partners que ya están en el SDK no se verán impactados.
 
-Si tu app aún no fue migrada, consulta la [Guía de migración al NubeSDK](../applications/nube-sdk/migration-guide.md). Consulta también el [anuncio en la visión general de Aplicaciones](../applications/overview.md#plazo-de-adopcion-del-nubesdk) y la lista actualizada de [Requisitos de Homologación](./requirements.md#4-uso-del-nubesdk).
+Si tu app aún no fue migrada, consulta la [Guía de migración al NubeSDK](../applications/nube-sdk/migration-guide). Consulta también el [anuncio en la visión general de Aplicaciones](../applications/overview.md#plazo-de-adopcion-del-nubesdk) y la lista actualizada de [Requisitos de Homologación](./requirements.md#4-uso-del-nubesdk).
 :::
 
 ### 💡 ¿Qué es una homologación de app?

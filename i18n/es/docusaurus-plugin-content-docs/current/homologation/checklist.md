@@ -64,14 +64,14 @@ En este punto, el partner debe garantizar que la aplicación fue desarrollada ut
 
 | Descripción                                                | Enlace                                                                        | Obligatoriedad                              |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- |
-| App desarrollada con NubeSDK (a partir del 30/08/2026)     | [Guía de migración](../applications/nube-sdk/migration-guide.md)              | <Tag appearance="primary">Obligatorio</Tag> |
-| No utiliza `document`, `window`, jQuery ni DOM directo     | [Guía de migración](../applications/nube-sdk/migration-guide.md#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Obligatorio</Tag> |
+| App desarrollada con NubeSDK (a partir del 30/08/2026)     | [Guía de migración](../applications/nube-sdk/migration-guide)              | <Tag appearance="primary">Obligatorio</Tag> |
+| No utiliza `document`, `window`, jQuery ni DOM directo     | [Guía de migración](../applications/nube-sdk/migration-guide#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Obligatorio</Tag> |
 
 **Antes de enviar, confirma que:**
 
 - La app está implementada con el NubeSDK y se ejecuta dentro de un Web Worker.
 - No hay dependencias de manipulación directa del DOM, `document`, `window` ni bibliotecas como jQuery.
-- La interfaz se construye con los [componentes del NubeSDK](../applications/nube-sdk/components.md) y los [UI Slots](../applications/nube-sdk/slots/overview.md) apropiados.
+- La interfaz se construye con los [componentes del NubeSDK](../applications/nube-sdk/components/overview) y los [UI Slots](../applications/nube-sdk/slots/overview) apropiados.
 
 Para más contexto sobre el plazo, consulta la [visión general de la Homologación](./overview.md) y la [visión general de Aplicaciones](../applications/overview.md#plazo-de-adopcion-del-nubesdk).
 

@@ -64,14 +64,14 @@ In this item, the partner must ensure the application was built using the **Nube
 
 | Description                                                | Link                                                                          | Mandatory                                   |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- |
-| App built with NubeSDK (from 08/30/2026 onward)            | [Migration Guide](../applications/nube-sdk/migration-guide.md)                | <Tag appearance="primary">Mandatory</Tag>   |
-| Does not use `document`, `window`, jQuery, or direct DOM   | [Migration Guide](../applications/nube-sdk/migration-guide.md#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Mandatory</Tag>   |
+| App built with NubeSDK (from 08/30/2026 onward)            | [Migration Guide](../applications/nube-sdk/migration-guide)                | <Tag appearance="primary">Mandatory</Tag>   |
+| Does not use `document`, `window`, jQuery, or direct DOM   | [Migration Guide](../applications/nube-sdk/migration-guide#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Mandatory</Tag>   |
 
 **Before submitting, confirm that:**
 
 - The app is implemented with the NubeSDK and runs inside a Web Worker.
 - There are no dependencies on direct DOM manipulation, `document`, `window`, or libraries like jQuery.
-- The UI is built with the [NubeSDK components](../applications/nube-sdk/components.md) and the appropriate [UI Slots](../applications/nube-sdk/slots/overview.md).
+- The UI is built with the [NubeSDK components](../applications/nube-sdk/components/overview) and the appropriate [UI Slots](../applications/nube-sdk/slots/overview).
 
 For more context on the deadline, see the [Homologation overview](./overview.md) and the [Applications overview](../applications/overview.md#nubesdk-adoption-deadline).
 
