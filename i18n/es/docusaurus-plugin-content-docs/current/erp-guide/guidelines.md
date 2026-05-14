@@ -16,7 +16,7 @@ Para las aplicaciones que requieren una configuración guiada o contacto comerci
 - ❖ **Soporte Asistido:** Si el modelo exige contacto directo, la pantalla de destino debe ser objetiva, presentando el paso a paso para el registro o la generación de credenciales.
 - ❖ **Guía de Integración:** Instrucciones visuales y claras hasta la conclusión de la configuración final.
 
-Recomendamos la lectura de nuestra [guía sobre Landing Page](https://dev.nuvemshop.com.br/docs/applications/landing-page) y comprender su importancia.
+Recomendamos la lectura de nuestra [guía sobre Landing Page](https://dev.nuvemshop.com.br/es/docs/applications/landing-page) y comprender su importancia.
 
 - ### Adaptación MultiCD
 
