@@ -38,7 +38,7 @@ As respostas são agrupadas em cinco classes, identificadas pelo primeiro dígit
 
 * **400 Bad Request:** A requisição está malformada ou faltam campos obrigatórios.
 * **401 Unauthorized:** Falha na autenticação. A `API Key` ou `Token` é inválido ou expirou.
-* **403 Forbidden:** O cliente está autenticado, mas não tem permissão para acessar ao recurso específico.
+* **403 Forbidden:** O cliente está autenticado, mas não tem permissão para acessar o recurso específico.
 * **404 Not Found:** O recurso solicitado (ex: um sku de produto) não existe no servidor.
 * **422 Unprocessable Entity:** A sintaxe está correta, mas existem erros semânticos (ex: falha na validação de regras de negócio).
 * **429 Too Many Requests:** O limite de taxa (Rate Limit) foi excedido.
