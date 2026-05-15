@@ -16,7 +16,7 @@ For applications that require guided setup or commercial contact, make sure the 
 - ❖ **Assisted Support:** If the model requires direct contact, the destination screen should be objective, presenting step-by-step instructions for registration or credential generation.
 - ❖ **Integration Guide:** Clear visual instructions through to the completion of the final setup.
 
-We recommend reading our [Landing Page guide](https://dev.nuvemshop.com.br/docs/applications/landing-page) and understanding its importance.
+We recommend reading our [Landing Page guide](https://dev.nuvemshop.com.br/en/docs/applications/landing-page) and understanding its importance.
 
 - ### MultiCD Adaptation
 
