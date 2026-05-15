@@ -27,10 +27,10 @@ Once you accept, the browser displays your Public API access token. Use the Copy
 
 ### 2. Paste the token back into the terminal
 
-Return to the terminal where `theme authorize` is still running and paste the token at the `Paste your token:` prompt. The CLI decodes the token, fetches your storefront URL from the Public API, writes a `.nube` file in your working directory, and verifies the connection.
+Return to the terminal where `theme authorize` is still running and paste the token at the `Paste your token:` prompt. The CLI decodes the token, fetches your storefront URL from the Public API, writes a `.nuvem` file in your working directory, and verifies the connection.
 
 :::warning
-The `.nube` file contains your access token. Add it to your `.gitignore`.
+The `.nuvem` file contains your access token. Add it to your `.gitignore`.
 :::
 
 ### Non-interactive mode
@@ -45,15 +45,15 @@ The token must be the **full Base64 string** shown on the authorize page (it enc
 
 ### Options
 
-| Option            | Description                                                          |
-| ----------------- | -------------------------------------------------------------------- |
-| `--token <token>` | Base64 token from the authorize page; skips the browser and prompt   |
-| `-y`              | Skip the non-empty directory warning                                 |
-| `-v`              | Enable verbose HTTP logging                                          |
+| Option            | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `--token <token>` | Base64 token from the authorize page; skips the browser and prompt |
+| `-y`              | Skip the non-empty directory warning                               |
+| `-v`              | Enable verbose HTTP logging                                        |
 
 ## Configuration file
 
-`theme authorize` creates a `.nube` file in your working directory. It holds sensitive information — including your access token — and must not be committed to source control. Add it to your `.gitignore`.
+`theme authorize` creates a `.nuvem` file in your working directory. It holds sensitive information — including your access token — and must not be committed to source control. Add it to your `.gitignore`.
 
 :::info
 Each working directory is tied to one workflow. Theme commands won't run in a directory configured for FTP, and vice versa.

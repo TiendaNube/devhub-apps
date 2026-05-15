@@ -17,7 +17,7 @@ The Tiendanube/Nuvemshop CLI lets you manage the full lifecycle of installations
 create → pull → push/watch → fork (optional) → publish → delete
 ```
 
-`theme pull --installation-id <id>` saves the installation ID in `.nube`, so subsequent commands target it without needing `--installation-id` each time.
+`theme pull --installation-id <id>` saves the installation ID in `.nuvem`, so subsequent commands target it without needing `--installation-id` each time.
 
 All installation commands are under the `theme installation` group:
 
@@ -76,7 +76,7 @@ There is no separate `checkout` command. The CLI links a directory to an install
 tiendanube theme pull --installation-id INSTALLATION_ID
 ```
 
-After a successful pull, the installation ID is saved in `.nube`. Subsequent commands like `theme push`, `theme watch`, and `theme installation publish/fork/clone/delete/preview-url` automatically target this installation when `--installation-id` is omitted.
+After a successful pull, the installation ID is saved in `.nuvem`. Subsequent commands like `theme push`, `theme watch`, and `theme installation publish/fork/clone/delete/preview-url` automatically target this installation when `--installation-id` is omitted.
 
 To check which installation the current directory is linked to:
 

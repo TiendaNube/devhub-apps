@@ -27,10 +27,10 @@ Após aceitar, o navegador exibe seu token de acesso à API Pública. Use o bot�
 
 ### 2. Cole o token de volta no terminal
 
-Volte ao terminal onde `theme authorize` ainda está em execução e cole o token no prompt `Paste your token:`. O CLI decodifica o token, busca a URL da sua loja na API Pública, grava um arquivo `.nube` no seu diretório de trabalho e verifica a conexão.
+Volte ao terminal onde `theme authorize` ainda está em execução e cole o token no prompt `Paste your token:`. O CLI decodifica o token, busca a URL da sua loja na API Pública, grava um arquivo `.nuvem` no seu diretório de trabalho e verifica a conexão.
 
 :::warning
-O arquivo `.nube` contém seu token de acesso. Adicione-o ao seu `.gitignore`.
+O arquivo `.nuvem` contém seu token de acesso. Adicione-o ao seu `.gitignore`.
 :::
 
 ### Modo não-interativo
@@ -53,7 +53,7 @@ O token deve ser a **string Base64 completa** exibida na página de autorizaçã
 
 ## Arquivo de configuração
 
-`theme authorize` cria um arquivo `.nube` no seu diretório de trabalho. Ele contém informações sensíveis — incluindo seu token de acesso — e não deve ser commitado no controle de versão. Adicione-o ao seu `.gitignore`.
+`theme authorize` cria um arquivo `.nuvem` no seu diretório de trabalho. Ele contém informações sensíveis — incluindo seu token de acesso — e não deve ser commitado no controle de versão. Adicione-o ao seu `.gitignore`.
 
 :::info
 Cada diretório de trabalho está vinculado a um fluxo de trabalho. Comandos de tema não funcionarão em um diretório configurado para FTP, e vice-versa.

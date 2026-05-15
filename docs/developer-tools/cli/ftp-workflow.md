@@ -27,7 +27,7 @@ nuvemshop theme ftp setup \
   --store-url https://sualojanuvemshop.com.br
 ```
 
-O CLI testa a conexão FTP e salva as credenciais no arquivo de configuração `.nube`.
+O CLI testa a conexão FTP e salva as credenciais no arquivo de configuração `.nuvem`.
 
 ### Opções
 
@@ -67,12 +67,25 @@ Envie os arquivos de tema locais para o servidor FTP:
 nuvemshop theme ftp push
 ```
 
+### Envio incremental (smart push)
+
+Antes de enviar, o CLI compara cada arquivo local com a sua versão no servidor FTP e só envia os que mudaram. Arquivos inalterados são pulados — isso acelera o envio em temas grandes, principalmente em redes lentas.
+
+O CLI também sincroniza exclusões: arquivos que existem no servidor mas não no seu diretório local são removidos do FTP durante o push.
+
+Para forçar o envio de **todos** os arquivos sem comparação com o remoto, use `--force`:
+
+```bash
+nuvemshop theme ftp push --force
+```
+
 ### Opções
 
-| Opção | Descrição                      |
-| ----- | ------------------------------ |
-| `-y`  | Pula os prompts de confirmação |
-| `-v`  | Ativa a saída detalhada        |
+| Opção     | Descrição                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------- |
+| `--force` | Envia todos os arquivos sem comparar com o remoto (ignora a detecção de arquivos inalterados) |
+| `-y`      | Pula os prompts de confirmação                                                                |
+| `-v`      | Ativa a saída detalhada                                                                       |
 
 ## Monitorar (Watch)
 
