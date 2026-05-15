@@ -66,6 +66,7 @@ const sidebars = {
 				"applications/standalone",
 				"applications/guidelines",
 				"applications/landing-page",
+				"applications/http-status",
 				{
 					type: "category",
 					label: "Nube SDK",
