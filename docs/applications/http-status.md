@@ -11,7 +11,7 @@ Esta documentação visa definir os padrões de resposta que as nossas APIs util
 A utilização correta dos códigos de status HTTP não é apenas uma "boa prática", mas um pilar fundamental da arquitetura REST:
 
 * **Interoperabilidade:** Clientes HTTP, proxies e balanceadores de carga entendem estes códigos nativamente.
-* **Facilidade de Debugging:** Identificar a causa de um erro (ex: falta de permissão *vs*. recurso inexistente) acelerando a análise por base apenas pelo código.
+* **Facilidade de Debugging:** Identificar a causa de um erro (ex: falta de permissão *vs*. recurso inexistente) acelerando a análise com base apenas no código.
 * **Cache e Performance:** Muitos sistemas de cache decidem se devem armazenar uma resposta com base no código de status (ex: 200 é cacheável, já o 500 não é).
 * **Redução de Suporte:** APIs previsíveis geram menos dúvidas e chamados técnicos.
 
