@@ -50,6 +50,6 @@ As respostas são agrupadas em cinco classes, identificadas pelo primeiro dígit
 
 ## 🔹 Boas Práticas de Implementação
 
-1. **Não utilize apenas 200 OK:** Evite retornar `200 OK` com uma mensagem de erro no corpo (`{ "error": true }`). Isso confunde as ferramentas de monitorização e bibliotecas cliente.
+1. **Não utilize apenas 200 OK:** Evite retornar `200 OK` com uma mensagem de erro no corpo (`{ "error": true }`). Isso confunde as ferramentas de monitorização e bibliotecas clientes.
 2. **Idempotência:** Garanta que pedidos `GET`, `PUT` e `DELETE` possam ser repetidos sem causar efeitos colaterais indesejados, mantendo a consistência dos códigos de retorno.
 3. **Logs de Diagnóstico:** Em caso de erros `5xx`, forneça sempre um `Request-ID` no cabeçalho da resposta para facilitar o rastreio interno.
