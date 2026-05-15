@@ -155,10 +155,10 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 A common development cycle looks like this:
 
-1. **Create or clone** an installation to work on: `tiendanube theme installation clone`
+1. **Create or clone** an installation to work on: `tiendanube theme clone`
 2. **Pull** the installation files (links the directory to that installation): `tiendanube theme pull --installation-id ID`
-3. **Fork** if you need to edit theme code: `tiendanube theme installation fork`
+3. **Fork** if you need to edit theme code: `tiendanube theme fork`
 4. **Start watch mode**: `tiendanube theme watch`
 5. **Edit** templates, sections, and settings in your editor — changes sync automatically
-6. **Preview** with the auto-reloading browser, or generate a link: `tiendanube theme installation preview-url`
-7. **Publish** when ready: `tiendanube theme installation publish`
+6. **Preview** with the auto-reloading browser, or generate a link: `tiendanube theme preview`
+7. **Publish** when ready: `tiendanube theme publish`

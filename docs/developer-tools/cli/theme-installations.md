@@ -19,12 +19,6 @@ criar → baixar → enviar/monitorar → fork (opcional) → publicar → exclu
 
 `theme pull --installation-id <id>` salva o ID da instalação em `.nuvem`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--installation-id` a cada vez.
 
-Todos os comandos de instalação estão no grupo `theme installation`:
-
-```bash
-nuvemshop theme installation <comando>
-```
-
 :::info
 Antes de usar esses comandos, execute `theme authorize` para conectar o CLI à sua loja. Veja [Fork workflow](./api-workflow) para instruções de configuração.
 :::
@@ -34,13 +28,13 @@ Antes de usar esses comandos, execute `theme authorize` para conectar o CLI à s
 Liste todas as instalações de tema na sua loja:
 
 ```bash
-nuvemshop theme installation list
+nuvemshop theme list
 ```
 
 A saída mostra o ID, título, versão do tema, se é produtiva (ativa) e se foi feito fork de cada instalação. Use `--json` para saída legível por máquina:
 
 ```bash
-nuvemshop theme installation list --json
+nuvemshop theme list --json
 ```
 
 ### Opções
@@ -55,10 +49,10 @@ nuvemshop theme installation list --json
 Crie uma nova instalação a partir de um código de tema:
 
 ```bash
-nuvemshop theme installation create --theme-code CODIGO_DO_TEMA --title "Meu Tema"
+nuvemshop theme create --theme-code CODIGO_DO_TEMA --title "Meu Tema"
 ```
 
-Isso cria uma instalação nova com base nos arquivos e configurações padrão do tema especificado. O `theme_code` identifica o tema base no catálogo de temas da Nuvemshop.
+Isso cria uma instalação nova com base nos arquivos e configurações padrão do tema especificado. O `theme_code` identifica o tema base no catálogo de temas da Nuvemshop. Atualmente, o único valor suportado é `ipanema`. No futuro, mais temas serão adicionados ao catálogo.
 
 ### Opções
 
@@ -76,12 +70,12 @@ Não há um comando `checkout` separado. O CLI vincula um diretório a uma insta
 nuvemshop theme pull --installation-id ID_DA_INSTALACAO
 ```
 
-Após um pull bem-sucedido, o ID da instalação é salvo em `.nuvem`. Comandos subsequentes como `theme push`, `theme watch` e `theme installation publish/fork/clone/delete/preview-url` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
+Após um pull bem-sucedido, o ID da instalação é salvo em `.nuvem`. Comandos subsequentes como `theme push`, `theme watch` e `theme publish/fork/clone/delete/preview` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
 
 Para verificar qual instalação o diretório atual está vinculado:
 
 ```bash
-nuvemshop theme installation get-current
+nuvemshop theme current
 ```
 
 ## Clonar
@@ -89,7 +83,7 @@ nuvemshop theme installation get-current
 Crie uma cópia idêntica de uma instalação existente:
 
 ```bash
-nuvemshop theme installation clone
+nuvemshop theme clone
 ```
 
 Ao contrário do **criar** (que parte dos padrões do tema base), **clonar** duplica uma instalação existente — incluindo qualquer modificação de arquivos, alterações de configurações e personalizações que você fez. Útil quando você quer experimentar mudanças sem afetar o trabalho atual.
@@ -107,7 +101,7 @@ Ao contrário do **criar** (que parte dos padrões do tema base), **clonar** dup
 Faça fork de uma instalação para desbloquear acesso completo aos arquivos:
 
 ```bash
-nuvemshop theme installation fork
+nuvemshop theme fork
 ```
 
 ### Por que o fork existe
@@ -183,7 +177,7 @@ Apenas **temas baseados em seções** (como o Ipanema) podem ser forkados. A API
 Torne uma instalação o tema **produtivo** (ativo) na sua loja:
 
 ```bash
-nuvemshop theme installation publish
+nuvemshop theme publish
 ```
 
 Publicar torna a instalação visível para todos os visitantes. A instalação anteriormente produtiva é rebaixada — ela ainda existe, mas não está mais ativa.
@@ -205,7 +199,7 @@ Publicar substitui o tema ativo atual. Sempre teste suas mudanças com uma [pré
 Obtenha uma URL de pré-visualização de uma instalação sem torná-la ativa:
 
 ```bash
-nuvemshop theme installation preview-url
+nuvemshop theme preview
 ```
 
 Isso gera uma URL no formato:
@@ -227,7 +221,7 @@ Abra no navegador para ver como a instalação fica na loja. A pré-visualizaç�
 Exclua uma instalação de tema:
 
 ```bash
-nuvemshop theme installation delete
+nuvemshop theme delete
 ```
 
 ### Opções
@@ -244,13 +238,13 @@ Excluir uma instalação é permanente e não pode ser desfeito. Você não pode
 
 ## Referência rápida
 
-| Comando                          | Descrição                                              |
-| -------------------------------- | ------------------------------------------------------ |
-| `theme installation list`        | Lista todas as instalações na loja                     |
-| `theme installation create`      | Cria uma nova instalação a partir de um código de tema |
-| `theme installation get-current` | Mostra a instalação vinculada a este diretório         |
-| `theme installation clone`       | Duplica uma instalação existente                       |
-| `theme installation fork`        | Desbloqueia acesso completo aos arquivos (sem volta)   |
-| `theme installation publish`     | Torna uma instalação ativa na loja                     |
-| `theme installation preview-url` | Gera um link de pré-visualização sem publicar          |
-| `theme installation delete`      | Remove permanentemente uma instalação                  |
+| Comando          | Descrição                                              |
+| ---------------- | ------------------------------------------------------ |
+| `theme list`     | Lista todas as instalações na loja                     |
+| `theme create`   | Cria uma nova instalação a partir de um código de tema |
+| `theme current`  | Mostra a instalação vinculada a este diretório         |
+| `theme clone`    | Duplica uma instalação existente                       |
+| `theme fork`     | Desbloqueia acesso completo aos arquivos (sem volta)   |
+| `theme publish`  | Torna uma instalação ativa na loja                     |
+| `theme preview`  | Gera um link de pré-visualização sem publicar          |
+| `theme delete`   | Remove permanentemente uma instalação                  |
