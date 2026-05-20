@@ -17,7 +17,7 @@ The Tiendanube/Nuvemshop CLI lets you manage the full lifecycle of installations
 create → pull → push/watch → fork (optional) → publish → delete
 ```
 
-`theme pull --installation-id <id>` saves the installation ID in `.nuvem`, so subsequent commands target it without needing `--installation-id` each time.
+`theme pull --theme-id <id>` saves the installation ID in `.nuvem`, so subsequent commands target it without needing `--theme-id` each time.
 
 :::info
 Before using these commands, run `theme authorize` to connect the CLI to your store. See [Fork workflow](./api-workflow) for setup instructions.
@@ -42,6 +42,7 @@ tiendanube theme list --json
 | Option | Description |
 | --- | --- |
 | `--json` | Output as JSON instead of a table |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-v` | Enable verbose output |
 
 ## Create
@@ -49,17 +50,19 @@ tiendanube theme list --json
 Create a new installation from a theme code:
 
 ```bash
-tiendanube theme create --theme-code THEME_CODE --title "My Theme"
+tiendanube theme create --base-theme ipanema --title "My Theme"
 ```
 
-This creates a fresh installation based on the specified theme's default files and settings. The `theme_code` identifies the base theme in the Tiendanube theme catalog. Currently, the only supported value is `ipanema`. Support for additional themes is planned for future releases.
+This creates a fresh installation based on the specified base theme's default files and settings. Currently, the only supported value for `--base-theme` is `ipanema`. Support for additional themes is planned for future releases.
 
 ### Options
 
 | Option | Description |
 | --- | --- |
-| `--theme-code <code>` | **Required.** The theme code to create an installation from |
+| `--base-theme <name>` | **Required.** Base theme to create the installation from (currently only `ipanema`) |
 | `--title <name>` | **Required.** A human-readable name for the installation |
+| `--json` | Output as JSON |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-v` | Enable verbose output |
 
 ## Selecting the active installation
@@ -67,10 +70,10 @@ This creates a fresh installation based on the specified theme's default files a
 There is no separate `checkout` command. The CLI links a directory to an installation when you run:
 
 ```bash
-tiendanube theme pull --installation-id INSTALLATION_ID
+tiendanube theme pull --theme-id THEME_ID
 ```
 
-After a successful pull, the installation ID is saved in `.nuvem`. Subsequent commands like `theme push`, `theme watch`, and `theme publish/fork/clone/delete/preview` automatically target this installation when `--installation-id` is omitted.
+After a successful pull, the installation ID is saved in `.nuvem`. Subsequent commands like `theme push`, `theme watch`, and `theme publish/fork/clone/delete/preview` automatically target this installation when `--theme-id` is omitted.
 
 To check which installation the current directory is linked to:
 
@@ -92,7 +95,10 @@ Unlike **create** (which starts from the base theme's defaults), **clone** dupli
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to clone (defaults to the installation linked to this directory) |
+| `--theme-id <id>` | The installation to clone (defaults to the installation linked to this directory) |
+| `--published` | Use the store's published theme instead of `--theme-id` or `.nuvem` |
+| `--json` | Output as JSON |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -158,7 +164,10 @@ This is the safer path — your installation stays compatible with future theme 
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to fork (defaults to the installation linked to this directory) |
+| `--theme-id <id>` | The installation to fork (defaults to the installation linked to this directory) |
+| `--published` | Use the store's published theme instead of `--theme-id` or `.nuvem` |
+| `--json` | Output as JSON |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -184,7 +193,9 @@ Publishing makes the installation visible to all visitors. The previously produc
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to publish (defaults to the installation linked to this directory) |
+| `--theme-id <id>` | The installation to publish (defaults to the installation linked to this directory) |
+| `--json` | Output as JSON |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 
@@ -212,7 +223,9 @@ Open it in your browser to see how the installation looks on the storefront. The
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to preview (defaults to the installation linked to this directory) |
+| `--theme-id <id>` | The installation to preview (defaults to the installation linked to this directory) |
+| `--published` | Use the store's published theme instead of `--theme-id` or `.nuvem` |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 
 ## Delete
 
@@ -226,7 +239,9 @@ tiendanube theme delete
 
 | Option | Description |
 | --- | --- |
-| `--installation-id <id>` | The installation to delete (defaults to the installation linked to this directory) |
+| `--theme-id <id>` | The installation to delete (defaults to the installation linked to this directory) |
+| `--json` | Output as JSON |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use)) |
 | `-y` | Skip confirmation prompts |
 | `-v` | Enable verbose output |
 

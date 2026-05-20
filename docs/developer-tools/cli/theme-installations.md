@@ -17,7 +17,7 @@ O Nuvemshop CLI permite que você gerencie o ciclo de vida completo das instala�
 criar → baixar → enviar/monitorar → fork (opcional) → publicar → excluir
 ```
 
-`theme pull --installation-id <id>` salva o ID da instalação em `.nuvem`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--installation-id` a cada vez.
+`theme pull --theme-id <id>` salva o ID da instalação em `.nuvem`, para que os comandos subsequentes a utilizem como alvo sem precisar de `--theme-id` a cada vez.
 
 :::info
 Antes de usar esses comandos, execute `theme authorize` para conectar o CLI à sua loja. Veja [Fork workflow](./api-workflow) para instruções de configuração.
@@ -39,38 +39,41 @@ nuvemshop theme list --json
 
 ### Opções
 
-| Opção    | Descrição                              |
-| -------- | -------------------------------------- |
-| `--json` | Exibe a saída em JSON em vez de tabela |
-| `-v`     | Ativa a saída detalhada                |
+| Opção             | Descrição                                              |
+| ----------------- | ------------------------------------------------------ |
+| `--json`          | Exibe a saída em JSON em vez de tabela                 |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-v`              | Ativa a saída detalhada                                |
 
 ## Criar
 
 Crie uma nova instalação a partir de um código de tema:
 
 ```bash
-nuvemshop theme create --theme-code CODIGO_DO_TEMA --title "Meu Tema"
+nuvemshop theme create --base-theme ipanema --title "Meu Tema"
 ```
 
-Isso cria uma instalação nova com base nos arquivos e configurações padrão do tema especificado. O `theme_code` identifica o tema base no catálogo de temas da Nuvemshop. Atualmente, o único valor suportado é `ipanema`. No futuro, mais temas serão adicionados ao catálogo.
+Isso cria uma instalação nova com base nos arquivos e configurações padrão do tema base especificado. Atualmente, o único valor suportado para `--base-theme` é `ipanema`. No futuro, mais temas serão adicionados ao catálogo.
 
 ### Opções
 
-| Opção                 | Descrição                                                 |
-| --------------------- | --------------------------------------------------------- |
-| `--theme-code <code>` | **Obrigatório.** O código do tema para criar a instalação |
-| `--title <name>`      | **Obrigatório.** Um nome legível para a instalação        |
-| `-v`                  | Ativa a saída detalhada                                   |
+| Opção                 | Descrição                                                                       |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `--base-theme <name>` | **Obrigatório.** Tema base para criar a instalação (atualmente, apenas `ipanema`) |
+| `--title <name>`      | **Obrigatório.** Um nome legível para a instalação                              |
+| `--json`              | Exibe a saída em JSON                                                           |
+| `--token <token>`     | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-v`                  | Ativa a saída detalhada                                                         |
 
 ## Selecionando a instalação ativa
 
 Não há um comando `checkout` separado. O CLI vincula um diretório a uma instalação quando você executa:
 
 ```bash
-nuvemshop theme pull --installation-id ID_DA_INSTALACAO
+nuvemshop theme pull --theme-id ID_DO_TEMA
 ```
 
-Após um pull bem-sucedido, o ID da instalação é salvo em `.nuvem`. Comandos subsequentes como `theme push`, `theme watch` e `theme publish/fork/clone/delete/preview` utilizam automaticamente essa instalação quando `--installation-id` é omitido.
+Após um pull bem-sucedido, o ID da instalação é salvo em `.nuvem`. Comandos subsequentes como `theme push`, `theme watch` e `theme publish/fork/clone/delete/preview` utilizam automaticamente essa instalação quando `--theme-id` é omitido.
 
 Para verificar qual instalação o diretório atual está vinculado:
 
@@ -90,11 +93,14 @@ Ao contrário do **criar** (que parte dos padrões do tema base), **clonar** dup
 
 ### Opções
 
-| Opção                    | Descrição                                                                    |
-| ------------------------ | ---------------------------------------------------------------------------- |
-| `--installation-id <id>` | A instalação a ser clonada (padrão: a instalação vinculada a este diretório) |
-| `-y`                     | Pula os prompts de confirmação                                               |
-| `-v`                     | Ativa a saída detalhada                                                      |
+| Opção             | Descrição                                                                       |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `--theme-id <id>` | A instalação a ser clonada (padrão: a instalação vinculada a este diretório)    |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                 |
+| `--json`          | Exibe a saída em JSON                                                           |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-y`              | Pula os prompts de confirmação                                                  |
+| `-v`              | Ativa a saída detalhada                                                         |
 
 ## Fork
 
@@ -158,11 +164,14 @@ Esse é o caminho mais seguro — sua instalação permanece compatível com fut
 
 ### Opções
 
-| Opção                    | Descrição                                                                    |
-| ------------------------ | ---------------------------------------------------------------------------- |
-| `--installation-id <id>` | A instalação a ser forkada (padrão: a instalação vinculada a este diretório) |
-| `-y`                     | Pula os prompts de confirmação                                               |
-| `-v`                     | Ativa a saída detalhada                                                      |
+| Opção             | Descrição                                                                       |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `--theme-id <id>` | A instalação a ser forkada (padrão: a instalação vinculada a este diretório)    |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                 |
+| `--json`          | Exibe a saída em JSON                                                           |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-y`              | Pula os prompts de confirmação                                                  |
+| `-v`              | Ativa a saída detalhada                                                         |
 
 :::warning
 Fazer fork é uma **operação sem volta**. Uma vez forkada, uma instalação não pode ser des-forkada. Se você fizer fork de uma instalação já forkada, o CLI trata isso como uma operação sem efeito.
@@ -184,11 +193,13 @@ Publicar torna a instalação visível para todos os visitantes. A instalação 
 
 ### Opções
 
-| Opção                    | Descrição                                                                      |
-| ------------------------ | ------------------------------------------------------------------------------ |
-| `--installation-id <id>` | A instalação a ser publicada (padrão: a instalação vinculada a este diretório) |
-| `-y`                     | Pula os prompts de confirmação                                                 |
-| `-v`                     | Ativa a saída detalhada                                                        |
+| Opção             | Descrição                                                                       |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `--theme-id <id>` | A instalação a ser publicada (padrão: a instalação vinculada a este diretório)  |
+| `--json`          | Exibe a saída em JSON                                                           |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-y`              | Pula os prompts de confirmação                                                  |
+| `-v`              | Ativa a saída detalhada                                                         |
 
 :::warning
 Publicar substitui o tema ativo atual. Sempre teste suas mudanças com uma [pré-visualização](#url-de-pré-visualização) antes de publicar.
@@ -212,9 +223,11 @@ Abra no navegador para ver como a instalação fica na loja. A pré-visualizaç�
 
 ### Opções
 
-| Opção                    | Descrição                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------ |
-| `--installation-id <id>` | A instalação a ser pré-visualizada (padrão: a instalação vinculada a este diretório) |
+| Opção             | Descrição                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| `--theme-id <id>` | A instalação a ser pré-visualizada (padrão: a instalação vinculada a este diretório) |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                      |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci))      |
 
 ## Excluir
 
@@ -226,11 +239,13 @@ nuvemshop theme delete
 
 ### Opções
 
-| Opção                    | Descrição                                                                     |
-| ------------------------ | ----------------------------------------------------------------------------- |
-| `--installation-id <id>` | A instalação a ser excluída (padrão: a instalação vinculada a este diretório) |
-| `-y`                     | Pula os prompts de confirmação                                                |
-| `-v`                     | Ativa a saída detalhada                                                       |
+| Opção             | Descrição                                                                       |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `--theme-id <id>` | A instalação a ser excluída (padrão: a instalação vinculada a este diretório)   |
+| `--json`          | Exibe a saída em JSON                                                           |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci)) |
+| `-y`              | Pula os prompts de confirmação                                                  |
+| `-v`              | Ativa a saída detalhada                                                         |
 
 :::warning
 Excluir uma instalação é permanente e não pode ser desfeito. Você não pode excluir a instalação produtiva atual.

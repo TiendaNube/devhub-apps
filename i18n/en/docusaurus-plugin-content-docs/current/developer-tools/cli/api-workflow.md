@@ -59,6 +59,18 @@ The token must be the **full Base64 string** shown on the authorize page (it enc
 Each working directory is tied to one workflow. Theme commands won't run in a directory configured for FTP, and vice versa.
 :::
 
+## Per-command token (CI use)
+
+Every `theme` command accepts a `--token <token>` option, letting you run any command without first running `theme authorize`. This is useful for scripts and CI pipelines that only need to run a single command:
+
+```bash
+tiendanube theme pull --theme-id 12345 --token YOUR_TOKEN
+tiendanube theme push --token YOUR_TOKEN
+tiendanube theme create --base-theme ipanema --title "CI Theme" --token YOUR_TOKEN
+```
+
+The token must be the same **full Base64 string** shown on the authorize page. When `--token` is passed, it overrides any credentials saved in `.nuvem` for that run only — nothing is written to disk.
+
 ## Rate limiting
 
 The Tiendanube API enforces rate limits. If the CLI receives a `429 Too Many Requests` response, it automatically waits and retries. During bulk operations like `theme push` (which uploads files in parallel), the CLI limits concurrency to 2 simultaneous uploads to stay within API limits.

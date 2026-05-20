@@ -59,6 +59,18 @@ O token deve ser a **string Base64 completa** exibida na página de autorizaçã
 Cada diretório de trabalho está vinculado a um fluxo de trabalho. Comandos de tema não funcionarão em um diretório configurado para FTP, e vice-versa.
 :::
 
+## Token por comando (uso em CI)
+
+Todos os comandos `theme` aceitam a opção `--token <token>`, permitindo executar qualquer comando sem rodar `theme authorize` antes. Útil para scripts e pipelines de CI que precisam executar apenas um comando pontual:
+
+```bash
+nuvemshop theme pull --theme-id 12345 --token SEU_TOKEN
+nuvemshop theme push --token SEU_TOKEN
+nuvemshop theme create --base-theme ipanema --title "CI Tema" --token SEU_TOKEN
+```
+
+O token deve ser a mesma **string Base64 completa** exibida na página de autorização. Quando `--token` é passado, ele substitui qualquer credencial salva em `.nuvem` apenas para essa execução — nada é gravado em disco.
+
 ## Limites de requisições
 
 A API Nuvemshop aplica limites de requisições. Se o CLI receber uma resposta `429 Too Many Requests`, ele aguarda automaticamente e tenta novamente. Durante operações em lote como `theme push` (que envia arquivos em paralelo), o CLI limita a concorrência a 2 uploads simultâneos para respeitar os limites da API.

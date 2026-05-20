@@ -52,11 +52,13 @@ This file is **local only** — it's never uploaded when you push or watch. It h
 
 ### Options
 
-| Option                   | Description                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
-| `-y`                     | Skip confirmation prompts                                                                         |
-| `-v`                     | Enable verbose output                                                                             |
+| Option            | Description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
+| `--published`     | Use the store's published theme instead of `--theme-id` or `.nuvem`                                |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use))                           |
+| `-y`              | Skip confirmation prompts                                                                          |
+| `-v`              | Enable verbose output                                                                              |
 
 :::warning
 Pulling overwrites local files. If you have uncommitted changes, commit or stash them before pulling.
@@ -92,12 +94,14 @@ tiendanube theme push --force
 
 ### Options
 
-| Option                   | Description                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
-| `--force`                | Upload all files without remote comparison (skips unchanged-file detection)                       |
-| `-y`                     | Skip confirmation prompts                                                                         |
-| `-v`                     | Enable verbose output                                                                             |
+| Option            | Description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
+| `--published`     | Use the store's published theme instead of `--theme-id` or `.nuvem`                                |
+| `--force`         | Upload all files without remote comparison (skips unchanged-file detection)                        |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use))                           |
+| `-y`              | Skip confirmation prompts                                                                          |
+| `-v`              | Enable verbose output                                                                              |
 
 ### What gets uploaded
 
@@ -145,18 +149,20 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 ### Options
 
-| Option                   | Description                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
-| `--no-browser`           | Don't open or reload a browser window                                                             |
-| `-v`                     | Enable verbose output                                                                             |
+| Option            | Description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Target a specific installation (defaults to the installation linked to this directory in `.nuvem`) |
+| `--published`     | Use the store's published theme instead of `--theme-id` or `.nuvem`                                |
+| `--no-browser`    | Don't open or reload a browser window                                                              |
+| `--token <token>` | Authentication token ([CI use](./api-workflow#per-command-token-ci-use))                           |
+| `-v`              | Enable verbose output                                                                              |
 
 ## Typical development workflow
 
 A common development cycle looks like this:
 
 1. **Create or clone** an installation to work on: `tiendanube theme clone`
-2. **Pull** the installation files (links the directory to that installation): `tiendanube theme pull --installation-id ID`
+2. **Pull** the installation files (links the directory to that installation): `tiendanube theme pull --theme-id ID`
 3. **Fork** if you need to edit theme code: `tiendanube theme fork`
 4. **Start watch mode**: `tiendanube theme watch`
 5. **Edit** templates, sections, and settings in your editor — changes sync automatically
