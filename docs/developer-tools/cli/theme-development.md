@@ -52,11 +52,13 @@ Esse arquivo é **apenas local** — nunca é enviado quando você faz push ou w
 
 ### Opções
 
-| Opção                    | Descrição                                                                                          |
-| ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
-| `-y`                     | Pula os prompts de confirmação                                                                     |
-| `-v`                     | Ativa a saída detalhada                                                                            |
+| Opção             | Descrição                                                                                           |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                                     |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci))                     |
+| `-y`              | Pula os prompts de confirmação                                                                      |
+| `-v`              | Ativa a saída detalhada                                                                             |
 
 :::warning
 Baixar sobrescreve os arquivos locais. Se você tiver alterações não commitadas, faça commit ou stash antes de baixar.
@@ -92,12 +94,14 @@ nuvemshop theme push --force
 
 ### Opções
 
-| Opção                    | Descrição                                                                                          |
-| ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
-| `--force`                | Envia todos os arquivos sem comparar com o remoto (ignora a detecção de arquivos inalterados)     |
-| `-y`                     | Pula os prompts de confirmação                                                                     |
-| `-v`                     | Ativa a saída detalhada                                                                            |
+| Opção             | Descrição                                                                                           |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                                     |
+| `--force`         | Envia todos os arquivos sem comparar com o remoto (ignora a detecção de arquivos inalterados)       |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci))                     |
+| `-y`              | Pula os prompts de confirmação                                                                      |
+| `-v`              | Ativa a saída detalhada                                                                             |
 
 ### O que é enviado
 
@@ -145,20 +149,22 @@ O recurso de navegador usa o Puppeteer, que pode precisar baixar o Chromium na p
 
 ### Opções
 
-| Opção                    | Descrição                                                                                          |
-| ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `--installation-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
-| `--no-browser`           | Não abre nem recarrega uma janela de navegador                                                     |
-| `-v`                     | Ativa a saída detalhada                                                                            |
+| Opção             | Descrição                                                                                           |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| `--theme-id <id>` | Aponta para uma instalação específica (padrão: a instalação vinculada a este diretório em `.nuvem`) |
+| `--published`     | Usa o tema publicado da loja em vez de `--theme-id` ou `.nuvem`                                     |
+| `--no-browser`    | Não abre nem recarrega uma janela de navegador                                                      |
+| `--token <token>` | Token de autenticação ([uso em CI](./api-workflow#token-por-comando-uso-em-ci))                     |
+| `-v`              | Ativa a saída detalhada                                                                             |
 
 ## Fluxo de desenvolvimento típico
 
 Um ciclo de desenvolvimento comum se parece com isso:
 
-1. **Criar ou clonar** uma instalação para trabalhar: `nuvemshop theme installation clone`
-2. **Baixar** os arquivos da instalação (vincula o diretório a essa instalação): `nuvemshop theme pull --installation-id ID`
-3. **Fazer fork** se você precisar editar o código do tema: `nuvemshop theme installation fork`
+1. **Criar ou clonar** uma instalação para trabalhar: `nuvemshop theme create --base-theme ipanema --title "Meu Tema"` ou `nuvemshop theme clone`
+2. **Baixar** os arquivos da instalação (vincula o diretório a essa instalação): `nuvemshop theme pull --theme-id ID`
+3. **Fazer fork** se você precisar editar o código do tema: `nuvemshop theme fork`
 4. **Iniciar o modo watch**: `nuvemshop theme watch`
 5. **Editar** templates, seções e configurações no seu editor — as alterações sincronizam automaticamente
-6. **Pré-visualizar** com o navegador que recarrega automaticamente, ou gerar um link: `nuvemshop theme installation preview-url`
-7. **Publicar** quando estiver pronto: `nuvemshop theme installation publish`
+6. **Pré-visualizar** com o navegador que recarrega automaticamente, ou gerar um link: `nuvemshop theme preview`
+7. **Publicar** quando estiver pronto: `nuvemshop theme publish`
