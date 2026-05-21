@@ -161,7 +161,7 @@ The browser feature uses Puppeteer, which may need to download Chromium on first
 
 A common development cycle looks like this:
 
-1. **Create or clone** an installation to work on: `tiendanube theme clone`
+1. **Create or clone** an installation to work on: `tiendanube theme create --base-theme ipanema --title "My Theme"` or `tiendanube theme clone`
 2. **Pull** the installation files (links the directory to that installation): `tiendanube theme pull --theme-id ID`
 3. **Fork** if you need to edit theme code: `tiendanube theme fork`
 4. **Start watch mode**: `tiendanube theme watch`

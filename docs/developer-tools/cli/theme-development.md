@@ -161,7 +161,7 @@ O recurso de navegador usa o Puppeteer, que pode precisar baixar o Chromium na p
 
 Um ciclo de desenvolvimento comum se parece com isso:
 
-1. **Criar ou clonar** uma instalação para trabalhar: `nuvemshop theme clone`
+1. **Criar ou clonar** uma instalação para trabalhar: `nuvemshop theme create --base-theme ipanema --title "Meu Tema"` ou `nuvemshop theme clone`
 2. **Baixar** os arquivos da instalação (vincula o diretório a essa instalação): `nuvemshop theme pull --theme-id ID`
 3. **Fazer fork** se você precisar editar o código do tema: `nuvemshop theme fork`
 4. **Iniciar o modo watch**: `nuvemshop theme watch`
