@@ -1,90 +1,162 @@
 {
   "siteConfig.description": {
-    "message": "Develop applications for the Nuvemshop ecosystem and boost your earnings"
-  },
-  "home.appTypes.title": {
-    "message": "Discover the different types of available applications"
-  },
-  "home.appTypes.card.1.title": {
-    "message": "Integrated App"
-  },
-  "home.appTypes.card.1.text": {
-    "message": "Build apps integrated with the store admin, for an enhanced experience and easy access to features."
-  },
-  "home.appTypes.card.1.linkText": {
-    "message": "Read the documentation"
-  },
-  "home.appTypes.card.2.title": {
-    "message": "External App"
-  },
-  "home.appTypes.card.2.text": {
-    "message": "Build independent apps for a more personalized experience and integrated features with your product."
-  },
-  "home.appTypes.card.2.linkText": {
-    "message": "Read the documentation"
+    "message": "Build apps for Latin America's largest e-commerce ecosystem"
   },
   "home.hero.title": {
-    "message": "Develop applications for the Nuvemshop ecosystem and boost your earnings"
+    "message": "Build apps for Latin America's largest e-commerce ecosystem"
+  },
+  "home.hero.stats": {
+    "message": "180,000+ active stores · 5 countries · US$335M in annual sales"
   },
   "home.hero.button": {
-    "message": "Get started now"
+    "message": "Start building"
   },
-  "home.developerTools.title": {
-    "message": "Development Tools"
+  "home.whyTiendanube.title": {
+    "message": "Why build for Tiendanube?"
   },
-  "home.developerTools.card.1.title": {
-    "message": "Nuvemshop API"
+  "home.whyTiendanube.stat.1.label": {
+    "message": "active stores"
   },
-  "home.developerTools.card.1.description": {
-    "message": "Develop apps by integrating your services with our Nuvemshop API."
+  "home.whyTiendanube.stat.1.description": {
+    "message": "Your app reaches merchants across Latin America from day one"
   },
-  "home.developerTools.card.1.linkText": {
-    "message": "Learn about our API"
+  "home.whyTiendanube.stat.2.label": {
+    "message": "in annual sales"
   },
-  "home.developerTools.card.2.title": {
+  "home.whyTiendanube.stat.2.description": {
+    "message": "Tap into a thriving commercial ecosystem with real transaction volume"
+  },
+  "home.whyTiendanube.stat.3.label": {
+    "message": "countries"
+  },
+  "home.whyTiendanube.stat.3.description": {
+    "message": "AR, BR, CL, CO & MX — one integration, multi-country reach"
+  },
+  "home.whyTiendanube.stat.4.label": {
+    "message": "active partners"
+  },
+  "home.whyTiendanube.stat.4.description": {
+    "message": "Join a collaborative ecosystem with specialized support and growth programs"
+  },
+  "home.whyTiendanube.benefit.1": {
+    "message": "App Store visibility — your app is listed directly in front of store owners"
+  },
+  "home.whyTiendanube.benefit.2": {
+    "message": "Partner Program — Silver, Gold & Platinum tiers with exclusive benefits"
+  },
+  "home.whyTiendanube.benefit.3": {
+    "message": "Dedicated technical support during integration and homologation"
+  },
+  "home.whyTiendanube.benefit.4": {
+    "message": "Complete ecosystem — payments, shipping, marketing & AI already integrated"
+  },
+  "home.whyTiendanube.partnerLink": {
+    "message": "Learn about the Partner Program"
+  },
+  "home.threePillars.title": {
+    "message": "Three ways to extend the platform"
+  },
+  "home.threePillars.subtitle": {
+    "message": "Choose where to build based on what your app needs"
+  },
+  "home.threePillars.card.1.title": {
+    "message": "Backend API"
+  },
+  "home.threePillars.card.1.description": {
+    "message": "Connect to store data. Manage products, orders, customers, and more through our REST API."
+  },
+  "home.threePillars.card.1.linkText": {
+    "message": "Explore the API"
+  },
+  "home.threePillars.card.2.title": {
+    "message": "App Admin"
+  },
+  "home.threePillars.card.2.description": {
+    "message": "Build the configuration interface where the store owner manages your app. Embedded or external."
+  },
+  "home.threePillars.card.2.linkText": {
+    "message": "Build your admin"
+  },
+  "home.threePillars.card.3.title": {
+    "message": "Storefront & Checkout"
+  },
+  "home.threePillars.card.3.description": {
+    "message": "Shape the shopping experience. Add components, customize checkout, and enhance the storefront with NubeSDK."
+  },
+  "home.threePillars.card.3.linkText": {
+    "message": "Start with NubeSDK"
+  },
+  "home.guidedPaths.title": {
+    "message": "What are you building?"
+  },
+  "home.guidedPaths.subtitle": {
+    "message": "Choose your use case and follow the recommended path"
+  },
+  "home.guidedPaths.card.1.useCase": {
+    "message": "ERP / management integration"
+  },
+  "home.guidedPaths.card.1.description": {
+    "message": "Sync products, orders, and inventory between the store and your system"
+  },
+  "home.guidedPaths.card.2.useCase": {
+    "message": "Storefront widget or checkout enhancement"
+  },
+  "home.guidedPaths.card.2.description": {
+    "message": "Add banners, extra information, or visual customizations to the store"
+  },
+  "home.guidedPaths.card.3.useCase": {
+    "message": "Payments / shipping / logistics"
+  },
+  "home.guidedPaths.card.3.description": {
+    "message": "Integrate payment methods or shipping options into the store"
+  },
+  "home.guidedPaths.card.4.useCase": {
+    "message": "Marketing / analytics"
+  },
+  "home.guidedPaths.card.4.description": {
+    "message": "Connect marketing, analytics, or CRM tools to the store"
+  },
+  "home.guidedPaths.linkText": {
+    "message": "View guide"
+  },
+  "home.resources.title": {
+    "message": "Resources"
+  },
+  "home.resources.card.1.title": {
     "message": "App Templates"
   },
-  "home.developerTools.card.2.description": {
-    "message": "Streamline app development by starting from a code template."
+  "home.resources.card.1.description": {
+    "message": "Start from a template and speed up development"
   },
-  "home.developerTools.card.2.linkText": {
-    "message": "Explore app templates"
+  "home.resources.card.1.linkText": {
+    "message": "View templates"
   },
-  "home.developerTools.card.3.title": {
-    "message": "Nexo"
+  "home.resources.card.2.title": {
+    "message": "Partner Program"
   },
-  "home.developerTools.card.3.description": {
-    "message": "Connect with the store admin quickly and easily."
+  "home.resources.card.2.description": {
+    "message": "Join 600+ partners and grow your business"
   },
-  "home.developerTools.card.3.linkText": {
-    "message": "Discover Nexo"
+  "home.resources.card.2.linkText": {
+    "message": "Learn about the program"
   },
-  "home.developerTools.card.4.title": {
-    "message": "Nimbus Design System"
-  },
-  "home.developerTools.card.4.description": {
-    "message": "Create interfaces and experiences using our design system and expedite your app development."
-  },
-  "home.developerTools.card.4.linkText": {
-    "message": "Get to know Nimbus"
-  },
-  "home.OtherLinks.title": {
-    "message": "Other Links"
-  },
-  "home.otherLinks.cards.linkText": {
-    "message": "Read the documentation"
-  },
-  "home.otherLinks.card.1.title": {
+  "home.resources.card.3.title": {
     "message": "Homologation"
   },
-  "home.otherLinks.card.2.title": {
-    "message": "Design Checklist"
+  "home.resources.card.3.description": {
+    "message": "Ready to publish? Learn the approval process"
   },
-  "home.otherLinks.card.3.title": {
-    "message": "Design Guidelines"
+  "home.resources.card.3.linkText": {
+    "message": "View process"
   },
-  "home.otherLinks.card.4.title": {
-    "message": "Manual Authentication"
+  "home.resources.card.4.title": {
+    "message": "Nimbus Design System"
+  },
+  "home.resources.card.4.description": {
+    "message": "Components and patterns for building consistent interfaces"
+  },
+  "home.resources.card.4.linkText": {
+    "message": "Explore Nimbus"
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",

@@ -12,7 +12,7 @@ const Index: React.FC = () => {
       description={translate({
         id: "siteConfig.description",
         message:
-          "Desenvolva aplicativos para o ecossistema Nuvemshop e potencialize seus ganhos",
+          "Crie aplicativos para o maior ecossistema de e-commerce da América Latina",
       })}
     >
       <Home />
