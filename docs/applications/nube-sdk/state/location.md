@@ -6,11 +6,13 @@ title: Location
 
 The user's current location within the application, including the page type and URL. Each key in `queries` is a query parameter name; each value is that parameter's value.
 
-| Property  | Type                         | Always present | Description                                    |
-| --------- | ---------------------------- | -------------- | ---------------------------------------------- |
-| `url`     | string                       | Yes      | The current URL of the application.            |
-| `page`    | Page                         | Yes      | The current page type and its associated data. |
-| `queries` | Record&lt;string, string&gt; | Yes      | Query parameters extracted from the URL.       |
+| Property   | Type                         | Always present | Description                                                                                                                                                          |
+| ---------- | ---------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `url`      | string                       | Yes            | The current URL of the application.                                                                                                                                  |
+| `page`     | Page                         | Yes            | The current page type and its associated data.                                                                                                                       |
+| `queries`  | Record&lt;string, string&gt; | Yes            | Query parameters extracted from the URL.                                                                                                                             |
+| `title`    | string                       | Yes            | Equivalent to `document.title` on the storefront main thread, captured by the SDK at the moment the location changed.                                                |
+| `referrer` | string \| null               | Yes            | Equivalent to `document.referrer`. The URL of the previous page in the storefront SPA (or the external referrer for the landing page). `null` on the very first pageview when there is no referrer. |
 
 **Page** (`location.page`) is a discriminated union: the shape of `page.data` depends on `page.type`. Use `page.type` to narrow the type before reading `page.data`.
 
