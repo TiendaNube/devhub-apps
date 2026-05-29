@@ -22,7 +22,7 @@ Con esto, en todos los cambios, Tiendanube envía el webhook `order/edited`, sie
 - **Gestión de productos en FFO:**   
   - Ahora se podrá agregar o eliminar productos de un FFO existente. Esta acción activará un nuevo cálculo de los costos de envío.  
 - **Restricción de eliminación de FFO:**   
-  - Para mantener la integridad del pedido, no se podrá eliminar los FFO de la orden, ya que siempre mantendrán al menos 1 producto.s.  
+  - Para mantener la integridad del pedido, no se podrá eliminar los FFO de la orden, ya que siempre mantendrán al menos 1 producto.  
 - **Gestión de descuentos:**   
   - Desarrollamos la capacidad de agregar o eliminar descuentos en las órdenes.  
 - **Avisos de cambio de destino:**   
