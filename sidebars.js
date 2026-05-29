@@ -32,6 +32,22 @@ const sidebars = {
                "developer-tools/nuvemshop-api",
                {
                    type: "category",
+                   label: "Documentação - Guias",
+                   items: [
+                       {
+                           type: "doc",
+                           id: "developer-tools/edit-order",
+                           label: "EditOrder",
+                       },
+                       {
+                           type: "doc",
+                           id: "developer-tools/label",
+                           label: "Label",
+                       },
+                   ],
+               },
+               {
+                   type: "category",
                    label: "Nuvemshop CLI",
                    link: {
                        type: "doc",
