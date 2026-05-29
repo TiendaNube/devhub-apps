@@ -70,6 +70,16 @@ Para garantizar la agilidad en su homologación, infórmenos previamente sobre a
 
 Es esencial que nuestro equipo experimente la **jornada real del merchant** durante todo el proceso de instalación y configuración de la aplicación.
 
+## 4. Uso del NubeSDK
+
+A partir del **30 de agosto de 2026**, la app debe ser desarrollada utilizando el **NubeSDK**. Las apps enviadas a homologación después de esa fecha no serán aprobadas sin el uso del SDK.
+
+- **Fecha de vigencia:** 30 de agosto de 2026.
+- **Aplica a:** nuevas solicitudes de homologación a partir de esa fecha.
+- **Cómo prepararte:** consulta la [Guía de migración al NubeSDK](../applications/nube-sdk/migration-guide) si tu app aún utiliza el modelo legado (`document`, `window`, jQuery o manipulación directa del DOM).
+
+Para más contexto sobre el plazo, consulta la [visión general de Aplicaciones](../applications/overview.md#plazo-de-adopcion-del-nubesdk) y la [visión general de la Homologación](./overview.md).
+
 :::warning Importante
 El envío correcto de estos requisitos garantizará un proceso de homologación ágil y eficiente, permitiendo que tu aplicación avance hacia la fase de publicación sin contratiempos.
 :::

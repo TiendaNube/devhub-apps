@@ -5,6 +5,14 @@ title: Visão geral
 
 ## Processo de Homologação de Apps - Nuvemshop
 
+:::info 📅 NubeSDK como requisito de homologação a partir de 30 de agosto de 2026
+A partir de **30 de agosto de 2026**, o uso do **NubeSDK** será um requisito obrigatório para aprovação de novos apps na homologação.
+
+**O processo de homologação em si não muda** — a única adição é a verificação de que o app foi desenvolvido com o NubeSDK. Parceiros que já estão no SDK não serão impactados.
+
+Se o seu app ainda não foi migrado, consulte o [Guia de migração para o NubeSDK](../applications/nube-sdk/migration-guide.md). Veja também o [anúncio na visão geral de Aplicativos](../applications/overview.md#prazo-de-adoção-do-nubesdk) e a lista atualizada de [Requisitos de Homologação](./requirements.md#4-uso-do-nubesdk).
+:::
+
 ### 💡 O que é uma homologação de app?
 
 A homologação é o processo de **validação e certificação** de um aplicativo dentro do ecossistema Nuvemshop.

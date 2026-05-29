@@ -61,7 +61,7 @@ const CHECKLIST = [
   "Styling uses styled(), StyleSheet.create(), or theme tokens — no <style> injection",
   "Tested in dev mode (npm run dev) with the script pointing to localhost:8080/main.min.js",
   '"Uses NubeSDK" flag enabled in the Partner Portal',
-  "App works on Patagonia theme (storefront) or any theme (checkout)",
+  "App works on all themes (storefront and checkout)",
 ];
 
 interface GettingStartedPathProps {
@@ -109,7 +109,7 @@ export default function GettingStartedPath({ children }: GettingStartedPathProps
             <code>document</code>, <code>window</code>, or any DOM API. UI is declared using JSX or
             the declarative API and rendered into predefined <strong>slots</strong>. Communication
             with the store happens through <strong>events</strong>, not DOM listeners.
-            Storefront apps require the <strong>Patagonia theme</strong>. Checkout apps work on all themes.
+            Storefront and checkout apps built with NubeSDK work on <strong>all themes</strong>.
           </p>
 
           <h3>Quick reference: legacy → NubeSDK</h3>

@@ -8,6 +8,27 @@ import AppTypes from '@site/src/components/AppTypes';
 
 # Overview
 
+## NubeSDK adoption deadline
+
+<Alert appearance="warning" title="📅 August 30, 2026 — NubeSDK becomes mandatory for new installations">
+   <Text>Starting on <Text as="span" fontWeight="bold">August 30, 2026</Text>, apps that are not built with the <Text as="span" fontWeight="bold">NubeSDK</Text> will no longer be able to receive new installations. Stores that already have the app installed <Text as="span" fontWeight="bold">will not be affected</Text>. We are progressively moving all stores to the SDK-based model.</Text>
+   <br />
+   <Text>👉 <Text as="span" fontWeight="bold">Want to validate your app before the deadline?</Text> <a href="https://docs.google.com/forms/d/e/1FAIpQLSesdE1j1psOl0eSZcqFA4Y8FtyHoKzRtbHXgeFNjETqpD-XMA/viewform" target="_blank" rel="noopener noreferrer">Request the SDK tag for your test store through this form</a> and validate your app under the new model — fully self-service, no need to wait for the rollout to reach you.</Text>
+   <br />
+   <Text>If you have not migrated yet, start with the <a href="./nube-sdk/migration-guide"><Text as="span" fontWeight="bold">NubeSDK Migration Guide</Text></a>.</Text>
+</Alert>
+
+<br />
+
+**What changes and what doesn't:**
+
+- ✅ **August 30, 2026** — new installations are **blocked** for apps without the SDK.
+- ✅ **October 30, 2026** — start of **deprecation and progressive uninstallation**, with merchants being recommended an alternative app.
+- ✅ Stores that already have the app installed **continue working normally** after 08/30/2026 (until the deprecation stage).
+- ✅ The **homologation process itself does not change** — only the SDK usage verification is added. See the [Homologation overview](../homologation/overview.md) and the [Homologation Requirements](../homologation/requirements.md#4-nubesdk-usage).
+
+<br />
+
 In this section, we will provide a step-by-step guide for you to create an application and integrate it into the Nuvemshop platform. Before starting the development of your application, it's necessary to create an account in the Nuvemshop Partners Portal. Learn how to create your account in the 📝 Guide: [details of the Nuvemshop Technology Partners program](https://atendimento.nuvemshop.com.br/pt_BR/parceiros-tecnologicos/como-fazer-um-aplicativo-para-a-loja-de-aplicativos-nuvemshop).
 
 ## Creating an Application in Nuvemshop

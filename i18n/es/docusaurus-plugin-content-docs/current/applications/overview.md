@@ -8,6 +8,27 @@ import AppTypes from '@site/src/components/AppTypes';
 
 # Visión general
 
+## Plazo de adopción del NubeSDK
+
+<Alert appearance="warning" title="📅 30 de agosto de 2026 — el uso del NubeSDK pasa a ser obligatorio para nuevas instalaciones">
+   <Text>A partir del <Text as="span" fontWeight="bold">30 de agosto de 2026</Text>, las apps que no estén desarrolladas con el <Text as="span" fontWeight="bold">NubeSDK</Text> no podrán recibir nuevas instalaciones. Las tiendas que ya tienen la app instalada <Text as="span" fontWeight="bold">no se verán afectadas</Text>. Estamos llevando progresivamente todas las tiendas al modelo con SDK.</Text>
+   <br />
+   <Text>👉 <Text as="span" fontWeight="bold">¿Quieres validar tu app antes del plazo?</Text> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaGFRHmLgGf-PnoXjPz8MdOcrtAM7PLmP6-LjmIXdEs-Uphw/viewform" target="_blank" rel="noopener noreferrer">Solicita la tag de SDK en tu tienda de prueba a través del formulario</a> y valida tu app en el nuevo modelo de forma self-service, sin esperar a que el rollout llegue a tu tienda.</Text>
+   <br />
+   <Text>Si aún no migraste, comienza por la <a href="./nube-sdk/migration-guide"><Text as="span" fontWeight="bold">Guía de migración al NubeSDK</Text></a>.</Text>
+</Alert>
+
+<br />
+
+**Qué cambia y qué no cambia:**
+
+- ✅ **30 de agosto de 2026** — las nuevas instalaciones quedan **bloqueadas** para apps sin SDK.
+- ✅ **30 de octubre de 2026** — inicio de la **deprecación y desinstalación progresiva**, con recomendación de app alternativa a los comerciantes.
+- ✅ Las tiendas con la app ya instalada **continúan funcionando normalmente** después del 30/08/2026 (hasta la etapa de deprecación).
+- ✅ El **proceso de homologación en sí no cambia** — solo se agrega la verificación de uso del SDK. Consulta la [visión general de la Homologación](../homologation/overview.md) y los [Requisitos de Homologación](../homologation/requirements.md#4-uso-del-nubesdk).
+
+<br />
+
 En esta sección, proporcionaremos una guía paso a paso para que pueda crear una aplicación e integrarla en la plataforma Tiendanube. Antes de comenzar el desarrollo de su aplicación, es necesario crear una cuenta en el Portal de Socios de Tiendanube. Aprenda cómo crear su cuenta en el 📝 Guía: [detalles del programa de Socios Tecnológicos de Tiendanube](https://ayuda.tiendanube.com/es_ES/socios-tecnologicos/como-creo-una-aplicacion-para-tiendanube).
 
 ## Creación de una aplicación en Tiendanube

@@ -50,6 +50,29 @@ O objetivo desse documento é tornar os requisitos de construção e homologaç�
 </Box>
 
 
+## Uso do NubeSDK <Tag appearance="danger">Prioridade alta</Tag>
+
+:::warning ⏰ Prazo de vigência: 30 de agosto de 2026
+A partir de **30 de agosto de 2026**, a adoção do **NubeSDK** passa a ser **obrigatória** para a aprovação na homologação. Apps submetidos após essa data não serão aprovados sem o uso do SDK.
+
+**Para revisores:** a partir do prazo, verificar como parte do fluxo de aprovação se o app foi desenvolvido com o NubeSDK. Apps em modelo legado (uso de `document`, `window`, jQuery ou manipulação direta do DOM) não devem ser aprovados.
+:::
+
+Nesse item, o parceiro deve garantir que o aplicativo foi desenvolvido utilizando o **NubeSDK** — o modelo recomendado para apps que rodam no storefront e checkout da Nuvemshop.
+
+| Descrição                                                  | Link                                                                       | Obrigatoriedade                             |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------- |
+| App desenvolvido com NubeSDK (a partir de 30/08/2026)      | [Guia de migração](../applications/nube-sdk/migration-guide.md)            | <Tag appearance="primary">Obrigatório</Tag> |
+| Não utiliza `document`, `window`, jQuery ou DOM direto     | [Guia de migração](../applications/nube-sdk/migration-guide.md#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Obrigatório</Tag> |
+
+**Antes de submeter, confirme que:**
+
+- O app está implementado com o NubeSDK e roda dentro de um Web Worker.
+- Não há dependências de manipulação direta do DOM, `document`, `window` ou bibliotecas como jQuery.
+- A interface é construída com os [componentes do NubeSDK](../applications/nube-sdk/components/overview.md) e os [UI Slots](../applications/nube-sdk/slots/overview.md) apropriados.
+
+Para mais contexto sobre o prazo, consulte a [visão geral da Homologação](./overview.md) e a [visão geral de Aplicativos](../applications/overview.md#prazo-de-adoção-do-nubesdk).
+
 ## Uso de Templates Nimbus <Tag appearance="danger">Prioridade alta</Tag>
 
 Nesse item devemos nos atentar ao uso de templates Nimbus, visando atingir uma maior consistência visual com os produtos Nuvemshop.

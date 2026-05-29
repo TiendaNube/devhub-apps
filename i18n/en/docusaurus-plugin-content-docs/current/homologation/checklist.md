@@ -49,6 +49,32 @@ The purpose of this document is to make construction and design homologation req
   </Card>
 </Box>
 
+## NubeSDK Usage
+
+<Tag appearance="danger">High Priority</Tag>
+<br />
+
+:::warning ⏰ Effective date: August 30, 2026
+Starting on **August 30, 2026**, adopting the **NubeSDK** becomes **mandatory** for homologation approval. Apps submitted after that date will not be approved without the SDK.
+
+**For reviewers:** from the deadline onward, verify as part of the approval flow whether the app was built with the NubeSDK. Apps using the legacy model (`document`, `window`, jQuery, or direct DOM manipulation) must not be approved.
+:::
+
+In this item, the partner must ensure the application was built using the **NubeSDK** — the recommended model for apps running on Nuvemshop's storefront and checkout.
+
+| Description                                                | Link                                                                          | Mandatory                                   |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- |
+| App built with NubeSDK (from 08/30/2026 onward)            | [Migration Guide](../applications/nube-sdk/migration-guide)                | <Tag appearance="primary">Mandatory</Tag>   |
+| Does not use `document`, `window`, jQuery, or direct DOM   | [Migration Guide](../applications/nube-sdk/migration-guide#what-you-cant-do-in-nubesdk) | <Tag appearance="primary">Mandatory</Tag>   |
+
+**Before submitting, confirm that:**
+
+- The app is implemented with the NubeSDK and runs inside a Web Worker.
+- There are no dependencies on direct DOM manipulation, `document`, `window`, or libraries like jQuery.
+- The UI is built with the [NubeSDK components](../applications/nube-sdk/components/overview) and the appropriate [UI Slots](../applications/nube-sdk/slots/overview).
+
+For more context on the deadline, see the [Homologation overview](./overview.md) and the [Applications overview](../applications/overview.md#nubesdk-adoption-deadline).
+
 ## Usage of Nimbus Templates
 
 <Tag appearance="danger">High Priority</Tag>

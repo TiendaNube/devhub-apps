@@ -21,7 +21,7 @@ Slots available in the checkout flow (start and payment pages). These slots allo
 
 ### [Storefront Slots](./storefront-slots)
 
-Slots available in the storefront pages (home, product, category, search, and cart). These slots are supported when the store is using the Patagonia theme and allow you to customize the shopping experience across different pages.
+Slots available in the storefront pages (home, product, category, search, and cart). These slots are supported on all themes and allow you to customize the shopping experience across different pages.
 
 [Learn more about Storefront Slots →](./storefront-slots)
 
