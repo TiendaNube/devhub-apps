@@ -54,7 +54,7 @@ Para isso, ocorrendo a alteração no sistema da Nuvemshop, a própria Nuvemshop
 Com isso, sendo a Nuvemshop o principal agente nesta alteração, informará que ocorreu uma alteração.
 
 Ponto de atenção: quando ocorre esta ação, a Nuvemshop dispara o webhook que notifica que foi alterado o pedido.   
-Desta forma, cabe a necessidade que o ERP esteja lendo esta comunicação do webook, para assim realizar uma nova consulta do pedido (através do GET/orders).   
+Desta forma, cabe a necessidade que o ERP esteja lendo esta comunicação do webhook, para assim realizar uma nova consulta do pedido (através do GET/orders).   
 Com a nova consulta realizada, identificará os dados alterados e deverá realizar o update de informação dentro do pedido no ERP, para garantir assim a consistência de informação entre sistemas.
 
 Assim, o merchant poder seguir com o empacotamento e envio do pedido.
