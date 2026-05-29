@@ -10,7 +10,7 @@ Neste processo, é fundamental assegurar a **consistência**, **atualização co
 
 📌**Importante:** Ao se gerar uma mudança no nível do pedido dos produtos, a Nuvemshop volta a cotar o frete, o que faz com que seus valores mudem. Com isso, é importante também que as aplicações de envio que oferecem serviços pré-pagos, Fulfillment services ou coleta, escutem este webhook, porque ele altera informações relevantes para a gestão delas.
 
-![](../../static/img/pt/image1.png "")
+![Fluxo de edição de pedidos](../../static/img/pt/image1.png "Fluxo de edição de pedidos")
 
 
 ⚠️ **Atenção:** este processo de edição de pedido só pode ocorrer quando o pedido ainda não tiver sido embalado (O *status* da *Fulfillment order* está como `UNPACKED`).   
@@ -61,7 +61,7 @@ Assim, o merchant poder seguir com o empacotamento e envio do pedido.
 
 📌 Como ocorre a notificação da Nuvemshop via API de webhook merchant/ERP acompanhar?
 
-![](../../static/img/pt/image4.png "")
+![Notificação de edição via webhook](../../static/img/pt/image4.png "Notificação de edição via webhook")
 
 2- \[ERP como agente principal de edição\]
 
@@ -77,4 +77,4 @@ Vale ressaltar que um pedido da FForder não pode ficar sem produtos.
 
 📌 Como ocorre a notificação do ERP via API para Nuvemshop atualizar no painel e ao cliente?
 
-![](../../static/img/pt/image6.png "")
+![Fluxo de edição com ERP como origem](../../static/img/pt/image6.png "Fluxo de edição com ERP como origem")
