@@ -44,7 +44,7 @@ curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}}/metaf
 
 4. Erros Comuns
     - 401 Unauthorized:
-        - Certifique-se de usar o token correto no cabeçalho Authentication.
+        - Certifique-se de usar o token correto no cabeçalho Authorization.
     - 404 Not Found:
         - O order_id informado não foi encontrado. Verifique se o pedido existe.
     - 422 Unprocessable Entity:
