@@ -16,7 +16,7 @@ URL: `/orders`
 Example Request:
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{{store_id}}/orders" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -38,7 +38,7 @@ URL: `/orders/{order_id}`
 Example Request:
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}}" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -53,7 +53,7 @@ URL: `/orders/{order_id}`
 Example Request:
 ```bash
 curl -X PUT "https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}}" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -71,7 +71,7 @@ URL: `/orders/{order_id}/cancel`
 Example Request:
 ```bash
 curl --location "https://api.nuvemshop.com.br/v1/{{store_id}}/orders/{{order_id}}/cancel" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

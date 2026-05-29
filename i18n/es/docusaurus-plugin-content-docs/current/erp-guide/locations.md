@@ -21,7 +21,7 @@ Para crear un nuevo stock, utiliza el endpoint [POST /locations](https://tiendan
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -66,7 +66,7 @@ Para actualizar un stock existente, utiliza el endpoint [PUT /locations/{id}](ht
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/locations/{id} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -111,7 +111,7 @@ Para listar todos los stocks registrados, utiliza el endpoint [GET /locations](h
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -130,7 +130,7 @@ Los productos seleccionados según esta priorización definirán el origen del e
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/priorities \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '[
@@ -159,7 +159,7 @@ Para definir un stock específico como predeterminado, utiliza el endpoint [PATC
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/{id}/chosen-as-default \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

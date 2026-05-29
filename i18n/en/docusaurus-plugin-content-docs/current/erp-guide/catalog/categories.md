@@ -10,14 +10,14 @@ title: Category
 To create a new category, make a [POST request to the /categories](https://tiendanube.github.io/api-documentation/resources/category#post-categories) endpoint.
 
 Be sure to include the following headers:
-- Authentication: bearer {{app_token}}
+- Authorization: Bearer {{app_token}}
 - User-Agent: Your App Name ({{app_id}})
 Example in curl:
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -53,7 +53,7 @@ Example in curl:
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -84,7 +84,7 @@ Example in curl:
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/categories/12345 \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {

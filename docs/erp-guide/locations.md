@@ -18,7 +18,7 @@ Requisição:
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -63,7 +63,7 @@ Requisição:
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/locations/{id} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -106,7 +106,7 @@ Para listar todos os estoques cadastrados, utilize o endpoint [GET /locations](h
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -123,7 +123,7 @@ Requisição:
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/priorities \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '[
@@ -151,7 +151,7 @@ Requisição:
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/{id}/chosen-as-default \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

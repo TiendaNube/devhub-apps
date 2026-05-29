@@ -16,7 +16,7 @@ POST /metafields
 Example Request:
 ```bash
 curl -X POST /metafields \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{

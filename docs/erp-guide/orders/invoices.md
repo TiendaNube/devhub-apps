@@ -17,7 +17,7 @@ Cria uma fatura para um pedido específico. As faturas são documentos fiscais a
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}}/metafields \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{

@@ -19,7 +19,7 @@ Retorna uma lista de pedidos realizados na loja. Os resultados podem ser filtrad
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/orders \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -40,7 +40,7 @@ Retorna informações detalhadas sobre um pedido específico, incluindo itens, m
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -54,7 +54,7 @@ Permite atualizar informações de um pedido existente, como o status ou dados d
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -72,7 +72,7 @@ Cancela um pedido específico.
 
 ```bash
 curl --location 'https://api.nuvemshop.com.br/v1/{{store_id}}/orders/{{order_id}}/cancel' \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

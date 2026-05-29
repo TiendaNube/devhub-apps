@@ -23,7 +23,7 @@ Supongamos que desea acceder a la tienda con el ID `123456` a través de la API.
 - Para realizar una solicitud de todos los productos de la tienda, utilizaría el siguiente comando en curl:
 
   ```bash
-  curl -H 'Authentication: bearer ACCESS_TOKEN' \
+  curl -H 'Authorization: Bearer ACCESS_TOKEN' \
   -H 'User-Agent: MyApp (name@email.com)' \
   https://api.tiendanube.com/v1/123456/products
   ```
@@ -35,7 +35,7 @@ Supongamos que desea acceder a la tienda con el ID `123456` a través de la API.
 - Para crear un nuevo producto, debe incluir el encabezado `Content-Type` y los datos del producto en formato JSON:
 
   ```bash
-  curl -H 'Authentication: bearer ACCESS_TOKEN' \
+  curl -H 'Authorization: Bearer ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'User-Agent: MyApp (name@email.com)' \
   -d '{ "name": "Meu novo produto" }' \

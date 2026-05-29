@@ -20,7 +20,7 @@ Devuelve todos los campos personalizados asociados a una variación específica 
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/products/variants/custom-fields \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -33,7 +33,7 @@ POST /products/variants/custom-fields
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products/variants/custom-fields \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -57,7 +57,7 @@ PUT /products/variants/custom-fields/{{custom-field_id}}
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/products/variants/custom-fields/{{custom-field_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -73,7 +73,7 @@ DELETE /products/{product_id}/variants/{variant_id}/custom_fields/{custom_field_
 
 ```bash
 curl -X DELETE https://api.nuvemshop.com/v1/{{store_id}}/products/variants/custom-fields/{custom_field_id}./variants/{{variant_id}}/custom_fields/{{custom_field_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

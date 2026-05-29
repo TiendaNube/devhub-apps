@@ -18,7 +18,7 @@ Asegúrate de incluir los siguientes encabezados:
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -56,7 +56,7 @@ Debes especificar el [ID de la categoría padre en el campo parent](https://tien
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -89,7 +89,7 @@ Para actualizar una categoría o subcategoría existente, realiza una solicitud 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/categories/12345 \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {

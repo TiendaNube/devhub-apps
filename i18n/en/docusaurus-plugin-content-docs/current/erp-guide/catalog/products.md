@@ -52,7 +52,7 @@ Use this endpoint to create a new product in the store.
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -80,7 +80,7 @@ List all products registered in the store.
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/products \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -93,7 +93,7 @@ Use this endpoint to update information for an existing product.
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/products/98765 \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -110,7 +110,7 @@ Allows changing specific details of a **product variant (SKU)**.
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/products/98765/variants/12345 \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -149,7 +149,7 @@ To enrich product data, include fields like images, more detailed descriptions, 
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/products/98765/images \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -165,7 +165,7 @@ Allows you to delete a product from the store.
 
 ```bash
 curl -X DELETE https://api.nuvemshop.com/v1/{{store_id}}/products/98765 \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -179,7 +179,7 @@ Product variations in Nuvemshop represent different versions of the same item, d
 ```bash
 curl -X POST "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants" \
 -H "Content-Type: application/json" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "price": 120.50,
@@ -207,7 +207,7 @@ URL: /products/{product_id}/variants/{variant_id}
 ```bash
 curl -X PUT "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants/{variant_id}" \
 -H "Content-Type: application/json" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "id": 144,
@@ -244,7 +244,7 @@ URL: products/{product_id}/variants
 
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})"
 ```
 
@@ -255,7 +255,7 @@ URL: products/{product_id}/variants/{variant_id}
 
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants/{variant_id}" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})"
 ```
 
@@ -268,7 +268,7 @@ URL: `products/{product_id}/variants`
 Example Request:
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})"
 ```
 
@@ -279,7 +279,7 @@ URL: `products/{product_id}/variants/{variant_id}`
 Example Request:
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{store_id}/products/{product_id}/variants/{variant_id}" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})"
 ```
 
@@ -290,6 +290,6 @@ URL: `/products/variants/custom-fields/{{custom-field_id}}`
 Example Request:
 ```bash
 curl -X DELETE "https://api.nuvemshop.com/v1/{store_id}/products/variants/custom-fields/{{custom-field_id}}" \
--H "Authentication: Bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})"
 ```

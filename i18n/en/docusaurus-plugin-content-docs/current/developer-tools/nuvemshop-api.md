@@ -23,7 +23,7 @@ Suppose you want to access the store with ID `123456` through the API. The URL w
 - To make a request for all products in the store, you would use the following curl command:
 
   ```bash
-  curl -H 'Authentication: bearer ACCESS_TOKEN' \
+  curl -H 'Authorization: Bearer ACCESS_TOKEN' \
   -H 'User-Agent: MyApp (name@email.com)' \
   https://api.tiendanube.com/v1/123456/products
   ```
@@ -35,7 +35,7 @@ Suppose you want to access the store with ID `123456` through the API. The URL w
 - To create a new product, you should include the `Content-Type` header and the product data in JSON format:
 
   ```bash
-  curl -H 'Authentication: bearer ACCESS_TOKEN' \
+  curl -H 'Authorization: Bearer ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'User-Agent: MyApp (name@email.com)' \
   -d '{ "name": "Meu novo produto" }' \
