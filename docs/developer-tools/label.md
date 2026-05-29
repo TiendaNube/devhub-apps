@@ -16,7 +16,7 @@ Esta API oferece:
 * Suporte a webhook para rastrear atualizações de etiquetas  
 * Integração com aplicativos de envio por meio de `callback_labels_url`
 
-![](../../static/img/pt/image3.png "")
+![gerenciamento](../../static/img/pt/image3.png "gerenciamento")
 
 **◀️Possíveis status de etiquetas:**
 
@@ -61,9 +61,9 @@ Pensando em agilidade e centralização ao merchant, se faz importante que a pr�
 
 Pensando nisso, a Nuvemshop disponibiliza uma **API** em que esta **comunicação de informações** e disponibilização para **download** possa ocorrer, de forma **segura** e com o uso de **webhooks** para melhores integrações entre sistemas.
 
-![](../../static/img/pt/image5.png "")
+![webhooks](../../static/img/pt/image5.png "webhooks")
 
 📌 Como funciona tecnicamente o fluxo de emissão de etiquetas?  
 Através de nossa documentação disposta no [Portal Dev,](https://tiendanube.github.io/api-documentation/next/resources/fulfillment-order#labels-api) disponibilizamos detalhes técnicos e seu respectivo fluxo de requisições e retornos para o completo funcionamento de emissão de etiquetas, junto a comunicação entre Nuvemshop e seus parceiros.
 
-![](../../static/img/pt/image2.png "")
+![emissao](../../static/img/pt/image2.png "emissao")
