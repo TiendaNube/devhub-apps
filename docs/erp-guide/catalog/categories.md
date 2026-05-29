@@ -10,7 +10,7 @@ title: Categoria
 Para criar uma nova categoria, faça uma requisição [POST para o endpoint /categories](https://tiendanube.github.io/api-documentation/resources/category#post-categories).
 
 Certifique-se de incluir os seguintes cabeçalhos:
-- Authentication: bearer {{app_token}}
+- Authorization: Bearer {{app_token}}
 - User-Agent: Your App Name ({{app_id}})
 Exemplo em curl:
 
@@ -18,7 +18,7 @@ Exemplo em curl:
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -55,7 +55,7 @@ Exemplo em curl:
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/categories \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {
@@ -87,7 +87,7 @@ Exemplo em curl:
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/categories/12345 \
 -H "Content-Type: application/json" \
--H "Authentication: bearer {{app_token}}" \
+-H "Authorization: Bearer {{app_token}}" \
 -H "User-Agent: Your App Name ({{app_id}})" \
 -d '{
   "name": {

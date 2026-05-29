@@ -12,7 +12,7 @@ URL: `/webhooks`
 Example Request:
 ```bash
 curl -X POST "https://api.nuvemshop.com/v1/{{store_id}}/webhooks" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -35,7 +35,7 @@ URL: `/webhooks`
 Example Request:
 ```bash
 curl -X GET "https://api.nuvemshop.com/v1/{{store_id}}/webhooks" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -49,7 +49,7 @@ URL: `/webhooks/{webhook_id}`
 Example Request:
 ```bash
 curl -X PUT "https://api.nuvemshop.com/v1/{{store_id}}/webhooks/{{webhook_id}}" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -66,7 +66,7 @@ URL: `/webhooks/{webhook_id}`
 Example Request:
 ```bash
 curl -X DELETE "https://api.nuvemshop.com/v1/{{store_id}}/webhooks/{{webhook_id}}" \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

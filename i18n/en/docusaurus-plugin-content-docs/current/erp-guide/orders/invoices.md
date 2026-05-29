@@ -16,7 +16,7 @@ POST /metafields
 Example Request:
 ```bash
 curl -X POST /metafields \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -42,7 +42,7 @@ curl -X POST /metafields \
    - Each invoice is associated with a specific order identified by the `order_id`.
 
 4. **Common Errors:**
-   - **401 Unauthorized**: Ensure you are using the correct token in the `Authentication` header.
+   - **401 Unauthorized**: Ensure you are using the correct token in the `Authorization` header.
    - **404 Not Found**: The provided `order_id` was not found. Check if the order exists.
    - **422 Unprocessable Entity**: The sent data (e.g., `access_key` or `url`) may be in an invalid or incomplete format.
 

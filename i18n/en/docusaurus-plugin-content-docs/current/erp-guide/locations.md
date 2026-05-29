@@ -18,7 +18,7 @@ Request:
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -63,7 +63,7 @@ Request:
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/locations/{id} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -106,7 +106,7 @@ To list all registered stocks, use the [GET /locations](https://tiendanube.githu
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/locations \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -123,7 +123,7 @@ Request:
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/priorities \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '[
@@ -152,7 +152,7 @@ Request:
 
 ```bash
 curl -X PATCH https://api.nuvemshop.com/v1/{{store_id}}/locations/{id}/chosen-as-default \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```

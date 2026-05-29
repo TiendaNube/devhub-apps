@@ -34,7 +34,7 @@ Si no existe, procede con `POST /metafields` como se muestra a continuación.
 
 4. Errores Comunes:
     - 401 Unauthorized:
-        - Asegúrate de usar el token correcto en el encabezado Authentication.
+        - Asegúrate de usar el token correcto en el encabezado Authorization.
     - 404 Not Found:
         - El order_id informado no fue encontrado. Verifica si el pedido existe.
     - 422 Unprocessable Entity:

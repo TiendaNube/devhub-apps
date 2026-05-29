@@ -19,7 +19,7 @@ Devuelve una lista de pedidos realizados en la tienda. Los resultados pueden fil
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/orders \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -40,7 +40,7 @@ Devuelve información detallada sobre un pedido específico, incluyendo artícul
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -54,7 +54,7 @@ Permite actualizar información de un pedido existente, como el estado o datos d
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/orders/{{order_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{

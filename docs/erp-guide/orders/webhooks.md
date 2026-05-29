@@ -11,7 +11,7 @@ Registra um novo webhook para eventos relacionados aos pedidos.
 
 ```bash
 curl -X POST https://api.nuvemshop.com/v1/{{store_id}}/webhooks \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -31,7 +31,7 @@ Retorna uma lista de todos os webhooks registrados na loja.
 
 ```bash
 curl -X GET https://api.nuvemshop.com/v1/{{store_id}}/webhooks \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
@@ -44,7 +44,7 @@ Atualiza a URL ou cabeçalhos de um webhook existente.
 
 ```bash
 curl -X PUT https://api.nuvemshop.com/v1/{{store_id}}/webhooks/{{webhook_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -61,7 +61,7 @@ Remove um webhook previamente configurado.
 
 ```bash
 curl -X DELETE https://api.nuvemshop.com/v1/{{store_id}}/webhooks/{{webhook_id}} \
--H 'Authentication: bearer {{app_token}}' \
+-H 'Authorization: Bearer {{app_token}}' \
 -H 'User-Agent: Your App Name ({{app_id}})' \
 -H 'Content-Type: application/json'
 ```
